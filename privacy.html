@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Kibbo</title>
+  <link rel="icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f3f4f6;
+      padding: 14px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #111827;
+    }
+    .topbar-logo img { width: 28px; height: 28px; border-radius: 8px; }
+    .topbar-logo span { font-weight: 600; font-size: 16px; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 8px;
+      background: #f9fafb; border: 1px solid #e5e7eb;
+      color: #374151; font-size: 13px; font-weight: 500;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .back-btn:hover { background: #f3f4f6; border-color: #d1d5db; }
+
+    /* CONTENT */
+    .container {
+      max-width: 720px; margin: 0 auto;
+      padding: 56px 48px 96px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #6366f1;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+      letter-spacing: -0.5px; line-height: 1.15;
+      color: #111827; margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 13px; color: #9ca3af; margin-bottom: 48px;
+      padding-bottom: 32px; border-bottom: 1px solid #f3f4f6;
+    }
+
+    h2 {
+      font-size: 18px; font-weight: 600;
+      color: #111827; margin: 40px 0 12px;
+    }
+    h2::before {
+      content: attr(data-num);
+      display: inline-block; width: 28px; height: 28px;
+      background: #eef2ff; color: #6366f1;
+      border-radius: 8px; font-size: 12px; font-weight: 700;
+      line-height: 28px; text-align: center;
+      margin-right: 10px; flex-shrink: 0;
+    }
+
+    p { font-size: 15px; color: #374151; margin-bottom: 14px; }
+    ul { padding-left: 0; list-style: none; margin-bottom: 14px; }
+    ul li {
+      font-size: 15px; color: #374151;
+      padding: 6px 0 6px 20px; position: relative;
+    }
+    ul li::before {
+      content: '✓';
+      position: absolute; left: 0;
+      color: #6366f1; font-weight: 600; font-size: 13px;
+    }
+
+    .highlight-box {
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 12px; padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .highlight-box p { color: #166534; margin: 0; font-size: 14px; }
+
+    .contact-box {
+      background: #fafafa; border: 1px solid #e5e7eb;
+      border-radius: 12px; padding: 20px 24px;
+      margin-top: 40px;
+    }
+    .contact-box p { margin: 0; font-size: 14px; color: #6b7280; }
+    .contact-box a { color: #6366f1; text-decoration: none; font-weight: 500; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; padding: 32px;
+      font-size: 12px; color: #9ca3af;
+      border-top: 1px solid #f3f4f6;
+    }
+    footer a { color: #6366f1; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 12px 20px; }
+      .container { padding: 40px 20px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html" class="topbar-logo">
+    <img src="logo-web.png" alt="Kibbo">
+    <span>Kibbo</span>
+  </a>
+  <a href="index.html" class="back-btn">← Volver al inicio</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Última actualización: Mayo 2025 · Versión 1.0</p>
+
+  <div class="highlight-box">
+    <p>🛡️ <strong>Resumen rápido:</strong> Kibbo procesa todo en tu navegador. No tenemos acceso a tus contraseñas, datos bancarios ni historial de navegación. Solo recopilamos tu email si nos lo das voluntariamente.</p>
+  </div>
+
+  <h2 data-num="1">Quiénes somos</h2>
+  <p>Kibbo es una extensión de navegador diseñada para proteger a los consumidores de dark patterns, precios inflados y cláusulas abusivas durante sus compras online. Somos una herramienta de seguridad e información, no una tienda ni un servicio financiero.</p>
+  <p>Para cualquier consulta relacionada con tu privacidad, puedes contactarnos en: <a href="/cdn-cgi/l/email-protection#066e636a6a69466163726d6f6464692865696b" style="color:#6366f1;font-weight:500;"><span class="__cf_email__" data-cfemail="85ede0e9e9eac5e2e0f1eeece7e7eaabe6eae8">[email&#160;protected]</span></a></p>
+
+  <h2 data-num="2">Datos que recopilamos (y los que NO)</h2>
+  <p><strong>No recopilamos:</strong></p>
+  <ul>
+    <li>Tu historial de navegación</li>
+    <li>Las páginas web que visitas</li>
+    <li>Contraseñas, datos bancarios o información de pago</li>
+    <li>Conversaciones ni contenido de tus chats</li>
+    <li>Información personal identificable sin tu consentimiento</li>
+  </ul>
+  <p><strong>Solo recopilamos tu email</strong> si tú nos lo facilitas voluntariamente a través del formulario de lista de espera (gestionado por Tally.so). Este email se usa exclusivamente para enviarte actualizaciones de Kibbo.</p>
+
+  <h2 data-num="3">Datos procesados localmente</h2>
+  <p>La siguiente información se procesa <strong>exclusivamente en tu dispositivo</strong> y nunca se envía a nuestros servidores:</p>
+  <ul>
+    <li>Precios detectados en páginas de producto (historial del Espectrómetro)</li>
+    <li>Contadores de trampas detectadas por dominio (para el Ranking)</li>
+    <li>Configuración personal (lista blanca, frases ignoradas)</li>
+    <li>Capturas SHA-256 del Snapshot (guardadas solo en tu navegador)</li>
+  </ul>
+  <p>Todos estos datos se almacenan en <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:13px;">chrome.storage.local</code>, el almacenamiento local de tu extensión Chrome, y solo tú puedes acceder a ellos.</p>
+
+  <h2 data-num="4">Funciones de IA (Plan Pro)</h2>
+  <p>Si utilizas las funciones de análisis con Inteligencia Artificial del plan Pro, Kibbo envía únicamente el texto público visible en la página que estás visitando (reseñas de productos o cláusulas de términos y condiciones) a la API de Anthropic para su análisis.</p>
+  <p>Nunca se envían: credenciales, datos de pago, información personal ni datos de identificación. Esta función solo se activa cuando tú la solicitas explícitamente.</p>
+
+  <h2 data-num="5">Afiliados y cookies de terceros</h2>
+  <p>Kibbo puede mostrar enlaces a tiendas como Amazon a través del programa Amazon Associates (afiliados). Cuando haces clic en estos enlaces y realizas una compra, Kibbo puede recibir una pequeña comisión sin coste adicional para ti.</p>
+  <p>Estos enlaces pueden incluir cookies de seguimiento de afiliados de Amazon y Rakuten para atribuir las comisiones. Estas cookies son gestionadas por dichas plataformas y están sujetas a sus propias políticas de privacidad. Kibbo no tiene acceso a los datos de estas cookies.</p>
+
+  <h2 data-num="6">Compartición de datos</h2>
+  <ul>
+    <li>No vendemos tus datos a terceros</li>
+    <li>No alquilamos ni cedemos tu información personal</li>
+    <li>No mostramos publicidad personalizada</li>
+    <li>No compartimos datos con anunciantes</li>
+  </ul>
+  <p>El único servicio externo que recibe tu email es Tally.so (formulario de lista de espera), sujeto a su propia política de privacidad.</p>
+
+  <h2 data-num="7">Tus derechos</h2>
+  <p>Tienes derecho a:</p>
+  <ul>
+    <li>Acceder a los datos que tenemos sobre ti</li>
+    <li>Solicitar la eliminación de tu email en cualquier momento</li>
+    <li>Oponerte al procesamiento de tus datos</li>
+    <li>Eliminar todos los datos locales desinstalando la extensión</li>
+  </ul>
+  <p>Para ejercer cualquiera de estos derechos, escríbenos a <a href="/cdn-cgi/l/email-protection#b4dcd1d8d8dbf4d3d1c0dfddd6d6db9ad7dbd9" style="color:#6366f1;font-weight:500;"><span class="__cf_email__" data-cfemail="0169646d6d6e416664756a6863636e2f626e6c">[email&#160;protected]</span></a> y responderemos en un plazo máximo de 30 días.</p>
+
+  <h2 data-num="8">Cambios en esta política</h2>
+  <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" en la parte superior. Te recomendamos revisarla periódicamente.</p>
+
+  <div class="contact-box">
+    <p>¿Preguntas sobre privacidad? Escríbenos a <a href="/cdn-cgi/

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos de Servicio — Kibbo</title>
+  <link rel="icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f3f4f6;
+      padding: 14px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #111827;
+    }
+    .topbar-logo img { width: 28px; height: 28px; border-radius: 8px; }
+    .topbar-logo span { font-weight: 600; font-size: 16px; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 8px;
+      background: #f9fafb; border: 1px solid #e5e7eb;
+      color: #374151; font-size: 13px; font-weight: 500;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .back-btn:hover { background: #f3f4f6; border-color: #d1d5db; }
+
+    .container {
+      max-width: 720px; margin: 0 auto;
+      padding: 56px 48px 96px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #6366f1;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+      letter-spacing: -0.5px; line-height: 1.15;
+      color: #111827; margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 13px; color: #9ca3af; margin-bottom: 48px;
+      padding-bottom: 32px; border-bottom: 1px solid #f3f4f6;
+    }
+
+    h2 {
+      font-size: 18px; font-weight: 600;
+      color: #111827; margin: 40px 0 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: #eef2ff; color: #6366f1;
+      border-radius: 8px; font-size: 12px; font-weight: 700;
+    }
+
+    p { font-size: 15px; color: #374151; margin-bottom: 14px; }
+    ol { padding-left: 0; list-style: none; margin-bottom: 14px; counter-reset: item; }
+    ol li {
+      font-size: 15px; color: #374151;
+      padding: 8px 0 8px 28px; position: relative;
+      border-bottom: 1px solid #f9fafb;
+      counter-increment: item;
+    }
+    ol li::before {
+      content: counter(item) ".";
+      position: absolute; left: 0;
+      color: #6366f1; font-weight: 600; font-size: 13px;
+      top: 10px;
+    }
+    ol li:last-child { border-bottom: none; }
+
+    .warning-box {
+      background: #fffbeb; border: 1px solid #fde68a;
+      border-radius: 12px; padding: 16px 20px; margin: 20px 0;
+    }
+    .warning-box p { color: #92400e; margin: 0; font-size: 14px; }
+
+    .contact-box {
+      background: #fafafa; border: 1px solid #e5e7eb;
+      border-radius: 12px; padding: 20px 24px; margin-top: 40px;
+    }
+    .contact-box p { margin: 0; font-size: 14px; color: #6b7280; }
+    .contact-box a { color: #6366f1; text-decoration: none; font-weight: 500; }
+
+    footer {
+      text-align: center; padding: 32px;
+      font-size: 12px; color: #9ca3af;
+      border-top: 1px solid #f3f4f6;
+    }
+    footer a { color: #6366f1; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 12px 20px; }
+      .container { padding: 40px 20px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html" class="topbar-logo">
+    <img src="logo-web.png" alt="Kibbo">
+    <span>Kibbo</span>
+  </a>
+  <a href="index.html" class="back-btn">← Volver al inicio</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>Términos de Servicio</h1>
+  <p class="meta">Última actualización: Mayo 2025 · Versión 1.0</p>
+
+  <p>Al instalar o usar la extensión Kibbo, aceptas los siguientes términos. Si no estás de acuerdo, desinstala la extensión.</p>
+
+  <h2><span class="num">1</span> Descripción del servicio</h2>
+  <p>Kibbo es una extensión de navegador de carácter informativo que ayuda a los usuarios a identificar prácticas comerciales potencialmente engañosas (dark patterns), comparar precios y revisar cláusulas en términos y condiciones.</p>
+  <ol>
+    <li>Kibbo es una <strong>herramienta de información</strong>, no un asesor financiero, legal ni comercial.</li>
+    <li>El servicio se ofrece en fase Beta. Algunas funciones pueden estar incompletas o cambiar sin previo aviso.</li>
+    <li>Kibbo es compatible con Google Chrome, Microsoft Edge, Brave y Opera.</li>
+  </ol>
+
+  <h2><span class="num">2</span> Precisión de la información</h2>
+  <div class="warning-box">
+    <p>⚠️ Los precios, descuentos y datos mostrados por Kibbo son orientativos. Los precios en Amazon, tiendas online y otros servicios pueden cambiar en cualquier momento y Kibbo no garantiza su exactitud en tiempo real.</p>
+  </div>
+  <ol>
+    <li>Kibbo no garantiza que los precios detectados sean exactos al 100% ni que estén actualizados en el momento de la consulta.</li>
+    <li>El historial de precios se basa en visitas anteriores del propio usuario y puede estar incompleto.</li>
+    <li>La detección de dark patterns es automática y puede generar falsos positivos o no detectar todos los casos.</li>
+    <li>El análisis de T&C es informativo y no constituye asesoramiento legal.</li>
+  </ol>
+
+  <h2><span class="num">3</span> Responsabilidad del usuario</h2>
+  <ol>
+    <li>El usuario es el único responsable de las decisiones de compra que tome en sitios externos.</li>
+    <li>Kibbo no participa en las transacciones entre el usuario y las tiendas online.</li>
+    <li>Kibbo no se hace responsable de pérdidas económicas, disputas o reclamaciones derivadas de compras realizadas por el usuario.</li>
+    <li>El Snapshot SHA-256 es una herramienta de evidencia personal. Kibbo no garantiza su aceptación en ningún procedimiento legal o administrativo concreto.</li>
+  </ol>
+
+  <h2><span class="num">4</span> Limitación de responsabilidad</h2>
+  <ol>
+    <li>Kibbo se proporciona "tal cual" sin garantías de ningún tipo, expresas o implícitas.</li>
+    <li>Kibbo no será responsable de daños directos, indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de usar el servicio.</li>
+    <li>Kibbo puede dejar de estar disponible temporalmente por mantenimiento, actualizaciones o circunstancias técnicas.</li>
+  </ol>
+
+  <h2><span class="num">5</span> Propiedad intelectual</h2>
+  <ol>
+    <li>El nombre <strong>Kibbo</strong>, su logotipo y todos los elementos visuales asociados son propiedad exclusiva de Kibbo.</li>
+    <li>El código de la extensión y todos sus componentes están protegidos por derechos de autor.</li>
+    <li>Queda prohibida la reproducción, distribución o modificación del software sin autorización expresa por escrito.</li>
+  </ol>
+
+  <h2><span class="num">6</span> Afiliados y monetización</h2>
+  <ol>
+    <li>Kibbo participa en programas de afiliados de Amazon y otras plataformas. Kibbo puede recibir una comisión si el usuario realiza una compra a través de los enlaces del Comparador marcados con "⭐ Oferta verificada".</li>
+    <li>Esta comisión no tiene ningún coste adicional para el usuario.</li>
+    <li>La participación en programas de afiliados no influye en la imparcialidad de los resultados de búsqueda ni en las alertas mostradas.</li>
+  </ol>
+
+  <h2><span class="num">7</span> Uso aceptable</h2>
+  <ol>
+    <li>El usuario se compromete a no intentar modificar, hacer ingeniería inversa o distribuir la extensión.</li>
+    <li>Está prohibido usar Kibbo para actividades ilegales o para perjudicar a terceros.</li>
+    <li>Kibbo se reserva el derecho de bloquear el acceso al servicio a usuarios que incumplan estos términos.</li>
+  </ol>
+
+  <h2><span class="num">8</span> Modificaciones</h2>
+  <ol>
+    <li>Kibbo se reserva el derecho de actualizar la extensión, añadir o eliminar funciones y modificar estos Términos en cualquier momento.</li>
+    <li>Los cambios significativos se comunicarán a través de la landing page o por email a los usuarios suscritos.</li>
+    <li>El uso continuado de la extensión tras una actualización de los Términos implica la aceptación de los nuevos términos.</li>
+  </ol>
+
+  <h2><span class="num">9</span> Jurisdicción</h2>
+  <p>Estos Términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales competentes del domicilio del usuario en España, de acuerdo con la normativa de protección al consumidor vigente.</p>
+
+  <div class="contact-box">
+    <p>¿Dudas sobre los términos? Escríbenos a <a href="/cdn-cgi/l/email-protection#0f676a6363604f686a7b64666d6d60216c6062"><span class="__cf_email__" data-cfemail="9ff7faf3f3f0dff8faebf4f6fdfdf0b1fcf0f2">[email&#160;protected]</span></a></p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Kibbo · <a hr
