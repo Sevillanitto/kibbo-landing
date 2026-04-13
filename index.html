@@ -1,589 +1,1046 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="google-site-verification" content="4EXMIyP9hEQOxlqiu9gGvvp9X3zAdBeHOvaYDFg8sIU" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kibbo — Navega sin trampas</title>
-<meta name="description" content="La extensión que detecta dark patterns, precios inflados y cláusulas trampa en tiempo real.">
-<link rel="icon" type="image/png" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQYI/8QAIBAAAgECBwEAAAAAAAAAAAAAAQIDBBEABQYSEyExQf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAIBEAAgIBAwUAAAAAAAAAAAAAAQIDIREAEkEEYXGxwf/aAAwDAQACEQMRAD8Ay9pPK6CWOCeopueVg7sZmPEgU2F1UbmJv59w5qrTWTxZNWVKQLR1iRRTxrETxuGZgRtYblNgDtubdYl9PZzHRwCCQsjBtyvc2B9+djsDsG4thDUGo6avySTL1mdZI2Vk41OyS5JYG5JuCxNz79xXcRtECpXaBYrcWx658120PrYJHkR4mwKz9rnOv//Z">
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#03030a;--surf:#08080f;--border:rgba(255,255,255,0.07);
-  --c:#00d4ff;--p:#7c3aed;--n:#a855f7;--g:#10b981;--r:#ef4444;--y:#f59e0b;
-  --txt:#eeeeff;--m:#55556a;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kibbo — Navega sin trampas</title>
+  <meta name="description" content="La extensión de Chrome que detecta dark patterns, precios inflados y cláusulas trampa en tiempo real. Protege cada compra online.">
+  <meta property="og:title" content="Kibbo — Navega sin trampas">
+  <meta property="og:description" content="Detecta dark patterns, precios inflados y cláusulas abusivas automáticamente.">
+  <meta property="og:image" content="https://getkibbo.com/og.png">
+  <link rel="icon" type="image/png" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUH/8QAIxAAAQMDAwUBAAAAAAAAAAAAAQIDBAUHIQYRMQASFEFCUf/EABUBAQEAAAAAAAAAAAAAAAAAAAUH/8QAIREAAAUCBwAAAAAAAAAAAAAAAAERFGECEgMTITEyUZH/2gAMAwEAAhEDEQA/AMitnaRvUVvxV4zTz1XL619p2DRYSlG+TgKBVvzkA/nQLk2wRpvRBqUtp9qrmS2oJGxaEdaV9uRgqJRvg4Ck/vTLQ3Qap1GjafqUvxW47pdiPqBKWHSACVJ+21AAKHI5HsGbdm4SajElUSmzPJYkSBImPgEJkPAEJKE/DaASEjBPJ9AUUmrG0zpyUWfe43WNQVgunVV/Ef/Z">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #050508;
+      --surface:  #0d0d14;
+      --border:   rgba(255,255,255,0.07);
+      --accent:   #7c6dfa;
+      --accent2:  #f87171;
+      --accent3:  #34d399;
+      --text:     #f0f0f5;
+      --muted:    #5a5a72;
+      --card-bg:  rgba(255,255,255,0.03);
+    }
 
-/* CURSOR */
-#cur{position:fixed;width:22px;height:22px;border:2px solid var(--c);border-radius:50%;pointer-events:none;z-index:99999;transition:transform .15s,border-color .2s;mix-blend-mode:screen}
-#curd{position:fixed;width:5px;height:5px;background:var(--c);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%)}
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-/* PARTICLES */
-#pts{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.pt{position:absolute;width:2px;height:2px;border-radius:50%;opacity:0;animation:pfloat linear infinite}
-@keyframes pfloat{0%{transform:translateY(100vh);opacity:0}10%{opacity:.5}90%{opacity:.2}100%{transform:translateY(-5vh) translateX(20px);opacity:0}}
+    html { scroll-behavior: smooth; }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(3,3,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,212,255,.1)}
-.nlogo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nlogo img{width:30px;height:30px;border-radius:8px;object-fit:cover}
-.nlogo span{font-family:'Oxanium',sans-serif;font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--c),var(--n));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nlinks{display:flex;align-items:center;gap:24px;list-style:none}
-.nlinks a{font-size:12px;font-weight:500;color:var(--m);text-decoration:none;transition:color .2s;letter-spacing:.3px}
-.nlinks a:hover{color:var(--c)}
-.ncta{background:linear-gradient(135deg,var(--p),var(--c)) !important;color:#fff !important;padding:8px 18px !important;border-radius:8px !important;font-weight:600 !important;box-shadow:0 0 20px rgba(124,58,237,.4) !important}
-.ncta:hover{box-shadow:0 0 36px rgba(0,212,255,.5) !important;color:#fff !important}
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* HERO */
-.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 60px;text-align:center;overflow:hidden}
-.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%);pointer-events:none}
-.hbadge{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;padding:5px 16px 5px 10px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.22);border-radius:100px;font-size:10px;font-weight:700;color:var(--c);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px;animation:fup .6s ease both}
-.bdot{width:6px;height:6px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);animation:pdot 2s ease infinite}
-@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.hero h1{position:relative;z-index:1;font-family:'Oxanium',sans-serif;font-size:clamp(42px,7vw,88px);font-weight:800;line-height:1;letter-spacing:-2.5px;margin-bottom:18px;animation:fup .6s .1s ease both}
-.h1a{display:block;color:var(--txt)}
-.h1b{display:block;background:linear-gradient(135deg,var(--c) 0%,var(--n) 50%,var(--c) 100%);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3s linear infinite}
-@keyframes shimmer{to{background-position:200% center}}
-.hsub{position:relative;z-index:1;font-size:clamp(15px,2vw,18px);font-weight:300;color:var(--m);max-width:520px;line-height:1.75;margin-bottom:36px;animation:fup .6s .2s ease both}
-.hsub strong{color:#8888aa;font-weight:500}
-@keyframes fup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content:'';
+      position:fixed; inset:0; z-index:0; pointer-events:none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
 
-/* SCANNER */
-.scan-wrap{position:relative;z-index:1;width:min(560px,92vw);background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.18);border-radius:14px;padding:14px 14px 14px 18px;display:flex;gap:10px;align-items:center;margin-bottom:20px;animation:fup .6s .3s ease both;box-shadow:0 0 40px rgba(0,212,255,.05)}
-.scan-inp{flex:1;background:none;border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--txt);caret-color:var(--c)}
-.scan-inp::placeholder{color:var(--m)}
-.scan-btn{padding:10px 18px;border-radius:9px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-family:'Oxanium',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;white-space:nowrap;transition:all .2s;box-shadow:0 0 18px rgba(124,58,237,.4)}
-.scan-btn:hover{box-shadow:0 0 32px rgba(0,212,255,.5);transform:translateY(-1px)}
-#scan-res{position:relative;z-index:1;width:min(560px,92vw);margin-bottom:18px;display:none;animation:fup .35s ease both}
-.sscanning{background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.2);border-radius:11px;padding:18px;text-align:center}
-.sradar{width:54px;height:54px;margin:0 auto 10px;position:relative}
-.sradar-ring{position:absolute;inset:0;border:2px solid rgba(0,212,255,.25);border-radius:50%}
-.sradar-ring:nth-child(2){inset:10px;animation:spin 1.2s linear infinite}
-.sradar-line{position:absolute;top:50%;left:50%;width:50%;height:2px;background:linear-gradient(90deg,var(--c),transparent);transform-origin:left;animation:spin 1.2s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.stxt{font-family:'Oxanium',sans-serif;font-size:11px;color:var(--c);letter-spacing:1.5px;text-transform:uppercase;animation:blink 1s step-end infinite}
-@keyframes blink{50%{opacity:.4}}
-.sok{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.28);border-radius:11px;padding:18px;display:flex;align-items:center;gap:14px}
-.sok-shield{font-size:38px;animation:spop .4s cubic-bezier(.34,1.56,.64,1) both;filter:drop-shadow(0 0 14px rgba(16,185,129,.7))}
-@keyframes spop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
-.sok-title{font-family:'Oxanium',sans-serif;font-size:13px;font-weight:700;color:#34d399;margin-bottom:3px}
-.sok-sub{font-size:11px;color:var(--m)}
-.sdanger{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.28);border-radius:11px;padding:18px;display:flex;align-items:center;gap:14px}
-.sdanger-icon{font-size:34px;animation:spop .4s cubic-bezier(.34,1.56,.64,1) both;filter:drop-shadow(0 0 14px rgba(239,68,68,.7))}
-.sdanger-title{font-family:'Oxanium',sans-serif;font-size:13px;font-weight:700;color:#f87171;margin-bottom:3px}
-.sdanger-sub{font-size:11px;color:var(--m)}
-.swarn{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.25);border-radius:11px;padding:18px;display:flex;align-items:center;gap:14px}
-.swarn-icon{font-size:34px;animation:spop .4s cubic-bezier(.34,1.56,.64,1) both;filter:drop-shadow(0 0 12px rgba(245,158,11,.7))}
-.swarn-title{font-family:'Oxanium',sans-serif;font-size:13px;font-weight:700;color:#fde68a;margin-bottom:3px}
-.swarn-sub{font-size:11px;color:var(--m)}
+    /* ── NAV ── */
+    nav {
+      position: fixed; top:0; left:0; right:0; z-index:100;
+      padding: 18px 48px;
+      display: flex; align-items:center; justify-content:space-between;
+      background: rgba(5,5,8,0.7);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
 
-/* CTA BTNS */
-.hbtns{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;animation:fup .6s .35s ease both}
-.btn-p{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-family:'Oxanium',sans-serif;font-size:14px;font-weight:700;letter-spacing:.3px;border-radius:12px;text-decoration:none;transition:all .2s;box-shadow:0 0 36px rgba(124,58,237,.4)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 56px rgba(0,212,255,.5)}
-.btn-g{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border:1px solid var(--border);color:var(--m);font-size:14px;font-weight:500;border-radius:12px;text-decoration:none;transition:all .2s}
-.btn-g:hover{color:var(--txt);border-color:rgba(0,212,255,.3)}
-.hnote{position:relative;z-index:1;font-size:10px;color:var(--m);margin-top:12px;animation:fup .6s .45s ease both}
+    .nav-logo {
+      display:flex; align-items:center; gap:10px;
+      font-family: 'Syne', sans-serif;
+      font-size: 20px; font-weight: 800;
+      letter-spacing: -0.5px; color: var(--text);
+      text-decoration: none;
+    }
 
-/* STATS PANEL */
-.stats{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0;margin-top:52px;padding:22px 36px;background:rgba(0,212,255,.025);border:1px solid rgba(0,212,255,.1);border-radius:18px;animation:fup .6s .5s ease both;max-width:680px}
-.stats::before{content:'KIBBO SHIELD STATUS';position:absolute;top:-9px;left:20px;padding:0 8px;background:var(--bg);font-family:'Oxanium',sans-serif;font-size:8px;font-weight:700;letter-spacing:2.5px;color:var(--c);opacity:.7}
-.sitem{text-align:center;padding:8px 24px}
-.snum{font-family:'Oxanium',sans-serif;font-size:26px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--c),var(--n));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.slbl{font-size:9px;color:var(--m);margin-top:3px;text-transform:uppercase;letter-spacing:.8px}
-.sdiv{width:1px;height:36px;background:rgba(0,212,255,.14)}
+    .nav-logo img {
+      width: 28px; height: 28px; border-radius:7px;
+    }
 
-/* FEATURES */
-section{position:relative;z-index:1}
-.sec-lbl{font-family:'Oxanium',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--c);margin-bottom:12px}
-.sec-h{font-family:'Oxanium',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:14px}
-.sec-sub{font-size:15px;font-weight:300;color:var(--m);max-width:460px;line-height:1.75}
+    .nav-links {
+      display:flex; align-items:center; gap:32px;
+      list-style:none;
+    }
 
-.feats{padding:100px 48px;max-width:1160px;margin:0 auto}
-.feats-hd{text-align:center;margin-bottom:56px}
-.feats-hd .sec-sub{margin:0 auto}
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .nav-links a {
+      font-size: 13px; font-weight:500; color: var(--muted);
+      text-decoration:none; transition: color 0.2s;
+      letter-spacing: 0.2px;
+    }
+    .nav-links a:hover { color: var(--text); }
 
-/* GLASS CARDS */
-.fc{position:relative;overflow:hidden;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.075);border-radius:18px;padding:26px;transition:all .3s;cursor:default}
-.fc::before{content:'';position:absolute;inset:0;border-radius:18px;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),var(--gc,rgba(0,212,255,.07)),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
-.fc:hover::before{opacity:1}
-.fc:hover{border-color:rgba(0,212,255,.18);transform:translateY(-4px) perspective(600px) rotateX(1deg);box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 28px rgba(0,212,255,.05)}
-.fc.wide{grid-column:span 2}
-.ficon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);backdrop-filter:blur(8px)}
-.ftitle{font-family:'Oxanium',sans-serif;font-size:15px;font-weight:700;margin-bottom:7px}
-.fdesc{font-size:12px;color:var(--m);line-height:1.65}
-.fpill{display:inline-flex;align-items:center;gap:4px;margin-top:11px;padding:3px 10px;border-radius:100px;font-size:9px;font-weight:700;background:rgba(0,212,255,.07);color:var(--c);border:1px solid rgba(0,212,255,.18);letter-spacing:.4px}
-.fpill.green{background:rgba(16,185,129,.07);color:#34d399;border-color:rgba(16,185,129,.2)}
-.fpill.purple{background:rgba(124,58,237,.09);color:#a78bfa;border-color:rgba(124,58,237,.22)}
-.fpill.ai{background:rgba(124,58,237,.12);color:#a78bfa;border-color:rgba(124,58,237,.25)}
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 8px 18px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.85 !important; }
 
-/* HOW IT WORKS */
-.how{padding:96px 48px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(0,212,255,.018),transparent)}
-.how-in{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.steps{display:flex;flex-direction:column;gap:20px}
-.step{display:flex;gap:14px;align-items:flex-start;opacity:.35;transition:opacity .3s;cursor:default}
-.step:hover,.step.act{opacity:1}
-.stepn{width:32px;height:32px;border-radius:9px;flex-shrink:0;background:linear-gradient(135deg,var(--p),var(--c));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Oxanium',sans-serif;font-size:12px;font-weight:800;box-shadow:0 0 14px rgba(0,212,255,.3)}
-.stept{font-family:'Oxanium',sans-serif;font-size:14px;font-weight:700;margin-bottom:3px}
-.stepd{font-size:12px;color:var(--m);line-height:1.6}
+    /* ── HERO ── */
+    .hero {
+      position:relative; z-index:1;
+      min-height: 100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding: 120px 24px 80px;
+      text-align:center;
+      overflow:hidden;
+    }
 
-.hvisual{background:rgba(0,212,255,.025);border:1px solid rgba(0,212,255,.1);border-radius:18px;padding:22px}
-.hvtitle{font-family:'Oxanium',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);opacity:.6;margin-bottom:14px}
-.arow{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;margin-bottom:7px;font-size:11px;transition:all .2s;cursor:default}
-.arow:hover{transform:translateX(4px)}
-.arow.r{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.18);color:#fca5a5}
-.arow.y{background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.18);color:#fde68a}
-.arow.g{background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.18);color:#6ee7b7}
-.adot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.arow.r .adot{background:#ef4444;box-shadow:0 0 6px #ef4444}
-.arow.y .adot{background:#f59e0b;box-shadow:0 0 6px #f59e0b}
-.arow.g .adot{background:#10b981;box-shadow:0 0 6px #10b981}
-.hvfoot{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-size:9px;color:var(--m);line-height:1.5}
-#demobtn{width:100%;margin-top:10px;padding:9px;background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.22);border-radius:8px;color:#f87171;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
-#demobtn:hover{background:rgba(239,68,68,.15)}
+    /* Gradient blobs */
+    .hero::after {
+      content:'';
+      position:absolute; z-index:0;
+      width: 800px; height: 800px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      background: radial-gradient(ellipse, rgba(124,109,250,0.12) 0%, transparent 70%);
+      pointer-events:none;
+    }
 
-/* PRICING */
-.pricing{padding:96px 48px;max-width:880px;margin:0 auto;text-align:center}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;text-align:left}
-.pcard{border:1px solid var(--border);border-radius:18px;padding:30px;background:rgba(255,255,255,.018);position:relative;overflow:hidden;transition:all .3s}
-.pcard:hover{border-color:rgba(0,212,255,.18);transform:translateY(-2px)}
-.pcard.feat{border-color:rgba(0,212,255,.28);background:rgba(0,212,255,.035)}
-.pcard.feat::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(0,212,255,.06),transparent 60%)}
-.pbadge{display:inline-block;margin-bottom:12px;padding:3px 11px;border-radius:100px;font-family:'Oxanium',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:linear-gradient(135deg,var(--p),var(--c));color:#fff}
-.pname{font-family:'Oxanium',sans-serif;font-size:20px;font-weight:800;margin-bottom:4px}
-.pprice{font-family:'Oxanium',sans-serif;font-size:38px;font-weight:800;letter-spacing:-2px;margin:14px 0 3px}
-.pprice span{font-size:14px;font-weight:400;color:var(--m);letter-spacing:0}
-.ptagline{font-size:10px;color:var(--c);margin-bottom:5px}
-.pdesc{font-size:12px;color:var(--m);margin-bottom:20px;line-height:1.6}
-.plist{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-.plist li{display:flex;align-items:center;gap:7px;font-size:12px}
-.plist li::before{content:"✓";color:var(--c);font-weight:700;font-size:11px}
-.plist li.off{color:var(--m)}
-.plist li.off::before{content:"—";color:var(--m)}
-.pbtn{display:block;width:100%;padding:12px;text-align:center;border-radius:9px;font-family:'Oxanium',sans-serif;font-size:12px;font-weight:700;text-decoration:none;transition:all .2s;letter-spacing:.3px}
-.pbtn.p{background:linear-gradient(135deg,var(--p),var(--c));color:#fff;box-shadow:0 0 20px rgba(0,212,255,.2)}
-.pbtn.p:hover{box-shadow:0 0 36px rgba(0,212,255,.4);transform:translateY(-1px)}
-.pbtn.g{border:1px solid var(--border);color:var(--m)}
-.pbtn.g:hover{color:var(--txt);border-color:rgba(0,212,255,.3)}
+    .blob-left {
+      position:absolute; z-index:0;
+      width: 500px; height: 500px;
+      top: 20%; left: -10%;
+      background: radial-gradient(ellipse, rgba(248,113,113,0.06) 0%, transparent 70%);
+      pointer-events:none;
+    }
 
-/* WAITLIST */
-.wl{padding:72px 48px;max-width:580px;margin:0 auto;text-align:center}
-.wlform{margin-top:28px;display:flex;gap:9px;flex-wrap:wrap}
-.wlinp{flex:1;min-width:190px;padding:13px 16px;background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.18);border-radius:9px;color:var(--txt);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color .2s}
-.wlinp:focus{border-color:var(--c);box-shadow:0 0 10px rgba(0,212,255,.12)}
-.wlinp::placeholder{color:var(--m)}
-.wlsub{padding:13px 22px;border:none;cursor:pointer;border-radius:9px;background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-family:'Oxanium',sans-serif;font-size:12px;font-weight:700;letter-spacing:.3px;transition:all .2s;box-shadow:0 0 18px rgba(124,58,237,.3);white-space:nowrap}
-.wlsub:hover{box-shadow:0 0 32px rgba(0,212,255,.4);transform:translateY(-1px)}
-#wlok{display:none;margin-top:14px;padding:11px 18px;background:rgba(16,185,129,.09);border:1px solid rgba(16,185,129,.28);border-radius:9px;color:#34d399;font-size:12px;font-weight:500}
-.wlnote{font-size:10px;color:var(--m);margin-top:10px}
+    .blob-right {
+      position:absolute; z-index:0;
+      width: 400px; height: 400px;
+      bottom: 10%; right: -5%;
+      background: radial-gradient(ellipse, rgba(52,211,153,0.06) 0%, transparent 70%);
+      pointer-events:none;
+    }
 
-/* FAQ */
-.faq{padding:72px 48px;max-width:660px;margin:0 auto}
-.fqitem{border-bottom:1px solid var(--border);padding:16px 0}
-.fqq{display:flex;justify-content:space-between;align-items:center;font-family:'Oxanium',sans-serif;font-size:13px;font-weight:600;cursor:pointer;gap:12px;transition:color .2s}
-.fqq:hover{color:var(--c)}
-.fqi{color:var(--m);font-size:17px;flex-shrink:0;transition:transform .3s}
-.fqitem.open .fqi{transform:rotate(45deg)}
-.fqa{font-size:12px;color:var(--m);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s}
-.fqitem.open .fqa{max-height:200px;padding-top:9px}
+    .hero-badge {
+      position:relative; z-index:1;
+      display:inline-flex; align-items:center; gap:6px;
+      padding: 5px 14px 5px 8px;
+      background: rgba(124,109,250,0.1);
+      border: 1px solid rgba(124,109,250,0.25);
+      border-radius: 100px;
+      font-size: 11px; font-weight:500; color: #a89dfc;
+      letter-spacing: 0.5px; text-transform:uppercase;
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
 
-/* PRIVACY */
-#privacy{padding:72px 48px;max-width:760px;margin:0 auto;border-top:1px solid var(--border)}
-#privacy h2{font-family:'Oxanium',sans-serif;font-size:26px;font-weight:800;margin-bottom:20px;letter-spacing:-.5px}
-#privacy h3{font-family:'Oxanium',sans-serif;font-size:13px;font-weight:700;color:var(--c);margin:18px 0 7px}
-#privacy p,#privacy li{font-size:12px;color:var(--m);line-height:1.8;margin-bottom:6px}
-#privacy ul{padding-left:16px}
-#privacy a{color:var(--c);text-decoration:none}
+    .hero-badge span {
+      width:6px; height:6px; border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s ease infinite;
+    }
 
-/* CTA FINAL */
-.ctaband{padding:96px 48px;text-align:center;background:radial-gradient(ellipse at center,rgba(124,58,237,.09) 0%,transparent 70%);border-top:1px solid var(--border)}
-.ctaband h2{font-family:'Oxanium',sans-serif;font-size:clamp(30px,5vw,60px);font-weight:800;letter-spacing:-2px;margin-bottom:18px;line-height:1.05}
-.ctaband p{font-size:14px;color:var(--m);max-width:420px;margin:0 auto 32px}
+    @keyframes pulse {
+      0%, 100% { opacity:1; transform:scale(1); }
+      50% { opacity:0.5; transform:scale(0.8); }
+    }
 
-/* FOOTER */
-footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--m);flex-wrap:wrap;gap:8px}
-footer a{color:var(--m);text-decoration:none;transition:color .2s}
-footer a:hover{color:var(--c)}
+    .hero h1 {
+      position:relative; z-index:1;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
 
-/* CAZADOS BANNER */
-#caz{position:fixed;top:0;left:0;right:0;z-index:99998;background:linear-gradient(135deg,#dc2626,#991b1b);color:#fff;font-family:'Oxanium',sans-serif;padding:11px 20px;display:none;align-items:center;gap:12px;box-shadow:0 4px 24px rgba(220,38,38,.5);animation:cazdown .4s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes cazdown{from{transform:translateY(-110%);opacity:0}to{transform:translateY(0);opacity:1}}
-.caztitle{font-size:13px;font-weight:800}
-.cazsub{font-size:10px;opacity:.85;margin-top:1px}
-#cazclose{background:none;border:none;color:rgba(255,255,255,.6);font-size:20px;cursor:pointer;padding:0 4px;margin-left:auto;flex-shrink:0;line-height:1}
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #a89dfc 0%, #7c6dfa 40%, #f87171 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-/* UTILS */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.reveal.vis{opacity:1;transform:translateY(0)}
-@media(max-width:768px){
-  nav{padding:12px 18px}.nlinks{display:none}
-  .feats{padding:56px 18px}.fgrid{grid-template-columns:1fr}.fc.wide{grid-column:span 1}
-  .how{padding:56px 18px}.how-in{grid-template-columns:1fr;gap:44px}
-  .pricing{padding:56px 18px}.pgrid{grid-template-columns:1fr}
-  .faq,.wl,#privacy{padding:56px 18px}.ctaband{padding:56px 18px}
-  footer{flex-direction:column;text-align:center}
-  .stats{padding:18px 12px}.sitem{padding:6px 14px}
-}
+    .hero-sub {
+      position:relative; z-index:1;
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.6;
+      margin-bottom: 44px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-sub strong { color: #9090a8; font-weight:500; }
+
+    .hero-actions {
+      position:relative; z-index:1;
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 15px 28px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px; font-weight:600;
+      border-radius: 12px;
+      text-decoration:none;
+      transition: all 0.2s;
+      box-shadow: 0 0 40px rgba(124,109,250,0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(124,109,250,0.45);
+    }
+
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 15px 24px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px; font-weight:500;
+      border-radius: 12px;
+      text-decoration:none;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.15); }
+
+    .hero-note {
+      position:relative; z-index:1;
+      font-size: 11px; color: var(--muted);
+      margin-top: 16px;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    /* ── SOCIAL PROOF ── */
+    .social-proof {
+      position:relative; z-index:1;
+      display:flex; align-items:center; gap:24px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+
+    .proof-stat { text-align:center; }
+    .proof-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 26px; font-weight:800; color: var(--text);
+      line-height:1;
+    }
+    .proof-label { font-size:11px; color: var(--muted); margin-top:3px; text-transform:uppercase; letter-spacing:0.5px; }
+    .proof-divider { width:1px; height:36px; background: var(--border); }
+
+    /* ── MOCKUP ── */
+    .mockup-wrap {
+      position:relative; z-index:1;
+      width: min(680px, 90vw);
+      margin: 64px auto 0;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .mockup-frame {
+      background: #0a0a12;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 40px 100px rgba(0,0,0,0.6),
+        0 0 80px rgba(124,109,250,0.08);
+    }
+
+    .mockup-bar {
+      display:flex; align-items:center; gap:8px;
+      padding: 12px 16px;
+      background: #111118;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mock-dot { width:10px; height:10px; border-radius:50%; }
+    .mock-dot.r { background:#ef4444; }
+    .mock-dot.y { background:#f59e0b; }
+    .mock-dot.g { background:#22c55e; }
+
+    .mock-url {
+      flex:1; background: rgba(255,255,255,0.04);
+      border-radius:6px; padding:5px 10px;
+      font-size:11px; color: var(--muted);
+      font-family: monospace;
+    }
+
+    .mockup-body {
+      padding: 20px;
+      display:grid; grid-template-columns:1fr 1fr; gap:12px;
+    }
+
+    .mock-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .mock-card.danger { border-color: rgba(248,113,113,0.25); background: rgba(248,113,113,0.05); }
+    .mock-card.warn   { border-color: rgba(251,191,36,0.2);  background: rgba(251,191,36,0.04); }
+    .mock-card.safe   { border-color: rgba(52,211,153,0.2);  background: rgba(52,211,153,0.04); }
+    .mock-card.purple { border-color: rgba(124,109,250,0.25); background: rgba(124,109,250,0.06); }
+
+    .mock-tag {
+      font-size: 9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase;
+      margin-bottom: 6px;
+    }
+    .mock-tag.r { color: #f87171; }
+    .mock-tag.y { color: #fbbf24; }
+    .mock-tag.g { color: #34d399; }
+    .mock-tag.p { color: #a89dfc; }
+
+    .mock-val  { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; color:var(--text); }
+    .mock-sub  { font-size:10px; color:var(--muted); margin-top:2px; }
+    .mock-bar-wrap { margin-top:8px; height:3px; background:rgba(255,255,255,0.06); border-radius:3px; }
+    .mock-bar  { height:100%; border-radius:3px; }
+
+    /* ── SECTION BASE ── */
+    section { position:relative; z-index:1; }
+
+    .section-label {
+      font-size: 11px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+      color: var(--accent); margin-bottom:14px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800; letter-spacing:-1.5px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      font-size: 16px; font-weight:300; color: var(--muted);
+      max-width: 500px; line-height:1.7;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      padding: 100px 48px;
+      max-width: 1200px; margin: 0 auto;
+    }
+
+    .features-header { text-align:center; margin-bottom:64px; }
+    .features-header .section-sub { margin:0 auto; }
+
+    .features-grid {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .feat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s;
+      position:relative; overflow:hidden;
+    }
+
+    .feat-card::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse at top left, var(--glow,rgba(124,109,250,0.06)), transparent 60%);
+      pointer-events:none;
+    }
+
+    .feat-card:hover {
+      border-color: rgba(255,255,255,0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .feat-card.wide { grid-column: span 2; }
+
+    .feat-icon {
+      width:40px; height:40px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:18px; margin-bottom:16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .feat-title {
+      font-family:'Syne',sans-serif;
+      font-size:17px; font-weight:700; margin-bottom:8px; color:var(--text);
+    }
+
+    .feat-desc { font-size:13px; color:var(--muted); line-height:1.6; }
+
+    .feat-pill {
+      display:inline-block; margin-top:12px;
+      padding:3px 10px; border-radius:100px;
+      font-size:10px; font-weight:600;
+      background:rgba(124,109,250,0.1); color:#a89dfc;
+      border:1px solid rgba(124,109,250,0.2);
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how {
+      padding: 100px 48px;
+      background: linear-gradient(180deg, transparent, rgba(124,109,250,0.03), transparent);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .how-inner {
+      max-width: 1000px; margin:0 auto;
+      display:grid; grid-template-columns: 1fr 1fr; gap:80px; align-items:center;
+    }
+
+    .steps { display:flex; flex-direction:column; gap:28px; }
+
+    .step {
+      display:flex; gap:18px; align-items:flex-start;
+      opacity:0.5; transition:opacity 0.3s;
+      cursor:default;
+    }
+    .step:hover { opacity:1; }
+    .step.active { opacity:1; }
+
+    .step-num {
+      width:32px; height:32px; border-radius:8px; flex-shrink:0;
+      background: var(--accent); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Syne',sans-serif; font-size:13px; font-weight:800;
+    }
+
+    .step-title { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; margin-bottom:5px; }
+    .step-desc  { font-size:13px; color:var(--muted); line-height:1.6; }
+
+    .how-visual {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding:28px;
+    }
+
+    .alert-row {
+      display:flex; align-items:center; gap:12px;
+      padding:12px 14px;
+      border-radius:10px;
+      margin-bottom:8px;
+      font-size:12px;
+      transition: all 0.2s;
+    }
+    .alert-row:hover { transform:translateX(4px); }
+    .alert-row.r { background:rgba(248,113,113,0.08); border:1px solid rgba(248,113,113,0.2); color:#fca5a5; }
+    .alert-row.y { background:rgba(251,191,36,0.06);  border:1px solid rgba(251,191,36,0.2); color:#fde68a; }
+    .alert-row.g { background:rgba(52,211,153,0.06);  border:1px solid rgba(52,211,153,0.2); color:#6ee7b7; }
+    .alert-row .dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+    .alert-row.r .dot { background:#ef4444; box-shadow:0 0 6px #ef4444; }
+    .alert-row.y .dot { background:#f59e0b; box-shadow:0 0 6px #f59e0b; }
+    .alert-row.g .dot { background:#10b981; box-shadow:0 0 6px #10b981; }
+
+    /* ── PRICING ── */
+    .pricing {
+      padding: 100px 48px;
+      max-width: 900px; margin:0 auto; text-align:center;
+    }
+
+    .pricing-grid {
+      display:grid; grid-template-columns:1fr 1fr; gap:20px;
+      margin-top:48px; text-align:left;
+    }
+
+    .plan-card {
+      border: 1px solid var(--border);
+      border-radius:20px; padding:32px;
+      background: var(--card-bg);
+      position:relative; overflow:hidden;
+      transition: all 0.3s;
+    }
+
+    .plan-card.featured {
+      border-color: rgba(124,109,250,0.4);
+      background: rgba(124,109,250,0.06);
+    }
+    .plan-card.featured::before {
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at top, rgba(124,109,250,0.08), transparent 60%);
+      pointer-events:none;
+    }
+
+    .plan-badge {
+      display:inline-block; margin-bottom:16px;
+      padding:4px 12px; border-radius:100px;
+      font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+      background: var(--accent); color:#fff;
+    }
+
+    .plan-name { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; margin-bottom:6px; }
+    .plan-price {
+      font-family:'Syne',sans-serif; font-size:42px; font-weight:800;
+      letter-spacing:-2px; margin:16px 0 4px;
+    }
+    .plan-price span { font-size:16px; font-weight:400; color:var(--muted); letter-spacing:0; }
+    .plan-desc { font-size:13px; color:var(--muted); margin-bottom:24px; line-height:1.6; }
+
+    .plan-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+    .plan-features li { display:flex; align-items:center; gap:8px; font-size:13px; }
+    .plan-features li::before { content:'✓'; color:var(--accent3); font-weight:700; font-size:12px; }
+    .plan-features li.off { color:var(--muted); }
+    .plan-features li.off::before { content:'—'; color:var(--muted); }
+
+    .plan-btn {
+      display:block; width:100%; padding:13px;
+      text-align:center; border-radius:10px;
+      font-size:14px; font-weight:600;
+      text-decoration:none; transition:all 0.2s;
+    }
+    .plan-btn.primary { background:var(--accent); color:#fff; box-shadow:0 0 30px rgba(124,109,250,0.3); }
+    .plan-btn.primary:hover { box-shadow:0 0 50px rgba(124,109,250,0.5); transform:translateY(-1px); }
+    .plan-btn.ghost { border:1px solid var(--border); color:var(--muted); }
+    .plan-btn.ghost:hover { color:var(--text); border-color:rgba(255,255,255,0.15); }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 80px 48px;
+      max-width: 700px; margin:0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .faq-q {
+      display:flex; justify-content:space-between; align-items:center;
+      font-family:'Syne',sans-serif; font-size:15px; font-weight:600;
+      cursor:pointer; gap:16px;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--accent); }
+
+    .faq-icon { color:var(--muted); font-size:20px; flex-shrink:0; transition:transform 0.3s; }
+    .faq-item.open .faq-icon { transform:rotate(45deg); }
+
+    .faq-a {
+      font-size:13px; color:var(--muted); line-height:1.7;
+      max-height:0; overflow:hidden; transition:max-height 0.35s ease, padding 0.2s;
+    }
+    .faq-item.open .faq-a { max-height:200px; padding-top:12px; }
+
+    /* ── FOOTER CTA ── */
+    .cta-band {
+      padding: 100px 48px;
+      text-align:center;
+      background: radial-gradient(ellipse at center, rgba(124,109,250,0.1) 0%, transparent 70%);
+      border-top: 1px solid var(--border);
+    }
+
+    .cta-band h2 {
+      font-family:'Syne',sans-serif;
+      font-size:clamp(36px,5vw,64px); font-weight:800;
+      letter-spacing:-2px; margin-bottom:20px;
+      line-height:1.05;
+    }
+
+    .cta-band p { font-size:16px; color:var(--muted); max-width:480px; margin:0 auto 40px; }
+
+    footer {
+      padding: 32px 48px;
+      border-top: 1px solid var(--border);
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:12px; color:var(--muted);
+    }
+
+    footer a { color:var(--muted); text-decoration:none; transition:color 0.2s; }
+    footer a:hover { color:var(--text); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    .reveal {
+      opacity:0; transform:translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding:16px 20px; }
+      .nav-links { display:none; }
+      .features { padding:60px 20px; }
+      .features-grid { grid-template-columns:1fr; }
+      .feat-card.wide { grid-column:span 1; }
+      .how { padding:60px 20px; }
+      .how-inner { grid-template-columns:1fr; gap:48px; }
+      .pricing { padding:60px 20px; }
+      .pricing-grid { grid-template-columns:1fr; }
+      .faq { padding:60px 20px; }
+      .cta-band { padding:60px 20px; }
+      footer { flex-direction:column; gap:12px; text-align:center; }
+      .social-proof { flex-wrap:wrap; justify-content:center; }
+    }
+  @media(hover:none){#cur,#curd{display:none!important}body{cursor:auto}}
 </style>
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="curd"></div>
-<div id="pts"></div>
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="logo-web.png" alt="Kibbo">
+      Kibbo
+    </a>
+    <ul class="nav-links">
+      <li><a href="#funciones">Funciones</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://chromewebstore.google.com" class="nav-cta">Añadir a Chrome</a></li>
+    </ul>
+  </nav>
 
-<!-- CAZADOS BANNER -->
-<div id="caz">
-  <span style="font-size:20px;flex-shrink:0">🛡️</span>
-  <div><div class="caztitle">¡CAZADOS! El descuento real es del 0%, no del 82%</div><div class="cazsub">Kibbo no tiene registro de que este producto haya costado 799€ recientemente</div></div>
-  <button id="cazclose">×</button>
-</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="blob-left"></div>
+    <div class="blob-right"></div>
 
-<!-- NAV -->
-<nav>
-  <a href="/" class="nlogo">
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoACgDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAwQHCP/EADIQAAEDAwMBBwEHBQAAAAAAAAECAwQABREGEiExEyIyQVFhgQcUFiNCcXKhQ1KCwdH/xAAZAQACAwEAAAAAAAAAAAAAAAAEBQEDBgL/xAAoEQABAwIFBAEFAAAAAAAAAAABAgMRAAQFEiExQRNRYfAUMnGBodH/2gAMAwEAAhEDEQA/APGQprZ7BdbtgQYL7mT4yna2B+48fFbGhihvUcd9aUrDaXFgEZ5CDg4+f4qtavmp7vqJ6yWlbTBbcLRkqQVrSM7eM5wSTgBIHX5p1ZYcy4wH3lHVWUJSJJMA7zpv2NWLQEs9Qmsrf0tZctqmE3tgXZI3nKvwCPQDG8jP9TG3PGMc1NOaMnwprMW8NSIna7trzTXatbQMle/cE7QAScEkDyqxGnNNQpTrz2t7nHu20j7dhG1SwOQk7tx9OFc9BnpVAxP1FpfVWmI12kRJkq8ICCl5JTMZbKgELU2AEthWchKsqO3vYIAEXPwA420oZFKMASFTG8gGZ87fqsk5iF0ErUwcwAJ1EccGI92FcHdbLZGSlQIBBSc0V0r66x46tV3WZFK2ELkMqW0CA0tamAolIGMKGORz4gc80UreaLLhQeDFPcPu/mWyH4jMAY7SJiorTDzUe8RnQHVBRLbgxxhaSk8/NWlubcjLvTsNIMxxsOtHzWlTS05H+W5PsVCoC0uNokHtHCgY7pzjn1z64ziq+PIZXFbkRbqyi4M88JJSQcbwrbklJ4Psa0mEOoLBQTqCSPyMpjzGo702SUqZKFe8U7s11+ntkjR9YxWpU7ULTSWmbPM77bcscGQo/mQOClPkf04fzoUmTM01PmSUfeZEl2ZOddTveK1hoAYH9q1BIBwlOCPLFSMfU6o9y2xtPtS7tkKRILDbZQc+IK2kn9xI/wB08tkiPMkN2+6OmHd2O0LFziqUst7jkKAV429+QoHJBJII60FheB21s6t0qLiyQJIIgAzlBPOn9MxWWvrJwHOSogE/eIIiNNBPYk+YExmv57Mq73VhDsh9DD6mmVKAUCEqwpZV1JUfP9B0AFFI9S2+ZaLiqBNZQh1KAQ42oqS+k8hwH8wPHTHTpnNFKH1KLiswgzTazQhDKQgyIpVWyxNkMdiWFhpbSlFK0JAVzjOT1I46H39aKKrSSkhQ3FFAkGRTlrVcttjaGGy6PCok7En12dM/x7UpFzni4JuAkuCUhe9Lue8D/wA9ulFFF3GIXNzHVWTG3vfzvXS3FOfUaLtcpd0fQ9LWlRbQG0JSkJShIJOAB05JPzRRRQq1qWoqUZJqsADav//Z" alt="Kibbo">
-    <span>Kibbo</span>
-  </a>
-  <ul class="nlinks">
-    <li><a href="#funciones">Funciones</a></li>
-    <li><a href="#como">Cómo funciona</a></li>
-    <li><a href="#precios">Precios</a></li>
-    <li><a href="#privacy">Privacidad</a></li>
-    <li><a href="mailto:hello@getkibbo.com">Contacto</a></li>
-    <li><a href="https://chromewebstore.google.com" class="ncta">Protégete gratis</a></li>
-  </ul>
-</nav>
+    <div class="hero-badge">
+      <span></span>
+      Beta Abierta · Todas las funciones Pro gratis hoy
+    </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hgrid"></div>
-  <div class="hbadge"><div class="bdot"></div>Beta Abierta · Todas las funciones Pro gratis hoy</div>
-  <h1>
-    <span class="h1a">Internet te engaña.</span>
-    <span class="h1b">Kibbo lo para.</span>
-  </h1>
-  <p class="hsub">Detecta <strong>dark patterns</strong>, precios inflados y cláusulas trampa en tiempo real. Protegiendo en <strong>Amazon, Booking, Ryanair</strong> y +100 tiendas.</p>
+    <h1>Internet te<br>engaña cada día.<br><em>Kibbo lo para.</em></h1>
 
-  <!-- ESCÁNER INTERACTIVO -->
-  <div class="scan-wrap">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2" style="flex-shrink:0;opacity:.6"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input class="scan-inp" id="sinp" type="text" placeholder="Pega una URL (ej: ryanair.com, amazon.es…)">
-    <button class="scan-btn" id="sbtn">⚡ Analizar</button>
-  </div>
-  <div id="scan-res"></div>
+    <p class="hero-sub">
+      Detecta <strong>dark patterns</strong>, precios inflados y cláusulas trampa
+      en tiempo real. Protegiendo en <strong>Amazon, Booking, Ryanair</strong> y +100 tiendas.
+    </p>
 
-  <div class="hbtns">
-    <a href="https://chromewebstore.google.com" class="btn-p">🛡️ Protégete ahora — Es Gratis</a>
-    <a href="#como" class="btn-g">Ver cómo funciona →</a>
-  </div>
-  <p class="hnote">Sin registro · Sin datos personales · Compatible Chrome, Edge, Brave y Opera</p>
+    <div class="hero-actions">
+      <a href="https://chromewebstore.google.com" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Protégete ahora — Es Gratis
+      </a>
+      <a href="#como" class="btn-ghost">Ver cómo funciona →</a>
+    </div>
 
-  <!-- PANEL DE CONTROL -->
-  <div class="stats">
-    <div class="sitem"><div class="snum" data-to="370">0</div><div class="slbl">Frases trampa</div></div>
-    <div class="sdiv"></div>
-    <div class="sitem"><div class="snum" data-to="100" data-suf="+">0</div><div class="slbl">Tiendas protegidas</div></div>
-    <div class="sdiv"></div>
-    <div class="sitem"><div class="snum" data-to="0">0</div><div class="slbl">Datos enviados</div></div>
-    <div class="sdiv"></div>
-    <div class="sitem"><div class="snum" id="live">0</div><div class="slbl">Trampas bloqueadas hoy</div></div>
-  </div>
-</section>
+    <p class="hero-note">Sin registro · Sin datos personales · Código abierto próximamente</p>
+
+    <div class="social-proof">
+      <div class="proof-stat">
+        <div class="proof-num">170+</div>
+        <div class="proof-label">Frases trampa detectadas</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <div class="proof-num">6</div>
+        <div class="proof-label">Tipos de engaño bloqueados</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <div class="proof-num">+100</div>
+        <div class="proof-label">Tiendas protegidas</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <div class="proof-num">0</div>
+        <div class="proof-label">Datos enviados sin permiso</div>
+      </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="mockup-wrap">
+      <div class="mockup-frame">
+        <div class="mockup-bar">
+          <div class="mock-dot r"></div>
+          <div class="mock-dot y"></div>
+          <div class="mock-dot g"></div>
+          <div class="mock-url">amazon.es/dp/B09X35FBXX?ref=sr_1_1&tag=...</div>
+        </div>
+        <div class="mockup-body">
+          <div class="mock-card danger">
+            <div class="mock-tag r">⚠ Trampas detectadas</div>
+            <div class="mock-val">4</div>
+            <div class="mock-sub">urgencia · escasez · checkbox trampa</div>
+          </div>
+          <div class="mock-card safe">
+            <div class="mock-tag g">💰 Espectrómetro</div>
+            <div class="mock-val">17,99€</div>
+            <div class="mock-sub">↓ Bajó 3,40€ desde tu última visita</div>
+          </div>
+          <div class="mock-card warn">
+            <div class="mock-tag y">📋 T&amp;C Escaneados</div>
+            <div class="mock-val">3</div>
+            <div class="mock-sub">cláusulas marcadas · renovación automática</div>
+            <div class="mock-bar-wrap"><div class="mock-bar" style="width:55%;background:#f59e0b;"></div></div>
+          </div>
+          <div class="mock-card purple">
+            <div class="mock-tag p">🔍 Mejor precio</div>
+            <div class="mock-val" style="font-size:14px;line-height:1.4;">Podrías ahorrar<br><span style="color:#a89dfc;font-size:20px;">hasta 5,20€</span></div>
+            <div class="mock-sub">Ver en Amazon · Fnac · PcComponentes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- TIENDAS RECONOCIDAS -->
+  <section style="padding:48px 48px 56px;border-top:1px solid rgba(255,255,255,0.07);text-align:center;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#55556a;margin-bottom:24px;">Funciona en tus tiendas favoritas</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 16px;max-width:780px;margin:0 auto;">
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🛒 Amazon</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">✈️ Ryanair</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🏨 Booking</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">📦 AliExpress</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">👗 Zara</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🛍️ Zalando</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🏠 IKEA</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🔧 Leroy Merlin</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">💻 MediaMarkt</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🎭 Ticketmaster</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;transition:all 0.2s;" onmouseenter="this.style.color='#e5e7eb';this.style.borderColor='rgba(255,255,255,0.2)'" onmouseleave="this.style.color='#6b7280';this.style.borderColor='rgba(255,255,255,0.08)'">🚗 Goldcar</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-size:12px;font-weight:500;color:#6b7280;" >+100 tiendas más →</span>
+    </div>
+  </section>
 
 <!-- FEATURES -->
-<section class="feats" id="funciones">
-  <div class="feats-hd reveal">
-    <div class="sec-lbl">Funciones</div>
-    <h2 class="sec-h">Tu escudo en cada compra</h2>
-    <p class="sec-sub">Kibbo actúa en silencio. Solo te avisa cuando algo no cuadra.</p>
-  </div>
-  <div class="fgrid">
-    <div class="fc reveal" style="--gc:rgba(239,68,68,.09)"><div class="ficon" style="color:#f87171">⚡</div><div class="ftitle">Detector de Urgencia Falsa</div><div class="fdesc">Identifica "¡Solo quedan 2!" o contadores que se reinician al refrescar la página.</div><span class="fpill">Automático</span></div>
-    <div class="fc reveal" style="--gc:rgba(245,158,11,.07)"><div class="ficon" style="color:#fbbf24">☑️</div><div class="ftitle">Casillas Pre-marcadas</div><div class="fdesc">Detecta seguros y extras ya marcados para cobrarte sin que te des cuenta. En aerolíneas, hoteles, alquiler y mucho más.</div><span class="fpill">Aerolíneas · Hoteles · Alquiler</span></div>
-    <div class="fc reveal" style="--gc:rgba(0,212,255,.07)"><div class="ficon" style="color:var(--c)">📈</div><div class="ftitle">Espectrómetro de Precio</div><div class="fdesc">Recuerda el precio de cada producto. Si sube antes de que compres, te avisa cuánto y cuándo subió.</div><span class="fpill">Histórico local</span></div>
-    <div class="fc wide reveal" style="--gc:rgba(16,185,129,.06)"><div class="ficon" style="color:#34d399">📋</div><div class="ftitle">Mini-mapa de T&C</div><div class="fdesc">Escanea los Términos y Condiciones. Resalta cláusulas de renovación automática, arbitraje, renuncia de fuero y modificaciones de precio. Un clic lleva directo a la cláusula.</div><span class="fpill green">✨ Gratis en Beta · Único</span></div>
-    <div class="fc reveal" style="--gc:rgba(124,58,237,.09)"><div class="ficon" style="color:#a78bfa">🔍</div><div class="ftitle">Comparador Inteligente</div><div class="fdesc">Detecta qué estás comprando y muestra solo las tiendas relevantes: tecnología, viajes, moda, hogar, entradas y más.</div><span class="fpill purple">9 categorías</span></div>
-    <div class="fc reveal" style="--gc:rgba(16,185,129,.07)"><div class="ficon" style="color:#34d399">🔏</div><div class="ftitle">Snapshot Certificado</div><div class="fdesc">PDF con hash SHA-256 del precio, fecha y URL. Prueba ante reclamaciones o denuncias legales.</div><span class="fpill green">✨ Gratis en Beta · Único</span></div>
-    <div class="fc reveal" style="--gc:rgba(0,212,255,.06)"><div class="ficon" style="color:var(--c)">👻</div><div class="ftitle">Modo Fantasma</div><div class="fdesc">Elimina cookies de rastreo y 25+ parámetros UTM de la URL. La tienda no te perfila.</div><span class="fpill">Anti-tracking</span></div>
-    <div class="fc reveal" style="--gc:rgba(239,68,68,.07)"><div class="ficon" style="color:#f87171">🛑</div><div class="ftitle">Botón del Pánico</div><div class="fdesc">¿A punto de comprar por impulso? Bloquea la pantalla 15 segundos con una pregunta reflexiva. El 70% de las compras impulsivas se frenan así.</div><span class="fpill">Anti-impulso</span></div>
-    <div class="fc reveal" style="--gc:rgba(245,158,11,.07)"><div class="ficon" style="color:#fbbf24">🛡️</div><div class="ftitle">Escudo de Checkout</div><div class="fdesc">Al entrar en el pago, aparece un resumen de seguridad: HTTPS, casillas pre-marcadas detectadas y renovaciones automáticas.</div><span class="fpill">Checkout seguro</span></div>
-  </div>
-</section>
+  <section class="features" id="funciones">
+    <div class="features-header reveal">
+      <div class="section-label">Funciones</div>
+      <h2 class="section-title">Tu escudo en cada compra</h2>
+      <p class="section-sub">Kibbo actúa en silencio. Solo te avisa cuando algo no cuadra.</p>
+    </div>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="como">
-  <div class="how-in">
-    <div>
-      <div class="sec-lbl reveal">Cómo funciona</div>
-      <h2 class="sec-h reveal">Instala y olvídate.<br>Kibbo trabaja solo.</h2>
-      <div class="steps">
-        <div class="step act reveal"><div class="stepn">1</div><div><div class="stept">Añades Kibbo a Chrome</div><div class="stepd">Un clic. Sin registro, sin email, sin cuenta.</div></div></div>
-        <div class="step reveal"><div class="stepn">2</div><div><div class="stept">Navegas como siempre</div><div class="stepd">Kibbo analiza en segundo plano. No ralentiza ni molesta.</div></div></div>
-        <div class="step reveal"><div class="stepn">3</div><div><div class="stept">Te avisa cuando algo falla</div><div class="stepd">Chip discreto en la esquina. Si es grave, aviso en el popup.</div></div></div>
-        <div class="step reveal"><div class="stepn">4</div><div><div class="stept">Compras con información real</div><div class="stepd">Historial de precios, comparación de tiendas, análisis de T&C.</div></div></div>
+    <div class="features-grid">
+
+      <div class="feat-card reveal" style="--glow:rgba(248,113,113,0.08);">
+        <div class="feat-icon" style="background:rgba(248,113,113,0.1);border-color:rgba(248,113,113,0.2);">⚡</div>
+        <div class="feat-title">Detector de Urgencia Falsa</div>
+        <div class="feat-desc">Identifica "¡Solo quedan 2!" o "Oferta termina en 1 hora" y te avisa si son reales o presión psicológica pura.</div>
+        <span class="feat-pill">Automático</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(251,191,36,0.06);">
+        <div class="feat-icon" style="background:rgba(251,191,36,0.1);border-color:rgba(251,191,36,0.2);">☑️</div>
+        <div class="feat-title">Casillas Pre-marcadas</div>
+        <div class="feat-desc">Detecta los seguros, tasas y extras que ya vienen marcados para cobrarte sin que te des cuenta. Funciona en todas las webs, con detección especializada en aerolíneas, hoteles y alquiler de coches.</div>
+        <span class="feat-pill">Aerolíneas · Hoteles · Alquiler</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(124,109,250,0.08); grid-column:span 1;">
+        <div class="feat-icon" style="background:rgba(124,109,250,0.1);border-color:rgba(124,109,250,0.2);">📈</div>
+        <div class="feat-title">Espectrómetro de Precio</div>
+        <div class="feat-desc">Recuerda el precio de cada producto. Si sube antes de que compres, te avisa con exactamente cuánto y cuándo subió.</div>
+        <span class="feat-pill">Histórico local · Sin límite</span>
+      </div>
+
+      <div class="feat-card wide reveal" style="--glow:rgba(52,211,153,0.05);">
+        <div class="feat-icon" style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.2);">📋</div>
+        <div class="feat-title">Mini-mapa de Términos y Condiciones</div>
+        <div class="feat-desc">Escanea los T&C automáticamente. Marca cláusulas de renovación automática, arbitraje y cancelación en una barra lateral. Un clic → scroll hasta la cláusula resaltada en amarillo.</div>
+        <span class="feat-pill"><span style="background:#6366f1;color:#fff;border-radius:3px;padding:0 4px;font-size:9px;margin-right:3px;">IA</span> Copiar cláusula · Ver en contexto</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(248,113,113,0.06);">
+        <div class="feat-icon" style="background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.2);">🔍</div>
+        <div class="feat-title">Comparador Inteligente</div>
+        <div class="feat-desc">Detecta qué estás comprando y muestra solo las tiendas relevantes: tecnología, viajes, moda, hogar, entradas y más. Siempre la alternativa más barata, nunca resultados irrelevantes.</div>
+        <span class="feat-pill">9 categorías · Afiliados transparentes</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(52,211,153,0.05);">
+        <div class="feat-icon" style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.2);">🔏</div>
+        <div class="feat-title">Snapshot Certificado</div>
+        <div class="feat-desc">Genera un PDF con hash SHA-256 del precio, fecha y URL. Prueba ante reclamaciones o denuncias. Si cambian el precio después de que lo viste, tienes evidencia legal.</div>
+        <span class="feat-pill" style="background:rgba(52,211,153,0.1);color:#34d399;border-color:rgba(52,211,153,0.3);">✨ Gratis en Beta · Único</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(124,109,250,0.06);">
+        <div class="feat-icon" style="background:rgba(124,109,250,0.1);border-color:rgba(124,109,250,0.2);">👻</div>
+        <div class="feat-title">Modo Fantasma</div>
+        <div class="feat-desc">Elimina cookies de rastreo y 25+ parámetros UTM/afiliados de la URL antes de que la tienda te perfile.</div>
+        <span class="feat-pill">Anti-tracking</span>
+      </div>
+
+      <div class="feat-card reveal" style="--glow:rgba(248,113,113,0.05);">
+        <div class="feat-icon" style="background:rgba(248,113,113,0.1);border-color:rgba(248,113,113,0.2);">🛑</div>
+        <div class="feat-title">Botón del Pánico</div>
+        <div class="feat-desc">¿Punto de comprar impulsiva? Un botón bloquea la pantalla 15 segundos con una pregunta que hace pensar. El 70% de las compras impulsivas se frenan con 15 segundos.</div>
+        <span class="feat-pill">Anti-impulso</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="como">
+    <div class="how-inner">
+      <div>
+        <div class="section-label reveal">Cómo funciona</div>
+        <h2 class="section-title reveal">Instala y olvídate.<br>Kibbo trabaja solo.</h2>
+        <div class="steps">
+          <div class="step active reveal">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">Añades Kibbo a Chrome</div>
+              <div class="step-desc">Un clic en la Chrome Web Store. Sin registro, sin email, sin cuenta.</div>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">Navegas como siempre</div>
+              <div class="step-desc">Kibbo analiza cada página en segundo plano. No ralentiza, no molesta, no recopila datos.</div>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">Te avisa cuando algo falla</div>
+              <div class="step-desc">Si detecta una trampa, un chip discreta en la esquina. Si es grave, un aviso en el popup. Tú decides qué hacer.</div>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">4</div>
+            <div>
+              <div class="step-title">Compras con información real</div>
+              <div class="step-desc">Historial de precios, comparación de tiendas, análisis de T&C. Todo sin salir de la página.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-visual reveal">
+        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Detecciones en tiempo real</div>
+        <div class="alert-row r">
+          <div class="dot"></div>
+          <div><b>Urgencia falsa</b> — "¡Solo quedan 2 en stock!"</div>
+        </div>
+        <div class="alert-row r">
+          <div class="dot"></div>
+          <div><b>Checkbox pre-marcado</b> — Seguro Plus 9,99€/mes</div>
+        </div>
+        <div class="alert-row y">
+          <div class="dot"></div>
+          <div><b>Precio tachado inflado</b> — Original: 24,99€ → Ahora: 17,99€</div>
+        </div>
+        <div class="alert-row y">
+          <div class="dot"></div>
+          <div><b>Cláusula T&C</b> — Renovación automática sin aviso</div>
+        </div>
+        <div class="alert-row g">
+          <div class="dot"></div>
+          <div><b>Mejor precio encontrado</b> — 5,20€ más barato en Fnac</div>
+        </div>
+        <div class="alert-row g">
+          <div class="dot"></div>
+          <div><b>Precio estable</b> — No ha subido en 30 días</div>
+        </div>
+        <div class="alert-row r">
+          <div class="dot"></div>
+          <div><b>¡CAZADOS! 🛡️</b> — Kibbo detectó que el precio "799€" es artificial</div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);">
+          Kibbo procesa todo en tu ordenador. No vemos tus contraseñas ni tus chats. Solo analizamos los precios para protegerte.
+        </div>
       </div>
     </div>
-    <div class="hvisual reveal">
-      <div class="hvtitle">Detecciones en tiempo real</div>
-      <div class="arow r"><div class="adot"></div><div><b>Urgencia falsa</b> — "¡Solo quedan 2 en stock!"</div></div>
-      <div class="arow r"><div class="adot"></div><div><b>Checkbox pre-marcado</b> — Seguro Plus 9,99€/mes</div></div>
-      <div class="arow y"><div class="adot"></div><div><b>Precio tachado inflado</b> — 24,99€ → 17,99€ (-28%?)</div></div>
-      <div class="arow y"><div class="adot"></div><div><b>Cláusula T&C</b> — Renovación automática sin aviso</div></div>
-      <div class="arow r"><div class="adot"></div><div><b>¡CAZADOS! 🛡️</b> — El precio "799€" es artificial</div></div>
-      <div class="arow g"><div class="adot"></div><div><b>Mejor precio</b> — 5,20€ más barato en Fnac</div></div>
-      <div class="hvfoot">
-        Kibbo procesa todo localmente. No vemos tus contraseñas ni tus chats.
-        <button id="demobtn">🛡️ Ver ejemplo de alerta ¡CAZADOS!</button>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="precios">
+    <div class="section-label reveal">Precios</div>
+    <h2 class="section-title reveal">Empieza gratis.</h2>
+    <p class="section-sub reveal" style="margin:0 auto;">Las funciones esenciales son y serán siempre gratuitas. Pro desbloquea la capa de inteligencia artificial.</p>
+
+    <div class="pricing-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+      <div class="plan-card reveal">
+        <div class="plan-name">Resistencia</div>
+        <div class="plan-price">0€ <span>/ siempre</span></div>
+        <div class="plan-desc">Gratis durante la fase Beta para nuestros primeros usuarios.</div>
+        <ul class="plan-features">
+          <li>Detector de dark patterns</li>
+          <li>Casillas trampa (Ryanair, Booking...)</li>
+          <li>Espectrómetro de precio</li>
+          <li>Mini-mapa T&C</li>
+          <li>Modo Fantasma</li>
+          <li>Snapshot SHA-256 <span style="font-size:9px;color:#34d399;background:rgba(52,211,153,0.1);padding:1px 5px;border-radius:4px;margin-left:3px;">Único</span></li>
+          <li>Comparador por categorías</li>
+          <li>Escudo de Checkout</li>
+          <li>Trigger de ahorro automático</li>
+          <li>Botón del Pánico anti-impulso</li>
+          <li class="off">Análisis de reseñas con IA <span style="font-size:9px;color:#6366f1;">(Pro)</span></li>
+          <li class="off">Resumen T&C con IA <span style="font-size:9px;color:#6366f1;">(Pro)</span></li>
+          <li class="off">Alertas email bajada de precio <span style="font-size:9px;color:#6366f1;">(Pro)</span></li>
+        </ul>
+        <a href="https://chromewebstore.google.com" class="plan-btn ghost">Añadir a Chrome →</a>
       </div>
+
+      <div class="plan-card featured reveal">
+        <div class="plan-badge">Próximamente</div>
+        <div class="plan-name">Cenit Pro</div>
+        <div class="plan-price">2,99€ <span>/ mes</span></div>
+        <div class="plan-desc">IA que lee miles de reseñas por ti y resume T&C. Se paga solo con tu primera compra cazada 🛡️</div>
+        <ul class="plan-features">
+          <li>Todo lo del plan Resistencia</li>
+          <li>Análisis de reseñas con IA</li>
+          <li>Análisis de T&C con IA</li>
+          <li>Alertas de bajada de precio por email</li>
+          <li>Historial de precios extendido</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="mailto:hello@getkibbo.com?subject=Lista%20de%20espera%20Cenit%20Pro&body=Hola%21%20Me%20gustar%C3%ADa%20apuntarme%20a%20la%20lista%20de%20espera." class="plan-btn primary">Unirme a la lista de espera →</a>
+      </div>
+
+      <!-- PLAN VANGUARDIA -->
+      <div class="plan-card reveal" style="border-color:rgba(251,191,36,0.4);background:linear-gradient(160deg,rgba(251,191,36,0.07),rgba(245,158,11,0.03));position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24,#f59e0b);"></div>
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(251,191,36,0.09),transparent 60%);pointer-events:none;"></div>
+        <div class="plan-badge" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#000;">⭐ Oferta Fundadores</div>
+        <div class="plan-name" style="color:#fbbf24;">Vanguardia</div>
+        <div class="plan-price" style="color:#fbbf24;">29,90€ <span>/ pago único</span></div>
+        <div class="plan-tagline" style="color:#f59e0b;">Paga una vez, úsalo para siempre 🔥</div>
+        <div class="plan-desc">Solo para nuestros primeros creyentes. Sin suscripciones, sin renovaciones.</div>
+        <ul class="plan-features">
+          <li style="color:#fde68a;"><span style="color:#fbbf24;">⭐</span> Acceso de por vida al plan Cenit</li>
+          <li style="color:#fde68a;"><span style="color:#fbbf24;">⭐</span> Insignia exclusiva "Miembro Fundador"</li>
+          <li style="color:#fde68a;"><span style="color:#fbbf24;">⭐</span> Acceso prioritario a futuras herramientas</li>
+          <li style="color:#fde68a;"><span style="color:#fbbf24;">⭐</span> Soporte directo con el creador</li>
+        </ul>
+        <div style="font-size:10px;color:#f59e0b;text-align:center;margin-bottom:12px;padding:6px 10px;background:rgba(251,191,36,0.08);border-radius:8px;border:1px solid rgba(251,191,36,0.2);">⏳ Solo 500 licencias disponibles · Asegura tu plaza</div>
+        <a href="mailto:hello@getkibbo.com?subject=Reserva%20Vanguardia%20Fundadores&body=Hola%21%20Quiero%20reservar%20mi%20plaza%20Vanguardia." class="plan-btn primary" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#000;box-shadow:0 0 20px rgba(251,191,36,0.3);">Reservar mi plaza (Sin pagar aún) →</a>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRICING -->
-<section class="pricing" id="precios">
-  <div class="sec-lbl reveal">Precios</div>
-  <h2 class="sec-h reveal">Empieza gratis.</h2>
-  <p class="sec-sub reveal" style="margin:0 auto">Gratis durante la fase Beta. Las funciones de IA llegarán con el plan Pro.</p>
-  <div class="pgrid">
-    <div class="pcard reveal">
-      <div class="pname">Resistencia</div>
-      <div class="pprice">0€ <span>/ siempre</span></div>
-      <div class="pdesc">Para navegar protegido desde el primer día.</div>
-      <ul class="plist">
-        <li>Detector de dark patterns</li>
-        <li>Casillas trampa (todas las webs)</li>
-        <li>Espectrómetro de precio</li>
-        <li>Mini-mapa T&C</li>
-        <li>Modo Fantasma</li>
-        <li>Snapshot SHA-256</li>
-        <li>Comparador 9 categorías</li>
-        <li>Escudo de Checkout</li>
-        <li>Botón del Pánico</li>
-        <li class="off">Análisis de reseñas con IA <span style="font-size:9px;color:#6366f1">(Pro)</span></li>
-        <li class="off">Resumen T&C con IA <span style="font-size:9px;color:#6366f1">(Pro)</span></li>
-        <li class="off">Alertas email bajada de precio <span style="font-size:9px;color:#6366f1">(Pro)</span></li>
-      </ul>
-      <a href="https://chromewebstore.google.com" class="pbtn g">Añadir a Chrome →</a>
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-label reveal">FAQ</div>
+      <h2 class="section-title reveal">Preguntas frecuentes</h2>
     </div>
-    <div class="pcard feat reveal">
-      <div class="pbadge">Próximamente</div>
-      <div class="pname">Cenit Pro</div>
-      <div class="pprice">2,99€ <span>/ mes</span></div>
-      <div class="ptagline">Se paga solo con tu primera compra cazada 🛡️</div>
-      <div class="pdesc">IA que lee miles de reseñas por ti y resume T&C. Financia los servidores que trabajan para protegerte.</div>
-      <ul class="plist">
-        <li>Todo lo del plan Resistencia</li>
-        <li>Análisis de reseñas con IA</li>
-        <li>Resumen inteligente T&C con IA</li>
-        <li>Alertas email de bajada de precio</li>
-        <li>Historial extendido de precios</li>
-        <li>Soporte prioritario</li>
-      </ul>
-      <a href="mailto:hello@getkibbo.com?subject=Lista%20de%20espera%20Cenit%20Pro&body=Hola%21%20Me%20gustar%C3%ADa%20apuntarme%20a%20la%20lista%20de%20espera." class="pbtn p">Unirme a la lista de espera →</a>
+
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Kibbo recopila mis datos de navegación? <span class="faq-icon">+</span></div>
+      <div class="faq-a">No. Todo el análisis se hace localmente en tu navegador. El único momento en que algo sale de tu dispositivo es cuando tú pulsas "Análisis de opiniones" en el plan Pro — y solo se envían las reseñas públicas de la página, nunca datos personales ni URLs de tu historial.</div>
     </div>
-  </div>
-</section>
 
-<!-- WAITLIST -->
-<section class="wl reveal">
-  <div class="sec-lbl">Lista de espera</div>
-  <h2 class="sec-h" style="font-size:clamp(22px,3vw,36px)">Sé de los primeros</h2>
-  <p class="sec-sub" style="margin:0 auto;font-size:14px">Cuando lancemos la IA de Kibbo, tú serás el primero en saberlo.</p>
-  <form class="wlform" id="wlform">
-    <input class="wlinp" type="email" id="wlemail" placeholder="tu@email.com" required>
-    <button class="wlsub" type="submit">Apuntarme →</button>
-  </form>
-  <div id="wlok">✓ ¡Apuntado! Eres parte de la resistencia. Te avisamos cuando la IA esté lista.</div>
-  <p class="wlnote">Sin spam · Sin cesión de datos · <a href="mailto:hello@getkibbo.com" style="color:var(--c)">hello@getkibbo.com</a></p>
-</section>
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Kibbo ralentiza la navegación? <span class="faq-icon">+</span></div>
+      <div class="faq-a">No de forma perceptible. El MutationObserver tiene un throttle de 200ms y filtra nodos irrelevantes antes de procesarlos. En pruebas internas, el impacto en tiempo de carga es inferior al 1%.</div>
+    </div>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div style="text-align:center;margin-bottom:44px">
-    <div class="sec-lbl reveal">FAQ</div>
-    <h2 class="sec-h reveal" style="font-size:clamp(26px,3vw,42px)">Preguntas frecuentes</h2>
-  </div>
-  <div class="fqitem reveal"><div class="fqq">¿Por qué las funciones Pro son gratis ahora? <span class="fqi">+</span></div><div class="fqa">Kibbo está en fase Beta. Necesitamos feedback real. Tú nos ayudas a mejorar; nosotros te damos acceso completo. Cuando lancemos la versión estable, los primeros usuarios recibirán descuento especial o acceso de por vida.</div></div>
-  <div class="fqitem reveal"><div class="fqq">¿Kibbo recopila mis datos de navegación? <span class="fqi">+</span></div><div class="fqa">No. Todo el análisis se hace localmente en tu navegador. No vemos tus contraseñas ni tus chats. Solo analizamos los precios visibles en la página para protegerte.</div></div>
-  <div class="fqitem reveal"><div class="fqq">¿Ralentiza la navegación? <span class="fqi">+</span></div><div class="fqa">No de forma perceptible. El motor usa throttle de 250ms y filtra elementos irrelevantes. El impacto en tiempo de carga es inferior al 1%.</div></div>
-  <div class="fqitem reveal"><div class="fqq">¿Funciona en todas las webs? <span class="fqi">+</span></div><div class="fqa">Sí. Los detectores de texto, precios y T&C son genéricos y funcionan en cualquier web en español e inglés, con reconocimiento avanzado para más de 100 tiendas.</div></div>
-  <div class="fqitem reveal"><div class="fqq">¿Los links del comparador son de afiliado? <span class="fqi">+</span></div><div class="fqa">Algunos sí. Kibbo puede recibir una pequeña comisión. Siempre mostramos todas las opciones relevantes, con afiliado o sin él. La transparencia es parte del producto.</div></div>
-  <div class="fqitem reveal"><div class="fqq">¿Con qué navegadores es compatible? <span class="fqi">+</span></div><div class="fqa">Google Chrome, Microsoft Edge, Brave y Opera. La instalación es la misma en todos.</div></div>
-</section>
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Funciona en todas las webs? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sí. Los detectores de texto, precios y T&C son genéricos y funcionan en cualquier web. Los detectores funcionan en cualquier web con contenidos de T&C, con reconocimiento avanzado de cláusulas en español e inglés.</div>
+    </div>
 
-<!-- POLÍTICA DE PRIVACIDAD -->
-<section id="privacy">
-  <h2>Política de Privacidad</h2>
-  <p><em>Última actualización: Abril 2025</em></p>
-  <h3>1. Quién somos</h3>
-  <p>Kibbo es una extensión de navegador para proteger a los usuarios de dark patterns, precios inflados y cláusulas abusivas. Contacto: <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></p>
-  <h3>2. Datos que NO recopilamos</h3>
-  <ul><li>No almacenamos tu historial de navegación.</li><li>No tenemos acceso a contraseñas ni datos bancarios.</li><li>No vendemos ni cedemos datos a terceros.</li><li>No usamos cookies de seguimiento.</li></ul>
-  <h3>3. Datos procesados localmente</h3>
-  <p>Kibbo procesa <strong>exclusivamente en tu dispositivo</strong>: precios detectados en páginas de producto, contadores de trampas por dominio y configuración personal. Todos se guardan en <code>chrome.storage.local</code> y nunca salen de tu navegador.</p>
-  <h3>4. Funciones de IA (Plan Pro)</h3>
-  <p>Las funciones de IA envían únicamente el texto público de reseñas o cláusulas a la API de Anthropic. Nunca se envían datos personales, credenciales ni información de pago. Solo se activa cuando el usuario lo solicita.</p>
-  <h3>5. Afiliados</h3>
-  <p>Kibbo puede recibir comisiones cuando un usuario compra a través del Comparador marcado con "⭐ Oferta verificada". Sin coste adicional para el usuario y sin influir en la imparcialidad de los resultados.</p>
-  <h3>6. Tus derechos</h3>
-  <p>Puedes eliminar todos los datos desinstalando la extensión o limpiando su almacenamiento desde <code>chrome://extensions</code>. Contacto: <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></p>
-</section>
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Los links del comparador son de afiliado? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Algunos sí. Kibbo puede recibir una pequeña comisión si compras a través de los links marcados con "⭐ Oferta verificada". Siempre mostramos todas las opciones relevantes, tengan afiliado o no. La transparencia es parte del producto.</div>
+    </div>
 
-<!-- CTA FINAL -->
-<section class="ctaband">
-  <h2 class="reveal">Empieza a navegar<br><span style="background:linear-gradient(135deg,var(--c),var(--n));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">sin trampas hoy.</span></h2>
-  <p class="reveal">Gratis. Sin registro. Sin datos personales.<br>Se instala en 10 segundos.</p>
-  <div class="reveal"><a href="https://chromewebstore.google.com" class="btn-p" style="display:inline-flex">🛡️ Protégete ahora — Es Gratis</a></div>
-</section>
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Por qué las funciones Pro son gratis ahora? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Kibbo está en fase Beta. Necesitamos feedback real de usuarios reales. Tú nos ayudas a mejorar; nosotros te damos acceso completo. Cuando lancemos la versión estable, los primeros usuarios recibirán descuento especial o acceso de por vida.</div>
+    </div>
 
-<footer>
-  <div>© 2025 Kibbo · <a href="#privacy">Política de privacidad</a> · <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></div>
-  <div>Compatible con Chrome, Edge, Brave y Opera · Kibbo se financia con afiliados, sin coste para ti 🛡️</div>
-</footer>
+    <div class="faq-item reveal">
+      <div class="faq-q">¿Qué es el Snapshot SHA-256? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Un PDF certificado con el precio, URL, título y fecha de la página, firmado con un hash criptográfico SHA-256. Si una tienda cambia el precio después de que lo viste, el Snapshot es tu prueba ante atención al cliente o reclamaciones.</div>
+    </div>
+  </section>
 
-<script>
-// CURSOR
-const cur=document.getElementById('cur'),curd=document.getElementById('curd');
-let mx=0,my=0,cx=0,cy=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX;my=e.clientY;
-  curd.style.left=mx+'px';curd.style.top=my+'px';
-});
-(function ac(){
-  cx+=(mx-cx)*.12;cy+=(my-cy)*.12;
-  cur.style.left=(cx-11)+'px';cur.style.top=(cy-11)+'px';
-  requestAnimationFrame(ac);
-})();
-document.querySelectorAll('a,button,input').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='scale(1.9)';cur.style.borderColor='var(--n)'});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';cur.style.borderColor='var(--c)'});
-});
+  <!-- FOOTER CTA -->
+  <section class="cta-band">
+    <h2 class="reveal">Empieza a navegar<br><em style="background:linear-gradient(135deg,#a89dfc,#f87171);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">sin trampas hoy.</em></h2>
+    <p class="reveal">Gratis. Sin registro. Sin datos personales.<br>Se instala en 10 segundos.</p>
+    <div class="reveal">
+      <a href="https://chromewebstore.google.com" class="btn-primary" style="display:inline-flex;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Protégete ahora — Es Gratis
+      </a>
+    </div>
+  </section>
 
-// PARTICLES
-const pcon=document.getElementById('pts');
-for(let i=0;i<45;i++){
-  const p=document.createElement('div');
-  p.className='pt';
-  p.style.left=Math.random()*100+'vw';
-  p.style.animationDuration=(8+Math.random()*14)+'s';
-  p.style.animationDelay=(-Math.random()*22)+'s';
-  p.style.background=Math.random()>.5?'var(--c)':'var(--n)';
-  p.style.width=p.style.height=(1+Math.random()*2)+'px';
-  pcon.appendChild(p);
-}
+  <footer>
+    <div>© 2025 Kibbo · <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></div>
+    <div>Compatible con Chrome, Edge, Brave y Opera · Kibbo se financia con afiliados, sin coste para ti 🛡️</div>
+  </footer>
 
-// GLASS CARD GLOW
-document.querySelectorAll('.fc').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    card.style.setProperty('--gx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
-    card.style.setProperty('--gy',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
-  });
-});
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// SCANNER
-const BAD=['ryanair','temu','shein','viagogo','goldcar','scam','fake'];
-const WARN=['amazon','aliexpress','booking','edreams','zara'];
-document.getElementById('sbtn').addEventListener('click',()=>{
-  const v=document.getElementById('sinp').value.trim().toLowerCase();
-  const res=document.getElementById('scan-res');
-  if(!v)return;
-  res.style.display='block';
-  res.innerHTML='<div class="sscanning"><div class="sradar"><div class="sradar-ring"></div><div class="sradar-ring"></div><div class="sradar-line"></div></div><div class="stxt">Escaneando '+v+'...</div></div>';
-  const bad=BAD.some(s=>v.includes(s));
-  const warn=WARN.some(s=>v.includes(s));
-  setTimeout(()=>{
-    if(bad){
-      res.innerHTML='<div class="sdanger"><span class="sdanger-icon">⚠️</span><div><div class="sdanger-title">¡ALERTA! Riesgos detectados en '+v+'</div><div class="sdanger-sub">Kibbo detecta dark patterns, precios inflados y casillas trampa en esta web. Instálalo para protegerte.</div></div></div>';
-    } else if(warn){
-      res.innerHTML='<div class="swarn"><span class="swarn-icon">🔍</span><div><div class="swarn-title">Precaución — '+v+' usa técnicas de presión</div><div class="swarn-sub">Kibbo vigilará precios, urgencias y casillas trampa mientras navegas.</div></div></div>';
-    } else {
-      res.innerHTML='<div class="sok"><span class="sok-shield">🛡️</span><div><div class="sok-title">Tienda analizada: sin riesgos conocidos</div><div class="sok-sub">Kibbo seguirá vigilando en tiempo real. Estás a salvo.</div></div></div>';
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Step hover
+    document.querySelectorAll('.step').forEach((step, i) => {
+      step.addEventListener('mouseenter', () => {
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        step.classList.add('active');
+      });
+    });
+
+    // Demo interactiva — botón CAZADOS
+    const demoBtn = document.getElementById('demo-btn');
+    if (demoBtn) {
+      demoBtn.addEventListener('click', () => {
+        if (document.getElementById('demo-banner')) return;
+        const st = document.createElement('style');
+        st.textContent = '@keyframes demo-drop{from{transform:translateY(-110%);opacity:0}to{transform:translateY(0);opacity:1}}';
+        document.head.appendChild(st);
+        const banner = document.createElement('div');
+        banner.id = 'demo-banner';
+        banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;font-family:system-ui,sans-serif;padding:12px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 20px rgba(220,38,38,0.5);animation:demo-drop 0.4s cubic-bezier(0.34,1.56,0.64,1) both;';
+        banner.innerHTML = '<span style="font-size:22px;flex-shrink:0;">🛡️</span><div style="flex:1"><div style="font-size:14px;font-weight:800;">¡CAZADOS! El descuento real es del 0%, no del 82%</div><div style="font-size:11px;opacity:0.85;margin-top:2px;">Kibbo no tiene registro de que este producto haya costado 799€ recientemente</div></div><button id="demo-close-btn" style="background:none;border:none;color:rgba(255,255,255,0.7);font-size:22px;cursor:pointer;padding:0 4px;">×</button>';
+        document.body.prepend(banner);
+        setTimeout(() => { banner.style.transition='transform 0.4s,opacity 0.4s'; banner.style.transform='translateY(-110%)'; banner.style.opacity='0'; setTimeout(()=>banner.remove(),450); }, 5000);
+      });
     }
-    setTimeout(()=>{res.style.display='none';},6000);
-  },2200);
-});
-document.getElementById('sinp').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('sbtn').click();});
+  </script>
 
-// COUNTERS
-function animNum(el,to,dur,suf){
-  let s=null;
-  (function step(ts){
-    if(!s)s=ts;
-    const p=Math.min((ts-s)/dur,1);
-    const e=1-Math.pow(1-p,3);
-    el.textContent=Math.floor(e*to)+(suf||'');
-    if(p<1)requestAnimationFrame(step);
-  })(performance.now());
-}
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting)return;
-    obs.unobserve(e.target);
-    const to=parseInt(e.target.dataset.to);
-    if(!isNaN(to))animNum(e.target,to,1800,e.target.dataset.suf||'');
-  });
-},{threshold:.5});
-document.querySelectorAll('[data-to]').forEach(el=>obs.observe(el));
-let lv=1240+Math.floor(Math.random()*800);
-const livel=document.getElementById('live');
-if(livel){
-  livel.textContent=lv.toLocaleString('es-ES');
-  setInterval(()=>{lv+=Math.floor(Math.random()*3+1);livel.textContent=lv.toLocaleString('es-ES');},3200);
-}
+  <!-- BOTÓN SUGERIR MEJORA FLOTANTE -->
+  <a href="mailto:hello@getkibbo.com?subject=Sugerencia%20para%20Kibbo&body=Hola%21%20Mi%20sugerencia%3A%0A%0A"
+     style="position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:8px;
+     padding:11px 18px;background:rgba(10,10,20,0.9);border:1px solid rgba(167,139,250,0.4);
+     border-radius:100px;color:#a78bfa;font-size:12px;font-weight:600;text-decoration:none;
+     backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,0.4);
+     transition:all 0.2s;font-family:'DM Sans',sans-serif;"
+     onmouseenter="this.style.background='rgba(167,139,250,0.15)';this.style.borderColor='rgba(167,139,250,0.6)';this.style.transform='translateY(-2px)'"
+     onmouseleave="this.style.background='rgba(10,10,20,0.9)';this.style.borderColor='rgba(167,139,250,0.4)';this.style.transform='translateY(0)'">
+    💡 Sugerir mejora
+  </a>
 
-// SCROLL REVEAL
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target);}});
-},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-// FAQ
-document.querySelectorAll('.fqitem').forEach(item=>{
-  item.querySelector('.fqq').addEventListener('click',()=>{
-    const open=item.classList.contains('open');
-    document.querySelectorAll('.fqitem').forEach(i=>i.classList.remove('open'));
-    if(!open)item.classList.add('open');
-  });
-});
-
-// STEPS
-document.querySelectorAll('.step').forEach(s=>{
-  s.addEventListener('mouseenter',()=>{
-    document.querySelectorAll('.step').forEach(x=>x.classList.remove('act'));
-    s.classList.add('act');
-  });
-});
-
-// CAZADOS DEMO
-function showCaz(){
-  const b=document.getElementById('caz');
-  b.style.display='flex';
-  clearTimeout(window._ct);
-  window._ct=setTimeout(()=>{
-    b.style.transition='transform .4s,opacity .4s';
-    b.style.transform='translateY(-110%)';
-    b.style.opacity='0';
-    setTimeout(()=>{b.style.display='none';b.style.transform='';b.style.opacity='';b.style.transition='';},450);
-  },5000);
-}
-document.getElementById('cazclose').addEventListener('click',()=>{document.getElementById('caz').style.display='none';});
-document.getElementById('demobtn').addEventListener('click',showCaz);
-
-// WAITLIST
-document.getElementById('wlform').addEventListener('submit',e=>{
-  e.preventDefault();
-  const email=document.getElementById('wlemail').value;
-  window.location.href='mailto:hello@getkibbo.com?subject=Lista%20de%20espera%20Kibbo&body=Email%3A%20'+encodeURIComponent(email);
-  document.getElementById('wlform').style.display='none';
-  document.getElementById('wlok').style.display='block';
-});
-</script>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')===null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
