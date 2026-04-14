@@ -140,6 +140,9 @@
   <p>Para cualquier consulta relacionada con tu privacidad, puedes contactarnos en: <a href="/cdn-cgi/l/email-protection#6b030e0707042b0c0e1f000209090445080406" style="color:#6366f1;font-weight:500;"><span class="__cf_email__" data-cfemail="5139343d3d3e113634253a3833333e7f323e3c">[email&#160;protected]</span></a></p>
 
   <h2 data-num="2">Datos que recopilamos (y los que NO)</h2>
+  <p style="background: #f9fafb; padding: 16px; border-left: 4px solid #6366f1; border-radius: 8px; margin-bottom: 20px; font-size: 14px;">
+    <strong>Aclaración importante:</strong> La Extensión de Kibbo no extrae ni escanea correos electrónicos de los sitios que visitas. Kibbo almacena tu email únicamente si te suscribes voluntariamente a nuestra lista de espera.
+  </p>
   <p><strong>No recopilamos:</strong></p>
   <ul>
     <li>Tu historial de navegación</li>
@@ -159,7 +162,17 @@
     <li>Capturas SHA-256 del Snapshot (guardadas solo en tu navegador)</li>
   </ul>
   <p>Todos estos datos se almacenan en <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:13px;">chrome.storage.local</code>, el almacenamiento local de tu extensión Chrome, y solo tú puedes acceder a ellos.</p>
-
+<h2 data-num="3.1">Justificación de Permisos (Chrome Web Store)</h2>
+  <p>Para operar como un escudo activo, Kibbo requiere los siguientes permisos técnicos en tu navegador. Ninguno se usa para extraer información personal:</p>
+  <ul>
+    <li><strong>activeTab y tabs:</strong> Para leer la URL actual y desplegar el escudo en e-commerces.</li>
+    <li><strong>storage:</strong> Para guardar tus configuraciones y el registro local de precios.</li>
+    <li><strong>scripting:</strong> Para inyectar el código visual de Kibbo (recuadros de advertencia).</li>
+    <li><strong>downloads:</strong> Para guardar el archivo del "Certified Snapshot" en tu disco duro.</li>
+    <li><strong>contextMenus:</strong> Para las opciones de "Reportar trampa" al hacer clic derecho.</li>
+    <li><strong>cookies:</strong> Para detectar urgencia manipulada por sesiones y forzar sesiones limpias.</li>
+    <li><strong>clipboardWrite y clipboardRead:</strong> Para copiar cláusulas abusivas al portapapeles.</li>
+  </ul>
   <h2 data-num="4">Funciones de IA (Plan Pro)</h2>
   <p>Si utilizas las funciones de análisis con Inteligencia Artificial del plan Pro, Kibbo envía únicamente el texto público visible en la página que estás visitando (reseñas de productos o cláusulas de términos y condiciones) a la API de Anthropic para su análisis.</p>
   <p>Nunca se envían: credenciales, datos de pago, información personal ni datos de identificación. Esta función solo se activa cuando tú la solicitas explícitamente.</p>
@@ -167,7 +180,9 @@
   <h2 data-num="5">Afiliados y cookies de terceros</h2>
   <p>Kibbo puede mostrar enlaces a tiendas como Amazon a través del programa Amazon Associates (afiliados). Cuando haces clic en estos enlaces y realizas una compra, Kibbo puede recibir una pequeña comisión sin coste adicional para ti.</p>
   <p>Estos enlaces pueden incluir cookies de seguimiento de afiliados de Amazon y Rakuten para atribuir las comisiones. Estas cookies son gestionadas por dichas plataformas y están sujetas a sus propias políticas de privacidad. Kibbo no tiene acceso a los datos de estas cookies.</p>
-
+<p style="font-size: 13px; font-style: italic; color: #6b7280; margin-top: 10px;">
+    Aviso Legal de Amazon: Como Afiliado de Amazon, Kibbo percibe ingresos por las compras adscritas que cumplen los requisitos aplicables.
+  </p>
   <h2 data-num="6">Compartición de datos</h2>
   <ul>
     <li>No vendemos tus datos a terceros</li>
