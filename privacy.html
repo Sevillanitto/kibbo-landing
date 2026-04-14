@@ -15,74 +15,121 @@
       color: #111827;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
     }
-    h1 { font-size: 2.2rem; margin-bottom: 10px; color: #111827; }
-    h2 { font-size: 1.5rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px;}
-    p { margin-bottom: 16px; color: #4b5563; }
-    ul { margin-bottom: 16px; padding-left: 24px; color: #4b5563; }
-    li { margin-bottom: 8px; }
+
+    /* RESTAURANDO TU DISEÑO VISUAL (TOPBAR) */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f3f4f6;
+      padding: 14px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 600; font-size: 1.1rem; color: #111827;
+      text-decoration: none;
+    }
+    .logo img { height: 24px; width: auto; }
+
+    /* CONTENEDOR DE TEXTO */
+    .content {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+
+    h1 { font-size: 2.5rem; margin-bottom: 8px; color: #111827; letter-spacing: -0.02em; }
+    .date { color: #6b7280; font-size: 0.95rem; margin-bottom: 48px; }
+    
+    h2 { 
+      font-size: 1.4rem; margin-top: 48px; margin-bottom: 16px; 
+      color: #111827; font-weight: 600;
+      display: flex; align-items: center; gap: 12px;
+    }
+    h2::before {
+      content: ""; display: inline-block; width: 4px; height: 24px;
+      background: #6366f1; border-radius: 4px;
+    }
+
+    p { margin-bottom: 20px; color: #4b5563; font-size: 1.05rem; }
+    ul { margin-bottom: 24px; padding-left: 20px; color: #4b5563; }
+    li { margin-bottom: 12px; }
     strong { color: #111827; font-weight: 600; }
-    a { color: #6366f1; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-    .date { color: #6b7280; font-size: 0.9rem; margin-bottom: 40px; }
-    .highlight-box { background: #f9fafb; border-left: 4px solid #6366f1; padding: 16px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+    
+    .highlight-box { 
+      background: #f9fafb; border: 1px solid #f3f4f6; 
+      padding: 24px; margin: 32px 0; border-radius: 12px; 
+    }
+    
+    a { color: #6366f1; text-decoration: none; font-weight: 500; transition: 0.2s; }
+    a:hover { color: #4f46e5; text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 14px 24px; }
+      h1 { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Política de Privacidad</h1>
-  <p class="date">Última actualización: Abril de 2026</p>
+  <nav class="topbar">
+    <a href="/" class="logo">
+      <img src="favicon.png" alt="Kibbo Logo">
+      <span>Kibbo</span>
+    </a>
+    <a href="mailto:hello@getkibbo.com" style="font-size: 0.9rem; color: #6b7280;">Soporte</a>
+  </nav>
 
-  <p>En Kibbo, nos tomamos tu privacidad tan en serio como tu ahorro. Nuestra misión es proteger al consumidor de tácticas abusivas en el e-commerce (Dark Patterns), no ser parte del problema. Por ello, operamos bajo el principio estricto de minimización de datos y procesamiento local.</p>
+  <main class="content">
+    <h1>Política de Privacidad</h1>
+    <p class="date">Última actualización: Abril de 2026</p>
 
-  <h2>1. Recopilación y Uso de Datos</h2>
-  <div class="highlight-box">
-    <p><strong>Aclaración importante:</strong> La Extensión de Kibbo <strong>no extrae ni escanea correos electrónicos</strong> de los sitios que visitas. Kibbo solo almacena tu email si decides suscribirte voluntariamente a nuestra lista de espera a través del formulario de nuestra web (gestionado por Tally.so).</p>
-  </div>
-  <p>Para ofrecer sus funciones de ciberseguridad y ahorro, Kibbo opera de la siguiente manera:</p>
-  <ul>
-    <li><strong>Análisis de Dark Patterns:</strong> El escaneo de contadores falsos, urgencia artificial y casillas pre-marcadas se realiza de forma <strong>100% local</strong> en tu navegador. Los datos de tu navegación no se envían a nuestros servidores.</li>
-    <li><strong>Espectrómetro de Precios:</strong> El historial de precios detectados se almacena exclusivamente en la memoria local de tu dispositivo. Kibbo no rastrea tu historial de navegación general.</li>
-    <li><strong>Certified Snapshot:</strong> La generación de capturas con validez criptográfica (hash SHA-256) se realiza íntegramente en tu ordenador. No almacenamos copias en la nube.</li>
-  </ul>
+    <p>En Kibbo, nos tomamos tu privacidad tan en serio como tu ahorro. Nuestra misión es proteger al consumidor de tácticas abusivas en el e-commerce (Dark Patterns), no ser parte del problema. Por ello, operamos bajo el principio estricto de minimización de datos y procesamiento local.</p>
 
-  <h2>2. Lo que NO hacemos</h2>
-  <ul>
-    <li><strong>NO</strong> recopilamos nombres, direcciones físicas ni números de teléfono.</li>
-    <li><strong>NO</strong> capturamos, leemos ni almacenamos datos de tus tarjetas de crédito o métodos de pago (Kibbo desactiva sus rastreadores en los <i>iframes</i> de pasarelas de pago).</li>
-    <li><strong>NO</strong> vendemos datos de navegación a terceros ni a agencias de publicidad.</li>
-    <li><strong>NO</strong> utilizamos rastreadores de análisis de terceros para seguir tu actividad.</li>
-  </ul>
+    <div class="highlight-box">
+      <p><strong>Aclaración sobre tus datos:</strong> La Extensión de Kibbo <strong>no extrae ni escanea correos electrónicos</strong> de los sitios que visitas. Kibbo solo almacena tu email si decides suscribirte voluntariamente a nuestra lista de espera a través del formulario de nuestra web.</p>
+    </div>
 
-  <h2>3. Integraciones de Terceros e IA</h2>
-  <p>Kibbo incluye funciones avanzadas que requieren conexiones externas puntuales:</p>
-  <ul>
-    <li><strong>Inteligencia Artificial (Anthropic):</strong> Si utilizas la función Pro para resumir términos y reseñas, Kibbo envía únicamente el texto público de la web a la API de Anthropic (Claude). No se adjunta ninguna información personal ni historial del usuario en estas peticiones.</li>
-    <li><strong>Reportes de Trampas:</strong> Al reportar una tienda tramposa, la URL y el tipo de trampa se envían de forma anónima a nuestra base de datos para alertar a la comunidad. No se asocia tu identidad a este reporte.</li>
-  </ul>
+    <h2>1. Recopilación y Uso de Datos</h2>
+    <p>Para ofrecer sus funciones de ciberseguridad y ahorro, Kibbo opera de la siguiente manera:</p>
+    <ul>
+      <li><strong>Análisis de Dark Patterns:</strong> El escaneo de contadores falsos y urgencia artificial se realiza de forma <strong>100% local</strong>. Los datos de tu navegación jamás se envían a nuestros servidores.</li>
+      <li><strong>Espectrómetro de Precios:</strong> El historial de precios detectados se almacena exclusivamente en la memoria local de tu dispositivo.</li>
+      <li><strong>Certified Snapshot:</strong> La generación de capturas con validez criptográfica (SHA-256) se realiza íntegramente en tu ordenador. No guardamos copias.</li>
+    </ul>
 
-  <h2>4. Justificación de Permisos Solicitados (Chrome Web Store)</h2>
-  <p>Para operar como un escudo activo, Kibbo requiere los siguientes permisos técnicos. <strong>Ninguno se usa para extraer información personal:</strong></p>
-  <ul>
-    <li><strong>activeTab y tabs:</strong> Necesarios para leer la URL y el título de la página actual, permitiendo a la extensión saber si estás en un e-commerce compatible para desplegar el escudo y el análisis de precios.</li>
-    <li><strong>storage:</strong> Utilizado para guardar tus configuraciones locales, tu "Whitelist" (sitios ignorados) y el registro de precios en tu propio dispositivo.</li>
-    <li><strong>scripting:</strong> Fundamental para inyectar el código visual de Kibbo (el panel flotante y los recuadros rojos de advertencia) sobre las tiendas tramposas.</li>
-    <li><strong>downloads:</strong> Estrictamente necesario para poder descargar el archivo del "Certified Snapshot" directamente a tu disco duro.</li>
-    <li><strong>contextMenus:</strong> Permite crear las opciones de clic derecho para "Reportar trampa" rápidamente.</li>
-    <li><strong>cookies:</strong> Requerido exclusivamente para detectar urgencia manipulada por sesiones (ej. contadores que se reinician) y forzar sesiones limpias. No se usa para leer credenciales.</li>
-    <li><strong>clipboardWrite y clipboardRead:</strong> Utilizados para copiar el código hash SHA-256 o cláusulas abusivas al portapapeles con un solo clic.</li>
-  </ul>
+    <h2>2. Lo que NO hacemos</h2>
+    <ul>
+      <li><strong>NO</strong> recopilamos nombres, direcciones físicas ni números de teléfono.</li>
+      <li><strong>NO</strong> capturamos datos de tus tarjetas de crédito o métodos de pago.</li>
+      <li><strong>NO</strong> vendemos tus datos a terceros ni a agencias de publicidad.</li>
+    </ul>
 
-  <h2>5. Enlaces de Afiliados y Monetización</h2>
-  <p>Para poder mantener y desarrollar las funciones de seguridad de forma gratuita, Kibbo puede utilizar enlaces de afiliación cuando recomienda productos más baratos en tiendas seguras. Si haces clic y compras, Kibbo puede recibir una comisión. Esto <strong>jamás supone un coste adicional para ti</strong> ni influye en el precio final del producto.</p>
-  <p><em>Aviso Legal de Amazon: Como Afiliado de Amazon, Kibbo percibe ingresos por las compras adscritas que cumplen los requisitos aplicables.</em></p>
+    <h2>3. Integraciones de IA</h2>
+    <p>Kibbo incluye funciones avanzadas que requieren conexiones externas puntuales:</p>
+    <ul>
+      <li><strong>IA (Anthropic):</strong> Si utilizas el resumen de reseñas, Kibbo envía únicamente el texto público de la web a la API de Anthropic (Claude). No se adjunta ninguna información personal del usuario.</li>
+    </ul>
 
-  <h2>6. Tus Derechos y Contacto</h2>
-  <p>Tienes derecho a acceder, rectificar o solicitar la eliminación de tu correo electrónico de nuestra lista en cualquier momento. Además, puedes eliminar todos los datos locales de rastreo simplemente desinstalando la extensión de tu navegador.</p>
-  <p>Para ejercer cualquier derecho o resolver dudas técnicas, escríbenos directamente a <strong><a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></strong> y te responderemos en la mayor brevedad posible.</p>
+    <h2>4. Justificación de Permisos (Chrome Web Store)</h2>
+    <p>Solicitamos estos permisos estrictamente para protegerte, nunca para rastrearte:</p>
+    <ul>
+      <li><strong>activeTab y tabs:</strong> Para detectar si estás en un e-commerce y activar el escudo.</li>
+      <li><strong>storage:</strong> Para guardar tus configuraciones y el registro local de precios.</li>
+      <li><strong>scripting:</strong> Para inyectar visualmente las alertas sobre las tiendas tramposas.</li>
+      <li><strong>downloads:</strong> Para que puedas descargar tus Snapshot de prueba directamente.</li>
+      <li><strong>cookies:</strong> Para detectar contadores de urgencia falsos que se reinician.</li>
+    </ul>
+
+    <h2>5. Afiliados y Monetización</h2>
+    <p>Kibbo puede utilizar enlaces de afiliación al recomendar tiendas seguras. Esto <strong>jamás supone un coste adicional para ti</strong>.</p>
+    <p style="font-size: 0.9rem; font-style: italic;">Aviso Legal: Como Afiliado de Amazon, Kibbo percibe ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
+
+    <h2>6. Contacto</h2>
+    <p>Para dudas técnicas o legales, escríbenos a: <strong><a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></strong></p>
+  </main>
 
 </body>
 </html>
