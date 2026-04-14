@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidad — Kibbo</title>
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" type="image/png" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUH/8QAIxAAAQMDAwUBAAAAAAAAAAAAAQIDBAUHIQYRMQASFEFCUf/EABUBAQEAAAAAAAAAAAAAAAAAAAUH/8QAIREAAAUCBwAAAAAAAAAAAAAAAAERFGECEgMTITEyUZH/2gAMAwEAAhEDEQA/AMitnaRvUVvxV4zTz1XL619p2DRYSlG+TgKBVvzkA/nQLk2wRpvRBqUtp9qrmS2oJGxaEdaV9uRgqJRvg4Ck/vTLQ3Qap1GjafqUvxW47pdiPqBKWHSACVJ+21AAKHI5HsGbdm4SajElUSmzPJYkSBImPgEJkPAEJKE/DaASEjBPJ9AUUmrG0zpyUWfe43WNQVgunVV/Ef/Z">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,7 +17,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* RESTAURANDO TU DISEÑO VISUAL (TOPBAR) */
+    /* NAV */
     .topbar {
       position: sticky; top: 0; z-index: 10;
       background: rgba(255,255,255,0.92);
@@ -26,110 +26,171 @@
       padding: 14px 48px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo {
-      display: flex; align-items: center; gap: 8px;
-      font-weight: 600; font-size: 1.1rem; color: #111827;
-      text-decoration: none;
+    .topbar-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #111827;
     }
-    .logo img { height: 24px; width: auto; }
+    .topbar-logo img { width: 28px; height: 28px; border-radius: 8px; }
+    .topbar-logo span { font-weight: 600; font-size: 16px; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 8px;
+      background: #f9fafb; border: 1px solid #e5e7eb;
+      color: #374151; font-size: 13px; font-weight: 500;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .back-btn:hover { background: #f3f4f6; border-color: #d1d5db; }
 
-    /* CONTENEDOR DE TEXTO */
-    .content {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 24px;
+    /* CONTENT */
+    .container {
+      max-width: 720px; margin: 0 auto;
+      padding: 56px 48px 96px;
     }
 
-    h1 { font-size: 2.5rem; margin-bottom: 8px; color: #111827; letter-spacing: -0.02em; }
-    .date { color: #6b7280; font-size: 0.95rem; margin-bottom: 48px; }
-    
-    h2 { 
-      font-size: 1.4rem; margin-top: 48px; margin-bottom: 16px; 
-      color: #111827; font-weight: 600;
-      display: flex; align-items: center; gap: 12px;
+    .page-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #6366f1;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+      letter-spacing: -0.5px; line-height: 1.15;
+      color: #111827; margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 13px; color: #9ca3af; margin-bottom: 48px;
+      padding-bottom: 32px; border-bottom: 1px solid #f3f4f6;
+    }
+
+    h2 {
+      font-size: 18px; font-weight: 600;
+      color: #111827; margin: 40px 0 12px;
     }
     h2::before {
-      content: ""; display: inline-block; width: 4px; height: 24px;
-      background: #6366f1; border-radius: 4px;
+      content: attr(data-num);
+      display: inline-block; width: 28px; height: 28px;
+      background: #eef2ff; color: #6366f1;
+      border-radius: 8px; font-size: 12px; font-weight: 700;
+      line-height: 28px; text-align: center;
+      margin-right: 10px; flex-shrink: 0;
     }
 
-    p { margin-bottom: 20px; color: #4b5563; font-size: 1.05rem; }
-    ul { margin-bottom: 24px; padding-left: 20px; color: #4b5563; }
-    li { margin-bottom: 12px; }
-    strong { color: #111827; font-weight: 600; }
-    
-    .highlight-box { 
-      background: #f9fafb; border: 1px solid #f3f4f6; 
-      padding: 24px; margin: 32px 0; border-radius: 12px; 
+    p { font-size: 15px; color: #374151; margin-bottom: 14px; }
+    ul { padding-left: 0; list-style: none; margin-bottom: 14px; }
+    ul li {
+      font-size: 15px; color: #374151;
+      padding: 6px 0 6px 20px; position: relative;
     }
-    
-    a { color: #6366f1; text-decoration: none; font-weight: 500; transition: 0.2s; }
-    a:hover { color: #4f46e5; text-decoration: underline; }
+    ul li::before {
+      content: '✓';
+      position: absolute; left: 0;
+      color: #6366f1; font-weight: 600; font-size: 13px;
+    }
+
+    .highlight-box {
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 12px; padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .highlight-box p { color: #166534; margin: 0; font-size: 14px; }
+
+    .contact-box {
+      background: #fafafa; border: 1px solid #e5e7eb;
+      border-radius: 12px; padding: 20px 24px;
+      margin-top: 40px;
+    }
+    .contact-box p { margin: 0; font-size: 14px; color: #6b7280; }
+    .contact-box a { color: #6366f1; text-decoration: none; font-weight: 500; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; padding: 32px;
+      font-size: 12px; color: #9ca3af;
+      border-top: 1px solid #f3f4f6;
+    }
+    footer a { color: #6366f1; text-decoration: none; }
 
     @media (max-width: 640px) {
-      .topbar { padding: 14px 24px; }
-      h1 { font-size: 2rem; }
+      .topbar { padding: 12px 20px; }
+      .container { padding: 40px 20px 72px; }
     }
   </style>
 </head>
 <body>
 
-  <nav class="topbar">
-    <a href="/" class="logo">
-      <img src="favicon.png" alt="Kibbo Logo">
-      <span>Kibbo</span>
-    </a>
-    <a href="mailto:hello@getkibbo.com" style="font-size: 0.9rem; color: #6b7280;">Soporte</a>
-  </nav>
+<nav class="topbar">
+  <a href="index.html" class="topbar-logo">
+    <img src="data:image/png;base64,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" alt="Kibbo">
+    <span>Kibbo</span>
+  </a>
+  <a href="index.html" class="back-btn">← Volver al inicio</a>
+</nav>
 
-  <main class="content">
-    <h1>Política de Privacidad</h1>
-    <p class="date">Última actualización: Abril de 2026</p>
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Última actualización: Mayo 2025 · Versión 1.0</p>
 
-    <p>En Kibbo, nos tomamos tu privacidad tan en serio como tu ahorro. Nuestra misión es proteger al consumidor de tácticas abusivas en el e-commerce (Dark Patterns), no ser parte del problema. Por ello, operamos bajo el principio estricto de minimización de datos y procesamiento local.</p>
+  <div class="highlight-box">
+    <p>🛡️ <strong>Resumen rápido:</strong> Kibbo procesa todo en tu navegador. No tenemos acceso a tus contraseñas, datos bancarios ni historial de navegación. Solo recopilamos tu email si nos lo das voluntariamente.</p>
+  </div>
 
-    <div class="highlight-box">
-      <p><strong>Aclaración sobre tus datos:</strong> La Extensión de Kibbo <strong>no extrae ni escanea correos electrónicos</strong> de los sitios que visitas. Kibbo solo almacena tu email si decides suscribirte voluntariamente a nuestra lista de espera a través del formulario de nuestra web.</p>
-    </div>
+  <h2 data-num="1">Quiénes somos</h2>
+  <p>Kibbo es una extensión de navegador diseñada para proteger a los consumidores de dark patterns, precios inflados y cláusulas abusivas durante sus compras online. Somos una herramienta de seguridad e información, no una tienda ni un servicio financiero.</p>
+  <p>Para cualquier consulta relacionada con tu privacidad, puedes contactarnos en: <a href="/cdn-cgi/l/email-protection#6b030e0707042b0c0e1f000209090445080406" style="color:#6366f1;font-weight:500;"><span class="__cf_email__" data-cfemail="5139343d3d3e113634253a3833333e7f323e3c">[email&#160;protected]</span></a></p>
 
-    <h2>1. Recopilación y Uso de Datos</h2>
-    <p>Para ofrecer sus funciones de ciberseguridad y ahorro, Kibbo opera de la siguiente manera:</p>
-    <ul>
-      <li><strong>Análisis de Dark Patterns:</strong> El escaneo de contadores falsos y urgencia artificial se realiza de forma <strong>100% local</strong>. Los datos de tu navegación jamás se envían a nuestros servidores.</li>
-      <li><strong>Espectrómetro de Precios:</strong> El historial de precios detectados se almacena exclusivamente en la memoria local de tu dispositivo.</li>
-      <li><strong>Certified Snapshot:</strong> La generación de capturas con validez criptográfica (SHA-256) se realiza íntegramente en tu ordenador. No guardamos copias.</li>
-    </ul>
+  <h2 data-num="2">Datos que recopilamos (y los que NO)</h2>
+  <p><strong>No recopilamos:</strong></p>
+  <ul>
+    <li>Tu historial de navegación</li>
+    <li>Las páginas web que visitas</li>
+    <li>Contraseñas, datos bancarios o información de pago</li>
+    <li>Conversaciones ni contenido de tus chats</li>
+    <li>Información personal identificable sin tu consentimiento</li>
+  </ul>
+  <p><strong>Solo recopilamos tu email</strong> si tú nos lo facilitas voluntariamente a través del formulario de lista de espera (gestionado por Tally.so). Este email se usa exclusivamente para enviarte actualizaciones de Kibbo.</p>
 
-    <h2>2. Lo que NO hacemos</h2>
-    <ul>
-      <li><strong>NO</strong> recopilamos nombres, direcciones físicas ni números de teléfono.</li>
-      <li><strong>NO</strong> capturamos datos de tus tarjetas de crédito o métodos de pago.</li>
-      <li><strong>NO</strong> vendemos tus datos a terceros ni a agencias de publicidad.</li>
-    </ul>
+  <h2 data-num="3">Datos procesados localmente</h2>
+  <p>La siguiente información se procesa <strong>exclusivamente en tu dispositivo</strong> y nunca se envía a nuestros servidores:</p>
+  <ul>
+    <li>Precios detectados en páginas de producto (historial del Espectrómetro)</li>
+    <li>Contadores de trampas detectadas por dominio (para el Ranking)</li>
+    <li>Configuración personal (lista blanca, frases ignoradas)</li>
+    <li>Capturas SHA-256 del Snapshot (guardadas solo en tu navegador)</li>
+  </ul>
+  <p>Todos estos datos se almacenan en <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:13px;">chrome.storage.local</code>, el almacenamiento local de tu extensión Chrome, y solo tú puedes acceder a ellos.</p>
 
-    <h2>3. Integraciones de IA</h2>
-    <p>Kibbo incluye funciones avanzadas que requieren conexiones externas puntuales:</p>
-    <ul>
-      <li><strong>IA (Anthropic):</strong> Si utilizas el resumen de reseñas, Kibbo envía únicamente el texto público de la web a la API de Anthropic (Claude). No se adjunta ninguna información personal del usuario.</li>
-    </ul>
+  <h2 data-num="4">Funciones de IA (Plan Pro)</h2>
+  <p>Si utilizas las funciones de análisis con Inteligencia Artificial del plan Pro, Kibbo envía únicamente el texto público visible en la página que estás visitando (reseñas de productos o cláusulas de términos y condiciones) a la API de Anthropic para su análisis.</p>
+  <p>Nunca se envían: credenciales, datos de pago, información personal ni datos de identificación. Esta función solo se activa cuando tú la solicitas explícitamente.</p>
 
-    <h2>4. Justificación de Permisos (Chrome Web Store)</h2>
-    <p>Solicitamos estos permisos estrictamente para protegerte, nunca para rastrearte:</p>
-    <ul>
-      <li><strong>activeTab y tabs:</strong> Para detectar si estás en un e-commerce y activar el escudo.</li>
-      <li><strong>storage:</strong> Para guardar tus configuraciones y el registro local de precios.</li>
-      <li><strong>scripting:</strong> Para inyectar visualmente las alertas sobre las tiendas tramposas.</li>
-      <li><strong>downloads:</strong> Para que puedas descargar tus Snapshot de prueba directamente.</li>
-      <li><strong>cookies:</strong> Para detectar contadores de urgencia falsos que se reinician.</li>
-    </ul>
+  <h2 data-num="5">Afiliados y cookies de terceros</h2>
+  <p>Kibbo puede mostrar enlaces a tiendas como Amazon a través del programa Amazon Associates (afiliados). Cuando haces clic en estos enlaces y realizas una compra, Kibbo puede recibir una pequeña comisión sin coste adicional para ti.</p>
+  <p>Estos enlaces pueden incluir cookies de seguimiento de afiliados de Amazon y Rakuten para atribuir las comisiones. Estas cookies son gestionadas por dichas plataformas y están sujetas a sus propias políticas de privacidad. Kibbo no tiene acceso a los datos de estas cookies.</p>
 
-    <h2>5. Afiliados y Monetización</h2>
-    <p>Kibbo puede utilizar enlaces de afiliación al recomendar tiendas seguras. Esto <strong>jamás supone un coste adicional para ti</strong>.</p>
-    <p style="font-size: 0.9rem; font-style: italic;">Aviso Legal: Como Afiliado de Amazon, Kibbo percibe ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
+  <h2 data-num="6">Compartición de datos</h2>
+  <ul>
+    <li>No vendemos tus datos a terceros</li>
+    <li>No alquilamos ni cedemos tu información personal</li>
+    <li>No mostramos publicidad personalizada</li>
+    <li>No compartimos datos con anunciantes</li>
+  </ul>
+  <p>El único servicio externo que recibe tu email es Tally.so (formulario de lista de espera), sujeto a su propia política de privacidad.</p>
 
-    <h2>6. Contacto</h2>
-    <p>Para dudas técnicas o legales, escríbenos a: <strong><a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></strong></p>
-  </main>
+  <h2 data-num="7">Tus derechos</h2>
+  <p>Tienes derecho a:</p>
+  <ul>
+    <li>Acceder a los datos que tenemos sobre ti</li>
+    <li>Solicitar la eliminación de tu email en cualquier momento</li>
+    <li>Oponerte al procesamiento de tus datos</li>
+    <li>Eliminar todos los datos locales desinstalando la extensión</li>
+  </ul>
+  <p>Para ejercer cualquiera de estos derechos, escríbenos a <a href="/cdn-cgi/l/email-protection#bed6dbd2d2d1fed9dbcad5d7dcdcd190ddd1d3" style="color:#6366f1;font-weight:500;"><span class="__cf_email__" data-cfemail="cda5a8a1a1a28daaa8b9a6a4afafa2e3aea2a0">[email&#160;protected]</span></a> y responderemos en un plazo máximo de 30 días.</p>
 
+  <h2 data-num="8">Cambios en esta política</h2>
+  <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" en la parte superior. Te recomendamos revisarla periódicamente.</p>
+
+  <div class="contact-box">
+    <p>¿Preguntas sobre privacidad? Escríbenos a <a href="/cdn-cgi/
 </body>
 </html>
