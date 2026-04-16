@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.getkibbo.com"
+        }
+      ],
+      "destination": "https://getkibbo.com/$1",
+      "permanent": true
+    }
+  ]
+}

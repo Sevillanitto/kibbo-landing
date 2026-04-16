@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Kibbo — Guías Anti Dark Patterns y Compra Segura</title>
+<meta name="description" content="Guías para comprar online sin trampas. Detecta precios inflados, urgencias falsas y cláusulas abusivas. Por el equipo de Kibbo.">
+<link rel="canonical" href="https://getkibbo.com/blog">
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET Y VARIABLES ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#03030a;--surf:#0d0d18;--border:rgba(255,255,255,0.07);
+  --c:#00d4ff;--p:#7c3aed;--n:#a855f7;--g:#10b981;
+  --txt:#eeeeff;--m:#6b7280;--m2:#9ca3af;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:var(--bg);color:var(--txt);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:14px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(3,3,10,0.92);
+  border-bottom:1px solid rgba(0,212,255,0.08);
+}
+.nlogo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nlogo span{
+  font-family:'Oxanium',sans-serif;font-size:19px;font-weight:800;
+  background:linear-gradient(135deg,var(--c),var(--n));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.nlinks{display:flex;align-items:center;gap:20px;list-style:none;}
+.nlinks a{
+  font-size:12px;font-weight:500;color:var(--m);
+  text-decoration:none;transition:color .2s;
+}
+.nlinks a:hover{color:var(--c);}
+.ncta{
+  background:linear-gradient(135deg,var(--p),var(--c)) !important;
+  color:#fff !important;padding:7px 16px !important;
+  border-radius:8px !important;font-weight:700 !important;
+}
+
+/* ── CONTENEDOR PRINCIPAL ── */
+main{padding-top:80px;min-height:100vh;}
+
+/* ── HERO DEL BLOG ── */
+.blog-hero{
+  padding:80px 48px 60px;
+  text-align:center;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(124,58,237,0.09),transparent);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.blog-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
+  background-size:50px 50px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 14px 4px 10px;
+  background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.2);
+  border-radius:100px;font-size:10px;font-weight:700;
+  color:var(--c);letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.hero-badge .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--c);box-shadow:0 0 6px var(--c);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.blog-hero h1{
+  font-family:'Oxanium',sans-serif;
+  font-size:clamp(30px,5vw,56px);
+  font-weight:800;letter-spacing:-1.5px;
+  line-height:1.05;margin-bottom:14px;
+  position:relative;
+}
+.blog-hero h1 span{
+  background:linear-gradient(135deg,var(--c),var(--n));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.blog-hero p{
+  font-size:15px;color:var(--m2);
+  max-width:500px;margin:0 auto 28px;line-height:1.75;
+  position:relative;
+}
+.blog-cats{
+  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+  position:relative;
+}
+.cat-btn{
+  padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;
+  border:1px solid var(--border);color:var(--m);background:none;
+  cursor:pointer;transition:all .2s;font-family:inherit;
+}
+.cat-btn:hover,.cat-btn.active{
+  background:rgba(0,212,255,0.1);
+  border-color:rgba(0,212,255,0.3);color:var(--c);
+}
+
+/* ── GRID ARTÍCULOS ── */
+.blog-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;padding:48px;max-width:1160px;margin:0 auto;
+}
+.blog-card{
+  background:rgba(255,255,255,0.025);
+  border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;
+  cursor:pointer;transition:all .25s;
+  display:flex;flex-direction:column;
+  text-decoration:none;
+}
+.blog-card:hover{
+  border-color:rgba(0,212,255,0.22);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(0,0,0,0.4);
+}
+.card-emoji{
+  height:160px;display:flex;align-items:center;justify-content:center;
+  font-size:52px;
+  background:rgba(255,255,255,0.03);
+  border-bottom:1px solid var(--border);
+}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.card-cat{
+  font-size:9px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--c);margin-bottom:10px;
+}
+.card-title{
+  font-family:'Oxanium',sans-serif;font-size:15px;font-weight:700;
+  color:var(--txt);line-height:1.35;margin-bottom:10px;
+}
+.card-desc{font-size:12px;color:var(--m);line-height:1.7;flex:1;}
+.card-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:14px;padding-top:12px;
+  border-top:1px solid var(--border);
+  font-size:10px;color:var(--m);
+}
+.card-footer .leer{color:var(--c);font-weight:600;}
+
+/* ── ARTÍCULO INDIVIDUAL ── */
+.article-wrap{display:none;max-width:760px;margin:0 auto;padding:60px 24px 80px;}
+.article-wrap.visible{display:block;}
+.art-cat{
+  font-size:9px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--c);
+  display:block;margin-bottom:12px;
+}
+.art-h1{
+  font-family:'Oxanium',sans-serif;
+  font-size:clamp(24px,4vw,44px);font-weight:800;
+  letter-spacing:-1.2px;line-height:1.1;margin-bottom:16px;
+}
+.art-meta{
+  display:flex;gap:14px;flex-wrap:wrap;
+  font-size:11px;color:var(--m);margin-bottom:36px;
+  padding-bottom:24px;border-bottom:1px solid var(--border);
+}
+.art-body h2{
+  font-family:'Oxanium',sans-serif;font-size:21px;font-weight:700;
+  margin:36px 0 14px;letter-spacing:-.3px;
+}
+.art-body h3{
+  font-family:'Oxanium',sans-serif;font-size:16px;font-weight:600;
+  color:var(--c);margin:26px 0 10px;
+}
+.art-body p{font-size:15px;color:#b0adc8;line-height:1.85;margin-bottom:18px;}
+.art-body strong{color:var(--txt);font-weight:600;}
+.art-body ul,.art-body ol{margin:0 0 18px 20px;}
+.art-body li{font-size:15px;color:#b0adc8;line-height:1.85;margin-bottom:6px;}
+.art-body a{color:var(--c);}
+.art-body blockquote{
+  border-left:3px solid var(--c);
+  padding:14px 20px;
+  background:rgba(0,212,255,0.05);
+  border-radius:0 8px 8px 0;
+  margin:22px 0;
+  font-style:italic;color:var(--m2);
+  font-size:14px;line-height:1.7;
+}
+.callout{
+  background:rgba(124,58,237,0.08);
+  border:1px solid rgba(124,58,237,0.25);
+  border-radius:12px;padding:18px 22px;margin:24px 0;
+}
+.callout p{margin:0;color:#c4b5fd;font-size:14px;}
+.callout strong{color:#a78bfa;}
+.art-cta{
+  background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(0,212,255,.07));
+  border:1px solid rgba(0,212,255,.2);
+  border-radius:14px;padding:28px 32px;
+  text-align:center;margin:36px 0;
+}
+.art-cta h3{
+  font-family:'Oxanium',sans-serif;font-size:20px;font-weight:800;
+  margin-bottom:8px;
+}
+.art-cta p{color:var(--m);margin-bottom:18px;font-size:14px;}
+.art-cta a{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;
+  background:linear-gradient(135deg,var(--p),var(--c));
+  color:#fff;font-family:'Oxanium',sans-serif;
+  font-size:13px;font-weight:700;border-radius:10px;
+  text-decoration:none;
+}
+.art-nav{
+  display:flex;justify-content:space-between;
+  padding-top:32px;margin-top:32px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+}
+.art-nav button{
+  background:none;border:none;color:var(--m);
+  cursor:pointer;font-family:inherit;font-size:12px;
+  transition:color .2s;
+}
+.art-nav button:hover{color:var(--c);}
+
+/* ── FOOTER ── */
+footer{
+  padding:24px 48px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:10px;color:var(--m);flex-wrap:wrap;gap:8px;
+}
+footer a{color:var(--m);text-decoration:none;}
+footer a:hover{color:var(--c);}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  nav{padding:12px 16px;}
+  .nlinks{display:none;}
+  .blog-hero{padding:60px 18px 40px;}
+  .blog-grid{grid-template-columns:1fr;padding:24px 16px;gap:14px;}
+  .article-wrap{padding:40px 18px 60px;}
+  .art-nav{flex-direction:column;gap:12px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nlogo">
+    <span>Kibbo</span>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html#funciones">Funciones</a></li>
+    <li><a href="index.html#precios">Precios</a></li>
+    <li><a href="blog.html" style="color:var(--c)">Blog</a></li>
+    <li><a href="privacy.html">Privacidad</a></li>
+    <li><a href="https://chromewebstore.google.com" class="ncta">Protégete gratis</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+<!-- ══ ÍNDICE ══ -->
+<div id="view-index">
+  <div class="blog-hero">
+    <div class="hero-badge"><div class="dot"></div>Guías · Análisis · Herramientas</div>
+    <h1>El Blog de <span>Kibbo</span></h1>
+    <p>Aprende a detectar engaños online, proteger tu cartera y comprar con información real. Sin publicidad.</p>
+    <div class="blog-cats">
+      <button class="cat-btn active">Todos</button>
+      <button class="cat-btn">Dark Patterns</button>
+      <button class="cat-btn">Precios Inflados</button>
+      <button class="cat-btn">T&amp;C</button>
+      <button class="cat-btn">Guías Tiendas</button>
+    </div>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card" onclick="showArticle('amazon')">
+      <div class="card-emoji">📈</div>
+      <div class="card-body">
+        <div class="card-cat">Precios Inflados · Amazon</div>
+        <div class="card-title">Cómo Amazon sube los precios antes del Black Friday (y cómo pillarlo)</div>
+        <div class="card-desc">Amazon cambia los precios 2,5 millones de veces al día. Te explicamos el truco del precio tachado y cómo verificar si el descuento es real.</div>
+        <div class="card-footer"><span>8 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="showArticle('ryanair')">
+      <div class="card-emoji">✈️</div>
+      <div class="card-body">
+        <div class="card-cat">Dark Patterns · Aerolíneas</div>
+        <div class="card-title">Las 7 casillas trampa de Ryanair que te cuestan dinero sin que lo sepas</div>
+        <div class="card-desc">El seguro pre-marcado, la tarifa de gestión invisible, el check-in de pago. Analizamos cada paso del proceso de compra de Ryanair.</div>
+        <div class="card-footer"><span>6 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="showArticle('booking')">
+      <div class="card-emoji">🏨</div>
+      <div class="card-body">
+        <div class="card-cat">Dark Patterns · Hoteles</div>
+        <div class="card-title">Por qué el contador de Booking nunca llega a cero (y qué más te ocultan)</div>
+        <div class="card-desc">Llevamos más de 8 años con el mismo countdown en Booking. Analizamos los 5 dark patterns que usa para que reserves antes de comparar.</div>
+        <div class="card-footer"><span>5 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="showArticle('suscripciones')">
+      <div class="card-emoji">🔄</div>
+      <div class="card-body">
+        <div class="card-cat">Términos y Condiciones</div>
+        <div class="card-title">Renovación automática sin aviso: cómo cancelar y reclamar lo cobrado</div>
+        <div class="card-desc">Netflix, Domestika, gimnasios... Muchas empresas cobran la renovación sin avisar. Pasos exactos para cancelar y reclamar.</div>
+        <div class="card-footer"><span>7 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="showArticle('dropshipping')">
+      <div class="card-emoji">📦</div>
+      <div class="card-body">
+        <div class="card-cat">Dark Patterns · Dropshipping</div>
+        <div class="card-title">Cómo detectar si una tienda online es dropshipping (y pagar el precio real)</div>
+        <div class="card-desc">Miles de tiendas venden los mismos productos de AliExpress con 300% de margen. Aprende las señales y cómo comprar directamente.</div>
+        <div class="card-footer"><span>5 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="showArticle('tc')">
+      <div class="card-emoji">📋</div>
+      <div class="card-body">
+        <div class="card-cat">Términos y Condiciones</div>
+        <div class="card-title">Las 5 cláusulas más abusivas en los T&C de tiendas españolas (2025)</div>
+        <div class="card-desc">Hemos analizado los T&C de 50 e-commerces españoles. El 87% incluye al menos una cláusula que no cumpliría un examen legal básico.</div>
+        <div class="card-footer"><span>9 min</span><span class="leer">Leer →</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ARTÍCULO: AMAZON ══ -->
+<div id="art-amazon" class="article-wrap">
+  <span class="art-cat">Precios Inflados · Amazon</span>
+  <h1 class="art-h1">Cómo Amazon sube los precios antes del Black Friday (y cómo pillarlo)</h1>
+  <div class="art-meta">
+    <span>📅 Abril 2025</span><span>⏱ 8 min de lectura</span><span>🛡 Verificado por Kibbo</span>
+  </div>
+  <div class="art-body">
+    <p>Amazon cambia sus precios hasta <strong>2,5 millones de veces al día</strong>. No es un rumor: es el resultado de su sistema de dynamic pricing, que ajusta precios en tiempo real según la demanda, la competencia y la proximidad a fechas de grandes ventas como el Black Friday o el Prime Day.</p>
+    <h2>El truco del precio tachado</h2>
+    <p>Cuando Amazon muestra un precio tachado con "Precio habitual: 199€" y un precio actual de 99€, asume que ese precio tachado era el "precio real". El problema es que puede haber existido <strong>solo 48 horas</strong> hace seis meses para justificar legalmente el descuento.</p>
+    <div class="callout"><p><strong>Caso real:</strong> Un televisor analizado por Kibbo mostró un descuento del 40% durante el Black Friday. Al revisar el historial, el "precio habitual" de 599€ solo existió 3 días en agosto. El precio real de venta era 379€ — <strong>exactamente igual al precio de "oferta"</strong>.</p></div>
+    <h2>Las fechas que debes vigilar</h2>
+    <p>El patrón es siempre el mismo: Amazon sube los precios entre <strong>4 y 8 semanas antes</strong> de una fecha clave para que el descuento parezca mayor. En España: Black Friday (noviembre), Prime Day (julio), Cyber Monday y rebajas de enero.</p>
+    <h2>Lo que dice la ley</h2>
+    <p>Desde enero de 2023, la Directiva Omnibus de la UE obliga a mostrar como precio de referencia <strong>el precio más bajo de los últimos 30 días</strong>. Amazon ha sido multada en varios países europeos por incumplirla. Si detectas un precio tachado artificialmente inflado, puedes denunciarlo ante la <a href="https://www.consumo.gob.es">Agencia Española de Consumo</a>.</p>
+    <blockquote>"Si el precio tachado solo existió unos pocos días, el descuento es artificial. El precio de referencia legal debe ser el mínimo de los últimos 30 días."</blockquote>
+    <div class="art-cta">
+      <h3>🛡 Kibbo lo detecta automáticamente</h3>
+      <p>Instala Kibbo y en cada visita a Amazon recordará el precio. Si sube antes de una oferta, te avisará cuánto y cuándo.</p>
+      <a href="https://chromewebstore.google.com">Instalar Kibbo gratis →</a>
+    </div>
+  </div>
+  <div class="art-nav">
+    <button onclick="showIndex()">← Volver al blog</button>
+    <button onclick="showArticle('ryanair')">Las trampas de Ryanair →</button>
+  </div>
+</div>
+
+<!-- ══ ARTÍCULO: RYANAIR ══ -->
+<div id="art-ryanair" class="article-wrap">
+  <span class="art-cat">Dark Patterns · Aerolíneas</span>
+  <h1 class="art-h1">Las 7 casillas trampa de Ryanair que te cuestan dinero sin que lo sepas</h1>
+  <div class="art-meta">
+    <span>📅 Abril 2025</span><span>⏱ 6 min de lectura</span><span>🛡 Verificado por Kibbo</span>
+  </div>
+  <div class="art-body">
+    <p>Ryanair lleva décadas perfeccionando el arte de cobrar más de lo que aparece en el precio inicial. Según un estudio de la OCU, el precio final de un vuelo de Ryanair es de media un <strong>47% más caro</strong> que el precio anunciado.</p>
+    <h2>1. El seguro de viaje pre-marcado</h2>
+    <p>En el paso de selección de asientos aparece automáticamente marcado un seguro de entre 8€ y 22€ por trayecto. Si no lo ves y continúas, lo estás comprando. Aparece en el paso 2 del checkout, justo después de seleccionar vuelos.</p>
+    <h2>2. La tarifa de gestión invisible</h2>
+    <p>Ryanair cobra entre 2€ y 7€ por pasajero y trayecto que aparece solo en el resumen final. Para evitarla, paga con una tarjeta prepago Visa compatible.</p>
+    <h2>3. El check-in de pago</h2>
+    <p>Si no haces el check-in online a tiempo, Ryanair cobra entre 45€ y 55€ por hacerlo en el aeropuerto. El check-in online es gratis desde la app o la web.</p>
+    <div class="callout"><p><strong>Kibbo detecta automáticamente</strong> las casillas pre-marcadas en Ryanair y te avisa antes de continuar al siguiente paso.</p></div>
+    <h2>4. El equipaje de mano de cabina</h2>
+    <p>La mochila pequeña va gratis. La maleta de cabina que va en el compartimento superior cobra entre 6€ y 29€ si no lo añades al reservar.</p>
+    <h2>5. El asiento pre-asignado de pago</h2>
+    <p>Si no pagas por elegir asiento (4€-20€), Ryanair te asigna uno en la última fila o en el centro para presionarte a pagar.</p>
+    <h2>6. La trampa de la tarifa Value</h2>
+    <p>Ryanair presenta la tarifa "Value" como la más barata, pero ya incluye equipaje de cabina de pago. Si solo necesitas la mochila pequeña, la tarifa "Regular" es suficiente.</p>
+    <h2>7. El transporte prioritario obligatorio</h2>
+    <p>En rutas muy demandadas, Ryanair "agota" el equipaje de cabina gratuito y te obliga a pagar Priority. Reserva siempre con antelación.</p>
+    <div class="art-cta">
+      <h3>🛡 Kibbo detecta las casillas pre-marcadas</h3>
+      <p>Al entrar en el checkout de Ryanair, Kibbo analiza automáticamente el formulario y te avisa de cada casilla trampa.</p>
+      <a href="https://chromewebstore.google.com">Instalar Kibbo gratis →</a>
+    </div>
+  </div>
+  <div class="art-nav">
+    <button onclick="showIndex()">← Volver al blog</button>
+    <button onclick="showArticle('booking')">El contador de Booking →</button>
+  </div>
+</div>
+
+<!-- ══ ARTÍCULO: BOOKING ══ -->
+<div id="art-booking" class="article-wrap">
+  <span class="art-cat">Dark Patterns · Hoteles</span>
+  <h1 class="art-h1">Por qué el contador de Booking nunca llega a cero (y qué más te ocultan)</h1>
+  <div class="art-meta">
+    <span>📅 Abril 2025</span><span>⏱ 5 min de lectura</span><span>🛡 Verificado por Kibbo</span>
+  </div>
+  <div class="art-body">
+    <p>Llevas en la página del hotel 3 minutos y el contador sigue marcando "Quedan 2 habitaciones" con el mismo mensaje que cuando entraste. Refrescas la página. El contador vuelve a empezar. Booking lleva más de <strong>8 años con la misma táctica</strong>.</p>
+    <h2>El contador que nunca caduca</h2>
+    <p>Los contadores de Booking no muestran disponibilidad real en tiempo real. Son contadores de sesión que se reinician al cargar la página. La "urgencia" es artificial: el mismo hotel con las mismas fechas mostrará "Solo quedan 2 habitaciones" indefinidamente mientras haya disponibilidad.</p>
+    <blockquote>"Booking ha sido investigada por autoridades de consumo de varios países europeos por el uso de mensajes de disponibilidad artificialmente urgentes."</blockquote>
+    <h2>Las 5 tácticas de presión de Booking</h2>
+    <ul>
+      <li><strong>Contador de habitaciones</strong> — "Solo quedan 2" aunque lleven semanas disponibles</li>
+      <li><strong>Visto recientemente</strong> — "23 personas miraron esto hoy" incluso a las 3am</li>
+      <li><strong>Último precio a este coste</strong> — aparece en casi todos los hoteles simultáneamente</li>
+      <li><strong>Precio más popular</strong> — siempre la opción que más margen da a Booking</li>
+      <li><strong>Precio sin desayuno vs con desayuno</strong> — presentado para que la diferencia parezca pequeña</li>
+    </ul>
+    <h2>Cómo reservar en Booking sin caer en las trampas</h2>
+    <p>Primero: ignora los contadores. Segundo: compara siempre el precio en la web directa del hotel — en el 60% de los casos es más barato reservar directo. Tercero: filtra por "cancelación gratuita" y reserva con tiempo.</p>
+    <div class="art-cta">
+      <h3>🛡 Kibbo difumina los contadores falsos</h3>
+      <p>Cuando Kibbo detecta un contador que se reinicia o mensajes de presión artificial, los difumina para que no afecten a tu decisión.</p>
+      <a href="https://chromewebstore.google.com">Instalar Kibbo gratis →</a>
+    </div>
+  </div>
+  <div class="art-nav">
+    <button onclick="showIndex()">← Volver al blog</button>
+    <button onclick="showArticle('amazon')">← Precios Amazon</button>
+  </div>
+</div>
+
+<!-- ══ PRÓXIMOS ARTÍCULOS (placeholder) ══ -->
+<div id="art-suscripciones" class="article-wrap">
+  <span class="art-cat">Próximamente</span>
+  <h1 class="art-h1">Renovación automática sin aviso: cómo cancelar y reclamar</h1>
+  <div class="art-meta"><span>📅 Próximamente</span></div>
+  <div class="art-body"><p>Este artículo está siendo redactado. Vuelve pronto.</p></div>
+  <div class="art-nav"><button onclick="showIndex()">← Volver al blog</button></div>
+</div>
+<div id="art-dropshipping" class="article-wrap">
+  <span class="art-cat">Próximamente</span>
+  <h1 class="art-h1">Cómo detectar si una tienda online es dropshipping</h1>
+  <div class="art-meta"><span>📅 Próximamente</span></div>
+  <div class="art-body"><p>Este artículo está siendo redactado. Vuelve pronto.</p></div>
+  <div class="art-nav"><button onclick="showIndex()">← Volver al blog</button></div>
+</div>
+<div id="art-tc" class="article-wrap">
+  <span class="art-cat">Próximamente</span>
+  <h1 class="art-h1">Las 5 cláusulas más abusivas en los T&C españoles</h1>
+  <div class="art-meta"><span>📅 Próximamente</span></div>
+  <div class="art-body"><p>Este artículo está siendo redactado. Vuelve pronto.</p></div>
+  <div class="art-nav"><button onclick="showIndex()">← Volver al blog</button></div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2025 Kibbo · <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></div>
+  <div>Compatible con Chrome, Edge, Brave y Opera · <a href="blog.html">Blog</a></div>
+</footer>
+
+<script>
+// ── NAVEGACIÓN BLOG ──────────────────────────────────────────────
+function showArticle(id) {
+  document.getElementById('view-index').style.display = 'none';
+  document.querySelectorAll('.article-wrap').forEach(a => a.classList.remove('visible'));
+  const art = document.getElementById('art-' + id);
+  if (art) {
+    art.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function showIndex() {
+  document.querySelectorAll('.article-wrap').forEach(a => a.classList.remove('visible'));
+  document.getElementById('view-index').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── CATEGORÍAS ───────────────────────────────────────────────────
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

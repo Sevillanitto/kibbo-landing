@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getkibbo.com/sitemap.xml
+
+# Bloquear rutas que no existen o no interesan indexar
+Disallow: /cdn-cgi/
