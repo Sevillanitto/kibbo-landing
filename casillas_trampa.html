@@ -2,53 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Kibbo Test Lab - Verificación de Funciones</title>
+    <title>Kibbo Test - Detección de Trampas</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 50px; background: #0a0a0f; color: #fff; }
-        .container { max-width: 600px; margin: auto; }
-        .test-card { background: #13131f; border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; margin-bottom: 20px; }
-        h2 { color: #00d4ff; font-size: 1.1rem; margin-top: 0; }
-        .option { display: flex; align-items: flex-start; gap: 12px; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 8px; cursor: pointer; }
-        input[type="checkbox"] { width: 20px; height: 20px; margin-top: 3px; cursor: pointer; }
-        label { cursor: pointer; font-size: 0.95rem; color: #ccc; }
-        .price { font-weight: bold; color: #f97316; }
-        .banner-shaming { border: 2px solid #ef4444; padding: 15px; border-radius: 8px; text-align: center; }
-        .btn-link { background: none; border: none; color: #6b7280; text-decoration: underline; cursor: pointer; font-size: 0.8rem; margin-top: 10px; }
+        body { font-family: sans-serif; padding: 50px; background: #f0f2f5; color: #1c1e21; }
+        .checkout-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        .row { display: flex; align-items: flex-start; gap: 12px; padding: 15px; border-bottom: 1px solid #eee; }
+        input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; }
+        label { cursor: pointer; font-size: 14px; line-height: 1.4; }
+        .price-tag { font-weight: bold; color: #d32f2f; }
+        h1 { text-align: center; color: #00d4ff; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>🧪 Kibbo Debugger</h1>
-    <p>Si la extensión está en ON, debería marcar los elementos de abajo automáticamente.</p>
+    <div class="checkout-box">
+        <h1>Finalizar Compra</h1>
+        <p>Revisa tus opciones de viaje:</p>
 
-    <div class="test-card">
-        <h2>1. Checkbox Pre-marcado (Trampa de gasto)</h2>
-        <div class="option">
-            <input type="checkbox" id="check1" checked>
-            <label for="check1">
-                Añadir <strong>Seguro de Protección Total</strong> por solo <span class="price">19,99€</span>. 
-                Incluye cancelación y asistencia médica 24h. (Recomendado por la aerolínea)
+        <div class="row">
+            <input type="checkbox" id="trap1" checked>
+            <label for="trap1">
+                <strong>Añadir Seguro de Asistencia Premium</strong> por solo <span class="price-tag">14,50€</span>. 
+                Protege tu viaje contra cualquier imprevisto (Recomendado).
+            </label>
+        </div>
+
+        <div class="row">
+            <input type="checkbox" id="trap2" checked>
+            <label for="trap2">
+                Quiero suscribirme a la <strong>Newsletter de Ofertas</strong> y recibir promociones exclusivas cada semana en mi email.
+            </label>
+        </div>
+
+        <div class="row">
+            <input type="checkbox" id="trap3" checked>
+            <label for="trap3">
+                Donar <span class="price-tag">1,00€</span> a la fundación para compensar la huella de carbono de este pedido.
             </label>
         </div>
     </div>
-
-    <div class="test-card">
-        <h2>2. Confirmshaming (Culpa)</h2>
-        <div class="banner-shaming">
-            <p>¿Quieres nuestro descuento exclusivo del 20%?</p>
-            <button style="background:#00d4ff; border:none; padding:10px 20px; border-radius:5px; font-weight:bold;">¡SÍ, QUIERO MI DESCUENTO!</button>
-            <br>
-            <button class="btn-link">No, gracias, prefiero pagar el precio completo y no ahorrar nada hoy</button>
-        </div>
-    </div>
-
-    <div class="test-card">
-        <h2>3. Urgencia Falsa (Escasez)</h2>
-        <p style="color: #ef4444; font-weight: bold;">⚠️ ¡Date prisa! Solo queda 1 unidad en stock a este precio.</p>
-        <p>47 personas están mirando este producto en este mismo momento.</p>
-    </div>
-</div>
 
 </body>
 </html>
