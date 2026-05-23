@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kibbo — Documentación Técnica para Adquisición</title>
+<title>Kibbo — Technical Documentation for Acquisition</title>
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -139,26 +139,26 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
 <body>
 
 <header>
-  <div class="version"><div class="dot"></div>v2.0 · Documentación técnica</div>
+  <div class="version"><div class="dot"></div>v2.0 · Technical documentation</div>
   <div class="logo-txt">Kibbo</div>
-  <h1>Documentación completa de funciones</h1>
-  <p>Extensión Chrome de protección al consumidor. 34 funciones activas. Actualmente adaptada al mercado español y europeo — escalable a cualquier mercado mundial añadiendo el idioma local y revisando las tiendas principales de cada región.</p>
+  <h1>Complete feature documentation</h1>
+  <p>Chrome consumer protection extension. 34 active features. Currently adapted to the Spanish and European market — scalable to any global market by adding the local language and reviewing the main stores in each region.</p>
   <div class="intro-box">
-    <strong>Para el evaluador técnico:</strong> Este documento describe cada función de Kibbo con detalle técnico, lógica de implementación, coste operativo y tiendas donde está validada. Kibbo no modifica ningún dato del usuario, no realiza compras y no transmite información personal. Todo el análisis ocurre en el navegador del usuario salvo las 5 funciones marcadas con IA que pasan por un proxy propio en Cloudflare Workers.
+    <strong>For the technical reviewer:</strong> This document describes each Kibbo feature with technical detail, implementation logic, operational cost, and validated stores. Kibbo does not modify any user data, does not make purchases, and does not transmit personal information. All analysis occurs in the user's browser except for the 5 AI-marked features that go through Kibbo's own proxy on Cloudflare Workers.
   </div>
 </header>
 
 <nav class="indice">
-  <a href="#pitch">El problema</a>
-  <a href="#automaticas">Automáticas</a>
-  <a href="#precios">Precios</a>
+  <a href="#pitch">The problem</a>
+  <a href="#automaticas">Automatic</a>
+  <a href="#precios">Prices</a>
   <a href="#checkout">Checkout</a>
   <a href="#tc">T&amp;C</a>
   <a href="#panel">Panel</a>
   <a href="#toolkit">Toolkit</a>
-  <a href="#configuracion">Configuración</a>
-  <a href="#arquitectura">Arquitectura</a>
-  <a href="#marca">Marca y stack</a>
+  <a href="#configuracion">Settings</a>
+  <a href="#arquitectura">Architecture</a>
+  <a href="#marca">Brand &amp; stack</a>
 </nav>
 
 <div class="page">
@@ -168,36 +168,36 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🎯</div>
     <div class="sec-header-txt">
-      <h2>El problema y la solución</h2>
-      <p>Por qué existe Kibbo y qué mercado atiende</p>
+      <h2>The problem and the solution</h2>
+      <p>Why Kibbo exists and what market it serves</p>
     </div>
   </div>
   <div class="funciones">
     <div class="fn-card">
-      <div class="fn-nombre" style="margin-bottom:14px;">¿Qué son los dark patterns y por qué importan?</div>
+      <div class="fn-nombre" style="margin-bottom:14px;">What are dark patterns and why do they matter?</div>
       <div class="pitch-grid">
         <div class="pitch-card problema">
-          <h3>⚠️ El problema</h3>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div>El <strong>72% de los e-commerce europeos</strong> usan al menos una técnica de manipulación psicológica según estudios de la Comisión Europea (2022).</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Urgencia falsa:</strong> "Solo quedan 2 unidades" cuando hay cientos en stock. Obliga al usuario a comprar sin pensar.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Casillas pre-marcadas:</strong> seguros, suscripciones y extras que se cuelan en el carrito si el usuario no los detecta a tiempo.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Precios inflados artificialmente:</strong> el precio tachado nunca fue real. El descuento del 40% es ficticio.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Letra pequeña abusiva:</strong> renovaciones automáticas, arbitraje forzado y cancelaciones imposibles escondidas en T&C de 40 páginas.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Phishing y fraude:</strong> SMS falsos de Correos, DGT y bancos engañan a miles de personas cada semana en España.</div></div>
+          <h3>⚠️ The problem</h3>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>72% of European e-commerce sites</strong> use at least one psychological manipulation technique according to European Commission studies (2022).</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>False urgency:</strong> "Only 2 units left" when there are hundreds in stock. Forces users to buy without thinking.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Pre-checked boxes:</strong> insurance, subscriptions, and add-ons that sneak into the cart if the user doesn't spot them in time.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Artificially inflated prices:</strong> the crossed-out price was never real. The 40% discount is fictional.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Abusive fine print:</strong> automatic renewals, forced arbitration, and impossible cancellations hidden in 40-page T&Cs.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet"></div><div><strong>Phishing and fraud:</strong> fake SMS from postal services, traffic agencies, and banks trick thousands of people every week.</div></div>
         </div>
         <div class="pitch-card solucion">
-          <h3>✅ La solución — Kibbo</h3>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Kibbo actúa <strong>en tiempo real</strong> mientras el usuario navega, sin que tenga que hacer nada. Se instala una vez y funciona solo.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div><strong>34 funciones activas</strong> cubren todo el ciclo de la compra online: desde la ficha del producto hasta el checkout y los T&C.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Compatible con <strong>más de 30.000 tiendas</strong> sin configuración. Las 50 tiendas más grandes de España tienen implementación específica.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div><strong>Sin datos del usuario.</strong> Todo el análisis ocurre en el navegador. No hay servidor, no hay base de datos de usuarios, no hay rastreo.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Coste operativo de <strong>menos de 5€/día</strong> con 1.000 usuarios activos usando funciones IA.</div></div>
-          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Aprobada en <strong>Chrome Web Store y Microsoft Edge Add-ons Store</strong>. Lista para distribución inmediata.</div></div>
+          <h3>✅ The solution — Kibbo</h3>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Kibbo acts <strong>in real time</strong> while the user browses, without any action required. Install once and it works on its own.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div><strong>34 active features</strong> cover the entire online shopping cycle: from the product page to checkout and T&Cs.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Compatible with <strong>more than 30,000 stores</strong> with no configuration. The 50 largest stores in Spain have specific implementation.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div><strong>No user data.</strong> All analysis occurs in the browser. No server, no user database, no tracking.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Operational cost of <strong>less than €5/day</strong> with 1,000 active users using AI features.</div></div>
+          <div class="pitch-stat"><div class="pitch-bullet g"></div><div>Approved in <strong>Chrome Web Store and Microsoft Edge Add-ons Store</strong>. Ready for immediate distribution.</div></div>
         </div>
       </div>
       <div class="fn-tecnico" style="margin-top:16px;">
-        <div class="fn-tecnico-label">Contexto regulatorio</div>
-        <p>La Directiva Omnibus de la UE (2022) y la Digital Services Act (2023) obligan a los e-commerce europeos a eliminar dark patterns. Las multas por incumplimiento pueden alcanzar el <strong>4% de la facturación global</strong>. Kibbo es la herramienta que pone ese poder en manos del consumidor individual.</p>
+        <div class="fn-tecnico-label">Regulatory context</div>
+        <p>The EU Omnibus Directive (2022) and the Digital Services Act (2023) require European e-commerce to eliminate dark patterns. Fines for non-compliance can reach <strong>4% of global revenue</strong>. Kibbo is the tool that puts that power in the hands of the individual consumer.</p>
       </div>
     </div>
   </div>
@@ -205,7 +205,7 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
 
 
 <div class="alerta-intro">
-  <strong>Coste operativo de las funciones IA:</strong> Kibbo usa un proxy propio alojado en Cloudflare Workers que intermedia con la API de Anthropic (Claude Sonnet). El navegador del usuario nunca contacta directamente con Anthropic. Coste estimado por llamada: <strong>0,001€–0,003€</strong>. Con 1.000 usuarios activos diarios usando funciones IA una vez al día, el coste total es inferior a <strong>3€/día</strong>. Las 29 funciones restantes son completamente gratuitas — análisis local en el navegador sin llamadas externas.
+  <strong>Operational cost of AI features:</strong> Kibbo uses its own proxy hosted on Cloudflare Workers that intermediates with the Anthropic API (Claude Sonnet). The user's browser never contacts Anthropic directly. Estimated cost per call: <strong>€0.001–€0.003</strong>. With 1,000 active daily users using AI features once a day, the total cost is under <strong>€3/day</strong>. The remaining 29 features are completely free — local analysis in the browser with no external calls.
 </div>
 
 <!-- ══════════════════ AUTOMÁTICAS ══════════════════ -->
@@ -213,10 +213,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🤖</div>
     <div class="sec-header-txt">
-      <h2>Funciones automáticas</h2>
-      <p>Se activan sin interacción del usuario al entrar en cualquier web compatible</p>
+      <h2>Automatic features</h2>
+      <p>Activated without user interaction when entering any compatible website</p>
     </div>
-    <span class="sec-badge badge-auto">Sin interacción</span>
+    <span class="sec-badge badge-auto">No interaction</span>
   </div>
   <div class="funciones">
 
@@ -224,23 +224,23 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">⚡</div>
         <div>
-          <div class="fn-nombre">Detector de urgencia falsa + Alerta de precio de lanzamiento</div>
-          <div class="fn-desc">Analiza el texto visible de cada elemento del DOM contra una base de 204 frases clasificadas en tres categorías: escasez ("Solo quedan 2 unidades"), tiempo limitado ("Oferta acaba en 2h") y presión social ("47 personas mirando esto ahora"). Cuando detecta una frase trampa, inyecta una pill de aviso junto al elemento con el tipo de manipulación. Los contadores de cuenta atrás se detectan mediante regex de formato reloj y se neutralizan visualmente. También detecta frases de "precio de lanzamiento" y "oferta de bienvenida" para alertar cuando el descuento es temporal por diseño.</div>
-          <span class="fn-coste">✓ Coste cero — análisis local</span>
+          <div class="fn-nombre">False urgency detector + Launch price alert</div>
+          <div class="fn-desc">Analyzes the visible text of each DOM element against a database of 204 phrases classified into three categories: scarcity ("Only 2 units left"), time-limited ("Offer ends in 2h"), and social pressure ("47 people watching this now"). When it detects a trap phrase, it injects a warning pill next to the element indicating the type of manipulation. Countdown timers are detected via clock-format regex and visually neutralized. Also detects "launch price" and "welcome offer" phrases to alert when the discount is temporary by design.</div>
+          <span class="fn-coste">✓ Zero cost — local analysis</span>
           <div class="fn-tecnico">
-            <div class="fn-tecnico-label">Implementación técnica</div>
-            <p>MutationObserver con subtree:true detecta nodos nuevos en tiempo real. Cada nodo pasa por un filtro de exclusión (elementos propios de Kibbo, zonas de sidebar, sugeridos) antes de ser analizado. Se procesan en lotes de 40 nodos por tick usando requestIdleCallback para no bloquear el hilo principal. Las frases ignoradas por el usuario se persisten en chrome.storage.local.</p>
+            <div class="fn-tecnico-label">Technical implementation</div>
+            <p>MutationObserver with subtree:true detects new nodes in real time. Each node passes through an exclusion filter (Kibbo's own elements, sidebar areas, suggested items) before being analyzed. Processed in batches of 40 nodes per tick using requestIdleCallback to avoid blocking the main thread. Phrases dismissed by the user are persisted in chrome.storage.local.</p>
           </div>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Amazon</strong> (páginas de producto con "Solo queda 1" o "Oferta flash") · <strong>AliExpress</strong> (cualquier producto con contador) · <strong>Ryanair</strong> (selección de vuelo y extras) · <strong>Temu</strong> (prácticamente cualquier página)</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Amazon</strong> (product pages with "Only 1 left" or "Flash sale") · <strong>AliExpress</strong> (any product with a countdown) · <strong>Ryanair</strong> (flight and extras selection) · <strong>Temu</strong> (virtually any page)</p>
           </div>
           <div class="tags">
             <span class="tag tag-amazon">Amazon</span>
             <span class="tag tag-ali">AliExpress</span>
             <span class="tag tag-ryanair">Ryanair</span>
             <span class="tag tag-temu">Temu</span>
-            <span class="tag tag-todas">+30.000 tiendas</span>
+            <span class="tag tag-todas">+30,000 stores</span>
           </div>
         </div>
       </div>
@@ -250,17 +250,17 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">☑️</div>
         <div>
-          <div class="fn-nombre">Detector de casillas trampa</div>
-          <div class="fn-desc">Detecta checkboxes pre-marcados cuyos textos adyacentes contienen palabras asociadas a suscripciones, seguros, extras de pago y servicios de renovación automática. Al detectarlos, añade un tooltip con el tipo de trampa y un badge de aviso visible sin ocultar ni desmarcar el checkbox (el usuario decide). La detección se re-ejecuta cada 2 segundos con setInterval para cubrir banners que se inyectan dinámicamente.</div>
-          <span class="fn-coste">✓ Coste cero — análisis local</span>
+          <div class="fn-nombre">Trap checkbox detector</div>
+          <div class="fn-desc">Detects pre-checked checkboxes whose adjacent text contains words associated with subscriptions, insurance, paid add-ons, and auto-renewal services. When detected, adds a tooltip with the trap type and a visible warning badge without hiding or unchecking the box (the user decides). Detection re-runs every 2 seconds with setInterval to cover dynamically injected banners.</div>
+          <span class="fn-coste">✓ Zero cost — local analysis</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Ryanair</strong> (paso de extras: seguro, Fast Track, asiento) · <strong>Vueling</strong> · <strong>eDreams</strong> · <strong>Booking.com</strong> (seguro de cancelación) · <strong>cualquier checkout</strong> con casillas de marketing</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Ryanair</strong> (extras step: insurance, Fast Track, seat) · <strong>Vueling</strong> · <strong>eDreams</strong> · <strong>Booking.com</strong> (cancellation insurance) · <strong>any checkout</strong> with marketing checkboxes</p>
           </div>
           <div class="tags">
             <span class="tag tag-ryanair">Ryanair</span>
             <span class="tag tag-booking">Booking</span>
-            <span class="tag tag-todas">Checkout genérico</span>
+            <span class="tag tag-todas">Generic checkout</span>
           </div>
         </div>
       </div>
@@ -271,14 +271,14 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
         <div class="fn-emoji">😤</div>
         <div>
           <div class="fn-nombre">Confirmshaming</div>
-          <div class="fn-desc">Detecta botones, links y labels que utilizan texto diseñado para hacer sentir mal al usuario por no comprar o no suscribirse. La base contiene 30+ frases en español e inglés: "No quiero ahorrar", "Prefiero pagar más", "I'm happy paying more", "No me interesa mi seguridad". Al detectar uno, añade un outline naranja y un badge "Manipulación emocional detectada" sin bloquear la acción.</div>
-          <span class="fn-coste">✓ Coste cero — análisis local</span>
+          <div class="fn-desc">Detects buttons, links, and labels that use text designed to make the user feel bad for not buying or subscribing. The database contains 30+ phrases in Spanish and English: "No quiero ahorrar", "Prefiero pagar más", "I'm happy paying more", "No me interesa mi seguridad". When detected, adds an orange outline and a badge "Emotional manipulation detected" without blocking the action.</div>
+          <span class="fn-coste">✓ Zero cost — local analysis</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Popups de salida</strong> en tiendas de moda · <strong>newsletters</strong> con enlace de "No quiero descuentos" · <strong>Ryanair</strong> en el botón "Continuar sin seguro"</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Exit popups</strong> on fashion stores · <strong>newsletters</strong> with "I don't want discounts" links · <strong>Ryanair</strong> on the "Continue without insurance" button</p>
           </div>
           <div class="tags">
-            <span class="tag tag-todas">Popups genéricos</span>
+            <span class="tag tag-todas">Generic popups</span>
             <span class="tag tag-ryanair">Ryanair</span>
           </div>
         </div>
@@ -289,15 +289,15 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🍪</div>
         <div>
-          <div class="fn-nombre">Ecualizador de cookies</div>
-          <div class="fn-desc">Al cargar la página, identifica el banner de cookies usando selectores de los 4 CMPs más usados en España (OneTrust, Cookiebot, Axeptio, Tarteaucitron) más decenas de clases genéricas y CMPs adicionales (Usercentrics, Quantcast, Didomi). Cuando encuentra el banner, copia exactamente el padding, font-size, font-weight, border-radius y min-width del botón "Aceptar" y los aplica al botón "Rechazar", añadiendo el color cian de Kibbo para que destaque visualmente. Se muestra un badge discreto durante 4 segundos.</div>
-          <span class="fn-coste">✓ Coste cero — análisis local</span>
+          <div class="fn-nombre">Cookie equalizer</div>
+          <div class="fn-desc">When the page loads, identifies the cookie banner using selectors from the 4 most-used CMPs in Spain (OneTrust, Cookiebot, Axeptio, Tarteaucitron) plus dozens of generic classes and additional CMPs (Usercentrics, Quantcast, Didomi). When it finds the banner, it copies the exact padding, font-size, font-weight, border-radius, and min-width from the "Accept" button and applies them to the "Reject" button, adding Kibbo's cyan color so it stands out visually. A discreet badge is shown for 4 seconds.</div>
+          <span class="fn-coste">✓ Zero cost — local analysis</span>
           <div class="fn-tecnico">
-            <div class="fn-tecnico-label">Cobertura de CMPs</div>
-            <p>OneTrust · Cookiebot · Axeptio · Tarteaucitron · Didomi · Usercentrics · Quantcast · TrustArc · Clases genéricas. Funciona en la mayoría de webs españolas y europeas. Algunas webs con implementaciones propias pueden no ser detectadas.</p>
+            <div class="fn-tecnico-label">CMP coverage</div>
+            <p>OneTrust · Cookiebot · Axeptio · Tarteaucitron · Didomi · Usercentrics · Quantcast · TrustArc · Generic classes. Works on most Spanish and European websites. Some websites with custom implementations may not be detected.</p>
           </div>
           <div class="tags">
-            <span class="tag tag-todas">Cualquier web con cookies</span>
+            <span class="tag tag-todas">Any website with cookies</span>
           </div>
         </div>
       </div>
@@ -307,12 +307,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">💰</div>
         <div>
-          <div class="fn-nombre">Badge de precios psicológicos</div>
-          <div class="fn-desc">Detecta precios que terminan en ,99 o ,95 en páginas de producto y muestra un badge discreto junto al precio con el valor redondeado real. Ejemplo: "32,99€" → badge "≈ 33€ real". La lógica identifica el precio principal de la página (no precios en sidebars ni sugeridos) para evitar falsos positivos. Se ejecuta con reintentos a 2, 5 y 9 segundos para cubrir páginas con carga diferida.</div>
-          <span class="fn-coste">✓ Coste cero — análisis local</span>
+          <div class="fn-nombre">Psychological pricing badge</div>
+          <div class="fn-desc">Detects prices ending in .99 or .95 on product pages and shows a discreet badge next to the price with the real rounded value. Example: "€32.99" → badge "≈ €33 real". The logic identifies the main price on the page (not prices in sidebars or suggested items) to avoid false positives. Runs with retries at 2, 5, and 9 seconds to cover pages with lazy loading.</div>
+          <span class="fn-coste">✓ Zero cost — local analysis</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Amazon</strong> · <strong>MediaMarkt</strong> · <strong>Shein</strong> · cualquier producto con precio terminado en ,99</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Amazon</strong> · <strong>MediaMarkt</strong> · <strong>Shein</strong> · any product with a price ending in .99</p>
           </div>
           <div class="tags">
             <span class="tag tag-amazon">Amazon</span>
@@ -327,9 +327,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🛒</div>
         <div>
-          <div class="fn-nombre">Botón ¿Es dropshipping? + Google Lens</div>
-          <div class="fn-desc">En webs desconocidas con imagen de producto visible, aparece un botón flotante en la esquina inferior izquierda a los 2 segundos. Al pulsarlo abre Google Lens con la imagen principal del producto para que el usuario pueda verificar si el mismo producto aparece en AliExpress por 3€. Adicionalmente, el menú contextual de clic derecho sobre cualquier imagen de producto incluye "Buscar en Google Lens" para búsquedas manuales.</div>
-          <span class="fn-coste">✓ Coste cero — redirige a Google Lens</span>
+          <div class="fn-nombre">Is it dropshipping? button + Google Lens</div>
+          <div class="fn-desc">On unknown websites with a visible product image, a floating button appears in the bottom-left corner after 2 seconds. Clicking it opens Google Lens with the main product image so the user can check whether the same product appears on AliExpress for €3. Additionally, the right-click context menu on any product image includes "Search in Google Lens" for manual searches.</div>
+          <span class="fn-coste">✓ Zero cost — redirects to Google Lens</span>
         </div>
       </div>
     </div>
@@ -338,12 +338,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🚫</div>
         <div>
-          <div class="fn-nombre">Lista negra de dominios</div>
-          <div class="fn-desc">Contiene más de 150 dominios reportados como fraudulentos, principalmente plataformas de inversión falsas y tiendas de estafa. Al entrar en un dominio de la lista aparece inmediatamente un popup rojo con el nombre del dominio, aviso de fraude y dos opciones: "Volver atrás" y "Continuar bajo mi riesgo". La lista se actualiza con cada nueva versión de Kibbo añadiendo dominios reportados por usuarios, OCU, FACUA y fuentes de ciberseguridad.</div>
-          <span class="fn-coste">✓ Coste cero — lista local en el código</span>
+          <div class="fn-nombre">Domain blacklist</div>
+          <div class="fn-desc">Contains more than 150 domains reported as fraudulent, mainly fake investment platforms and scam stores. When entering a listed domain, a red popup immediately appears with the domain name, fraud warning, and two options: "Go back" and "Continue at my own risk". The list is updated with each new version of Kibbo by adding domains reported by users, OCU, FACUA, and cybersecurity sources.</div>
+          <span class="fn-coste">✓ Zero cost — local list in the code</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p>Entra en <strong>galidix.com</strong> — está en la lista negra y debería aparecer el popup rojo inmediatamente.</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p>Go to <strong>galidix.com</strong> — it's on the blacklist and the red popup should appear immediately.</p>
           </div>
         </div>
       </div>
@@ -353,9 +353,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🏁</div>
         <div>
-          <div class="fn-nombre">Dashboard flotante</div>
-          <div class="fn-desc">Badge fijo en la esquina inferior izquierda que muestra en tiempo real el número de trampas detectadas en la página actual. Se actualiza con cada nueva detección. Solo aparece cuando hay al menos una trampa detectada para no ser intrusivo en páginas limpias.</div>
-          <span class="fn-coste">✓ Coste cero — contador local</span>
+          <div class="fn-nombre">Floating dashboard</div>
+          <div class="fn-desc">Fixed badge in the bottom-left corner that shows in real time the number of traps detected on the current page. Updated with each new detection. Only appears when at least one trap has been detected, to avoid being intrusive on clean pages.</div>
+          <span class="fn-coste">✓ Zero cost — local counter</span>
         </div>
       </div>
     </div>
@@ -364,9 +364,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🖼️</div>
         <div>
-          <div class="fn-nombre">Marcado de imágenes para Google Lens</div>
-          <div class="fn-desc">Añade el atributo data-kibbo-img a imágenes de producto detectadas mediante selectores específicos por tienda (Amazon, AliExpress, Shein, Temu) y selectores genéricos de e-commerce. Esto habilita la opción "Buscar en Google Lens" en el menú contextual de clic derecho. Se re-ejecuta cada 3 segundos para cubrir imágenes cargadas dinámicamente.</div>
-          <span class="fn-coste">✓ Coste cero — marcado DOM local</span>
+          <div class="fn-nombre">Image tagging for Google Lens</div>
+          <div class="fn-desc">Adds the data-kibbo-img attribute to product images detected via store-specific selectors (Amazon, AliExpress, Shein, Temu) and generic e-commerce selectors. This enables the "Search in Google Lens" option in the right-click context menu. Re-runs every 3 seconds to cover dynamically loaded images.</div>
+          <span class="fn-coste">✓ Zero cost — local DOM tagging</span>
         </div>
       </div>
     </div>
@@ -379,10 +379,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">📊</div>
     <div class="sec-header-txt">
-      <h2>Espectrómetro de precios</h2>
-      <p>Historial local de precios por producto con análisis de tendencia</p>
+      <h2>Price Spectrometer</h2>
+      <p>Local price history per product with trend analysis</p>
     </div>
-    <span class="sec-badge badge-auto">Automático</span>
+    <span class="sec-badge badge-auto">Automatic</span>
   </div>
   <div class="funciones">
 
@@ -390,20 +390,20 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">📈</div>
         <div>
-          <div class="fn-nombre">Espectrómetro de precios con sparkline</div>
-          <div class="fn-desc">En cada visita a una página de producto, Kibbo extrae el precio actual y lo guarda en chrome.storage.local indexado por URL. Al visitar el mismo producto de nuevo, compara con el historial y calcula si el precio subió, bajó o está igual. Muestra en el popup una mini gráfica SVG (sparkline) con la evolución histórica, el mínimo y máximo registrados, y un cursor en la barra de riesgo (Verde=precio bajo, Rojo=precio alto). Si detecta que el precio tachado no corresponde al precio histórico real, muestra el banner "¡CAZADOS!" en la página.</div>
-          <span class="fn-coste">✓ Coste cero — storage local, sin backend</span>
+          <div class="fn-nombre">Price Spectrometer with sparkline</div>
+          <div class="fn-desc">On each visit to a product page, Kibbo extracts the current price and saves it in chrome.storage.local indexed by URL. When the same product is visited again, it compares against the history and calculates whether the price went up, down, or stayed the same. The popup shows a mini SVG chart (sparkline) with the historical trend, recorded minimum and maximum, and a cursor on the risk bar (Green=low price, Red=high price). If it detects that the crossed-out price doesn't match the real historical price, it shows a "CAUGHT!" banner on the page.</div>
+          <span class="fn-coste">✓ Zero cost — local storage, no backend</span>
           <div class="fn-tecnico">
-            <div class="fn-tecnico-label">Tiendas con implementación específica (~50 tiendas)</div>
-            <p><strong>Implementación propia:</strong> Amazon, Fnac, MediaMarkt, Zara, Mango, IKEA, AliExpress, Shein, Temu, Adidas, Leroy Merlin, Carrefour, Apple, Samsung, El Corte Inglés, Decathlon, Nike, H&M, Zalando, PCComponentes.</p>
-            <p style="margin-top:8px;"><strong>Bloque Shopify genérico</strong> (cientos de tiendas automáticamente): Bershka, Stradivarius, Pull&Bear, Lefties, Nude Project, La Casa del Libro, Primor, Sprinter, ASICS, New Balance, Back Market, Sephora, HP, Tradeinn, JD Sports, Nintendo, Levi's, Lacoste, Scalpers, Under Armour, Blue Banana y cualquier tienda construida sobre Shopify.</p>
-            <p style="margin-top:8px;"><strong>No disponible</strong> en webs de viajes y servicios con precios dinámicos (Booking, Ryanair, Airbnb, etc.) donde el precio varía por usuario y momento.</p>
+            <div class="fn-tecnico-label">Stores with specific implementation (~50 stores)</div>
+            <p><strong>Custom implementation:</strong> Amazon, Fnac, MediaMarkt, Zara, Mango, IKEA, AliExpress, Shein, Temu, Adidas, Leroy Merlin, Carrefour, Apple, Samsung, El Corte Inglés, Decathlon, Nike, H&M, Zalando, PCComponentes.</p>
+            <p style="margin-top:8px;"><strong>Generic Shopify block</strong> (hundreds of stores automatically): Bershka, Stradivarius, Pull&Bear, Lefties, Nude Project, La Casa del Libro, Primor, Sprinter, ASICS, New Balance, Back Market, Sephora, HP, Tradeinn, JD Sports, Nintendo, Levi's, Lacoste, Scalpers, Under Armour, Blue Banana, and any store built on Shopify.</p>
+            <p style="margin-top:8px;"><strong>Not available</strong> on travel and service websites with dynamic prices (Booking, Ryanair, Airbnb, etc.) where the price varies by user and moment.</p>
           </div>
           <div class="tags">
             <span class="tag tag-amazon">Amazon</span>
             <span class="tag tag-ali">AliExpress</span>
             <span class="tag tag-mm">MediaMarkt</span>
-            <span class="tag tag-shopify">+Shopify genérico</span>
+            <span class="tag tag-shopify">+Generic Shopify</span>
           </div>
         </div>
       </div>
@@ -413,12 +413,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🎯</div>
         <div>
-          <div class="fn-nombre">Detector de descuento falso / ¡CAZADOS!</div>
-          <div class="fn-desc">Cuando el espectrómetro tiene historial de un producto y el precio tachado visible en la página (precio "antes de la oferta") no coincide con ningún precio registrado en las visitas anteriores del usuario, muestra un banner rojo en la parte superior de la página: "¡CAZADOS! El descuento real es del X%, no del Y% anunciado. Kibbo no tiene registro de que este producto haya costado Zé recientemente." Requiere al menos una visita previa al mismo producto para tener dato de comparación.</div>
-          <span class="fn-coste">✓ Coste cero — comparación local de historial</span>
+          <div class="fn-nombre">Fake discount detector / CAUGHT!</div>
+          <div class="fn-desc">When the spectrometer has a product's history and the visible crossed-out price on the page (the "before sale" price) doesn't match any price recorded in the user's previous visits, it shows a red banner at the top of the page: "CAUGHT! The real discount is X%, not the advertised Y%. Kibbo has no record of this product having cost €Z recently." Requires at least one prior visit to the same product to have comparison data.</div>
+          <span class="fn-coste">✓ Zero cost — local history comparison</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Cómo probarlo</div>
-            <p>Visita un producto en Amazon hoy. Vuelve mañana. Si el precio cambió o el tachado no coincide con lo que registró, aparece el banner. También se activa cuando Amazon infla el precio tachado artificialmente antes de una oferta.</p>
+            <div class="fn-donde-label">How to test it</div>
+            <p>Visit a product on Amazon today. Come back tomorrow. If the price changed or the crossed-out price doesn't match what was recorded, the banner appears. Also triggered when Amazon artificially inflates the crossed-out price before a sale.</p>
           </div>
         </div>
       </div>
@@ -432,10 +432,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🛡️</div>
     <div class="sec-header-txt">
-      <h2>Protección en el checkout</h2>
-      <p>Funciones que actúan en el momento de pago</p>
+      <h2>Checkout protection</h2>
+      <p>Features that act at the moment of payment</p>
     </div>
-    <span class="sec-badge badge-auto">Automático</span>
+    <span class="sec-badge badge-auto">Automatic</span>
   </div>
   <div class="funciones">
 
@@ -443,12 +443,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🔐</div>
         <div>
-          <div class="fn-nombre">Escudo de checkout</div>
-          <div class="fn-desc">Al detectar una página de checkout (por URL, selectores DOM y presencia de formularios de pago), muestra una barra en la parte superior del navegador con un resumen del estado de seguridad de la sesión: si el protocolo es HTTPS, si se detectaron seguros o extras ocultos en la página, y el nivel de riesgo general. El objetivo es dar al usuario un "semáforo" antes de introducir sus datos de pago.</div>
-          <span class="fn-coste">✓ Coste cero — análisis DOM local</span>
+          <div class="fn-nombre">Checkout shield</div>
+          <div class="fn-desc">When detecting a checkout page (by URL, DOM selectors, and presence of payment forms), it shows a bar at the top of the browser with a summary of the session's security status: whether the protocol is HTTPS, whether insurance or hidden add-ons were detected on the page, and the overall risk level. The goal is to give the user a "traffic light" before entering their payment data.</div>
+          <span class="fn-coste">✓ Zero cost — local DOM analysis</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p>Añade cualquier producto al carrito en <strong>Amazon</strong>, <strong>Ryanair</strong> o <strong>Zara</strong> y avanza hasta el paso de pago. La barra aparece automáticamente.</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p>Add any product to the cart on <strong>Amazon</strong>, <strong>Ryanair</strong>, or <strong>Zara</strong> and proceed to the payment step. The bar appears automatically.</p>
           </div>
         </div>
       </div>
@@ -458,9 +458,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">💳</div>
         <div>
-          <div class="fn-nombre">Verificador de pasarela de pago</div>
-          <div class="fn-desc">En páginas de checkout, analiza el HTML de la página buscando señales de pasarelas de pago conocidas (Stripe, PayPal, Redsys, Adyen, Braintree, Bizum, Klarna, Sequra). Si detecta una pasarela reconocida muestra un badge verde discreto durante 8 segundos ("✓ Pago seguro · Stripe"). Si encuentra un formulario con campos de tarjeta sin ninguna pasarela reconocida, muestra una advertencia naranja "⚠️ Pasarela no verificada".</div>
-          <span class="fn-coste">✓ Coste cero — análisis DOM local</span>
+          <div class="fn-nombre">Payment gateway verifier</div>
+          <div class="fn-desc">On checkout pages, analyzes the page HTML looking for signals from known payment gateways (Stripe, PayPal, Redsys, Adyen, Braintree, Bizum, Klarna, Sequra). If a recognized gateway is detected, shows a discreet green badge for 8 seconds ("✓ Secure payment · Stripe"). If it finds a form with card fields and no recognized gateway, shows an orange warning "⚠️ Unverified gateway".</div>
+          <span class="fn-coste">✓ Zero cost — local DOM analysis</span>
         </div>
       </div>
     </div>
@@ -469,10 +469,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🛒</div>
         <div>
-          <div class="fn-nombre">Guardián del carrito</div>
-          <div class="fn-desc">Compara el precio que el espectrómetro guardó en la página de producto con el total visible en el checkout. Si el total supera el precio recordado en más de 2€ o un 5%, muestra un banner rojo en la parte superior: "El precio subió +X€ (+Y%) desde que viste el producto. Precio recordado: X€ · Total actual: Y€." Detecta cuando las tiendas añaden extras, seguros o tasas entre la ficha del producto y el momento de pago.</div>
-          <span class="fn-coste">✓ Coste cero — comparación de storage local</span>
-          <div class="nota"><strong>Nota:</strong> Requiere haber visitado la página de producto en las últimas 2 horas para tener el precio registrado en storage.</div>
+          <div class="fn-nombre">Cart guardian</div>
+          <div class="fn-desc">Compares the price the spectrometer saved on the product page with the total visible at checkout. If the total exceeds the remembered price by more than €2 or 5%, it shows a red banner at the top: "The price went up +€X (+Y%) since you viewed the product. Remembered price: €X · Current total: €Y." Detects when stores add extras, insurance, or fees between the product page and the payment step.</div>
+          <span class="fn-coste">✓ Zero cost — local storage comparison</span>
+          <div class="nota"><strong>Note:</strong> Requires having visited the product page in the last 2 hours to have the price recorded in storage.</div>
         </div>
       </div>
     </div>
@@ -485,10 +485,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">⚖️</div>
     <div class="sec-header-txt">
-      <h2>Análisis de Términos y Condiciones</h2>
-      <p>Detección de cláusulas abusivas y letra pequeña</p>
+      <h2>Terms and Conditions Analysis</h2>
+      <p>Detection of abusive clauses and fine print</p>
     </div>
-    <span class="sec-badge badge-auto">Automático + IA opcional</span>
+    <span class="sec-badge badge-auto">Automatic + optional AI</span>
   </div>
   <div class="funciones">
 
@@ -496,17 +496,17 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">📋</div>
         <div>
-          <div class="fn-nombre">Detector de T&C y letra pequeña + Mini-mapa</div>
-          <div class="fn-desc">Al detectar una página de términos y condiciones, escanea el texto buscando coincidencias con una base de cláusulas clasificadas en tres niveles de riesgo. Nivel rojo (crítico): renovación automática sin aviso, renuncia a demandas colectivas, arbitraje forzado, limitación de responsabilidad. Nivel naranja (precaución): modificación unilateral de condiciones, precio variable, política de no reembolso. Al encontrar cláusulas, añade un borde de color en el párrafo afectado y un badge con el tipo de cláusula. En el lado derecho de la pantalla aparece un mini-mapa con puntos de colores que permiten saltar directamente a cada cláusula marcada. En el popup se muestra el recuento total con el botón "Explicar en lenguaje claro" que usa IA.</div>
-          <span class="fn-coste">✓ Coste cero — detección local</span>
-          <span class="fn-coste-ia">IA opcional — ~0,002€/consulta</span>
+          <div class="fn-nombre">T&C and fine print detector + Mini-map</div>
+          <div class="fn-desc">When detecting a terms and conditions page, it scans the text looking for matches against a database of clauses classified into three risk levels. Red level (critical): automatic renewal without notice, class action waiver, forced arbitration, limitation of liability. Orange level (caution): unilateral modification of terms, variable pricing, no-refund policy. When clauses are found, adds a colored border to the affected paragraph and a badge with the clause type. On the right side of the screen a mini-map appears with colored dots that allow jumping directly to each flagged clause. The popup shows the total count with an "Explain in plain language" button that uses AI.</div>
+          <span class="fn-coste">✓ Zero cost — local detection</span>
+          <span class="fn-coste-ia">Optional AI — ~€0.002/query</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Domestika</strong> (domestika.org/es/terms) — tiene cláusulas de arbitraje forzado, renovación automática y renuncia a demandas colectivas. El resultado es especialmente llamativo. También funciona en <strong>Amazon Prime</strong>, <strong>Netflix</strong> y cualquier servicio de suscripción.</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Domestika</strong> (domestika.org/es/terms) — has forced arbitration clauses, automatic renewal, and class action waivers. The result is particularly striking. Also works on <strong>Amazon Prime</strong>, <strong>Netflix</strong>, and any subscription service.</p>
           </div>
           <div class="tags">
             <span class="tag tag-domestika">Domestika</span>
-            <span class="tag tag-todas">Cualquier T&C</span>
+            <span class="tag tag-todas">Any T&C</span>
           </div>
         </div>
       </div>
@@ -517,11 +517,11 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
         <div class="fn-emoji">🏨</div>
         <div>
           <div class="fn-nombre">Hotel California + Forced Continuity</div>
-          <div class="fn-desc">Extensión del detector de T&C especializada en detectar cláusulas que hacen difícil o imposible cancelar un servicio: "para cancelar llame por teléfono", "baja mediante burofax", "carta certificada", "in person", "written notice", y preaviso abusivo de 30/60/90 días. Al detectar una, marca el párrafo y añade un badge específico ("📞 Para cancelar hay que llamar por teléfono") con botón "Copiar" que genera el texto de reclamación. También detecta "se renovará automáticamente" y "al finalizar el periodo gratuito" (Forced Continuity).</div>
-          <span class="fn-coste">✓ Coste cero — regex local</span>
+          <div class="fn-desc">Extension of the T&C detector specialized in detecting clauses that make it difficult or impossible to cancel a service: "to cancel call by phone", "cancellation via certified letter", "written notice", "in person", and abusive notice periods of 30/60/90 days. When detected, marks the paragraph and adds a specific badge ("📞 You must call to cancel") with a "Copy" button that generates the complaint text. Also detects "will renew automatically" and "at the end of the free trial" (Forced Continuity).</div>
+          <span class="fn-coste">✓ Zero cost — local regex</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p>Cualquier gimnasio online, plataforma de suscripción o servicio con cláusula de baja telefónica. Los términos de <strong>Domestika Plus</strong> activan esta función.</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p>Any online gym, subscription platform, or service with a phone cancellation clause. <strong>Domestika Plus</strong> terms trigger this feature.</p>
           </div>
         </div>
       </div>
@@ -531,12 +531,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">↩️</div>
         <div>
-          <div class="fn-nombre">Detector de política de devoluciones con IA</div>
-          <div class="fn-desc">En páginas de producto, busca texto de política de devoluciones usando selectores semánticos y regex de texto. Si encuentra política con más de 30 palabras o condiciones trampa ("no aplica", "solo vale de compra", "artículos en oferta excluidos"), la manda a Claude que devuelve un toast discreto en la esquina inferior derecha con tres líneas claras: si la devolución es gratuita o tiene coste, cuántos días tienes, y si el reembolso es en dinero o vale. El toast desaparece a los 25 segundos.</div>
-          <span class="fn-coste-ia" style="margin-top:8px;margin-left:0;">IA — ~0,002€/consulta</span>
+          <div class="fn-nombre">AI returns policy detector</div>
+          <div class="fn-desc">On product pages, searches for returns policy text using semantic selectors and text regex. If it finds a policy with more than 30 words or trap conditions ("does not apply", "store credit only", "sale items excluded"), it sends it to Claude, which returns a discreet toast in the bottom-right corner with three clear lines: whether the return is free or has a cost, how many days you have, and whether the refund is in cash or store credit. The toast disappears after 25 seconds.</div>
+          <span class="fn-coste-ia" style="margin-top:8px;margin-left:0;">AI — ~€0.002/query</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Dónde probarlo</div>
-            <p><strong>Zalando</strong>, <strong>El Corte Inglés</strong> y <strong>PCComponentes</strong> tienen política de devoluciones visible en la ficha de producto.</p>
+            <div class="fn-donde-label">Where to test it</div>
+            <p><strong>Zalando</strong>, <strong>El Corte Inglés</strong>, and <strong>PCComponentes</strong> have a visible returns policy on the product page.</p>
           </div>
         </div>
       </div>
@@ -550,10 +550,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🎛️</div>
     <div class="sec-header-txt">
-      <h2>Panel principal</h2>
-      <p>Funciones accesibles abriendo el popup de Kibbo en la barra del navegador</p>
+      <h2>Main panel</h2>
+      <p>Features accessible by opening the Kibbo popup in the browser toolbar</p>
     </div>
-    <span class="sec-badge badge-panel">Requiere popup</span>
+    <span class="sec-badge badge-panel">Requires popup</span>
   </div>
   <div class="funciones">
 
@@ -561,9 +561,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🌙</div>
         <div>
-          <div class="fn-nombre">Modo Cenit</div>
-          <div class="fn-desc">Elimina físicamente del DOM todos los elementos de presión psicológica inyectados por la tienda: banners de urgencia, contadores, elementos con clases asociadas a presión de compra. A diferencia del toggle ON/OFF (que oculta los elementos de Kibbo), Modo Cenit limpia la página de los elementos de la propia tienda. Útil para navegar sin distracciones en tiendas como Temu o AliExpress con alta densidad de elementos de manipulación.</div>
-          <span class="fn-coste">✓ Coste cero — manipulación DOM local</span>
+          <div class="fn-nombre">Zenith Mode</div>
+          <div class="fn-desc">Physically removes from the DOM all psychological pressure elements injected by the store: urgency banners, countdowns, elements with classes associated with purchase pressure. Unlike the ON/OFF toggle (which hides Kibbo's own elements), Zenith Mode cleans the page of the store's own elements. Useful for distraction-free browsing on stores like Temu or AliExpress with a high density of manipulation elements.</div>
+          <span class="fn-coste">✓ Zero cost — local DOM manipulation</span>
         </div>
       </div>
     </div>
@@ -572,9 +572,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">👻</div>
         <div>
-          <div class="fn-nombre">Modo Fantasma</div>
-          <div class="fn-desc">Elimina cookies de rastreo del dominio actual y limpia parámetros de seguimiento de la URL (utm_source, utm_medium, gclid, fbclid, aff_id y 20+ parámetros más). Después de limpiar, recarga la página para que la tienda trate al usuario como visitante nuevo, lo que en algunos casos permite ver precios sin personalización dinámica. Incluye aviso previo de que puede cerrar sesión en algunas webs.</div>
-          <span class="fn-coste">✓ Coste cero — manipulación de cookies y URL local</span>
+          <div class="fn-nombre">Ghost Mode</div>
+          <div class="fn-desc">Removes tracking cookies from the current domain and cleans tracking parameters from the URL (utm_source, utm_medium, gclid, fbclid, aff_id, and 20+ more). After cleaning, reloads the page so the store treats the user as a new visitor, which in some cases allows seeing prices without dynamic personalization. Includes a prior warning that it may log you out on some websites.</div>
+          <span class="fn-coste">✓ Zero cost — local cookie and URL manipulation</span>
         </div>
       </div>
     </div>
@@ -583,9 +583,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🤔</div>
         <div>
-          <div class="fn-nombre">Pausa de reflexión anti-impulso</div>
-          <div class="fn-desc">Al pulsarlo lanza una pantalla de overlay que cubre toda la página durante unos segundos con una pregunta reflexiva y frases diseñadas para interrumpir la compra impulsiva. Las frases rotan mostrando estadísticas reales sobre compras impulsivas y su impacto. Después de la pausa el usuario puede cerrar o continuar. Útil como herramienta de autocontrol en sesiones de compra.</div>
-          <span class="fn-coste">✓ Coste cero — overlay local</span>
+          <div class="fn-nombre">Anti-impulse reflection pause</div>
+          <div class="fn-desc">When pressed, launches an overlay screen that covers the entire page for a few seconds with a reflective question and phrases designed to interrupt impulse buying. The phrases rotate showing real statistics about impulse purchases and their impact. After the pause the user can close or continue. Useful as a self-control tool during shopping sessions.</div>
+          <span class="fn-coste">✓ Zero cost — local overlay</span>
         </div>
       </div>
     </div>
@@ -594,9 +594,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">📊</div>
         <div>
-          <div class="fn-nombre">Ranking de tiendas</div>
-          <div class="fn-desc">Historial acumulado de todas las webs donde Kibbo detectó trampas, ordenadas por número de detecciones. Muestra el dominio, una barra de riesgo de color (rojo/naranja/amarillo/verde) y el conteo total. Se actualiza automáticamente en cada visita. Permite al usuario ver qué tiendas son más agresivas con sus dark patterns a lo largo del tiempo.</div>
-          <span class="fn-coste">✓ Coste cero — storage local</span>
+          <div class="fn-nombre">Store ranking</div>
+          <div class="fn-desc">Cumulative history of all websites where Kibbo detected traps, ordered by number of detections. Shows the domain, a color risk bar (red/orange/yellow/green), and the total count. Updated automatically on each visit. Allows the user to see which stores are most aggressive with their dark patterns over time.</div>
+          <span class="fn-coste">✓ Zero cost — local storage</span>
         </div>
       </div>
     </div>
@@ -605,12 +605,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🔏</div>
         <div>
-          <div class="fn-nombre">Snapshot certificado</div>
-          <div class="fn-desc">Genera un documento HTML descargable con validez como prueba documental. Recoge: URL completa, dominio, título de la página, precio detectado, fecha y hora legible, timestamp ISO 8601, zona horaria, navegador y versión, sistema operativo, dirección IP pública (obtenida via api.ipify.org). Calcula un hash SHA-256 sobre el contenido de la página más todos los metadatos. El número de serie KBB-YYYYMMDD-XXXXXX se deriva del propio hash, haciendo cada captura única e irrepetible. El documento puede presentarse ante OMIC, OCU, FACUA o como evidencia documental.</div>
-          <span class="fn-coste">✓ Coste cero — criptografía local WebCrypto API + NTP externo gratuito</span>
+          <div class="fn-nombre">Certified Snapshot</div>
+          <div class="fn-desc">Generates a downloadable HTML document with validity as documentary evidence. Collects: full URL, domain, page title, detected price, readable date and time, ISO 8601 timestamp, time zone, browser and version, operating system, public IP address (obtained via api.ipify.org). Calculates a SHA-256 hash over the page content plus all metadata. The serial number KBB-YYYYMMDD-XXXXXX is derived from the hash itself, making each capture unique and unrepeatable. The document can be submitted to OMIC, OCU, FACUA, or as documentary evidence.</div>
+          <span class="fn-coste">✓ Zero cost — local WebCrypto API cryptography + free external NTP</span>
           <div class="fn-tecnico">
-            <div class="fn-tecnico-label">Integridad criptográfica</div>
-            <p>El sellado de tiempo usa la API de worldtimeapi.org (con fallback a timeapi.io) para obtener el timestamp NTP verificado, independiente del reloj del dispositivo. La firma HMAC-SHA256 y el hash del contenido se calculan localmente en el service worker del navegador usando WebCrypto API nativa.</p>
+            <div class="fn-tecnico-label">Cryptographic integrity</div>
+            <p>Time stamping uses the worldtimeapi.org API (with fallback to timeapi.io) to obtain a verified NTP timestamp, independent of the device's clock. The HMAC-SHA256 signature and content hash are calculated locally in the browser's service worker using the native WebCrypto API.</p>
           </div>
         </div>
       </div>
@@ -620,12 +620,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">⭐</div>
         <div>
-          <div class="fn-nombre">Verificador de reseñas</div>
-          <div class="fn-desc">Extrae automáticamente la distribución de valoraciones (1★ a 5★) de las páginas de producto compatibles y muestra una gráfica de barras en el popup. Detecta patrones estadísticos inusuales como polarización extrema (muchos 1★ y 5★, pocos intermedios) o discrepancia entre la media alta y el porcentaje elevado de 1★. El análisis estadístico es local y gratuito.</div>
-          <span class="fn-coste">✓ Coste cero — extracción DOM local</span>
+          <div class="fn-nombre">Review verifier</div>
+          <div class="fn-desc">Automatically extracts the rating distribution (1★ to 5★) from compatible product pages and shows a bar chart in the popup. Detects unusual statistical patterns such as extreme polarization (many 1★ and 5★, few in between) or discrepancy between a high average and a high percentage of 1★. Statistical analysis is local and free.</div>
+          <span class="fn-coste">✓ Zero cost — local DOM extraction</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Tiendas compatibles</div>
-            <p><strong>Amazon</strong> (completo) · <strong>MediaMarkt</strong> (completo) · <strong>AliExpress</strong> (carga tardía, requiere scroll hasta reseñas) · <strong>Etsy</strong> (solo media, distribución no disponible)</p>
+            <div class="fn-donde-label">Compatible stores</div>
+            <p><strong>Amazon</strong> (complete) · <strong>MediaMarkt</strong> (complete) · <strong>AliExpress</strong> (late loading, requires scroll to reviews) · <strong>Etsy</strong> (average only, distribution not available)</p>
           </div>
           <div class="tags">
             <span class="tag tag-amazon">Amazon</span>
@@ -643,10 +643,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🧰</div>
     <div class="sec-header-txt">
-      <h2>Toolkit — Herramientas avanzadas</h2>
-      <p>Pestaña del panel con análisis bajo demanda</p>
+      <h2>Toolkit — Advanced tools</h2>
+      <p>Panel tab with on-demand analysis</p>
     </div>
-    <span class="sec-badge badge-ia">Incluye funciones IA</span>
+    <span class="sec-badge badge-ia">Includes AI features</span>
   </div>
   <div class="funciones">
 
@@ -654,12 +654,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🔍</div>
         <div>
-          <div class="fn-nombre">Comparador de precios inteligente</div>
-          <div class="fn-desc">En páginas de producto, Kibbo detecta la categoría del producto (electrónica, moda, deporte, hogar, libros, etc.) y muestra un listado de tiendas alternativas agrupadas por sector. La lógica no muestra todas las tiendas siempre: si estás mirando zapatillas de deporte, sugiere Decathlon, Sprinter y JD Sports — no Amazon Fresh. Si es electrónica, sugiere PCComponentes, MediaMarkt y Fnac. Los links abren la búsqueda del producto en cada tienda alternativa con el nombre del producto como query. Las tiendas marcadas como "Opción recomendada" son aquellas con política de devoluciones conocida y buena reputación en el sector. <strong>El comprador puede activar links de afiliado en las tiendas recomendadas</strong> — cada enlace puede incluir un tag de afiliado propio, convirtiendo el comparador en una fuente de ingresos recurrente por cada compra que el usuario realice tras una recomendación de Kibbo.</div>
-          <span class="fn-coste">✓ Coste cero — lógica de categorización local</span>
+          <div class="fn-nombre">Smart price comparator</div>
+          <div class="fn-desc">On product pages, Kibbo detects the product category (electronics, fashion, sport, home, books, etc.) and shows a list of alternative stores grouped by sector. The logic doesn't always show all stores: if you're looking at sports shoes, it suggests Decathlon, Sprinter, and JD Sports — not Amazon Fresh. For electronics, it suggests PCComponentes, MediaMarkt, and Fnac. The links open a product search in each alternative store with the product name as the query. Stores marked as "Recommended option" are those with a known returns policy and good reputation in the sector. <strong>The buyer can activate affiliate links in the recommended stores</strong> — each link can include its own affiliate tag, turning the comparator into a recurring revenue source for each purchase the user makes following a Kibbo recommendation.</div>
+          <span class="fn-coste">✓ Zero cost — local categorization logic</span>
           <div class="fn-tecnico">
-            <div class="fn-tecnico-label">Lógica de categorización</div>
-            <p>Kibbo identifica la categoría del producto analizando: el dominio actual (si es Adidas → categoría deporte), la ruta de la URL (si contiene /ropa/, /electronics/), el título de la página y los breadcrumbs de navegación. Con esa categoría selecciona el grupo de tiendas alternativas más relevante de una tabla de 12 categorías predefinidas.</p>
+            <div class="fn-tecnico-label">Categorization logic</div>
+            <p>Kibbo identifies the product category by analyzing: the current domain (if Adidas → sport category), the URL path (if it contains /ropa/, /electronics/), the page title, and the navigation breadcrumbs. With that category it selects the most relevant group of alternative stores from a table of 12 predefined categories.</p>
           </div>
         </div>
       </div>
@@ -669,12 +669,12 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🎣</div>
         <div>
-          <div class="fn-nombre">Analizador de phishing con IA</div>
-          <div class="fn-desc">Caja de texto donde el usuario pega un SMS o email sospechoso. Claude analiza el mensaje y devuelve en 2-3 segundos un veredicto claro (PHISHING / LEGÍTIMO / SOSPECHOSO) con nivel de confianza (Alta/Media/Baja), las señales que encontró y un consejo de acción. El analizador distingue correctamente entre mensajes legítimos de entidades reales (dominio oficial, sin petición de datos) y phishing (dominio falso, urgencia, petición de pagos o credenciales).</div>
-          <span class="fn-coste-ia" style="margin-left:0;margin-top:8px;">IA — ~0,001€/consulta</span>
+          <div class="fn-nombre">AI phishing analyzer</div>
+          <div class="fn-desc">A text box where the user pastes a suspicious SMS or email. Claude analyzes the message and returns in 2-3 seconds a clear verdict (PHISHING / LEGITIMATE / SUSPICIOUS) with confidence level (High/Medium/Low), the signals found, and an action recommendation. The analyzer correctly distinguishes between legitimate messages from real entities (official domain, no data request) and phishing (fake domain, urgency, request for payments or credentials).</div>
+          <span class="fn-coste-ia" style="margin-left:0;margin-top:8px;">AI — ~€0.001/query</span>
           <div class="fn-donde">
-            <div class="fn-donde-label">Ejemplos para probar</div>
-            <p><strong>Phishing:</strong> "CORREOS: Su paquete está retenido por 1,79€ de aduana. Pague en: correos-envio-pago.com/ES2847163" — debería detectarlo como PHISHING.<br><strong>Legítimo:</strong> "CORREOS: Su envío está en camino. Seguimiento en correos.es o llamando al 900 400 500" — debería devolver LEGÍTIMO.</p>
+            <div class="fn-donde-label">Examples to test</div>
+            <p><strong>Phishing:</strong> "CORREOS: Your package is held for €1.79 in customs fees. Pay at: correos-envio-pago.com/ES2847163" — should detect it as PHISHING.<br><strong>Legitimate:</strong> "CORREOS: Your shipment is on its way. Track at correos.es or call 900 400 500" — should return LEGITIMATE.</p>
           </div>
         </div>
       </div>
@@ -684,9 +684,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">⚖️</div>
         <div>
-          <div class="fn-nombre">Explicar T&C en lenguaje claro (IA)</div>
-          <div class="fn-desc">Cuando el detector de T&C ha encontrado cláusulas en una página, aparece en el popup el botón "Explicar en lenguaje claro". Al pulsarlo, manda las cláusulas detectadas a Claude que devuelve un resumen en español sin jerga legal: qué implica cada cláusula, qué derechos afecta y qué debe hacer el usuario si no está de acuerdo. El resultado aparece directamente en el popup.</div>
-          <span class="fn-coste-ia" style="margin-left:0;margin-top:8px;">IA — ~0,002€/consulta</span>
+          <div class="fn-nombre">Explain T&C in plain language (AI)</div>
+          <div class="fn-desc">When the T&C detector has found clauses on a page, the "Explain in plain language" button appears in the popup. When clicked, it sends the detected clauses to Claude, which returns a plain-language summary without legal jargon: what each clause implies, what rights it affects, and what the user should do if they disagree. The result appears directly in the popup.</div>
+          <span class="fn-coste-ia" style="margin-left:0;margin-top:8px;">AI — ~€0.002/query</span>
         </div>
       </div>
     </div>
@@ -699,8 +699,8 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">⚙️</div>
     <div class="sec-header-txt">
-      <h2>Configuración y control</h2>
-      <p>Botones y ajustes del comportamiento de Kibbo</p>
+      <h2>Settings and control</h2>
+      <p>Buttons and settings for Kibbo's behavior</p>
     </div>
     <span class="sec-badge badge-config">Control</span>
   </div>
@@ -710,9 +710,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">⚡</div>
         <div>
-          <div class="fn-nombre">Botón ON/OFF hero</div>
-          <div class="fn-desc">Botón prominente en el header del popup que activa o pausa Kibbo completamente en todas las pestañas. Cuando está en PAUSADO, elimina del DOM todos los elementos inyectados por Kibbo (pills, badges, banners) y envía la señal al content script de la pestaña activa para que deje de escanear. El estado se persiste en chrome.storage.local para mantenerlo entre sesiones.</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-nombre">Hero ON/OFF button</div>
+          <div class="fn-desc">Prominent button in the popup header that activates or pauses Kibbo completely across all tabs. When in PAUSED state, removes from the DOM all elements injected by Kibbo (pills, badges, banners) and sends the signal to the active tab's content script to stop scanning. The state is persisted in chrome.storage.local to maintain it between sessions.</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -721,9 +721,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🚦</div>
         <div>
-          <div class="fn-nombre">Semáforo visual en el icono</div>
-          <div class="fn-desc">El badge del icono de Kibbo en la barra del navegador cambia de color según el nivel de riesgo detectado en la página actual: verde (sin trampas), amarillo con "!" (trampas menores detectadas), rojo con "!!" (trampas graves o dominio en lista negra). Se resetea automáticamente al navegar a una nueva página.</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-nombre">Visual traffic light on the icon</div>
+          <div class="fn-desc">The Kibbo icon badge in the browser toolbar changes color according to the risk level detected on the current page: green (no traps), yellow with "!" (minor traps detected), red with "!!" (serious traps or domain on the blacklist). Resets automatically when navigating to a new page.</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -732,9 +732,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🚫</div>
         <div>
-          <div class="fn-nombre">Whitelist por dominio</div>
-          <div class="fn-desc">Desde el Toolkit o el menú contextual de clic derecho ("Desactivar alertas aquí"), el usuario puede añadir cualquier dominio a su whitelist personal. En visitas futuras a ese dominio, Kibbo no ejecutará ningún análisis. La whitelist se guarda en chrome.storage.local y es reversible desde el mismo botón.</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-nombre">Domain whitelist</div>
+          <div class="fn-desc">From the Toolkit or the right-click context menu ("Disable alerts here"), the user can add any domain to their personal whitelist. On future visits to that domain, Kibbo will not run any analysis. The whitelist is saved in chrome.storage.local and is reversible from the same button.</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -743,9 +743,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">🤖</div>
         <div>
-          <div class="fn-nombre">Whitelist interna automática</div>
-          <div class="fn-desc">Kibbo incluye una whitelist hardcodeada de más de 100 tipos de webs donde no tiene sentido que actúe: redes sociales (Twitter, Instagram, LinkedIn, TikTok), correo electrónico (Gmail, Outlook), banca online (BBVA, Santander, CaixaBank, ING), administración pública española (sede.gob.es, aeat.es, sepe.es, dgt.es), organismos europeos, plataformas de productividad (Google Docs, Notion, Slack), streaming (Netflix, Spotify) y más. En estas webs Kibbo no ejecuta ningún código.</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-nombre">Automatic internal whitelist</div>
+          <div class="fn-desc">Kibbo includes a hardcoded whitelist of more than 100 types of websites where it doesn't make sense for it to act: social networks (Twitter, Instagram, LinkedIn, TikTok), email (Gmail, Outlook), online banking (BBVA, Santander, CaixaBank, ING), Spanish public administration (sede.gob.es, aeat.es, sepe.es, dgt.es), European institutions, productivity platforms (Google Docs, Notion, Slack), streaming (Netflix, Spotify), and more. On these sites Kibbo does not run any code.</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -755,8 +755,8 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
         <div class="fn-emoji">👋</div>
         <div>
           <div class="fn-nombre">Onboarding</div>
-          <div class="fn-desc">Al instalar la extensión por primera vez, aparece una pantalla de bienvenida de 4 slides que explica el semáforo, las principales funciones y la política de privacidad. Solo se muestra la primera vez gracias a un flag en chrome.storage.local. Diseñado con el branding de Kibbo (Oxanium + DM Sans, gradiente cian-morado).</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-desc">When installing the extension for the first time, a 4-slide welcome screen appears explaining the traffic light, the main features, and the privacy policy. It is only shown the first time thanks to a flag in chrome.storage.local. Designed with Kibbo's branding (Oxanium + DM Sans, cyan-purple gradient).</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -765,9 +765,9 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">📅</div>
         <div>
-          <div class="fn-nombre">Estadísticas mensuales</div>
-          <div class="fn-desc">El panel Monitor muestra cuántas trampas detectó Kibbo ese mes y calcula un nivel de experiencia del usuario (Novato → Experto → Nivel Experto) basado en el historial acumulado. Las estadísticas se calculan localmente a partir del storage sin enviar datos a ningún servidor.</div>
-          <span class="fn-coste">✓ Coste cero</span>
+          <div class="fn-nombre">Monthly statistics</div>
+          <div class="fn-desc">The Monitor panel shows how many traps Kibbo detected that month and calculates a user experience level (Novice → Expert → Expert Level) based on the cumulative history. Statistics are calculated locally from storage without sending data to any server.</div>
+          <span class="fn-coste">✓ Zero cost</span>
         </div>
       </div>
     </div>
@@ -780,8 +780,8 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🏗️</div>
     <div class="sec-header-txt">
-      <h2>Arquitectura técnica</h2>
-      <p>Stack, privacidad y costes operativos</p>
+      <h2>Technical architecture</h2>
+      <p>Stack, privacy, and operational costs</p>
     </div>
   </div>
   <div class="funciones">
@@ -789,26 +789,26 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
       <div class="fn-top">
         <div class="fn-emoji">⚙️</div>
         <div>
-          <div class="fn-nombre">Stack técnico</div>
-          <div class="fn-desc">Extensión Chrome Manifest V3. Content script (content.js ~6.500 líneas), popup (popup.html + kibbo.js ~2.000 líneas), service worker (background.js). Sin framework — vanilla JS puro para minimizar el tamaño y maximizar la compatibilidad. Backend: Cloudflare Worker (proxy API) + dominio propio. Sin base de datos. Sin servidor propio. Todo el estado del usuario vive en chrome.storage.local.</div>
+          <div class="fn-nombre">Technical stack</div>
+          <div class="fn-desc">Chrome extension Manifest V3. Content script (content.js ~6,500 lines), popup (popup.html + kibbo.js ~2,000 lines), service worker (background.js). No framework — pure vanilla JS to minimize size and maximize compatibility. Backend: Cloudflare Worker (API proxy) + custom domain. No database. No proprietary server. All user state lives in chrome.storage.local.</div>
         </div>
       </div>
       <div class="fn-tecnico" style="margin-top:12px;">
-        <div class="fn-tecnico-label">Resumen de costes operativos</div>
+        <div class="fn-tecnico-label">Operational cost summary</div>
         <table class="resumen-tabla">
-          <tr><th>Función</th><th>Tipo</th><th>Coste/uso</th><th>Coste 1.000 usuarios/día</th></tr>
-          <tr><td class="td-fn">Detector urgencia, casillas, T&C, etc.</td><td>Local</td><td class="td-ok">0€</td><td class="td-ok">0€</td></tr>
-          <tr><td class="td-fn">Espectrómetro de precios</td><td>Local + RDAP</td><td class="td-ok">~0€</td><td class="td-ok">~0€</td></tr>
-          <tr><td class="td-fn">Snapshot certificado (NTP)</td><td>API pública</td><td class="td-ok">~0€</td><td class="td-ok">~0€</td></tr>
-          <tr><td class="td-fn">Analizador de phishing (IA)</td><td>Claude Sonnet</td><td class="td-warn">~0,001€</td><td class="td-warn">~1€</td></tr>
-          <tr><td class="td-fn">Detector devoluciones (IA)</td><td>Claude Sonnet</td><td class="td-warn">~0,002€</td><td class="td-warn">~2€</td></tr>
-          <tr><td class="td-fn">Explicar T&C en claro (IA)</td><td>Claude Sonnet</td><td class="td-warn">~0,002€</td><td class="td-warn">~2€</td></tr>
-          <tr><td class="td-fn"><strong>Total estimado</strong></td><td>—</td><td class="td-warn"><strong>~0,005€</strong></td><td class="td-warn"><strong>~5€/día</strong></td></tr>
+          <tr><th>Feature</th><th>Type</th><th>Cost/use</th><th>Cost 1,000 users/day</th></tr>
+          <tr><td class="td-fn">Urgency, checkbox, T&C detectors, etc.</td><td>Local</td><td class="td-ok">€0</td><td class="td-ok">€0</td></tr>
+          <tr><td class="td-fn">Price Spectrometer</td><td>Local + RDAP</td><td class="td-ok">~€0</td><td class="td-ok">~€0</td></tr>
+          <tr><td class="td-fn">Certified Snapshot (NTP)</td><td>Public API</td><td class="td-ok">~€0</td><td class="td-ok">~€0</td></tr>
+          <tr><td class="td-fn">Phishing analyzer (AI)</td><td>Claude Sonnet</td><td class="td-warn">~€0.001</td><td class="td-warn">~€1</td></tr>
+          <tr><td class="td-fn">Returns detector (AI)</td><td>Claude Sonnet</td><td class="td-warn">~€0.002</td><td class="td-warn">~€2</td></tr>
+          <tr><td class="td-fn">Explain T&C in plain language (AI)</td><td>Claude Sonnet</td><td class="td-warn">~€0.002</td><td class="td-warn">~€2</td></tr>
+          <tr><td class="td-fn"><strong>Estimated total</strong></td><td>—</td><td class="td-warn"><strong>~€0.005</strong></td><td class="td-warn"><strong>~€5/day</strong></td></tr>
         </table>
       </div>
       <div class="fn-tecnico" style="margin-top:12px;">
-        <div class="fn-tecnico-label">Privacidad</div>
-        <p>Kibbo no recopila ningún dato de navegación. No envía URLs visitadas a ningún servidor. El historial de precios, la whitelist, el ranking de tiendas y todas las preferencias viven exclusivamente en chrome.storage.local del navegador del usuario. Las llamadas IA pasan por el proxy de Cloudflare Workers que actúa como intermediario — el texto analizado nunca incluye datos personales del usuario, solo el contenido público de la página o el mensaje que el usuario pega manualmente.</p>
+        <div class="fn-tecnico-label">Privacy</div>
+        <p>Kibbo does not collect any browsing data. It does not send visited URLs to any server. The price history, whitelist, store ranking, and all preferences live exclusively in the user's browser's chrome.storage.local. AI calls go through the Cloudflare Workers proxy that acts as an intermediary — the analyzed text never includes the user's personal data, only the public content of the page or the message the user pastes manually.</p>
       </div>
     </div>
   </div>
@@ -819,68 +819,68 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
   <div class="sec-header">
     <div class="sec-icon">🎨</div>
     <div class="sec-header-txt">
-      <h2>Marca, personalización y stack completo</h2>
-      <p>Todo lo que se entrega en la adquisición</p>
+      <h2>Brand, customization, and full stack</h2>
+      <p>Everything included in the acquisition</p>
     </div>
   </div>
   <div class="funciones">
 
     <div class="fn-card">
-      <div class="fn-nombre" style="margin-bottom:10px;">Distribución — Tiendas de extensiones</div>
-      <div class="fn-desc">Kibbo está aprobada y publicada en las dos principales tiendas de extensiones de navegador:</div>
+      <div class="fn-nombre" style="margin-bottom:10px;">Distribution — Extension stores</div>
+      <div class="fn-desc">Kibbo is approved and published in the two main browser extension stores:</div>
       <div class="store-badges">
-        <div class="store-badge store-chrome">🌐 Chrome Web Store — Publicada y activa</div>
-        <div class="store-badge store-edge">🔷 Microsoft Edge Add-ons — Aprobada y activa</div>
+        <div class="store-badge store-chrome">🌐 Chrome Web Store — Published and active</div>
+        <div class="store-badge store-edge">🔷 Microsoft Edge Add-ons — Approved and active</div>
       </div>
-      <div class="fn-desc" style="margin-top:12px;">El proceso de aprobación en ambas tiendas ya está completado. El comprador hereda las cuentas de desarrollador y puede actualizar versiones sin pasar por una nueva revisión de identidad.</div>
+      <div class="fn-desc" style="margin-top:12px;">The approval process in both stores is already complete. The buyer inherits the developer accounts and can update versions without going through a new identity review.</div>
     </div>
 
     <div class="fn-card">
-      <div class="fn-nombre" style="margin-bottom:10px;">Personalización de marca — White label</div>
+      <div class="fn-nombre" style="margin-bottom:10px;">Brand customization — White label</div>
       <div class="brand-box">
-        <p>Kibbo está diseñado para adaptarse completamente a la identidad visual de cualquier organización compradora. El código está bien organizado y los elementos de marca están centralizados:</p>
-        <p style="margin-top:10px;"><strong>Qué se puede cambiar sin tocar la lógica funcional:</strong> nombre de la extensión (en manifest.json y todos los textos del popup), logo (una línea en popup.html con el nuevo base64 o URL), colores corporativos (variables CSS centralizadas en :root), dominio del backend (una línea en background.js), textos de la interfaz y del onboarding.</p>
-        <p style="margin-top:10px;">Una organización como <strong>FACUA</strong> podría publicar "FACUA Escudo Digital" con sus colores rojo y blanco, su logo y su dominio en menos de una hora de trabajo técnico. El comprador pasa a tener una herramienta de protección al consumidor con su propia marca, sin desarrollo desde cero.</p>
+        <p>Kibbo is designed to fully adapt to the visual identity of any acquiring organization. The code is well organized and brand elements are centralized:</p>
+        <p style="margin-top:10px;"><strong>What can be changed without touching the functional logic:</strong> extension name (in manifest.json and all popup texts), logo (one line in popup.html with the new base64 or URL), corporate colors (CSS variables centralized in :root), backend domain (one line in background.js), interface and onboarding texts.</p>
+        <p style="margin-top:10px;">An organization like <strong>FACUA</strong> could publish "FACUA Digital Shield" with its red and white colors, its logo, and its domain in less than an hour of technical work. The buyer gains a consumer protection tool with their own brand, without building from scratch.</p>
       </div>
     </div>
 
     <div class="fn-card">
-      <div class="fn-nombre" style="margin-bottom:14px;">Stack técnico completo</div>
+      <div class="fn-nombre" style="margin-bottom:14px;">Full technical stack</div>
       <div class="stack-grid">
         <div class="stack-item">
-          <label>Código fuente</label>
-          <p><strong>GitHub privado</strong> — repositorio completo con historial de commits. Se transfiere la propiedad del repo al comprador.</p>
+          <label>Source code</label>
+          <p><strong>Private GitHub</strong> — complete repository with commit history. Repository ownership is transferred to the buyer.</p>
         </div>
         <div class="stack-item">
-          <label>Hosting web (getkibbo.com)</label>
-          <p><strong>Vercel</strong> — plan gratuito. La landing page es HTML estático deployada en Vercel. Dominio registrado en Namecheap. El plan gratuito cubre hasta 100GB de bandwidth mensual — suficiente para cientos de miles de visitas. A partir de ese volumen el plan Pro cuesta 20$/mes.</p>
+          <label>Web hosting (getkibbo.com)</label>
+          <p><strong>Vercel</strong> — free plan. The landing page is static HTML deployed on Vercel. Domain registered at Namecheap. The free plan covers up to 100 GB of monthly bandwidth — enough for hundreds of thousands of visits. Beyond that volume the Pro plan costs $20/month.</p>
         </div>
         <div class="stack-item">
-          <label>Backend API (proxy IA)</label>
-          <p><strong>Cloudflare Workers</strong> — plan gratuito (100.000 req/día). El Worker hace de proxy entre la extensión y la API de Anthropic sin exponer la API key al cliente.</p>
+          <label>Backend API (AI proxy)</label>
+          <p><strong>Cloudflare Workers</strong> — free plan (100,000 req/day). The Worker acts as a proxy between the extension and the Anthropic API without exposing the API key to the client.</p>
         </div>
         <div class="stack-item">
-          <label>IA / LLM</label>
-          <p><strong>Anthropic Claude Sonnet</strong> via API. La API key se configura en el Worker. El comprador puede sustituirla por su propia cuenta de Anthropic o por otro proveedor compatible.</p>
+          <label>AI / LLM</label>
+          <p><strong>Anthropic Claude Sonnet</strong> via API. The API key is configured in the Worker. The buyer can replace it with their own Anthropic account or another compatible provider.</p>
         </div>
         <div class="stack-item">
-          <label>Email y comunicaciones</label>
-          <p><strong>Zoho Mail</strong> (hello@getkibbo.com) + <strong>Substack</strong> para newsletter de usuarios. Se transfieren ambas cuentas.</p>
+          <label>Email and communications</label>
+          <p><strong>Zoho Mail</strong> (hello@getkibbo.com) + <strong>Substack</strong> for user newsletter. Both accounts are transferred.</p>
         </div>
         <div class="stack-item">
           <label>Chrome Web Store</label>
-          <p>Cuenta de desarrollador Google activa. La extensión tiene ID permanente. Se transfiere la propiedad de la listing al comprador.</p>
+          <p>Active Google developer account. The extension has a permanent ID. Listing ownership is transferred to the buyer.</p>
         </div>
         <div class="stack-item">
           <label>Edge Add-ons</label>
-          <p>Cuenta de desarrollador Microsoft activa. Extensión aprobada y publicada. Se transfiere con la adquisición.</p>
+          <p>Active Microsoft developer account. Extension approved and published. Transferred with the acquisition.</p>
         </div>
         <div class="stack-item">
-          <label>Assets de marca</label>
-          <p>Logo en PNG transparente, variantes de color, iconos en todos los tamaños (16, 32, 48, 128px), paleta de colores y tipografías (Oxanium + DM Sans).</p>
+          <label>Brand assets</label>
+          <p>Logo in transparent PNG, color variants, icons in all sizes (16, 32, 48, 128px), color palette, and typefaces (Oxanium + DM Sans).</p>
         </div>
       </div>
-      <div class="nota" style="margin-top:16px;"><strong>Todo incluido en la adquisición:</strong> código fuente, dominio getkibbo.com, Chrome Web Store listing, Edge Add-ons listing, Cloudflare Worker, cuenta Zoho Mail, Substack, assets de marca y documentación técnica completa. El comprador puede operar desde el primer día sin configuración adicional.</div>
+      <div class="nota" style="margin-top:16px;"><strong>Everything included in the acquisition:</strong> source code, getkibbo.com domain, Chrome Web Store listing, Edge Add-ons listing, Cloudflare Worker, Zoho Mail account, Substack, brand assets, and complete technical documentation. The buyer can operate from day one without additional setup.</div>
     </div>
 
   </div>
@@ -888,10 +888,10 @@ nav.indice a:hover{color:var(--txt);border-bottom-color:var(--c);}
 
 
 <div class="contact-box">
-  <h3>¿Preguntas sobre la adquisición?</h3>
-  <p>Para información sobre condiciones de venta, demostración en vivo, acceso al código fuente completo o cualquier duda técnica:</p>
+  <h3>Questions about the acquisition?</h3>
+  <p>For information on sale terms, live demo, access to the full source code, or any technical question:</p>
   <div class="email-chip">📧 hello@getkibbo.com</div>
-  <p style="margin-top:16px;font-size:12px;">La extensión incluye: código fuente completo, cuenta de Chrome Web Store, dominio getkibbo.com, assets de marca, backend Cloudflare Workers y documentación técnica.</p>
+  <p style="margin-top:16px;font-size:12px;">The extension includes: complete source code, Chrome Web Store account, getkibbo.com domain, brand assets, Cloudflare Workers backend, and technical documentation.</p>
 </div>
 
 </div>
