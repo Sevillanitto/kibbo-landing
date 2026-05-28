@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Article Title — Kibbo Blog</title>
+<meta name="description" content="Article description goes here.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.nav-logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #0A0A0A;
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0A0A0A;
+  text-decoration: none;
+  padding: 6px 16px;
+  transition: background 0.1s;
+}
+.nav-links a:hover { background: #FFE500; }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  transition: box-shadow 0.1s, transform 0.1s;
+  white-space: nowrap;
+}
+.nav-cta:hover {
+  box-shadow: 2px 2px 0px #0A0A0A;
+  transform: translate(2px, 2px);
+}
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0A0A0A;
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: #FFFFFF;
+  border-bottom: 2px solid #0A0A0A;
+  z-index: 99;
+  padding: 16px 24px 20px;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0A0A0A;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-cta {
+  margin-top: 12px;
+  display: block;
+  padding: 12px 20px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  text-align: center;
+}
+
+/* ============================================================
+   ARTICLE HERO
+   ============================================================ */
+.art-hero {
+  background: #0A0A0A;
+  padding: 100px 48px 60px;
+}
+.art-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.art-cat-tag {
+  display: inline-block;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.art-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 5vw, 60px);
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+.art-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6B6B6B;
+}
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.art-body-wrap {
+  background: #FFFFFF;
+  padding: 60px 24px 80px;
+}
+.art-body {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #1A1A1A;
+}
+.art-body p {
+  margin-bottom: 22px;
+}
+
+/*
+ * ============================================================
+ * HEADING STYLE: yellow left border
+ * ============================================================
+ */
+.art-body h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #0A0A0A;
+  border-left: 4px solid #FFE500;
+  padding-left: 16px;
+  margin: 36px 0 14px;
+  line-height: 1.2;
+}
+.art-body ul, .art-body ol {
+  margin: 0 0 22px 24px;
+}
+.art-body li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.art-body strong { color: #0A0A0A; font-weight: 700; }
+.art-body a { color: #0A0A0A; font-weight: 600; }
+
+/*
+ * BLOCKQUOTE: yellow background, black left border
+ */
+.art-body blockquote {
+  background: #FFE500;
+  border-left: 4px solid #0A0A0A;
+  padding: 16px 22px;
+  border-radius: 2px;
+  color: #0A0A0A;
+  font-style: italic;
+  margin: 28px 0;
+  font-size: 17px;
+}
+
+/*
+ * CALLOUT BOX: black border, yellow-tinted background
+ */
+.callout {
+  border: 2px solid #0A0A0A;
+  background: #FFFBE6;
+  border-radius: 2px;
+  padding: 18px 22px;
+  margin: 28px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/*
+ * CTA BOX: black background, yellow button
+ */
+.art-cta {
+  background: #0A0A0A;
+  border-radius: 2px;
+  padding: 28px 32px;
+  text-align: center;
+  margin: 36px 0;
+}
+.art-cta h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.art-cta p {
+  color: #9CA3AF;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.art-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: box-shadow 0.1s, transform 0.1s;
+  border: 2px solid #FFE500;
+}
+.art-cta a:hover {
+  box-shadow: 3px 3px 0 #FFE500;
+  transform: translate(-1px, -1px);
+}
+
+/* ============================================================
+   BOTTOM NAV
+   ============================================================ */
+.art-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  margin-top: 20px;
+  border-top: 2px solid #0A0A0A;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.art-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  padding: 10px 20px;
+  transition: background 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+.art-nav a.back {
+  background: #FFFFFF;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  box-shadow: 3px 3px 0 #0A0A0A;
+}
+.art-nav a.back:hover {
+  background: #FFE500;
+  box-shadow: 1px 1px 0 #0A0A0A;
+  transform: translate(2px, 2px);
+}
+.art-nav a.next {
+  background: #0A0A0A;
+  color: #FFE500;
+  border: 2px solid #0A0A0A;
+}
+.art-nav a.next:hover {
+  background: #FFE500;
+  color: #0A0A0A;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: #0A0A0A;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.footer-links a:hover { color: #FFE500; }
+.footer-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .art-hero { padding: 80px 20px 40px; }
+  .art-body-wrap { padding: 40px 20px 60px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .art-nav { flex-direction: column; align-items: flex-start; }
+  .art-h1 { letter-spacing: -1px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text">KIBBO</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+  </ul>
+  <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="nav-cta">Add to Chrome &mdash; Free</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html#features">Features</a>
+  <a href="index.html#how">How It Works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="blog.html">Blog</a>
+  <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="nav-mobile-cta">Add to Chrome &mdash; Free</a>
+</div>
+
+<!-- ============================================================
+     ARTICLE HERO
+     ============================================================ -->
+<div class="art-hero">
+  <div class="art-hero-inner">
+    <!-- REPLACE: category tag -->
+    <span class="art-cat-tag">Category &middot; Subcategory</span>
+
+    <!-- REPLACE: article title -->
+    <h1 class="art-h1">Your Article Title Goes Here</h1>
+
+    <!-- REPLACE: date, read time -->
+    <div class="art-meta">
+      <span>&#128197; Month Year</span>
+      <span>&#9200; X min read</span>
+      <span>&#128737; Verified by Kibbo</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ARTICLE BODY
+     ============================================================
+     PASTE YOUR CONTENT BELOW THIS LINE.
+
+     Available elements:
+     - <p> for body paragraphs (18px Inter, line-height 1.85)
+     - <h2> for section headings (Space Grotesk 700 with yellow left border)
+     - <blockquote> for pull quotes (yellow background)
+     - <div class="callout"> for key takeaways (black border, cream background)
+     - <div class="art-cta"> for calls to action (black background, yellow button)
+     - <ul>/<ol> for lists
+     ============================================================ -->
+<div class="art-body-wrap">
+  <div class="art-body">
+
+    <!-- Opening paragraph -->
+    <p>Your opening paragraph goes here. This is where you hook the reader and establish the core argument of the article. Keep it under 3-4 sentences and make every word count.</p>
+
+    <!-- First section heading -->
+    <h2>First Section Heading</h2>
+
+    <!-- Body paragraph -->
+    <p>Regular body text with <strong>bold text for emphasis</strong> and <a href="#">links where relevant</a>. Each paragraph should cover a single idea. Aim for 2-4 sentences per paragraph.</p>
+
+    <!-- Blockquote example -->
+    <blockquote>"A pull quote that captures the most compelling or surprising insight of this section."</blockquote>
+
+    <!-- Second section -->
+    <h2>Second Section Heading</h2>
+
+    <p>Continue the article here. Use short paragraphs. Avoid jargon. Write like you're explaining to a smart friend who isn't a specialist.</p>
+
+    <!-- Callout box -->
+    <div class="callout">
+      <strong>Key takeaway:</strong> The most important practical insight from this section. Something the reader can act on immediately.
+    </div>
+
+    <!-- Third section -->
+    <h2>What You Can Do Right Now</h2>
+
+    <p>Every article should end with actionable advice. What specific steps can the reader take today? Be concrete and specific.</p>
+
+    <!-- CTA box -->
+    <div class="art-cta">
+      <h3>Kibbo protects you automatically</h3>
+      <p>Install the free extension and never fall for this trap again.</p>
+      <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi">Add Kibbo to Chrome &rarr;</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     BOTTOM NAVIGATION
+     ============================================================ -->
+<div class="art-body-wrap" style="padding-top: 0;">
+  <div class="art-body">
+    <div class="art-nav">
+      <!-- REPLACE: link back to blog -->
+      <a href="blog.html" class="back">&larr; Back to blog</a>
+      <!-- REPLACE: link to next article, or remove if last -->
+      <a href="#" class="next">Next article &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="blog.html">Blog</a>
+    <a href="demo.html">Demo</a>
+  </div>
+  <div class="footer-copy">&copy; 2025 Kibbo &middot; Built to protect buyers</div>
+</footer>
+
+<script>
+// ── HAMBURGER MENU ───────────────────────────────────────────────
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() {
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menu.classList.remove('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>

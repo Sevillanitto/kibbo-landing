@@ -2,430 +2,891 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Kibbo Blog — Anti Dark Pattern Guides &amp; Safe Shopping</title>
 <meta name="description" content="Guides for shopping online without traps. Detect inflated prices, fake urgency, and abusive clauses. By the Kibbo team.">
 <link rel="canonical" href="https://getkibbo.com/blog">
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ── RESET Y VARIABLES ── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#03030a;--surf:#0d0d18;--border:rgba(255,255,255,0.07);
-  --c:#00d4ff;--p:#7c3aed;--n:#a855f7;--g:#10b981;
-  --txt:#eeeeff;--m:#6b7280;--m2:#9ca3af;
-}
-html{scroll-behavior:smooth}
-body{
-  font-family:'DM Sans',system-ui,sans-serif;
-  background:var(--bg);color:var(--txt);
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  padding:14px 48px;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(3,3,10,0.92);
-  border-bottom:1px solid rgba(0,212,255,0.08);
-}
-.nlogo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nlogo span{
-  font-family:'Oxanium',sans-serif;font-size:19px;font-weight:800;
-  background:linear-gradient(135deg,var(--c),var(--n));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
-}
-.nlinks{display:flex;align-items:center;gap:20px;list-style:none;}
-.nlinks a{
-  font-size:12px;font-weight:500;color:var(--m);
-  text-decoration:none;transition:color .2s;
-}
-.nlinks a:hover{color:var(--c);}
-.ncta{
-  background:linear-gradient(135deg,var(--p),var(--c)) !important;
-  color:#fff !important;padding:7px 16px !important;
-  border-radius:8px !important;font-weight:700 !important;
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── CONTENEDOR PRINCIPAL ── */
-main{padding-top:80px;min-height:100vh;}
+/* ============================================================
+   NAV
+   ============================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.nav-logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #0A0A0A;
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0A0A0A;
+  text-decoration: none;
+  padding: 6px 16px;
+  transition: background 0.1s;
+}
+.nav-links a:hover { background: #FFE500; }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  transition: box-shadow 0.1s, transform 0.1s;
+  white-space: nowrap;
+}
+.nav-cta:hover {
+  box-shadow: 2px 2px 0px #0A0A0A;
+  transform: translate(2px, 2px);
+}
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0A0A0A;
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: #FFFFFF;
+  border-bottom: 2px solid #0A0A0A;
+  z-index: 99;
+  padding: 16px 24px 20px;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0A0A0A;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-cta {
+  margin-top: 12px;
+  display: block;
+  padding: 12px 20px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  text-align: center;
+}
 
-/* ── HERO DEL BLOG ── */
-.blog-hero{
-  padding:80px 48px 60px;
-  text-align:center;
-  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(124,58,237,0.09),transparent);
-  border-bottom:1px solid var(--border);
-  position:relative;overflow:hidden;
+/* ============================================================
+   BLOG HERO
+   ============================================================ */
+.blog-hero {
+  background: #FFE500;
+  padding: 120px 48px 80px;
+  border-bottom: 2px solid #0A0A0A;
+  text-align: center;
 }
-.blog-hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
-  background-size:50px 50px;
-  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);
-  pointer-events:none;
+.blog-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(56px, 8vw, 100px);
+  color: #0A0A0A;
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
 }
-.hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:4px 14px 4px 10px;
-  background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.2);
-  border-radius:100px;font-size:10px;font-weight:700;
-  color:var(--c);letter-spacing:1px;text-transform:uppercase;
-  margin-bottom:20px;
+.blog-hero-sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #0A0A0A;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
 }
-.hero-badge .dot{
-  width:6px;height:6px;border-radius:50%;
-  background:var(--c);box-shadow:0 0 6px var(--c);
-  animation:pulse 2s infinite;
+.blog-cats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.blog-hero h1{
-  font-family:'Oxanium',sans-serif;
-  font-size:clamp(30px,5vw,56px);
-  font-weight:800;letter-spacing:-1.5px;
-  line-height:1.05;margin-bottom:14px;
-  position:relative;
+.cat-btn {
+  padding: 7px 18px;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.1s, box-shadow 0.1s;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
-.blog-hero h1 span{
-  background:linear-gradient(135deg,var(--c),var(--n));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
-}
-.blog-hero p{
-  font-size:15px;color:var(--m2);
-  max-width:500px;margin:0 auto 28px;line-height:1.75;
-  position:relative;
-}
-.blog-cats{
-  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
-  position:relative;
-}
-.cat-btn{
-  padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;
-  border:1px solid var(--border);color:var(--m);background:none;
-  cursor:pointer;transition:all .2s;font-family:inherit;
-}
-.cat-btn:hover,.cat-btn.active{
-  background:rgba(0,212,255,0.1);
-  border-color:rgba(0,212,255,0.3);color:var(--c);
+.cat-btn:hover, .cat-btn.active {
+  background: #0A0A0A;
+  color: #FFE500;
 }
 
-/* ── GRID ARTÍCULOS ── */
-.blog-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:20px;padding:48px;max-width:1160px;margin:0 auto;
+/* ============================================================
+   BLOG GRID
+   ============================================================ */
+.blog-section {
+  background: #FFFFFF;
+  padding: 64px 48px;
 }
-.blog-card{
-  background:rgba(255,255,255,0.025);
-  border:1px solid var(--border);
-  border-radius:16px;overflow:hidden;
-  cursor:pointer;transition:all .25s;
-  display:flex;flex-direction:column;
-  text-decoration:none;
+.blog-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.blog-card:hover{
-  border-color:rgba(0,212,255,0.22);
-  transform:translateY(-4px);
-  box-shadow:0 16px 40px rgba(0,0,0,0.4);
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
-.card-emoji{
-  height:160px;display:flex;align-items:center;justify-content:center;
-  font-size:52px;
-  background:rgba(255,255,255,0.03);
-  border-bottom:1px solid var(--border);
+.blog-card {
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  background: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
-.card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
-.card-cat{
-  font-size:9px;font-weight:700;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--c);margin-bottom:10px;
+.blog-card:hover {
+  box-shadow: 2px 2px 0px #0A0A0A;
+  transform: translate(2px, 2px);
 }
-.card-title{
-  font-family:'Oxanium',sans-serif;font-size:15px;font-weight:700;
-  color:var(--txt);line-height:1.35;margin-bottom:10px;
+.card-emoji-area {
+  height: 120px;
+  background: #F5F5F5;
+  border-bottom: 2px solid #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
 }
-.card-desc{font-size:12px;color:var(--m);line-height:1.7;flex:1;}
-.card-footer{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-top:14px;padding-top:12px;
-  border-top:1px solid var(--border);
-  font-size:10px;color:var(--m);
+.card-body {
+  padding: 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.card-footer .leer{color:var(--c);font-weight:600;}
+.card-cat-tag {
+  display: inline-block;
+  background: #FFE500;
+  color: #0A0A0A;
+  border: 1px solid #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+.card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0A0A0A;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.card-read-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #6B6B6B;
+  margin-bottom: 16px;
+}
+.card-read-btn {
+  display: inline-block;
+  background: #0A0A0A;
+  color: #FFE500;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.1s, color 0.1s, border 0.1s;
+  width: fit-content;
+}
+.card-read-btn:hover {
+  background: #FFE500;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+}
 
-/* ── ARTÍCULO INDIVIDUAL ── */
-.article-wrap{display:none;max-width:760px;margin:0 auto;padding:60px 24px 80px;}
-.article-wrap.visible{display:block;}
-.art-cat{
-  font-size:9px;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;color:var(--c);
-  display:block;margin-bottom:12px;
+/* ============================================================
+   ARTICLE PAGES
+   ============================================================ */
+.article-wrap {
+  display: none;
 }
-.art-h1{
-  font-family:'Oxanium',sans-serif;
-  font-size:clamp(24px,4vw,44px);font-weight:800;
-  letter-spacing:-1.2px;line-height:1.1;margin-bottom:16px;
+.article-wrap.visible {
+  display: block;
 }
-.art-meta{
-  display:flex;gap:14px;flex-wrap:wrap;
-  font-size:11px;color:var(--m);margin-bottom:36px;
-  padding-bottom:24px;border-bottom:1px solid var(--border);
+.art-hero {
+  background: #0A0A0A;
+  padding: 100px 48px 60px;
 }
-.art-body h2{
-  font-family:'Oxanium',sans-serif;font-size:21px;font-weight:700;
-  margin:36px 0 14px;letter-spacing:-.3px;
+.art-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
 }
-.art-body h3{
-  font-family:'Oxanium',sans-serif;font-size:16px;font-weight:600;
-  color:var(--c);margin:26px 0 10px;
+.art-cat-tag {
+  display: inline-block;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
 }
-.art-body p{font-size:15px;color:#b0adc8;line-height:1.85;margin-bottom:18px;}
-.art-body strong{color:var(--txt);font-weight:600;}
-.art-body ul,.art-body ol{margin:0 0 18px 20px;}
-.art-body li{font-size:15px;color:#b0adc8;line-height:1.85;margin-bottom:6px;}
-.art-body a{color:var(--c);}
-.art-body blockquote{
-  border-left:3px solid var(--c);
-  padding:14px 20px;
-  background:rgba(0,212,255,0.05);
-  border-radius:0 8px 8px 0;
-  margin:22px 0;
-  font-style:italic;color:var(--m2);
-  font-size:14px;line-height:1.7;
+.art-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 5vw, 56px);
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
 }
-.callout{
-  background:rgba(124,58,237,0.08);
-  border:1px solid rgba(124,58,237,0.25);
-  border-radius:12px;padding:18px 22px;margin:24px 0;
+.art-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6B6B6B;
 }
-.callout p{margin:0;color:#c4b5fd;font-size:14px;}
-.callout strong{color:#a78bfa;}
-.art-cta{
-  background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(0,212,255,.07));
-  border:1px solid rgba(0,212,255,.2);
-  border-radius:14px;padding:28px 32px;
-  text-align:center;margin:36px 0;
+.art-body-wrap {
+  background: #FFFFFF;
+  padding: 60px 24px 80px;
 }
-.art-cta h3{
-  font-family:'Oxanium',sans-serif;font-size:20px;font-weight:800;
-  margin-bottom:8px;
+.art-body {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #1A1A1A;
 }
-.art-cta p{color:var(--m);margin-bottom:18px;font-size:14px;}
-.art-cta a{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:12px 24px;
-  background:linear-gradient(135deg,var(--p),var(--c));
-  color:#fff;font-family:'Oxanium',sans-serif;
-  font-size:13px;font-weight:700;border-radius:10px;
-  text-decoration:none;
+.art-body p {
+  margin-bottom: 22px;
 }
-.art-nav{
-  display:flex;justify-content:space-between;
-  padding-top:32px;margin-top:32px;
-  border-top:1px solid var(--border);
-  font-size:12px;
+.art-body h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #0A0A0A;
+  border-left: 4px solid #FFE500;
+  padding-left: 16px;
+  margin: 36px 0 14px;
+  line-height: 1.2;
 }
-.art-nav button{
-  background:none;border:none;color:var(--m);
-  cursor:pointer;font-family:inherit;font-size:12px;
-  transition:color .2s;
+.art-body ul, .art-body ol {
+  margin: 0 0 22px 24px;
 }
-.art-nav button:hover{color:var(--c);}
+.art-body li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.art-body strong { color: #0A0A0A; font-weight: 700; }
+.art-body a { color: #0A0A0A; font-weight: 600; }
+.art-body blockquote {
+  background: #FFE500;
+  border-left: 4px solid #0A0A0A;
+  padding: 16px 22px;
+  border-radius: 2px;
+  color: #0A0A0A;
+  font-style: italic;
+  margin: 28px 0;
+  font-size: 17px;
+}
+.callout {
+  border: 2px solid #0A0A0A;
+  background: #FFFBE6;
+  border-radius: 2px;
+  padding: 18px 22px;
+  margin: 28px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.art-cta {
+  background: #0A0A0A;
+  border-radius: 2px;
+  padding: 28px 32px;
+  text-align: center;
+  margin: 36px 0;
+}
+.art-cta h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.art-cta p {
+  color: #9CA3AF;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.art-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFE500;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: box-shadow 0.1s, transform 0.1s;
+  border: 2px solid #FFE500;
+}
+.art-cta a:hover {
+  box-shadow: 3px 3px 0 #FFE500;
+  transform: translate(-1px, -1px);
+}
+.art-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  margin-top: 20px;
+  border-top: 2px solid #0A0A0A;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.back-btn {
+  background: #FFFFFF;
+  border: 2px solid #0A0A0A;
+  color: #0A0A0A;
+  box-shadow: 3px 3px 0 #0A0A0A;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.1s, box-shadow 0.1s, transform 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.back-btn:hover {
+  background: #FFE500;
+  box-shadow: 1px 1px 0 #0A0A0A;
+  transform: translate(2px, 2px);
+}
+.next-btn {
+  background: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  color: #FFE500;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.next-btn:hover {
+  background: #FFE500;
+  color: #0A0A0A;
+}
 
-/* ── FOOTER ── */
-footer{
-  padding:24px 48px;border-top:1px solid var(--border);
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:10px;color:var(--m);flex-wrap:wrap;gap:8px;
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: #0A0A0A;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
-footer a{color:var(--m);text-decoration:none;}
-footer a:hover{color:var(--c);}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.footer-links a:hover { color: #FFE500; }
+.footer-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+  margin-top: 4px;
+}
 
-/* ── MOBILE ── */
-@media(max-width:768px){
-  nav{padding:12px 16px;}
-  .nlinks{display:none;}
-  .blog-hero{padding:60px 18px 40px;}
-  .blog-grid{grid-template-columns:1fr;padding:24px 16px;gap:14px;}
-  .article-wrap{padding:40px 18px 60px;}
-  .art-nav{flex-direction:column;gap:12px;}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .blog-hero { padding: 90px 20px 60px; }
+  .blog-section { padding: 40px 20px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .art-hero { padding: 80px 20px 40px; }
+  .art-body-wrap { padding: 40px 20px 60px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .blog-hero-title { letter-spacing: -2px; }
+  .art-nav { flex-direction: column; align-items: flex-start; }
 }
 </style>
-<!-- Analítica ética sin cookies — GoatCounter -->
+<!-- GoatCounter analytics -->
 <script data-goatcounter="https://kibbo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nlogo">
-    <span>Kibbo</span>
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text">KIBBO</span>
   </a>
-  <ul class="nlinks">
-    <li><a href="index.html#funciones">Features</a></li>
-    <li><a href="index.html#precios">Pricing</a></li>
-    <li><a href="blog.html" style="color:var(--c)">Blog</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="https://chromewebstore.google.com" class="ncta">Get protected free</a></li>
+  <ul class="nav-links">
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
   </ul>
+  <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="nav-cta">Add to Chrome &mdash; Free</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- MAIN -->
-<main>
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html#features">Features</a>
+  <a href="index.html#how">How It Works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="blog.html">Blog</a>
+  <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="nav-mobile-cta">Add to Chrome &mdash; Free</a>
+</div>
 
-<!-- ══ ÍNDICE ══ -->
+<!-- ====================================================
+     BLOG INDEX
+     ==================================================== -->
 <div id="view-index">
-  <div class="blog-hero">
-    <div class="hero-badge"><div class="dot"></div>Guides · Analysis · Tools</div>
-    <h1>The <span>Kibbo</span> Blog</h1>
-    <p>Learn to detect online deception, protect your wallet, and shop with real information. No ads.</p>
+
+  <!-- HERO -->
+  <div class="blog-hero" style="padding-top: 100px;">
+    <h1 class="blog-hero-title">THE BLOG.</h1>
+    <p class="blog-hero-sub">Guides, tricks, and everything the internet doesn't want you to know.</p>
     <div class="blog-cats">
-      <button class="cat-btn active">All</button>
-      <button class="cat-btn">Dark Patterns</button>
-      <button class="cat-btn">Inflated Prices</button>
-      <button class="cat-btn">T&amp;C</button>
-      <button class="cat-btn">Store Guides</button>
+      <button class="cat-btn active" onclick="filterCat(this, 'all')">All</button>
+      <button class="cat-btn" onclick="filterCat(this, 'dark-patterns')">Dark Patterns</button>
+      <button class="cat-btn" onclick="filterCat(this, 'inflated-prices')">Inflated Prices</button>
+      <button class="cat-btn" onclick="filterCat(this, 'tc')">T&amp;C</button>
+      <button class="cat-btn" onclick="filterCat(this, 'store-guides')">Store Guides</button>
     </div>
   </div>
 
-  <div class="blog-grid">
-    <div class="blog-card" onclick="showArticle('amazon')">
-      <div class="card-emoji">📈</div>
-      <div class="card-body">
-        <div class="card-cat">Inflated Prices · Amazon</div>
-        <div class="card-title">How Amazon raises prices before Black Friday (and how to catch it)</div>
-        <div class="card-footer"><span>8 min</span><span class="leer">Read →</span></div>
-      </div>
-    </div>
+  <!-- ARTICLE GRID -->
+  <div class="blog-section">
+    <div class="blog-inner">
+      <div class="blog-grid" id="blog-grid">
 
-    <div class="blog-card" onclick="showArticle('ryanair')">
-      <div class="card-emoji">✈️</div>
-      <div class="card-body">
-        <div class="card-cat">Dark Patterns · Airlines</div>
-        <div class="card-title">The 7 Ryanair trap checkboxes that cost you money without you knowing</div>
-        <div class="card-footer"><span>6 min</span><span class="leer">Read →</span></div>
-      </div>
-    </div>
+        <div class="blog-card" data-cat="inflated-prices" onclick="showArticle('amazon')">
+          <div class="card-emoji-area">&#128200;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Inflated Prices &middot; Amazon</span>
+            <div class="card-title">How Amazon raises prices before Black Friday (and how to catch it)</div>
+            <div class="card-read-time">8 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
 
-    <div class="blog-card" onclick="showArticle('booking')">
-      <div class="card-emoji">🏨</div>
-      <div class="card-body">
-        <div class="card-cat">Dark Patterns · Hotels</div>
-        <div class="card-title">Why the Booking countdown never reaches zero (and what else they hide from you)</div>
-        <div class="card-footer"><span>5 min</span><span class="leer">Read →</span></div>
-      </div>
-    </div>
+        <div class="blog-card" data-cat="dark-patterns" onclick="showArticle('ryanair')">
+          <div class="card-emoji-area">&#9992;&#65039;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Dark Patterns &middot; Airlines</span>
+            <div class="card-title">The 7 Ryanair trap checkboxes that cost you money without you knowing</div>
+            <div class="card-read-time">6 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
 
-    <div class="blog-card" onclick="showArticle('suscripciones')">
-      <div class="card-emoji">🔄</div>
-      <div class="card-body">
-        <div class="card-cat">Terms and Conditions</div>
-        <div class="card-title">Automatic renewal without notice: how to cancel and claim your money back</div>
-        <div class="card-footer"><span>7 min</span><span class="leer">Read →</span></div>
-      </div>
-    </div>
+        <div class="blog-card" data-cat="dark-patterns store-guides" onclick="showArticle('booking')">
+          <div class="card-emoji-area">&#127976;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Dark Patterns &middot; Hotels</span>
+            <div class="card-title">Why the Booking countdown never reaches zero (and what else they hide from you)</div>
+            <div class="card-read-time">5 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
 
-    <div class="blog-card" onclick="showArticle('dropshipping')">
-      <div class="card-emoji">📦</div>
-      <div class="card-body">
-        <div class="card-cat">Dark Patterns · Dropshipping</div>
-        <div class="card-title">How to detect if an online store is dropshipping (and pay the real price)</div>
-        <div class="card-footer"><span>5 min</span><span class="leer">Read →</span></div>
-      </div>
-    </div>
+        <div class="blog-card" data-cat="tc" onclick="showArticle('suscripciones')">
+          <div class="card-emoji-area">&#128260;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Terms and Conditions</span>
+            <div class="card-title">Automatic renewal without notice: how to cancel and claim your money back</div>
+            <div class="card-read-time">7 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
 
-    <div class="blog-card" onclick="showArticle('tc')">
-      <div class="card-emoji">📋</div>
-      <div class="card-body">
-        <div class="card-cat">Terms and Conditions</div>
-        <div class="card-title">The 5 most abusive clauses in Spanish store T&amp;Cs (2025)</div>
-        <div class="card-footer"><span>9 min</span><span class="leer">Read →</span></div>
+        <div class="blog-card" data-cat="dark-patterns store-guides" onclick="showArticle('dropshipping')">
+          <div class="card-emoji-area">&#128230;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Dark Patterns &middot; Dropshipping</span>
+            <div class="card-title">How to detect if an online store is dropshipping (and pay the real price)</div>
+            <div class="card-read-time">5 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="tc" onclick="showArticle('tc')">
+          <div class="card-emoji-area">&#128203;</div>
+          <div class="card-body">
+            <span class="card-cat-tag">Terms and Conditions</span>
+            <div class="card-title">The 5 most abusive clauses in Spanish store T&amp;Cs (2025)</div>
+            <div class="card-read-time">9 min read</div>
+            <button class="card-read-btn">Read &rarr;</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 
-<!-- ══ ARTÍCULO: AMAZON ══ -->
+</div><!-- /#view-index -->
+
+<!-- ====================================================
+     ARTICLE: AMAZON
+     ==================================================== -->
 <div id="art-amazon" class="article-wrap">
-  <span class="art-cat">Inflated Prices · Amazon</span>
-  <h1 class="art-h1">How Amazon raises prices before Black Friday (and how to catch it)</h1>
-  <div class="art-meta">
-    <span>📅 April 2025</span><span>⏱ 8 min read</span><span>🛡 Verified by Kibbo</span>
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Inflated Prices &middot; Amazon</span>
+      <h1 class="art-h1">How Amazon raises prices before Black Friday (and how to catch it)</h1>
+      <div class="art-meta">
+        <span>&#128197; April 2025</span>
+        <span>&#9200; 8 min read</span>
+        <span>&#128737; Verified by Kibbo</span>
+      </div>
+    </div>
   </div>
-  <div class="art-body">
-  </div>
-  <div class="art-nav">
-    <button onclick="showIndex()">← Back to blog</button>
-    <button onclick="showArticle('ryanair')">Ryanair's traps →</button>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>Every year, millions of shoppers wait for Black Friday convinced they'll get the best deals of the year. Amazon has turned this expectation into a systematic pricing strategy. What few know is that the algorithm raises prices in the weeks before the event to make the "discounts" look more spectacular than they really are.</p>
+
+      <h2>The pattern is real and documented</h2>
+      <p>Price tracking services like CamelCamelCamel and Keepa have documented this behavior for years. A product that normally costs &euro;89 might be raised to &euro;129 three weeks before Black Friday, only to be "discounted" back to &euro;99 on the day itself &mdash; giving Amazon the ability to advertise a 24% discount on a price that is actually higher than the historical norm.</p>
+
+      <blockquote>"The 'original price' in many Black Friday deals is invented. It's a reference point that was never the real market price."</blockquote>
+
+      <h2>How Kibbo catches it</h2>
+      <p>Kibbo's Price Spectrometer tracks price history over time. When you visit a product page, Kibbo shows you whether the current price is higher, lower, or the same as the historical average. If you see a "discount" label but the price is actually above the 30-day average, Kibbo flags it.</p>
+
+      <div class="callout">
+        <strong>Key signal:</strong> If a product shows a discount but the "original" price was only set in the last 2-3 weeks, that price was likely artificially inflated for Black Friday. Always check the price chart.
+      </div>
+
+      <h2>What you can do right now</h2>
+      <p>Before Black Friday, check the price history of any product you're considering. If the price was raised in October or November, the discount is not real. Set a price alert for the product's historical average, not the inflated "original" price.</p>
+
+      <div class="art-cta">
+        <h3>Kibbo shows you the real price history</h3>
+        <p>Install the free extension and never pay inflated Black Friday prices again.</p>
+        <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi">Add Kibbo to Chrome &rarr;</a>
+      </div>
+
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+        <button class="next-btn" onclick="showArticle('ryanair')">Ryanair's traps &rarr;</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ══ ARTÍCULO: RYANAIR ══ -->
+<!-- ====================================================
+     ARTICLE: RYANAIR
+     ==================================================== -->
 <div id="art-ryanair" class="article-wrap">
-  <span class="art-cat">Dark Patterns · Airlines</span>
-  <h1 class="art-h1">The 7 Ryanair trap checkboxes that cost you money without you knowing</h1>
-  <div class="art-meta">
-    <span>📅 April 2025</span><span>⏱ 6 min read</span><span>🛡 Verified by Kibbo</span>
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Dark Patterns &middot; Airlines</span>
+      <h1 class="art-h1">The 7 Ryanair trap checkboxes that cost you money without you knowing</h1>
+      <div class="art-meta">
+        <span>&#128197; April 2025</span>
+        <span>&#9200; 6 min read</span>
+        <span>&#128737; Verified by Kibbo</span>
+      </div>
+    </div>
   </div>
-  <div class="art-body">
-  </div>
-  <div class="art-nav">
-    <button onclick="showIndex()">← Back to blog</button>
-    <button onclick="showArticle('booking')">Booking's countdown →</button>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>Ryanair's booking flow is one of the most studied examples of dark patterns in the travel industry. The airline has perfected the art of inserting extra charges at every step, many of them pre-checked by default so that inattentive users pay without noticing.</p>
+
+      <h2>The 7 checkboxes to watch</h2>
+      <p>During a standard Ryanair booking, you'll encounter pre-checked options including travel insurance, priority boarding, seat selection fees, car rental offers framed as flight options, and check-in baggage added by default. Each of these is designed to look like a required field rather than an optional add-on.</p>
+
+      <blockquote>"Ryanair buries the 'No insurance' option inside a dropdown list of countries, making it uniquely hard to find compared to accepting the insurance."</blockquote>
+
+      <div class="callout">
+        <strong>The insurance trap:</strong> To decline travel insurance, you must select "Don't insure me" from a drop-down list that looks like a country selector. This is a classic roach motel pattern &mdash; easy to get in, hard to get out.
+      </div>
+
+      <h2>How to protect yourself</h2>
+      <p>Go slowly through every step. Look for pre-checked boxes. Before clicking "Continue", scroll to verify nothing extra has been added to your basket. Kibbo's Checkout Shield alerts you when it detects pre-checked boxes on booking flows.</p>
+
+      <div class="art-cta">
+        <h3>Never miss a pre-checked trap again</h3>
+        <p>Kibbo's Checkout Shield highlights hidden checkboxes automatically.</p>
+        <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi">Add Kibbo to Chrome &rarr;</a>
+      </div>
+
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+        <button class="next-btn" onclick="showArticle('booking')">Booking's countdown &rarr;</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ══ ARTÍCULO: BOOKING ══ -->
+<!-- ====================================================
+     ARTICLE: BOOKING
+     ==================================================== -->
 <div id="art-booking" class="article-wrap">
-  <span class="art-cat">Dark Patterns · Hotels</span>
-  <h1 class="art-h1">Why the Booking countdown never reaches zero (and what else they hide from you)</h1>
-  <div class="art-meta">
-    <span>📅 April 2025</span><span>⏱ 5 min read</span><span>🛡 Verified by Kibbo</span>
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Dark Patterns &middot; Hotels</span>
+      <h1 class="art-h1">Why the Booking countdown never reaches zero (and what else they hide from you)</h1>
+      <div class="art-meta">
+        <span>&#128197; April 2025</span>
+        <span>&#9200; 5 min read</span>
+        <span>&#128737; Verified by Kibbo</span>
+      </div>
+    </div>
   </div>
-  <div class="art-body">
-  </div>
-  <div class="art-nav">
-    <button onclick="showIndex()">← Back to blog</button>
-    <button onclick="showArticle('amazon')">← Amazon Prices</button>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>Booking.com is notorious for its use of fake urgency. Timers that count down, "only 1 room left" warnings, "X people looking at this right now" messages &mdash; almost all of these are either fabricated or algorithmically exaggerated to create pressure to book immediately.</p>
+
+      <h2>The countdown that resets</h2>
+      <p>The countdown timer on Booking.com does not represent a real deadline. If you refresh the page or leave and come back, it resets. The price does not change when the timer reaches zero. It is purely a psychological pressure mechanism with no functional basis.</p>
+
+      <blockquote>"Tests show the Booking countdown resets on page refresh 100% of the time. The urgency is manufactured, not real."</blockquote>
+
+      <h2>Social proof manipulation</h2>
+      <p>The "X people looking at this" counter is not real-time. It's a value calculated to maximize urgency, not an accurate reflection of concurrent users. The same applies to "only 2 rooms left" warnings, which often remain unchanged for days.</p>
+
+      <div class="callout">
+        <strong>Test it yourself:</strong> Find a hotel on Booking that says "Only 2 rooms left!". Wait 24 hours and check again. In most cases the message will still say the same thing.
+      </div>
+
+      <div class="art-cta">
+        <h3>Kibbo blurs fake urgency for you</h3>
+        <p>The fake countdown becomes unreadable. Shop at your own pace.</p>
+        <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi">Add Kibbo to Chrome &rarr;</a>
+      </div>
+
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+        <button class="next-btn" onclick="showArticle('amazon')">&larr; Amazon Prices</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ══ PRÓXIMOS ARTÍCULOS (placeholder) ══ -->
+<!-- ====================================================
+     ARTICLE: SUSCRIPCIONES (Coming soon)
+     ==================================================== -->
 <div id="art-suscripciones" class="article-wrap">
-  <span class="art-cat">Coming soon</span>
-  <h1 class="art-h1">Automatic renewal without notice: how to cancel and claim your money back</h1>
-  <div class="art-meta"><span>📅 Coming soon</span></div>
-  <div class="art-body"><p>This article is being written. Check back soon.</p></div>
-  <div class="art-nav"><button onclick="showIndex()">← Back to blog</button></div>
-</div>
-<div id="art-dropshipping" class="article-wrap">
-  <span class="art-cat">Coming soon</span>
-  <h1 class="art-h1">How to detect if an online store is dropshipping (and pay the real price)</h1>
-  <div class="art-meta"><span>📅 Coming soon</span></div>
-  <div class="art-body"><p>This article is being written. Check back soon.</p></div>
-  <div class="art-nav"><button onclick="showIndex()">← Back to blog</button></div>
-</div>
-<div id="art-tc" class="article-wrap">
-  <span class="art-cat">Coming soon</span>
-  <h1 class="art-h1">The 5 most abusive clauses in Spanish store T&amp;Cs (2025)</h1>
-  <div class="art-meta"><span>📅 Coming soon</span></div>
-  <div class="art-body"><p>This article is being written. Check back soon.</p></div>
-  <div class="art-nav"><button onclick="showIndex()">← Back to blog</button></div>
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Coming Soon</span>
+      <h1 class="art-h1">Automatic renewal without notice: how to cancel and claim your money back</h1>
+      <div class="art-meta">
+        <span>&#128197; Coming soon</span>
+      </div>
+    </div>
+  </div>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>This article is being written. Check back soon.</p>
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-</main>
+<!-- ====================================================
+     ARTICLE: DROPSHIPPING (Coming soon)
+     ==================================================== -->
+<div id="art-dropshipping" class="article-wrap">
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Coming Soon</span>
+      <h1 class="art-h1">How to detect if an online store is dropshipping (and pay the real price)</h1>
+      <div class="art-meta">
+        <span>&#128197; Coming soon</span>
+      </div>
+    </div>
+  </div>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>This article is being written. Check back soon.</p>
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================
+     ARTICLE: T&C (Coming soon)
+     ==================================================== -->
+<div id="art-tc" class="article-wrap">
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <span class="art-cat-tag">Coming Soon</span>
+      <h1 class="art-h1">The 5 most abusive clauses in Spanish store T&amp;Cs (2025)</h1>
+      <div class="art-meta">
+        <span>&#128197; Coming soon</span>
+      </div>
+    </div>
+  </div>
+  <div class="art-body-wrap">
+    <div class="art-body">
+      <p>This article is being written. Check back soon.</p>
+      <div class="art-nav">
+        <button class="back-btn" onclick="showIndex()">&larr; Back to blog</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <div>© 2025 Kibbo · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a></div>
-  <div>Compatible with Chrome, Edge, Brave and Opera · <a href="blog.html">Blog</a></div>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="blog.html">Blog</a>
+    <a href="demo.html">Demo</a>
+  </div>
+  <div class="footer-copy">&copy; 2025 Kibbo &middot; Built to protect buyers</div>
 </footer>
 
 <script>
-// ── NAVEGACIÓN BLOG ──────────────────────────────────────────────
+// ── BLOG NAVIGATION ──────────────────────────────────────────────
 function showArticle(id) {
   document.getElementById('view-index').style.display = 'none';
   document.querySelectorAll('.article-wrap').forEach(a => a.classList.remove('visible'));
@@ -442,13 +903,35 @@ function showIndex() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── CATEGORÍAS ───────────────────────────────────────────────────
-document.querySelectorAll('.cat-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+// ── CATEGORY FILTER ───────────────────────────────────────────────
+function filterCat(btn, cat) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('.blog-card');
+  cards.forEach(card => {
+    if (cat === 'all') {
+      card.style.display = 'flex';
+    } else {
+      const cardCat = card.getAttribute('data-cat') || '';
+      card.style.display = cardCat.includes(cat) ? 'flex' : 'none';
+    }
   });
-});
+}
+
+// ── HAMBURGER MENU ───────────────────────────────────────────────
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() {
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menu.classList.remove('open');
+    });
+  });
+})();
 </script>
 </body>
 </html>

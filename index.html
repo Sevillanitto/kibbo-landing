@@ -219,6 +219,41 @@ nav {
   color: #555555;
   margin-top: 14px;
 }
+.hero-cta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hero-cta-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  transition: background 0.1s, box-shadow 0.1s, transform 0.1s;
+  width: fit-content;
+}
+.hero-cta-demo:hover {
+  background: #FFE500;
+  box-shadow: 2px 2px 0px #0A0A0A;
+  transform: translate(2px, 2px);
+}
+@media (max-width: 640px) {
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 /* Hero mockup card */
 .hero-right { display: flex; justify-content: center; align-items: center; }
@@ -851,7 +886,10 @@ footer {
       <h1 class="hero-title">THE<br>INTERNET<br>CHEATS<br>YOU.</h1>
       <p class="hero-subtitle">Kibbo catches it. In real time.</p>
       <p class="hero-desc">Dark patterns, fake urgency, inflated prices, trap clauses. Kibbo detects them silently on Amazon, Booking, Ryanair and 100+ stores.</p>
-      <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="hero-cta">&#128737; Add to Chrome &mdash; It's Free</a>
+      <div class="hero-cta-row">
+        <a href="https://chromewebstore.google.com/detail/kibbo-escudo-de-seguridad/mljfkfjkahbiackbibhhkhknolibpbpi" class="hero-cta">&#128737; Add to Chrome &mdash; It's Free</a>
+        <a href="demo.html" class="hero-cta-demo">Try the Demo &rarr;</a>
+      </div>
       <p class="hero-note">No sign-up &middot; No personal data &middot; Chrome, Edge, Brave, Opera</p>
     </div>
     <div class="hero-right">
