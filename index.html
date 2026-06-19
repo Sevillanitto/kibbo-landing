@@ -165,10 +165,12 @@ nav {
   border-bottom: 2px solid #0A0A0A;
   overflow: hidden;
 }
+.product-media picture { display: block; width: 100%; height: 100%; }
 .product-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
@@ -243,7 +245,8 @@ nav {
 
 /* Featured card — full width, larger banner & title */
 .product-card.featured { grid-column: 1 / -1; }
-.product-card.featured .product-media { aspect-ratio: 24 / 7; }
+.product-card.featured .product-media { aspect-ratio: 24 / 7; background: #FFE500; }
+.product-card.featured .product-media img { object-fit: contain; }
 .product-card.featured .product-title { font-size: 28px; }
 .product-card.featured .product-desc { font-size: 16px; }
 .product-card.featured .product-price { font-size: 28px; }
@@ -355,7 +358,10 @@ footer {
       <!-- Card 1 — featured -->
       <article class="product-card featured reveal">
         <div class="product-media">
-          <img src="images/products/web-guardian.png" alt="Web Guardian — Shopping Protection Suite" loading="lazy">
+          <picture>
+            <source media="(max-width: 560px)" srcset="images/products/web-guardian-mobile.png">
+            <img src="images/products/web-guardian.png" alt="Web Guardian — Shopping Protection Suite" loading="lazy">
+          </picture>
         </div>
         <div class="product-body">
           <span class="product-tag">Flagship · 8-in-1</span>
