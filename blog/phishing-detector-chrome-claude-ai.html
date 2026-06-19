@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://getkibbo.com/blog/phishing-detector-chrome-claude-ai.html">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>I built a phishing detector into Chrome using Claude AI. Here's exactly how. — Kibbo</title>
+<meta name="description" content="A weekend build: a Chrome extension that uses Claude AI (Haiku) to flag phishing SMS and emails instantly. The Cloudflare Worker proxy pattern, the prompt, and the parsing gotcha.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="I built a phishing detector into Chrome using Claude AI. Here's exactly how.">
+<meta property="og:description" content="A weekend build: a Chrome extension that uses Claude AI to flag phishing SMS and emails instantly. The Cloudflare Worker proxy pattern, the prompt, and the parsing gotcha.">
+<meta property="og:url" content="https://getkibbo.com/blog/phishing-detector-chrome-claude-ai.html">
+<meta property="og:image" content="https://getkibbo.com/images/products/phishing-detector.png">
+<meta property="article:published_time" content="2026-06-20">
+<meta name="article:tag" content="webdev, ai, javascript, security">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="I built a phishing detector into Chrome using Claude AI. Here's exactly how.">
+<meta name="twitter:description" content="A weekend build: a Chrome extension that uses Claude AI to flag phishing SMS and emails instantly.">
+<meta name="twitter:image" content="https://getkibbo.com/images/products/phishing-detector.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif; font-weight: 400;
+  background: #FFFFFF; color: #0A0A0A; overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
+.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== POST HEAD ===== */
+.post-head { background: #FFE500; border-bottom: 3px solid #0A0A0A; padding: 120px 40px 56px; }
+.post-head-inner { max-width: 720px; margin: 0 auto; }
+.breadcrumb { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px; }
+.breadcrumb a { color: #0A0A0A; text-decoration: none; border-bottom: 2px solid #0A0A0A; padding-bottom: 1px; }
+.post-head time { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #0A0A0A; }
+.post-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: clamp(32px, 6vw, 56px); line-height: 1.02; letter-spacing: -1.5px; margin: 14px 0 0; }
+
+/* ===== POST BODY ===== */
+.post-body {
+  max-width: 720px; margin: 0 auto; padding: 56px 40px 40px;
+  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7; color: #1a1a1a;
+}
+.post-body > p:first-child { font-size: 21px; line-height: 1.6; color: #0A0A0A; }
+.post-body h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; margin: 48px 0 16px; }
+.post-body h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2; margin: 32px 0 12px; }
+.post-body p { margin-bottom: 20px; }
+.post-body ul, .post-body ol { margin: 0 0 22px 24px; }
+.post-body li { margin-bottom: 8px; }
+.post-body a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: #FFE500; }
+.post-body strong { font-weight: 700; }
+.post-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #F0F0F0; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
+.post-body pre { background: #0A0A0A; color: #f5f5f5; padding: 22px; border-radius: 4px; overflow-x: auto; border: 2px solid #0A0A0A; box-shadow: 4px 4px 0px #FFE500; margin: 0 0 26px; }
+.post-body pre code { background: none; color: inherit; padding: 0; font-size: 14px; line-height: 1.6; }
+.post-body blockquote { border-left: 4px solid #FFE500; padding-left: 18px; margin: 0 0 24px; color: #444; font-style: italic; }
+.post-body img { max-width: 100%; height: auto; border: 2px solid #0A0A0A; border-radius: 2px; display: block; margin: 0 0 26px; }
+
+/* ===== CTA ===== */
+.post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 40px; }
+.post-cta-inner { background: #0A0A0A; border: 2px solid #0A0A0A; border-radius: 2px; box-shadow: 6px 6px 0px #FFE500; padding: 38px 34px; }
+.post-cta-tag { display: inline-block; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.post-cta h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 26px; line-height: 1.15; letter-spacing: -0.5px; color: #FFFFFF; margin-bottom: 10px; }
+.post-cta p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+.post-cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid #FFE500; border-radius: 2px; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 3px 3px 0px rgba(255,229,0,0.3); }
+.post-cta-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px rgba(255,229,0,0.3); }
+
+/* ===== FOOTER ===== */
+footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
+.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
+.footer-links a:hover { color: #FFE500; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .post-head { padding: 100px 20px 44px; }
+  .post-body { padding: 40px 20px 32px; font-size: 17px; }
+  .post-cta { padding: 0 20px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-logo { margin-bottom: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/#products">Products</a></li>
+    <li><a href="/blog.html" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/#products">Products</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<!-- ARTICLE -->
+<article>
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-06-20">June 20, 2026</time>
+      <h1 class="post-h1">I built a phishing detector into Chrome using Claude AI. Here's exactly how.</h1>
+    </div>
+  </header>
+
+  <div class="post-body">
+    <p>My mother called me last week. Someone had sent her an SMS claiming to be from DHL, asking her to pay a £2.99 customs fee via a link. She almost clicked it.</p>
+    <p>That was enough. I spent a weekend building a Chrome extension that lets you paste any suspicious message and get an instant verdict. Here's how it works.</p>
+
+    <h2>The architecture (and why Cloudflare Workers)</h2>
+    <p>The obvious approach is to call the Claude API directly from the extension. Don't do this. Your API key lives in the extension code, which anyone can extract from the Chrome Web Store in about 30 seconds.</p>
+    <p>The right pattern: extension → Cloudflare Worker → Claude API. The Worker lives server-side, holds the API key as an environment variable, and acts as a proxy. Cloudflare's free tier handles 100,000 requests/day, which is more than enough.</p>
+
+    <h2>The Worker</h2>
+    <pre><code>export default {
+  async fetch(request, env) {
+    const { prompt } = await request.json();
+
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 350,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    return response;
+  }
+}</code></pre>
+    <p>I'm using Haiku, not Opus. For a classification task like this — is this phishing or not — Haiku is faster, 10x cheaper, and gets the same result. Opus is overkill.</p>
+
+    <h2>The prompt</h2>
+    <p>After a dozen iterations, this is what actually works:</p>
+    <pre><code>You are an expert cybersecurity analyst specializing in phishing detection. Analyze the following message and determine if it is PHISHING, SUSPICIOUS, or LEGITIMATE.
+
+Pay special attention to impersonation of financial institutions (PayPal, Chase, Barclays), government agencies (IRS, HMRC, DVLA), delivery services (UPS, FedEx, Royal Mail) and major tech companies (Amazon, Apple, Microsoft, Netflix).
+
+Respond ONLY in this format:
+VERDICT: [PHISHING / SUSPICIOUS / LEGITIMATE]
+CONFIDENCE: [High / Medium / Low]
+SIGNALS: [comma-separated list, max 4]
+ADVICE: [one clear action sentence]</code></pre>
+    <p>One thing worth knowing: parse only the VERDICT line, not the whole response. Otherwise <code>txt.includes("PHISHING")</code> will always return true because the word appears in the template itself.</p>
+    <pre><code>const verdictLine = txt.split('\n')
+  .find(l =&gt; l.startsWith('VERDICT:')) || '';
+const isPhishing = verdictLine.includes('PHISHING');</code></pre>
+    <p>Obvious in hindsight. Took me longer than I'd like to admit.</p>
+
+    <h2>Results</h2>
+    <p>Tested against 50 real phishing attempts. Claude got 48 right. The two it missed were unusually well-crafted — legitimate-looking domains with no obvious red flags. For anything with a suspicious link or an urgency pattern, it's essentially perfect.</p>
+  </div>
+</article>
+
+<!-- CTA -->
+<aside class="post-cta">
+  <div class="post-cta-inner">
+    <span class="post-cta-tag">Get the source</span>
+    <h2>AI Phishing Detector</h2>
+    <p>If you want the full source code — extension, Worker, and deploy instructions — get it here.</p>
+    <a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/ai-phishing-detector-bundle" target="_blank" rel="noopener">Get it on Gumroad →</a>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 · Built by an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>
