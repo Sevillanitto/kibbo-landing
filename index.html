@@ -121,6 +121,44 @@ nav {
   max-width: 620px;
   line-height: 1.5;
 }
+.hero-trust {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(10,10,10,0.6);
+  margin-top: 14px;
+  letter-spacing: 0.2px;
+}
+
+/* Secondary CTA — TrapMart demo */
+.hero-demo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 32px;
+  padding: 16px 22px;
+  background: #FFFFFF;
+  border: 2px solid #0A0A0A;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  text-decoration: none;
+  max-width: 480px;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+.hero-demo:hover { box-shadow: 2px 2px 0px #0A0A0A; transform: translate(2px, 2px); }
+.hero-demo-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0A0A0A;
+}
+.hero-demo-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #444444;
+  line-height: 1.5;
+}
 
 /* ============================================================
    PRODUCTS
@@ -346,8 +384,13 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1 class="hero-title">Developer tools for real problems.</h1>
-    <p class="hero-sub">Chrome extensions and web apps. Source code included. No subscriptions.</p>
+    <h1 class="hero-title">The internet is full of tricks. We build the tools to fight back.</h1>
+    <p class="hero-sub">Software for consumers and developers. Source code included.</p>
+    <p class="hero-trust">🔒 Safe checkout via Gumroad · Instant download · No subscription</p>
+    <a class="hero-demo" href="/demo.html">
+      <span class="hero-demo-label">Want to see it in action? Try TrapMart →</span>
+      <span class="hero-demo-desc">A fake store full of every trick in the book. See exactly what our tools catch.</span>
+    </a>
   </div>
 </section>
 

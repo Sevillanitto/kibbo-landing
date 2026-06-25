@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself) — Kibbo</title>
+  <meta name="description" content="A technical expose of fake discounts, dynamic pricing algorithms, and the dark pattern code running behind every major e-commerce checkout. Plus: how to fight back with open-source tools." />
+  <meta property="og:title" content="The 60% Trap: Why E-Commerce Giants Are Laundering Discounts" />
+  <meta property="og:description" content="60% of online retailers fail basic pricing transparency laws. Here's the JavaScript that makes fake discounts possible — and the tools that expose it." />
+  <meta property="og:image" content="https://getkibbo.com/images/products/price-history-tracker.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="article:published_time" content="2026-06-26" />
+  <meta name="article:tag" content="consumer protection, dark patterns, javascript, ecommerce" />
+  <link rel="canonical" href="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="https://www.getkibbo.com/" class="logo">KIBBO</a>
+    <ul>
+      <li><a href="https://www.getkibbo.com/#products">Products</a></li>
+      <li><a href="https://www.getkibbo.com/blog.html">Blog</a></li>
+      <li><a href="https://www.getkibbo.com/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="blog-post">
+
+  <a href="https://www.getkibbo.com/blog.html" class="back-link">← Blog</a>
+
+  <time datetime="2026-06-26">June 26, 2026</time>
+
+  <h1>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself)</h1>
+
+  <p>Last Black Friday I watched someone in my flat buy a pair of headphones because the price tag showed a big red "–42% OFF." She was genuinely excited. I checked the price history — the item had been sitting at exactly that "sale" price for the previous three months. The original price had been inflated specifically for the two weeks before the event, then crossed out with a red line at the right moment.</p>
+
+  <p>She paid full retail. The store called it a discount.</p>
+
+  <p>This is not an edge case. In 2023, the <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418" target="_blank" rel="noopener">European Commission ran a cross-border sweep</a> of online retailers across EU member states and found that only 40% of checked sites fully complied with basic pricing transparency rules. The other 60% were using some form of manipulative pricing practice — fake reference prices, hidden fees, hardcoded countdown timers, and algorithmic profiling that adjusts what you see based on how badly it thinks you want to buy.</p>
+
+  <p>Governments can issue press releases. They can fine individual retailers. What they cannot do is monitor millions of product pages updating in real time. That's a software problem. And software problems have software solutions.</p>
+
+  <h2>How the fake discount actually works</h2>
+
+  <p>The "original price" trick is almost embarrassingly simple once you understand it. A retailer lists a product at £149.99. That price is real — for exactly eleven days. Then it drops to £89.99 and the frontend renders a strikethrough on £149.99 with a "–40%" badge. Under EU law — specifically <a href="https://commission.europa.eu/law/law-topic/consumer-protection-law/review-eu-consumer-law-suitability-digital-fairness_en" target="_blank" rel="noopener">Article 6a of Directive 2019/2161 (the Omnibus Directive)</a> — the reference price in a promotion must be the lowest price offered in the previous 30 days. If the item was £89.99 for most of that window, the "–40%" claim is illegal.</p>
+
+  <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/trade-regulation-rule-concerning-deceptive-pricing" target="_blank" rel="noopener">FTC's Deceptive Pricing guidelines</a> in the US take the same position: a "former price" must reflect an actual bona fide price at which the product was offered to the public for a reasonable period of time. Deliberately inflating a price to create a reference point for a fake reduction is, on paper, illegal on both sides of the Atlantic.</p>
+
+  <p>On paper.</p>
+
+  <p>In practice, the compliance burden falls on regulators who don't have the tooling to check individual product pages at scale. So the behaviour continues, quietly, across every major e-commerce platform.</p>
+
+  <h2>Algorithmic profiling: when the price follows you</h2>
+
+  <p>The static fake discount is the obvious trick. The subtler one is dynamic pricing based on user behaviour.</p>
+
+  <p>If you visit a product page three times in the same morning, a well-instrumented e-commerce backend interprets that as high purchase intent. The price goes up — not on a separate tier, not visibly — just quietly, for you. Your session cookies, your device fingerprint, your location, and your browsing pattern feed into a model that decides what to charge.</p>
+
+  <p>A <a href="https://webtransparency.cs.princeton.edu/darkpatterns/" target="_blank" rel="noopener">landmark study from Princeton's Web Transparency Project</a>, which crawled and analysed over 11,000 e-commerce websites, documented this pattern systematically. The researchers found dark patterns embedded across product pages, checkout flows, and subscription cancellation paths — many of them invisible to a casual user but trivially detectable with the right tooling.</p>
+
+  <p>This is why clearing cookies before a purchase is not paranoia. It's a rational response to systems specifically designed to exploit your history against you.</p>
+
+  <h2>Drip pricing and the checkout ambush</h2>
+
+  <p>You've seen this one. A product lists at £29.99. You add it to cart, go through the checkout flow, and somewhere on the final screen — too late to feel like turning back — a mandatory "service fee" of £4.99 appears. Sometimes it's "fulfilment." Sometimes it's "platform fee." It was never optional and it was never disclosed upfront.</p>
+
+  <p>This technique has a name: drip pricing. It works because checkout friction is asymmetric. By the time you see the real total, you've already mentally committed to the purchase. Abandoning the cart feels like a loss, even though you haven't spent anything yet. That psychological asymmetry is not an accident — it's the design.</p>
+
+  <p>The same principle applies to urgency timers:</p>
+
+  <pre><code>// What you see on the page
+"Deal ends in: 00:14:32"
+
+// What's actually in the JavaScript
+setInterval(() => {
+  if (timer <= 0) timer = 900; // resets to 15 minutes
+  timer--;
+  updateDisplay(timer);
+}, 1000);</code></pre>
+
+  <p>The timer is hardcoded to loop. There is no deal ending. The inventory counter saying "Only 3 left!" is equally likely to be a static string in the HTML with no connection to actual stock levels. If you open DevTools and inspect the element, you'll frequently find no API call, no dynamic data — just a number someone typed into the template.</p>
+
+  <p>Princeton's research found this pattern on a significant share of retail sites they audited. Not boutique shops — mainstream retailers.</p>
+
+  <h2>Reading the fake urgency in the DOM</h2>
+
+  <p>Here's what a real-time dark pattern detector does when it hits a product page. It looks for specific DOM patterns that consistently indicate manufactured urgency rather than genuine scarcity:</p>
+
+  <pre><code>// Signals the detector scans for
+const URGENCY_PATTERNS = [
+  /only\s+\d+\s+left/i,
+  /\d+\s+people\s+viewing/i,
+  /deal\s+ends\s+in/i,
+  /limited\s+time\s+offer/i,
+  /selling\s+fast/i
+];
+
+function scanForFakeUrgency(doc) {
+  const bodyText = doc.body.innerText;
+  return URGENCY_PATTERNS.some(pattern => pattern.test(bodyText));
+}
+
+// Then check if any countdown timers reset
+function detectLoopingTimer(doc) {
+  const scripts = Array.from(doc.querySelectorAll('script'));
+  return scripts.some(s =>
+    s.textContent.includes('setInterval') &&
+    s.textContent.match(/timer\s*=\s*\d+/g)?.length > 1
+  );
+}</code></pre>
+
+  <p>This is roughly how the Dark Patterns Detector extension works at the DOM level. It's not ML, it's not an API call — it's pattern matching against known manipulation signatures. Fast, cheap, and surprisingly accurate because the retailers all use the same playbook.</p>
+
+  <h2>The price history problem</h2>
+
+  <p>Dynamic pricing is harder to catch in real time because you need historical data. A single page visit tells you the current price. It tells you nothing about whether that price is a genuine reduction or an inflated reference point.</p>
+
+  <p>The solution is to track prices over time and inject that history directly into the product page when you visit it. Here's a simplified version of the tracking logic:</p>
+
+  <pre><code>// content.js — runs on product pages
+function extractPrice() {
+  const selectors = [
+    '[itemprop="price"]',
+    '.a-price-whole',       // Amazon
+    '.price-current',       // Generic
+    'meta[property="product:price:amount"]'
+  ];
+
+  for (const sel of selectors) {
+    const el = document.querySelector(sel);
+    if (el) {
+      const raw = el.getAttribute('content') || el.innerText;
+      return parseFloat(raw.replace(/[^0-9.]/g, ''));
+    }
+  }
+  return null;
+}
+
+// Store to chrome.storage.local with timestamp
+async function recordPrice(url, price) {
+  const key = btoa(url).slice(0, 40);
+  const existing = await chrome.storage.local.get(key);
+  const history = existing[key] || [];
+  history.push({ price, ts: Date.now() });
+  // Keep last 90 days only
+  const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
+  await chrome.storage.local.set({
+    [key]: history.filter(e => e.ts > cutoff)
+  });
+}</code></pre>
+
+  <p>The extension then renders that history as a sparkline on the product page. You don't need to open a separate tab or check an external site — the timeline appears inline, next to the current price, the moment you land on the page. If today's "sale" price is actually the item's three-month average, you'll see it immediately.</p>
+
+  <h2>Why the FTC's fines aren't enough</h2>
+
+  <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/final-rule-combating-fake-reviews-testimonials" target="_blank" rel="noopener">FTC's finalized rule on fake reviews</a> allows fines up to $51,744 per violation. That sounds significant. For a mid-size retailer running 50,000 SKUs with dynamic reference prices on all of them, it's a rounding error in the legal budget.</p>
+
+  <p>Regulatory enforcement operates on case-by-case investigation timelines. The manipulation operates on millisecond auction cycles. These things are not in the same ballpark. The only realistic consumer-side response is tooling that runs at the same speed as the systems being gamed.</p>
+
+  <p>That's not an ideological position — it's just a latency problem.</p>
+
+  <h2>Putting it together</h2>
+
+  <p>None of the individual tricks here are particularly sophisticated. Fake reference prices, looping timers, drip pricing, and behavioural profiling are all well-documented, well-named, and — in most jurisdictions — technically illegal. What makes them persistent is the absence of any enforcement mechanism that operates at the speed and scale of the retail bots running them.</p>
+
+  <p>A Chrome extension running on your machine does operate at that speed. It sees the same page you see, reads the same DOM, and can match patterns faster than you can scroll to the checkout button. You're not hacking anything — you're just reading the page more carefully than the site expects you to.</p>
+
+  <hr />
+
+  <div class="cta-block">
+    <h3>Price History Tracker</h3>
+    <p>The extension that injects price history directly into product pages. See whether today's "discount" is genuine or manufactured — before you buy.</p>
+    <p><strong>For everyday shoppers:</strong> <a href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get it on Gumroad →</a></p>
+    <p><strong>For developers:</strong> The full commercial source code — content script, storage logic, sparkline renderer, and deploy guide — is available for you to build your own price monitoring tools, niche micro-SaaS, or affiliate engines.</p>
+    <p><a href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get the source code ($24) →</a></p>
+  </div>
+
+</main>
+
+<footer>
+  <p>KIBBO</p>
+  <nav>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </nav>
+  <p>© 2026 · Built by an independent developer</p>
+</footer>
+
+</body>
+</html>
