@@ -1,97 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself) — Kibbo</title>
-  <meta name="description" content="A technical expose of fake discounts, dynamic pricing algorithms, and the dark pattern code running behind every major e-commerce checkout. Plus: how to fight back with open-source tools." />
-  <meta property="og:title" content="The 60% Trap: Why E-Commerce Giants Are Laundering Discounts" />
-  <meta property="og:description" content="60% of online retailers fail basic pricing transparency laws. Here's the JavaScript that makes fake discounts possible — and the tools that expose it." />
-  <meta property="og:image" content="https://getkibbo.com/images/products/price-history-tracker.png" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="article:published_time" content="2026-06-26" />
-  <meta name="article:tag" content="consumer protection, dark patterns, javascript, ecommerce" />
-  <link rel="canonical" href="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html" />
-  <link rel="stylesheet" href="../styles.css" />
+<meta charset="UTF-8">
+<link rel="canonical" href="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself) — Kibbo</title>
+<meta name="description" content="A technical expose of fake discounts, dynamic pricing algorithms, and the dark pattern code running behind every major e-commerce checkout. Plus: how to fight back with open-source tools.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="The 60% Trap: Why E-Commerce Giants Are Laundering Discounts">
+<meta property="og:description" content="60% of online retailers fail basic pricing transparency laws. Here's the JavaScript that makes fake discounts possible — and the tools that expose it.">
+<meta property="og:url" content="https://getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html">
+<meta property="og:image" content="https://getkibbo.com/images/products/price-history-tracker.png">
+<meta property="article:published_time" content="2026-06-26">
+<meta name="article:tag" content="consumer protection, dark patterns, javascript, ecommerce">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 60% Trap: Why E-Commerce Giants Are Laundering Discounts">
+<meta name="twitter:description" content="60% of online retailers fail basic pricing transparency laws. Here's the JavaScript that makes fake discounts possible — and the tools that expose it.">
+<meta name="twitter:image" content="https://getkibbo.com/images/products/price-history-tracker.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif; font-weight: 400;
+  background: #FFFFFF; color: #0A0A0A; overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
+.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== POST HEAD ===== */
+.post-head { background: #FFE500; border-bottom: 3px solid #0A0A0A; padding: 120px 40px 56px; }
+.post-head-inner { max-width: 720px; margin: 0 auto; }
+.breadcrumb { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px; }
+.breadcrumb a { color: #0A0A0A; text-decoration: none; border-bottom: 2px solid #0A0A0A; padding-bottom: 1px; }
+.post-head time { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #0A0A0A; }
+.post-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: clamp(32px, 6vw, 56px); line-height: 1.02; letter-spacing: -1.5px; margin: 14px 0 0; }
+
+/* ===== POST BODY ===== */
+.post-body {
+  max-width: 720px; margin: 0 auto; padding: 56px 40px 40px;
+  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7; color: #1a1a1a;
+}
+.post-body > p:first-child { font-size: 21px; line-height: 1.6; color: #0A0A0A; }
+.post-body h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; margin: 48px 0 16px; }
+.post-body h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2; margin: 32px 0 12px; }
+.post-body p { margin-bottom: 20px; }
+.post-body ul, .post-body ol { margin: 0 0 22px 24px; }
+.post-body li { margin-bottom: 8px; }
+.post-body a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: #FFE500; }
+.post-body strong { font-weight: 700; }
+.post-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #F0F0F0; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
+.post-body pre { background: #0A0A0A; color: #f5f5f5; padding: 22px; border-radius: 4px; overflow-x: auto; border: 2px solid #0A0A0A; box-shadow: 4px 4px 0px #FFE500; margin: 0 0 26px; }
+.post-body pre code { background: none; color: inherit; padding: 0; font-size: 14px; line-height: 1.6; }
+.post-body blockquote { border-left: 4px solid #FFE500; padding-left: 18px; margin: 0 0 24px; color: #444; font-style: italic; }
+.post-body img { max-width: 100%; height: auto; border: 2px solid #0A0A0A; border-radius: 2px; display: block; margin: 0 0 26px; }
+
+/* ===== CTA ===== */
+.post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 40px; }
+.post-cta-inner { background: #0A0A0A; border: 2px solid #0A0A0A; border-radius: 2px; box-shadow: 6px 6px 0px #FFE500; padding: 38px 34px; }
+.post-cta-tag { display: inline-block; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.post-cta h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 26px; line-height: 1.15; letter-spacing: -0.5px; color: #FFFFFF; margin-bottom: 10px; }
+.post-cta p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+.post-cta p strong { color: #FFFFFF; }
+.post-cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid #FFE500; border-radius: 2px; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 3px 3px 0px rgba(255,229,0,0.3); }
+.post-cta-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px rgba(255,229,0,0.3); }
+
+/* ===== FOOTER ===== */
+footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
+.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
+.footer-links a:hover { color: #FFE500; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .post-head { padding: 100px 20px 44px; }
+  .post-body { padding: 40px 20px 32px; font-size: 17px; }
+  .post-cta { padding: 0 20px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-logo { margin-bottom: 12px; }
+}
+</style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="https://www.getkibbo.com/" class="logo">KIBBO</a>
-    <ul>
-      <li><a href="https://www.getkibbo.com/#products">Products</a></li>
-      <li><a href="https://www.getkibbo.com/blog.html">Blog</a></li>
-      <li><a href="https://www.getkibbo.com/#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/#products">Products</a></li>
+    <li><a href="/blog.html" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-<main class="blog-post">
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/#products">Products</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
 
-  <a href="https://www.getkibbo.com/blog.html" class="back-link">← Blog</a>
+<!-- ARTICLE -->
+<article>
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-06-26">June 26, 2026</time>
+      <h1 class="post-h1">The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself)</h1>
+    </div>
+  </header>
 
-  <time datetime="2026-06-26">June 26, 2026</time>
+  <div class="post-body">
+    <p>Last Black Friday I watched someone in my flat buy a pair of headphones because the price tag showed a big red "–42% OFF." She was genuinely excited. I checked the price history — the item had been sitting at exactly that "sale" price for the previous three months. The original price had been inflated specifically for the two weeks before the event, then crossed out with a red line at the right moment.</p>
 
-  <h1>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts (And How to Protect Yourself)</h1>
+    <p>She paid full retail. The store called it a discount.</p>
 
-  <p>Last Black Friday I watched someone in my flat buy a pair of headphones because the price tag showed a big red "–42% OFF." She was genuinely excited. I checked the price history — the item had been sitting at exactly that "sale" price for the previous three months. The original price had been inflated specifically for the two weeks before the event, then crossed out with a red line at the right moment.</p>
+    <p>This is not an edge case. In 2023, the <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418" target="_blank" rel="noopener">European Commission ran a cross-border sweep</a> of online retailers across EU member states and found that only 40% of checked sites fully complied with basic pricing transparency rules. The other 60% were using some form of manipulative pricing practice — fake reference prices, hidden fees, hardcoded countdown timers, and algorithmic profiling that adjusts what you see based on how badly it thinks you want to buy.</p>
 
-  <p>She paid full retail. The store called it a discount.</p>
+    <p>Governments can issue press releases. They can fine individual retailers. What they cannot do is monitor millions of product pages updating in real time. That's a software problem. And software problems have software solutions.</p>
 
-  <p>This is not an edge case. In 2023, the <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418" target="_blank" rel="noopener">European Commission ran a cross-border sweep</a> of online retailers across EU member states and found that only 40% of checked sites fully complied with basic pricing transparency rules. The other 60% were using some form of manipulative pricing practice — fake reference prices, hidden fees, hardcoded countdown timers, and algorithmic profiling that adjusts what you see based on how badly it thinks you want to buy.</p>
+    <h2>How the fake discount actually works</h2>
 
-  <p>Governments can issue press releases. They can fine individual retailers. What they cannot do is monitor millions of product pages updating in real time. That's a software problem. And software problems have software solutions.</p>
+    <p>The "original price" trick is almost embarrassingly simple once you understand it. A retailer lists a product at £149.99. That price is real — for exactly eleven days. Then it drops to £89.99 and the frontend renders a strikethrough on £149.99 with a "–40%" badge. Under EU law — specifically <a href="https://commission.europa.eu/law/law-topic/consumer-protection-law/review-eu-consumer-law-suitability-digital-fairness_en" target="_blank" rel="noopener">Article 6a of Directive 2019/2161 (the Omnibus Directive)</a> — the reference price in a promotion must be the lowest price offered in the previous 30 days. If the item was £89.99 for most of that window, the "–40%" claim is illegal.</p>
 
-  <h2>How the fake discount actually works</h2>
+    <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/trade-regulation-rule-concerning-deceptive-pricing" target="_blank" rel="noopener">FTC's Deceptive Pricing guidelines</a> in the US take the same position: a "former price" must reflect an actual bona fide price at which the product was offered to the public for a reasonable period of time. Deliberately inflating a price to create a reference point for a fake reduction is, on paper, illegal on both sides of the Atlantic.</p>
 
-  <p>The "original price" trick is almost embarrassingly simple once you understand it. A retailer lists a product at £149.99. That price is real — for exactly eleven days. Then it drops to £89.99 and the frontend renders a strikethrough on £149.99 with a "–40%" badge. Under EU law — specifically <a href="https://commission.europa.eu/law/law-topic/consumer-protection-law/review-eu-consumer-law-suitability-digital-fairness_en" target="_blank" rel="noopener">Article 6a of Directive 2019/2161 (the Omnibus Directive)</a> — the reference price in a promotion must be the lowest price offered in the previous 30 days. If the item was £89.99 for most of that window, the "–40%" claim is illegal.</p>
+    <p>On paper.</p>
 
-  <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/trade-regulation-rule-concerning-deceptive-pricing" target="_blank" rel="noopener">FTC's Deceptive Pricing guidelines</a> in the US take the same position: a "former price" must reflect an actual bona fide price at which the product was offered to the public for a reasonable period of time. Deliberately inflating a price to create a reference point for a fake reduction is, on paper, illegal on both sides of the Atlantic.</p>
+    <p>In practice, the compliance burden falls on regulators who don't have the tooling to check individual product pages at scale. So the behaviour continues, quietly, across every major e-commerce platform.</p>
 
-  <p>On paper.</p>
+    <h2>Algorithmic profiling: when the price follows you</h2>
 
-  <p>In practice, the compliance burden falls on regulators who don't have the tooling to check individual product pages at scale. So the behaviour continues, quietly, across every major e-commerce platform.</p>
+    <p>The static fake discount is the obvious trick. The subtler one is dynamic pricing based on user behaviour.</p>
 
-  <h2>Algorithmic profiling: when the price follows you</h2>
+    <p>If you visit a product page three times in the same morning, a well-instrumented e-commerce backend interprets that as high purchase intent. The price goes up — not on a separate tier, not visibly — just quietly, for you. Your session cookies, your device fingerprint, your location, and your browsing pattern feed into a model that decides what to charge.</p>
 
-  <p>The static fake discount is the obvious trick. The subtler one is dynamic pricing based on user behaviour.</p>
+    <p>A <a href="https://webtransparency.cs.princeton.edu/darkpatterns/" target="_blank" rel="noopener">landmark study from Princeton's Web Transparency Project</a>, which crawled and analysed over 11,000 e-commerce websites, documented this pattern systematically. The researchers found dark patterns embedded across product pages, checkout flows, and subscription cancellation paths — many of them invisible to a casual user but trivially detectable with the right tooling.</p>
 
-  <p>If you visit a product page three times in the same morning, a well-instrumented e-commerce backend interprets that as high purchase intent. The price goes up — not on a separate tier, not visibly — just quietly, for you. Your session cookies, your device fingerprint, your location, and your browsing pattern feed into a model that decides what to charge.</p>
+    <p>This is why clearing cookies before a purchase is not paranoia. It's a rational response to systems specifically designed to exploit your history against you.</p>
 
-  <p>A <a href="https://webtransparency.cs.princeton.edu/darkpatterns/" target="_blank" rel="noopener">landmark study from Princeton's Web Transparency Project</a>, which crawled and analysed over 11,000 e-commerce websites, documented this pattern systematically. The researchers found dark patterns embedded across product pages, checkout flows, and subscription cancellation paths — many of them invisible to a casual user but trivially detectable with the right tooling.</p>
+    <h2>Drip pricing and the checkout ambush</h2>
 
-  <p>This is why clearing cookies before a purchase is not paranoia. It's a rational response to systems specifically designed to exploit your history against you.</p>
+    <p>You've seen this one. A product lists at £29.99. You add it to cart, go through the checkout flow, and somewhere on the final screen — too late to feel like turning back — a mandatory "service fee" of £4.99 appears. Sometimes it's "fulfilment." Sometimes it's "platform fee." It was never optional and it was never disclosed upfront.</p>
 
-  <h2>Drip pricing and the checkout ambush</h2>
+    <p>This technique has a name: drip pricing. It works because checkout friction is asymmetric. By the time you see the real total, you've already mentally committed to the purchase. Abandoning the cart feels like a loss, even though you haven't spent anything yet. That psychological asymmetry is not an accident — it's the design.</p>
 
-  <p>You've seen this one. A product lists at £29.99. You add it to cart, go through the checkout flow, and somewhere on the final screen — too late to feel like turning back — a mandatory "service fee" of £4.99 appears. Sometimes it's "fulfilment." Sometimes it's "platform fee." It was never optional and it was never disclosed upfront.</p>
+    <p>The same principle applies to urgency timers:</p>
 
-  <p>This technique has a name: drip pricing. It works because checkout friction is asymmetric. By the time you see the real total, you've already mentally committed to the purchase. Abandoning the cart feels like a loss, even though you haven't spent anything yet. That psychological asymmetry is not an accident — it's the design.</p>
-
-  <p>The same principle applies to urgency timers:</p>
-
-  <pre><code>// What you see on the page
+    <pre><code>// What you see on the page
 "Deal ends in: 00:14:32"
 
 // What's actually in the JavaScript
-setInterval(() => {
-  if (timer <= 0) timer = 900; // resets to 15 minutes
+setInterval(() =&gt; {
+  if (timer &lt;= 0) timer = 900; // resets to 15 minutes
   timer--;
   updateDisplay(timer);
 }, 1000);</code></pre>
 
-  <p>The timer is hardcoded to loop. There is no deal ending. The inventory counter saying "Only 3 left!" is equally likely to be a static string in the HTML with no connection to actual stock levels. If you open DevTools and inspect the element, you'll frequently find no API call, no dynamic data — just a number someone typed into the template.</p>
+    <p>The timer is hardcoded to loop. There is no deal ending. The inventory counter saying "Only 3 left!" is equally likely to be a static string in the HTML with no connection to actual stock levels. If you open DevTools and inspect the element, you'll frequently find no API call, no dynamic data — just a number someone typed into the template.</p>
 
-  <p>Princeton's research found this pattern on a significant share of retail sites they audited. Not boutique shops — mainstream retailers.</p>
+    <p>Princeton's research found this pattern on a significant share of retail sites they audited. Not boutique shops — mainstream retailers.</p>
 
-  <h2>Reading the fake urgency in the DOM</h2>
+    <h2>Reading the fake urgency in the DOM</h2>
 
-  <p>Here's what a real-time dark pattern detector does when it hits a product page. It looks for specific DOM patterns that consistently indicate manufactured urgency rather than genuine scarcity:</p>
+    <p>Here's what a real-time dark pattern detector does when it hits a product page. It looks for specific DOM patterns that consistently indicate manufactured urgency rather than genuine scarcity:</p>
 
-  <pre><code>// Signals the detector scans for
+    <pre><code>// Signals the detector scans for
 const URGENCY_PATTERNS = [
   /only\s+\d+\s+left/i,
   /\d+\s+people\s+viewing/i,
@@ -102,27 +208,27 @@ const URGENCY_PATTERNS = [
 
 function scanForFakeUrgency(doc) {
   const bodyText = doc.body.innerText;
-  return URGENCY_PATTERNS.some(pattern => pattern.test(bodyText));
+  return URGENCY_PATTERNS.some(pattern =&gt; pattern.test(bodyText));
 }
 
 // Then check if any countdown timers reset
 function detectLoopingTimer(doc) {
   const scripts = Array.from(doc.querySelectorAll('script'));
-  return scripts.some(s =>
-    s.textContent.includes('setInterval') &&
-    s.textContent.match(/timer\s*=\s*\d+/g)?.length > 1
+  return scripts.some(s =&gt;
+    s.textContent.includes('setInterval') &amp;&amp;
+    s.textContent.match(/timer\s*=\s*\d+/g)?.length &gt; 1
   );
 }</code></pre>
 
-  <p>This is roughly how the Dark Patterns Detector extension works at the DOM level. It's not ML, it's not an API call — it's pattern matching against known manipulation signatures. Fast, cheap, and surprisingly accurate because the retailers all use the same playbook.</p>
+    <p>This is roughly how the Dark Patterns Detector extension works at the DOM level. It's not ML, it's not an API call — it's pattern matching against known manipulation signatures. Fast, cheap, and surprisingly accurate because the retailers all use the same playbook.</p>
 
-  <h2>The price history problem</h2>
+    <h2>The price history problem</h2>
 
-  <p>Dynamic pricing is harder to catch in real time because you need historical data. A single page visit tells you the current price. It tells you nothing about whether that price is a genuine reduction or an inflated reference point.</p>
+    <p>Dynamic pricing is harder to catch in real time because you need historical data. A single page visit tells you the current price. It tells you nothing about whether that price is a genuine reduction or an inflated reference point.</p>
 
-  <p>The solution is to track prices over time and inject that history directly into the product page when you visit it. Here's a simplified version of the tracking logic:</p>
+    <p>The solution is to track prices over time and inject that history directly into the product page when you visit it. Here's a simplified version of the tracking logic:</p>
 
-  <pre><code>// content.js — runs on product pages
+    <pre><code>// content.js — runs on product pages
 function extractPrice() {
   const selectors = [
     '[itemprop="price"]',
@@ -150,46 +256,60 @@ async function recordPrice(url, price) {
   // Keep last 90 days only
   const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
   await chrome.storage.local.set({
-    [key]: history.filter(e => e.ts > cutoff)
+    [key]: history.filter(e =&gt; e.ts &gt; cutoff)
   });
 }</code></pre>
 
-  <p>The extension then renders that history as a sparkline on the product page. You don't need to open a separate tab or check an external site — the timeline appears inline, next to the current price, the moment you land on the page. If today's "sale" price is actually the item's three-month average, you'll see it immediately.</p>
+    <p>The extension then renders that history as a sparkline on the product page. You don't need to open a separate tab or check an external site — the timeline appears inline, next to the current price, the moment you land on the page. If today's "sale" price is actually the item's three-month average, you'll see it immediately.</p>
 
-  <h2>Why the FTC's fines aren't enough</h2>
+    <h2>Why the FTC's fines aren't enough</h2>
 
-  <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/final-rule-combating-fake-reviews-testimonials" target="_blank" rel="noopener">FTC's finalized rule on fake reviews</a> allows fines up to $51,744 per violation. That sounds significant. For a mid-size retailer running 50,000 SKUs with dynamic reference prices on all of them, it's a rounding error in the legal budget.</p>
+    <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/final-rule-combating-fake-reviews-testimonials" target="_blank" rel="noopener">FTC's finalized rule on fake reviews</a> allows fines up to $51,744 per violation. That sounds significant. For a mid-size retailer running 50,000 SKUs with dynamic reference prices on all of them, it's a rounding error in the legal budget.</p>
 
-  <p>Regulatory enforcement operates on case-by-case investigation timelines. The manipulation operates on millisecond auction cycles. These things are not in the same ballpark. The only realistic consumer-side response is tooling that runs at the same speed as the systems being gamed.</p>
+    <p>Regulatory enforcement operates on case-by-case investigation timelines. The manipulation operates on millisecond auction cycles. These things are not in the same ballpark. The only realistic consumer-side response is tooling that runs at the same speed as the systems being gamed.</p>
 
-  <p>That's not an ideological position — it's just a latency problem.</p>
+    <p>That's not an ideological position — it's just a latency problem.</p>
 
-  <h2>Putting it together</h2>
+    <h2>Putting it together</h2>
 
-  <p>None of the individual tricks here are particularly sophisticated. Fake reference prices, looping timers, drip pricing, and behavioural profiling are all well-documented, well-named, and — in most jurisdictions — technically illegal. What makes them persistent is the absence of any enforcement mechanism that operates at the speed and scale of the retail bots running them.</p>
+    <p>None of the individual tricks here are particularly sophisticated. Fake reference prices, looping timers, drip pricing, and behavioural profiling are all well-documented, well-named, and — in most jurisdictions — technically illegal. What makes them persistent is the absence of any enforcement mechanism that operates at the speed and scale of the retail bots running them.</p>
 
-  <p>A Chrome extension running on your machine does operate at that speed. It sees the same page you see, reads the same DOM, and can match patterns faster than you can scroll to the checkout button. You're not hacking anything — you're just reading the page more carefully than the site expects you to.</p>
-
-  <hr />
-
-  <div class="cta-block">
-    <h3>Price History Tracker</h3>
-    <p>The extension that injects price history directly into product pages. See whether today's "discount" is genuine or manufactured — before you buy.</p>
-    <p><strong>For everyday shoppers:</strong> <a href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get it on Gumroad →</a></p>
-    <p><strong>For developers:</strong> The full commercial source code — content script, storage logic, sparkline renderer, and deploy guide — is available for you to build your own price monitoring tools, niche micro-SaaS, or affiliate engines.</p>
-    <p><a href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get the source code ($24) →</a></p>
+    <p>A Chrome extension running on your machine does operate at that speed. It sees the same page you see, reads the same DOM, and can match patterns faster than you can scroll to the checkout button. You're not hacking anything — you're just reading the page more carefully than the site expects you to.</p>
   </div>
+</article>
 
-</main>
+<!-- CTA -->
+<aside class="post-cta">
+  <div class="post-cta-inner">
+    <span class="post-cta-tag">Get the tool</span>
+    <h2>Price History Tracker</h2>
+    <p>The extension that injects price history directly into product pages. See whether today's "discount" is genuine or manufactured — before you buy.</p>
+    <p><strong>For everyday shoppers:</strong> <a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get it on Gumroad →</a></p>
+    <p><strong>For developers:</strong> The full commercial source code — content script, storage logic, sparkline renderer, and deploy guide — is available for you to build your own price monitoring tools, niche micro-SaaS, or affiliate engines.</p>
+    <p><a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get the source code ($24) →</a></p>
+  </div>
+</aside>
 
+<!-- FOOTER -->
 <footer>
-  <p>KIBBO</p>
-  <nav>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
     <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
     <a href="mailto:hello@getkibbo.com">Contact</a>
-  </nav>
-  <p>© 2026 · Built by an independent developer</p>
+  </div>
+  <div class="footer-copy">© 2026 · Built by an independent developer</div>
 </footer>
 
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
 </body>
 </html>
