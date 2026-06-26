@@ -92,12 +92,23 @@
 
     <p class="supp-fineprint" id="quota">3 free analyses per day · No account required</p>
 
+    <div class="supp-access">
+      <button type="button" class="supp-access-toggle" id="accessToggle">Have an access code? Click here to unlock unlimited access</button>
+      <div class="supp-access-panel" id="accessPanel">
+        <input type="text" class="supp-access-input" id="accessCode" placeholder="Enter your code (KIBBO-XXXX-XXXX-XXXX)" autocomplete="off" spellcheck="false">
+        <button type="button" class="supp-access-btn" id="activateBtn">Activate Code</button>
+        <p class="supp-access-msg" id="accessMsg"></p>
+      </div>
+    </div>
+
     <div class="supp-error" id="error" style="display:none;"></div>
   </main>
 
   <section class="supp-limit" id="limitMsg">
     <div class="supp-limit-title">Daily limit reached</div>
-    <p>You've used your 3 free analyses today. Come back tomorrow for more.</p>
+    <p>You've used your 3 free analyses today. Unlock unlimited analyses with a one-time access code — no subscription, no account.</p>
+    <a class="supp-limit-btn" href="https://carlosdevlop.gumroad.com/l/supplement-ingredients-auditor" target="_blank" rel="noopener">Get unlimited access →</a>
+    <p class="supp-limit-sub">Already have a code? Use “Have an access code?” above to activate it.</p>
   </section>
 
   <section class="supp-results" id="results">
@@ -153,6 +164,11 @@
   const errorBox = document.getElementById('error');
   const limitMsg = document.getElementById('limitMsg');
   const quota = document.getElementById('quota');
+  const accessToggle = document.getElementById('accessToggle');
+  const accessPanel = document.getElementById('accessPanel');
+  const codeInput = document.getElementById('accessCode');
+  const activateBtn = document.getElementById('activateBtn');
+  const accessMsg = document.getElementById('accessMsg');
 
   const COLORS = { GREEN: '#4A7C59', YELLOW: '#D4A843', RED: '#C4622D' };
 
@@ -214,7 +230,13 @@
     results.style.display = 'block';
   }
 
+  function setUnlimited() {
+    try { localStorage.setItem('kibbo_supp_unlimited', 'true'); } catch (e) {}
+    if (quota) { quota.textContent = '✓ Unlimited access active'; quota.classList.add('supp-unlimited'); }
+    hideLimit();
+  }
   function updateQuota(remaining) {
+    if (remaining === 'unlimited') { setUnlimited(); return; }
     if (typeof remaining !== 'number' || !quota) return;
     if (remaining <= 0) {
       quota.textContent = 'No free analyses left today · come back tomorrow';
@@ -270,6 +292,51 @@
   }
 
   btn.addEventListener('click', analyze);
+
+  // ---- Access code (unlock unlimited) ----
+  function showAccessMsg(text, kind) {
+    if (!accessMsg) return;
+    accessMsg.textContent = text;
+    accessMsg.className = 'supp-access-msg ' + (kind || '');
+  }
+
+  async function activateCode() {
+    const code = (codeInput.value || '').trim().toUpperCase();
+    showAccessMsg('', '');
+    if (!code) { showAccessMsg('Please enter a code.', 'err'); return; }
+    activateBtn.disabled = true;
+    activateBtn.textContent = 'Activating...';
+    try {
+      const res = await fetch(WORKER_URL + '/activate-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: code })
+      });
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+      if (data && data.success) {
+        showAccessMsg('✓ Unlimited access activated. Enjoy!', 'ok');
+        setUnlimited();
+      } else {
+        showAccessMsg('Invalid code. Please check and try again.', 'err');
+      }
+    } catch (err) {
+      showAccessMsg('Could not activate the code. Please try again.', 'err');
+    } finally {
+      activateBtn.disabled = false;
+      activateBtn.textContent = 'Activate Code';
+    }
+  }
+
+  if (accessToggle && accessPanel) {
+    accessToggle.addEventListener('click', function () { accessPanel.classList.toggle('open'); });
+  }
+  if (activateBtn) activateBtn.addEventListener('click', activateCode);
+
+  // Restore unlimited state from a previous visit.
+  try {
+    if (localStorage.getItem('kibbo_supp_unlimited') === 'true') setUnlimited();
+  } catch (e) {}
 })();
 </script>
 </body>

@@ -1,0 +1,9 @@
+# Private master list of paid access codes — never commit
+codes.json
+**/codes.json
+analyzer/supplement-auditor/pdfs/
+
+# Build / cache / internal artifacts — not part of the site
+**/.wrangler/
+analyzer/analyzer.zip
+getkibbo.com-audit/

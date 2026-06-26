@@ -8,4 +8,4 @@ compatibility_date = "2024-01-01"
 # (or create it in the Cloudflare dashboard and copy the namespace ID)
 [[kv_namespaces]]
 binding = "RATE_LIMIT_KV"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "b7e84117e147405c9fb224b9df852182"

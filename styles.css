@@ -172,6 +172,26 @@ footer { background: var(--ink); padding: 42px 24px; display: flex; flex-directi
 .supp-limit { display: none; margin-top: 64px; text-align: center; background: #efeee8; padding: 40px 24px; }
 .supp-limit-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 22px; color: var(--supp-ink); margin-bottom: 10px; }
 .supp-limit p { font-size: 16px; line-height: 1.6; color: var(--supp-muted); margin: 0; }
+.supp-limit-btn { display: inline-block; margin-top: 20px; padding: 12px 22px; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #fff; background: var(--supp-accent); text-decoration: none; transition: background 0.15s ease; }
+.supp-limit-btn:hover { background: #3f6b4c; }
+.supp-limit-sub { margin-top: 14px; font-size: 13px; color: var(--supp-muted); }
+
+/* Access code (unlock unlimited) */
+.supp-access { margin-top: 22px; text-align: center; }
+.supp-access-toggle { background: none; border: none; cursor: pointer; font-family: 'Inter', system-ui, sans-serif; font-size: 13px; color: var(--supp-muted); text-decoration: underline; text-underline-offset: 2px; padding: 0; }
+.supp-access-toggle:hover { color: var(--supp-accent); }
+.supp-access-panel { display: none; margin: 16px auto 0; max-width: 420px; text-align: left; }
+.supp-access-panel.open { display: block; }
+.supp-access-input { width: 100%; padding: 13px 14px; font-family: 'Inter', system-ui, sans-serif; font-size: 15px; letter-spacing: 0.5px; color: var(--supp-ink); background: #fff; border: 1px solid var(--supp-line); outline: none; text-transform: uppercase; }
+.supp-access-input:focus { border-color: var(--supp-accent); }
+.supp-access-btn { margin-top: 10px; padding: 12px 20px; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #fff; background: var(--supp-accent); border: none; cursor: pointer; transition: background 0.15s ease; }
+.supp-access-btn:hover:not(:disabled) { background: #3f6b4c; }
+.supp-access-btn:disabled { opacity: 0.65; cursor: default; }
+.supp-access-msg { margin-top: 12px; font-size: 14px; min-height: 1em; }
+.supp-access-msg.ok { color: var(--supp-accent); }
+.supp-access-msg.err { color: var(--supp-danger); }
+.supp-unlimited { color: var(--supp-accent) !important; font-weight: 600; }
+
 @media (max-width: 900px) {
   .supp-wrap { padding: 96px 20px 72px; }
 }
