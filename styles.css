@@ -1,0 +1,32 @@
+/* ============================================================
+   Kibbo blog — shared author byline styles
+   Avatar: 36px circular, inline with the author name.
+   Kept consistent with the blog's neobrutalist 2px-border style.
+   ============================================================ */
+.author-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  color: #0A0A0A;
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0A0A0A;
+  display: block;
+  flex-shrink: 0;
+}
+
+.author-line a {
+  color: #0A0A0A;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(10, 10, 10, 0.4);
+}

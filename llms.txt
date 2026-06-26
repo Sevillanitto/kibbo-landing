@@ -1,6 +1,6 @@
 # Kibbo
 
-> Kibbo is an independent developer (Carlos López Tejeiro) building consumer-protection Chrome extensions and web apps. Products detect dark patterns, fake discounts, phishing, abusive contracts, and manipulative cookie consent. Source code is included with every purchase. No subscriptions.
+> Kibbo is an independent developer (Carlos Lopez) building consumer-protection Chrome extensions and web apps. Products detect dark patterns, fake discounts, phishing, abusive contracts, and manipulative cookie consent. Source code is included with every purchase. No subscriptions.
 
 ## About
 - About Kibbo and the developer behind it: https://www.getkibbo.com/about

