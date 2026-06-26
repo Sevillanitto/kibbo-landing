@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/about">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About Kibbo — The developer behind the tools</title>
+<meta name="description" content="Kibbo is an independent developer building consumer-protection Chrome extensions and web apps. Meet Carlos López Tejeiro, the developer behind the tools, and the mission: ship software that fights online tricks, with source code included and no subscriptions.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="About Kibbo — The developer behind the tools">
+<meta property="og:description" content="Kibbo is an independent developer building consumer-protection Chrome extensions and web apps. Source code included. No subscriptions.">
+<meta property="og:url" content="https://www.getkibbo.com/about">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Kibbo — The developer behind the tools">
+<meta name="twitter:description" content="Kibbo is an independent developer building consumer-protection Chrome extensions and web apps. Source code included. No subscriptions.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif; font-weight: 400;
+  background: #FFFFFF; color: #0A0A0A; overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
+.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== PAGE HEAD ===== */
+.post-head { background: #FFE500; border-bottom: 3px solid #0A0A0A; padding: 120px 40px 56px; }
+.post-head-inner { max-width: 720px; margin: 0 auto; }
+.breadcrumb { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px; }
+.breadcrumb a { color: #0A0A0A; text-decoration: none; border-bottom: 2px solid #0A0A0A; padding-bottom: 1px; }
+.post-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: clamp(32px, 6vw, 56px); line-height: 1.02; letter-spacing: -1.5px; margin: 0; }
+.post-head-sub { font-family: 'Inter', sans-serif; font-size: clamp(16px, 2.4vw, 20px); line-height: 1.5; margin: 16px 0 0; max-width: 620px; }
+
+/* ===== BODY ===== */
+.post-body {
+  max-width: 720px; margin: 0 auto; padding: 56px 40px 40px;
+  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7; color: #1a1a1a;
+}
+.post-body > p:first-child { font-size: 21px; line-height: 1.6; color: #0A0A0A; }
+.post-body h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; margin: 48px 0 16px; }
+.post-body p { margin-bottom: 20px; }
+.post-body ul { margin: 0 0 22px 22px; }
+.post-body li { margin-bottom: 8px; }
+.post-body a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: #FFE500; }
+.post-body strong { font-weight: 700; }
+
+/* ===== CTA ===== */
+.post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 40px; }
+.post-cta-inner { background: #0A0A0A; border: 2px solid #0A0A0A; border-radius: 2px; box-shadow: 6px 6px 0px #FFE500; padding: 38px 34px; }
+.post-cta h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 26px; line-height: 1.15; letter-spacing: -0.5px; color: #FFFFFF; margin-bottom: 10px; }
+.post-cta p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+.post-cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid #FFE500; border-radius: 2px; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 3px 3px 0px rgba(255,229,0,0.3); }
+.post-cta-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px rgba(255,229,0,0.3); }
+
+/* ===== FOOTER ===== */
+footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
+.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
+.footer-links a:hover { color: #FFE500; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .post-head { padding: 100px 20px 44px; }
+  .post-body { padding: 40px 20px 32px; font-size: 17px; }
+  .post-cta { padding: 0 20px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-logo { margin-bottom: 12px; }
+}
+</style>
+
+<!-- ProfilePage + Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://www.getkibbo.com/about",
+  "url": "https://www.getkibbo.com/about",
+  "name": "About Kibbo",
+  "inLanguage": "en",
+  "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+  "about": { "@id": "https://www.getkibbo.com/#organization" },
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Carlos López Tejeiro",
+    "url": "https://www.getkibbo.com/about",
+    "jobTitle": "Independent software developer",
+    "description": "Independent developer building consumer-protection Chrome extensions and web apps under the Kibbo brand.",
+    "sameAs": [ "https://github.com/Sevillanitto" ],
+    "worksFor": { "@id": "https://www.getkibbo.com/#organization" }
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/#products">Products</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/about" class="active">About</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/#products">Products</a>
+  <a href="/blog">Blog</a>
+  <a href="/about">About</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<!-- PAGE HEAD -->
+<header class="post-head">
+  <div class="post-head-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">← Home</a></nav>
+    <h1 class="post-h1">About Kibbo</h1>
+    <p class="post-head-sub">Consumer-protection software, built in the open by one independent developer.</p>
+  </div>
+</header>
+
+<!-- BODY -->
+<main class="post-body">
+  <p>Kibbo is a small studio of consumer-protection tools — Chrome extensions and web apps — built by <strong>Carlos López Tejeiro</strong>, an independent developer. Every product targets one specific way the modern web tries to trick you: fake discounts, dark patterns, phishing messages, abusive contract terms, and manipulative cookie banners.</p>
+
+  <p>The idea started with a simple frustration. Online stores and services have quietly turned everyday browsing into a minefield of small manipulations — countdown timers that secretly reset, "original" prices that were never real, reject buttons hidden three clicks deep. Regulators write rules about these tactics, but they can't inspect millions of product pages in real time. Software running in your own browser can.</p>
+
+  <h2>What Kibbo builds</h2>
+  <p>Each tool does one job well and runs locally on your machine wherever possible, so your browsing data stays with you. The flagship, <a href="/#products">Web Guardian</a>, bundles eight protection modules into a single extension. The others — a phishing detector powered by Claude AI, a price-history tracker, a dark-patterns detector, a contract analyzer, a checkout shield, and a cookie-consent equalizer — can each be used on their own.</p>
+
+  <h2>Source code included, no subscriptions</h2>
+  <p>Kibbo sells software the old-fashioned way: you pay once and you own it. Every purchase includes the full commercial source code, so you can audit exactly what's running in your browser, modify it, or build your own tools on top of it. There are no subscriptions and no recurring fees.</p>
+
+  <h2>Built in the open</h2>
+  <p>The <a href="/blog">Kibbo blog</a> documents how these tools actually work — the real code, the architecture decisions, the bugs, and the test results — in plain technical English. If you want to see what the developer behind Kibbo is shipping, the code lives on <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>.</p>
+
+  <h2>Get in touch</h2>
+  <p>Questions, bug reports, or ideas for the next tool? Email <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a>.</p>
+</main>
+
+<!-- CTA -->
+<aside class="post-cta">
+  <div class="post-cta-inner">
+    <h2>See the tools</h2>
+    <p>Seven consumer-protection products, source code included, no subscription.</p>
+    <a class="post-cta-btn" href="/#products">Browse products →</a>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 · Built by Carlos López Tejeiro, an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Kibbo
+
+> Kibbo is an independent developer (Carlos López Tejeiro) building consumer-protection Chrome extensions and web apps. Products detect dark patterns, fake discounts, phishing, abusive contracts, and manipulative cookie consent. Source code is included with every purchase. No subscriptions.
+
+## About
+- About Kibbo and the developer behind it: https://www.getkibbo.com/about
+
+## Products
+- Web Guardian — Shopping Protection Suite (8 modules in one extension): https://www.getkibbo.com/#products
+- AI Phishing Detector — Claude AI-powered SMS and email scam detection: https://www.getkibbo.com/#products
+- Dark Patterns Detector — Fake urgency, trap checkboxes, confirmshaming: https://www.getkibbo.com/#products
+- Legal Contract Analyzer — Abusive clauses and hard-to-cancel subscriptions: https://www.getkibbo.com/#products
+- Price History Tracker — Verify discount authenticity before buying: https://www.getkibbo.com/#products
+- Checkout Security Shield — Payment gateway verification and fraud blacklist: https://www.getkibbo.com/#products
+- Cookie Consent Equalizer — Makes the reject button as easy as accept: https://www.getkibbo.com/#products
+
+## Blog
+- The 60% Trap: Why E-Commerce Giants Are Laundering Discounts: https://www.getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing
+- I built a phishing detector into Chrome using Claude AI: https://www.getkibbo.com/blog/phishing-detector-chrome-claude-ai
+- I built a Chrome extension that catches every dark pattern on shopping sites: https://www.getkibbo.com/blog/dark-patterns-detector-javascript
+
+## Contact
+- Email: hello@getkibbo.com
+- GitHub: https://github.com/Sevillanitto

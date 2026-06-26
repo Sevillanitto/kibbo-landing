@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://getkibbo.com/">
+<link rel="canonical" href="https://www.getkibbo.com/">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Kibbo — Developer tools for real problems</title>
 <meta name="description" content="Kibbo builds Chrome extensions and web apps that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Kibbo — Tools to fight online tricks">
+<meta property="og:description" content="Chrome extensions and web apps that detect dark patterns, fake discounts, phishing and abusive contracts. Source code included. No subscriptions.">
+<meta property="og:url" content="https://www.getkibbo.com/">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kibbo — Tools to fight online tricks">
+<meta name="twitter:description" content="Chrome extensions and web apps that detect dark patterns, fake discounts, phishing and abusive contracts. Source code included.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -356,6 +369,194 @@ footer {
   .footer-links { gap: 16px; }
 }
 </style>
+
+<!-- Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.getkibbo.com/#organization",
+      "name": "Kibbo",
+      "url": "https://www.getkibbo.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getkibbo.com/favicon.png"
+      },
+      "description": "Kibbo builds Chrome extensions and web apps that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.",
+      "founder": {
+        "@type": "Person",
+        "name": "Carlos López Tejeiro",
+        "url": "https://www.getkibbo.com/about"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@getkibbo.com",
+        "contactType": "customer support"
+      },
+      "sameAs": [
+        "https://github.com/Sevillanitto"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.getkibbo.com/#website",
+      "url": "https://www.getkibbo.com/",
+      "name": "Kibbo",
+      "description": "Developer tools for real problems — Chrome extensions and web apps with source code included.",
+      "publisher": {
+        "@id": "https://www.getkibbo.com/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+
+<!-- Products -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-web-guardian",
+      "name": "Web Guardian — Shopping Protection Suite",
+      "description": "8 protection modules in one Chrome extension. Detects dark patterns, fake discounts, phishing, abusive contract clauses and more. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/web-guardian.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "69.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/web-guardian-suite",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-legal-contract-analyzer",
+      "name": "Legal Contract Analyzer",
+      "description": "Chrome extension that detects abusive clauses and hard-to-cancel subscriptions in terms and conditions. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/legal-contract-analyzer.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "19.00",
+        "priceCurrency": "USD",
+        "offerCount": "1",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/legal-contract-analyzer",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-ai-phishing-detector",
+      "name": "AI Phishing Detector",
+      "description": "Chrome extension powered by Claude AI that detects phishing SMS and email scams in real time. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/phishing-detector.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "19.00",
+        "priceCurrency": "USD",
+        "offerCount": "1",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/ai-phishing-detector-extension",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-price-history-tracker",
+      "name": "Price History Tracker",
+      "description": "Chrome extension that tracks price history so you can verify whether a discount is real before buying. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/price-history-tracker.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "24.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/price-history-tracker",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-checkout-security-shield",
+      "name": "Checkout Security Shield",
+      "description": "Chrome extension for payment gateway verification and fraud blacklist checking at checkout. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/checkout-security-shield.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "19.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/checkout-security-shield",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-dark-patterns-detector",
+      "name": "Dark Patterns Detector",
+      "description": "Chrome extension that exposes fake urgency timers, trap checkboxes, and confirmshaming on shopping sites in real time. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/dark-patterns-detector.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "19.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/dark-patterns-detector",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.getkibbo.com/#product-cookie-consent-equalizer",
+      "name": "Cookie Consent Equalizer",
+      "description": "Chrome extension that makes the cookie reject button equal in prominence to the accept button. Source code included.",
+      "url": "https://www.getkibbo.com/#products",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Opera",
+      "image": "https://www.getkibbo.com/images/products/cookie-equalizer.png",
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer",
+        "seller": { "@id": "https://www.getkibbo.com/#organization" }
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -411,7 +612,7 @@ footer {
         <div class="product-body">
           <span class="product-tag">Flagship · 8-in-1</span>
           <h3 class="product-title">Web Guardian — Shopping Protection Suite</h3>
-          <p class="product-desc">8 protection modules in one extension.</p>
+          <p class="product-desc">Kibbo's flagship bundle: eight protection modules in a single Chrome extension. It detects dark patterns, fake discounts, phishing messages, abusive contract clauses, risky checkouts and manipulative cookie banners as you browse — everything running locally in your browser. Buy once, get the full commercial source code, and pay no subscription.</p>
           <div class="product-foot">
             <span class="product-price">$69</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/web-guardian-suite" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -426,7 +627,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">Legal Contract Analyzer</h3>
-          <p class="product-desc">Detect abusive clauses and hard-to-cancel subscriptions.</p>
+          <p class="product-desc">Reads the terms and conditions you never do. This extension scans contracts, subscriptions and privacy policies to flag abusive clauses, automatic renewals and hard-to-cancel traps before you agree to them. Everything runs locally in your browser, the source code is included, and there's no subscription — pay once and own it.</p>
           <div class="product-foot">
             <span class="product-price">From $19</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/legal-contract-analyzer" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -441,7 +642,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">AI Phishing Detector</h3>
-          <p class="product-desc">Claude AI-powered SMS and email scam detection.</p>
+          <p class="product-desc">Paste any suspicious SMS or email and get an instant verdict. Powered by Claude AI through a private proxy, it spots impersonation of banks, couriers and government agencies in real time and explains why a message is likely a scam. Source code included, no subscription, and your data never trains a model.</p>
           <div class="product-foot">
             <span class="product-price">From $19</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/ai-phishing-detector-extension" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -456,7 +657,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">Price History Tracker</h3>
-          <p class="product-desc">Know if that discount is real before you buy.</p>
+          <p class="product-desc">Know whether that discount is real before you buy. The extension records an item's price over time and shows the history inline on the product page, so an inflated "original price" or a fake Black Friday deal is obvious at a glance. It runs locally, the source code is included, and there's no subscription.</p>
           <div class="product-foot">
             <span class="product-price">$24</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -471,7 +672,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">Checkout Security Shield</h3>
-          <p class="product-desc">Payment gateway verification and fraud blacklist.</p>
+          <p class="product-desc">A safety net for the final step of any purchase. It verifies the payment gateway, checks the store against a fraud blacklist and warns you before you hand over card details to a suspicious or spoofed checkout. All checks run locally in your browser. Source code included, and no subscription.</p>
           <div class="product-foot">
             <span class="product-price">$19</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -486,7 +687,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">Dark Patterns Detector</h3>
-          <p class="product-desc">Expose fake urgency, trap checkboxes, confirmshaming.</p>
+          <p class="product-desc">Exposes the manipulation built into shopping sites: countdown timers that secretly reset, "only 3 left" counters that never change, pre-checked trap boxes and confirmshaming buttons. It flags each trick in real time using pure DOM inspection — no AI, no API calls, works offline. Source code included, and no subscription.</p>
           <div class="product-foot">
             <span class="product-price">$19</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/dark-patterns-detector" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -501,7 +702,7 @@ footer {
         </div>
         <div class="product-body">
           <h3 class="product-title">Cookie Consent Equalizer</h3>
-          <p class="product-desc">Makes the reject button equal to accept.</p>
+          <p class="product-desc">Rebalances manipulative cookie banners so refusing is as easy as accepting. It surfaces the hidden "reject all" option and gives it the same prominence as the accept button, so you can decline tracking in one click instead of digging through settings. Runs locally, source code included, and no subscription.</p>
           <div class="product-foot">
             <span class="product-price">$14</span>
             <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer" target="_blank" rel="noopener">View on Gumroad →</a>
@@ -517,10 +718,14 @@ footer {
 <footer id="contact">
   <div class="footer-logo">KIBBO</div>
   <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
     <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
     <a href="mailto:hello@getkibbo.com">Contact</a>
   </div>
-  <div class="footer-copy">© 2026 · Built by an independent developer</div>
+  <div class="footer-copy">© 2026 · Built by Carlos López Tejeiro, an independent developer</div>
 </footer>
 
 <script>
