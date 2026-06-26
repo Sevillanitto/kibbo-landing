@@ -4,375 +4,29 @@
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.getkibbo.com/">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kibbo — Developer tools for real problems</title>
+<title>Kibbo — Tools to fight the tricks of the modern web</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Kibbo builds Chrome extensions and web apps that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.">
+<meta name="description" content="Kibbo builds analyzers, document generators, templates, free resources and developer tools that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Kibbo — Tools to fight online tricks">
-<meta property="og:description" content="Chrome extensions and web apps that detect dark patterns, fake discounts, phishing and abusive contracts. Source code included. No subscriptions.">
+<meta property="og:title" content="Kibbo — Tools to fight the tricks of the modern web">
+<meta property="og:description" content="Analyzers, document generators, templates, free resources and developer tools that fix real consumer problems. Source code included. No subscriptions.">
 <meta property="og:url" content="https://www.getkibbo.com/">
-<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
-<!-- Twitter Card -->
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kibbo — Tools to fight online tricks">
-<meta name="twitter:description" content="Chrome extensions and web apps that detect dark patterns, fake discounts, phishing and abusive contracts. Source code included.">
-<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<meta name="twitter:title" content="Kibbo — Tools to fight the tricks of the modern web">
+<meta name="twitter:description" content="Analyzers, document generators, templates, free resources and developer tools that fix real consumer problems.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-weight: 400;
-  background: #FFFFFF;
-  color: #0A0A0A;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 
-/* ============================================================
-   NAV
-   ============================================================ */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  background: #FFFFFF;
-  border-bottom: 2px solid #0A0A0A;
-}
-.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-.nav-logo-text {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  color: #0A0A0A;
-  letter-spacing: -0.5px;
-}
-.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
-.nav-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #0A0A0A;
-  text-decoration: none;
-  padding: 6px 16px;
-  transition: background 0.1s;
-}
-.nav-links a:hover { background: #FFE500; }
-
-/* Hamburger */
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-}
-.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
-.nav-mobile-menu {
-  display: none;
-  position: fixed;
-  top: 60px; left: 0; right: 0;
-  background: #FFFFFF;
-  border-bottom: 2px solid #0A0A0A;
-  z-index: 99;
-  padding: 16px 24px 20px;
-  flex-direction: column;
-  gap: 4px;
-}
-.nav-mobile-menu.open { display: flex; }
-.nav-mobile-menu a {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #0A0A0A;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-.nav-mobile-menu a:last-child { border-bottom: none; }
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero {
-  background: #FFE500;
-  border-bottom: 3px solid #0A0A0A;
-  padding: 130px 40px 80px;
-}
-.hero-inner { max-width: 1100px; margin: 0 auto; }
-.hero-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: clamp(44px, 8vw, 88px);
-  line-height: 0.95;
-  letter-spacing: -2px;
-  color: #0A0A0A;
-  margin-bottom: 24px;
-  max-width: 14ch;
-}
-.hero-sub {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 500;
-  font-size: clamp(16px, 2.4vw, 22px);
-  color: #0A0A0A;
-  max-width: 620px;
-  line-height: 1.5;
-}
-.hero-trust {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  color: rgba(10,10,10,0.6);
-  margin-top: 14px;
-  letter-spacing: 0.2px;
-}
-
-/* Secondary CTA — TrapMart demo */
-.hero-demo {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 32px;
-  padding: 16px 22px;
-  background: #FFFFFF;
-  border: 2px solid #0A0A0A;
-  border-radius: 2px;
-  box-shadow: 4px 4px 0px #0A0A0A;
-  text-decoration: none;
-  max-width: 480px;
-  transition: box-shadow 0.1s, transform 0.1s;
-}
-.hero-demo:hover { box-shadow: 2px 2px 0px #0A0A0A; transform: translate(2px, 2px); }
-.hero-demo-label {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #0A0A0A;
-}
-.hero-demo-desc {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  color: #444444;
-  line-height: 1.5;
-}
-
-/* ============================================================
-   PRODUCTS
-   ============================================================ */
-.products { background: #FFFFFF; padding: 80px 40px 100px; }
-.products-inner { max-width: 1100px; margin: 0 auto; }
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: clamp(30px, 5vw, 52px);
-  color: #0A0A0A;
-  letter-spacing: -1.5px;
-  line-height: 1;
-  margin-bottom: 44px;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  background: #FFFFFF;
-  border: 2px solid #0A0A0A;
-  border-radius: 2px;
-  box-shadow: 4px 4px 0px #0A0A0A;
-  overflow: hidden;
-  transition: box-shadow 0.1s, transform 0.1s;
-}
-.product-card:hover {
-  box-shadow: 2px 2px 0px #0A0A0A;
-  transform: translate(2px, 2px);
-}
-
-/* Image banner — same ratio for all 7, never distorted */
-.product-media {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #FFE500;
-  border-bottom: 2px solid #0A0A0A;
-  overflow: hidden;
-}
-.product-media picture { display: block; width: 100%; height: 100%; }
-.product-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-.product-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 22px 22px 24px;
-  flex: 1;
-}
-.product-tag {
-  align-self: flex-start;
-  background: #FFE500;
-  color: #0A0A0A;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border: 2px solid #0A0A0A;
-  border-radius: 2px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.product-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 19px;
-  color: #0A0A0A;
-  line-height: 1.25;
-}
-.product-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #444444;
-  line-height: 1.6;
-  flex: 1;
-}
-.product-foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 12px;
-}
-.product-price {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: 22px;
-  color: #0A0A0A;
-  letter-spacing: -0.5px;
-  white-space: nowrap;
-}
-.product-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  background: #0A0A0A;
-  color: #FFE500;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  border: 2px solid #0A0A0A;
-  border-radius: 2px;
-  box-shadow: 3px 3px 0px rgba(0,0,0,0.25);
-  transition: box-shadow 0.1s, transform 0.1s;
-  white-space: nowrap;
-}
-.product-btn:hover { box-shadow: 1px 1px 0px rgba(0,0,0,0.25); transform: translate(2px, 2px); }
-
-/* Featured card — full width, larger banner & title */
-.product-card.featured { grid-column: 1 / -1; }
-.product-card.featured .product-media { aspect-ratio: 24 / 7; background: #FFE500; }
-.product-card.featured .product-media img { object-fit: contain; }
-.product-card.featured .product-title { font-size: 28px; }
-.product-card.featured .product-desc { font-size: 16px; }
-.product-card.featured .product-price { font-size: 28px; }
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer {
-  background: #0A0A0A;
-  padding: 32px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.footer-logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  color: #FFFFFF;
-  letter-spacing: -0.5px;
-}
-.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.footer-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-  transition: color 0.1s;
-}
-.footer-links a:hover { color: #FFE500; }
-.footer-copy {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  width: 100%;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 16px;
-  margin-top: 4px;
-}
-
-/* ============================================================
-   SCROLL REVEAL
-   ============================================================ */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.reveal.vis { opacity: 1; transform: translateY(0); }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 900px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
-  .hero { padding: 110px 20px 60px; }
-  .products { padding: 56px 20px 72px; }
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
-  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  .footer-logo { margin-bottom: 12px; }
-}
-@media (max-width: 560px) {
-  .product-grid { grid-template-columns: 1fr; }
-  .product-card.featured .product-media { aspect-ratio: 16 / 9; }
-  .product-card.featured .product-title { font-size: 22px; }
-  .hero-title { letter-spacing: -1px; }
-  .footer-links { gap: 16px; }
-}
-</style>
-
-<!-- Organization + WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -382,179 +36,19 @@ footer {
       "@id": "https://www.getkibbo.com/#organization",
       "name": "Kibbo",
       "url": "https://www.getkibbo.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.getkibbo.com/favicon.png"
-      },
-      "description": "Kibbo builds Chrome extensions and web apps that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.",
-      "founder": {
-        "@type": "Person",
-        "name": "Carlos Lopez",
-        "url": "https://www.getkibbo.com/about"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hello@getkibbo.com",
-        "contactType": "customer support"
-      },
-      "sameAs": [
-        "https://github.com/Sevillanitto"
-      ]
+      "logo": { "@type": "ImageObject", "url": "https://www.getkibbo.com/favicon.png" },
+      "description": "Kibbo builds analyzers, document generators, templates, free resources and developer tools that fix real consumer problems — dark patterns, fake discounts, abusive contracts, phishing. Source code included. No subscriptions.",
+      "founder": { "@type": "Person", "name": "Carlos Lopez", "url": "https://www.getkibbo.com/about" },
+      "contactPoint": { "@type": "ContactPoint", "email": "hello@getkibbo.com", "contactType": "customer support" },
+      "sameAs": [ "https://github.com/Sevillanitto" ]
     },
     {
       "@type": "WebSite",
       "@id": "https://www.getkibbo.com/#website",
       "url": "https://www.getkibbo.com/",
       "name": "Kibbo",
-      "description": "Developer tools for real problems — Chrome extensions and web apps with source code included.",
-      "publisher": {
-        "@id": "https://www.getkibbo.com/#organization"
-      },
+      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
       "inLanguage": "en"
-    }
-  ]
-}
-</script>
-
-<!-- Products -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-web-guardian",
-      "name": "Web Guardian — Shopping Protection Suite",
-      "description": "8 protection modules in one Chrome extension. Detects dark patterns, fake discounts, phishing, abusive contract clauses and more. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "SecurityApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/web-guardian.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "Offer",
-        "price": "69.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/web-guardian-suite",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-legal-contract-analyzer",
-      "name": "Legal Contract Analyzer",
-      "description": "Chrome extension that detects abusive clauses and hard-to-cancel subscriptions in terms and conditions. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "SecurityApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/legal-contract-analyzer.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "19.00",
-        "priceCurrency": "USD",
-        "offerCount": "1",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/legal-contract-analyzer",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-ai-phishing-detector",
-      "name": "AI Phishing Detector",
-      "description": "Chrome extension powered by Claude AI that detects phishing SMS and email scams in real time. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "SecurityApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/phishing-detector.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "19.00",
-        "priceCurrency": "USD",
-        "offerCount": "1",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/ai-phishing-detector-extension",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-price-history-tracker",
-      "name": "Price History Tracker",
-      "description": "Chrome extension that tracks price history so you can verify whether a discount is real before buying. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/price-history-tracker.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "Offer",
-        "price": "24.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/price-history-tracker",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-checkout-security-shield",
-      "name": "Checkout Security Shield",
-      "description": "Chrome extension for payment gateway verification and fraud blacklist checking at checkout. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "SecurityApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/checkout-security-shield.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "Offer",
-        "price": "19.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/checkout-security-shield",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-dark-patterns-detector",
-      "name": "Dark Patterns Detector",
-      "description": "Chrome extension that exposes fake urgency timers, trap checkboxes, and confirmshaming on shopping sites in real time. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "SecurityApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/dark-patterns-detector.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "Offer",
-        "price": "19.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/dark-patterns-detector",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.getkibbo.com/#product-cookie-consent-equalizer",
-      "name": "Cookie Consent Equalizer",
-      "description": "Chrome extension that makes the cookie reject button equal in prominence to the accept button. Source code included.",
-      "url": "https://www.getkibbo.com/#products",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Opera",
-      "image": "https://www.getkibbo.com/images/products/cookie-equalizer.png",
-      "publisher": { "@id": "https://www.getkibbo.com/#organization" },
-      "offers": {
-        "@type": "Offer",
-        "price": "14.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer",
-        "seller": { "@id": "https://www.getkibbo.com/#organization" }
-      }
     }
   ]
 }
@@ -564,14 +58,15 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo">
-    <span class="nav-logo-text">KIBBO</span>
-  </a>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
+    <li><a href="/analyze.html">Analyze</a></li>
+    <li><a href="/generate.html">Generate</a></li>
+    <li><a href="/templates.html">Templates</a></li>
+    <li><a href="/directory.html">Directory</a></li>
+    <li><a href="/developer-tools.html">Dev Tools</a></li>
     <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/supplement-analyzer.html">Analyze</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="/#contact">Contact</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -580,10 +75,13 @@ footer {
 
 <!-- MOBILE MENU -->
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="#products">Products</a>
+  <a href="/analyze.html">Analyze</a>
+  <a href="/generate.html">Generate</a>
+  <a href="/templates.html">Templates</a>
+  <a href="/directory.html">Directory</a>
+  <a href="/developer-tools.html">Dev Tools</a>
   <a href="/blog.html">Blog</a>
-  <a href="/supplement-analyzer.html">Analyze</a>
-  <a href="#contact">Contact</a>
+  <a href="/#contact">Contact</a>
 </div>
 
 <!-- HERO -->
@@ -592,146 +90,50 @@ footer {
     <h1 class="hero-title">The internet is full of tricks. We build the tools to fight back.</h1>
     <p class="hero-sub">Software for consumers and developers. Source code included.</p>
     <p class="hero-trust">🔒 Safe checkout via Gumroad · Instant download · No subscription</p>
-    <a class="hero-demo" href="/demo.html">
-      <span class="hero-demo-label">Want to see it in action? Try TrapMart →</span>
-      <span class="hero-demo-desc">A fake store full of every trick in the book. See exactly what our tools catch.</span>
-    </a>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="products" id="products">
-  <div class="products-inner">
-    <h2 class="section-title reveal">PRODUCTS</h2>
-    <div class="product-grid">
+<!-- CATEGORY CARDS -->
+<section class="categories" aria-label="What Kibbo offers">
+  <div class="cat-grid">
 
-      <!-- Card 1 — featured -->
-      <article class="product-card featured reveal">
-        <div class="product-media">
-          <picture>
-            <source media="(max-width: 560px)" srcset="images/products/web-guardian-mobile.png">
-            <img src="images/products/web-guardian.png" alt="Web Guardian — Shopping Protection Suite" loading="lazy">
-          </picture>
-        </div>
-        <div class="product-body">
-          <span class="product-tag">Flagship · 8-in-1</span>
-          <h3 class="product-title">Web Guardian — Shopping Protection Suite</h3>
-          <p class="product-desc">Kibbo's flagship bundle: eight protection modules in a single Chrome extension. It detects dark patterns, fake discounts, phishing messages, abusive contract clauses, risky checkouts and manipulative cookie banners as you browse — everything running locally in your browser. Buy once, get the full commercial source code, and pay no subscription.</p>
-          <div class="product-foot">
-            <span class="product-price">$69</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/web-guardian-suite" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
+    <a class="cat-card" href="/analyze.html">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></span>
+      <h3 class="cat-title">Analyze</h3>
+      <p class="cat-desc">AI-powered tools that break down supplements, contracts, job offers and more.</p>
+    </a>
 
-      <!-- Card: Supplement Ingredients Auditor (free tool) -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/supplement-auditor.png" alt="Supplement Ingredients Auditor" loading="lazy">
-        </div>
-        <div class="product-body">
-          <span class="product-tag">Free Tool</span>
-          <h3 class="product-title">Supplement Ingredients Auditor</h3>
-          <p class="product-desc">Paste any supplement label and get an evidence-based breakdown of every ingredient. Green, yellow or red — no marketing, just science.</p>
-          <div class="product-foot">
-            <span class="product-price">Free</span>
-            <a class="product-btn" href="/supplement-analyzer.html">Analyze →</a>
-          </div>
-        </div>
-      </article>
+    <a class="cat-card" href="/generate.html">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><line x1="12" y1="11" x2="12" y2="17"/><polyline points="9 14 12 17 15 14"/></svg></span>
+      <h3 class="cat-title">Generate</h3>
+      <p class="cat-desc">Fill a form. Download a ready-to-send legal letter. No lawyers needed.</p>
+    </a>
 
-      <!-- Card 2 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/legal-contract-analyzer.png" alt="Legal Contract Analyzer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">Legal Contract Analyzer</h3>
-          <p class="product-desc">Reads the terms and conditions you never do. This extension scans contracts, subscriptions and privacy policies to flag abusive clauses, automatic renewals and hard-to-cancel traps before you agree to them. Everything runs locally in your browser, the source code is included, and there's no subscription — pay once and own it.</p>
-          <div class="product-foot">
-            <span class="product-price">From $19</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/legal-contract-analyzer" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
+    <a class="cat-card" href="/templates.html">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+      <h3 class="cat-title">Templates</h3>
+      <p class="cat-desc">Checklists, trackers and document packs for real consumer problems.</p>
+    </a>
 
-      <!-- Card 3 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/phishing-detector.png" alt="AI Phishing Detector" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">AI Phishing Detector</h3>
-          <p class="product-desc">Paste any suspicious SMS or email and get an instant verdict. Powered by Claude AI through a private proxy, it spots impersonation of banks, couriers and government agencies in real time and explains why a message is likely a scam. Source code included, no subscription, and your data never trains a model.</p>
-          <div class="product-foot">
-            <span class="product-price">From $19</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/ai-phishing-detector-extension" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
+    <a class="cat-card" href="/directory.html">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+      <h3 class="cat-title">Directory</h3>
+      <p class="cat-desc">Free resources. Carrier complaint links, scam databases and more.</p>
+    </a>
 
-      <!-- Card 4 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/price-history-tracker.png" alt="Price History Tracker" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">Price History Tracker</h3>
-          <p class="product-desc">Know whether that discount is real before you buy. The extension records an item's price over time and shows the history inline on the product page, so an inflated "original price" or a fake Black Friday deal is obvious at a glance. It runs locally, the source code is included, and there's no subscription.</p>
-          <div class="product-foot">
-            <span class="product-price">$24</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
+    <a class="cat-card" href="/developer-tools.html">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+      <h3 class="cat-title">Developer Tools</h3>
+      <p class="cat-desc">Chrome extensions and web apps with full source code. Deploy and customize.</p>
+    </a>
 
-      <!-- Card 5 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/checkout-security-shield.png" alt="Checkout Security Shield" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">Checkout Security Shield</h3>
-          <p class="product-desc">A safety net for the final step of any purchase. It verifies the payment gateway, checks the store against a fraud blacklist and warns you before you hand over card details to a suspicious or spoofed checkout. All checks run locally in your browser. Source code included, and no subscription.</p>
-          <div class="product-foot">
-            <span class="product-price">$19</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 6 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/dark-patterns-detector.png" alt="Dark Patterns Detector" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">Dark Patterns Detector</h3>
-          <p class="product-desc">Exposes the manipulation built into shopping sites: countdown timers that secretly reset, "only 3 left" counters that never change, pre-checked trap boxes and confirmshaming buttons. It flags each trick in real time using pure DOM inspection — no AI, no API calls, works offline. Source code included, and no subscription.</p>
-          <div class="product-foot">
-            <span class="product-price">$19</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/dark-patterns-detector" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 7 -->
-      <article class="product-card reveal">
-        <div class="product-media">
-          <img src="images/products/cookie-equalizer.png" alt="Cookie Consent Equalizer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">Cookie Consent Equalizer</h3>
-          <p class="product-desc">Rebalances manipulative cookie banners so refusing is as easy as accepting. It surfaces the hidden "reject all" option and gives it the same prominence as the accept button, so you can decline tracking in one click instead of digging through settings. Runs locally, source code included, and no subscription.</p>
-          <div class="product-foot">
-            <span class="product-price">$14</span>
-            <a class="product-btn" href="https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer" target="_blank" rel="noopener">View on Gumroad →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
   </div>
+</section>
+
+<!-- WHY KIBBO -->
+<section class="why">
+  <h2>Why Kibbo</h2>
+  <p>The modern web is quietly engineered against you: fake discounts, dark patterns, contracts written to be misread, and scams dressed up as official messages. Kibbo builds small, focused tools that hand that leverage back to you. Everything is pay-once with full source code included — you own what you run, and developers can build on top of it.</p>
 </section>
 
 <!-- FOOTER -->
@@ -739,17 +141,17 @@ footer {
   <div class="footer-logo">KIBBO</div>
   <div class="footer-links">
     <a href="/about">About</a>
-    <a href="/blog">Blog</a>
+    <a href="/blog.html">Blog</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>
     <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
     <a href="mailto:hello@getkibbo.com">Contact</a>
   </div>
+  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
   <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
 </footer>
 
 <script>
-/* HAMBURGER MENU */
 (function() {
   var btn = document.getElementById('hamburger');
   var menu = document.getElementById('mobileMenu');
@@ -759,14 +161,6 @@ footer {
     a.addEventListener('click', function() { menu.classList.remove('open'); });
   });
 })();
-
-/* SCROLL REVEAL */
-var ro = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
 </script>
 </body>
 </html>

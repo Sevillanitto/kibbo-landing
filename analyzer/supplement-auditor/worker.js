@@ -1,10 +1,14 @@
 // Supplement Ingredients Auditor — Cloudflare Worker
 //
-// Receives POST { ingredients: "..." }, calls the Claude API, and returns
-// the parsed JSON analysis to the frontend.
+// Receives POST { ingredients: "..." }, enforces a free daily rate limit per
+// IP using Cloudflare KV, calls the Claude API, and returns the parsed JSON
+// analysis (plus how many free analyses remain today) to the frontend.
 //
-// Set the API key as an environment variable / secret named ANTHROPIC_API_KEY:
-//   npx wrangler secret put ANTHROPIC_API_KEY
+// Required bindings / secrets:
+//   - ANTHROPIC_API_KEY  (secret):  npx wrangler secret put ANTHROPIC_API_KEY
+//   - RATE_LIMIT_KV      (KV namespace binding):  see wrangler.toml / README
+
+const DAILY_LIMIT = 3;
 
 const SYSTEM_PROMPT = `You are an evidence-based sports nutrition and toxicology expert. Analyze the following supplement ingredient list.
 
@@ -39,9 +43,17 @@ function jsonResponse(body, status = 200) {
   });
 }
 
+// KV key for the per-IP, per-day counter, e.g. "ip:203.0.113.7:2026-06-26".
+// The date component (UTC) rotates the key every day; the TTL just garbage-
+// collects yesterday's keys.
+function rateKey(ip) {
+  const day = new Date().toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
+  return `ip:${ip}:${day}`;
+}
+
 export default {
   async fetch(request, env) {
-    // Preflight
+    // CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: CORS_HEADERS });
     }
@@ -66,6 +78,33 @@ export default {
       return jsonResponse({ error: 'Missing "ingredients" field' }, 400);
     }
 
+    // ---- Rate limiting (free: DAILY_LIMIT analyses per IP per day) ----
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+    const kv = env.RATE_LIMIT_KV;
+    const key = rateKey(ip);
+    let used = 0;
+
+    if (kv) {
+      try {
+        const stored = await kv.get(key);
+        used = stored ? (parseInt(stored, 10) || 0) : 0;
+      } catch (err) {
+        // KV read failed — fail open so a storage hiccup never blocks users.
+        used = 0;
+      }
+
+      if (used >= DAILY_LIMIT) {
+        return jsonResponse(
+          {
+            error: 'limit_reached',
+            message: 'You have used your 3 free analyses today. Come back tomorrow.',
+          },
+          429
+        );
+      }
+    }
+
+    // ---- Claude API call ----
     try {
       const apiRes = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
@@ -106,6 +145,21 @@ export default {
         );
       }
 
+      // Only count successful analyses so users aren't charged a credit for
+      // our own errors. Increment now and report what's left.
+      let remaining = null;
+      if (kv) {
+        const newUsed = used + 1;
+        try {
+          await kv.put(key, String(newUsed), { expirationTtl: 86400 });
+        } catch (err) {
+          // If the write fails we still return the analysis; the counter just
+          // won't advance this time.
+        }
+        remaining = Math.max(0, DAILY_LIMIT - newUsed);
+      }
+
+      parsed.remaining = remaining;
       return jsonResponse(parsed);
     } catch (err) {
       return jsonResponse({ error: 'Worker error', detail: err.message }, 500);

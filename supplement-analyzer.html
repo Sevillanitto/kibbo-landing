@@ -50,9 +50,12 @@
 <nav>
   <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
   <ul class="nav-links">
-    <li><a href="/#products">Products</a></li>
+    <li><a href="/analyze.html" class="active">Analyze</a></li>
+    <li><a href="/generate.html">Generate</a></li>
+    <li><a href="/templates.html">Templates</a></li>
+    <li><a href="/directory.html">Directory</a></li>
+    <li><a href="/developer-tools.html">Dev Tools</a></li>
     <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/supplement-analyzer.html" class="active">Analyze</a></li>
     <li><a href="/#contact">Contact</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
@@ -62,9 +65,12 @@
 
 <!-- MOBILE MENU -->
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/#products">Products</a>
+  <a href="/analyze.html">Analyze</a>
+  <a href="/generate.html">Generate</a>
+  <a href="/templates.html">Templates</a>
+  <a href="/directory.html">Directory</a>
+  <a href="/developer-tools.html">Dev Tools</a>
   <a href="/blog.html">Blog</a>
-  <a href="/supplement-analyzer.html">Analyze</a>
   <a href="/#contact">Contact</a>
 </div>
 
@@ -84,8 +90,15 @@
 
     <button class="supp-analyze" id="analyzeBtn">Analyze Ingredients</button>
 
+    <p class="supp-fineprint" id="quota">3 free analyses per day · No account required</p>
+
     <div class="supp-error" id="error" style="display:none;"></div>
   </main>
+
+  <section class="supp-limit" id="limitMsg">
+    <div class="supp-limit-title">Daily limit reached</div>
+    <p>You've used your 3 free analyses today. Come back tomorrow for more.</p>
+  </section>
 
   <section class="supp-results" id="results">
     <div class="supp-score">
@@ -112,6 +125,7 @@
     <a href="/terms">Terms</a>
     <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
     <a href="mailto:hello@getkibbo.com">Contact</a>
+    <a href="/demo.html">Try TrapMart — see dark patterns in action →</a>
   </div>
   <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
 </footer>
@@ -137,6 +151,8 @@
   const input = document.getElementById('ingredients');
   const results = document.getElementById('results');
   const errorBox = document.getElementById('error');
+  const limitMsg = document.getElementById('limitMsg');
+  const quota = document.getElementById('quota');
 
   const COLORS = { GREEN: '#4A7C59', YELLOW: '#D4A843', RED: '#C4622D' };
 
@@ -198,9 +214,22 @@
     results.style.display = 'block';
   }
 
+  function updateQuota(remaining) {
+    if (typeof remaining !== 'number' || !quota) return;
+    if (remaining <= 0) {
+      quota.textContent = 'No free analyses left today · come back tomorrow';
+    } else {
+      quota.textContent = remaining + ' free ' + (remaining === 1 ? 'analysis' : 'analyses') +
+        ' left today · No account required';
+    }
+  }
+  function showLimit() { if (limitMsg) limitMsg.style.display = 'block'; }
+  function hideLimit() { if (limitMsg) limitMsg.style.display = 'none'; }
+
   async function analyze() {
     const ingredients = input.value.trim();
     clearError();
+    hideLimit();
 
     if (!ingredients) {
       showError('Please paste an ingredients list first.');
@@ -217,12 +246,22 @@
         body: JSON.stringify({ ingredients: ingredients })
       });
 
-      if (!res.ok) {
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+
+      // Daily free limit hit — show the friendly message, not an error.
+      if (res.status === 429 || (data && data.error === 'limit_reached')) {
+        showLimit();
+        updateQuota(0);
+        return;
+      }
+
+      if (!res.ok || !data) {
         throw new Error('Server responded with ' + res.status);
       }
 
-      const data = await res.json();
       render(data);
+      updateQuota(data.remaining);
     } catch (err) {
       showError('Could not analyze the ingredients. ' + err.message);
     } finally {

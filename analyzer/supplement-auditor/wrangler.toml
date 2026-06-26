@@ -1,3 +1,11 @@
 name = "supplement-auditor"
 main = "worker.js"
 compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day).
+# Create it first, then paste the printed id below:
+#   npx wrangler kv namespace create RATE_LIMIT_KV
+# (or create it in the Cloudflare dashboard and copy the namespace ID)
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"

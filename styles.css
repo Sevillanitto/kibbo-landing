@@ -1,87 +1,128 @@
 /* ============================================================
-   Kibbo — shared stylesheet
-   Used by standalone pages that link styles.css (e.g. the
-   Supplement Ingredients Auditor) instead of inlining styles.
+   Kibbo — shared stylesheet (Clean Lab design system)
+   Palette: #F7F6F2 bg · #4A7C59 green · #D4A843 amber · #C4622D red
+   Type: Georgia (serif headings) + Inter (body)
+   Linked by index.html and all section pages.
    ============================================================ */
 
-/* ---- Author byline (blog) ---- */
-.author-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 18px 0 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  color: #0A0A0A;
-}
-.author-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #0A0A0A;
-  display: block;
-  flex-shrink: 0;
-}
-.author-line a {
-  color: #0A0A0A;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(10, 10, 10, 0.4);
+:root {
+  --bg: #F7F6F2;
+  --accent: #4A7C59;
+  --amber: #D4A843;
+  --danger: #C4622D;
+  --ink: #2b2b28;
+  --muted: #8a877f;
+  --line: #e2e0d8;
 }
 
-/* ============================================================
-   SITE BASE  (matches the inline base used across getkibbo.com)
-   ============================================================ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-weight: 400;
-  background: #FFFFFF;
-  color: #0A0A0A;
+  background: var(--bg);
+  color: var(--ink);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ===== NAV (site header) ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== NAV ===== */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+  padding: 0 24px; background: #FFFFFF; border-bottom: 1px solid var(--line);
 }
-.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
-.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
-.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
-.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-logo { text-decoration: none; }
+.nav-logo-text { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: 0.3px; }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; padding: 6px 11px; transition: color 0.12s; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
-.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 1px solid var(--line); z-index: 99; padding: 12px 24px 18px; flex-direction: column; gap: 2px; }
 .nav-mobile-menu.open { display: flex; }
-.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; padding: 11px 0; border-bottom: 1px solid var(--line); }
 .nav-mobile-menu a:last-child { border-bottom: none; }
 
-/* ===== FOOTER (site footer) ===== */
-footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
-.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
-.footer-links a:hover { color: #FFE500; }
-.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+/* ===== HERO (home — compact amber) ===== */
+.hero { background: var(--amber); padding-top: 60px; border-bottom: 1px solid #c4992f; }
+.hero-inner { max-width: 1200px; margin: 0 auto; padding: 66px 24px 66px; text-align: center; }
+.hero-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: clamp(30px, 5vw, 50px); line-height: 1.12; letter-spacing: -0.4px; color: #1c1b18; max-width: 760px; margin: 0 auto 16px; }
+.hero-sub { font-family: 'Inter', sans-serif; font-size: clamp(16px, 2.2vw, 20px); color: #2b2b28; max-width: 600px; margin: 0 auto 12px; line-height: 1.5; }
+.hero-trust { font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(28,27,24,0.7); }
 
-@media (max-width: 900px) {
-  nav { padding: 0 20px; }
+/* ===== CATEGORY CARDS (home) ===== */
+.categories { max-width: 1200px; margin: 0 auto; padding: 56px 24px 16px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.cat-card { display: block; background: #FFFFFF; border: 1px solid var(--line); padding: 28px 26px; text-decoration: none; transition: border-color 0.15s ease; }
+.cat-card:hover { border-color: var(--accent); }
+.cat-icon { color: var(--accent); display: block; margin-bottom: 16px; }
+.cat-icon svg { width: 30px; height: 30px; display: block; }
+.cat-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 21px; color: var(--ink); margin: 0 0 8px; }
+.cat-desc { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--muted); line-height: 1.55; margin: 0; }
+
+/* ===== WHY KIBBO (home) ===== */
+.why { max-width: 760px; margin: 0 auto; padding: 40px 24px 84px; }
+.why h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 24px; color: var(--ink); margin: 0 0 14px; }
+.why p { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.65; color: #4a4842; margin: 0; }
+
+/* ===== SECTION PAGES ===== */
+.section-hero { background: #FFFFFF; border-bottom: 1px solid var(--line); padding-top: 60px; }
+.section-hero-inner { max-width: 1200px; margin: 0 auto; padding: 64px 24px 40px; }
+.section-hero h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.3px; color: var(--ink); margin: 0 0 12px; }
+.section-sub { font-family: 'Inter', sans-serif; font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); max-width: 640px; line-height: 1.5; margin: 0; }
+
+.section-main { max-width: 1200px; margin: 0 auto; padding: 48px 24px 90px; }
+.section-desc { max-width: 720px; margin: 0 0 44px; font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.7; color: #4a4842; }
+.section-desc p { margin: 0 0 18px; }
+.section-desc p:last-child { margin-bottom: 0; }
+.section-note { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--muted); margin-top: 30px; }
+
+/* ===== PRODUCT CARDS (section pages) ===== */
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.prod-card { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--line); padding: 26px 24px; transition: border-color 0.15s ease; }
+.prod-card:hover { border-color: var(--accent); }
+.prod-badge { align-self: flex-start; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 3px 8px; margin-bottom: 14px; }
+.prod-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 19px; color: var(--ink); margin: 0 0 8px; }
+.prod-desc { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--muted); line-height: 1.55; margin: 0 0 20px; flex: 1; }
+.prod-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.prod-price { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 20px; color: var(--ink); white-space: nowrap; }
+.prod-btn { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #fff; background: var(--accent); padding: 10px 16px; text-decoration: none; transition: background 0.15s ease; white-space: nowrap; }
+.prod-btn:hover { background: #3f6b4c; }
+.prod-card.soon { align-items: center; justify-content: center; text-align: center; min-height: 170px; border-style: dashed; }
+.prod-soon { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 18px; color: var(--muted); }
+
+/* ===== FOOTER ===== */
+footer { background: var(--ink); padding: 42px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.footer-logo { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 20px; color: #FFFFFF; letter-spacing: 0.3px; }
+.footer-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.12s; }
+.footer-links a:hover { color: var(--amber); }
+.footer-trapmart { font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.22); padding-bottom: 1px; transition: color 0.12s; }
+.footer-trapmart:hover { color: var(--amber); }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 920px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  .footer-logo { margin-bottom: 12px; }
+  .hero-inner { padding: 52px 20px 52px; }
+  .categories { padding: 44px 20px 12px; }
+  .container, .section-main, .section-hero-inner { padding-left: 20px; padding-right: 20px; }
 }
 
 /* ============================================================
-   SUPPLEMENT INGREDIENTS AUDITOR  (Clean Lab design)
-   Scoped under body.supp-page so it never leaks to other pages.
+   AUTHOR BYLINE (used when a blog page links this stylesheet)
+   ============================================================ */
+.author-line { display: flex; align-items: center; gap: 10px; margin: 18px 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 15px; color: var(--ink); }
+.author-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ink); display: block; flex-shrink: 0; }
+.author-line a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ============================================================
+   SUPPLEMENT INGREDIENTS AUDITOR  (Clean Lab tool)
+   Scoped under body.supp-page.
    ============================================================ */
 .supp-page {
   --supp-bg: #F7F6F2;
@@ -94,16 +135,12 @@ footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content
   background: var(--supp-bg);
   color: var(--supp-ink);
 }
-
 .supp-wrap { max-width: 680px; margin: 0 auto; padding: 116px 24px 96px; }
-
 .supp-intro { margin-bottom: 48px; }
 .supp-eyebrow { font-family: Georgia, "Times New Roman", serif; font-size: 19px; font-weight: 700; letter-spacing: 0.2px; color: var(--supp-ink); }
 .supp-tagline { font-size: 13px; color: var(--supp-muted); margin-top: 4px; }
-
 .supp-h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 34px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.2px; color: var(--supp-ink); }
 .supp-subtext { font-size: 16px; color: var(--supp-muted); margin: 0 0 28px; line-height: 1.5; }
-
 .supp-textarea {
   width: 100%; min-height: 120px; padding: 16px;
   font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.55;
@@ -111,7 +148,6 @@ footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content
   border-radius: 0; resize: vertical; outline: none;
 }
 .supp-textarea:focus { border-color: var(--supp-accent); }
-
 .supp-analyze {
   width: 100%; margin-top: 16px; padding: 16px;
   font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.2px;
@@ -120,23 +156,22 @@ footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content
 }
 .supp-analyze:hover:not(:disabled) { background: #3f6b4c; }
 .supp-analyze:disabled { opacity: 0.65; cursor: default; }
-
 .supp-error { margin-top: 20px; padding: 14px 16px; font-size: 14px; color: var(--supp-danger); background: #fbf0e9; }
-
 .supp-results { display: none; margin-top: 64px; }
 .supp-score { text-align: center; margin-bottom: 40px; }
 .supp-score-number { font-family: Georgia, "Times New Roman", serif; font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -1px; }
 .supp-score-number .slash { color: var(--supp-muted); font-weight: 400; font-size: 40px; }
 .supp-score-underline { width: 80px; height: 3px; margin: 18px auto 0; background: var(--supp-accent); }
 .supp-score-label { margin-top: 16px; font-size: 15px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--supp-muted); }
-
 .supp-summary { font-style: italic; font-size: 16px; line-height: 1.6; color: #4a4842; background: #efeee8; padding: 22px 24px; margin-bottom: 40px; }
 .supp-ingredients-heading { font-family: Georgia, "Times New Roman", serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--supp-muted); margin: 0 0 18px; }
-
 .supp-card { background: #fff; border-left: 4px solid var(--supp-line); padding: 16px 20px; margin-bottom: 12px; }
 .supp-card .name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
 .supp-card .reason { font-weight: 400; font-size: 15px; line-height: 1.5; color: #555349; }
-
+.supp-fineprint { margin-top: 12px; font-size: 13px; color: var(--supp-muted); text-align: center; }
+.supp-limit { display: none; margin-top: 64px; text-align: center; background: #efeee8; padding: 40px 24px; }
+.supp-limit-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 22px; color: var(--supp-ink); margin-bottom: 10px; }
+.supp-limit p { font-size: 16px; line-height: 1.6; color: var(--supp-muted); margin: 0; }
 @media (max-width: 900px) {
   .supp-wrap { padding: 96px 20px 72px; }
 }

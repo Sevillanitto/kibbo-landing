@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/generate">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Generate — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Your situation. Your document. Ready in 60 seconds.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Generate — Kibbo">
+<meta property="og:description" content="Your situation. Your document. Ready in 60 seconds.">
+<meta property="og:url" content="https://www.getkibbo.com/generate">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/analyze.html">Analyze</a></li>
+    <li><a href="/generate.html" class="active">Generate</a></li>
+    <li><a href="/templates.html">Templates</a></li>
+    <li><a href="/directory.html">Directory</a></li>
+    <li><a href="/developer-tools.html">Dev Tools</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/analyze.html">Analyze</a>
+  <a href="/generate.html">Generate</a>
+  <a href="/templates.html">Templates</a>
+  <a href="/directory.html">Directory</a>
+  <a href="/developer-tools.html">Dev Tools</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<header class="section-hero">
+  <div class="section-hero-inner">
+    <h1>Generate</h1>
+    <p class="section-sub">Your situation. Your document. Ready in 60 seconds.</p>
+  </div>
+</header>
+
+<main class="section-main">
+  <div class="section-desc">
+    <p>Writing a formal complaint or a legal letter is harder than it should be, and companies count on that. A correctly worded letter — citing the right regulation, addressed to the right department, with a real deadline — gets results an angry email never will. Most people never send one because they don’t know where to start.</p>
+    <p>Kibbo’s generators close that gap. Answer a few plain questions about your situation and get back a properly structured, ready-to-send document. No jargon to decode, no template to wrestle with, no lawyer’s hourly rate.</p>
+  </div>
+
+  <div class="prod-grid">
+    <div class="prod-card soon"><span class="prod-soon">Coming soon</span></div>
+  </div>
+  <p class="section-note">First generators launching soon.</p>
+</main>
+
+<footer id="contact">
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>

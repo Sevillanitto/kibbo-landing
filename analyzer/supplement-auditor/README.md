@@ -46,15 +46,27 @@ The Worker keeps your API key secret. The browser never sees it.
 
    A browser window opens — click **Allow** to connect wrangler to your account.
 
-3. Create a config file named **`wrangler.toml`** next to `worker.js`:
+3. Create the KV namespace used for the daily rate limit (3 free analyses per IP per day):
+
+   ```bash
+   wrangler kv namespace create RATE_LIMIT_KV
+   ```
+
+   It prints an `id`. Copy it.
+
+4. Create a config file named **`wrangler.toml`** next to `worker.js` (paste the id from the previous step):
 
    ```toml
    name = "supplement-auditor"
    main = "worker.js"
    compatibility_date = "2024-01-01"
+
+   [[kv_namespaces]]
+   binding = "RATE_LIMIT_KV"
+   id = "PASTE_YOUR_KV_NAMESPACE_ID_HERE"
    ```
 
-4. Store your Anthropic key as a secret (it is NOT written into any file):
+5. Store your Anthropic key as a secret (it is NOT written into any file):
 
    ```bash
    wrangler secret put ANTHROPIC_API_KEY
@@ -62,7 +74,7 @@ The Worker keeps your API key secret. The browser never sees it.
 
    Paste your `sk-ant-...` key when prompted and press Enter.
 
-5. Deploy:
+6. Deploy:
 
    ```bash
    wrangler deploy

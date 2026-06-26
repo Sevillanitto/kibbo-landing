@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/directory">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Resources — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="No sign-up. No payment. Just useful information.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Resources — Kibbo">
+<meta property="og:description" content="No sign-up. No payment. Just useful information.">
+<meta property="og:url" content="https://www.getkibbo.com/directory">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/analyze.html">Analyze</a></li>
+    <li><a href="/generate.html">Generate</a></li>
+    <li><a href="/templates.html">Templates</a></li>
+    <li><a href="/directory.html" class="active">Directory</a></li>
+    <li><a href="/developer-tools.html">Dev Tools</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/analyze.html">Analyze</a>
+  <a href="/generate.html">Generate</a>
+  <a href="/templates.html">Templates</a>
+  <a href="/directory.html">Directory</a>
+  <a href="/developer-tools.html">Dev Tools</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<header class="section-hero">
+  <div class="section-hero-inner">
+    <h1>Free Resources</h1>
+    <p class="section-sub">No sign-up. No payment. Just useful information.</p>
+  </div>
+</header>
+
+<main class="section-main">
+  <div class="section-desc">
+    <p>Some of the most useful consumer tools cost nothing — you just have to know they exist. The official complaint portal for your mobile carrier, the database of known scam numbers, the regulator that actually has the power to fine a company that wronged you. This information is public, but it’s scattered and buried.</p>
+    <p>Kibbo’s directory collects it in one place. No sign-up, no payment, no catch — just curated links and references to the free resources that already exist to protect you, organized so you can find the right one fast.</p>
+  </div>
+
+  <div class="prod-grid">
+    <div class="prod-card soon"><span class="prod-soon">Coming soon</span></div>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>

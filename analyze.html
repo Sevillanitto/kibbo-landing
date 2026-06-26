@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/analyze">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Analyze — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Paste text. Get an instant AI-powered breakdown. No account required.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Analyze — Kibbo">
+<meta property="og:description" content="Paste text. Get an instant AI-powered breakdown. No account required.">
+<meta property="og:url" content="https://www.getkibbo.com/analyze">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/analyze.html" class="active">Analyze</a></li>
+    <li><a href="/generate.html">Generate</a></li>
+    <li><a href="/templates.html">Templates</a></li>
+    <li><a href="/directory.html">Directory</a></li>
+    <li><a href="/developer-tools.html">Dev Tools</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/analyze.html">Analyze</a>
+  <a href="/generate.html">Generate</a>
+  <a href="/templates.html">Templates</a>
+  <a href="/directory.html">Directory</a>
+  <a href="/developer-tools.html">Dev Tools</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<header class="section-hero">
+  <div class="section-hero-inner">
+    <h1>Analyze</h1>
+    <p class="section-sub">Paste text. Get an instant AI-powered breakdown. No account required.</p>
+  </div>
+</header>
+
+<main class="section-main">
+  <div class="section-desc">
+    <p>Most consumer products are designed to be confusing. A supplement label lists thirty ingredients in microscopic type; a contract buries the clause that matters on page nine; a job offer frames a below-market salary as the opportunity of a lifetime. The information you need is technically there — it’s just deliberately hard to parse.</p>
+    <p>Kibbo’s analyzers do the parsing for you. Paste the text and an AI model trained to read these documents critically returns a plain-English breakdown: what each part means, what’s normal, and what should give you pause. No account, no upsell, nothing stored.</p>
+  </div>
+
+  <div class="prod-grid">
+    <article class="prod-card">
+    <span class="prod-badge">Free Tool</span>
+      <h3 class="prod-title">Supplement Ingredients Auditor</h3>
+      <p class="prod-desc">Evidence-based breakdown of every ingredient in your supplement. Green, yellow or red — no marketing, just science.</p>
+      <div class="prod-foot">
+        <span class="prod-price">Free</span>
+        <a class="prod-btn" href="/supplement-analyzer.html">Open tool →</a>
+      </div>
+    </article>
+  </div>
+  <p class="section-note">More analyzers coming soon.</p>
+</main>
+
+<footer id="contact">
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+</script>
+</body>
+</html>
