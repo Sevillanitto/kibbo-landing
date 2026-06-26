@@ -1,0 +1,4 @@
+# Source bundle for the Supplement Auditor Cloudflare Worker.
+# Kept in git for reference, but not served on getkibbo.com —
+# the integrated page lives at /supplement-analyzer.html.
+analyzer/

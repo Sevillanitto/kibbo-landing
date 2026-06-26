@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supplement Auditor — Evidence-based ingredient analysis</title>
+
+<!--
+  CONFIGURATION
+  const WORKER_URL = 'https://your-worker.workers.dev';
+  Replace with your own Cloudflare Worker URL after deploying worker.js
+-->
+
+<style>
+  :root {
+    --bg: #F7F6F2;
+    --accent: #4A7C59;
+    --warning: #D4A843;
+    --danger: #C4622D;
+    --ink: #2b2b28;
+    --muted: #8a877f;
+    --line: #e2e0d8;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, "Inter", -apple-system, Segoe UI, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  /* Header */
+  header {
+    margin-bottom: 64px;
+  }
+  .logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--ink);
+  }
+  .tagline {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* Input block */
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    letter-spacing: -0.2px;
+  }
+  .subtext {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 0 0 28px;
+    line-height: 1.5;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    font-family: system-ui, "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    resize: vertical;
+    outline: none;
+  }
+  textarea:focus {
+    border-color: var(--accent);
+  }
+
+  button.analyze {
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    font-family: system-ui, "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  button.analyze:hover:not(:disabled) { background: #3f6b4c; }
+  button.analyze:disabled {
+    opacity: 0.65;
+    cursor: default;
+  }
+
+  .error {
+    margin-top: 20px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--danger);
+    background: #fbf0e9;
+  }
+
+  /* Results block */
+  #results {
+    display: none;
+    margin-top: 64px;
+  }
+
+  .score {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .score-number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .score-number .slash {
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 40px;
+  }
+  .score-underline {
+    width: 80px;
+    height: 3px;
+    margin: 18px auto 0;
+    background: var(--accent);
+  }
+  .score-label {
+    margin-top: 16px;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .summary {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4842;
+    background: #efeee8;
+    padding: 22px 24px;
+    margin-bottom: 40px;
+  }
+
+  .ingredients-heading {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+
+  .card {
+    background: #fff;
+    border-left: 4px solid var(--line);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .card .name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .card .reason {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555349;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">Supplement Auditor</div>
+    <div class="tagline">Evidence-based ingredient analysis</div>
+  </header>
+
+  <main>
+    <h1>What's really in your supplement?</h1>
+    <p class="subtext">Paste the ingredients list from your label or Amazon product page.</p>
+
+    <textarea id="ingredients" placeholder="e.g. Vitamin D3 (cholecalciferol) 50mcg, Magnesium citrate 200mg, Titanium dioxide, Maltodextrin, Natural flavors..."></textarea>
+
+    <button class="analyze" id="analyzeBtn">Analyze Ingredients</button>
+
+    <div class="error" id="error" style="display:none;"></div>
+  </main>
+
+  <section id="results">
+    <div class="score">
+      <div class="score-number"><span id="scoreValue">0</span><span class="slash"> / 100</span></div>
+      <div class="score-underline" id="scoreUnderline"></div>
+      <div class="score-label" id="scoreLabel"></div>
+    </div>
+
+    <p class="summary" id="summary"></p>
+
+    <h2 class="ingredients-heading">Ingredient breakdown</h2>
+    <div id="cards"></div>
+  </section>
+
+</div>
+
+<script>
+  // CONFIGURATION — replace with your deployed Cloudflare Worker URL
+  const WORKER_URL = 'https://supplement-auditor.carlos-lopez-tejeiro.workers.dev';
+
+  const btn = document.getElementById('analyzeBtn');
+  const input = document.getElementById('ingredients');
+  const results = document.getElementById('results');
+  const errorBox = document.getElementById('error');
+
+  const COLORS = { GREEN: '#4A7C59', YELLOW: '#D4A843', RED: '#C4622D' };
+
+  function colorForScore(score) {
+    if (score > 70) return COLORS.GREEN;
+    if (score >= 40) return COLORS.YELLOW;
+    return COLORS.RED;
+  }
+  function labelForScore(score) {
+    if (score > 70) return 'Good';
+    if (score >= 40) return 'Average';
+    return 'Poor Quality';
+  }
+  function verdictColor(verdict) {
+    return COLORS[(verdict || '').toUpperCase()] || COLORS.YELLOW;
+  }
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.style.display = 'block';
+  }
+  function clearError() {
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+
+  function setLoading(loading) {
+    btn.disabled = loading;
+    btn.textContent = loading ? 'Analyzing...' : 'Analyze Ingredients';
+  }
+
+  function render(data) {
+    const score = Math.max(0, Math.min(100, Math.round(Number(data.score) || 0)));
+    document.getElementById('scoreValue').textContent = score;
+    document.getElementById('scoreUnderline').style.background = colorForScore(score);
+    document.getElementById('scoreLabel').textContent = labelForScore(score);
+    document.getElementById('summary').textContent = data.summary || '';
+
+    const cards = document.getElementById('cards');
+    cards.innerHTML = '';
+    (data.ingredients || []).forEach(function (ing) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.borderLeftColor = verdictColor(ing.verdict);
+
+      const name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = ing.name || 'Unknown ingredient';
+
+      const reason = document.createElement('div');
+      reason.className = 'reason';
+      reason.textContent = ing.reason || '';
+
+      card.appendChild(name);
+      card.appendChild(reason);
+      cards.appendChild(card);
+    });
+
+    results.style.display = 'block';
+  }
+
+  async function analyze() {
+    const ingredients = input.value.trim();
+    clearError();
+
+    if (!ingredients) {
+      showError('Please paste an ingredients list first.');
+      return;
+    }
+
+    setLoading(true);
+    results.style.display = 'none';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ingredients: ingredients })
+      });
+
+      if (!res.ok) {
+        throw new Error('Server responded with ' + res.status);
+      }
+
+      const data = await res.json();
+      render(data);
+    } catch (err) {
+      showError('Could not analyze the ingredients. ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  btn.addEventListener('click', analyze);
+</script>
+</body>
+</html>

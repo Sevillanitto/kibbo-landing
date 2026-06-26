@@ -1,8 +1,10 @@
 /* ============================================================
-   Kibbo blog — shared author byline styles
-   Avatar: 36px circular, inline with the author name.
-   Kept consistent with the blog's neobrutalist 2px-border style.
+   Kibbo — shared stylesheet
+   Used by standalone pages that link styles.css (e.g. the
+   Supplement Ingredients Auditor) instead of inlining styles.
    ============================================================ */
+
+/* ---- Author byline (blog) ---- */
 .author-line {
   display: flex;
   align-items: center;
@@ -12,7 +14,6 @@
   font-size: 15px;
   color: #0A0A0A;
 }
-
 .author-avatar {
   width: 36px;
   height: 36px;
@@ -22,11 +23,120 @@
   display: block;
   flex-shrink: 0;
 }
-
 .author-line a {
   color: #0A0A0A;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
   text-decoration-color: rgba(10, 10, 10, 0.4);
+}
+
+/* ============================================================
+   SITE BASE  (matches the inline base used across getkibbo.com)
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== NAV (site header) ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
+}
+.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
+.nav-links a:hover, .nav-links a.active { background: #FFE500; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
+.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+.nav-mobile-menu a:last-child { border-bottom: none; }
+
+/* ===== FOOTER (site footer) ===== */
+footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
+.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
+.footer-links a:hover { color: #FFE500; }
+.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-logo { margin-bottom: 12px; }
+}
+
+/* ============================================================
+   SUPPLEMENT INGREDIENTS AUDITOR  (Clean Lab design)
+   Scoped under body.supp-page so it never leaks to other pages.
+   ============================================================ */
+.supp-page {
+  --supp-bg: #F7F6F2;
+  --supp-accent: #4A7C59;
+  --supp-warning: #D4A843;
+  --supp-danger: #C4622D;
+  --supp-ink: #2b2b28;
+  --supp-muted: #8a877f;
+  --supp-line: #e2e0d8;
+  background: var(--supp-bg);
+  color: var(--supp-ink);
+}
+
+.supp-wrap { max-width: 680px; margin: 0 auto; padding: 116px 24px 96px; }
+
+.supp-intro { margin-bottom: 48px; }
+.supp-eyebrow { font-family: Georgia, "Times New Roman", serif; font-size: 19px; font-weight: 700; letter-spacing: 0.2px; color: var(--supp-ink); }
+.supp-tagline { font-size: 13px; color: var(--supp-muted); margin-top: 4px; }
+
+.supp-h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 34px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.2px; color: var(--supp-ink); }
+.supp-subtext { font-size: 16px; color: var(--supp-muted); margin: 0 0 28px; line-height: 1.5; }
+
+.supp-textarea {
+  width: 100%; min-height: 120px; padding: 16px;
+  font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.55;
+  color: var(--supp-ink); background: #fff; border: 1px solid var(--supp-line);
+  border-radius: 0; resize: vertical; outline: none;
+}
+.supp-textarea:focus { border-color: var(--supp-accent); }
+
+.supp-analyze {
+  width: 100%; margin-top: 16px; padding: 16px;
+  font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.2px;
+  color: #fff; background: var(--supp-accent); border: none; border-radius: 0; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.supp-analyze:hover:not(:disabled) { background: #3f6b4c; }
+.supp-analyze:disabled { opacity: 0.65; cursor: default; }
+
+.supp-error { margin-top: 20px; padding: 14px 16px; font-size: 14px; color: var(--supp-danger); background: #fbf0e9; }
+
+.supp-results { display: none; margin-top: 64px; }
+.supp-score { text-align: center; margin-bottom: 40px; }
+.supp-score-number { font-family: Georgia, "Times New Roman", serif; font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -1px; }
+.supp-score-number .slash { color: var(--supp-muted); font-weight: 400; font-size: 40px; }
+.supp-score-underline { width: 80px; height: 3px; margin: 18px auto 0; background: var(--supp-accent); }
+.supp-score-label { margin-top: 16px; font-size: 15px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--supp-muted); }
+
+.supp-summary { font-style: italic; font-size: 16px; line-height: 1.6; color: #4a4842; background: #efeee8; padding: 22px 24px; margin-bottom: 40px; }
+.supp-ingredients-heading { font-family: Georgia, "Times New Roman", serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--supp-muted); margin: 0 0 18px; }
+
+.supp-card { background: #fff; border-left: 4px solid var(--supp-line); padding: 16px 20px; margin-bottom: 12px; }
+.supp-card .name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+.supp-card .reason { font-weight: 400; font-size: 15px; line-height: 1.5; color: #555349; }
+
+@media (max-width: 900px) {
+  .supp-wrap { padding: 96px 20px 72px; }
 }

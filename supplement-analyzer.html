@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/supplement-analyzer">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Supplement Ingredients Auditor — Evidence-based analysis | Kibbo</title>
+<meta name="description" content="Paste any supplement label and get an evidence-based, ingredient-by-ingredient breakdown — scored green, yellow or red. Free tool by Kibbo. No marketing, just science.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Supplement Ingredients Auditor — Evidence-based analysis">
+<meta property="og:description" content="Paste any supplement label and get an evidence-based, ingredient-by-ingredient breakdown — scored green, yellow or red. Free tool. No marketing, just science.">
+<meta property="og:url" content="https://www.getkibbo.com/supplement-analyzer">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/supplement-auditor.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Supplement Ingredients Auditor — Evidence-based analysis">
+<meta name="twitter:description" content="Paste any supplement label and get an evidence-based, ingredient-by-ingredient breakdown — scored green, yellow or red. Free tool.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/supplement-auditor.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Supplement Ingredients Auditor",
+  "url": "https://www.getkibbo.com/supplement-analyzer",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Paste any supplement label and get an evidence-based, ingredient-by-ingredient breakdown — scored green, yellow or red.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+  "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body class="supp-page">
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
+  <ul class="nav-links">
+    <li><a href="/#products">Products</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/supplement-analyzer.html" class="active">Analyze</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/#products">Products</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/supplement-analyzer.html">Analyze</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<!-- TOOL -->
+<div class="supp-wrap">
+
+  <div class="supp-intro">
+    <div class="supp-eyebrow">Supplement Ingredients Auditor</div>
+    <div class="supp-tagline">Evidence-based ingredient analysis · A free tool by Kibbo</div>
+  </div>
+
+  <main>
+    <h1 class="supp-h1">What's really in your supplement?</h1>
+    <p class="supp-subtext">Paste the ingredients list from your label or Amazon product page.</p>
+
+    <textarea class="supp-textarea" id="ingredients" placeholder="e.g. Vitamin D3 (cholecalciferol) 50mcg, Magnesium citrate 200mg, Titanium dioxide, Maltodextrin, Natural flavors..."></textarea>
+
+    <button class="supp-analyze" id="analyzeBtn">Analyze Ingredients</button>
+
+    <div class="supp-error" id="error" style="display:none;"></div>
+  </main>
+
+  <section class="supp-results" id="results">
+    <div class="supp-score">
+      <div class="supp-score-number"><span id="scoreValue">0</span><span class="slash"> / 100</span></div>
+      <div class="supp-score-underline" id="scoreUnderline"></div>
+      <div class="supp-score-label" id="scoreLabel"></div>
+    </div>
+
+    <p class="supp-summary" id="summary"></p>
+
+    <h2 class="supp-ingredients-heading">Ingredient breakdown</h2>
+    <div id="cards"></div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KIBBO</div>
+  <div class="footer-links">
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:hello@getkibbo.com">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
+</footer>
+
+<script>
+/* HAMBURGER MENU */
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { menu.classList.remove('open'); });
+  });
+})();
+
+/* SUPPLEMENT AUDITOR */
+(function() {
+  // Cloudflare Worker that holds the Anthropic API key and calls Claude.
+  const WORKER_URL = 'https://supplement-auditor.carlos-lopez-tejeiro.workers.dev';
+
+  const btn = document.getElementById('analyzeBtn');
+  const input = document.getElementById('ingredients');
+  const results = document.getElementById('results');
+  const errorBox = document.getElementById('error');
+
+  const COLORS = { GREEN: '#4A7C59', YELLOW: '#D4A843', RED: '#C4622D' };
+
+  function colorForScore(score) {
+    if (score > 70) return COLORS.GREEN;
+    if (score >= 40) return COLORS.YELLOW;
+    return COLORS.RED;
+  }
+  function labelForScore(score) {
+    if (score > 70) return 'Good';
+    if (score >= 40) return 'Average';
+    return 'Poor Quality';
+  }
+  function verdictColor(verdict) {
+    return COLORS[(verdict || '').toUpperCase()] || COLORS.YELLOW;
+  }
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.style.display = 'block';
+  }
+  function clearError() {
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+
+  function setLoading(loading) {
+    btn.disabled = loading;
+    btn.textContent = loading ? 'Analyzing...' : 'Analyze Ingredients';
+  }
+
+  function render(data) {
+    const score = Math.max(0, Math.min(100, Math.round(Number(data.score) || 0)));
+    document.getElementById('scoreValue').textContent = score;
+    document.getElementById('scoreUnderline').style.background = colorForScore(score);
+    document.getElementById('scoreLabel').textContent = labelForScore(score);
+    document.getElementById('summary').textContent = data.summary || '';
+
+    const cards = document.getElementById('cards');
+    cards.innerHTML = '';
+    (data.ingredients || []).forEach(function (ing) {
+      const card = document.createElement('div');
+      card.className = 'supp-card';
+      card.style.borderLeftColor = verdictColor(ing.verdict);
+
+      const name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = ing.name || 'Unknown ingredient';
+
+      const reason = document.createElement('div');
+      reason.className = 'reason';
+      reason.textContent = ing.reason || '';
+
+      card.appendChild(name);
+      card.appendChild(reason);
+      cards.appendChild(card);
+    });
+
+    results.style.display = 'block';
+  }
+
+  async function analyze() {
+    const ingredients = input.value.trim();
+    clearError();
+
+    if (!ingredients) {
+      showError('Please paste an ingredients list first.');
+      return;
+    }
+
+    setLoading(true);
+    results.style.display = 'none';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ingredients: ingredients })
+      });
+
+      if (!res.ok) {
+        throw new Error('Server responded with ' + res.status);
+      }
+
+      const data = await res.json();
+      render(data);
+    } catch (err) {
+      showError('Could not analyze the ingredients. ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  btn.addEventListener('click', analyze);
+})();
+</script>
+</body>
+</html>
