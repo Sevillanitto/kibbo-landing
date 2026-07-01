@@ -195,3 +195,20 @@ footer { background: var(--ink); padding: 42px 24px; display: flex; flex-directi
 @media (max-width: 900px) {
   .supp-wrap { padding: 96px 20px 72px; }
 }
+
+/* ============================================================
+   DIRECTORY RESOURCE PAGES
+   ============================================================ */
+.dir-back { display: inline-block; margin: 0 0 22px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.dir-back:hover { text-decoration: underline; }
+.dir-note { max-width: 820px; background: #FFFFFF; border: 1px solid var(--line); border-left: 4px solid var(--amber); padding: 18px 22px; margin: 0 0 34px; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; color: #4a4842; }
+.dir-note strong { color: var(--ink); font-weight: 700; }
+.resource-list { max-width: 820px; display: flex; flex-direction: column; gap: 16px; }
+.resource { background: #FFFFFF; border: 1px solid var(--line); border-left: 4px solid var(--accent); padding: 22px 24px; }
+.resource-name { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 19px; color: var(--ink); margin: 0 0 4px; }
+.resource-url { display: block; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; margin: 0 0 14px; word-break: break-word; }
+.resource-url a { color: var(--accent); text-decoration: none; }
+.resource-url a:hover { text-decoration: underline; }
+.resource-row { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; color: #4a4842; margin: 0 0 8px; }
+.resource-row:last-child { margin-bottom: 0; }
+.resource-row .lbl { font-weight: 700; color: var(--ink); }
