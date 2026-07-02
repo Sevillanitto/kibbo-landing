@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/cookie-consent-equalizer">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cookie Consent Equalizer — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="A Chrome extension, source code included, that detects asymmetric cookie banners and surfaces a Reject All button at the same level as Accept All — where the law says it should be.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Cookie Consent Equalizer — Kibbo">
+<meta property="og:description" content="Detect asymmetric cookie banners and surface the buried Reject All option automatically. Full Chrome extension source code included.">
+<meta property="og:url" content="https://www.getkibbo.com/cookie-consent-equalizer">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<main>
+  <section class="product-hero">
+    <div class="container">
+      <div class="product-hero-inner">
+        <div class="product-meta">
+          <span class="product-type-badge">Source Code</span>
+          <span class="product-price-badge">$14</span>
+        </div>
+        <h1 class="product-title">Cookie Consent Equalizer</h1>
+        <p class="product-tagline">Rejecting cookies should be as easy as accepting them. Most sites make it deliberately harder.</p>
+        <div class="product-cta-group">
+          <a href="https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer" class="btn-primary" target="_blank" rel="noopener">Get the source code →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container product-content">
+      <div class="product-block">
+        <span class="section-label">The problem</span>
+        <h2 class="section-title">Reject All is buried on purpose</h2>
+        <p>The GDPR and equivalent US state laws are explicit — rejecting tracking must be as easy as accepting it. In practice, most cookie banners place a prominent "Accept All" button on the first layer and bury "Reject All" three clicks deep behind a settings panel with seventeen individual toggles.</p>
+        <p>This is not a compliance oversight. It is a deliberate design decision that exploits the cognitive friction of the interface to produce consent that, legally, should not count as consent at all. The UK's ICO and France's CNIL have both issued significant fines for exactly this pattern. Google was fined €150 million in 2022 specifically because their "Refuse all" option required more steps than "Accept all."</p>
+        <p>The enforcement exists. The behaviour continues because the fine is cheaper than the data revenue.</p>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">How it works</span>
+        <h2 class="section-title">Step by step</h2>
+        <ol class="product-steps">
+          <li>Install the extension in Chrome.</li>
+          <li>Visit any website with a cookie consent banner.</li>
+          <li>The extension scans the banner's DOM structure automatically on page load.</li>
+          <li>If it detects an asymmetric banner — Accept present, Reject absent or buried — it surfaces a "Reject All" button at the same visual level as "Accept All".</li>
+          <li>The injected button triggers the site's own rejection pathway — it doesn't override anything, it just makes the legal option accessible.</li>
+        </ol>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">Who it's for</span>
+        <div class="product-audience-grid">
+          <div class="audience-card">
+            <h3>Privacy-conscious users</h3>
+            <p>Anyone who wants to actually reject tracking without spending 90 seconds navigating consent menus on every site they visit.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Developers building privacy tools</h3>
+            <p>The full source code includes the DOM scanner, consent pathway detector, and equalisation logic. Deploy it as-is or integrate it into a larger privacy suite.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">What's included</span>
+        <ul class="product-includes">
+          <li>Full Chrome extension source code (Manifest V3)</li>
+          <li>DOM scanner that detects asymmetric banners</li>
+          <li>Per-platform adapter logic for OneTrust, Cookiebot and custom CMPs</li>
+          <li>Vanilla JavaScript, no frameworks</li>
+          <li>Deploy guide included</li>
+        </ul>
+      </div>
+
+      <div class="product-final-cta">
+        <h2>Stop clicking through consent theatre.</h2>
+        <p>Install once. Every banner that tries to hide the reject option gets fixed automatically.</p>
+        <a href="https://carlosdevlop.gumroad.com/l/cookie-consent-equalizer" class="btn-primary" target="_blank" rel="noopener">Get the source code ($14) →</a>
+        <p class="product-trust-note">One-time payment · No account required · Instant download</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

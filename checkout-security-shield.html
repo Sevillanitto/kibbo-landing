@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/checkout-security-shield">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Checkout Security Shield — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="A Chrome extension, source code included, that audits every script on a checkout page and intercepts data exfiltration attempts to catch formjacking before you submit your card.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Checkout Security Shield — Kibbo">
+<meta property="og:description" content="Detect formjacking and Magecart card-skimming scripts on legitimate checkout pages before you hit submit. Full Chrome extension source code included.">
+<meta property="og:url" content="https://www.getkibbo.com/checkout-security-shield">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<main>
+  <section class="product-hero">
+    <div class="container">
+      <div class="product-hero-inner">
+        <div class="product-meta">
+          <span class="product-type-badge">Source Code</span>
+          <span class="product-price-badge">$19</span>
+        </div>
+        <h1 class="product-title">Checkout Security Shield</h1>
+        <p class="product-tagline">The padlock means the connection is encrypted. It says nothing about what the scripts on the page are doing.</p>
+        <div class="product-cta-group">
+          <a href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" class="btn-primary" target="_blank" rel="noopener">Get the source code →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container product-content">
+      <div class="product-block">
+        <span class="section-label">The problem</span>
+        <h2 class="section-title">The fraud happens on legitimate sites</h2>
+        <p>Formjacking — also called Magecart attacks — injects malicious JavaScript into legitimate retailers' checkout pages. The attack runs silently: you type your card number, the store processes your order normally, and a second script copies your card data to a remote server in the same fraction of a second.</p>
+        <p>You receive the order confirmation. The fraud charges appear on your statement days or weeks later. The FTC reported $15.9 billion in consumer fraud losses in the most recent annual report. The FBI's Internet Crime Complaint Center processes roughly 3,000 cybercrime complaints every day.</p>
+        <p>A significant share of these involve payment data stolen at checkout from legitimate, HTTPS-secured websites.</p>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">How it works</span>
+        <h2 class="section-title">Step by step</h2>
+        <ol class="product-steps">
+          <li>Install the extension in Chrome.</li>
+          <li>Navigate to any checkout page.</li>
+          <li>The extension audits every script loaded on the page against a list of known legitimate payment processor domains.</li>
+          <li>It intercepts <code>navigator.sendBeacon</code> and <code>fetch</code> calls during form submission to detect unauthorized data exfiltration attempts.</li>
+          <li>Suspicious activity is flagged before you submit your card details.</li>
+        </ol>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">Who it's for</span>
+        <div class="product-audience-grid">
+          <div class="audience-card">
+            <h3>Online shoppers</h3>
+            <p>Anyone who regularly enters card details online and wants a script-level check running before they hit submit.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Developers building payment security tools</h3>
+            <p>The source code includes the script auditor, beacon interceptor, and payment endpoint verification logic.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-block">
+        <span class="section-label">What's included</span>
+        <ul class="product-includes">
+          <li>Full Chrome extension source code (Manifest V3)</li>
+          <li>Script domain auditor against known payment processors</li>
+          <li>navigator.sendBeacon interceptor</li>
+          <li>fetch() monitoring during form submission</li>
+          <li>Vanilla JavaScript, no dependencies</li>
+        </ul>
+      </div>
+
+      <div class="product-final-cta">
+        <h2>Your card details deserve more than a padlock.</h2>
+        <p>The attack happens before you click submit. The defense has to happen there too.</p>
+        <a href="https://carlosdevlop.gumroad.com/l/checkout-security-shield" class="btn-primary" target="_blank" rel="noopener">Get the source code ($19) →</a>
+        <p class="product-trust-note">One-time payment · No account required · Instant download</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
