@@ -14,7 +14,7 @@
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.getkibbo.com/">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kibbo — Tools to fight the tricks of the modern web</title>
+<title>Kibbo — Consumer Protection Tools</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
@@ -23,18 +23,18 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Kibbo — Tools to fight the tricks of the modern web">
+<meta property="og:title" content="Kibbo — Consumer Protection Tools">
 <meta property="og:description" content="Analyzers, document generators, templates, free resources and developer tools that fix real consumer problems. Source code included. No subscriptions.">
 <meta property="og:url" content="https://www.getkibbo.com/">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kibbo — Tools to fight the tricks of the modern web">
+<meta name="twitter:title" content="Kibbo — Consumer Protection Tools">
 <meta name="twitter:description" content="Analyzers, document generators, templates, free resources and developer tools that fix real consumer problems.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 
 <script type="application/ld+json">
@@ -67,110 +67,256 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
-  <ul class="nav-links">
-    <li><a href="/analyze.html">Analyze</a></li>
-    <li><a href="/generate.html">Generate</a></li>
-    <li><a href="/templates.html">Templates</a></li>
-    <li><a href="/directory.html">Directory</a></li>
-    <li><a href="/developer-tools.html">Dev Tools</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/#contact">Contact</a></li>
-  </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
 </nav>
-
-<!-- MOBILE MENU -->
-<div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/analyze.html">Analyze</a>
-  <a href="/generate.html">Generate</a>
-  <a href="/templates.html">Templates</a>
-  <a href="/directory.html">Directory</a>
-  <a href="/developer-tools.html">Dev Tools</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/#contact">Contact</a>
-</div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">The internet is full of tricks. We build the tools to fight back.</h1>
-    <p class="hero-sub">Software for consumers and developers. Source code included.</p>
-    <p class="hero-trust">🔒 Safe checkout via Gumroad · Instant download · No subscription</p>
+  <div class="container">
+    <div class="hero-eyebrow">Consumer Protection Tools</div>
+    <h1 class="hero-title">The internet plays tricks.<br><em>We build the defense.</em></h1>
+    <p class="hero-subtitle">AI analyzers, legal document generators, checklists and free resources — everything you need to protect yourself online. No account required.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="/analyze.html">Start for free →</a>
+      <a class="btn-secondary" href="/blog.html">Read The Watchdog</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>3 free analyses per day</span>
+      </div>
+      <div class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>No account required</span>
+      </div>
+      <div class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>One-time payments only</span>
+      </div>
+      <div class="hero-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>UK &amp; US focused</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CATEGORY CARDS -->
-<section class="categories" aria-label="What Kibbo offers">
-  <div class="cat-grid">
+<!-- CATEGORIES -->
+<section class="categories">
+  <div class="container">
+    <div class="categories-header fade-up">
+      <p class="section-label">What we build</p>
+      <h2 class="section-title">Five ways to <em>protect yourself</em></h2>
+      <p class="section-subtitle">From AI-powered analyzers to legal document generators and free resource directories.</p>
+    </div>
 
-    <a class="cat-card" href="/analyze.html">
-      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></span>
-      <h3 class="cat-title">Analyze</h3>
-      <p class="cat-desc">AI-powered tools that break down supplements, contracts, job offers and more.</p>
-    </a>
+    <div class="categories-grid">
+      <a class="category-card fade-up fade-up-delay-1" href="/analyze.html">
+        <span class="category-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
+        <h3>Analyze</h3>
+        <p>AI-powered tools that break down supplements, contracts, job offers and more.</p>
+        <span class="category-card-arrow">Explore analyzers →</span>
+      </a>
 
-    <a class="cat-card" href="/generate.html">
-      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><line x1="12" y1="11" x2="12" y2="17"/><polyline points="9 14 12 17 15 14"/></svg></span>
-      <h3 class="cat-title">Generate</h3>
-      <p class="cat-desc">Fill a form. Download a ready-to-send legal letter. No lawyers needed.</p>
-    </a>
+      <a class="category-card fade-up fade-up-delay-2" href="/generate.html">
+        <span class="category-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></span>
+        <h3>Generate</h3>
+        <p>Fill a form. Download a ready-to-send legal letter. No lawyers needed.</p>
+        <span class="category-card-arrow">Explore generators →</span>
+      </a>
 
-    <a class="cat-card" href="/templates.html">
-      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
-      <h3 class="cat-title">Templates</h3>
-      <p class="cat-desc">Checklists, trackers and document packs for real consumer problems.</p>
-    </a>
+      <a class="category-card fade-up fade-up-delay-3" href="/templates.html">
+        <span class="category-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+        <h3>Templates</h3>
+        <p>Checklists, trackers and document packs for real consumer problems.</p>
+        <span class="category-card-arrow">Browse templates →</span>
+      </a>
 
-    <a class="cat-card" href="/directory.html">
-      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
-      <h3 class="cat-title">Directory</h3>
-      <p class="cat-desc">Free resources. Carrier complaint links, scam databases and more.</p>
-    </a>
+      <a class="category-card fade-up fade-up-delay-4" href="/directory.html">
+        <span class="category-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+        <h3>Directory</h3>
+        <p>Free resources. Carrier complaint links, scam databases and more.</p>
+        <span class="category-card-arrow">Browse directory →</span>
+      </a>
 
-    <a class="cat-card" href="/developer-tools.html">
-      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-      <h3 class="cat-title">Developer Tools</h3>
-      <p class="cat-desc">Chrome extensions and web apps with full source code. Deploy and customize.</p>
-    </a>
-
+      <a class="category-card fade-up fade-up-delay-5" href="/developer-tools.html">
+        <span class="category-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        <h3>Developer Tools</h3>
+        <p>Chrome extensions and web apps with full source code. Deploy and customize.</p>
+        <span class="category-card-arrow">View source code →</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- WHY KIBBO -->
-<section class="why">
-  <h2>Why Kibbo</h2>
-  <p>The modern web is quietly engineered against you: fake discounts, dark patterns, contracts written to be misread, and scams dressed up as official messages. Kibbo builds small, focused tools that hand that leverage back to you. Everything is pay-once with full source code included — you own what you run, and developers can build on top of it.</p>
+<!-- DARK PRODUCTS STRIP -->
+<section class="products-dark">
+  <div class="container">
+    <div class="products-header fade-up">
+      <div>
+        <p class="section-label">Featured tools</p>
+        <h2 class="section-title">Available <em>right now</em></h2>
+        <p class="section-subtitle">Start free, upgrade when you need more.</p>
+      </div>
+      <a class="btn-secondary" style="border-color: rgba(247,245,240,0.2); color: rgba(247,245,240,0.7);" href="/analyze.html">View all tools →</a>
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card fade-up">
+        <span class="product-badge badge-free">FREE TOOL</span>
+        <h4>Supplement Ingredients Auditor</h4>
+        <p>Paste any supplement label. Get an evidence-based breakdown of every ingredient — green, yellow or red.</p>
+        <div class="product-card-footer">
+          <span class="product-price free">Free · 3/day</span>
+          <a class="product-link" href="/supplement-analyzer.html">Try it →</a>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <span class="product-badge badge-paid">TEMPLATE · $7</span>
+        <h4>Tenant Inspection Checklist</h4>
+        <p>Room-by-room inspection log with automatic change detection. Protects your deposit.</p>
+        <div class="product-card-footer">
+          <span class="product-price">$7</span>
+          <a class="product-link" href="https://carlosdevlop.gumroad.com/l/tenant-inspection-checklist-uk" target="_blank" rel="noopener">Get it →</a>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <span class="product-badge badge-paid">TEMPLATE · $7</span>
+        <h4>Freelancer Client Vetting Checklist</h4>
+        <p>20 red flags, automatic risk score, and the right questions to ask before you say yes.</p>
+        <div class="product-card-footer">
+          <span class="product-price">$7</span>
+          <a class="product-link" href="https://carlosdevlop.gumroad.com/l/freelancer-client-vetting-checklist" target="_blank" rel="noopener">Get it →</a>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <span class="product-badge badge-paid">TEMPLATE · $7</span>
+        <h4>Subscription Tracker</h4>
+        <p>Find your ghost spend. See what you're really paying for and what to cancel.</p>
+        <div class="product-card-footer">
+          <span class="product-price">$7</span>
+          <a class="product-link" href="https://carlosdevlop.gumroad.com/l/subscription-tracker-ghost-spend" target="_blank" rel="noopener">Get it →</a>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <span class="product-badge badge-dev">SOURCE CODE · $19</span>
+        <h4>AI Phishing Detector</h4>
+        <p>Chrome extension source code with Claude AI integration. Detect phishing in real time.</p>
+        <div class="product-card-footer">
+          <span class="product-price">$19</span>
+          <a class="product-link" href="https://carlosdevlop.gumroad.com/l/ai-phishing-detector-extension" target="_blank" rel="noopener">Get source →</a>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <span class="product-badge badge-dev">SOURCE CODE · $24</span>
+        <h4>Price History Tracker</h4>
+        <p>Injects price history directly onto product pages. Exposes fake discounts instantly.</p>
+        <div class="product-card-footer">
+          <span class="product-price">$24</span>
+          <a class="product-link" href="https://carlosdevlop.gumroad.com/l/price-history-tracker" target="_blank" rel="noopener">Get source →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section class="blog-section">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:16px;">
+      <div>
+        <p class="section-label">The Watchdog</p>
+        <h2 class="section-title">Latest from <em>the blog</em></h2>
+      </div>
+      <a class="btn-secondary" href="/blog.html">All articles →</a>
+    </div>
+
+    <div class="blog-grid">
+      <a class="blog-card fade-up fade-up-delay-1" href="/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html">
+        <div class="blog-card-meta">
+          <span class="blog-tag">Consumer Protection</span>
+          <span class="blog-date">June 26, 2026</span>
+        </div>
+        <h3>The 60% Trap: Why E-Commerce Giants Are Laundering Discounts</h3>
+        <p>60% of online retailers fail basic pricing transparency laws. Here's the JavaScript behind fake discounts.</p>
+        <span class="blog-read-more">Read article →</span>
+      </a>
+
+      <a class="blog-card fade-up fade-up-delay-2" href="/blog/checkout-intercept-formjacking-magecart.html">
+        <div class="blog-card-meta">
+          <span class="blog-tag">Security</span>
+          <span class="blog-date">June 26, 2026</span>
+        </div>
+        <h3>The Checkout Intercept: How Cybercriminals Steal Your Card Data</h3>
+        <p>The padlock icon doesn't mean your card is safe. Here's the JavaScript technique criminals use.</p>
+        <span class="blog-read-more">Read article →</span>
+      </a>
+
+      <a class="blog-card fade-up fade-up-delay-3" href="/blog/cookie-consent-dark-patterns-privacy-laws.html">
+        <div class="blog-card-meta">
+          <span class="blog-tag">Privacy</span>
+          <span class="blog-date">June 27, 2026</span>
+        </div>
+        <h3>The Illusion of Consent: How Cookie Walls Bypass Privacy Laws</h3>
+        <p>Most cookie banners are designed to manipulate you into accepting tracking.</p>
+        <span class="blog-read-more">Read article →</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
-  <div class="footer-logo">KIBBO</div>
-  <div class="footer-links">
-    <a href="/about">About</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:hello@getkibbo.com">Contact</a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
   </div>
-  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
-  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
 </footer>
 
 <script>
-(function() {
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
-  menu.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() { menu.classList.remove('open'); });
-  });
-})();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>

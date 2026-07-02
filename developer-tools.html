@@ -27,43 +27,32 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
-  <ul class="nav-links">
-    <li><a href="/analyze.html">Analyze</a></li>
-    <li><a href="/generate.html">Generate</a></li>
-    <li><a href="/templates.html">Templates</a></li>
-    <li><a href="/directory.html">Directory</a></li>
-    <li><a href="/developer-tools.html" class="active">Dev Tools</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/#contact">Contact</a></li>
-  </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
 </nav>
 
-<div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/analyze.html">Analyze</a>
-  <a href="/generate.html">Generate</a>
-  <a href="/templates.html">Templates</a>
-  <a href="/directory.html">Directory</a>
-  <a href="/developer-tools.html">Dev Tools</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/#contact">Contact</a>
-</div>
-
-<header class="section-hero">
-  <div class="section-hero-inner">
-    <h1>Developer Tools</h1>
-    <p class="section-sub">Source code you can deploy, customize and ship.</p>
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Developer Tools</p>
+    <h1 class="section-title">Source code you <em>own</em></h1>
+    <p class="section-subtitle">Source code you can deploy, customize and ship.</p>
   </div>
-</header>
+</div>
 
 <main class="section-main">
   <div class="section-desc">
@@ -131,30 +120,41 @@
   </div>
 </main>
 
-<footer id="contact">
-  <div class="footer-logo">KIBBO</div>
-  <div class="footer-links">
-    <a href="/about">About</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:hello@getkibbo.com">Contact</a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
   </div>
-  <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
-  <div class="footer-copy">© 2026 · Built by Carlos Lopez, an independent developer</div>
 </footer>
 
 <script>
-(function() {
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
-  menu.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() { menu.classList.remove('open'); });
-  });
-})();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>

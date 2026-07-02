@@ -35,94 +35,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', system-ui, sans-serif; font-weight: 400;
-  background: #FFFFFF; color: #0A0A0A; overflow-x: hidden; -webkit-font-smoothing: antialiased;
-}
-
-/* ===== NAV ===== */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px; background: #FFFFFF; border-bottom: 2px solid #0A0A0A;
-}
-.nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-.nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #0A0A0A; letter-spacing: -0.5px; }
-.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
-.nav-links a { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 6px 16px; transition: background 0.1s; }
-.nav-links a:hover, .nav-links a.active { background: #FFE500; }
-.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-.nav-hamburger span { display: block; width: 24px; height: 2px; background: #0A0A0A; }
-.nav-mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #FFFFFF; border-bottom: 2px solid #0A0A0A; z-index: 99; padding: 16px 24px 20px; flex-direction: column; gap: 4px; }
-.nav-mobile-menu.open { display: flex; }
-.nav-mobile-menu a { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; color: #0A0A0A; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
-.nav-mobile-menu a:last-child { border-bottom: none; }
-
-/* ===== POST HEAD ===== */
-.post-head { background: #FFE500; border-bottom: 3px solid #0A0A0A; padding: 120px 40px 56px; }
-.post-head-inner { max-width: 720px; margin: 0 auto; }
-.breadcrumb { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px; }
-.breadcrumb a { color: #0A0A0A; text-decoration: none; border-bottom: 2px solid #0A0A0A; padding-bottom: 1px; }
-.post-head time { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #0A0A0A; }
-.author-line { display: flex; align-items: center; gap: 10px; margin: 18px 0 0; font-family: 'Inter', sans-serif; font-size: 15px; color: #0A0A0A; }
-.author-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #0A0A0A; display: block; flex-shrink: 0; }
-.author-line a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: rgba(10,10,10,0.4); }
-.post-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: clamp(32px, 6vw, 56px); line-height: 1.02; letter-spacing: -1.5px; margin: 14px 0 0; }
-
-/* ===== POST BODY ===== */
-.post-body {
-  max-width: 720px; margin: 0 auto; padding: 56px 40px 40px;
-  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7; color: #1a1a1a;
-}
-.post-body > p:first-child { font-size: 21px; line-height: 1.6; color: #0A0A0A; }
-.post-body h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; margin: 48px 0 16px; }
-.post-body h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2; margin: 32px 0 12px; }
-.post-body p { margin-bottom: 20px; }
-.post-body ul, .post-body ol { margin: 0 0 22px 24px; }
-.post-body li { margin-bottom: 8px; }
-.post-body a { color: #0A0A0A; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; text-decoration-color: #FFE500; }
-.post-body strong { font-weight: 700; }
-.post-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #F0F0F0; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
-.post-body pre { background: #0A0A0A; color: #f5f5f5; padding: 22px; border-radius: 4px; overflow-x: auto; border: 2px solid #0A0A0A; box-shadow: 4px 4px 0px #FFE500; margin: 0 0 26px; }
-.post-body pre code { background: none; color: inherit; padding: 0; font-size: 14px; line-height: 1.6; }
-.post-body blockquote { border-left: 4px solid #FFE500; padding-left: 18px; margin: 0 0 24px; color: #444; font-style: italic; }
-.post-body img { max-width: 100%; height: auto; border: 2px solid #0A0A0A; border-radius: 2px; display: block; margin: 0 0 26px; }
-
-/* ===== CTA ===== */
-.post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 40px; }
-.post-cta-inner { background: #0A0A0A; border: 2px solid #0A0A0A; border-radius: 2px; box-shadow: 6px 6px 0px #FFE500; padding: 38px 34px; }
-.post-cta-tag { display: inline-block; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-.post-cta h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 26px; line-height: 1.15; letter-spacing: -0.5px; color: #FFFFFF; margin-bottom: 10px; }
-.post-cta p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
-.post-cta p strong { color: #FFFFFF; }
-.post-cta-btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; background: #FFE500; color: #0A0A0A; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid #FFE500; border-radius: 2px; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 3px 3px 0px rgba(255,229,0,0.3); }
-.post-cta-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0px rgba(255,229,0,0.3); }
-
-/* ===== FOOTER ===== */
-footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 20px; color: #FFFFFF; letter-spacing: -0.5px; }
-.footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.footer-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.1s; }
-.footer-links a:hover { color: #FFE500; }
-.footer-copy { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 4px; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
-  .post-head { padding: 100px 20px 44px; }
-  .post-body { padding: 40px 20px 32px; font-size: 17px; }
-  .post-cta { padding: 0 20px; }
-  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  .footer-logo { margin-bottom: 12px; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 
 <!-- BlogPosting + Breadcrumb -->
 <script type="application/ld+json">
@@ -159,32 +73,19 @@ footer { background: #0A0A0A; padding: 32px 40px; display: flex; justify-content
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="/" class="nav-logo"><span class="nav-logo-text">KIBBO</span></a>
-  <ul class="nav-links">
-    <li><a href="/analyze.html">Analyze</a></li>
-    <li><a href="/generate.html">Generate</a></li>
-    <li><a href="/templates.html">Templates</a></li>
-    <li><a href="/directory.html">Directory</a></li>
-    <li><a href="/developer-tools.html">Dev Tools</a></li>
-    <li><a href="/blog.html" class="active">Blog</a></li>
-    <li><a href="/#contact">Contact</a></li>
-  </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/blog.html" class="active">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
 </nav>
-
-<!-- MOBILE MENU -->
-<div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/analyze.html">Analyze</a>
-  <a href="/generate.html">Generate</a>
-  <a href="/templates.html">Templates</a>
-  <a href="/directory.html">Directory</a>
-  <a href="/developer-tools.html">Dev Tools</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/#contact">Contact</a>
-</div>
 
 <!-- ARTICLE -->
 <article>
@@ -301,26 +202,41 @@ chrome.runtime.onMessage.addListener((msg, sender, respond) =&gt; {
 </aside>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">KIBBO</div>
-  <div class="footer-links">
-    <a href="https://github.com/Sevillanitto" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:hello@getkibbo.com">Contact</a>
-    <a href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
   </div>
-  <div class="footer-copy">© 2026 · Built by an independent developer</div>
 </footer>
 
 <script>
-(function() {
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function() { menu.classList.toggle('open'); });
-  menu.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() { menu.classList.remove('open'); });
-  });
-})();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
