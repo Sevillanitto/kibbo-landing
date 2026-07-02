@@ -370,6 +370,20 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .resource-row:last-child { margin-bottom: 0; }
 .resource-row .lbl { font-weight: 700; color: var(--text-primary); }
 
+/* ---- Directory: SEO resource list + alert ---- */
+.directory-alert { background: var(--accent-amber-light); border: 1px solid rgba(200,146,42,0.3); border-left: 4px solid var(--accent-amber); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 32px; font-size: 14px; color: var(--text-primary); line-height: 1.6; }
+.directory-alert strong { color: var(--accent-amber); }
+.directory-resource { padding: 28px 0; border-bottom: 1px solid var(--border); }
+.directory-resource:last-child { border-bottom: none; }
+.directory-resource h3 { font-family: var(--font-serif); font-size: clamp(17px, 2vw, 21px); font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.3; }
+.resource-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.resource-name { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.resource-link { font-size: 13px; font-weight: 600; color: var(--accent-green); transition: var(--transition); }
+.resource-link:hover { gap: 8px; }
+.resource-what { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 8px; }
+.resource-when { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+.resource-when strong, .resource-what strong { color: var(--text-primary); }
+
 /* ============================================================
    SUPPLEMENT INGREDIENTS AUDITOR  (scoped under body.supp-page)
    ============================================================ */
