@@ -1,6 +1,6 @@
 /* ============================================================
    Kibbo — shared stylesheet
-   Design system: Fraunces (serif display) + Inter (sans)
+   Design system: Syne (display) + Inter (sans)
    Warm paper palette · calm greens · amber accents.
 
    Structure:
@@ -13,6 +13,8 @@
         (directory sub-pages, privacy, terms, demo, article
         template, supplement auditor internals)
    ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 /* ============================================================
    1. DESIGN TOKENS
@@ -39,7 +41,7 @@
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 20px;
-  --font-serif: 'Fraunces', Georgia, serif;
+  --font-serif: 'Syne', system-ui, sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
   --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -107,7 +109,7 @@ img { max-width: 100%; display: block; }
 .hero-eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--accent-green); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
 .hero-title { font-family: var(--font-serif); font-size: clamp(44px, 7vw, 88px); font-weight: 400; line-height: 1.0; letter-spacing: -0.04em; color: var(--text-primary); max-width: 820px; margin: 0 auto 24px; }
-.hero-title em { font-style: italic; color: var(--accent-green); }
+.hero-title em { font-weight: 800; color: var(--accent-green); }
 .hero-subtitle { font-size: clamp(16px, 2vw, 19px); color: var(--text-secondary); max-width: 520px; margin: 0 auto 40px; line-height: 1.65; font-weight: 400; letter-spacing: -0.01em; }
 .hero-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
@@ -134,7 +136,7 @@ img { max-width: 100%; display: block; }
 /* ---- SECTION HEADERS ---- */
 .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 12px; }
 .section-title { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 44px); font-weight: 400; letter-spacing: -0.03em; color: var(--text-primary); line-height: 1.15; }
-.section-title em { font-style: italic; }
+.section-title em { font-weight: 700; }
 .section-subtitle { font-size: 16px; color: var(--text-secondary); line-height: 1.6; margin-top: 12px; max-width: 520px; }
 
 /* ---- SECTION PAGE HERO (analyze / generate / etc.) ---- */
