@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/legal-contract-auditor">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Legal Contract Auditor — Spot Unfair Clauses | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Paste any contract or Terms & Conditions and get a plain-English breakdown of unfair clauses, auto-renewal traps and cancellation dark patterns. Free tool by Kibbo.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Legal Contract Auditor — Spot unfair clauses in plain English">
+<meta property="og:description" content="Paste any contract or Terms & Conditions and get a plain-English breakdown of unfair clauses, auto-renewal traps and cancellation dark patterns. Free tool by Kibbo.">
+<meta property="og:url" content="https://www.getkibbo.com/legal-contract-auditor">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/legal-contract-analyzer.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legal Contract Auditor — Spot unfair clauses in plain English">
+<meta name="twitter:description" content="Paste any contract or Terms & Conditions and get a plain-English breakdown of unfair clauses and cancellation dark patterns. Free tool.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/legal-contract-analyzer.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- Secondary terra accent (#B85C3A) so this analyzer reads distinct from the Supplement Auditor -->
+<style>
+  .legal-page .supp-eyebrow { color: #B85C3A; }
+  .legal-page .supp-intro::after {
+    content: ""; display: block; width: 48px; height: 3px;
+    background: #B85C3A; border-radius: 2px; margin: 14px auto 0;
+  }
+  .legal-page .supp-clause-quote {
+    margin-top: 8px; padding-left: 10px; border-left: 2px solid #B85C3A;
+    color: #6b665e; font-size: 13px; font-style: italic; line-height: 1.5;
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Legal Contract Auditor",
+  "url": "https://www.getkibbo.com/legal-contract-auditor",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Paste any contract or Terms & Conditions and get a plain-English breakdown of unfair clauses, auto-renewal traps and cancellation dark patterns.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+  "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body class="supp-page legal-page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html" class="active">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Blog</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- TOOL -->
+<div class="supp-wrap">
+
+  <div class="supp-intro">
+    <div class="supp-eyebrow">Legal Contract Auditor</div>
+    <div class="supp-tagline">Spot unfair clauses &amp; cancellation traps · A free tool by Kibbo</div>
+  </div>
+
+  <main>
+    <h1 class="supp-h1">What's really in the fine print?</h1>
+    <p class="supp-subtext">Paste a contract, Terms &amp; Conditions or subscription agreement.</p>
+
+    <textarea class="supp-textarea" id="contract" placeholder="e.g. Your subscription will renew automatically at the end of each billing period. To cancel you must call customer service by phone. All payments are non-refundable. You agree to binding arbitration..."></textarea>
+
+    <button class="supp-analyze" id="analyzeBtn">Analyze Contract</button>
+
+    <p class="supp-fineprint" id="quota">3 free analyses per day · No account required</p>
+
+    <div class="supp-access">
+      <button type="button" class="supp-access-toggle" id="accessToggle">Have an access code? Click here to unlock unlimited access</button>
+      <div class="supp-access-panel" id="accessPanel">
+        <input type="text" class="supp-access-input" id="accessCode" placeholder="Enter your code (KIBBO-LEGAL-XXXX-XXXX-XXXX)" autocomplete="off" spellcheck="false">
+        <button type="button" class="supp-access-btn" id="activateBtn">Activate Code</button>
+        <p class="supp-access-msg" id="accessMsg"></p>
+      </div>
+    </div>
+
+    <div class="supp-error" id="error" style="display:none;"></div>
+  </main>
+
+  <section class="supp-limit" id="limitMsg">
+    <div class="supp-limit-title">Daily limit reached</div>
+    <p>You've used your 3 free contract analyses today. Unlock unlimited analyses with a one-time access code — no subscription, no account.</p>
+    <a class="supp-limit-btn" href="https://carlosdevlop.gumroad.com/l/legal-contract-auditor" target="_blank" rel="noopener">Get unlimited access — $9 →</a>
+    <p class="supp-limit-sub">Already have a code? Use “Have an access code?” above to activate it.</p>
+  </section>
+
+  <section class="supp-results" id="results">
+    <div class="supp-score">
+      <div class="supp-score-number"><span id="scoreValue">0</span><span class="slash"> / 100</span></div>
+      <div class="supp-score-underline" id="scoreUnderline"></div>
+      <div class="supp-score-label" id="scoreLabel"></div>
+    </div>
+
+    <p class="supp-summary" id="summary"></p>
+
+    <h2 class="supp-ingredients-heading">Clause breakdown</h2>
+    <div id="cards"></div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* SCROLL ANIMATIONS */
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+})();
+
+/* LEGAL CONTRACT AUDITOR */
+(function() {
+  // Cloudflare Worker that holds the Anthropic API key and calls Claude.
+  const WORKER_URL = 'https://legal-contract-auditor.carlos-lopez-tejeiro.workers.dev';
+
+  const btn = document.getElementById('analyzeBtn');
+  const input = document.getElementById('contract');
+  const results = document.getElementById('results');
+  const errorBox = document.getElementById('error');
+  const limitMsg = document.getElementById('limitMsg');
+  const quota = document.getElementById('quota');
+  const accessToggle = document.getElementById('accessToggle');
+  const accessPanel = document.getElementById('accessPanel');
+  const codeInput = document.getElementById('accessCode');
+  const activateBtn = document.getElementById('activateBtn');
+  const accessMsg = document.getElementById('accessMsg');
+
+  // Primary accent green (#3D6B4F); terra (#B85C3A) as the critical-severity highlight.
+  const COLORS = { GREEN: '#3D6B4F', AMBER: '#C8922A', RED: '#B85C3A' };
+
+  function colorForScore(score) {
+    if (score > 70) return COLORS.GREEN;
+    if (score >= 40) return COLORS.AMBER;
+    return COLORS.RED;
+  }
+  function labelForScore(score) {
+    if (score > 70) return 'Fair';
+    if (score >= 40) return 'Some concerns';
+    return 'Heavily one-sided';
+  }
+  function verdictColor(verdict) {
+    return COLORS[(verdict || '').toUpperCase()] || COLORS.AMBER;
+  }
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.style.display = 'block';
+  }
+  function clearError() {
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+
+  function setLoading(loading) {
+    btn.disabled = loading;
+    btn.textContent = loading ? 'Analyzing...' : 'Analyze Contract';
+  }
+
+  function render(data) {
+    const score = Math.max(0, Math.min(100, Math.round(Number(data.score) || 0)));
+    document.getElementById('scoreValue').textContent = score;
+    document.getElementById('scoreUnderline').style.background = colorForScore(score);
+    document.getElementById('scoreLabel').textContent = labelForScore(score);
+    document.getElementById('summary').textContent = data.summary || '';
+
+    const cards = document.getElementById('cards');
+    cards.innerHTML = '';
+    const clauses = data.clauses || [];
+    if (!clauses.length) {
+      const ok = document.createElement('div');
+      ok.className = 'supp-card';
+      ok.style.borderLeftColor = COLORS.GREEN;
+      const name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = 'No risky clauses detected';
+      const reason = document.createElement('div');
+      reason.className = 'reason';
+      reason.textContent = 'Nothing in the text you pasted matched a known unfair-clause or cancellation-trap pattern.';
+      ok.appendChild(name);
+      ok.appendChild(reason);
+      cards.appendChild(ok);
+    }
+    clauses.forEach(function (cl) {
+      const card = document.createElement('div');
+      card.className = 'supp-card';
+      card.style.borderLeftColor = verdictColor(cl.verdict);
+
+      const name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = cl.name || 'Flagged clause';
+
+      const reason = document.createElement('div');
+      reason.className = 'reason';
+      reason.textContent = cl.reason || '';
+
+      card.appendChild(name);
+      card.appendChild(reason);
+
+      if (cl.quote) {
+        const q = document.createElement('div');
+        q.className = 'supp-clause-quote';
+        q.textContent = '“' + cl.quote + '”';
+        card.appendChild(q);
+      }
+
+      cards.appendChild(card);
+    });
+
+    results.style.display = 'block';
+  }
+
+  function setUnlimited() {
+    try { localStorage.setItem('kibbo_legal_unlimited', 'true'); } catch (e) {}
+    if (quota) { quota.textContent = '✓ Unlimited access active'; quota.classList.add('supp-unlimited'); }
+    hideLimit();
+  }
+  function updateQuota(remaining) {
+    if (remaining === 'unlimited') { setUnlimited(); return; }
+    if (typeof remaining !== 'number' || !quota) return;
+    if (remaining <= 0) {
+      quota.textContent = 'No free analyses left today · come back tomorrow';
+    } else {
+      quota.textContent = remaining + ' free ' + (remaining === 1 ? 'analysis' : 'analyses') +
+        ' left today · No account required';
+    }
+  }
+  function showLimit() { if (limitMsg) limitMsg.style.display = 'block'; }
+  function hideLimit() { if (limitMsg) limitMsg.style.display = 'none'; }
+
+  async function analyze() {
+    const contract = input.value.trim();
+    clearError();
+    hideLimit();
+
+    if (!contract) {
+      showError('Please paste some contract or T&C text first.');
+      return;
+    }
+
+    setLoading(true);
+    results.style.display = 'none';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contract: contract })
+      });
+
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+
+      // Daily free limit hit — show the friendly message, not an error.
+      if (res.status === 429 || (data && data.error === 'limit_reached')) {
+        showLimit();
+        updateQuota(0);
+        return;
+      }
+
+      if (!res.ok || !data) {
+        throw new Error('Server responded with ' + res.status);
+      }
+
+      render(data);
+      updateQuota(data.remaining);
+    } catch (err) {
+      showError('Could not analyze the contract. ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  btn.addEventListener('click', analyze);
+
+  // ---- Access code (unlock unlimited) ----
+  function showAccessMsg(text, kind) {
+    if (!accessMsg) return;
+    accessMsg.textContent = text;
+    accessMsg.className = 'supp-access-msg ' + (kind || '');
+  }
+
+  async function activateCode() {
+    const code = (codeInput.value || '').trim().toUpperCase();
+    showAccessMsg('', '');
+    if (!code) { showAccessMsg('Please enter a code.', 'err'); return; }
+    activateBtn.disabled = true;
+    activateBtn.textContent = 'Activating...';
+    try {
+      const res = await fetch(WORKER_URL + '/activate-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: code })
+      });
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+      if (data && data.success) {
+        showAccessMsg('✓ Unlimited access activated. Enjoy!', 'ok');
+        setUnlimited();
+      } else {
+        showAccessMsg('Invalid code. Please check and try again.', 'err');
+      }
+    } catch (err) {
+      showAccessMsg('Could not activate the code. Please try again.', 'err');
+    } finally {
+      activateBtn.disabled = false;
+      activateBtn.textContent = 'Activate Code';
+    }
+  }
+
+  if (accessToggle && accessPanel) {
+    accessToggle.addEventListener('click', function () { accessPanel.classList.toggle('open'); });
+  }
+  if (activateBtn) activateBtn.addEventListener('click', activateCode);
+
+  // Restore unlimited state from a previous visit.
+  try {
+    if (localStorage.getItem('kibbo_legal_unlimited') === 'true') setUnlimited();
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+name = "legal-contract-auditor"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-LEGAL-...). Create it first, then paste the
+# printed id below:
+#   npx wrangler kv namespace create legal-contract-rate-limit
+# (or create it in the Cloudflare dashboard and copy the namespace ID)
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "57c970ae206a42629176fecfae01607e"
