@@ -81,19 +81,21 @@
   </div>
 </nav>
 
-<main class="blog-post" style="padding-top: 64px;">
-  <div class="container" style="max-width: 760px; padding-top: clamp(48px, 6vh, 80px);">
-
-    <a href="/blog.html" class="back-link">← Blog</a>
-
-    <time datetime="2026-07-02" style="display:block; font-size:13px; color:var(--text-muted); margin: 16px 0;">July 2, 2026</time>
-
-    <h1 style="font-family:var(--font-serif); font-size:clamp(32px,5vw,56px); font-weight:700; letter-spacing:-0.03em; line-height:1.1; margin-bottom:24px;">The Cost of Saying Yes: The Data-Backed Red Flags That Prove a Freelance Client Won't Pay You</h1>
-
-    <div class="author-line">
-      <img src="../images/authors/margaret-spencer-breen.jpg" alt="Margaret Spencer Breen" class="author-avatar" />
-      <span>By <a href="https://www.getkibbo.com/about.html">Margaret Spencer Breen</a></span>
+<!-- ARTICLE -->
+<article>
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-07-02">July 2, 2026</time>
+      <div class="author-line">
+        <img src="../images/authors/margaret-spencer-breen.jpg" alt="Margaret Spencer Breen" class="author-avatar" />
+        <span>By <a href="https://www.getkibbo.com/about.html">Margaret Spencer Breen</a></span>
+      </div>
+      <h1 class="post-h1">The Cost of Saying Yes: The Data-Backed Red Flags That Prove a Freelance Client Won't Pay You</h1>
     </div>
+  </header>
+
+  <div class="post-body">
 
     <p>The worst freelance clients rarely present themselves as risks. They present themselves as opportunities. An enthusiastic brief, a reasonable budget conversation, a sense that this could lead to more work down the line. The warning signs are there — they always are — but desperation bias filters them out. You need the contract. You accept.</p>
 
@@ -173,16 +175,18 @@ const RED_FLAGS = {
 
     <p>That record matters if things go wrong. "I assessed this client against 20 criteria before accepting" is a different conversation with a solicitor or small claims court than "it seemed fine at the time."</p>
 
-    <hr style="margin: 48px 0; border: none; border-top: 1px solid var(--border);" />
-
-    <div class="cta-block" style="background:var(--bg-dark); border-radius:var(--radius-lg); padding:clamp(32px,4vh,48px); margin-bottom:48px;">
-      <h3 style="font-family:var(--font-serif); font-size:24px; color:var(--text-inverse); margin-bottom:12px;">Freelancer Client Vetting Checklist</h3>
-      <p style="font-size:15px; color:rgba(247,245,240,0.6); margin-bottom:24px; line-height:1.65;">20 red flags across three categories. Automatic risk score. The 16 questions to ask before you say yes. Know whether to proceed, demand a full deposit, or walk away — before you've invested a single hour.</p>
-      <a href="https://carlosdevlop.gumroad.com/l/freelancer-client-vetting-checklist" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#3D6B4F; color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; text-decoration:none;">Get the checklist ($5.90) →</a>
-    </div>
-
   </div>
-</main>
+</article>
+
+<!-- CTA -->
+<aside class="post-cta">
+  <div class="post-cta-inner">
+    <span class="post-cta-tag">Get the checklist</span>
+    <h2>Freelancer Client Vetting Checklist</h2>
+    <p>20 red flags across three categories. Automatic risk score. The 16 questions to ask before you say yes. Know whether to proceed, demand a full deposit, or walk away — before you've invested a single hour.</p>
+    <p><a class="post-cta-btn" href="https://carlosdevlop.gumroad.com/l/freelancer-client-vetting-checklist" target="_blank" rel="noopener">Get the checklist ($5.90) →</a></p>
+  </div>
+</aside>
 
 <!-- FOOTER -->
 <footer class="footer">
