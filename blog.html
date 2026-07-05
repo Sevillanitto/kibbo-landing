@@ -162,14 +162,14 @@
 <!-- POST LIST -->
 <main class="blog-index">
 
-  <article class="post-item" data-category="Legal & Contracts">
+  <article class="post-item" data-category="Templates & Downloads">
     <time datetime="2026-07-02">July 2, 2026</time>
     <h2><a href="/blog/freelancer-client-red-flags-non-payment.html">The Cost of Saying Yes: The Data-Backed Red Flags That Prove a Freelance Client Won't Pay You</a></h2>
     <p>71% of freelancers have dealt with non-paying clients. Here's the behavioral data on what bad clients look like before the project starts — and a system to score them.</p>
     <a class="post-more" href="/blog/freelancer-client-red-flags-non-payment.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Health & Supplements">
+  <article class="post-item" data-category="Developer Tools & Security,Health & Supplements">
     <time datetime="2026-07-02">July 2, 2026</time>
     <h2><a href="/blog/hidden-ingredients-supplements-science.html">Code Red in Your Protein Shaker: The Hidden Ingredients Science Found in Popular Supplements</a></h2>
     <p>The supplement industry isn't regulated like medicine. Here's the data on heavy metals, undisclosed drugs, and fairy dusting — and how to audit your own labels.</p>
@@ -183,28 +183,28 @@
     <a class="post-more" href="/blog/extension-bloat-browser-security-consolidation.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Legal & Contracts">
+  <article class="post-item" data-category="Developer Tools & Security">
     <time datetime="2026-06-27">June 27, 2026</time>
     <h2><a href="/blog/forced-arbitration-fine-print-contract-analyzer.html">The Fine Print That Signs Away Your Rights: Forced Arbitration and the Click You Don't Remember</a></h2>
     <p>A streaming trial you forgot about can be used to dismiss an unrelated lawsuit years later. Here's how forced arbitration clauses work.</p>
     <a class="post-more" href="/blog/forced-arbitration-fine-print-contract-analyzer.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Privacy & Data">
+  <article class="post-item" data-category="Developer Tools & Security">
     <time datetime="2026-06-27">June 27, 2026</time>
     <h2><a href="/blog/cookie-consent-dark-patterns-privacy-laws.html">The Illusion of Consent: How Cookie Walls Bypass Privacy Laws</a></h2>
     <p>Most cookie banners are designed to manipulate you into accepting tracking. Here's the code behind the trick.</p>
     <a class="post-more" href="/blog/cookie-consent-dark-patterns-privacy-laws.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Shopping & E-Commerce">
+  <article class="post-item" data-category="Developer Tools & Security">
     <time datetime="2026-06-26">June 26, 2026</time>
     <h2><a href="/blog/checkout-intercept-formjacking-magecart.html">The Checkout Intercept: How Cybercriminals Steal Your Card Data Without Touching Your Phone</a></h2>
     <p>The padlock icon doesn't mean your card is safe. Here's the JavaScript technique criminals use to clone your payment data on fully legitimate sites.</p>
     <a class="post-more" href="/blog/checkout-intercept-formjacking-magecart.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Shopping & E-Commerce">
+  <article class="post-item" data-category="Developer Tools & Security">
     <time datetime="2026-06-26">June 26, 2026</time>
     <h2><a href="/blog/the-60-percent-trap-fake-discounts-dynamic-pricing.html">The 60% Trap: Why E-Commerce Giants Are Laundering Discounts</a></h2>
     <p>60% of online retailers fail basic pricing transparency laws. Here's the JavaScript behind fake discounts — and the tools that expose it.</p>
@@ -218,7 +218,7 @@
     <a class="post-more" href="/blog/phishing-detector-chrome-claude-ai.html">Read article →</a>
   </article>
 
-  <article class="post-item" data-category="Shopping & E-Commerce">
+  <article class="post-item" data-category="Developer Tools & Security">
     <time datetime="2026-06-20">June 20, 2026</time>
     <h2><a href="/blog/dark-patterns-detector-javascript.html">I built a Chrome extension that catches every dark pattern trick on shopping sites. Here's exactly how.</a></h2>
     <p>Flagging fake urgency, trap checkboxes and confirmshaming in real time with pure regex and DOM inspection — no AI, no API calls, works offline.</p>
@@ -292,12 +292,23 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   // Single source of truth: every card carrying a data-category attribute.
   var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-category]'));
 
+  // An article may belong to several categories via a comma-separated value,
+  // e.g. data-category="Developer Tools & Security,Health & Supplements".
+  function catsOf(card) {
+    return card.getAttribute('data-category').split(',')
+      .map(function (s) { return s.trim(); })
+      .filter(Boolean);
+  }
+
   // Count articles per category straight from the DOM — never hardcoded,
   // so the numbers stay correct automatically as articles are added.
+  // A multi-category article counts toward EACH of its categories, but the
+  // "All" total is simply the number of cards, so it is only counted once.
   var counts = {};
   cards.forEach(function (card) {
-    var c = card.getAttribute('data-category');
-    counts[c] = (counts[c] || 0) + 1;
+    catsOf(card).forEach(function (c) {
+      counts[c] = (counts[c] || 0) + 1;
+    });
   });
 
   var pills = [];
@@ -322,7 +333,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   function applyFilter(value, updateUrl) {
     var visible = 0;
     cards.forEach(function (card) {
-      var match = !value || card.getAttribute('data-category') === value;
+      var match = !value || catsOf(card).indexOf(value) !== -1;
       card.hidden = !match;
       if (match) visible++;
     });
