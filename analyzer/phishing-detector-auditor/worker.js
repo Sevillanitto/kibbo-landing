@@ -228,26 +228,44 @@ async function handleAnalyze(request, env) {
     }
   }
 
-  // Claude API call.
+  // Claude API call. The model call can be slow or occasionally overloaded —
+  // either of which otherwise surfaces to the user as a 502 (or a platform 502
+  // if the Worker exceeds its wall-clock limit waiting on a hung request).
+  // Guard with an explicit timeout and retry transient errors with backoff so a
+  // momentary blip doesn't fail the whole request.
   try {
-    const apiRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 400,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: message }],
-      }),
-    });
+    let apiRes;
+    let lastDetail = '';
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        apiRes = await anthropicFetch(env.ANTHROPIC_API_KEY, message);
+      } catch (netErr) {
+        // Network error or timeout (AbortError) — treat as transient.
+        lastDetail = netErr && netErr.name === 'AbortError'
+          ? 'Anthropic request timed out'
+          : (netErr && netErr.message) || 'network error';
+        apiRes = null;
+      }
 
-    if (!apiRes.ok) {
-      const detail = await apiRes.text();
-      return jsonResponse({ error: 'Claude API error', status: apiRes.status, detail }, 502);
+      if (apiRes && apiRes.ok) break;
+
+      const status = apiRes ? apiRes.status : 0;
+      // Retry only transient failures; fail fast on 4xx like 400/401.
+      const transient = !apiRes || status === 429 || status === 500 ||
+        status === 502 || status === 503 || status === 529;
+      if (!transient) {
+        const detail = await apiRes.text();
+        return jsonResponse({ error: 'Claude API error', status, detail }, 502);
+      }
+      if (apiRes) lastDetail = await apiRes.text();
+      if (attempt < 2) await sleep(400 * (attempt + 1)); // 400ms, 800ms
+    }
+
+    if (!apiRes || !apiRes.ok) {
+      return jsonResponse(
+        { error: 'Analysis service is busy, please try again in a moment.', detail: lastDetail },
+        503
+      );
     }
 
     const data = await apiRes.json();
@@ -274,6 +292,37 @@ async function handleAnalyze(request, env) {
     return jsonResponse(parsed);
   } catch (err) {
     return jsonResponse({ error: 'Worker error', detail: err.message }, 500);
+  }
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Single Anthropic Messages API call, aborted if it runs too long so a hung
+// upstream request can't push the Worker past its wall-clock limit (which would
+// surface to the browser as an opaque platform 502).
+async function anthropicFetch(apiKey, message) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 25000); // 25s < Worker limit
+  try {
+    return await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 400,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: message }],
+      }),
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timer);
   }
 }
 
