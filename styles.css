@@ -370,6 +370,14 @@ nav:not(.nav) .nav-links a:hover, nav:not(.nav) .nav-links a.active { color: var
 .prod-card.featured:hover { border-color: var(--accent-green); }
 .prod-badge.bundle { color: #fff; background: var(--accent-green); border-color: var(--accent-green); }
 .prod-price-old { font-family: var(--font-serif); font-weight: 400; font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
+.prod-card.free-lead { border: 2px solid var(--accent-amber); box-shadow: var(--shadow-hover); }
+.prod-card.free-lead:hover { border-color: var(--accent-amber); }
+.prod-badge.free { color: #fff; background: var(--accent-amber); border-color: var(--accent-amber); }
+.prod-price.free { color: var(--accent-amber); }
+.product-callout { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-green); border-radius: var(--radius-sm); padding: 22px 26px; margin: 8px 0 0; }
+.product-callout p { font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+.product-callout a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+.product-callout a:hover { text-decoration: underline; }
 
 /* ---- Legacy FOOTER (bare <footer> element) ---- */
 footer:not(.footer) { background: var(--bg-dark); padding: 42px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
@@ -498,6 +506,11 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .supp-limit-btn { display: inline-block; margin-top: 20px; padding: 12px 22px; font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: #fff; background: var(--supp-accent); border-radius: 100px; text-decoration: none; transition: var(--transition); }
 .supp-limit-btn:hover { background: #345c44; }
 .supp-limit-sub { margin-top: 14px; font-size: 13px; color: var(--supp-muted); }
+.supp-cross { margin-top: 48px; background: var(--accent-green-light); border-left: 3px solid var(--supp-accent); padding: 22px 26px; border-radius: var(--radius-sm); }
+.supp-cross-title { font-family: var(--font-serif); font-weight: 600; font-size: 17px; color: var(--supp-ink); margin: 0 0 6px; }
+.supp-cross p { font-size: 15px; line-height: 1.6; color: var(--supp-muted); margin: 0; }
+.supp-cross a { color: var(--supp-accent); font-weight: 600; text-decoration: none; }
+.supp-cross a:hover { text-decoration: underline; }
 .supp-access { margin-top: 22px; text-align: center; }
 .supp-access-toggle { background: none; border: none; cursor: pointer; font-family: var(--font-sans); font-size: 13px; color: var(--supp-muted); text-decoration: underline; text-underline-offset: 2px; padding: 0; }
 .supp-access-toggle:hover { color: var(--supp-accent); }
