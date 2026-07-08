@@ -366,6 +366,10 @@ nav:not(.nav) .nav-links a:hover, nav:not(.nav) .nav-links a.active { color: var
 .prod-btn:hover { background: #345c44; color: #fff; }
 .prod-card.soon { align-items: center; justify-content: center; text-align: center; min-height: 170px; border-style: dashed; }
 .prod-soon { font-family: var(--font-serif); font-weight: 600; font-size: 18px; color: var(--text-muted); }
+.prod-card.featured { border: 2px solid var(--accent-green); box-shadow: var(--shadow-hover); }
+.prod-card.featured:hover { border-color: var(--accent-green); }
+.prod-badge.bundle { color: #fff; background: var(--accent-green); border-color: var(--accent-green); }
+.prod-price-old { font-family: var(--font-serif); font-weight: 400; font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
 
 /* ---- Legacy FOOTER (bare <footer> element) ---- */
 footer:not(.footer) { background: var(--bg-dark); padding: 42px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
