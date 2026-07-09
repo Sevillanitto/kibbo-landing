@@ -279,6 +279,11 @@ img { max-width: 100%; display: block; }
 
 /* ---- ARTICLE EXTRAS (kicker eyebrow, callout, resource footer) ---- */
 .post-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-amber); margin: 16px 0 0; }
+/* CASE STUDY pill — reuses the .prod-badge pill shape in amber (#C8922A), a tinted
+   outline treatment distinct from the solid-amber "Free download" and solid-green
+   "Bundle" badges. */
+.post-badge-case { display: inline-block; font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-amber); background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.35); border-radius: 100px; padding: 3px 10px; margin-left: 10px; vertical-align: middle; }
+.post-item .post-badge-case { margin: 0 0 10px; display: inline-block; }
 .post-body .callout { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-amber); border-radius: var(--radius-sm); padding: 20px 24px; margin: 0 0 26px; }
 .post-body .callout p { margin-bottom: 12px; }
 .post-body .callout p:last-child { margin-bottom: 0; }
