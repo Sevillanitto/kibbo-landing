@@ -1,0 +1,18 @@
+name = "kibbo-generators"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Shared KV namespace for the generator engine. Holds:
+#   - free-preview rate limiter, SHARED across all generators
+#     (key: ip:{IP}:{date}:generators, 3/day, TTL 86400)
+#   - server-side full letters awaiting unlock  (key: preview:{previewId}, TTL 86400)
+#   - redeemed license key -> letter, so a refresh after paying keeps access
+#     (key: redeem:{licenseKey}, TTL 86400)
+#
+#   npx wrangler kv namespace create generators-rate-limit
+[[kv_namespaces]]
+binding = "GENERATORS_KV"
+id = "b6ddd53f1be6447c86147048ba4cdc96"
+
+# Required secret (set once, not stored in git):
+#   npx wrangler secret put ANTHROPIC_API_KEY
