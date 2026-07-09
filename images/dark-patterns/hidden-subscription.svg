@@ -1,0 +1,17 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Hidden Subscription dark pattern example</title>
+<desc>A checkout screen where a recurring subscription charge is enabled by a pre-checked box in small, low-contrast text, easy to miss when buying what looks like a one-time purchase.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="40" rx="8" fill="#141210"/>
+<text x="40" y="46" font-family="Inter,sans-serif" font-size="16" fill="#F7F5F0" font-weight="700">GlowSkin Checkout</text>
+<rect x="20" y="75" width="440" height="120" rx="8" fill="#ffffff" stroke="#ddd"/>
+<text x="40" y="105" font-family="Inter,sans-serif" font-size="15" fill="#141210" font-weight="700">Trial Face Serum — $4.95 (one-time)</text>
+<text x="40" y="130" font-family="Inter,sans-serif" font-size="12" fill="#666">Shipping: Free</text>
+<rect x="330" y="150" width="110" height="34" rx="6" fill="#3D6B4F"/>
+<text x="348" y="172" font-family="Inter,sans-serif" font-size="13" fill="#fff" font-weight="700">Pay $4.95</text>
+<rect x="20" y="210" width="440" height="60" rx="6" fill="#fafafa"/>
+<rect x="35" y="230" width="14" height="14" fill="#3D6B4F"/>
+<text x="55" y="241" font-family="Inter,sans-serif" font-size="9" fill="#aaa">I agree to receive a full-size jar every 30 days at $89.95 unless cancelled within 14 days of trial receipt</text>
+<rect x="320" y="230" width="120" height="26" rx="13" fill="#C8922A"/>
+<text x="330" y="248" font-family="Inter,sans-serif" font-size="10" fill="#fff" font-weight="700">Pre-checked box</text>
+</svg>

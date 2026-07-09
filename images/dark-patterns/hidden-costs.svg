@@ -1,0 +1,21 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Hidden Costs dark pattern example</title>
+<desc>An online checkout where the total price increases with unexplained service fees, handling fees, and processing fees only revealed at the final payment step.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="40" rx="8" fill="#141210"/>
+<text x="40" y="46" font-family="Inter,sans-serif" font-size="16" fill="#F7F5F0" font-weight="700">TicketNow — Order Summary</text>
+<rect x="20" y="75" width="440" height="245" rx="8" fill="#ffffff" stroke="#ddd"/>
+<text x="40" y="105" font-family="Inter,sans-serif" font-size="13" fill="#141210">Concert Ticket x2</text>
+<text x="400" y="105" font-family="Inter,sans-serif" font-size="13" fill="#141210" text-anchor="end">$90.00</text>
+<text x="40" y="135" font-family="Inter,sans-serif" font-size="13" fill="#999">Service Fee</text>
+<text x="400" y="135" font-family="Inter,sans-serif" font-size="13" fill="#999" text-anchor="end">$14.50</text>
+<text x="40" y="165" font-family="Inter,sans-serif" font-size="13" fill="#999">Order Processing Fee</text>
+<text x="400" y="165" font-family="Inter,sans-serif" font-size="13" fill="#999" text-anchor="end">$8.99</text>
+<text x="40" y="195" font-family="Inter,sans-serif" font-size="13" fill="#999">Facility Charge</text>
+<text x="400" y="195" font-family="Inter,sans-serif" font-size="13" fill="#999" text-anchor="end">$6.25</text>
+<line x1="40" y1="215" x2="440" y2="215" stroke="#eee"/>
+<text x="40" y="245" font-family="Inter,sans-serif" font-size="16" fill="#141210" font-weight="700">Total</text>
+<text x="400" y="245" font-family="Inter,sans-serif" font-size="16" fill="#B85C3A" font-weight="700" text-anchor="end">$119.74</text>
+<rect x="40" y="270" width="230" height="30" rx="15" fill="#B85C3A"/>
+<text x="55" y="290" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">33% added after "Buy Now"</text>
+</svg>

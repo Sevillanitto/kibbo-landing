@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Fake Urgency dark pattern example</title>
+<desc>A product page with a countdown timer claiming a discount expires in minutes, which actually resets every time the page is reloaded, creating false time pressure.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="40" rx="8" fill="#141210"/>
+<text x="40" y="46" font-family="Inter,sans-serif" font-size="16" fill="#F7F5F0" font-weight="700">DealZone — Wireless Earbuds</text>
+<rect x="20" y="75" width="440" height="245" rx="8" fill="#ffffff" stroke="#ddd"/>
+<rect x="40" y="95" width="400" height="55" rx="6" fill="#fdeeea"/>
+<text x="55" y="120" font-family="Inter,sans-serif" font-size="13" fill="#B85C3A" font-weight="700">⏰ Deal ends in:</text>
+<text x="55" y="142" font-family="Inter,sans-serif" font-size="20" fill="#B85C3A" font-weight="700">00:04:58</text>
+<text x="40" y="185" font-family="Inter,sans-serif" font-size="14" fill="#141210">$29.99</text>
+<text x="120" y="185" font-family="Inter,sans-serif" font-size="12" fill="#999" text-decoration="line-through">$89.99</text>
+<rect x="40" y="200" width="230" height="30" rx="15" fill="#B85C3A"/>
+<text x="55" y="220" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">Resets on every page reload</text>
+</svg>

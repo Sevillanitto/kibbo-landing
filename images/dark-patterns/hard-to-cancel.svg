@@ -1,0 +1,19 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Hard to Cancel dark pattern example</title>
+<desc>A subscription cancellation flow requiring the user to click through multiple confusing menu levels before reaching an actual cancel option, deliberately burying the exit.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="50" rx="8" fill="#141210"/>
+<text x="40" y="52" font-family="Inter,sans-serif" font-size="18" fill="#F7F5F0" font-weight="700">StreamPlus — Account Settings</text>
+<rect x="20" y="90" width="440" height="230" rx="8" fill="#ffffff" stroke="#ddd"/>
+<text x="40" y="120" font-family="Inter,sans-serif" font-size="13" fill="#666">Settings &gt; Account &gt; Membership &gt; Billing &gt; Advanced &gt; ...</text>
+<rect x="40" y="140" width="400" height="40" rx="6" fill="#f0f0f0"/>
+<text x="55" y="165" font-family="Inter,sans-serif" font-size="14" fill="#141210">Manage Payment Methods</text>
+<rect x="40" y="190" width="400" height="40" rx="6" fill="#f0f0f0"/>
+<text x="55" y="215" font-family="Inter,sans-serif" font-size="14" fill="#141210">Update Plan</text>
+<rect x="40" y="240" width="400" height="40" rx="6" fill="#f0f0f0"/>
+<text x="55" y="265" font-family="Inter,sans-serif" font-size="14" fill="#999">Pause Membership</text>
+<rect x="40" y="290" width="180" height="18" rx="4" fill="#eee"/>
+<text x="48" y="303" font-family="Inter,sans-serif" font-size="10" fill="#aaa">Cancel (call support to proceed) →</text>
+<rect x="330" y="130" width="110" height="30" rx="15" fill="#B85C3A"/>
+<text x="345" y="150" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">6 steps deep</text>
+</svg>

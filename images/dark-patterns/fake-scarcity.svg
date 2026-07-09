@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Fake Scarcity dark pattern example</title>
+<desc>A hotel booking page displaying "Only 1 room left!" and a fabricated live-viewer count, both regenerated randomly on each visit rather than reflecting real inventory or traffic.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="40" rx="8" fill="#141210"/>
+<text x="40" y="46" font-family="Inter,sans-serif" font-size="16" fill="#F7F5F0" font-weight="700">StayFinder — Ocean View Room</text>
+<rect x="20" y="75" width="440" height="245" rx="8" fill="#ffffff" stroke="#ddd"/>
+<text x="40" y="110" font-family="Inter,sans-serif" font-size="14" fill="#141210">$149/night</text>
+<rect x="40" y="130" width="250" height="28" rx="6" fill="#fdeeea"/>
+<text x="50" y="149" font-family="Inter,sans-serif" font-size="12" fill="#B85C3A" font-weight="700">🔥 Only 1 room left!</text>
+<rect x="40" y="165" width="250" height="28" rx="6" fill="#fdeeea"/>
+<text x="50" y="184" font-family="Inter,sans-serif" font-size="12" fill="#B85C3A" font-weight="700">👀 23 people viewing now</text>
+<rect x="40" y="220" width="240" height="30" rx="15" fill="#B85C3A"/>
+<text x="55" y="240" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">Numbers randomize on refresh</text>
+</svg>

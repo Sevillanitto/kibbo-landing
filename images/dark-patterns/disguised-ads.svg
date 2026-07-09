@@ -1,0 +1,16 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<title>Disguised Ads dark pattern example</title>
+<desc>A search results page where a paid advertisement is styled almost identically to organic results, with only a tiny, low-contrast "Ad" label distinguishing it.</desc>
+<rect width="480" height="360" fill="#F7F5F0"/>
+<rect x="20" y="20" width="440" height="40" rx="8" fill="#141210"/>
+<text x="40" y="46" font-family="Inter,sans-serif" font-size="16" fill="#F7F5F0" font-weight="700">SearchWeb Results</text>
+<rect x="20" y="75" width="440" height="245" rx="8" fill="#ffffff" stroke="#ddd"/>
+<text x="42" y="100" font-family="Inter,sans-serif" font-size="8" fill="#ccc">Ad</text>
+<text x="40" y="115" font-family="Inter,sans-serif" font-size="14" fill="#1a0dab" font-weight="700">Best Budget Laptops 2026 — BuyNowTech.com</text>
+<text x="40" y="132" font-family="Inter,sans-serif" font-size="11" fill="#666">Compare top rated laptops with free shipping...</text>
+<line x1="40" y1="150" x2="440" y2="150" stroke="#eee"/>
+<text x="40" y="175" font-family="Inter,sans-serif" font-size="14" fill="#1a0dab" font-weight="700">Best Budget Laptops 2026 — TechReview.org</text>
+<text x="40" y="192" font-family="Inter,sans-serif" font-size="11" fill="#666">Independent review of the top 10 laptops...</text>
+<rect x="40" y="230" width="240" height="30" rx="15" fill="#B85C3A"/>
+<text x="55" y="250" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">"Ad" label barely visible</text>
+</svg>
