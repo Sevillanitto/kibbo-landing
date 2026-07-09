@@ -11,22 +11,22 @@
 </script>
 
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.getkibbo.com/wizard">
+<link rel="canonical" href="https://www.getkibbo.com/rights-checker">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Consumer Rights Wizard — Find Your Action Plan | Kibbo</title>
+<title>Rights Checker — Do You Have a Refund, Chargeback or Escalation Right? | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Answer two questions — what happened and which country — and get a tailored action plan: the official authority to complain to, a plain-English guide, the right tool, and a ready-made template.">
+<meta name="description" content="Answer two questions — what happened and which country — and see which of the five consumer rights (refund, replacement, repair, chargeback, escalation) probably apply to your situation.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Consumer Rights Wizard — Find Your Action Plan | Kibbo">
-<meta property="og:description" content="Two questions, one tailored action plan: the official authority, a guide, the right tool, and a template for your exact consumer problem.">
-<meta property="og:url" content="https://www.getkibbo.com/wizard">
+<meta property="og:title" content="Rights Checker — Which Consumer Rights Apply to You? | Kibbo">
+<meta property="og:description" content="Two questions, then a plain ✓ / ✗ checklist of the five consumer rights that apply to your situation — refund, replacement, repair, chargeback, escalation.">
+<meta property="og:url" content="https://www.getkibbo.com/rights-checker">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Consumer Rights Wizard — Find Your Action Plan | Kibbo">
-<meta name="twitter:description" content="Two questions, one tailored action plan: the official authority, a guide, the right tool, and a template for your exact consumer problem.">
+<meta name="twitter:title" content="Rights Checker — Which Consumer Rights Apply to You? | Kibbo">
+<meta name="twitter:description" content="Two questions, then a plain ✓ / ✗ checklist of the five consumer rights that apply to your situation.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,12 +36,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Consumer Rights Wizard",
-  "url": "https://www.getkibbo.com/wizard",
+  "name": "Consumer Rights Checker",
+  "url": "https://www.getkibbo.com/rights-checker",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
-  "description": "Answer what happened and which country to get a tailored consumer-rights action plan: the official authority, a guide, the right tool and a template.",
+  "description": "Answer what happened and which country to see which of the five consumer rights probably apply: refund, replacement, repair, chargeback, escalation.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
   "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
@@ -70,16 +70,16 @@
 <!-- PAGE HEAD -->
 <div class="section-page-hero">
   <div class="container">
-    <p class="section-label">Consumer Rights Wizard</p>
-    <h1 class="section-title">Not sure where to start? <em>We'll point the way.</em></h1>
-    <p class="section-subtitle">Answer two quick questions and get a tailored action plan — the official authority to complain to, a plain-English guide, the right tool, and a ready-made template.</p>
+    <p class="section-label">Rights Checker</p>
+    <h1 class="section-title">Do you actually have a <em>right</em> here?</h1>
+    <p class="section-subtitle">Answer two quick questions and see which of the five consumer rights — refund, replacement, repair, chargeback, escalation — probably apply to your situation.</p>
   </div>
 </div>
 
-<!-- WIZARD -->
+<!-- RIGHTS CHECKER -->
 <main class="section-main">
   <div class="wiz" id="wizStage">
-    <p class="wiz-note">Loading the wizard…</p>
+    <p class="wiz-note">Loading the rights checker…</p>
   </div>
 </main>
 
@@ -115,13 +115,13 @@
 </footer>
 
 <script src="/wizard/decision-tree-core.js"></script>
-<script src="/wizard/wizard-result-renderer.js"></script>
+<script src="/wizard/rights-result-renderer.js"></script>
 <script>
   (function () {
     var p = new URLSearchParams(window.location.search);
     window.DecisionTree.mount({
       stageId: 'wizStage',
-      renderResult: window.WIZARD_RESULT,
+      renderResult: window.RIGHTS_RESULT,
       initialProblem: p.get('problem'),
       initialCountry: p.get('country')
     });
