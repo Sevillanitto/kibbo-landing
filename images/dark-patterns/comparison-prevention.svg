@@ -17,5 +17,5 @@
 <text x="325" y="120" font-family="Inter,sans-serif" font-size="10" fill="#666">$1,290/year (billed annually)</text>
 <text x="325" y="145" font-family="Inter,sans-serif" font-size="9" fill="#999">Custom storage tier, priority queue</text>
 <rect x="40" y="270" width="400" height="30" rx="15" fill="#B85C3A"/>
-<text x="55" y="290" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">Different units, terms & features — no apples-to-apples</text>
+<text x="55" y="290" font-family="Inter,sans-serif" font-size="11" fill="#fff" font-weight="700">Different units, terms &amp; features — no apples-to-apples</text>
 </svg>
