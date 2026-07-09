@@ -1,0 +1,79 @@
+{
+  "_readme": "Consumer Rights Wizard config — the ONLY file you edit to change the wizard. The engine (wizard-engine.js) reads 'problems', 'countries' and 'combinations' and renders everything dynamically; it contains no problem/country-specific code. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. TO FILL A GAP: set the null field on that combination (e.g. give 'Parcel|US' an 'article'). Every field (directory, article, tool, template) is optional — use null or omit it and the result screen simply won't render that card. Keys in 'combinations' are 'Problem|Country'. All urls are site-absolute (leading slash).",
+  "problems": ["Scam", "Bank", "Subscription", "Parcel", "Landlord", "Work"],
+  "countries": ["UK", "US"],
+  "combinations": {
+    "Scam|UK": {
+      "directory": { "name": "Action Fraud", "url": "/directory/financial-banking.html#action-fraud" },
+      "article": { "title": "How to Report a Scam to Action Fraud UK", "url": "/blog/action-fraud-report-uk-scam.html" },
+      "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
+      "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" }
+    },
+    "Scam|US": {
+      "directory": { "name": "FTC Report Fraud", "url": "/directory/financial-banking.html#ftc-report-fraud" },
+      "article": { "title": "How to Report a Scam to the FTC", "url": "/blog/ftc-report-fraud-us.html" },
+      "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
+      "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" }
+    },
+    "Bank|UK": {
+      "directory": { "name": "Financial Ombudsman Service", "url": "/directory/financial-banking.html#fos-ombudsman" },
+      "article": { "title": "The 8-Week Wall: UK Financial Ombudsman Guide", "url": "/blog/fos-ombudsman-uk-bank-dispute.html" },
+      "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
+      "template": { "name": "Chargeback Dispute Evidentiary Pack", "url": "/templates/chargeback-dispute-pack.html" }
+    },
+    "Bank|US": {
+      "directory": { "name": "CFPB Complaint Portal", "url": "/directory/financial-banking.html#cfpb-complaint" },
+      "article": { "title": "How to File a CFPB Complaint", "url": "/blog/cfpb-complaint-bank-fraud-refund.html" },
+      "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
+      "template": { "name": "Chargeback Dispute Evidentiary Pack", "url": "/templates/chargeback-dispute-pack.html" }
+    },
+    "Subscription|UK": {
+      "directory": { "name": "Gov.uk Consumer Rights (30-day rule)", "url": "/directory/shopping-ecommerce.html#gov-uk-consumer-rights" },
+      "article": { "title": "The 30-Day Right to Reject", "url": "/blog/30-day-right-to-reject-uk.html" },
+      "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
+      "template": { "name": "Subscription Cancellation Email Pack", "url": "/templates/subscription-cancellation-email-pack.html" }
+    },
+    "Subscription|US": {
+      "directory": { "name": "Better Business Bureau", "url": "/directory/shopping-ecommerce.html#better-business-bureau" },
+      "article": { "title": "How to Check a Company's BBB Complaint History", "url": "/blog/bbb-company-complaint-history-us.html" },
+      "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
+      "template": { "name": "Subscription Cancellation Email Pack", "url": "/templates/subscription-cancellation-email-pack.html" }
+    },
+    "Parcel|UK": {
+      "directory": { "name": "Royal Mail / Evri / DPD Claims", "url": "/directory/delivery-parcels.html#royal-mail" },
+      "article": { "title": "Claiming for a Lost Royal Mail Parcel", "url": "/blog/royal-mail-lost-parcel-claim-uk.html" },
+      "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
+      "template": null
+    },
+    "Parcel|US": {
+      "directory": { "name": "eConsumer.gov", "url": "/directory/shopping-ecommerce.html#econsumer-gov" },
+      "article": { "title": "Reporting an International Shopping Scam", "url": "/blog/econsumer-gov-international-scam.html" },
+      "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
+      "template": null
+    },
+    "Landlord|UK": {
+      "directory": { "name": "Citizens Advice Consumer Helpline", "url": "/directory/shopping-ecommerce.html#citizens-advice-consumer-helpline" },
+      "article": { "title": "Citizens Advice: Free Consumer Legal Advice", "url": "/blog/citizens-advice-consumer-helpline-uk.html" },
+      "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand.html", "type": "generator" },
+      "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" }
+    },
+    "Landlord|US": {
+      "directory": null,
+      "article": null,
+      "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand.html", "type": "generator" },
+      "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" }
+    },
+    "Work|UK": {
+      "directory": { "name": "Resolver", "url": "/directory/shopping-ecommerce.html#resolver" },
+      "article": { "title": "How to Use Resolver to Escalate a Complaint", "url": "/blog/resolver-complaint-escalation-uk.html" },
+      "tool": null,
+      "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" }
+    },
+    "Work|US": {
+      "directory": null,
+      "article": { "title": "Red Flags That Prove a Freelance Client Won't Pay You", "url": "/blog/freelancer-client-red-flags-non-payment.html" },
+      "tool": null,
+      "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" }
+    }
+  }
+}
