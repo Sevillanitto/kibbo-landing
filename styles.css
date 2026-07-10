@@ -288,6 +288,7 @@ img { max-width: 100%; display: block; }
 .post-body .callout p { margin-bottom: 12px; }
 .post-body .callout p:last-child { margin-bottom: 0; }
 .post-body .callout-title { font-family: var(--font-serif); font-weight: 600; font-size: 18px; color: var(--text-primary); }
+.post-body .post-seealso { margin: 40px 0 0; padding: 18px 20px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-green); border-radius: var(--radius-sm); font-size: 15px; }
 .post-body .resource-footer { margin-top: 44px; padding: 26px 0 0; border-top: 1px solid var(--border); }
 .post-body .resource-footer p { font-size: 16px; }
 .post-body .resource-footer p:last-child { margin-bottom: 0; }
