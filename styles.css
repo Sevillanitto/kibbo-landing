@@ -678,6 +678,14 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .ftt-h2 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(21px, 3vw, 27px); line-height: 1.15; letter-spacing: -0.02em; margin: 4px 0 22px; }
 .prod-note { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 0 0 16px; }
 
+/* ---- Directory: featured Scam Recovery Hub banner ---- */
+.dir-scam-banner { display: flex; align-items: center; gap: 18px; background: var(--accent-green); border-radius: 16px; padding: 24px clamp(22px, 4vw, 32px); margin: 0 0 26px; text-decoration: none; transition: var(--transition); }
+.dir-scam-banner:hover { background: #345c44; transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.dir-scam-eyebrow { font-family: var(--font-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C8922A; margin: 0 0 4px; }
+.dir-scam-title { font-family: var(--font-serif); font-weight: 600; font-size: clamp(19px, 2.6vw, 24px); color: #fff; margin: 0 0 6px; letter-spacing: -0.02em; }
+.dir-scam-desc { font-family: var(--font-sans); font-size: 14px; line-height: 1.55; color: #eef3ee; margin: 0; max-width: 620px; }
+.dir-scam-arrow { flex: 0 0 auto; font-size: 26px; color: #fff; }
+
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
 .dp-attribution a { color: var(--accent-terra); font-weight: 600; }
