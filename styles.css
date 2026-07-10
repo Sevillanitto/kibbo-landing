@@ -650,6 +650,28 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .tl-node-label { font-family: var(--font-serif); font-weight: 600; font-size: 15px; line-height: 1.3; color: var(--text-primary); }
 .tl-output .rc-cta { margin-top: 24px; }
 
+/* ---- Scam Recovery Hub ---- */
+.hub-scam { padding: 34px 0; border-top: 1px solid var(--border); }
+.hub-scam:first-of-type { border-top: none; padding-top: 8px; }
+.hub-scam-title { font-family: var(--font-serif); font-weight: 600; font-size: clamp(21px, 3vw, 27px); letter-spacing: -0.02em; color: var(--text-primary); margin: 0 0 6px; }
+.hub-scam-sub { font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin: 0 0 22px; max-width: 640px; }
+.hub-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.hub-col { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 20px 12px; }
+.hub-col-h { font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
+.hub-col.res .hub-col-h { color: var(--accent-green); }
+.hub-col.tools .hub-col-h { color: var(--accent-amber); }
+.hub-col.tmpl .hub-col-h { color: var(--accent-terra); }
+.hub-col.res { border-top: 3px solid var(--accent-green); }
+.hub-col.tools { border-top: 3px solid var(--accent-amber); }
+.hub-col.tmpl { border-top: 3px solid var(--accent-terra); }
+.hub-link { display: block; padding: 10px 0; border-bottom: 1px solid var(--border); text-decoration: none; transition: var(--transition); }
+.hub-link:last-child { border-bottom: none; }
+.hub-link .hub-link-name { font-family: var(--font-serif); font-weight: 600; font-size: 15px; color: var(--text-primary); }
+.hub-link .hub-link-desc { display: block; font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-secondary); margin-top: 2px; }
+.hub-link:hover .hub-link-name { color: var(--accent-green); }
+.hub-cta-note { font-family: var(--font-sans); font-size: 14px; color: var(--text-secondary); background: var(--accent-green-light); border-radius: var(--radius-sm); padding: 14px 18px; margin: 8px 0 0; }
+.hub-cta-note a { color: var(--accent-green); font-weight: 600; }
+
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
 .dp-attribution a { color: var(--accent-terra); font-weight: 600; }
