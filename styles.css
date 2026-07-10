@@ -672,6 +672,12 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .hub-cta-note { font-family: var(--font-sans); font-size: 14px; color: var(--text-secondary); background: var(--accent-green-light); border-radius: var(--radius-sm); padding: 14px 18px; margin: 8px 0 0; }
 .hub-cta-note a { color: var(--accent-green); font-weight: 600; }
 
+/* ---- Free to Try hub ---- */
+.ftt-section { margin-top: 48px; }
+.ftt-section:first-of-type { margin-top: 8px; }
+.ftt-h2 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(21px, 3vw, 27px); line-height: 1.15; letter-spacing: -0.02em; margin: 4px 0 22px; }
+.prod-note { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 0 0 16px; }
+
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
 .dp-attribution a { color: var(--accent-terra); font-weight: 600; }
