@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Check If Your Email Was in a Data Breach (Have I Been Pwned) — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="A strong password doesn't protect you from a breach you had no part in. How Have I Been Pwned actually works — the two different checks, neither sending your password anywhere — and what to do if your email shows up.">
+
+<meta name="author" content="Margaret Spencer Breen">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="How to Check If Your Email or Password Was Exposed in a Data Breach (Have I Been Pwned, Explained Properly)">
+<meta property="og:description" content="A free, well-established way to check exactly which breaches your details have shown up in — and what to actually do if your email is in one.">
+<meta property="og:url" content="https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<meta property="article:published_time" content="2026-07-10">
+<meta property="article:tag" content="Have I Been Pwned, data breach, password security, Pwned Passwords, privacy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Check If Your Email or Password Was Exposed in a Data Breach">
+<meta name="twitter:description" content="How Have I Been Pwned actually works, and what to do if your email shows up in a breach.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- BlogPosting + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.getkibbo.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "How to Check If Your Email or Password Was Exposed in a Data Breach (Have I Been Pwned, Explained Properly)", "item": "https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check#article",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check" },
+      "headline": "How to Check If Your Email or Password Was Exposed in a Data Breach (Have I Been Pwned, Explained Properly)",
+      "description": "A strong password doesn't protect you from a breach you had no part in. How Have I Been Pwned actually works, and what to do if your email shows up.",
+      "image": "https://www.getkibbo.com/images/products/web-guardian.png",
+      "datePublished": "2026-07-10T00:00:00Z",
+      "dateModified": "2026-07-10T00:00:00Z",
+      "author": { "@type": "Person", "name": "Margaret Spencer Breen", "url": "https://www.getkibbo.com/about" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/", "logo": { "@type": "ImageObject", "url": "https://www.getkibbo.com/favicon.png" } },
+      "keywords": "Have I Been Pwned, data breach, Troy Hunt, Pwned Passwords, k-anonymity, password reuse, two-factor authentication",
+      "inLanguage": "en",
+      "url": "https://www.getkibbo.com/blog/have-i-been-pwned-data-breach-check"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html" class="active">Blog</a>
+      <a href="/dark-patterns.html">Dark Patterns</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<article data-category="Privacy & Data">
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-07-10">July 10, 2026</time>
+      <div class="author-line">
+        <img src="../images/authors/margaret-spencer-breen.jpg" alt="Margaret Spencer Breen" class="author-avatar" />
+        <span>By <a href="https://www.getkibbo.com/about.html">Margaret Spencer Breen</a></span>
+      </div>
+      <p class="post-kicker">Privacy &amp; Data · Global</p>
+      <h1 class="post-h1">How to Check If Your Email or Password Was Exposed in a Data Breach (Have I Been Pwned, Explained Properly)</h1>
+    </div>
+  </header>
+
+  <div class="post-body">
+
+    <p>
+      A strong, unique password doesn't protect you from a breach you had
+      no part in. If a company you have an account with gets hacked, your
+      email and whatever they stored alongside it can end up in a
+      searchable breach database within days — regardless of how careful
+      you were. The good news is there's a free, well-established way to
+      check exactly which breaches your details have shown up in.
+    </p>
+
+    <h2>What Have I Been Pwned actually is</h2>
+    <p>
+      Have I Been Pwned (HIBP) is a free breach-search service created in
+      2013 by Troy Hunt, an Australian security researcher, after the
+      Adobe breach exposed 153 million accounts. It has since grown into
+      the standard reference point in the security industry — as of its
+      most recent milestone, it has loaded data from over 1,000 breached
+      websites, and its API is used by password managers, browser
+      extensions, and even national government cybersecurity teams in
+      dozens of countries.
+    </p>
+
+    <h2>Two different checks — and neither one requires sending your password anywhere</h2>
+    <p>
+      It's worth being precise about how this actually works, since the
+      mechanism matters for trusting it:
+    </p>
+    <ul class="checklist">
+      <li><strong>Email/account breach search</strong> (the main
+        haveibeenpwned.com search box): you enter your email address, and
+        it tells you which known breaches include that email — along with
+        what type of data was exposed in each one (passwords, dates of
+        birth, physical addresses, etc.). This doesn't touch your actual
+        password at all; it only checks whether your email address appears
+        in the breach records HIBP has indexed.</li>
+      <li><strong>Pwned Passwords</strong> (a separate tool): lets you or a
+        password manager check whether a specific password has appeared in
+        known breaches, using a technique called k-anonymity — only a
+        partial hash of your password is ever sent, never the password
+        itself or a full match, so the check happens without HIBP (or
+        anyone intercepting the request) ever seeing your actual password.</li>
+    </ul>
+    <p>
+      Phone number search exists but is limited to specific breaches where
+      phone numbers were part of the exposed dataset (such as the 2019
+      Facebook breach) — it isn't a general phone-number breach search in
+      the same way the email tool works.
+    </p>
+    <p>
+      One more thing worth knowing: HIBP doesn't make every breach publicly
+      searchable by email by default. Breaches involving sensitive contexts
+      (like adult content sites) are flagged as "sensitive" and only
+      surface through the email notification service you opt into, not the
+      public search box — a deliberate design choice to avoid inadvertently
+      outing someone by simply looking up their own email.
+    </p>
+
+    <h2>What to actually do if your email shows up</h2>
+    <ol>
+      <li>Check which specific breach(es) it appeared in, and what data
+        type was exposed for each — a breach that exposed only email
+        addresses is a different level of concern than one that exposed
+        passwords, security questions, or physical addresses.</li>
+      <li>If a password was exposed and you've reused it anywhere else,
+        change it everywhere you've used it — not just on the breached
+        site. Reused passwords are exactly what turns one breach into
+        several compromised accounts.</li>
+      <li>Turn on two-factor authentication (2FA) on the affected account
+        and anywhere else you can, ideally using an authenticator app
+        rather than SMS.</li>
+      <li>Consider a password manager if you're not already using one —
+        it removes the incentive to reuse passwords in the first place,
+        which is the underlying problem breach exposure keeps revealing.</li>
+    </ol>
+
+    <h2>Make it a routine, not a one-off</h2>
+    <p>
+      New breaches get added to HIBP regularly, so a single clean check
+      today doesn't mean you're clear in six months. Set a recurring
+      reminder — every 6 months is a reasonable cadence — to re-check your
+      main email addresses, especially any you've used to sign up for
+      services over many years.
+    </p>
+
+    <div class="resource-footer">
+      <p>
+        🔒 <strong>Not sure if your email has ever been part of a data
+        breach?</strong> The direct link to Have I Been Pwned is in the
+        Kibbo Free Resources Directory — no sign-up, no cost.
+      </p>
+      <p>Find the direct, official link to Have I Been Pwned on its dedicated card in our <a href="/directory/privacy-data.html#have-i-been-pwned">Free Resources Directory →</a></p>
+    </div>
+
+  </div>
+</article>
+
+<div id="engagement-footer"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/engagement-footer.js"></script>
+</body>
+</html>
