@@ -686,6 +686,21 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .dir-scam-desc { font-family: var(--font-sans); font-size: 14px; line-height: 1.55; color: #eef3ee; margin: 0; max-width: 620px; }
 .dir-scam-arrow { flex: 0 0 auto; font-size: 26px; color: #fff; }
 
+/* ---- Consumer Rights by Country (add a 3rd country = add another .crc-country) ---- */
+.crc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; align-items: start; }
+.crc-country { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 26px 24px; }
+.crc-country-h { font-family: var(--font-serif); font-weight: 600; font-size: clamp(22px, 3vw, 28px); letter-spacing: -0.02em; color: var(--text-primary); margin: 0 0 4px; }
+.crc-country-sub { font-family: var(--font-sans); font-size: 14px; line-height: 1.5; color: var(--text-secondary); margin: 0 0 18px; }
+.crc-sub { margin-top: 22px; }
+.crc-sub-h { font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-green); margin: 0 0 10px; }
+.crc-links a { display: block; font-family: var(--font-sans); font-size: 14px; line-height: 1.4; color: var(--text-primary); text-decoration: none; padding: 9px 0; border-bottom: 1px solid var(--border); transition: var(--transition); }
+.crc-links a:last-child { border-bottom: none; }
+.crc-links a:hover { color: var(--accent-green); }
+.crc-wizard { display: inline-block; margin-top: 2px; padding: 11px 20px; font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: #fff; background: var(--accent-green); border-radius: 100px; text-decoration: none; transition: var(--transition); }
+.crc-wizard:hover { background: #345c44; }
+.crc-note { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 10px 0 0; }
+.crc-note a { color: var(--accent-green); font-weight: 600; }
+
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
 .dp-attribution a { color: var(--accent-terra); font-weight: 600; }

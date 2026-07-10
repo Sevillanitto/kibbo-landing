@@ -37,6 +37,7 @@
 
     var CFG = null;
     var state = { problem: null, country: null };
+    var presetCountry = null; // set by a country-only deep link (?country=UK) to skip the country screen
 
     fetch(configUrl, { credentials: 'same-origin' })
       .then(function (r) { return r.json(); })
@@ -53,19 +54,24 @@
     function start() {
       var problems = CFG.problems || [];
       var countries = CFG.countries || [];
-      if (initP && initC && problems.indexOf(initP) !== -1 && countries.indexOf(initC) !== -1) {
+      var hasP = initP && problems.indexOf(initP) !== -1;
+      var hasC = initC && countries.indexOf(initC) !== -1;
+      if (hasP && hasC) {
         state.problem = initP;
         state.country = initC;
         showResult();
-      } else {
-        showProblems();
+        return;
       }
+      // Country-only deep link (?country=UK): remember it and skip the country
+      // screen once a problem is chosen.
+      if (hasC) presetCountry = initC;
+      showProblems();
     }
 
     // ---- Screen 1: What happened? ----
     function showProblems() {
       state.problem = null;
-      state.country = null;
+      state.country = presetCountry || null;
       stage.innerHTML =
         '<div class="wiz-screen">' +
         '<p class="wiz-step">Step 1 of 3</p>' +
@@ -81,13 +87,15 @@
       stage.querySelectorAll('[data-problem]').forEach(function (b) {
         b.addEventListener('click', function () {
           state.problem = b.getAttribute('data-problem');
-          showCountries();
+          if (presetCountry) showResult();
+          else showCountries();
         });
       });
     }
 
     // ---- Screen 2: Which country? ----
     function showCountries() {
+      presetCountry = null; // the user is choosing a country manually now
       stage.innerHTML =
         '<div class="wiz-screen">' +
         '<p class="wiz-step">Step 2 of 3</p>' +
