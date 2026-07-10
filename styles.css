@@ -628,6 +628,28 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 }
 .rc-cta:hover { background: #345c44; }
 
+/* ---- Timeline Generator ---- */
+.tl-help { font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin: 0 0 18px; }
+.tl-datebar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.tl-date-input { padding: 12px 14px; font-family: var(--font-sans); font-size: 15px; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); outline: none; }
+.tl-date-input:focus { border-color: var(--accent-green); }
+.tl-go { padding: 12px 22px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; background: var(--accent-green); border: none; border-radius: 100px; cursor: pointer; transition: var(--transition); }
+.tl-go:hover { background: #345c44; }
+.tl-output { margin-top: 30px; }
+.tl-meta { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 0 0 14px; }
+.tl-kind { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 100px; padding: 3px 10px; margin-right: 8px; }
+.tl-kind-legal { color: var(--accent-green); background: var(--accent-green-light); border: 1px solid rgba(61,107,79,0.25); }
+.tl-kind-rec { color: var(--accent-amber); background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.35); }
+.tl-overdue { font-family: var(--font-sans); font-size: 14px; color: var(--accent-terra); background: #FBF0EB; border-radius: var(--radius-sm); padding: 12px 16px; margin: 0 0 16px; }
+.tl-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 20px; }
+.tl-legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 12px; color: var(--text-secondary); }
+.tl-legend i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.tl-svg { display: block; max-width: 100%; margin: 0 0 8px; }
+.tl-node { display: flex; flex-direction: column; gap: 3px; padding-right: 6px; }
+.tl-node-date { font-family: var(--font-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
+.tl-node-label { font-family: var(--font-serif); font-weight: 600; font-size: 15px; line-height: 1.3; color: var(--text-primary); }
+.tl-output .rc-cta { margin-top: 24px; }
+
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
 .dp-attribution a { color: var(--accent-terra); font-weight: 600; }

@@ -1,5 +1,5 @@
 {
-  "_readme": "Consumer Rights Wizard + Rights Checker config — the ONLY file you edit to change either tool. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. TO FILL A GAP: set the null field on that combination (e.g. give 'Parcel|US' an 'article'). Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards) and 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker). A right is marked true only when genuinely supported by the linked article/resource. All urls are site-absolute (leading slash).",
+  "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
   "problems": ["Scam", "Bank", "Subscription", "Parcel", "Landlord", "Work"],
   "countries": ["UK", "US"],
   "combinations": {
@@ -8,84 +8,166 @@
       "article": { "title": "How to Report a Scam to Action Fraud UK", "url": "/blog/action-fraud-report-uk-scam.html" },
       "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
       "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Report to Action Fraud and tell your bank", "days_from_start": 0 },
+        { "label": "Bank must decide on reimbursement (5 business days)", "days_from_start": 7 },
+        { "label": "Bank's extended decision deadline (35 business days)", "days_from_start": 49 },
+        { "label": "Escalate to the Financial Ombudsman if refused", "days_from_start": 50 },
+        { "label": "Final deadline to claim (13 months from the payment)", "days_from_start": 395 }
+      ]
     },
     "Scam|US": {
       "directory": { "name": "FTC Report Fraud", "url": "/directory/financial-banking.html#ftc-report-fraud" },
       "article": { "title": "How to Report a Scam to the FTC", "url": "/blog/ftc-report-fraud-us.html" },
       "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
       "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" },
-      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report to the FTC at ReportFraud.ftc.gov", "days_from_start": 0 },
+        { "label": "Contact your card issuer or bank to start a chargeback", "days_from_start": 1 },
+        { "label": "Put your dispute in writing with evidence", "days_from_start": 3 },
+        { "label": "Follow up or escalate if unresolved", "days_from_start": 30 }
+      ]
     },
     "Bank|UK": {
       "directory": { "name": "Financial Ombudsman Service", "url": "/directory/financial-banking.html#fos-ombudsman" },
       "article": { "title": "The 8-Week Wall: UK Financial Ombudsman Guide", "url": "/blog/fos-ombudsman-uk-bank-dispute.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
       "template": { "name": "Chargeback Dispute Evidentiary Pack", "url": "/templates/chargeback-dispute-pack.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Send a formal complaint to your bank", "days_from_start": 0 },
+        { "label": "Bank must give a final response (week 8)", "days_from_start": 56 },
+        { "label": "No final response? You can go straight to the FOS", "days_from_start": 57 },
+        { "label": "Deadline to refer to the FOS (6 months from final response)", "days_from_start": 237 }
+      ]
     },
     "Bank|US": {
       "directory": { "name": "CFPB Complaint Portal", "url": "/directory/financial-banking.html#cfpb-complaint" },
       "article": { "title": "How to File a CFPB Complaint", "url": "/blog/cfpb-complaint-bank-fraud-refund.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
       "template": { "name": "Chargeback Dispute Evidentiary Pack", "url": "/templates/chargeback-dispute-pack.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "File a complaint with the CFPB", "days_from_start": 0 },
+        { "label": "Company must respond (15 calendar days)", "days_from_start": 15 },
+        { "label": "Expected final resolution (CFPB target)", "days_from_start": 60 }
+      ]
     },
     "Subscription|UK": {
       "directory": { "name": "Gov.uk Consumer Rights (30-day rule)", "url": "/directory/shopping-ecommerce.html#gov-uk-consumer-rights" },
       "article": { "title": "The 30-Day Right to Reject", "url": "/blog/30-day-right-to-reject-uk.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
       "template": { "name": "Subscription Cancellation Email Pack", "url": "/templates/subscription-cancellation-email-pack.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Identify if the item/service is faulty vs a simple return", "days_from_start": 0 },
+        { "label": "30-day right to reject window closes (if faulty)", "days_from_start": 30 },
+        { "label": "6-month window where the burden of proof is on the retailer", "days_from_start": 180 }
+      ]
     },
     "Subscription|US": {
       "directory": { "name": "Better Business Bureau", "url": "/directory/shopping-ecommerce.html#better-business-bureau" },
       "article": { "title": "How to Check a Company's BBB Complaint History", "url": "/blog/bbb-company-complaint-history-us.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
       "template": { "name": "Subscription Cancellation Email Pack", "url": "/templates/subscription-cancellation-email-pack.html" },
-      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Cancel in writing and keep proof", "days_from_start": 0 },
+        { "label": "Dispute the recurring charge with your card issuer", "days_from_start": 1 },
+        { "label": "File a Better Business Bureau complaint", "days_from_start": 3 },
+        { "label": "Follow up if unresolved", "days_from_start": 30 }
+      ]
     },
     "Parcel|UK": {
       "directory": { "name": "Royal Mail / Evri / DPD Claims", "url": "/directory/delivery-parcels.html#royal-mail" },
       "article": { "title": "Claiming for a Lost Royal Mail Parcel", "url": "/blog/royal-mail-lost-parcel-claim-uk.html" },
       "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
       "template": null,
-      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact the retailer (not the courier) in writing", "days_from_start": 0 },
+        { "label": "Give the retailer a clear deadline to respond", "days_from_start": 2 },
+        { "label": "Escalate to a chargeback with your bank if unresolved", "days_from_start": 14 }
+      ]
     },
     "Parcel|US": {
       "directory": { "name": "eConsumer.gov", "url": "/directory/shopping-ecommerce.html#econsumer-gov" },
       "article": { "title": "Reporting an International Shopping Scam", "url": "/blog/econsumer-gov-international-scam.html" },
       "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
       "template": null,
-      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true }
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report to eConsumer.gov", "days_from_start": 0 },
+        { "label": "Open a chargeback with your card issuer", "days_from_start": 1 },
+        { "label": "Submit your evidence to the card issuer", "days_from_start": 3 },
+        { "label": "Follow up if unresolved", "days_from_start": 30 }
+      ]
     },
     "Landlord|UK": {
       "directory": { "name": "Citizens Advice Consumer Helpline", "url": "/directory/shopping-ecommerce.html#citizens-advice-consumer-helpline" },
       "article": { "title": "Citizens Advice: Free Consumer Legal Advice", "url": "/blog/citizens-advice-consumer-helpline-uk.html" },
       "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand.html", "type": "generator" },
       "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Request your deposit back from the landlord in writing", "days_from_start": 0 },
+        { "label": "Raise a dispute with the deposit protection (TDP) scheme", "days_from_start": 14 },
+        { "label": "Submit your evidence (photos, inventory) to the adjudicator", "days_from_start": 21 },
+        { "label": "Adjudicator decision (typically a few weeks)", "days_from_start": 42 }
+      ]
     },
     "Landlord|US": {
       "directory": null,
       "article": null,
       "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand.html", "type": "generator" },
       "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
-      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": false }
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": false },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Send a written demand for your deposit", "days_from_start": 0 },
+        { "label": "Cite your state's statutory deposit-return deadline", "days_from_start": 3 },
+        { "label": "Follow up if the deposit is unpaid", "days_from_start": 21 },
+        { "label": "Consider small claims court", "days_from_start": 45 }
+      ]
     },
     "Work|UK": {
       "directory": { "name": "Resolver", "url": "/directory/shopping-ecommerce.html#resolver" },
       "article": { "title": "How to Use Resolver to Escalate a Complaint", "url": "/blog/resolver-complaint-escalation-uk.html" },
       "tool": null,
       "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" },
-      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true }
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Send a written request for payment / raise the issue", "days_from_start": 0 },
+        { "label": "Escalate through Resolver if you're ignored", "days_from_start": 7 },
+        { "label": "Give a final deadline before further action", "days_from_start": 21 },
+        { "label": "Refer to the relevant ombudsman or consider small claims", "days_from_start": 56 }
+      ]
     },
     "Work|US": {
       "directory": null,
       "article": { "title": "Red Flags That Prove a Freelance Client Won't Pay You", "url": "/blog/freelancer-client-red-flags-non-payment.html" },
       "tool": null,
       "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" },
-      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true }
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Send a written payment reminder", "days_from_start": 0 },
+        { "label": "Send a formal demand letter with a deadline", "days_from_start": 7 },
+        { "label": "Send a final notice before escalation", "days_from_start": 21 },
+        { "label": "File in small claims court", "days_from_start": 45 }
+      ]
     }
   }
 }

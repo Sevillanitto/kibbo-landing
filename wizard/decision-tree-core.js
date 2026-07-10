@@ -14,8 +14,10 @@
  *     initialCountry: 'UK'        // optional deep link
  *   });
  *
- * ctx = { problem, country, esc }. A renderResult can include buttons with
- * data-back="problems" or data-back="country"; the core wires them.
+ * ctx = { problem, country, esc, combo, stage }. A renderResult can include
+ * buttons with data-back="problems" or data-back="country"; the core wires them.
+ * An optional opts.onResult(ctx) runs after the result screen mounts — used by
+ * pages (e.g. the Timeline Generator) that need to attach their own listeners.
  */
 (function () {
   function esc(s) {
@@ -111,8 +113,10 @@
     // ---- Screen 3: delegated to the page ----
     function showResult() {
       var combo = (CFG.combinations || {})[state.problem + '|' + state.country] || {};
-      stage.innerHTML = renderResult(combo, { problem: state.problem, country: state.country, esc: esc });
+      var ctx = { problem: state.problem, country: state.country, esc: esc, combo: combo, stage: stage };
+      stage.innerHTML = renderResult(combo, ctx);
       wireBack();
+      if (typeof opts.onResult === 'function') opts.onResult(ctx);
     }
 
     function wireBack() {
