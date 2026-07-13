@@ -832,3 +832,22 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
   .cl-eyebrow, .cl-card-tag { color: #000; background: none; border: 1px solid #bbb; }
   a { color: #000; }
 }
+
+/* ============================================================
+   NEWSLETTER SIGNUP (band above footer, every page)
+   ============================================================ */
+.newsletter-signup { background: var(--bg); border-top: 1px solid var(--border); padding: clamp(32px, 5vh, 56px) 0; text-align: center; }
+.newsletter-inner { max-width: 640px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+.newsletter-copy { font-family: var(--font-sans); font-size: 16px; line-height: 1.6; color: var(--text-secondary); margin: 0 auto 20px; max-width: 520px; }
+.newsletter-form { display: flex; gap: 10px; justify-content: center; align-items: stretch; flex-wrap: wrap; }
+.newsletter-email-input { flex: 1 1 260px; max-width: 340px; padding: 13px 16px; font-family: var(--font-sans); font-size: 15px; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); outline: none; transition: var(--transition); }
+.newsletter-email-input::placeholder { color: var(--text-muted); }
+.newsletter-email-input:focus { border-color: var(--accent-green); box-shadow: 0 0 0 3px var(--accent-green-light); }
+.newsletter-submit-btn { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-green); color: #fff; font-family: var(--font-sans); font-size: 15px; font-weight: 600; letter-spacing: -0.01em; padding: 13px 28px; border: none; border-radius: 100px; cursor: pointer; transition: var(--transition); }
+.newsletter-submit-btn:hover { background: #345C44; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(61,107,79,0.28); }
+@media (max-width: 520px) {
+  .newsletter-form { flex-direction: column; }
+  .newsletter-email-input { max-width: none; flex-basis: auto; }
+  .newsletter-submit-btn { width: 100%; }
+}
+@media print { .newsletter-signup { display: none !important; } }

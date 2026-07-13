@@ -60,6 +60,7 @@ kibbo-landing/
 5. Never break existing internal links
 6. Always commit with a clear message and push to main
 7. CLAUDE.md stays under 200 lines
+8. Before publishing any new content (article, template, analyzer, generator, or checklist), read PUBLISHING-PROTOCOL.md and follow its checklist for that content type.
 
 ## Nav order
 KIBBO | Analyze | Generate | Templates | Directory | Dev Tools | Blog | Get tools →
