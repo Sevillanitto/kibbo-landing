@@ -88,19 +88,38 @@ broken CSP, unescaped characters, wrong Gumroad IDs).
 
 ## New GENERATOR
 
-1. No new Worker needed — add a new config entry (JSON: questions,
-   prompt_template, gumroad_product_id, gumroad_permalink) to the
-   shared kibbo-generators engine.
-2. Gumroad product must have "Generate a unique license key per sale"
-   enabled, and its real product_id (not permalink) captured in the
-   config before going live.
-3. Add the card to generate.html.
-4. Cross-link related blog articles/templates.
-5. Add to sitemap.xml.
-6. Mandatory verification: test the free preview + paid unlock flow
-   with a real purchase at least once before considering it fully done.
-7. Commit and push.
-8. (Manual) Request Indexing in Search Console.
+The config lives in TWO places — get both right or the generator fails:
+  - Frontend page (generate/<id>.html): `window.KIBBO_GENERATOR` with
+    id, title, price, gumroad_permalink, questions[]. This is served by
+    Vercel.
+  - Server (analyzer/kibbo-generators/worker.js `GENERATORS` map): the
+    id -> { title, gumroad_product_id, prompt_template }. This runs on
+    Cloudflare, NOT Vercel.
+
+1. Add the frontend page (copy an existing generator page; only the
+   `window.KIBBO_GENERATOR` block and page copy change).
+2. Add the server entry to worker.js `GENERATORS` (prompt_template +
+   the REAL gumroad_product_id, never the permalink).
+3. **Redeploy the Worker: `npx wrangler deploy` in
+   analyzer/kibbo-generators/. THIS IS THE #1 REASON A NEW GENERATOR
+   "DOESN'T WORK" — the config committed to git does nothing until the
+   Worker is redeployed. Committing to main only ships the frontend;
+   the free preview 404s on an unknown generatorId until you deploy.**
+4. Gumroad product must exist with "Generate a unique license key per
+   sale" enabled and its permalink matching gumroad_permalink, or the
+   checkout/unlock 404s.
+5. Gumroad checkout overlay CSP is already handled centrally in
+   vercel.json (gumroad.com + *.gumroad.com in script/style/font/
+   connect/frame-src). Do NOT add per-page CSP; if the overlay ever
+   loads a new gumroad subdomain, widen the central *.gumroad.com rule.
+6. Add the card to generate.html.
+7. Cross-link related blog articles/templates.
+8. Add to sitemap.xml.
+9. Mandatory verification: in a real browser, run the free preview end
+   to end AND open the Gumroad overlay (confirm no CSP errors in the
+   console) before considering it done.
+10. Commit and push.
+11. (Manual) Request Indexing in Search Console.
 
 ---
 
