@@ -55,6 +55,12 @@ const GENERATORS = {
     prompt_template:
       'Write a formal cease-and-desist letter to a debt collection agency, explicitly invoking Section 805(c) of the Fair Debt Collection Practices Act (FDCPA), demanding they stop all further communication except as permitted by law (confirming cessation or notifying of specific legal action). Reference the specific issue described. Note this letter should be sent via certified mail with return receipt requested — mention this in the letter\'s closing instructions to the sender, not as part of the letter\'s own body text to the collector. Collector: {collector_name}. Account reference: {account_reference}. Issue: {issue}. If is_third_party is \'No / Not sure\', add a brief note in the generated output (outside the letter itself) reminding the user that the FDCPA generally applies only to third-party collectors, not original creditors collecting their own debt, and to verify which applies to their situation. Tone: firm, professional, cites the correct legal section.',
   },
+  'state-ag-complaint': {
+    title: 'State Attorney General Complaint Letter',
+    gumroad_product_id: 'wrbdyq',
+    prompt_template:
+      'Write a formal complaint letter to the addressee\'s State Attorney General\'s Consumer Protection Division. State clearly that the consumer is filing a complaint against the named business for unfair or deceptive business practices, describe the issue using the details provided, reference general consumer protection principles (misleading advertising, breach of implied warranty, or unconscionable business practices as applicable) WITHOUT inventing or citing a specific state statute name or number — state protection laws vary and the letter should stay accurate by not naming a specific act unless the user already did. Business: {business_name}. State: {state}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, no emotional language.',
+  },
 };
 
 const OUTPUT_RULES =
