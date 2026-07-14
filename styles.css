@@ -536,12 +536,13 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .gen-form { display: grid; gap: 16px; margin: 0 0 8px; }
 .gen-field { display: flex; flex-direction: column; gap: 6px; }
 .gen-field label { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--supp-ink); }
-.gen-field input, .gen-field select {
+.gen-field input, .gen-field select, .gen-field textarea {
   width: 100%; padding: 13px 14px; font-family: var(--font-sans); font-size: 15px;
   color: var(--supp-ink); background: #fff; border: 1px solid var(--supp-line);
   border-radius: var(--radius-sm); outline: none;
 }
-.gen-field input:focus, .gen-field select:focus { border-color: var(--supp-accent); }
+.gen-field textarea { resize: vertical; min-height: 96px; line-height: 1.5; }
+.gen-field input:focus, .gen-field select:focus, .gen-field textarea:focus { border-color: var(--supp-accent); }
 .gen-result { display: none; margin-top: 56px; }
 .gen-letter {
   white-space: pre-wrap; font-family: var(--font-sans); font-size: 15px; line-height: 1.75;

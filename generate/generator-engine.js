@@ -59,6 +59,9 @@
           o.value = opt;
           input.appendChild(o);
         });
+      } else if (q.type === 'textarea') {
+        input = document.createElement('textarea');
+        input.rows = 4;
       } else {
         input = document.createElement('input');
         input.type = q.type === 'date' ? 'date' : 'text';
