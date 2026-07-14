@@ -40,6 +40,25 @@
     errorBox.style.display = msg ? 'block' : 'none';
   }
 
+  // Daily free-preview limit reached: show the notice AND a real Gumroad
+  // buy button (otherwise the user is told to "unlock for $4.60" with no
+  // way to actually pay).
+  function showLimit() {
+    if (!limitBox) return;
+    limitBox.style.display = 'block';
+    if (!limitBox.querySelector('.supp-limit-btn')) {
+      var buy = document.createElement('a');
+      buy.className = 'supp-limit-btn gumroad-button';
+      buy.href = GUMROAD_BASE + cfg.gumroad_permalink + '?wanted=true';
+      buy.target = '_blank';
+      buy.rel = 'noopener';
+      buy.setAttribute('data-gumroad-single-product', 'true');
+      buy.textContent = 'Unlock a full letter now — ' + (cfg.price || '$4.60') + ' →';
+      limitBox.appendChild(buy);
+    }
+    limitBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
   // ---- 1. Render the form from config.questions ----
   function renderForm() {
     cfg.questions.forEach(function (q) {
@@ -112,7 +131,7 @@
       })
       .then(function (r) {
         if (r.status === 429 || (r.data && r.data.error === 'limit_reached')) {
-          if (limitBox) limitBox.style.display = 'block';
+          showLimit();
           return;
         }
         if (r.status !== 200 || !r.data || !r.data.previewId) {
