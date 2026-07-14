@@ -45,13 +45,13 @@ const GENERATORS = {
   },
   'fcra-credit-dispute': {
     title: 'Credit Report Dispute Letter (FCRA)',
-    gumroad_product_id: 'REPLACE_WITH_REAL_ID',
+    gumroad_product_id: 'vytma',
     prompt_template:
       'Write a formal FCRA Section 611 credit report dispute letter addressed to the named credit bureau. State clearly that the consumer is disputing the specific account/item as inaccurate, incomplete, or unverifiable under the Fair Credit Reporting Act, describe the specific error using the details provided, and formally request that the bureau conduct a reasonable reinvestigation and delete or correct the item if it cannot be verified within the 30-day statutory window (45 days if applicable). Bureau: {bureau}. Account/creditor: {account_name}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, cites the correct legal basis, no emotional language.',
   },
   'fdcpa-cease-desist': {
     title: 'Debt Collector Cease & Desist Letter (FDCPA)',
-    gumroad_product_id: 'REPLACE_WITH_REAL_ID',
+    gumroad_product_id: 'ualrk',
     prompt_template:
       'Write a formal cease-and-desist letter to a debt collection agency, explicitly invoking Section 805(c) of the Fair Debt Collection Practices Act (FDCPA), demanding they stop all further communication except as permitted by law (confirming cessation or notifying of specific legal action). Reference the specific issue described. Note this letter should be sent via certified mail with return receipt requested — mention this in the letter\'s closing instructions to the sender, not as part of the letter\'s own body text to the collector. Collector: {collector_name}. Account reference: {account_reference}. Issue: {issue}. If is_third_party is \'No / Not sure\', add a brief note in the generated output (outside the letter itself) reminding the user that the FDCPA generally applies only to third-party collectors, not original creditors collecting their own debt, and to verify which applies to their situation. Tone: firm, professional, cites the correct legal section.',
   },
