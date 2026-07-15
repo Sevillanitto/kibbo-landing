@@ -702,6 +702,17 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .crc-wizard:hover { background: #345c44; }
 .crc-note { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 10px 0 0; }
 .crc-note a { color: var(--accent-green); font-weight: 600; }
+/* Tabbed interface (config-driven via country-rights-engine.js). Mobile: the tab
+   bar scrolls horizontally rather than stacking. Add a country = edit the JSON. */
+.crc-tabs { display: flex; gap: 10px; margin: 0 0 22px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: thin; }
+.crc-tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 10px 20px; cursor: pointer; white-space: nowrap; transition: var(--transition); }
+.crc-tab:hover { border-color: var(--accent-green); color: var(--text-primary); }
+.crc-tab.active { background: var(--accent-green); border-color: var(--accent-green); color: #fff; }
+.crc-tab-flag { font-size: 17px; line-height: 1; }
+.crc-panel { max-width: 760px; }
+.crc-hidden { display: none !important; }
+.crc-showmore { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 8px 16px; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--accent-green); background: var(--accent-green-light); border: 1px solid rgba(61,107,79,0.2); border-radius: 100px; cursor: pointer; transition: var(--transition); }
+.crc-showmore:hover { background: var(--accent-green); border-color: var(--accent-green); color: #fff; }
 
 /* ---- Dark Pattern Gallery ---- */
 .dp-attribution { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-terra); border-radius: var(--radius-sm); padding: 14px 18px; margin: 22px 0 0; max-width: 720px; }
