@@ -102,7 +102,8 @@
         { "label": "Provider ignoring you? File an FCC telecom complaint (30-day clock)", "url": "/blog/fcc-telecom-complaint-us.html" },
         { "label": "Facing a utility shutoff? Your state PUC has real power", "url": "/blog/state-puc-utility-shutoff-us.html" },
         { "label": "Small claims court limits by state — sue without a lawyer", "url": "/blog/small-claims-court-by-state-us.html" },
-        { "label": "Find a verified, licensed attorney through your state bar", "url": "/blog/state-bar-lawyer-referral-us.html" }
+        { "label": "Find a verified, licensed attorney through your state bar", "url": "/blog/state-bar-lawyer-referral-us.html" },
+        { "label": "Wage theft? Report unpaid overtime to the DOL (FLSA)", "url": "/blog/wage-theft-dol-complaint-us.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
