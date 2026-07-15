@@ -61,6 +61,18 @@ const GENERATORS = {
     prompt_template:
       'Write a formal complaint letter to the addressee\'s State Attorney General\'s Consumer Protection Division. State clearly that the consumer is filing a complaint against the named business for unfair or deceptive business practices, describe the issue using the details provided, reference general consumer protection principles (misleading advertising, breach of implied warranty, or unconscionable business practices as applicable) WITHOUT inventing or citing a specific state statute name or number — state protection laws vary and the letter should stay accurate by not naming a specific act unless the user already did. Business: {business_name}. State: {state}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, no emotional language.',
   },
+  'security-deposit-demand-letter': {
+    title: 'Security Deposit Demand Letter (US)',
+    gumroad_product_id: 'yikkj',
+    prompt_template:
+      'Write a formal demand letter to a landlord requesting return of a security deposit. Reference that state security deposit laws impose a specific deadline for returning the deposit or providing an itemized statement of deductions (without inventing a specific statute number or exact day count unless already well-established — state law varies), and that failure to meet this deadline can result in forfeiting the right to withhold any portion of the deposit, with some states allowing additional statutory damages for bad-faith retention. Landlord: {landlord_name}. State: {state}. Deposit amount: {deposit_amount}. Move-out date: {move_out_date}. Issue: {issue}. Tone: professional, firm, requests a clear response deadline (commonly 5-10 days).',
+  },
+  'notice-to-repair': {
+    title: 'Notice to Repair Letter (Habitability)',
+    gumroad_product_id: 'lqmxl',
+    prompt_template:
+      'Write a formal Notice to Repair letter to a landlord, invoking the Implied Warranty of Habitability, which requires landlords to maintain rental units in a condition fit for basic human habitation regardless of lease terms. Describe the issue using the details provided, and request repair within a reasonable time — state that this means an expedited response (same day or next day) if is_emergency is \'Yes\', or a standard reasonable window (commonly 5-14 days, without citing a specific state statute number) if not. Mention that continued failure to act may result in the tenant pursuing repair-and-deduct, rent escrow, or a code enforcement complaint, depending on what\'s permitted in their state. Landlord: {landlord_name}. Issue: {issue}. Details: {details}. Tone: professional, firm, factual.',
+  },
 };
 
 const OUTPUT_RULES =

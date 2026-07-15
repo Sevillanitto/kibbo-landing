@@ -130,7 +130,7 @@
     "Landlord|US": {
       "directory": { "name": "HUD Tenant Rights (deposit law by state)", "url": "/directory/housing-rentals.html#security-deposit-by-state" },
       "article": { "title": "The Security Deposit Clock: How Long Your Landlord Has to Return Your Money (By State)", "url": "/blog/security-deposit-state-laws-us.html" },
-      "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand.html", "type": "generator" },
+      "tool": { "name": "Security Deposit Demand Letter Generator (US)", "url": "/generate/security-deposit-demand-letter.html", "type": "generator" },
       "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
       "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
       "timeline_recommended": true,
