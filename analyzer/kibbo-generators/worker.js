@@ -79,6 +79,12 @@ const GENERATORS = {
     prompt_template:
       'Write a formal FCC informal complaint narrative suitable for submission through the FCC Consumer Complaint Center. State the category of the complaint (billing, service quality, availability, or contract dispute), describe the issue factually using the details provided, reference any prior attempts to resolve it directly with the provider, and state the specific resolution requested (credit, rate correction, technician visit, or contract release, as applicable based on the issue). Provider: {provider_name}. Category: {category}. Prior attempts: {prior_attempts}. Details: {details}. Tone: factual, clear, no emotional language — written to be pasted into the FCC\'s own complaint form fields, not as a mailed letter.',
   },
+  'dol-wage-complaint': {
+    title: 'DOL Wage Theft Complaint (FLSA)',
+    gumroad_product_id: 'cygypm',
+    prompt_template:
+      'Write a formal wage complaint narrative suitable for submission to the US Department of Labor\'s Wage and Hour Division (WHD), referencing the Fair Labor Standards Act (FLSA). State the employer name, describe the specific wage issue and the discrepancy between hours worked and hours paid using the details provided, and note that FLSA claims generally have a 2-year recovery window (3 years if the violation is willful) without inventing case-specific willfulness language unless clearly supported. If retaliation is \'Yes\', add a separate paragraph noting that retaliation for raising a wage complaint is independently illegal under FLSA Section 15(a)(3), and that this should be reported as well. Employer: {employer_name}. Issue: {issue_type}. Discrepancy: {discrepancy}. Tone: factual, clear, no emotional language — written to be submitted via WHD\'s online complaint form or read over the phone.',
+  },
 };
 
 const OUTPUT_RULES =
