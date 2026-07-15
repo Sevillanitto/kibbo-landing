@@ -73,6 +73,12 @@ const GENERATORS = {
     prompt_template:
       'Write a formal Notice to Repair letter to a landlord, invoking the Implied Warranty of Habitability, which requires landlords to maintain rental units in a condition fit for basic human habitation regardless of lease terms. Describe the issue using the details provided, and request repair within a reasonable time — state that this means an expedited response (same day or next day) if is_emergency is \'Yes\', or a standard reasonable window (commonly 5-14 days, without citing a specific state statute number) if not. Mention that continued failure to act may result in the tenant pursuing repair-and-deduct, rent escrow, or a code enforcement complaint, depending on what\'s permitted in their state. Landlord: {landlord_name}. Issue: {issue}. Details: {details}. Tone: professional, firm, factual.',
   },
+  'fcc-complaint': {
+    title: 'FCC Informal Complaint Letter',
+    gumroad_product_id: 'eyssdz',
+    prompt_template:
+      'Write a formal FCC informal complaint narrative suitable for submission through the FCC Consumer Complaint Center. State the category of the complaint (billing, service quality, availability, or contract dispute), describe the issue factually using the details provided, reference any prior attempts to resolve it directly with the provider, and state the specific resolution requested (credit, rate correction, technician visit, or contract release, as applicable based on the issue). Provider: {provider_name}. Category: {category}. Prior attempts: {prior_attempts}. Details: {details}. Tone: factual, clear, no emotional language — written to be pasted into the FCC\'s own complaint form fields, not as a mailed letter.',
+  },
 };
 
 const OUTPUT_RULES =
