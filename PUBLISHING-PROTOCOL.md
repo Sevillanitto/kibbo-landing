@@ -156,6 +156,11 @@ The config lives in TWO places — get both right or the generator fails:
 - Always physically reload any file you edited to confirm the change
   is actually there before reporting success — this has caught real
   failures before.
+- Reloading the file (git/local) is NOT proof it is live. After
+  committing + pushing, and in EVERY final/mesh audit, run the
+  "Mandatory live-deploy verification" below against getkibbo.com — a
+  green git state while the live site is stale has happened and gave
+  false "all published" reports.
 - Always end with "commit and push to main with a clear commit
   message."
 - Check the current UK/US balance on consumer-rights-by-country.html
@@ -164,3 +169,35 @@ The config lives in TWO places — get both right or the generator fails:
 - No country besides UK and US on consumer-rights-by-country.html yet
   — do not add Australia, EU, or others until real content exists for
   them.
+
+---
+
+## Mandatory live-deploy verification (getkibbo.com)
+
+Git/local state is NOT the live site. The pages are served by Vercel
+(project `kibbo-landing`, auto-deploys `main`); the generators are a
+separate Cloudflare Worker (`wrangler deploy`) that keeps working even
+when Vercel is broken — so a passing generator test is NOT evidence the
+pages are live. Vercel's GitHub auto-deploy has silently broken before
+(commits stopped appearing in Deployments), leaving the site stale while
+git looked perfect.
+
+After push, and as the LAST step of every final/mesh audit, verify the
+real site — do not report "published" until these pass:
+
+1. New pages return 200 at their clean URLs (not 404, not a stale
+   redirect): `curl -sL -o /dev/null -w "%{http_code}"
+   https://www.getkibbo.com/blog/<slug>` (also generate/ and
+   checklists/ pages).
+2. The live blog index matches `main`: follow the 308 from blog.html
+   and compare card counts —
+   `curl -sL https://www.getkibbo.com/blog | grep -c 'class="post-item"'`
+   vs `curl -s https://raw.githubusercontent.com/Sevillanitto/kibbo-landing/main/blog.html | grep -c 'class="post-item"'`.
+   They must be equal; the new slugs must appear in the live `/blog`.
+3. If the live site does NOT match `main`, report a DEPLOY FAILURE (not
+   "all good"). Root cause is usually the Vercel↔GitHub webhook — the
+   permanent fix is reconnecting Settings → Git in Vercel. Immediate
+   workaround: `npx vercel deploy --prod --yes` from a CLEAN worktree/
+   checkout only — never from the main working copy, which carries
+   untracked draft files (`article-N-*.html`, `blog-*-article.html`)
+   that would deploy as orphan pages.
