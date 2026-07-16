@@ -87,10 +87,7 @@ const GENERATORS = {
   },
   'au-major-failure-refund-demand': {
     title: 'Major Failure Refund Demand Letter (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-major-failure-refund-demand" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_MAJOR_FAILURE',
+    gumroad_product_id: 'ikchrx',
     prompt_template:
       'Write a formal demand letter to an Australian retailer asserting that a product fault constitutes a major failure under the Australian Consumer Law (ACL) consumer guarantees. Reference that the ACL does not set a fixed 12-month guarantee period — protection lasts as long as reasonable given the product\'s price and type — and that for a major failure the consumer, not the retailer, chooses between refund and replacement. State plainly that the letter is not a request for goodwill but an assertion of a statutory right, and that the retailer (not the manufacturer) is legally responsible. Do not cite a specific ACL section number unless already well-established; do not invent a compensation figure or fixed response deadline beyond a reasonable window (commonly 7-14 days). Retailer: {retailer_name}. Product: {product}. Purchase date: {purchase_date}. Price paid: {price_paid}. Fault: {fault}. Basis: {failure_test}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
   },
