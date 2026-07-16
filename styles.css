@@ -263,6 +263,11 @@ img { max-width: 100%; display: block; }
 .post-body pre code { background: none; color: inherit; padding: 0; font-size: 14px; line-height: 1.6; }
 .post-body blockquote { border-left: 3px solid var(--accent-amber); padding-left: 18px; margin: 0 0 24px; color: var(--text-secondary); font-style: italic; }
 .post-body img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); display: block; margin: 0 0 26px; }
+.post-body .table-scroll { overflow-x: auto; margin: 0 0 26px; }
+.post-body table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 14px; }
+.post-body table th, .post-body table td { text-align: left; padding: 11px 14px; border: 1px solid var(--border); vertical-align: top; }
+.post-body table th { background: var(--accent-green-light); color: var(--text-primary); font-weight: 600; }
+.post-body table tr:nth-child(even) td { background: var(--bg-card); }
 
 .author-line { display: flex; align-items: center; gap: 10px; margin: 18px 0 0; font-family: var(--font-sans); font-size: 15px; color: var(--text-secondary); }
 .author-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green); display: block; flex-shrink: 0; }
