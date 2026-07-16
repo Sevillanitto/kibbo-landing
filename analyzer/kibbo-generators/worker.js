@@ -100,6 +100,15 @@ const GENERATORS = {
     prompt_template:
       'Write a formal dispute letter to an Australian bank regarding a genuinely unauthorised transaction, invoking the ePayments Code. IMPORTANT: only use this template for transactions the customer did NOT knowingly authorise (stolen card, hacked account, etc.) — do not use scam-related language implying authorised transfers are covered, since the ePayments Code does not currently cover scams where the customer was deceived into authorising a payment themselves. State that under the Code, the customer is not liable for the loss unless the bank can demonstrate the customer contributed through serious carelessness, and that the burden of proof sits with the bank, not the customer. Request a formal investigation and a dispute reference number. Do not invent a specific compensation figure or a fixed response deadline — request a response within a reasonable time (commonly 15-45 days, per standard IDR timeframes) instead. Bank: {bank_name}. Transaction date: {transaction_date}. Amount: {amount}. Scenario: {scenario}. Reported to bank on: {reported_date}. Evidence: {evidence}. Tone: professional, firm, factual.',
   },
+  'au-tio-cancellation-demand': {
+    title: 'Telco Cancellation & TIO Complaint Letter (Australia)',
+    // PLACEHOLDER product id — the free preview works without it, but the paid
+    // $4.60 unlock will fail license verification until this is replaced with the
+    // REAL Gumroad product_id for the "au-tio-cancellation-demand" product.
+    gumroad_product_id: 'PLACEHOLDER_AU_TIO_CANCELLATION',
+    prompt_template:
+      'Write a formal letter to an Australian telco/ISP requesting contract cancellation without an early termination fee, referencing that a provider failing to deliver promised service quality or unilaterally changing contract terms is generally considered a breach on the provider\'s side. State that if this isn\'t resolved directly, the customer intends to lodge a complaint with the Telecommunications Industry Ombudsman (TIO), which gives providers a short window (commonly around 10 business days) to resolve complaints once referred. Do not invent a specific TIO fee amount charged to the provider — keep this general (e.g. \'costs associated with TIO involvement\'). Provider: {provider_name}. Issue: {issue}. Cancellation first requested: {cancellation_request_date}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
+  },
 };
 
 const OUTPUT_RULES =
