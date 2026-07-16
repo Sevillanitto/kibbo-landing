@@ -109,6 +109,15 @@ const GENERATORS = {
     prompt_template:
       'Write a formal letter to an Australian telco/ISP requesting contract cancellation without an early termination fee, referencing that a provider failing to deliver promised service quality or unilaterally changing contract terms is generally considered a breach on the provider\'s side. State that if this isn\'t resolved directly, the customer intends to lodge a complaint with the Telecommunications Industry Ombudsman (TIO), which gives providers a short window (commonly around 10 business days) to resolve complaints once referred. Do not invent a specific TIO fee amount charged to the provider — keep this general (e.g. \'costs associated with TIO involvement\'). Provider: {provider_name}. Issue: {issue}. Cancellation first requested: {cancellation_request_date}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
   },
+  'au-airline-complaint': {
+    title: 'Airline Complaint Letter (Australia)',
+    // PLACEHOLDER product id — the free preview works without it, but the paid
+    // $4.60 unlock will fail license verification until this is replaced with the
+    // REAL Gumroad product_id for the "au-airline-complaint" product.
+    gumroad_product_id: 'PLACEHOLDER_AU_AIRLINE_COMPLAINT',
+    prompt_template:
+      'Write a formal complaint letter to an Australian domestic airline. Do NOT claim a guaranteed automatic cash compensation right — Australia has no EU261-style automatic delay compensation scheme. Frame any expense/reasonable-time argument under the Australian Consumer Law as a claim being made, not a guaranteed entitlement, especially where the cause was airline-controlled (technical/crew/maintenance) rather than weather or air traffic control. For baggage claims, reference the Civil Aviation (Carriers\' Liability) Act 1959 liability framework without inventing a specific dollar cap — note that liability limits are capped and periodically adjusted, and reference the airline\'s own Conditions of Carriage for exact claim deadlines rather than asserting one universal number. If a refund is sought instead of a travel voucher, state that clearly. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue_type}. Cause: {cause}. Expenses: {expenses}. PIR filed: {pir_filed}. Remedy sought: {remedy}. Tone: professional, firm, factual, realistic about what is guaranteed versus what is being requested.',
+  },
 };
 
 const OUTPUT_RULES =
