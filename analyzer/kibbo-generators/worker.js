@@ -118,6 +118,15 @@ const GENERATORS = {
     prompt_template:
       'Write a formal complaint letter to an Australian domestic airline. Do NOT claim a guaranteed automatic cash compensation right — Australia has no EU261-style automatic delay compensation scheme. Frame any expense/reasonable-time argument under the Australian Consumer Law as a claim being made, not a guaranteed entitlement, especially where the cause was airline-controlled (technical/crew/maintenance) rather than weather or air traffic control. For baggage claims, reference the Civil Aviation (Carriers\' Liability) Act 1959 liability framework without inventing a specific dollar cap — note that liability limits are capped and periodically adjusted, and reference the airline\'s own Conditions of Carriage for exact claim deadlines rather than asserting one universal number. If a refund is sought instead of a travel voucher, state that clearly. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue_type}. Cause: {cause}. Expenses: {expenses}. PIR filed: {pir_filed}. Remedy sought: {remedy}. Tone: professional, firm, factual, realistic about what is guaranteed versus what is being requested.',
   },
+  'au-notice-to-remedy-repairs': {
+    title: 'Notice to Remedy / Urgent Repairs Letter (Australia)',
+    // PLACEHOLDER product id — the free preview works without it, but the paid
+    // $4.60 unlock will fail license verification until this is replaced with the
+    // REAL Gumroad product_id for the "au-notice-to-remedy-repairs" product.
+    gumroad_product_id: 'PLACEHOLDER_AU_NOTICE_TO_REMEDY',
+    prompt_template:
+      "Write a formal Notice to Remedy Breach / Urgent Repairs letter to a landlord or agent in Australia. If is_urgent is 'Yes', state that the tenant may arrange a qualified tradesperson directly and seek reimbursement if the landlord doesn't act immediately, and request contact within 24 hours. If 'No', request repair within a reasonable window (commonly 7-14 days, noting this varies by state — do not assert one fixed number as universal law). Do NOT suggest withholding rent under any circumstance — explicitly state that rent will continue to be paid in full. Mention that if the deadline passes, the tenant may apply to their state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation. Landlord/agent: {landlord_name}. State: {state}. Issue: {issue}. Urgent: {is_urgent}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
+  },
 };
 
 const OUTPUT_RULES =
