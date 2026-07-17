@@ -93,37 +93,29 @@ const GENERATORS = {
   },
   'au-unauthorised-transaction-dispute': {
     title: 'Bank Dispute Letter — Unauthorised Transaction (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-unauthorised-transaction-dispute" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_UNAUTH_DISPUTE',
+    // Real Gumroad product_id for the "au-unauthorised-transaction-dispute" product.
+    gumroad_product_id: 'wnqma',
     prompt_template:
       'Write a formal dispute letter to an Australian bank regarding a genuinely unauthorised transaction, invoking the ePayments Code. IMPORTANT: only use this template for transactions the customer did NOT knowingly authorise (stolen card, hacked account, etc.) — do not use scam-related language implying authorised transfers are covered, since the ePayments Code does not currently cover scams where the customer was deceived into authorising a payment themselves. State that under the Code, the customer is not liable for the loss unless the bank can demonstrate the customer contributed through serious carelessness, and that the burden of proof sits with the bank, not the customer. Request a formal investigation and a dispute reference number. Do not invent a specific compensation figure or a fixed response deadline — request a response within a reasonable time (commonly 15-45 days, per standard IDR timeframes) instead. Bank: {bank_name}. Transaction date: {transaction_date}. Amount: {amount}. Scenario: {scenario}. Reported to bank on: {reported_date}. Evidence: {evidence}. Tone: professional, firm, factual.',
   },
   'au-tio-cancellation-demand': {
     title: 'Telco Cancellation & TIO Complaint Letter (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-tio-cancellation-demand" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_TIO_CANCELLATION',
+    // Real Gumroad product_id for the "au-tio-cancellation-demand" product.
+    gumroad_product_id: 'doeik',
     prompt_template:
       'Write a formal letter to an Australian telco/ISP requesting contract cancellation without an early termination fee, referencing that a provider failing to deliver promised service quality or unilaterally changing contract terms is generally considered a breach on the provider\'s side. State that if this isn\'t resolved directly, the customer intends to lodge a complaint with the Telecommunications Industry Ombudsman (TIO), which gives providers a short window (commonly around 10 business days) to resolve complaints once referred. Do not invent a specific TIO fee amount charged to the provider — keep this general (e.g. \'costs associated with TIO involvement\'). Provider: {provider_name}. Issue: {issue}. Cancellation first requested: {cancellation_request_date}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
   },
   'au-airline-complaint': {
     title: 'Airline Complaint Letter (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-airline-complaint" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_AIRLINE_COMPLAINT',
+    // Real Gumroad product_id for the "au-airline-complaint" product.
+    gumroad_product_id: 'ymfpyv',
     prompt_template:
       'Write a formal complaint letter to an Australian domestic airline. Do NOT claim a guaranteed automatic cash compensation right — Australia has no EU261-style automatic delay compensation scheme. Frame any expense/reasonable-time argument under the Australian Consumer Law as a claim being made, not a guaranteed entitlement, especially where the cause was airline-controlled (technical/crew/maintenance) rather than weather or air traffic control. For baggage claims, reference the Civil Aviation (Carriers\' Liability) Act 1959 liability framework without inventing a specific dollar cap — note that liability limits are capped and periodically adjusted, and reference the airline\'s own Conditions of Carriage for exact claim deadlines rather than asserting one universal number. If a refund is sought instead of a travel voucher, state that clearly. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue_type}. Cause: {cause}. Expenses: {expenses}. PIR filed: {pir_filed}. Remedy sought: {remedy}. Tone: professional, firm, factual, realistic about what is guaranteed versus what is being requested.',
   },
   'au-notice-to-remedy-repairs': {
     title: 'Notice to Remedy / Urgent Repairs Letter (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-notice-to-remedy-repairs" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_NOTICE_TO_REMEDY',
+    // Real Gumroad product_id for the "au-notice-to-remedy-repairs" product.
+    gumroad_product_id: 'rdytkn',
     prompt_template:
       "Write a formal Notice to Remedy Breach / Urgent Repairs letter to a landlord or agent in Australia. If is_urgent is 'Yes', state that the tenant may arrange a qualified tradesperson directly and seek reimbursement if the landlord doesn't act immediately, and request contact within 24 hours. If 'No', request repair within a reasonable window (commonly 7-14 days, noting this varies by state — do not assert one fixed number as universal law). Do NOT suggest withholding rent under any circumstance — explicitly state that rent will continue to be paid in full. Mention that if the deadline passes, the tenant may apply to their state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation. Landlord/agent: {landlord_name}. State: {state}. Issue: {issue}. Urgent: {is_urgent}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
