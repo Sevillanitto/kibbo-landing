@@ -1,7 +1,7 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
   "problems": ["Scam", "Bank", "Subscription", "Parcel", "Landlord", "Work"],
-  "countries": ["UK", "US"],
+  "countries": ["UK", "US", "Australia"],
   "combinations": {
     "Scam|UK": {
       "directory": { "name": "Action Fraud", "url": "/directory/financial-banking.html#action-fraud" },
@@ -167,6 +167,46 @@
         { "label": "Send a formal demand letter with a deadline", "days_from_start": 7 },
         { "label": "Send a final notice before escalation", "days_from_start": 21 },
         { "label": "File in small claims court", "days_from_start": 45 }
+      ]
+    },
+    "Bank|Australia": {
+      "directory": { "name": "Bank Dispute & AFCA Resources (Australia)", "url": "/directory/financial-banking.html#au-banking-dispute-resources" },
+      "article": { "title": "Take a Bank or Insurer Dispute to AFCA", "url": "/blog/afca-complaint-australia.html" },
+      "tool": { "name": "Unauthorised Transaction Dispute Letter (Australia)", "url": "/generate/au-unauthorised-transaction-dispute.html", "type": "generator" },
+      "template": { "name": "Chargeback Dispute Evidentiary Pack", "url": "/templates/chargeback-dispute-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report the transaction to your bank and lodge a dispute", "days_from_start": 0 },
+        { "label": "Bank internal dispute resolution (IDR) response (commonly 15-45 days)", "days_from_start": 45 },
+        { "label": "Escalate to AFCA if unresolved or unsatisfactory", "days_from_start": 46 }
+      ]
+    },
+    "Landlord|Australia": {
+      "directory": { "name": "Rental Bond & Repairs Dispute Resources (Australia)", "url": "/directory/housing-rentals.html#au-tenancy-dispute-resources" },
+      "article": { "title": "Rental Bond Not Returned? How to Dispute Deductions", "url": "/blog/rental-bond-dispute-australia.html" },
+      "tool": { "name": "Notice to Remedy / Urgent Repairs Letter (Australia)", "url": "/generate/au-notice-to-remedy-repairs.html", "type": "generator" },
+      "template": { "name": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": true, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Put your bond claim or repair request to the landlord/agent in writing", "days_from_start": 0 },
+        { "label": "Reasonable window for repairs / for the landlord to dispute a bond claim (varies by state, commonly ~14 days)", "days_from_start": 14 },
+        { "label": "Apply to your state tenancy tribunal (NCAT/VCAT/QCAT) if unresolved", "days_from_start": 15 }
+      ]
+    },
+    "Scam|Australia": {
+      "directory": { "name": "Scamwatch & Scam Recovery Resources (Australia)", "url": "/scam-recovery-hub.html" },
+      "article": { "title": "Scammed in Australia? Immediate Action Steps", "url": "/blog/scammed-in-australia-immediate-steps.html" },
+      "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
+      "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Call your bank immediately to try to freeze or recall the funds", "days_from_start": 0 },
+        { "label": "Report to Scamwatch, and contact IDCARE if your ID was exposed", "days_from_start": 1 },
+        { "label": "Log it with ReportCyber (cyber.gov.au) for a reference number", "days_from_start": 1 },
+        { "label": "Escalate to AFCA if the bank won't act (including the receiving bank)", "days_from_start": 30 }
       ]
     }
   }

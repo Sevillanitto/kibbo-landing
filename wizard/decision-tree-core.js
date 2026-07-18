@@ -51,12 +51,29 @@
           '<a href="/directory.html">Free Resources Directory</a> directly.</p>';
       });
 
+    // A country only "supports" a problem when a real combination exists for it.
+    // Used to hide problems/countries that would otherwise render an empty result
+    // screen — e.g. Australia only has Bank/Landlord/Scam combinations, so it is
+    // never offered for Subscription/Parcel/Work, and ?country=AU shows only those
+    // three problems. UK/US have every combination, so they are unaffected.
+    function hasCombo(problem, country) {
+      return !!(CFG && CFG.combinations && CFG.combinations[problem + '|' + country]);
+    }
+    function problemsForCountry(country) {
+      return (CFG.problems || []).filter(function (p) { return hasCombo(p, country); });
+    }
+    function countriesForProblem(problem) {
+      return (CFG.countries || []).filter(function (c) { return hasCombo(problem, c); });
+    }
+
     function start() {
       var problems = CFG.problems || [];
       var countries = CFG.countries || [];
       var hasP = initP && problems.indexOf(initP) !== -1;
       var hasC = initC && countries.indexOf(initC) !== -1;
-      if (hasP && hasC) {
+      // Only jump straight to the result when the deep-linked pair is a real
+      // combination; otherwise fall through to the (filtered) chooser screens.
+      if (hasP && hasC && hasCombo(initP, initC)) {
         state.problem = initP;
         state.country = initC;
         showResult();
@@ -77,7 +94,7 @@
         '<p class="wiz-step">Step 1 of 3</p>' +
         '<h2 class="wiz-q">What happened?</h2>' +
         '<div class="wiz-choices">' +
-        (CFG.problems || [])
+        (presetCountry ? problemsForCountry(presetCountry) : (CFG.problems || []))
           .map(function (p) {
             return '<button type="button" class="wiz-choice" data-problem="' + esc(p) + '">' + esc(p) + '</button>';
           })
@@ -101,7 +118,7 @@
         '<p class="wiz-step">Step 2 of 3</p>' +
         '<h2 class="wiz-q">Which country?</h2>' +
         '<div class="wiz-choices">' +
-        (CFG.countries || [])
+        countriesForProblem(state.problem)
           .map(function (c) {
             return '<button type="button" class="wiz-choice" data-country="' + esc(c) + '">' + esc(c) + '</button>';
           })

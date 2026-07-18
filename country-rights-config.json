@@ -117,6 +117,7 @@
       "name": "Australia",
       "url_aliases": ["AUS"],
       "subtitle": "The Australian Consumer Law, the ACCC, AFCA, the TIO, state tenancy tribunals, the OAIC and more.",
+      "wizard_preset_url": "/wizard.html?country=Australia",
       "resources": [
         { "label": "ACL consumer guarantees & state fair-trading", "url": "/directory/shopping-ecommerce.html#au-acl-guarantees" },
         { "label": "Airline complaint & baggage claim resources", "url": "/directory/shopping-ecommerce.html#au-airline-dispute-resources" },
