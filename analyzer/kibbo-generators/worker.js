@@ -121,10 +121,8 @@ const GENERATORS = {
   },
   'au-privacy-complaint-letter': {
     title: 'Privacy Complaint Letter to a Company (Australia)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "au-privacy-complaint-letter" product.
-    gumroad_product_id: 'PLACEHOLDER_AU_PRIVACY_COMPLAINT',
+    // Real Gumroad product_id for the "au-privacy-complaint-letter" product.
+    gumroad_product_id: 'ymuznm',
     prompt_template:
       "Write a formal privacy complaint letter to an Australian company, to be sent BEFORE lodging an OAIC complaint (as required by law, giving the company approximately 30 days to respond). Reference the Privacy Act 1988 and the relevant Australian Privacy Principle if provided. State clearly that if the company does not respond satisfactorily within 30 days, the complainant intends to escalate to the Office of the Australian Information Commissioner (OAIC). Do not claim the OAIC's $3 million turnover jurisdiction threshold applies to this specific company unless the person confirms it — phrase this as a general note the reader should check, not an assumption about the company being complained about. Company: {company_name}. Issue: {issue}. APP: {app_breached}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.",
   },
