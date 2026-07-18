@@ -119,6 +119,15 @@ const GENERATORS = {
     prompt_template:
       "Write a formal Notice to Remedy Breach / Urgent Repairs letter to a landlord or agent in Australia. If is_urgent is 'Yes', state that the tenant may arrange a qualified tradesperson directly and seek reimbursement if the landlord doesn't act immediately, and request contact within 24 hours. If 'No', request repair within a reasonable window (commonly 7-14 days, noting this varies by state — do not assert one fixed number as universal law). Do NOT suggest withholding rent under any circumstance — explicitly state that rent will continue to be paid in full. Mention that if the deadline passes, the tenant may apply to their state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation. Landlord/agent: {landlord_name}. State: {state}. Issue: {issue}. Urgent: {is_urgent}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
+  'au-privacy-complaint-letter': {
+    title: 'Privacy Complaint Letter to a Company (Australia)',
+    // PLACEHOLDER product id — the free preview works without it, but the paid
+    // $4.60 unlock will fail license verification until this is replaced with the
+    // REAL Gumroad product_id for the "au-privacy-complaint-letter" product.
+    gumroad_product_id: 'PLACEHOLDER_AU_PRIVACY_COMPLAINT',
+    prompt_template:
+      "Write a formal privacy complaint letter to an Australian company, to be sent BEFORE lodging an OAIC complaint (as required by law, giving the company approximately 30 days to respond). Reference the Privacy Act 1988 and the relevant Australian Privacy Principle if provided. State clearly that if the company does not respond satisfactorily within 30 days, the complainant intends to escalate to the Office of the Australian Information Commissioner (OAIC). Do not claim the OAIC's $3 million turnover jurisdiction threshold applies to this specific company unless the person confirms it — phrase this as a general note the reader should check, not an assumption about the company being complained about. Company: {company_name}. Issue: {issue}. APP: {app_breached}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.",
+  },
 };
 
 const OUTPUT_RULES =
