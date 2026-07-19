@@ -128,19 +128,15 @@ const GENERATORS = {
   },
   'eu-withdrawal-right-letter': {
     title: 'Withdrawal Right / Cancellation Letter (EU)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu-withdrawal-right-letter" product.
-    gumroad_product_id: 'PLACEHOLDER_EU_WITHDRAWAL_LETTER',
+    // Real Gumroad product_id for the "eu-withdrawal-right-letter" product.
+    gumroad_product_id: 'onxtxv',
     prompt_template:
       "Write a formal EU right-of-withdrawal notice per Directive 2011/83/EU. State clearly no reason is required. If was_informed is 'No / Not sure', note that failing to properly inform the consumer extends the withdrawal window by 12 months, without asserting this applies with certainty — phrase as something to verify. Do not reference the discontinued ODR platform. Seller: {seller_name}. Order: {order_details}. Delivery date: {delivery_date}. Reason (if given): {reason}. Tone: professional, factual.",
   },
   'eu-legal-guarantee-demand': {
     title: 'Legal Guarantee Repair/Replacement Demand (EU)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu-legal-guarantee-demand" product.
-    gumroad_product_id: 'PLACEHOLDER_EU_GUARANTEE_DEMAND',
+    // Real Gumroad product_id for the "eu-legal-guarantee-demand" product.
+    gumroad_product_id: 'ypqab',
     prompt_template:
       "Write a formal legal guarantee (conformity) demand per Directive (EU) 2019/771. State the seller (not manufacturer) is responsible. If within the first year, note the burden-of-proof presumption favors the consumer. State full refund/termination is only available if repair/replacement first failed or was refused, unless remedy is already 'Full refund'. Do not assert a fixed 2-year or 3-year figure as universal — note it varies by member state (2-year EU minimum, some countries extend further). Seller: {seller_name}. Product: {product}. Purchase date: {purchase_date}. Defect: {defect}. Remedy: {remedy}. Tone: professional, factual.",
   },
