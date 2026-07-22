@@ -170,25 +170,22 @@ const GENERATORS = {
   },
   'eu-bank-complaint-finnet': {
     title: 'Bank Complaint Letter (EU / PSD2 / FIN-NET)',
-    // PLACEHOLDER product id — replace with the REAL Gumroad product_id for the
-    // "eu-bank-complaint-finnet" product before the paid unlock will verify.
-    gumroad_product_id: 'PLACEHOLDER_EU_BANK_COMPLAINT',
+    // Real Gumroad product_id for the "eu-bank-complaint-finnet" product.
+    gumroad_product_id: 'jceka',
     prompt_template:
       "Write a formal complaint letter to a European bank. If escalation_stage is 'Filing the first complaint', title it explicitly 'Formal Complaint under the Payment Services Directive' if issue is payment-service related, and note the bank has 15 business days (extendable to 35 in exceptional cases) to respond if this applies. If escalation_stage is 'didn't respond' or 'unsatisfactory', state the complainant intends to escalate via FIN-NET to their national financial ombudsman. Do not claim FIN-NET decisions are universally binding — phrase as a strong, free escalation path rather than a guaranteed legal outcome. Bank: {bank_name}. Issue: {issue}. Details: {details}. Stage: {escalation_stage}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
   'eu-sepa-recall-request': {
     title: 'SEPA Recall Request Letter',
-    // PLACEHOLDER product id — replace with the REAL Gumroad product_id for the
-    // "eu-sepa-recall-request" product before the paid unlock will verify.
-    gumroad_product_id: 'PLACEHOLDER_EU_SEPA_RECALL',
+    // Real Gumroad product_id for the "eu-sepa-recall-request" product.
+    gumroad_product_id: 'qawzs',
     prompt_template:
       "Write a formal SEPA Recall request to a bank. Reference the standard SEPA scheme rulebook recall framework — request initiated within a reasonable window (commonly cited as around 10 business days), noting the receiving bank typically has around 15 business days to respond. State clearly the receiving bank cannot withdraw funds from the recipient's account without their consent unless fraud or a technical error is shown. If vop_shown indicates VoP wasn't offered or failed, separately note this may support a compensation claim against the sending bank under the Instant Payments Regulation, distinct from the recall itself. Bank: {bank_name}. Transfer: {transfer_details}. Basis: {basis}. VoP: {vop_shown}. Details: {details}. Tone: professional, factual, urgent but not alarmist.",
   },
   'eu-unauthorised-transaction-psd2': {
     title: 'Unauthorised Transaction Refund Demand (PSD2)',
-    // PLACEHOLDER product id — replace with the REAL Gumroad product_id for the
-    // "eu-unauthorised-transaction-psd2" product before the paid unlock will verify.
-    gumroad_product_id: 'PLACEHOLDER_EU_PSD2_REFUND',
+    // Real Gumroad product_id for the "eu-unauthorised-transaction-psd2" product.
+    gumroad_product_id: 'zdjykv',
     prompt_template:
       "Write a formal PSD2 unauthorised transaction refund demand. If sca_used is 'No' or 'Not sure', assert liability shifts to the bank/merchant for failing to require SCA. Cite the €50 maximum liability cap for losses before the transaction was reported, and zero liability for anything after reporting. Demand restitution 'by no later than the end of the following business day' after notification, per PSD2. Do NOT reference PSD3 as if it's already in force — PSD2 is the current governing law. Bank: {bank_name}. Transaction: {transaction_details}. SCA used: {sca_used}. Reported: {reported_date}. Loss before report: {loss_before_report}. Tone: professional, firm, factual.",
   },
