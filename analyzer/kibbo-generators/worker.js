@@ -142,37 +142,29 @@ const GENERATORS = {
   },
   'eu261-flight-compensation-claim': {
     title: 'EU261 Flight Delay/Cancellation Compensation Claim',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu261-flight-compensation-claim" product.
-    gumroad_product_id: 'PLACEHOLDER_EU261_FLIGHT_CLAIM',
+    // Real Gumroad product_id for the "eu261-flight-compensation-claim" product.
+    gumroad_product_id: 'uhpyudt',
     prompt_template:
       "Write a formal EU261 compensation claim per Regulation (EC) No 261/2004. Use the correct distance-based compensation tier: €250 (up to 1,500km), €400 (1,500-3,500km or long intra-EU flights), €600 (over 3,500km) based on distance_km. If cause is airline-controlled, assert the claim firmly; if weather/ATC, note the airline may invoke extraordinary circumstances and frame the claim accordingly without guaranteeing the outcome. State clearly that technical/crew issues are NOT extraordinary circumstances per established case law. Do not recommend using a third-party claims agency. Airline: {airline_name}. Flight: {flight_details}. Scenario: {scenario}. Distance: {distance_km}km. Cause: {cause}. Duty of care: {duty_of_care}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
   'eu-baggage-claim-montreal': {
     title: 'EU Baggage Claim Letter (Montreal Convention)',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu-baggage-claim-montreal" product.
-    gumroad_product_id: 'PLACEHOLDER_EU_BAGGAGE_CLAIM',
+    // Real Gumroad product_id for the "eu-baggage-claim-montreal" product.
+    gumroad_product_id: 'dkgscf',
     prompt_template:
       "Write a formal baggage claim under the Montreal Convention. Reference the current liability cap of 1,519 SDR per passenger (approx €2,000, noting the exact euro value fluctuates with the SDR exchange rate — do not assert one fixed euro figure). For damaged baggage, note the 7-day filing deadline from delivery. For lost baggage, note the 21-day threshold at which it's legally considered lost rather than delayed. State clearly this is reimbursement of demonstrated value, not a flat payout. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue}. PIR filed: {pir_filed}. Itemized value: {itemized_value}. Tone: professional, factual.",
   },
   'eu-train-delay-claim': {
     title: 'EU Train Delay Compensation Claim',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu-train-delay-claim" product.
-    gumroad_product_id: 'PLACEHOLDER_EU_TRAIN_DELAY_CLAIM',
+    // Real Gumroad product_id for the "eu-train-delay-claim" product.
+    gumroad_product_id: 'preig',
     prompt_template:
       "Write a formal EU rail delay compensation claim per Regulation (EU) 2021/782. Use the correct tier: 25% refund (60-119 min delay) or 50% refund (120+ min delay) based on delay_minutes. Note that if cause is force majeure, cash compensation may not apply, but the duty-of-care obligation (food, accommodation) still applies regardless of cause — frame accordingly. If missed_connection is Yes, assert the right to free rerouting on the next available train, including a partner operator, or alternative transport. Operator: {operator_name}. Journey: {journey_details}. Delay: {delay_minutes} min. Cause: {cause}. Missed connection: {missed_connection}. Duty of care: {duty_of_care}. Tone: professional, factual.",
   },
   'eu-package-holiday-complaint': {
     title: 'EU Package Holiday Complaint & Compensation Claim',
-    // PLACEHOLDER product id — the free preview works without it, but the paid
-    // $4.60 unlock will fail license verification until this is replaced with the
-    // REAL Gumroad product_id for the "eu-package-holiday-complaint" product.
-    gumroad_product_id: 'PLACEHOLDER_EU_PACKAGE_HOLIDAY',
+    // Real Gumroad product_id for the "eu-package-holiday-complaint" product.
+    gumroad_product_id: 'ubqkuu',
     prompt_template:
       "Write a formal complaint to a package travel organiser per Directive (EU) 2015/2302. State the organiser is fully liable for every service in the package, not individual suppliers. If issue is a significant pre-departure change, assert the right to reject it and receive a full refund within 14 days. If non-conformity at destination, request equivalent alternative arrangements or a proportionate price reduction. If insolvency, reference the mandatory insolvency protection insurance and the right to free repatriation. Note this only applies if the booking qualifies as a 'package' under the directive (two or more linked travel services sold together) — flag this as worth confirming if unclear. Agency: {agency_name}. Trip: {trip_details}. Issue: {issue}. Details: {details}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
