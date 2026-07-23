@@ -191,17 +191,15 @@ const GENERATORS = {
   },
   'eu-gdpr-rights-request': {
     title: 'GDPR Rights Request Letter (Access / Erasure / Complaint)',
-    // PLACEHOLDER product id — replace with the REAL Gumroad product_id for the
-    // "eu-gdpr-rights-request" product before the paid unlock will verify.
-    gumroad_product_id: 'PLACEHOLDER_EU_GDPR_RIGHTS_REQUEST',
+    // Real Gumroad product_id for the "eu-gdpr-rights-request" product.
+    gumroad_product_id: 'pnpwzz',
     prompt_template:
       "Write a formal GDPR rights request letter matching request_type. For Access requests, cite Article 15 and request purposes of processing, categories of data, recipients, and retention period. For Erasure requests, cite Article 17, using the phrase 'I hereby exercise my Right to Erasure under Article 17 of the GDPR'. For both Access and Erasure, note the response deadline is one month, extendable by up to two further months for complex requests provided the company notifies the requester within the first month — do NOT describe this deadline as non-extendable or absolute. For a DPO complaint, frame it as the required pre-escalation step before a formal DPA complaint, referencing a 30-day response expectation before escalating. Company: {company_name}. Request type: {request_type}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
   'eu-gdpr-violation-report': {
     title: 'GDPR Violation Report / Whistleblower Notice',
-    // PLACEHOLDER product id — replace with the REAL Gumroad product_id for the
-    // "eu-gdpr-violation-report" product before the paid unlock will verify.
-    gumroad_product_id: 'PLACEHOLDER_EU_GDPR_VIOLATION_REPORT',
+    // Real Gumroad product_id for the "eu-gdpr-violation-report" product.
+    gumroad_product_id: 'covqc',
     prompt_template:
       "Write a formal GDPR violation report suitable for submission to a national Data Protection Authority. If reporter_role is 'Employee/contractor', reference protections under the EU Whistleblower Directive (2019/1937) against retaliation. Reference the 72-hour breach notification duty under Article 33 where relevant. Do not encourage the reporter to unlawfully exfiltrate bulk data belonging to others as evidence — advise gathering evidence within lawful means. If anonymity_preference is 'Anonymous', note that fully anonymous reports may limit the regulator's ability to follow up with clarifying questions. Organisation: {organisation_name}. Role: {reporter_role}. Violation type: {violation_type}. Details: {details}. Anonymity: {anonymity_preference}. Tone: professional, factual, serious.",
   },
