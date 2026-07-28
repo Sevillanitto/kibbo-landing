@@ -210,6 +210,15 @@ const GENERATORS = {
     prompt_template:
       "Write a formal dispute letter tailored to the selected platform. For Amazon: invoke the 14-day withdrawal right or 2-year legal guarantee as applicable, and the A-to-z Guarantee as Amazon's own escalation layer — do NOT reference the discontinued EU ODR platform; if escalation beyond Amazon is needed, reference ECC-Net or national ADR bodies instead. For Booking.com: if booking_type is 'Package/linked booking', invoke Directive (EU) 2015/2302's alternative accommodation mandate; if 'Standalone hotel booking', frame this as a general breach-of-contract claim against the hotel, NOT the codified package travel relocation right. For Airbnb: reference the Guest Refund Policy and note the 72-hour reporting window is Airbnb's own policy, not EU statute, while price/description accuracy is grounded in EU unfair commercial practices law. For PayPal: reference Buyer Protection's 180-day dispute window and 20-day negotiation period as PayPal's own program rules, and note the CSSF Luxembourg escalation path if internal arbitration is unfair. Platform: {platform}. Booking type: {booking_type}. Issue: {issue}. Transaction: {transaction_details}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
+  'eu-subscription-cancellation-demand': {
+    title: 'Subscription Cancellation & Refund Demand Letter (EU)',
+    // PLACEHOLDER — Gumroad product not yet created for "eu-subscription-cancellation-demand".
+    // Create it (license-verified generator, "Generate a unique license key per sale"
+    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
+    gumroad_product_id: 'PLACEHOLDER_EU_SUBSCRIPTION_CANCEL',
+    prompt_template:
+      "Write a formal EU subscription cancellation/refund letter. If scenario is 'Still within my 14-day withdrawal window', invoke Directive (EU) 2023/2673's withdrawal right and request a pro-rata refund. If scenario is 'Trying to cancel an ongoing subscription (past 14 days)', note that a cancellation-button law applies in some member states (e.g. Germany, France) but is NOT yet uniform EU law — request cancellation citing the company's own terms and, if the country field matches Germany or France, their specific national cancellation-button law. If scenario is 'Charged for a renewal I wasn't properly notified about', invoke national consumer protection law citing lack of pre-contractual transparency, without asserting a single EU-wide notice period (varies by member state, commonly 15-30 days where a national law exists). If remedy involves revoking a payment mandate, reference the right under PSD2 to do so via the consumer's own bank. Do not present the cancellation button as EU-wide law outside the 14-day withdrawal context. Company: {company_name}. Country: {country}. Scenario: {scenario}. Sign-up date: {signup_date}. Details: {details}. Remedy: {remedy}. Tone: professional, firm, factual.",
+  },
 };
 
 const OUTPUT_RULES =
