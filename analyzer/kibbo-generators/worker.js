@@ -203,6 +203,15 @@ const GENERATORS = {
     prompt_template:
       "Write a formal GDPR violation report suitable for submission to a national Data Protection Authority. If reporter_role is 'Employee/contractor', reference protections under the EU Whistleblower Directive (2019/1937) against retaliation. Reference the 72-hour breach notification duty under Article 33 where relevant. Do not encourage the reporter to unlawfully exfiltrate bulk data belonging to others as evidence — advise gathering evidence within lawful means. If anonymity_preference is 'Anonymous', note that fully anonymous reports may limit the regulator's ability to follow up with clarifying questions. Organisation: {organisation_name}. Role: {reporter_role}. Violation type: {violation_type}. Details: {details}. Anonymity: {anonymity_preference}. Tone: professional, factual, serious.",
   },
+  'eu-platform-dispute-letter': {
+    title: 'Marketplace/Platform Dispute Letter (Amazon/Booking/Airbnb/PayPal)',
+    // PLACEHOLDER — Gumroad product not yet created for "eu-platform-dispute-letter".
+    // Create it (license-verified generator, "Generate a unique license key per sale"
+    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
+    gumroad_product_id: 'PLACEHOLDER_EU_PLATFORM_DISPUTE',
+    prompt_template:
+      "Write a formal dispute letter tailored to the selected platform. For Amazon: invoke the 14-day withdrawal right or 2-year legal guarantee as applicable, and the A-to-z Guarantee as Amazon's own escalation layer — do NOT reference the discontinued EU ODR platform; if escalation beyond Amazon is needed, reference ECC-Net or national ADR bodies instead. For Booking.com: if booking_type is 'Package/linked booking', invoke Directive (EU) 2015/2302's alternative accommodation mandate; if 'Standalone hotel booking', frame this as a general breach-of-contract claim against the hotel, NOT the codified package travel relocation right. For Airbnb: reference the Guest Refund Policy and note the 72-hour reporting window is Airbnb's own policy, not EU statute, while price/description accuracy is grounded in EU unfair commercial practices law. For PayPal: reference Buyer Protection's 180-day dispute window and 20-day negotiation period as PayPal's own program rules, and note the CSSF Luxembourg escalation path if internal arbitration is unfair. Platform: {platform}. Booking type: {booking_type}. Issue: {issue}. Transaction: {transaction_details}. Remedy: {remedy}. Tone: professional, firm, factual.",
+  },
 };
 
 const OUTPUT_RULES =
