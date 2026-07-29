@@ -1,7 +1,7 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
   "problems": ["Scam", "Bank", "Subscription", "Parcel", "Landlord", "Work"],
-  "countries": ["UK", "US", "Australia"],
+  "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
       "directory": { "name": "Action Fraud", "url": "/directory/financial-banking.html#action-fraud" },
@@ -207,6 +207,34 @@
         { "label": "Report to Scamwatch, and contact IDCARE if your ID was exposed", "days_from_start": 1 },
         { "label": "Log it with ReportCyber (cyber.gov.au) for a reference number", "days_from_start": 1 },
         { "label": "Escalate to AFCA if the bank won't act (including the receiving bank)", "days_from_start": 30 }
+      ]
+    },
+    "Bank|EU": {
+      "directory": { "name": "EU Banking Dispute & Payment Fraud Resources", "url": "/directory/financial-banking.html#eu-banking-dispute-resources" },
+      "article": { "title": "How to File a Complaint Against Your Bank in the EU", "url": "/blog/eu-bank-complaint-fin-net.html" },
+      "tool": { "name": "Bank Complaint Letter (EU / PSD2 / FIN-NET)", "url": "/generate/eu-bank-complaint-finnet.html", "type": "generator" },
+      "template": { "name": "EU Banking Dispute Evidence Log", "url": "/templates/eu-banking-dispute-evidence-log.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Send a formal complaint to your bank, titled to invoke the Payment Services Directive", "days_from_start": 0 },
+        { "label": "Bank must give a final written response (15 business days)", "days_from_start": 21 },
+        { "label": "Exceptional extended deadline if the bank has notified you (35 business days)", "days_from_start": 49 },
+        { "label": "No response, or unsatisfactory reply? Escalate to FIN-NET", "days_from_start": 50 }
+      ]
+    },
+    "Subscription|EU": {
+      "directory": { "name": "EU Subscription Cancellation & Renewal Law Resources", "url": "/directory/shopping-ecommerce.html#eu-subscription-cancellation-resources" },
+      "article": { "title": "How to Cancel a Subscription Under EU Law: What \"Easy Exit\" Actually Covers Today", "url": "/blog/eu-cancel-subscription-easy-exit.html" },
+      "tool": { "name": "Subscription Cancellation & Refund Demand Letter (EU)", "url": "/generate/eu-subscription-cancellation-demand.html", "type": "generator" },
+      "template": { "name": "Subscription Tracker & Renewal Log (EU)", "url": "/templates/eu-subscription-tracker-renewal-log.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Check whether you're still in your 14-day EU-wide withdrawal window", "days_from_start": 0 },
+        { "label": "If not, check whether your country has a specific cancellation-button law (e.g. Germany, France) or an unnotified-renewal notice rule", "days_from_start": 1 },
+        { "label": "Send a formal cancellation/refund demand citing the correct basis for your country and scenario", "days_from_start": 2 },
+        { "label": "If the company keeps billing, revoke the payment mandate directly through your bank (PSD2)", "days_from_start": 14 }
       ]
     }
   }
