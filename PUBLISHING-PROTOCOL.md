@@ -15,7 +15,13 @@ broken CSP, unescaped characters, wrong Gumroad IDs).
 2. Assign `data-category` — must match one of: Financial & Banking,
    Shopping & E-Commerce, Delivery & Parcels, Privacy & Data, Housing &
    Rentals, Telecoms & Utilities, Legal & Contracts, Health &
-   Supplements, Developer Tools & Security, Templates & Downloads.
+   Supplements, Flights & Travel, Developer Tools & Security, Templates
+   & Downloads. If a category is genuinely new, it must also be added to
+   the `CATEGORIES` array in blog.html's category-filter script — a
+   card with an unlisted category still counts under "All" but gets no
+   filter pill of its own, so it becomes effectively unfindable except
+   by scrolling the entire index. (This exact bug shipped silently
+   across several Flights & Travel batches before being caught.)
 3. Add the card to blog.html's grid; confirm the category filter count
    updates (+1 or however many).
 4. Include engagement-footer.js (the container div + script tag).
