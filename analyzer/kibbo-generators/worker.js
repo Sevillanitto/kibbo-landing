@@ -226,55 +226,43 @@ const GENERATORS = {
   },
   'unpaid-wage-compensation-demand': {
     title: 'Unpaid Wage & Compensation Demand Letter',
-    // PLACEHOLDER — Gumroad product not yet created for "unpaid-wage-compensation-demand".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_UNPAID_WAGE_DEMAND',
+    // Real Gumroad product_id for the "unpaid-wage-compensation-demand" product.
+    gumroad_product_id: 'sbadbs',
     prompt_template:
       "Write a formal unpaid wage/compensation demand letter matching the reason selected. For 'Unpaid trial shift': note that in most jurisdictions, if the worker performed productive work rather than pure observation/shadowing, wage laws generally require payment regardless of the word 'trial' or 'unpaid' in the arrangement — phrase this as a general principle, not a jurisdiction-specific citation, since trial shift rules vary by location. For 'Mandatory training time': note that time an employer requires an employee to spend in training is generally compensable work time under most wage laws, distinct from truly voluntary, non-required training. For 'Overtime hours': request the specific overtime premium calculation without asserting a specific jurisdiction's overtime rate or threshold unless the person's location is known. Do not state a specific legal citation or statute for any reason unless jurisdiction is clear from context — keep legal framing general ('wage protection laws in most jurisdictions require...') rather than citing a specific act. Employer: {employer_name}. Reason: {reason}. Amount: {amount_owed}. Period: {period_covered}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
   'wrongful-wage-deduction-letter': {
     title: 'Wrongful/Unlawful Wage Deduction Letter',
-    // PLACEHOLDER — Gumroad product not yet created for "wrongful-wage-deduction-letter".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_WRONGFUL_DEDUCTION',
+    // Real Gumroad product_id for the "wrongful-wage-deduction-letter" product.
+    gumroad_product_id: 'ozzcfn',
     prompt_template:
       "Write a formal letter disputing a wage deduction. Note that in most jurisdictions, deductions from wages generally require the employee's prior written consent and/or specific legal authorization, and blanket 'shortage' or 'damage' deductions taken without due process are frequently unlawful — phrase this as a general principle across jurisdictions, not a specific statute citation, since wage deduction law varies significantly by location. If consent_given is 'No' or 'Not sure', emphasize the lack of valid authorization as the central issue. Request full repayment of the deducted amount within a reasonable timeframe (e.g. 14 days) and reference the employee's right to escalate to a labor authority if unresolved. Employer: {employer_name}. Deduction reason: {deduction_reason}. Amount: {amount_deducted}. Consent given: {consent_given}. Details: {details}. Tone: professional, firm, factual.",
   },
   'employment-reference-request': {
     title: 'Employment Reference Request',
-    // PLACEHOLDER — Gumroad product not yet created for "employment-reference-request".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_REFERENCE_REQUEST',
+    // Real Gumroad product_id for the "employment-reference-request" product.
+    gumroad_product_id: 'ehhenj',
     prompt_template:
       "Write a formal, polite but firm request for an employment reference from a former employer. Note that in most jurisdictions employers are NOT legally required to provide anything beyond confirming dates of employment and job title, unless a specific contractual or jurisdiction-specific obligation applies — do not assert a legal entitlement to a full reference. Frame the letter as a professional request rather than a demand, since there is generally no enforceable right being invoked here, with an exception noted only if the refusal_context suggests retaliation for a protected complaint (e.g. discrimination, whistleblowing), in which case add a cautious note that retaliatory reference refusal may raise separate legal issues worth discussing with an employment lawyer. Former employer: {former_employer}. Role: {job_title}. Context: {refusal_context}. Urgency: {urgency}. Tone: professional, courteous, direct.",
   },
   'constructive-dismissal-complaint': {
     title: 'Constructive Dismissal Complaint Letter',
-    // PLACEHOLDER — Gumroad product not yet created for "constructive-dismissal-complaint".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_CONSTRUCTIVE_DISMISSAL',
+    // Real Gumroad product_id for the "constructive-dismissal-complaint" product.
+    gumroad_product_id: 'hfiygj',
     prompt_template:
       "Write a formal letter documenting the case for constructive dismissal (or, if country is 'United States', use the term 'constructive discharge' instead throughout, and note this is a doctrine applied case-by-case rather than a codified statute, distinct from the UK/Australia/EU concept of constructive dismissal). Emphasize that the employer's conduct must be objectively serious enough that a reasonable person in the employee's position would have no reasonable alternative but to resign — mere unhappiness or a single minor grievance does not qualify. If country is 'United Kingdom', note that UK unfair dismissal claims generally require at least two years of continuous employment, and flag this as something to verify before proceeding. If prior_complaints indicates the employee never raised the issue before resigning, note this may weaken the claim, since most jurisdictions expect the employee to have given the employer a chance to address the conduct, or to show why doing so was clearly futile. If pattern_or_incident is 'Pattern of incidents', instruct the letter to lay out a clear chronological timeline of the pattern rather than treating it as one event. Advise the employee to resign promptly after the triggering conduct or shortly after raising it without resolution, since delay can be read as acceptance of the conditions. Do not guarantee a specific legal outcome or cite a specific statute number. Employer: {employer_name}. Country: {country}. Conduct: {conduct_description}. Pattern: {pattern_or_incident}. Prior complaints: {prior_complaints}. Resignation date: {resignation_date}. Tone: professional, serious, factual — this is a formal legal document, not an emotional appeal.",
   },
   'workplace-harassment-complaint': {
     title: 'Workplace Harassment Complaint Letter',
-    // PLACEHOLDER — Gumroad product not yet created for "workplace-harassment-complaint".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_HARASSMENT_COMPLAINT',
+    // Real Gumroad product_id for the "workplace-harassment-complaint" product.
+    gumroad_product_id: 'kjxsaj',
     prompt_template:
       "Write a formal harassment complaint letter addressed to HR. If harassment_type is 'Discriminatory harassment', explicitly frame the complaint around the relevant protected characteristic to preserve any anti-discrimination legal protections, without naming a specific statute unless jurisdiction is known. If harassment_type is 'Retaliation after a prior complaint', frame retaliation as a distinct and often more serious issue than the original complaint, since retaliation protections exist independently in most jurisdictions. Request a specific, timely response (e.g. within 5-10 business days) and a description of the investigation process. If prior_reports indicates this was already reported without action, state this clearly and note that continued inaction may itself be a separate issue. Advise the employee to keep a copy of this letter and any response. Company: {company_name}. Person involved: {harasser_role}. Nature: {harassment_type}. Details: {incident_details}. Witnesses: {witnesses}. Prior reports: {prior_reports}. Tone: professional, serious, factual.",
   },
   'flexible-working-request': {
     title: 'Flexible Working Request',
-    // PLACEHOLDER — Gumroad product not yet created for "flexible-working-request".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_FLEXIBLE_WORKING',
+    // Real Gumroad product_id for the "flexible-working-request" product.
+    gumroad_product_id: 'jmyyim',
     prompt_template:
       "Write a formal flexible working request letter. If country is 'United Kingdom', note that UK employees generally have a statutory right to REQUEST flexible working from day one of employment, though the employer can still refuse for specified business reasons — the right is to make the request and receive a considered response, not an automatic entitlement to the arrangement itself. If country is 'Australia', note the National Employment Standards give certain eligible employees (e.g. parents, carers, employees with disability, older workers) a right to request flexible working arrangements, with similar limits. If country is 'United States', note there is no general federal right to request flexible working — this is a workplace request, not a legal entitlement, though it may still be reasonable to request in writing, and add that this differs for accommodation requests tied to disability (ADA) which follow a separate legal process not covered by this general letter. If country is 'Other/not sure', keep the framing general and advise the employee to check local law. Present the specific proposed arrangement clearly and offer to discuss a trial period. Employer: {employer_name}. Request type: {request_type}. Reason: {reason}. Proposed arrangement: {proposed_arrangement}. Country: {country}. Tone: professional, collaborative, clear.",
   },
