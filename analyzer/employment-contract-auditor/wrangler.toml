@@ -1,0 +1,10 @@
+name = "employment-contract-auditor"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-EMPLOY-...). Already created and bound
+# manually (EMPLOYMENT_ANALYZER_RATE_LIMIT):
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "e347ff4548d54446a165222a5f4dc164"
