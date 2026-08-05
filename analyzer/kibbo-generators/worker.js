@@ -268,10 +268,8 @@ const GENERATORS = {
   },
   'employment-data-access-request': {
     title: 'Employment Data Access Request (GDPR/Privacy)',
-    // PLACEHOLDER — Gumroad product not yet created for "employment-data-access-request".
-    // Create it (license-verified generator, "Generate a unique license key per sale"
-    // enabled) and replace with the real gumroad_product_id, or /unlock will always fail.
-    gumroad_product_id: 'PLACEHOLDER_EMPLOYMENT_DATA_ACCESS',
+    // Real Gumroad product_id for the "employment-data-access-request" product.
+    gumroad_product_id: 'vsnrks',
     prompt_template:
       "Write a formal data access/deletion/complaint letter matching request_type. If country is 'European Union' or 'United Kingdom', cite GDPR/UK GDPR Article 15 (access) or Article 17 (erasure) as applicable, and note the standard one-month response deadline, extendable to three months for complex requests with proper notice. If request_type is 'Complaint: CV shared without authorization', frame this as a potential violation of data minimization/purpose limitation principles under GDPR (if EU/UK) or as a general privacy complaint otherwise, and request confirmation of who the data was shared with and why. If country is 'United States', note there is no single federal equivalent to GDPR — reference relevant state privacy laws only in general terms (e.g. 'your state's privacy law, if applicable') without citing a specific act unless the person's state is known, and frame the request as a general privacy request rather than a GDPR-based legal right. If country is 'Australia', reference the Privacy Act 1988 and Australian Privacy Principles in general terms. If relationship is 'Former employee' and request_type involves deletion, note that employers may have independent legal retention obligations (tax, employment records) that can limit full deletion even where a privacy law otherwise permits it — do not promise complete erasure will necessarily be granted. Organisation: {organisation_name}. Relationship: {relationship}. Request type: {request_type}. Details: {details}. Country: {country}. Tone: professional, firm, factual.",
   },
