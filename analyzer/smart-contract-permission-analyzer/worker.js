@@ -192,7 +192,34 @@ async function handleActivate(request, env) {
 }
 
 // ---- Etherscan V2 helpers ----
-async function etherscanGet(params, apiKey) {
+// Etherscan's free tier caps requests at ~5/sec. A single analysis can fire a
+// couple dozen calls (logs + per-pair eth_calls + per-spender lookups); fired
+// concurrently, that reliably trips the rate limit. A tripped call still
+// returns a 200 with a non-array "result" (e.g. "Max rate limit reached"),
+// which silently degraded to "unverified"/"unknown activity" for real,
+// well-known, verified, active contracts — a false positive on the exact
+// signal this tool exists to get right. All calls are serialized through a
+// shared queue with spacing, and a rate-limit response is retried rather
+// than treated as a genuine "no data" result.
+let etherscanQueueTail = Promise.resolve();
+function queueEtherscanCall(fn) {
+  const run = () => fn();
+  const scheduled = etherscanQueueTail.then(
+    () => sleep(230).then(run),
+    () => sleep(230).then(run)
+  );
+  etherscanQueueTail = scheduled.catch(() => {});
+  return scheduled;
+}
+
+function isRateLimitedResult(json) {
+  if (!json) return false;
+  if (json.status === '0' && typeof json.result === 'string' && /rate limit/i.test(json.result)) return true;
+  if (typeof json.message === 'string' && /rate limit/i.test(json.message)) return true;
+  return false;
+}
+
+async function rawEtherscanGet(params, apiKey) {
   const qs = new URLSearchParams(params);
   qs.set('apikey', apiKey);
   const controller = new AbortController();
@@ -206,6 +233,20 @@ async function etherscanGet(params, apiKey) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+async function etherscanGet(params, apiKey) {
+  return queueEtherscanCall(async () => {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const json = await rawEtherscanGet(params, apiKey);
+      if (json && isRateLimitedResult(json)) {
+        await sleep(500 * (attempt + 1));
+        continue;
+      }
+      return json;
+    }
+    return null;
+  });
 }
 
 function padAddress(addr) {
