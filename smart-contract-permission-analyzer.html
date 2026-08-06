@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/smart-contract-permission-analyzer">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Smart Contract Permission Analyzer — Check Wallet Token Approvals | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Paste an Ethereum wallet address and see its real on-chain token approvals — which are unlimited, how old they are, and which combine unlimited access with an unfamiliar or dormant contract. Ethereum mainnet only. Free tool by Kibbo.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Smart Contract Permission Analyzer — Check wallet token approvals">
+<meta property="og:description" content="Paste an Ethereum wallet address and see its real on-chain token approvals — which are unlimited, how old they are, and which combine unlimited access with an unfamiliar or dormant contract. Ethereum mainnet only.">
+<meta property="og:url" content="https://www.getkibbo.com/smart-contract-permission-analyzer">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smart Contract Permission Analyzer — Check wallet token approvals">
+<meta name="twitter:description" content="See your wallet's real on-chain token approvals and which combine unlimited access with an unfamiliar or dormant contract. Ethereum mainnet only. Free tool.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<style>
+  .sca-chain-banner {
+    max-width: 560px; margin: 0 auto 20px; font-size: 13px; line-height: 1.6;
+    color: var(--text-primary); text-align: center; padding: 12px 16px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-amber); border-radius: var(--radius-sm);
+    font-weight: 600;
+  }
+  .sca-verdict-wrap { text-align: center; margin-bottom: 22px; }
+  .sca-verdict {
+    display: inline-flex; align-items: baseline; gap: 12px;
+    padding: 13px 30px; border-radius: 100px; color: #fff; background: #3D6B4F;
+  }
+  .sca-verdict-label {
+    font-family: 'Syne', system-ui, sans-serif; font-weight: 700;
+    font-size: 20px; letter-spacing: 0.02em;
+  }
+  .sca-amount { font-size: 13px; color: var(--text-muted); margin-top: 6px; }
+  .sca-revoke-note {
+    margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--border);
+    color: var(--text-muted); font-size: 12.5px; line-height: 1.5;
+  }
+  .sca-page .supp-disclaimer {
+    max-width: 560px; margin: 18px auto 0; font-size: 12.5px; line-height: 1.6;
+    color: var(--text-muted); text-align: center;
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Smart Contract Permission Analyzer",
+  "url": "https://www.getkibbo.com/smart-contract-permission-analyzer",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Paste an Ethereum wallet address and see its real on-chain token approvals, pulled from Etherscan — unlimited vs capped amounts, how long ago each was granted, and which combine unlimited access with an unfamiliar or dormant contract. Ethereum mainnet only.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+  "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body class="supp-page sca-page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html" class="active">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/dark-patterns.html">Dark Patterns</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- TOOL -->
+<div class="supp-wrap">
+
+  <div class="supp-intro">
+    <div class="supp-eyebrow">Smart Contract Permission Analyzer</div>
+    <div class="supp-tagline">Check your wallet's real on-chain token approvals · A free tool by Kibbo</div>
+  </div>
+
+  <main>
+    <h1 class="supp-h1">What can your wallet's approved contracts actually spend?</h1>
+    <p class="supp-subtext">Paste an Ethereum wallet address. We pull its real, current token approval data from the blockchain via Etherscan — not a guess — and flag which unlimited approvals go to an unfamiliar or dormant contract, the real risk signal, rather than treating every unlimited approval as automatically dangerous.</p>
+
+    <div class="sca-chain-banner">⚠️ Ethereum mainnet only at launch. This tool does not check Polygon, Arbitrum, BSC, or any other chain.</div>
+
+    <textarea class="supp-textarea" id="addressInput" placeholder="0x..." style="min-height:60px;"></textarea>
+
+    <button class="supp-analyze" id="analyzeBtn">Check Approvals</button>
+
+    <p class="supp-fineprint" id="quota">3 free analyses per day · No account required</p>
+
+    <div class="supp-access">
+      <button type="button" class="supp-access-toggle" id="accessToggle">Have an access code? Click here to unlock unlimited access</button>
+      <div class="supp-access-panel" id="accessPanel">
+        <input type="text" class="supp-access-input" id="accessCode" placeholder="Enter your code (KIBBO-CONTRACT-XXXX-XXXX-XXXX)" autocomplete="off" spellcheck="false">
+        <button type="button" class="supp-access-btn" id="activateBtn">Activate Code</button>
+        <p class="supp-access-msg" id="accessMsg"></p>
+      </div>
+    </div>
+
+    <div class="supp-error" id="error" style="display:none;"></div>
+
+    <p class="supp-disclaimer">This tool is read-only and informational — it cannot revoke anything on your behalf. Revoking an approval requires its own small on-chain transaction (with its own gas fee) on a wallet's own revocation interface or a dedicated approval-revocation tool. Ethereum mainnet only; no other chain is checked.</p>
+  </main>
+
+  <section class="supp-limit" id="limitMsg">
+    <div class="supp-limit-title">Daily limit reached</div>
+    <p>You've used your 3 free analyses today. Unlock unlimited analyses with a one-time access code — no subscription, no account.</p>
+    <a class="supp-limit-btn" href="https://carlosdevlop.gumroad.com/l/smart-contract-permission-analyzer" target="_blank" rel="noopener">Get unlimited access — $9 →</a>
+    <p class="supp-limit-sub">Already have a code? Use “Have an access code?” above to activate it.</p>
+  </section>
+
+  <section class="supp-results" id="results">
+    <p class="supp-summary" id="summary"></p>
+    <h2 class="supp-ingredients-heading" id="approvalsHeading">Approvals found</h2>
+    <div id="cards"></div>
+  </section>
+
+  <aside class="supp-cross">
+    <p class="supp-cross-title">Related resources</p>
+    <p>Before granting or reviewing any approval:</p>
+    <p>
+      <!-- Cross-link verified present. -->
+      → <a href="/checklists/self-custody-security-checklist.html">Self-Custody Security Checklist — free checklist</a>
+    </p>
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* SCROLL ANIMATIONS */
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+})();
+
+/* SMART CONTRACT PERMISSION ANALYZER */
+(function() {
+  const WORKER_URL = 'https://smart-contract-permission-analyzer.carlos-lopez-tejeiro.workers.dev';
+
+  const btn = document.getElementById('analyzeBtn');
+  const input = document.getElementById('addressInput');
+  const results = document.getElementById('results');
+  const errorBox = document.getElementById('error');
+  const limitMsg = document.getElementById('limitMsg');
+  const quota = document.getElementById('quota');
+  const accessToggle = document.getElementById('accessToggle');
+  const accessPanel = document.getElementById('accessPanel');
+  const codeInput = document.getElementById('accessCode');
+  const activateBtn = document.getElementById('activateBtn');
+  const accessMsg = document.getElementById('accessMsg');
+
+  const COLORS = { FLAGGED: '#B85C3A', NORMAL: '#3D6B4F' };
+
+  function showError(msg) { errorBox.textContent = msg; errorBox.style.display = 'block'; }
+  function clearError() { errorBox.style.display = 'none'; errorBox.textContent = ''; }
+
+  function setLoading(loading) {
+    btn.disabled = loading;
+    btn.textContent = loading ? 'Checking on-chain data...' : 'Check Approvals';
+  }
+
+  function render(data) {
+    document.getElementById('summary').textContent = data.summary || '';
+
+    const heading = document.getElementById('approvalsHeading');
+    const cards = document.getElementById('cards');
+    cards.innerHTML = '';
+    const approvals = data.approvals || [];
+
+    if (!approvals.length) {
+      heading.style.display = 'none';
+    } else {
+      heading.style.display = '';
+      approvals.forEach(function (a) {
+        const color = a.flagged ? COLORS.FLAGGED : COLORS.NORMAL;
+        const card = document.createElement('div');
+        card.className = 'supp-card';
+        card.style.borderLeftColor = color;
+
+        const name = document.createElement('div');
+        name.className = 'name';
+        name.textContent = (a.name || (a.token + ' approval to ' + shortAddr(a.spender)));
+
+        const reason = document.createElement('div');
+        reason.className = 'reason';
+        reason.textContent = a.explanation || '';
+
+        const amount = document.createElement('div');
+        amount.className = 'sca-amount';
+        amount.textContent = a.unlimited
+          ? 'Unlimited approval · granted ' + fmtDays(a.grantedDaysAgo) + ' · spender ' + (a.verified ? 'verified' : 'unverified') + ' on Etherscan'
+          : 'Capped at ' + a.humanAmount + ' ' + a.token + ' · granted ' + fmtDays(a.grantedDaysAgo) + ' · spender ' + (a.verified ? 'verified' : 'unverified') + ' on Etherscan';
+
+        card.appendChild(name);
+        card.appendChild(reason);
+        card.appendChild(amount);
+
+        if (a.revoke_note) {
+          const note = document.createElement('div');
+          note.className = 'sca-revoke-note';
+          note.textContent = a.revoke_note;
+          card.appendChild(note);
+        }
+
+        cards.appendChild(card);
+      });
+    }
+
+    results.style.display = 'block';
+  }
+
+  function shortAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function fmtDays(d) {
+    if (typeof d !== 'number') return 'unknown time ago';
+    if (d <= 0) return 'today';
+    if (d === 1) return '1 day ago';
+    return d + ' days ago';
+  }
+
+  function setUnlimited() {
+    try { localStorage.setItem('kibbo_sca_unlimited', 'true'); } catch (e) {}
+    if (quota) { quota.textContent = '✓ Unlimited access active'; quota.classList.add('supp-unlimited'); }
+    hideLimit();
+  }
+  function updateQuota(remaining) {
+    if (remaining === 'unlimited') { setUnlimited(); return; }
+    if (typeof remaining !== 'number' || !quota) return;
+    if (remaining <= 0) {
+      quota.textContent = 'No free analyses left today · come back tomorrow';
+    } else {
+      quota.textContent = remaining + ' free ' + (remaining === 1 ? 'analysis' : 'analyses') +
+        ' left today · No account required';
+    }
+  }
+  function showLimit() { if (limitMsg) limitMsg.style.display = 'block'; }
+  function hideLimit() { if (limitMsg) limitMsg.style.display = 'none'; }
+
+  async function analyze() {
+    const address = input.value.trim();
+    clearError();
+    hideLimit();
+
+    if (!/^0x[a-fA-F0-9]{40}$/.test(address)) {
+      showError('Please enter a valid Ethereum mainnet address (0x followed by 40 hex characters).');
+      return;
+    }
+
+    setLoading(true);
+    results.style.display = 'none';
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ address: address })
+      });
+
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+
+      if (res.status === 429 || (data && data.error === 'limit_reached')) {
+        showLimit();
+        updateQuota(0);
+        return;
+      }
+
+      if (!res.ok || !data) {
+        throw new Error((data && (data.error || data.detail)) || ('Server responded with ' + res.status));
+      }
+
+      render(data);
+      updateQuota(data.remaining);
+    } catch (err) {
+      showError('Could not check this address. ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  btn.addEventListener('click', analyze);
+
+  // ---- Access code (unlock unlimited) ----
+  function showAccessMsg(text, kind) {
+    if (!accessMsg) return;
+    accessMsg.textContent = text;
+    accessMsg.className = 'supp-access-msg ' + (kind || '');
+  }
+
+  async function activateCode() {
+    const code = (codeInput.value || '').trim().toUpperCase();
+    showAccessMsg('', '');
+    if (!code) { showAccessMsg('Please enter a code.', 'err'); return; }
+    activateBtn.disabled = true;
+    activateBtn.textContent = 'Activating...';
+    try {
+      const res = await fetch(WORKER_URL + '/activate-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: code })
+      });
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+      if (data && data.success) {
+        showAccessMsg('✓ Unlimited access activated. Enjoy!', 'ok');
+        setUnlimited();
+      } else {
+        showAccessMsg('Invalid code. Please check and try again.', 'err');
+      }
+    } catch (err) {
+      showAccessMsg('Could not activate the code. Please try again.', 'err');
+    } finally {
+      activateBtn.disabled = false;
+      activateBtn.textContent = 'Activate Code';
+    }
+  }
+
+  if (accessToggle && accessPanel) {
+    accessToggle.addEventListener('click', function () { accessPanel.classList.toggle('open'); });
+  }
+  if (activateBtn) activateBtn.addEventListener('click', activateCode);
+
+  try {
+    if (localStorage.getItem('kibbo_sca_unlimited') === 'true') setUnlimited();
+  } catch (e) {}
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>

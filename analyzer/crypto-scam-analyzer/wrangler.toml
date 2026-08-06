@@ -1,0 +1,10 @@
+name = "crypto-scam-analyzer"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-SCAM-...). Already created and bound
+# manually (crypto-scam-analyzer):
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "564b4aaad473480b94743cabc211a488"

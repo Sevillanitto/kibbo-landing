@@ -1,0 +1,10 @@
+name = "smart-contract-permission-analyzer"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-CONTRACT-...). Already created and bound
+# manually (smart-contract-analyzer-rate-limit):
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "9b7b7268b9c142c5860dec1aa2c700a9"
