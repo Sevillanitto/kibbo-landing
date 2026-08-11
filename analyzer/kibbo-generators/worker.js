@@ -294,6 +294,30 @@ const GENERATORS = {
     prompt_template:
       "Generate a formal complaint letter, routed to the correct regulator(s) based on country AND problem_type — do not assume a single regulator per country, since especially in the US multiple agencies have narrow, non-overlapping jurisdiction. Routing logic: UNITED STATES — for 'Suspected fraud or scam' or 'Misleading marketing', direct the complaint to the FTC (ReportFraud.ftc.gov) and note the SEC's complaint portal as an additional option if the problem involves what could be an unregistered securities offering; for 'Exchange won't release my funds' or 'Unauthorized transaction', direct to FinCEN's complaint channel if it's a suspected AML/registration issue, and separately note the CFPB for bank-related crypto disputes; for 'Bank refused/closed my account', direct to the CFPB and the OCC if a national bank is involved; explicitly state that the US has no single crypto complaint regulator and the right agency depends on the specific issue. UNITED KINGDOM — direct to the FCA for most complaints, noting the Financial Ombudsman Service (FOS) as the individual dispute resolution path if the FCA-regulated firm doesn't resolve it directly. EUROPEAN UNION — direct to the national competent authority in the person's own member state responsible for MiCA enforcement (do not name a specific single EU-wide crypto regulator, since MiCA enforcement is delegated to national authorities), and note the relevant national financial ombudsman for individual disputes. AUSTRALIA — direct to ASIC for most complaints, noting AFCA (Australian Financial Complaints Authority) as the individual dispute resolution path, and Scamwatch/ACCC specifically for suspected scams rather than regulatory/licensing complaints. If country is 'Other/not sure', keep the letter general and advise the person to identify their national financial regulator before submitting. If prior_contact indicates no direct contact yet, recommend contacting the company directly first before regulatory escalation, unless problem_type is 'Suspected fraud or scam', where direct regulatory/law enforcement reporting takes priority over trying to resolve it with a likely-fraudulent entity. Company/entity: {entity_name}. Problem: {problem_type}. Amount: {amount_involved}. Details: {details}. Prior contact: {prior_contact}. Country: {country}. Tone: professional, factual, firm.",
   },
+  'restaurant-policies-generator': {
+    title: 'Restaurant Policies Generator',
+    // Gumroad short-code product_id for the "restaurant-policies-generator" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/oblszp -> .../l/restaurant-policies-generator).
+    gumroad_product_id: 'oblszp',
+    prompt_template:
+      "Generate a clear, professional {policy_type} for a restaurant called {restaurant_name} ({restaurant_type}). Use these specifics the restaurant provided: {policy_details}. Write in plain, customer-facing language suitable to post on the restaurant's own website or print for guests. This is a policy document meant to carry the restaurant's own name, not Kibbo's — do not add any Kibbo branding, letterhead, date, recipient address block, or signature line. Include a brief closing note that local consumer protection laws may impose additional requirements the restaurant should verify independently. Format with clear headers, no legal jargon.",
+  },
+  'food-recall-action-plan-generator': {
+    title: 'Food Recall Action Plan Generator',
+    // Gumroad short-code product_id for the "food-recall-action-plan-generator" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/heasbt -> .../l/food-recall-action-plan-generator).
+    gumroad_product_id: 'heasbt',
+    prompt_template:
+      "Generate a food safety incident action plan for {restaurant_name} regarding {product_affected}, discovered via {source} ({supplier_or_internal}). Already served to customers: {served}. If served, approximate date range and covers affected: {served_details}. Incident manager: {contact_person}. Produce four clearly headed sections: (1) Internal Protocol — immediate containment steps; (2) Withdrawal Checklist — physical removal from kitchen, storage, menu, and delivery platforms, formatted as a checklist suitable to print and post in a kitchen; (3) Communication Templates — a short template for affected customers and, if applicable, a short template for the local food safety authority; (4) Incident Log — a dated table template (columns: Date/Time, Action Taken, Staff Member, Notes) for recording actions as they happen. Keep language calm, procedural, and non-alarmist but clear about urgency. This is an internal operational document, not a letter to a third party — do not add a date, address block, or signature line for the document as a whole.",
+  },
+  'allergen-menu-labeling-generator': {
+    title: 'Allergen Menu Labeling Generator',
+    // Gumroad short-code product_id for the "allergen-menu-labeling-generator" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/votobg -> .../l/allergen-menu-labeling-generator).
+    gumroad_product_id: 'votobg',
+    prompt_template:
+      "You are labeling a restaurant menu for {restaurant_name} for allergen disclosure under {jurisdiction} requirements. For each dish below, identify which allergens from that jurisdiction's official allergen list are present based on the ingredients given, and err on the side of flagging a possible allergen if an ingredient is ambiguous. Dishes and ingredients: {menu_input}. Output a table with these exact columns: Dish Name | Allergens Present | Notes. Cross-contamination risk in the kitchen: {cross_contamination} — if Yes, add a short general cross-contact warning notice after the table; if No, omit it. Always end with this exact disclaimer on its own line: \"Generated based on ingredients provided by the restaurant — always verify with your supplier's ingredient documentation. This does not replace professional regulatory review.\" This is a printable menu insert, not a letter — do not add a date, address block, or signature line.",
+  },
 };
 
 const OUTPUT_RULES =

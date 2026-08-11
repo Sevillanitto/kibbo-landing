@@ -576,6 +576,16 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
   border-radius: 100px; cursor: pointer; transition: var(--transition);
 }
 .gen-copy:hover { color: #fff; background: var(--supp-accent); }
+.gen-hint {
+  margin: 0 0 24px; padding: 18px 22px; background: #fff; border: 1px solid var(--supp-line);
+  border-radius: var(--radius-sm); font-family: var(--font-sans); font-size: 14px; color: var(--supp-ink);
+}
+.gen-hint-title { font-weight: 600; margin: 0 0 10px; }
+.gen-hint ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.gen-hint li { line-height: 1.5; }
+.gen-hint p { margin: 10px 0 0; line-height: 1.5; }
+.gen-hint p:first-child { margin-top: 0; }
+.gen-hint-example { font-family: 'Courier New', monospace; font-size: 13px; color: var(--supp-muted); background: var(--supp-bg, #F7F5F0); padding: 10px 12px; border-radius: 6px; }
 
 /* ---- Consumer Rights Wizard ---- */
 .wiz { max-width: 760px; margin: 0 auto; }
