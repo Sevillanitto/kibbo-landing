@@ -838,6 +838,9 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .cl-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); transition: var(--transition); }
 .cl-card:hover { border-color: var(--accent-green); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .cl-card-tag { display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-green); background: var(--accent-green-light); padding: 5px 10px; border-radius: 100px; margin-bottom: 14px; }
+.cl-card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.cl-card-tags .cl-card-tag { margin-bottom: 0; }
+.cl-card-tag-business { color: var(--accent-amber); background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.35); }
 .cl-card-title { font-family: var(--font-serif); font-size: 20px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--text-primary); margin-bottom: 10px; }
 .cl-card-desc { font-size: 14px; line-height: 1.55; color: var(--text-secondary); margin-bottom: 18px; flex: 1; }
 .cl-card-meta { display: flex; gap: 14px; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
