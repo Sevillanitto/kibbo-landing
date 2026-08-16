@@ -1,0 +1,10 @@
+name = "course-advertisement-analyzer"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-COURSEAD-...). Already created and bound
+# manually (course-advertisement-analyzer-rate-limit):
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "fff5eaf2376b40b3b82dc1304e75fdef"
