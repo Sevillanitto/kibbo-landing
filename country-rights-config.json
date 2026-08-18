@@ -170,7 +170,12 @@
         { "label": "Privacy complaint letter to a company — generate a letter", "url": "/generate/au-privacy-complaint-letter.html" },
         { "label": "How to report a dangerous product (ACCC)", "url": "/blog/report-dangerous-product-australia.html" },
         { "label": "Report a medicine or device side effect to the TGA", "url": "/blog/report-side-effect-tga-australia.html" },
-        { "label": "Reporting an unsafe product or medicine — free checklist", "url": "/checklists/au-safety-reporting-check.html" }
+        { "label": "Reporting an unsafe product or medicine — free checklist", "url": "/checklists/au-safety-reporting-check.html" },
+        { "label": "The \"reasonable time\" delivery guarantee under Section 62 of the ACL", "url": "/blog/au-acl-section-62-reasonable-time-delivery.html" },
+        { "label": "Safe Drop without your OK: who's liable when it's stolen", "url": "/blog/au-safe-drop-unauthorized-theft-liability.html" },
+        { "label": "Australia Post's $100 default cover, and why Extra Cover claims get rejected", "url": "/blog/au-australia-post-compensation-extra-cover.html" },
+        { "label": "How to chargeback a non-delivery in Australia: what your bank needs", "url": "/blog/au-chargeback-non-delivery-evidence.html" },
+        { "label": "The Postal Industry Ombudsman: when it applies, and when it's the wrong body", "url": "/blog/au-postal-industry-ombudsman-jurisdiction.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
