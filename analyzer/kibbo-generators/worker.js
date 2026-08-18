@@ -334,6 +334,30 @@ const GENERATORS = {
     prompt_template:
       "Generate a clear, professional {document_type} for an education provider called {provider_name} ({provider_type}), a {program_duration} program priced via {price_model}. Use these specifics the provider gave: {document_details}. Write in plain, learner-facing language, addressed to the provider's own students/customers — this document carries the provider's own name, not Kibbo's, so do not add any Kibbo branding, letterhead, or signature line. For the Marketing Claims Disclaimer specifically: help the provider state any outcome or employment statistics accurately and avoid absolute guarantees — flag language like 'guaranteed job placement' as a legal and reputational risk unless the provider can substantiate an actual guarantee with a real refund or remedy attached to it. Include a brief closing note that local consumer protection laws may impose additional requirements the provider should verify independently. Format with clear headers, no legal jargon.",
   },
+  'vendor-compensation-demand-letter': {
+    title: 'Vendor Compensation Demand Letter',
+    // Gumroad short-code product_id for the "vendor-compensation-demand-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/fvqvcv -> .../l/vendor-compensation-demand-letter).
+    gumroad_product_id: 'fvqvcv',
+    prompt_template:
+      "Generate a clear, formal demand letter from {your_name} to {vendor_name} — the SELLER/VENDOR, not the carrier — regarding order {order_reference}, placed on {order_date} for {amount_paid}. The specific issue is: {scenario}. If scenario is 'Lost parcel (never arrived, or tracking shows no movement)': the last tracking update was {last_tracking_update}, with {days_since_movement} days since any tracking movement, carried by {carrier_used}; carrier confirmed the parcel lost: {carrier_confirmed_lost}. If scenario is 'Damaged parcel (arrived damaged, or contents damaged)': damage was discovered on {damage_discovered_date}, described as: {damage_description}; photos available: {photos_available}; original packaging kept: {packaging_kept}. If scenario is 'Late delivery (arrived significantly after promised date)': the promised/estimated delivery date was {promised_delivery_date}, actual delivery was {actual_delivery_date} (or the parcel has not yet arrived), and the specific harm caused by the delay was: {delay_harm}. Only reference the fields belonging to the selected scenario — ignore the fields for the other two scenarios entirely, and never write 'Not applicable' or 'N/A' into the letter itself. State clearly what resolution is being requested: {desired_outcome}. Reference the general principle that a seller remains responsible for successful delivery of goods to the consumer, without asserting jurisdiction-specific legal citations unless explicitly confident they apply. Note that this letter may be escalated to a card chargeback or relevant consumer authority if not resolved within a reasonable timeframe. Write in a firm, professional, non-aggressive tone. Format as a proper letter with date, recipient, subject line, and closing.",
+  },
+  'courier-complaint-generator': {
+    title: 'Courier Complaint Generator',
+    // Gumroad short-code product_id for the "courier-complaint-generator" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/tepzr -> .../l/courier-complaint-generator).
+    gumroad_product_id: 'tepzr',
+    prompt_template:
+      "Generate a formal complaint letter from {your_name} to {carrier} — the CARRIER/COURIER, not the seller — regarding tracking number {tracking_number}, addressing a {issue_type} issue. If issue_type is 'Lost': the last tracking update was {last_tracking_update}. If issue_type is 'Damaged': the damage is described as: {damage_description}. If issue_type is 'Delayed': the promised/estimated delivery date was {promised_delivery_date} and the actual delivery date was {actual_delivery_date} (or the parcel has not yet arrived). If issue_type is 'Delivered to wrong address', state this plainly and request confirmation of the correct delivery location and next steps. Only reference the field(s) belonging to the selected issue type — ignore the others entirely, and never write 'Not applicable' or 'N/A' into the letter itself. This complaint is being made in {country}. Reference the carrier's own standard complaints/compensation process in general terms appropriate to {country} (e.g. UK carriers' standard claims processes, USPS/UPS/FedEx claims procedures, Australia Post's claims process) without inventing specific compensation figures unless you are confident they are current and accurate for {carrier} specifically — if uncertain, instruct the reader to check the carrier's current published limits rather than stating a figure. State the compensation being sought: {compensation_amount}. Write in a firm, professional tone. Format as a proper letter with date, recipient, subject line, and closing.",
+  },
+  'customs-fee-dispute-generator': {
+    title: 'Customs Fee Dispute Generator',
+    // Gumroad short-code product_id for the "customs-fee-dispute-generator" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/sukbsc -> .../l/customs-fee-dispute-generator).
+    gumroad_product_id: 'sukbsc',
+    prompt_template:
+      "Generate a formal dispute letter from {your_name} to {carrier_customs_agent} regarding a customs/import charge on tracking number {tracking_number}, imported into {country_of_import}. The charge was {amount_charged}, and the sender believes the correct amount is {amount_correct}. The reason for dispute is: {dispute_reason}. If the reason is 'Other', use this additional detail: {dispute_reason_other} — otherwise ignore that field entirely and do not mention it in the letter. Request a recalculation and refund of the difference, and ask for a clear breakdown of how the original charge was calculated if one wasn't already provided. Write in a firm, professional tone. Format as a proper letter with date, recipient, subject line, and closing.",
+  },
 };
 
 const OUTPUT_RULES =
