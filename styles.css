@@ -384,6 +384,15 @@ nav:not(.nav) .nav-links a:hover, nav:not(.nav) .nav-links a.active { color: var
 .prod-card.free-lead { border: 2px solid var(--accent-amber); box-shadow: var(--shadow-hover); }
 .prod-card.free-lead:hover { border-color: var(--accent-amber); }
 .prod-badge.free { color: #fff; background: var(--accent-amber); border-color: var(--accent-amber); }
+
+/* Audience badge — distinguishes a B2B tool (e.g. "For Landlords") from the
+   surrounding consumer-facing cards. Terra, not green/amber, so it never reads
+   as another type or price pill. Used on prod-cards (a row of badges) and on
+   product pages (inside .product-meta, which is already a flex row). */
+.prod-badges-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.prod-badges-row .prod-badge { margin-bottom: 0; }
+.prod-badge.audience, .product-audience-badge { color: var(--accent-terra); background: #FBF0EB; border: 1px solid rgba(184,92,58,0.3); }
+.product-audience-badge { font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; }
 .prod-price.free { color: var(--accent-amber); }
 .product-callout { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-green); border-radius: var(--radius-sm); padding: 22px 26px; margin: 8px 0 0; }
 .product-callout p { font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
