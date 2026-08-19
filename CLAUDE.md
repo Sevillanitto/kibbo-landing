@@ -61,6 +61,26 @@ kibbo-landing/
 6. Always commit with a clear message and push to main
 7. CLAUDE.md stays under 200 lines
 8. Before publishing any new content (article, template, analyzer, generator, or checklist), read PUBLISHING-PROTOCOL.md and follow its checklist for that content type.
+9. When drafting an article with a "Related Kibbo Tools" section, tag it with `CROSSLINK_TAGS` (see Cross-Linking Workflow below) instead of hand-writing the links or a descriptive placeholder comment.
+
+## Cross-Linking Workflow
+Cross-links for "Related Kibbo Tools" sections are generated deterministically from `cross-link-map.json`, not reasoned about per-article. See `scripts/inject-cross-links.py` for full usage docs (`--help` or the file's docstring).
+
+**Adding a new template/generator/checklist to the map** — once it's live (URL confirmed 200, not before):
+1. Open `cross-link-map.json`, find the block (e.g. `housing-rentals`).
+2. Add `{"type": "template"|"generator"|"checklist", "name": "...", "url": "https://www.getkibbo.com/..."}` to an existing tag's array, or add a new short kebab-case tag if none fits the topic (e.g. `deposit-dispute`, `habitability`).
+3. Commit the JSON change — no code changes needed elsewhere.
+
+**Tagging a draft article:**
+1. Inside the "Related Kibbo Tools" section, keep (or add) the placeholder: `<!-- Claude Code: link ... here once URLs confirmed live -->`.
+2. Add one marker line anywhere in the file: `<!-- CROSSLINK_TAGS: tag1, tag2 -->` — comma-separated, using tags that exist in `cross-link-map.json` for that block.
+
+**Running the script before a publishing prompt:**
+```
+python scripts/inject-cross-links.py _drafts-pending/<batch-folder> <block-key> --dry-run   # preview first
+python scripts/inject-cross-links.py _drafts-pending/<batch-folder> <block-key>             # writes files
+```
+It reports any tag with no match in the JSON instead of guessing — add the entry to `cross-link-map.json` and re-run rather than hand-writing the link.
 
 ## Nav order
 KIBBO | Analyze | Generate | Templates | Directory | Dev Tools | Blog | Get tools →

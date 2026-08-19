@@ -1,0 +1,62 @@
+{
+  "_readme": "Deterministic cross-link data for scripts/inject-cross-links.py. Every URL here was pulled from the live site (templates.html, generate.html, checklists.html) on 2026-08-19, not from memory. When a new template/generator/checklist goes live for a block below, add it to the relevant tag(s) here (create a new tag if none fits) -- see the Cross-Linking Workflow section in CLAUDE.md. Do not add a URL you have not personally confirmed resolves live.",
+  "blocks": {
+    "housing-rentals": {
+      "tags": {
+        "deposit-dispute": [
+          {"type": "template", "name": "Security Deposit Dispute Tracker", "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker.html"},
+          {"type": "checklist", "name": "Deposit Dispute Evidence Checklist", "url": "https://www.getkibbo.com/checklists/deposit-dispute-evidence.html"},
+          {"type": "generator", "name": "Landlord Deposit Demand Letter", "url": "https://www.getkibbo.com/generate/landlord-deposit-demand.html"},
+          {"type": "generator", "name": "Security Deposit Demand Letter (US)", "url": "https://www.getkibbo.com/generate/security-deposit-demand-letter.html"}
+        ],
+        "habitability": [
+          {"type": "template", "name": "Repair Request & Habitability Log", "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"},
+          {"type": "checklist", "name": "Habitability Issue Checklist", "url": "https://www.getkibbo.com/checklists/habitability-issue.html"},
+          {"type": "generator", "name": "Notice to Repair Letter (Habitability)", "url": "https://www.getkibbo.com/generate/notice-to-repair.html"}
+        ],
+        "repair-and-deduct": [
+          {"type": "template", "name": "Repair Request & Habitability Log", "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"},
+          {"type": "checklist", "name": "Repair and Deduct Eligibility Checklist", "url": "https://www.getkibbo.com/checklists/repair-and-deduct-eligibility.html"},
+          {"type": "generator", "name": "Notice to Repair Letter (Habitability)", "url": "https://www.getkibbo.com/generate/notice-to-repair.html"}
+        ],
+        "eviction": [
+          {"type": "template", "name": "Eviction Response Workbook", "url": "https://www.getkibbo.com/templates/eviction-response-workbook.html"}
+        ],
+        "illegal-lockout": [
+          {"type": "checklist", "name": "Locked Out? What to Do Right Now", "url": "https://www.getkibbo.com/checklists/illegal-lockout-emergency.html"}
+        ],
+        "move-in-inspection": [
+          {"type": "template", "name": "Move-In / Move-Out Condition Report", "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report.html"},
+          {"type": "checklist", "name": "Move-In Inspection Checklist", "url": "https://www.getkibbo.com/checklists/move-in-inspection.html"}
+        ],
+        "move-out-deposit-return": [
+          {"type": "template", "name": "Move-In / Move-Out Condition Report", "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report.html"},
+          {"type": "template", "name": "Security Deposit Dispute Tracker", "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker.html"},
+          {"type": "checklist", "name": "Moving Out Deposit Checklist", "url": "https://www.getkibbo.com/checklists/moving-out-deposit.html"}
+        ],
+        "rental-scam": [
+          {"type": "checklist", "name": "Before Paying a Rental Deposit Checklist", "url": "https://www.getkibbo.com/checklists/before-paying-rental-deposit.html"}
+        ],
+        "lease-red-flags": [
+          {"type": "checklist", "name": "Rental Contract Red Flags Checklist", "url": "https://www.getkibbo.com/checklists/rental-contract-red-flags.html"}
+        ],
+        "airbnb-booking-damage": [
+          {"type": "checklist", "name": "Airbnb / Booking Damage Claim Checklist", "url": "https://www.getkibbo.com/checklists/airbnb-booking-damage-claim.html"}
+        ],
+        "au-bond-repairs": [
+          {"type": "checklist", "name": "Moving Out? Bond Return Evidence Checklist (Australia)", "url": "https://www.getkibbo.com/checklists/au-bond-return-check.html"},
+          {"type": "generator", "name": "Notice to Remedy / Urgent Repairs Letter (Australia)", "url": "https://www.getkibbo.com/generate/au-notice-to-remedy-repairs.html"}
+        ],
+        "lease-violation-landlord": [
+          {"type": "template", "name": "Lease Violation Notice Log", "url": "https://www.getkibbo.com/templates/lease-violation-notice-log.html"}
+        ],
+        "rent-increase-landlord": [
+          {"type": "template", "name": "Rent Increase Notice Tracker", "url": "https://www.getkibbo.com/templates/rent-increase-notice-tracker.html"}
+        ]
+      }
+    },
+    "healthcare-medical": {
+      "tags": {}
+    }
+  }
+}
