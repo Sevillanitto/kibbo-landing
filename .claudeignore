@@ -1,0 +1,60 @@
+# .claudeignore — reduces Claude Code's context/token usage by skipping
+# heavy, non-essential, or fully-completed content on every session.
+# Gitignore-style syntax: patterns match at any depth unless anchored.
+#
+# NEVER exclude (shared engines + critical config — must stay readable):
+#   sitemap.xml
+#   vercel.json
+#   checklists/checklist-engine.js
+#   generate/generator-engine.js
+#   country-rights-engine.js
+#   wizard/decision-tree-core.js
+#   wizard/wizard-result-renderer.js
+#   wizard/rights-result-renderer.js
+#   wizard/timeline-renderer.js
+# None of the patterns below match any of those files.
+
+# --- VCS / dependency / build-output noise ---
+.git/
+node_modules/
+.wrangler/
+dist/
+build/
+out/
+.next/
+
+# --- Stale duplicate-repo cruft ---
+# Leftover git worktrees from earlier background agent runs — each is a full
+# duplicate checkout of this repo, the heaviest thing here if ever globbed.
+.claude/worktrees/
+
+# --- Reference material, not live site content ---
+# Past SEO/technical audit report — not actively edited.
+getkibbo.com-audit/
+
+# --- Image/media assets (binary, not something Claude needs to read) ---
+images/
+
+# --- Completed, published, stable analyzer backends ---
+# Only 4 of the 6 "done" blocks (Training & Education, Crypto & Fintech,
+# Employment, Food & Hospitality) have a dedicated analyzer folder — Flights &
+# Travel and Parcel & Delivery have none, so there is nothing folder-based to
+# exclude for those two (see commit message / session notes for why).
+analyzer/course-advertisement-analyzer/
+analyzer/education-contract-analyzer/
+analyzer/crypto-scam-analyzer/
+analyzer/smart-contract-permission-analyzer/
+analyzer/employment-contract-auditor/
+analyzer/delivery-contract-analyzer/
+
+# --- NOT excluded, deliberately ---
+# blog/, checklists/, templates/, generate/, directory/, devto/ are each one
+# flat folder holding every block's content mixed together (no per-block
+# subfolders exist on disk) — cannot be excluded per-block without a fragile,
+# high-maintenance per-file glob list. Left fully readable.
+# _drafts-pending/ currently holds only Housing & Rentals and Healthcare &
+# Medical drafts (both still in progress) — nothing to exclude there yet.
+# analyzer/kibbo-generators/, analyzer/legal-contract-auditor/,
+# analyzer/phishing-detector-auditor/, analyzer/supplement-auditor/ are
+# either shared infrastructure or belong to blocks not yet marked done —
+# left fully readable.
