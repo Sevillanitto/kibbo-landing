@@ -106,7 +106,7 @@
         'Generate legal letters in minutes.',
         efLinks([
           ['/generate/lost-parcel-demand.html', 'Lost Parcel Legal Demand'],
-          ['/generate/landlord-deposit-demand.html', 'Landlord Deposit Demand Letter'],
+          ['/generate/landlord-deposit-demand-letter.html', 'Landlord Deposit Demand Letter'],
         ]),
         '/generate.html',
         'Open Generators'

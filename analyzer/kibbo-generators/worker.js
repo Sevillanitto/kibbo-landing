@@ -37,12 +37,6 @@ const GENERATORS = {
     prompt_template:
       'Write a formal demand letter addressed to the RETAILER (not the courier/shipping company) demanding a full refund within 48 hours for a lost or damaged parcel. If country is UK, cite the Consumer Rights Act 2015 (the retailer remains liable for goods until they reach the consumer, regardless of courier used). If country is US, cite general state consumer protection law language without inventing a specific statute number. Retailer: {retailer}. Order date: {order_date}. Amount paid: {amount}. Issue: {issue}. Tone: professional, firm, cites the relevant legal basis, gives a specific 48-hour deadline.',
   },
-  'landlord-deposit': {
-    title: 'Landlord Deposit Demand Letter',
-    gumroad_product_id: 'fcgrqc',
-    prompt_template:
-      'Write a formal demand letter to a landlord or letting agency demanding the return of a tenancy deposit. If country is UK, cite the Housing Act 2004 and the tenancy deposit protection (TDP) scheme requirements, and note that failure to protect a deposit correctly can entitle the tenant to compensation of 1-3x the deposit amount in addition to its return. If country is US, reference general state security deposit return law without inventing a specific statute. Landlord: {landlord_name}. Deposit: {deposit_amount}. Move-out date: {move_out_date}. Protection status: {protected}. Tone: professional, firm, cites the relevant legal basis, requests a clear response deadline.',
-  },
   'fcra-credit-dispute': {
     title: 'Credit Report Dispute Letter (FCRA)',
     gumroad_product_id: 'vytma',
@@ -60,18 +54,6 @@ const GENERATORS = {
     gumroad_product_id: 'wrbdyq',
     prompt_template:
       'Write a formal complaint letter to the addressee\'s State Attorney General\'s Consumer Protection Division. State clearly that the consumer is filing a complaint against the named business for unfair or deceptive business practices, describe the issue using the details provided, reference general consumer protection principles (misleading advertising, breach of implied warranty, or unconscionable business practices as applicable) WITHOUT inventing or citing a specific state statute name or number — state protection laws vary and the letter should stay accurate by not naming a specific act unless the user already did. Business: {business_name}. State: {state}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, no emotional language.',
-  },
-  'security-deposit-demand-letter': {
-    title: 'Security Deposit Demand Letter (US)',
-    gumroad_product_id: 'yikkj',
-    prompt_template:
-      'Write a formal demand letter to a landlord requesting return of a security deposit. Reference that state security deposit laws impose a specific deadline for returning the deposit or providing an itemized statement of deductions (without inventing a specific statute number or exact day count unless already well-established — state law varies), and that failure to meet this deadline can result in forfeiting the right to withhold any portion of the deposit, with some states allowing additional statutory damages for bad-faith retention. Landlord: {landlord_name}. State: {state}. Deposit amount: {deposit_amount}. Move-out date: {move_out_date}. Issue: {issue}. Tone: professional, firm, requests a clear response deadline (commonly 5-10 days).',
-  },
-  'notice-to-repair': {
-    title: 'Notice to Repair Letter (Habitability)',
-    gumroad_product_id: 'lqmxl',
-    prompt_template:
-      'Write a formal Notice to Repair letter to a landlord, invoking the Implied Warranty of Habitability, which requires landlords to maintain rental units in a condition fit for basic human habitation regardless of lease terms. Describe the issue using the details provided, and request repair within a reasonable time — state that this means an expedited response (same day or next day) if is_emergency is \'Yes\', or a standard reasonable window (commonly 5-14 days, without citing a specific state statute number) if not. Mention that continued failure to act may result in the tenant pursuing repair-and-deduct, rent escrow, or a code enforcement complaint, depending on what\'s permitted in their state. Landlord: {landlord_name}. Issue: {issue}. Details: {details}. Tone: professional, firm, factual.',
   },
   'fcc-complaint': {
     title: 'FCC Informal Complaint Letter',
@@ -118,6 +100,46 @@ const GENERATORS = {
     gumroad_product_id: 'rdytkn',
     prompt_template:
       "Write a formal Notice to Remedy Breach / Urgent Repairs letter to a landlord or agent in Australia. If is_urgent is 'Yes', state that the tenant may arrange a qualified tradesperson directly and seek reimbursement if the landlord doesn't act immediately, and request contact within 24 hours. If 'No', request repair within a reasonable window (commonly 7-14 days, noting this varies by state — do not assert one fixed number as universal law). Do NOT suggest withholding rent under any circumstance — explicitly state that rent will continue to be paid in full. Mention that if the deadline passes, the tenant may apply to their state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation. Landlord/agent: {landlord_name}. State: {state}. Issue: {issue}. Urgent: {is_urgent}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
+  },
+  'landlord-deposit-demand-letter': {
+    title: 'Landlord Deposit Demand Letter',
+    // Replaces the retired 'landlord-deposit' and 'security-deposit-demand-letter'
+    // generators (consolidated into one scenario-branched tool covering both
+    // "not returned" and "deductions disputed", across US/UK/EU/Australia).
+    gumroad_product_id: 'gdyor',
+    prompt_template:
+      "Write a formal, firm but professional deposit demand letter matching the scenario selected. If scenario is 'Deposit not returned at all', demand full return within a reasonable stated period, referencing deposit_protection_scheme_name if provided, and the tenant's right to escalate to a jurisdiction-appropriate small claims/tenancy tribunal if unresolved. If scenario is 'Deposit returned with deductions I dispute', state amount_withheld and landlord_stated_reason, present tenant_counter_evidence, and request an itemized justification plus full or partial refund within a reasonable period. For jurisdiction={jurisdiction}, keep any cited deadlines or legal thresholds generic ('the deadline that applies in your area') — never invent a specific number. Tenant: {tenant_full_name}, forwarding address {tenant_forwarding_address}. Landlord: {landlord_full_name}. Property: {property_address}. Move-out: {move_out_date}. Deposit: {deposit_amount_paid}. Scenario: {scenario}. Days since move-out: {days_since_moveout}. Protection scheme: {deposit_protection_scheme_name}. Amount withheld: {amount_withheld}. Landlord's stated reason: {landlord_stated_reason}. Counter-evidence: {tenant_counter_evidence}. Tone: professional, firm, factual.",
+  },
+  'repair-request-formal-notice': {
+    title: 'Repair Request Formal Notice',
+    // Replaces the retired 'notice-to-repair' generator.
+    gumroad_product_id: 'ofxzc',
+    prompt_template:
+      "Write a formal written repair request / habitability notice. Describe issue_description, first reported issue_first_reported_date, urgency urgency_level. If prior_notice_given is 'Yes', reference the prior request made on prior_notice_date without adequate resolution. For jurisdiction={jurisdiction}, state that landlords are generally expected to address urgent issues promptly, keeping any specific deadline generic ('within the timeframe required in your area') rather than inventing a number. Request a specific, reasonable repair date and note the tenant is documenting this request in case further action becomes necessary. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Issue: {issue_description}. First reported: {issue_first_reported_date}. Urgency: {urgency_level}. Prior notice given: {prior_notice_given}. Prior notice date: {prior_notice_date}. Tone: professional, non-confrontational.",
+  },
+  'illegal-eviction-warning-letter': {
+    title: 'Illegal Eviction Warning Letter',
+    gumroad_product_id: 'iavmyw',
+    prompt_template:
+      "Write a firm formal letter addressing incident_description on incident_date. State clearly that self-help eviction (changing locks, removing belongings, shutting off utilities, forcing a tenant out without a court-ordered legal process) is not a lawful method of eviction in most {jurisdiction} jurisdictions, and only a court-ordered/legally compliant process may remove a tenant. Demand immediate restoration of access/utilities/belongings as applicable. State the tenant is documenting this incident and will pursue all available legal remedies, including contacting local housing authorities or law enforcement, if not immediately resolved. Keep legal citations generic ('applicable landlord-tenant law in your area') rather than inventing statute numbers. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Incident: {incident_description}. Incident date: {incident_date}. Tone: firm, unambiguous — this is not a negotiation letter. Also suggest the tenant keep a copy and consider contacting local police/housing authority if access is actively being denied.",
+  },
+  'rental-scam-refund-demand': {
+    title: 'Rental Scam Refund Demand',
+    gumroad_product_id: 'esyrb',
+    prompt_template:
+      "Write two things: (1) a formal refund demand letter/message demanding return of amount_paid, paid via payment_method on payment_date, for a rental that scam_description. State this was based on false pretenses, demand a full refund within a short specific period, and note failure to respond will result in the matter being reported to listing_platform, the payment provider, and local law enforcement/consumer protection authorities in {jurisdiction}. (2) A short, separate, factual, non-alarmist checklist of where to report this scam based on payment_method (bank/card chargeback, payment app fraud report, gift card issuer fraud line, or noting cryptocurrency is generally non-reversible) — don't guess at recovery odds. Victim: {victim_full_name}. Amount paid: {amount_paid}. Payment method: {payment_method}. Payment date: {payment_date}. Recipient: {recipient_name_or_alias}. Listing platform: {listing_platform}. Scam description: {scam_description}. Tone: firm, factual.",
+  },
+  'lease-clause-challenge-letter': {
+    title: 'Lease Clause Challenge Letter',
+    gumroad_product_id: 'cajgj',
+    prompt_template:
+      "Write a professional letter challenging or requesting removal of clause_text_or_summary, concern category clause_concern_type. If already_signed is 'No', frame as a request to amend the clause before signing, politely explaining the concern. If already_signed is 'Yes', frame as a formal notice the clause may be unenforceable under {jurisdiction} tenant protection law (generic — 'may not be enforceable under applicable law in your area', never cite a specific statute unless independently verified) and request written confirmation the landlord will not attempt to enforce it. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Clause: {clause_text_or_summary}. Concern type: {clause_concern_type}. Already signed: {already_signed}. Tone: professional, factual — negotiation/notice letter, not a threat.",
+  },
+  'lease-violation-notice-generator': {
+    title: 'Lease Violation Notice Generator',
+    gumroad_product_id: 'yxkdiw',
+    prompt_template:
+      "Write a formal lease violation notice for violation_type, identified violation_date_identified, described as violation_description. State that under {jurisdiction} landlord-tenant law, the tenant is given formal notice and an opportunity to cure within the notice/cure period that applies locally — keep the specific number of days generic ('within the cure period required in your jurisdiction — confirm this before sending') rather than inventing a figure. State failure to cure within that period may result in further legal action, including eviction proceedings, in accordance with local law. Landlord: {landlord_full_name}. Tenant: {tenant_full_name}. Property: {property_address_unit}. Violation type: {violation_type}. Description: {violation_description}. Date identified: {violation_date_identified}. Tone: professional, formal — legal notice. Include a clear disclaimer the landlord must confirm the exact cure period and notice requirements for their jurisdiction before sending, as this is not legal advice.",
   },
   'au-privacy-complaint-letter': {
     title: 'Privacy Complaint Letter to a Company (Australia)',

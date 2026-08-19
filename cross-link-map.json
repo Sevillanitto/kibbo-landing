@@ -6,21 +6,21 @@
         "deposit-dispute": [
           {"type": "template", "name": "Security Deposit Dispute Tracker", "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker.html"},
           {"type": "checklist", "name": "Deposit Dispute Evidence Checklist", "url": "https://www.getkibbo.com/checklists/deposit-dispute-evidence.html"},
-          {"type": "generator", "name": "Landlord Deposit Demand Letter", "url": "https://www.getkibbo.com/generate/landlord-deposit-demand.html"},
-          {"type": "generator", "name": "Security Deposit Demand Letter (US)", "url": "https://www.getkibbo.com/generate/security-deposit-demand-letter.html"}
+          {"type": "generator", "name": "Landlord Deposit Demand Letter", "url": "https://www.getkibbo.com/generate/landlord-deposit-demand-letter.html"}
         ],
         "habitability": [
           {"type": "template", "name": "Repair Request & Habitability Log", "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"},
           {"type": "checklist", "name": "Habitability Issue Checklist", "url": "https://www.getkibbo.com/checklists/habitability-issue.html"},
-          {"type": "generator", "name": "Notice to Repair Letter (Habitability)", "url": "https://www.getkibbo.com/generate/notice-to-repair.html"}
+          {"type": "generator", "name": "Repair Request Formal Notice", "url": "https://www.getkibbo.com/generate/repair-request-formal-notice.html"}
         ],
         "repair-and-deduct": [
           {"type": "template", "name": "Repair Request & Habitability Log", "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"},
           {"type": "checklist", "name": "Repair and Deduct Eligibility Checklist", "url": "https://www.getkibbo.com/checklists/repair-and-deduct-eligibility.html"},
-          {"type": "generator", "name": "Notice to Repair Letter (Habitability)", "url": "https://www.getkibbo.com/generate/notice-to-repair.html"}
+          {"type": "generator", "name": "Repair Request Formal Notice", "url": "https://www.getkibbo.com/generate/repair-request-formal-notice.html"}
         ],
         "eviction": [
-          {"type": "template", "name": "Eviction Response Workbook", "url": "https://www.getkibbo.com/templates/eviction-response-workbook.html"}
+          {"type": "template", "name": "Eviction Response Workbook", "url": "https://www.getkibbo.com/templates/eviction-response-workbook.html"},
+          {"type": "generator", "name": "Illegal Eviction Warning Letter", "url": "https://www.getkibbo.com/generate/illegal-eviction-warning-letter.html"}
         ],
         "illegal-lockout": [
           {"type": "checklist", "name": "Locked Out? What to Do Right Now", "url": "https://www.getkibbo.com/checklists/illegal-lockout-emergency.html"}
@@ -35,10 +35,12 @@
           {"type": "checklist", "name": "Moving Out Deposit Checklist", "url": "https://www.getkibbo.com/checklists/moving-out-deposit.html"}
         ],
         "rental-scam": [
-          {"type": "checklist", "name": "Before Paying a Rental Deposit Checklist", "url": "https://www.getkibbo.com/checklists/before-paying-rental-deposit.html"}
+          {"type": "checklist", "name": "Before Paying a Rental Deposit Checklist", "url": "https://www.getkibbo.com/checklists/before-paying-rental-deposit.html"},
+          {"type": "generator", "name": "Rental Scam Refund Demand", "url": "https://www.getkibbo.com/generate/rental-scam-refund-demand.html"}
         ],
         "lease-red-flags": [
-          {"type": "checklist", "name": "Rental Contract Red Flags Checklist", "url": "https://www.getkibbo.com/checklists/rental-contract-red-flags.html"}
+          {"type": "checklist", "name": "Rental Contract Red Flags Checklist", "url": "https://www.getkibbo.com/checklists/rental-contract-red-flags.html"},
+          {"type": "generator", "name": "Lease Clause Challenge Letter", "url": "https://www.getkibbo.com/generate/lease-clause-challenge-letter.html"}
         ],
         "airbnb-booking-damage": [
           {"type": "checklist", "name": "Airbnb / Booking Damage Claim Checklist", "url": "https://www.getkibbo.com/checklists/airbnb-booking-damage-claim.html"}
@@ -48,7 +50,8 @@
           {"type": "generator", "name": "Notice to Remedy / Urgent Repairs Letter (Australia)", "url": "https://www.getkibbo.com/generate/au-notice-to-remedy-repairs.html"}
         ],
         "lease-violation-landlord": [
-          {"type": "template", "name": "Lease Violation Notice Log", "url": "https://www.getkibbo.com/templates/lease-violation-notice-log.html"}
+          {"type": "template", "name": "Lease Violation Notice Log", "url": "https://www.getkibbo.com/templates/lease-violation-notice-log.html"},
+          {"type": "generator", "name": "Lease Violation Notice Generator", "url": "https://www.getkibbo.com/generate/lease-violation-notice-generator.html"}
         ],
         "rent-increase-landlord": [
           {"type": "template", "name": "Rent Increase Notice Tracker", "url": "https://www.getkibbo.com/templates/rent-increase-notice-tracker.html"}
