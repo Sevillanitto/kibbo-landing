@@ -247,7 +247,12 @@
         { "label": "Booking.com consumer rights in the EU", "url": "/blog/eu-booking-com-consumer-rights.html" },
         { "label": "Airbnb refund rules in Europe", "url": "/blog/eu-airbnb-refund-rules.html" },
         { "label": "PayPal buyer protection in Europe", "url": "/blog/eu-paypal-buyer-protection.html" },
-        { "label": "Marketplace/platform dispute letter — generate a letter", "url": "/generate/eu-platform-dispute-letter.html" }
+        { "label": "Marketplace/platform dispute letter — generate a letter", "url": "/generate/eu-platform-dispute-letter.html" },
+        { "label": "Normal wear vs. damage in EU rentals: France, Spain, and Germany compared", "url": "/blog/normal-wear-vs-damage-eu-rentals.html" },
+        { "label": "Mietminderung: Germany's automatic rent reduction for housing defects", "url": "/blog/mietminderung-rent-reduction-housing-defects.html" },
+        { "label": "Which rental contract clauses are actually void in the EU", "url": "/blog/unfair-clauses-contract-nullity-eu-rentals.html" },
+        { "label": "Booked an illegal tourist rental in the EU? Your refund rights", "url": "/blog/illegal-tourist-rentals-eu-penalties-refunds.html" },
+        { "label": "The DSA and real estate portals: reporting an illegal listing", "url": "/blog/dsa-real-estate-portals-idealista-fotocasa-seloger.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
