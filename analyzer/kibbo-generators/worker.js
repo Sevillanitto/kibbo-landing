@@ -384,15 +384,17 @@ const GENERATORS = {
   // ---- Healthcare & Medical (first generators for this block) ----
   'healthcare-complaint-letter': {
     title: 'Healthcare Complaint Letter Generator',
-    // Gumroad product_id PLACEHOLDER — real value follows once Carlos creates the
-    // Gumroad product (with "Generate a unique license key per sale" enabled).
-    gumroad_product_id: 'PLACEHOLDER_healthcare-complaint-letter',
+    // Real Gumroad product_id for the "healthcare-complaint-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/rivhvf -> .../l/healthcare-complaint-letter).
+    gumroad_product_id: 'rivhvf',
     prompt_template:
       "Draft a formal, professional complaint letter from {patient_full_name} to {provider_name} regarding an incident on {incident_date}: {incident_description}. If prior informal contact was already made about this, reference it here without adequate resolution: {prior_contact_details} — otherwise ignore this field entirely and do not mention it in the letter. State the desired outcome clearly: {desired_outcome}. For jurisdiction={jurisdiction}, note that if the provider does not respond adequately, the patient may escalate to the appropriate healthcare complaints or regulatory body in their area — keep this reference generic ('the applicable healthcare complaints body in your area') unless a specific verified body applies; never invent a specific agency name. Firm but professional tone, factual, non-accusatory framing of events.",
   },
   'medical-records-request-letter': {
     title: 'Medical Records Request Letter Generator',
-    gumroad_product_id: 'PLACEHOLDER_medical-records-request-letter',
+    // Real Gumroad product_id for the "medical-records-request-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/cofgyu -> .../l/medical-records-request-letter).
+    gumroad_product_id: 'cofgyu',
     prompt_template:
       "Draft a formal written request from {patient_full_name} to {provider_name} for access to the following medical records: {records_requested}. If a specific date range applies, it covers: {date_range} — otherwise ignore this detail entirely. Preferred delivery format: {delivery_preference}. If a reason for the request was given and it is not 'Prefer not to say', state it as: {reason_for_request} — otherwise omit any stated reason from the letter. For jurisdiction={jurisdiction}, reference the patient's general right to access their own medical records under applicable law, without citing a specific statute unless independently verified — keep this generic ('as provided under applicable patient records access law in your area'). Request a response within a reasonable, stated timeframe. Polite, formal tone.",
   },
@@ -402,25 +404,33 @@ const GENERATORS = {
     // cancellation refund via the 'scenario' field, branched entirely in this
     // prompt (the frontend has no conditional-field logic). Never add a separate
     // generator for a billing-issue sub-scenario — extend this branching instead.
-    gumroad_product_id: 'PLACEHOLDER_healthcare-billing-dispute-refund-letter',
+    // Real Gumroad product_id for the "healthcare-billing-dispute-refund-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/pzetved -> .../l/healthcare-billing-dispute-refund-letter).
+    gumroad_product_id: 'pzetved',
     prompt_template:
       "Draft a formal, firm but professional letter from {patient_full_name} to {provider_name} regarding {service_description}, amount in question {amount_in_question}. If scenario is 'Incorrect or unexpected charge on a bill': the bill shows {billed_amount} but the patient expected {expected_amount}, because: {discrepancy_reason}. Request an itemized explanation and correction of the amount within a reasonable stated period. If scenario is 'Refund after cancelling a service': the patient cancelled the service on {service_cancellation_date} and has already paid {amount_already_paid}. If cancellation/refund terms were stated to the patient, reference them: {cancellation_policy_reference} — otherwise omit any reference to stated terms. Request a full or appropriate partial refund within a reasonable stated period. Only address the field(s) belonging to the selected scenario — ignore the other scenario's fields entirely and never write 'N/A' into the letter itself. For jurisdiction={jurisdiction}, keep any reference to consumer protection or billing regulations generic unless independently verified — never invent a specific statute or deadline. Professional, factual tone throughout.",
   },
   'healthcare-insurance-appeal-letter': {
     title: 'Healthcare Insurance Appeal Letter Generator',
-    gumroad_product_id: 'PLACEHOLDER_healthcare-insurance-appeal-letter',
+    // Real Gumroad product_id for the "healthcare-insurance-appeal-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/ssjfcu -> .../l/healthcare-insurance-appeal-letter).
+    gumroad_product_id: 'ssjfcu',
     prompt_template:
       "Draft a formal insurance appeal letter from {policyholder_full_name} to {insurer_name} regarding claim reference {claim_reference_number}, for {denied_service_description}. The insurer's stated reason for denial was: {denial_reason_given}. The policyholder's grounds for appeal: {patient_counter_argument}. If an appeal deadline was given, note the appeal is being submitted ahead of it: {appeal_deadline} — otherwise omit any reference to a deadline. Request a formal reconsideration of the claim, referencing the specific reason for denial and directly countering it point by point. For jurisdiction={jurisdiction}, note the policyholder's right to escalate to an external/independent review if the internal appeal is unsuccessful — keep this reference generic ('the applicable external review process for your jurisdiction and plan type') unless a specific verified process applies; never invent a specific agency name. Firm, factual, well-organized tone — this is a formal reconsideration request, not an emotional appeal.",
   },
   'medical-product-complaint-letter': {
     title: 'Medical Product Complaint Letter Generator',
-    gumroad_product_id: 'PLACEHOLDER_medical-product-complaint-letter',
+    // Real Gumroad product_id for the "medical-product-complaint-letter" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/yoqtwi -> .../l/medical-product-complaint-letter).
+    gumroad_product_id: 'yoqtwi',
     prompt_template:
       "Draft a formal complaint letter from {consumer_full_name} to {seller_or_manufacturer_name} regarding the medical product/device '{product_name}', purchased on {purchase_date}. Issue type: {issue_type}. Description: {issue_description}. Requested resolution: {desired_outcome}. For jurisdiction={jurisdiction}, reference the consumer's general warranty and consumer protection rights for defective or misdescribed products, without citing a specific statute unless independently verified — keep this generic. If issue_type is 'Safety concern', add a brief closing note that the consumer may also consider reporting the issue to the relevant product safety/regulatory authority in their area — for any other issue_type, omit this note entirely. Professional, firm tone.",
   },
   'healthcare-provider-information-request': {
     title: 'Healthcare Provider Information Request Generator',
-    gumroad_product_id: 'PLACEHOLDER_healthcare-provider-information-request',
+    // Real Gumroad product_id for the "healthcare-provider-information-request" product
+    // (confirmed via redirect: carlosdevlop.gumroad.com/l/rcyqeq -> .../l/healthcare-provider-information-request).
+    gumroad_product_id: 'rcyqeq',
     prompt_template:
       "Draft a polite, clear written request from {requester_full_name} to {provider_name} asking for information about {service_of_interest} before making a decision. Specifically request the following: {information_requested}. If a response deadline was requested, politely include it: {response_deadline_requested} — otherwise omit any deadline reference. Professional, straightforward tone — this is a pre-decision information request, not a complaint.",
   },
