@@ -58,7 +58,12 @@
         { "label": "Check your case with Citizens Advice before court", "url": "/blog/citizens-advice-legal-help-uk.html" },
         { "label": "Find a genuinely regulated solicitor (Law Society)", "url": "/blog/law-society-find-solicitor-uk.html" },
         { "label": "Report a bad reaction to a medicine or supplement (MHRA)", "url": "/blog/mhra-yellow-card-uk.html" },
-        { "label": "What the NHS actually recommends on vitamins", "url": "/blog/nhs-vitamins-supplements-guide-uk.html" }
+        { "label": "What the NHS actually recommends on vitamins", "url": "/blog/nhs-vitamins-supplements-guide-uk.html" },
+        { "label": "The NHS complaint deadlock: what to do when your complaint goes nowhere", "url": "/blog/nhs-complaint-deadlock-phso-escalation.html" },
+        { "label": "Your right to access medical records in the UK", "url": "/blog/uk-right-to-access-medical-records.html" },
+        { "label": "The private healthcare quote trap: when a £2,000 treatment becomes £3,500", "url": "/blog/private-healthcare-quote-trap-uk.html" },
+        { "label": "What to check before paying for private dental treatment in the UK", "url": "/blog/private-dental-treatment-what-to-check-uk.html" },
+        { "label": "What happens to your medical information in private healthcare?", "url": "/blog/private-healthcare-data-sharing-nhs-england.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
