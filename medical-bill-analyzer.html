@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/medical-bill-analyzer">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Medical Bill Analyzer — Spot Billing Issues Worth Reviewing | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Paste, upload, or photograph a medical bill and get an itemized list of charges worth double-checking with your provider — duplicate charges, vague fees, quantity mismatches, and more. Free tool by Kibbo.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Medical Bill Analyzer — Spot billing issues worth a second look">
+<meta property="og:description" content="Paste, upload, or photograph a medical bill and get an itemized list of charges worth double-checking with your provider. Free tool by Kibbo.">
+<meta property="og:url" content="https://www.getkibbo.com/medical-bill-analyzer">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medical Bill Analyzer — Spot billing issues worth a second look">
+<meta name="twitter:description" content="Paste, upload, or photograph a medical bill and get an itemized list of charges worth double-checking. Free tool.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- Primary green accent (#3D6B4F) — deliberately not the amber/terra "risk" treatment used
+     by the contract analyzers: this tool never scores severity, so it avoids any color
+     language that could read as a verdict. -->
+<style>
+  .medbill-page .supp-eyebrow { color: var(--accent-green); }
+  .medbill-page .supp-intro::after {
+    content: ""; display: block; width: 48px; height: 3px;
+    background: var(--accent-green); border-radius: 2px; margin: 14px auto 0;
+  }
+  .medbill-page .supp-clause-quote {
+    margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--accent-green);
+    color: #6b665e; font-size: 13px; font-style: italic; line-height: 1.5;
+  }
+  .medbill-page .supp-suggestion {
+    margin-top: 8px; font-size: 13px; line-height: 1.55; color: var(--text-primary);
+  }
+  .medbill-page .supp-suggestion strong { color: var(--accent-green); }
+  .medbill-page .supp-category-pill {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px;
+    color: var(--accent-green); background: var(--accent-green-light);
+  }
+
+  /* Input mode toggle: paste text, upload a PDF, or upload a photo */
+  .medbill-page .input-toggle { display: flex; gap: 8px; margin-bottom: 14px; }
+  .medbill-page .input-toggle-btn {
+    flex: 1; font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+    padding: 10px 6px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+    background: var(--bg-card); color: var(--text-secondary); cursor: pointer; transition: var(--transition);
+  }
+  .medbill-page .input-toggle-btn.active { background: var(--text-primary); color: var(--text-inverse); border-color: var(--text-primary); }
+  .medbill-page .supp-upload {
+    border: 1.5px dashed var(--border); border-radius: var(--radius-sm);
+    padding: 24px 20px; text-align: center; cursor: pointer;
+    transition: var(--transition); background: var(--bg-card); margin-bottom: 14px;
+  }
+  .medbill-page .supp-upload:hover,
+  .medbill-page .supp-upload.drag { border-color: var(--accent-green); background: var(--accent-green-light); }
+  .medbill-page .supp-upload input[type="file"] { display: none; }
+  .medbill-page .supp-upload-label { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+  .medbill-page .supp-upload-sub { font-size: 12.5px; color: var(--text-muted); margin-top: 4px; }
+  .medbill-page .supp-upload-filename {
+    margin-top: 12px; font-size: 13px; color: var(--accent-green); font-weight: 600; display: none;
+  }
+  .medbill-page .supp-upload-filename.show { display: block; }
+  .medbill-page .image-preview { max-width: 100%; max-height: 220px; border-radius: var(--radius-sm); margin-top: 12px; display: none; }
+  .medbill-page .image-preview.show { display: inline-block; }
+  .medbill-page .supp-context-label {
+    display: block; font-size: 13px; font-weight: 600; color: var(--text-primary); margin: 18px 0 6px;
+  }
+  .medbill-page .supp-context-sub { font-size: 12.5px; color: var(--text-muted); margin: -2px 0 8px; }
+  .medbill-page .supp-context-textarea {
+    width: 100%; min-height: 60px; font-family: var(--font-sans); font-size: 14px;
+    padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+    background: var(--bg-card); color: var(--text-primary); resize: vertical;
+  }
+  .medbill-page .supp-disclaimer {
+    max-width: 560px; margin: 18px auto 0; font-size: 12.5px; line-height: 1.6;
+    color: var(--text-muted); text-align: center;
+  }
+  .medbill-page .supp-overall {
+    text-align: center; margin-bottom: 22px;
+  }
+  .medbill-page .supp-overall-badge {
+    display: inline-block; font-family: var(--font-serif); font-weight: 700;
+    font-size: 22px; padding: 10px 26px; border-radius: 100px; letter-spacing: -0.01em;
+    color: var(--accent-green); background: var(--accent-green-light);
+  }
+  .medbill-page .cross-link-block {
+    max-width: 640px; margin: 0 auto 40px; padding: 20px 22px; background: var(--accent-green-light);
+    border-radius: var(--radius); font-size: 14px; line-height: 1.6; color: var(--text-primary);
+  }
+  .medbill-page .cross-link-block a { color: var(--accent-green); font-weight: 600; }
+  .medbill-page .cross-link-block ul { margin: 8px 0 0; padding-left: 20px; }
+  .medbill-page .cross-link-block li { margin-bottom: 4px; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Medical Bill Analyzer",
+  "url": "https://www.getkibbo.com/medical-bill-analyzer",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Paste, upload, or photograph a medical bill and get an itemized list of charges worth double-checking with your provider — duplicate charges, unusual quantities, vague or unexplained fees, mismatched totals, and possible disguised duplicates.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+  "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body class="supp-page medbill-page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html" class="active">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/dark-patterns.html">Dark Patterns</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- TOOL -->
+<div class="supp-wrap">
+
+  <div class="supp-intro">
+    <div class="supp-eyebrow">Medical Bill Analyzer</div>
+    <div class="supp-tagline">Spot billing issues worth a second look · A free tool by Kibbo</div>
+  </div>
+
+  <main>
+    <h1 class="supp-h1">What's really on your medical bill?</h1>
+    <p class="supp-subtext">Paste the bill's text, upload a PDF, or upload a photo of a paper bill. We'll flag duplicate charges, unusual quantities, vague or unexplained fees, a total that doesn't match the line items, and charges that might be the same thing billed twice under different names — never a fraud verdict, just what's worth asking your billing department about.</p>
+
+    <div class="input-toggle">
+      <button type="button" class="input-toggle-btn active" id="modePaste">Paste text</button>
+      <button type="button" class="input-toggle-btn" id="modeUpload">Upload PDF</button>
+      <button type="button" class="input-toggle-btn" id="modePhoto">Upload photo</button>
+    </div>
+
+    <div id="uploadPanel" style="display:none;">
+      <label class="supp-upload" id="uploadZone" for="pdfInput">
+        <input type="file" id="pdfInput" accept="application/pdf">
+        <div class="supp-upload-label">📄 Click to upload, or drag a PDF here</div>
+        <div class="supp-upload-sub">PDF only · nothing is stored — the text is extracted in your browser, then analyzed and discarded</div>
+        <div class="supp-upload-filename" id="uploadFilename"></div>
+      </label>
+    </div>
+
+    <div id="photoPanel" style="display:none;">
+      <label class="supp-upload" id="photoZone" for="photoInput">
+        <input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp">
+        <div class="supp-upload-label">📷 Click to upload, or drag a photo here</div>
+        <div class="supp-upload-sub">JPG, PNG or WEBP, up to 6MB · nothing is stored — analyzed and discarded</div>
+        <div class="supp-upload-filename" id="photoFilename"></div>
+        <img class="image-preview" id="photoPreview" alt="Uploaded bill preview">
+      </label>
+    </div>
+
+    <textarea class="supp-textarea" id="billText" placeholder="e.g. Facility Fee — $450.00&#10;CPT 99214 Office Visit — $220.00&#10;CPT 99214 Office Visit — $220.00&#10;Misc. Service Fee — $180.00&#10;Total Due: $975.00"></textarea>
+
+    <label class="supp-context-label" for="patientContext">What did you actually receive during this visit? (optional)</label>
+    <p class="supp-context-sub">Only used to check for services listed that don't match what you describe — leave blank to skip that check.</p>
+    <textarea class="supp-context-textarea" id="patientContext" placeholder="e.g. One office visit with my doctor and a blood draw. No imaging, no procedures."></textarea>
+
+    <button class="supp-analyze" id="analyzeBtn">Analyze Bill</button>
+
+    <p class="supp-fineprint" id="quota">3 free analyses per day · No account required</p>
+
+    <div class="supp-access">
+      <button type="button" class="supp-access-toggle" id="accessToggle">Have an access code? Click here to unlock unlimited access</button>
+      <div class="supp-access-panel" id="accessPanel">
+        <input type="text" class="supp-access-input" id="accessCode" placeholder="Enter your code (KIBBO-MEDBILL-XXXX-XXXX-XXXX)" autocomplete="off" spellcheck="false">
+        <button type="button" class="supp-access-btn" id="activateBtn">Activate Code</button>
+        <p class="supp-access-msg" id="accessMsg"></p>
+      </div>
+    </div>
+
+    <div class="supp-error" id="error" style="display:none;"></div>
+
+    <p class="supp-disclaimer">This analysis is for informational purposes only and does not constitute medical, legal, or financial advice. Contact your provider's billing department directly to resolve any discrepancy, and use Kibbo's Medical Bill &amp; Invoice Review Checklist and Medical Expenses &amp; Billing Dispute Tracker to organize your review.</p>
+  </main>
+
+  <section class="supp-limit" id="limitMsg">
+    <div class="supp-limit-title">Daily limit reached</div>
+    <p>You've used your 3 free bill analyses today. Unlock unlimited analyses with a one-time access code — no subscription, no account.</p>
+    <a class="supp-limit-btn" href="https://carlosdevlop.gumroad.com/l/medical-bill-analyzer" target="_blank" rel="noopener">Get unlimited access — $9 →</a>
+    <p class="supp-limit-sub">Already have a code? Use “Have an access code?” above to activate it.</p>
+  </section>
+
+  <section class="supp-results" id="results">
+    <div class="supp-overall">
+      <span class="supp-overall-badge" id="overallBadge"></span>
+    </div>
+
+    <p class="supp-summary" id="summary"></p>
+
+    <h2 class="supp-ingredients-heading">Line-by-line findings</h2>
+    <div id="cards"></div>
+
+    <div class="cross-link-block">
+      Ready to dispute a charge? Kibbo has three free/paid tools built for exactly this:
+      <ul>
+        <li><a href="/checklists/medical-bill-invoice-review.html">Medical Bill &amp; Invoice Review Checklist</a> — free, step by step</li>
+        <li><a href="/templates/medical-billing-dispute-tracker.html">Medical Expenses &amp; Billing Dispute Tracker</a> — organize every charge and appeal deadline</li>
+        <li><a href="/generate/healthcare-billing-dispute-refund-letter.html">Healthcare Billing Dispute &amp; Refund Letter</a> — generate the letter to send</li>
+      </ul>
+    </div>
+  </section>
+
+  <aside class="supp-cross">
+    <p class="supp-cross-title">Related resources</p>
+    <p>Before you dispute a medical bill:</p>
+    <p>
+      → <a href="/checklists/medical-bill-invoice-review.html">Medical Bill &amp; Invoice Review Checklist — free checklist</a>
+    </p>
+    <p>
+      → <a href="/templates/medical-billing-dispute-tracker.html">Medical Expenses &amp; Billing Dispute Tracker — template</a>
+    </p>
+    <p>
+      → <a href="/generate/healthcare-billing-dispute-refund-letter.html">Healthcare Billing Dispute &amp; Refund Letter — generator</a>
+    </p>
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- PDF.js — client-side text extraction only; the PDF itself never leaves the browser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  if (window['pdfjsLib']) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+</script>
+
+<script>
+/* SCROLL ANIMATIONS */
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+})();
+
+/* MEDICAL BILL ANALYZER */
+(function() {
+  // Cloudflare Worker that holds the Anthropic API key and calls Claude.
+  const WORKER_URL = 'https://medical-bill-analyzer.carlos-lopez-tejeiro.workers.dev';
+
+  const btn = document.getElementById('analyzeBtn');
+  const billTextInput = document.getElementById('billText');
+  const patientContextInput = document.getElementById('patientContext');
+  const modePaste = document.getElementById('modePaste');
+  const modeUpload = document.getElementById('modeUpload');
+  const modePhoto = document.getElementById('modePhoto');
+  const uploadPanel = document.getElementById('uploadPanel');
+  const photoPanel = document.getElementById('photoPanel');
+  const uploadZone = document.getElementById('uploadZone');
+  const photoZone = document.getElementById('photoZone');
+  const pdfInput = document.getElementById('pdfInput');
+  const photoInput = document.getElementById('photoInput');
+  const uploadFilename = document.getElementById('uploadFilename');
+  const photoFilename = document.getElementById('photoFilename');
+  const photoPreview = document.getElementById('photoPreview');
+  const results = document.getElementById('results');
+  const errorBox = document.getElementById('error');
+  const limitMsg = document.getElementById('limitMsg');
+  const quota = document.getElementById('quota');
+  const accessToggle = document.getElementById('accessToggle');
+  const accessPanel = document.getElementById('accessPanel');
+  const codeInput = document.getElementById('accessCode');
+  const activateBtn = document.getElementById('activateBtn');
+  const accessMsg = document.getElementById('accessMsg');
+
+  let currentImage = null; // { base64, mediaType } — set only in photo mode
+
+  // ---- Input mode toggle (paste / upload PDF / upload photo) ----
+  function setMode(mode) {
+    modePaste.classList.toggle('active', mode === 'paste');
+    modeUpload.classList.toggle('active', mode === 'upload');
+    modePhoto.classList.toggle('active', mode === 'photo');
+    uploadPanel.style.display = mode === 'upload' ? 'block' : 'none';
+    photoPanel.style.display = mode === 'photo' ? 'block' : 'none';
+    billTextInput.style.display = mode === 'photo' ? 'none' : 'block';
+    if (mode !== 'photo') currentImage = null;
+  }
+  modePaste.addEventListener('click', function () { setMode('paste'); });
+  modeUpload.addEventListener('click', function () { setMode('upload'); });
+  modePhoto.addEventListener('click', function () { setMode('photo'); });
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.style.display = 'block';
+  }
+  function clearError() {
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+
+  function setLoading(loading, label) {
+    btn.disabled = loading;
+    btn.textContent = loading ? (label || 'Analyzing...') : 'Analyze Bill';
+  }
+
+  // ---- PDF upload & client-side text extraction (PDF.js) — same extraction
+  // approach as the Delivery/Employment Contract Analyzers; the extracted text
+  // is placed into the same textarea used for pasting. ----
+  async function extractPdfText(file) {
+    const buf = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+    let text = '';
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      text += content.items.map(function (it) { return it.str; }).join(' ') + '\n\n';
+    }
+    return text.trim();
+  }
+
+  async function handlePdf(file) {
+    clearError();
+    results.style.display = 'none';
+    if (!file) return;
+    if (file.type !== 'application/pdf') {
+      showError('Please upload a PDF file.');
+      return;
+    }
+    if (!window['pdfjsLib']) {
+      showError('PDF reader failed to load. Please refresh and try again.');
+      return;
+    }
+    uploadFilename.textContent = '';
+    uploadFilename.classList.remove('show');
+    setLoading(true, 'Reading PDF...');
+    try {
+      const text = await extractPdfText(file);
+      if (!text) {
+        showError('Could not find any text in that PDF (it may be a scanned image). Try the "Upload photo" option instead, or paste the text directly.');
+        setLoading(false);
+        return;
+      }
+      billTextInput.value = text;
+      uploadFilename.textContent = '✓ ' + file.name + ' — text extracted below, edit if needed';
+      uploadFilename.classList.add('show');
+      setLoading(false);
+    } catch (err) {
+      showError('Could not read that PDF. ' + err.message);
+      setLoading(false);
+    }
+  }
+
+  pdfInput.addEventListener('change', function () { handlePdf(pdfInput.files[0]); });
+  uploadZone.addEventListener('dragover', function (e) { e.preventDefault(); uploadZone.classList.add('drag'); });
+  uploadZone.addEventListener('dragleave', function () { uploadZone.classList.remove('drag'); });
+  uploadZone.addEventListener('drop', function (e) {
+    e.preventDefault();
+    uploadZone.classList.remove('drag');
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      pdfInput.files = e.dataTransfer.files;
+      handlePdf(e.dataTransfer.files[0]);
+    }
+  });
+
+  // ---- Photo upload: base64-encode client-side and send directly to the
+  // Worker, which passes it to Claude as a vision image block. Nothing is
+  // extracted or stored client-side beyond the in-memory preview. ----
+  const ALLOWED_IMAGE_TYPES = { 'image/jpeg': true, 'image/png': true, 'image/webp': true };
+  function fileToBase64(file) {
+    return new Promise(function (resolve, reject) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const result = reader.result || '';
+        const commaIdx = result.indexOf(',');
+        resolve(commaIdx !== -1 ? result.slice(commaIdx + 1) : result);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handlePhoto(file) {
+    clearError();
+    results.style.display = 'none';
+    if (!file) return;
+    if (!ALLOWED_IMAGE_TYPES[file.type]) {
+      showError('Please upload a JPG, PNG, or WEBP image.');
+      return;
+    }
+    if (file.size > 6 * 1024 * 1024) {
+      showError('That image is too large (max 6MB). Try a smaller photo or a text-based PDF instead.');
+      return;
+    }
+    photoFilename.textContent = '';
+    photoFilename.classList.remove('show');
+    setLoading(true, 'Reading image...');
+    try {
+      const base64 = await fileToBase64(file);
+      currentImage = { base64: base64, mediaType: file.type };
+      photoPreview.src = 'data:' + file.type + ';base64,' + base64;
+      photoPreview.classList.add('show');
+      photoFilename.textContent = '✓ ' + file.name + ' ready to analyze';
+      photoFilename.classList.add('show');
+      setLoading(false);
+    } catch (err) {
+      showError('Could not read that image. ' + err.message);
+      setLoading(false);
+    }
+  }
+
+  photoInput.addEventListener('change', function () { handlePhoto(photoInput.files[0]); });
+  photoZone.addEventListener('dragover', function (e) { e.preventDefault(); photoZone.classList.add('drag'); });
+  photoZone.addEventListener('dragleave', function () { photoZone.classList.remove('drag'); });
+  photoZone.addEventListener('drop', function (e) {
+    e.preventDefault();
+    photoZone.classList.remove('drag');
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      photoInput.files = e.dataTransfer.files;
+      handlePhoto(e.dataTransfer.files[0]);
+    }
+  });
+
+  function render(data) {
+    const flagged = typeof data.items_flagged === 'number' ? data.items_flagged : (data.findings || []).length;
+    const badge = document.getElementById('overallBadge');
+    badge.textContent = flagged === 0
+      ? 'No items flagged'
+      : flagged + ' item' + (flagged === 1 ? '' : 's') + ' flagged for review';
+
+    document.getElementById('summary').textContent = data.summary || '';
+
+    const cards = document.getElementById('cards');
+    cards.innerHTML = '';
+    const findings = data.findings || [];
+    findings.forEach(function (f) {
+      const card = document.createElement('div');
+      card.className = 'supp-card';
+      card.style.borderLeftColor = '#3D6B4F';
+
+      const pill = document.createElement('span');
+      pill.className = 'supp-category-pill';
+      pill.textContent = f.category || 'Worth reviewing';
+
+      const reason = document.createElement('div');
+      reason.className = 'reason';
+      reason.textContent = f.explanation || '';
+
+      card.appendChild(pill);
+      card.appendChild(reason);
+
+      if (f.line_item) {
+        const q = document.createElement('div');
+        q.className = 'supp-clause-quote';
+        q.textContent = '“' + f.line_item + '”';
+        card.appendChild(q);
+      }
+
+      if (f.question_to_ask) {
+        const s = document.createElement('div');
+        s.className = 'supp-suggestion';
+        s.innerHTML = '<strong>Ask billing:</strong> ';
+        s.appendChild(document.createTextNode(f.question_to_ask));
+        card.appendChild(s);
+      }
+
+      cards.appendChild(card);
+    });
+
+    results.style.display = 'block';
+  }
+
+  function setUnlimited() {
+    try { localStorage.setItem('kibbo_medbill_unlimited', 'true'); } catch (e) {}
+    if (quota) { quota.textContent = '✓ Unlimited access active'; quota.classList.add('supp-unlimited'); }
+    hideLimit();
+  }
+  function updateQuota(remaining) {
+    if (remaining === 'unlimited') { setUnlimited(); return; }
+    if (typeof remaining !== 'number' || !quota) return;
+    if (remaining <= 0) {
+      quota.textContent = 'No free analyses left today · come back tomorrow';
+    } else {
+      quota.textContent = remaining + ' free ' + (remaining === 1 ? 'analysis' : 'analyses') +
+        ' left today · No account required';
+    }
+  }
+  function showLimit() { if (limitMsg) limitMsg.style.display = 'block'; }
+  function hideLimit() { if (limitMsg) limitMsg.style.display = 'none'; }
+
+  async function analyze() {
+    clearError();
+    hideLimit();
+
+    const usingPhoto = photoPanel.style.display === 'block';
+    const text = (billTextInput.value || '').trim();
+    const patientContext = (patientContextInput.value || '').trim();
+
+    if (usingPhoto && !currentImage) {
+      showError('Please upload a photo of the bill first.');
+      return;
+    }
+    if (!usingPhoto && !text) {
+      showError('Please paste or upload some bill text first.');
+      return;
+    }
+
+    setLoading(true, 'Analyzing...');
+    results.style.display = 'none';
+
+    const payload = { patient_context: patientContext };
+    if (usingPhoto) {
+      payload.image_base64 = currentImage.base64;
+      payload.image_media_type = currentImage.mediaType;
+    } else {
+      payload.text = text;
+    }
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+
+      // Daily free limit hit — show the friendly message, not an error.
+      if (res.status === 429 || (data && data.error === 'limit_reached')) {
+        showLimit();
+        updateQuota(0);
+        return;
+      }
+
+      if (!res.ok || !data) {
+        throw new Error((data && data.error) || ('Server responded with ' + res.status));
+      }
+
+      render(data);
+      updateQuota(data.remaining);
+    } catch (err) {
+      showError('Could not analyze the bill. ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  btn.addEventListener('click', analyze);
+
+  // ---- Access code (unlock unlimited) ----
+  function showAccessMsg(text, kind) {
+    if (!accessMsg) return;
+    accessMsg.textContent = text;
+    accessMsg.className = 'supp-access-msg ' + (kind || '');
+  }
+
+  async function activateCode() {
+    const code = (codeInput.value || '').trim().toUpperCase();
+    showAccessMsg('', '');
+    if (!code) { showAccessMsg('Please enter a code.', 'err'); return; }
+    activateBtn.disabled = true;
+    activateBtn.textContent = 'Activating...';
+    try {
+      const res = await fetch(WORKER_URL + '/activate-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: code })
+      });
+      let data = null;
+      try { data = await res.json(); } catch (e) {}
+      if (data && data.success) {
+        showAccessMsg('✓ Unlimited access activated. Enjoy!', 'ok');
+        setUnlimited();
+      } else {
+        showAccessMsg('Invalid code. Please check and try again.', 'err');
+      }
+    } catch (err) {
+      showAccessMsg('Could not activate the code. Please try again.', 'err');
+    } finally {
+      activateBtn.disabled = false;
+      activateBtn.textContent = 'Activate Code';
+    }
+  }
+
+  if (accessToggle && accessPanel) {
+    accessToggle.addEventListener('click', function () { accessPanel.classList.toggle('open'); });
+  }
+  if (activateBtn) activateBtn.addEventListener('click', activateCode);
+
+  // Restore unlimited state from a previous visit.
+  try {
+    if (localStorage.getItem('kibbo_medbill_unlimited') === 'true') setUnlimited();
+  } catch (e) {}
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>

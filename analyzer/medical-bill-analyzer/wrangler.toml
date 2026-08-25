@@ -1,0 +1,10 @@
+name = "medical-bill-analyzer"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for the per-IP daily rate limiter (3 free analyses / IP / day)
+# and the access codes (code:KIBBO-MEDBILL-...). Already created and bound
+# manually (medical-bill-analyzer-rate-limit):
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "5948d6552f494593b55ee1486e606909"
