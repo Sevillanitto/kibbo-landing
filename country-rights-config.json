@@ -195,7 +195,12 @@
         { "label": "Safe Drop without your OK: who's liable when it's stolen", "url": "/blog/au-safe-drop-unauthorized-theft-liability.html" },
         { "label": "Australia Post's $100 default cover, and why Extra Cover claims get rejected", "url": "/blog/au-australia-post-compensation-extra-cover.html" },
         { "label": "How to chargeback a non-delivery in Australia: what your bank needs", "url": "/blog/au-chargeback-non-delivery-evidence.html" },
-        { "label": "The Postal Industry Ombudsman: when it applies, and when it's the wrong body", "url": "/blog/au-postal-industry-ombudsman-jurisdiction.html" }
+        { "label": "The Postal Industry Ombudsman: when it applies, and when it's the wrong body", "url": "/blog/au-postal-industry-ombudsman-jurisdiction.html" },
+        { "label": "The medical bill gap: why Medicare and private insurance don't always cover the full cost", "url": "/blog/medicare-gap-payments-australia-explained.html" },
+        { "label": "You have the right to your health records: what Australian doctors can't refuse", "url": "/blog/australia-right-to-health-records-access.html" },
+        { "label": "Something went wrong with your healthcare in Australia: who do you complain to?", "url": "/blog/australia-healthcare-complaint-who-to-contact.html" },
+        { "label": "The private health insurance trap: what your policy doesn't automatically pay for", "url": "/blog/private-health-insurance-trap-australia.html" },
+        { "label": "Your My Health Record is not just a medical file: when your health data is mishandled", "url": "/blog/my-health-record-data-mishandled-who-to-tell.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
