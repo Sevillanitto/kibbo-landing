@@ -267,7 +267,12 @@
         { "label": "Mietminderung: Germany's automatic rent reduction for housing defects", "url": "/blog/mietminderung-rent-reduction-housing-defects.html" },
         { "label": "Which rental contract clauses are actually void in the EU", "url": "/blog/unfair-clauses-contract-nullity-eu-rentals.html" },
         { "label": "Booked an illegal tourist rental in the EU? Your refund rights", "url": "/blog/illegal-tourist-rentals-eu-penalties-refunds.html" },
-        { "label": "The DSA and real estate portals: reporting an illegal listing", "url": "/blog/dsa-real-estate-portals-idealista-fotocasa-seloger.html" }
+        { "label": "The DSA and real estate portals: reporting an illegal listing", "url": "/blog/dsa-real-estate-portals-idealista-fotocasa-seloger.html" },
+        { "label": "Getting medical treatment in another EU country: who pays the bill?", "url": "/blog/eu-cross-border-healthcare-who-pays.html" },
+        { "label": "The EU medical records problem: your health data is moving across borders", "url": "/blog/eu-health-data-space-medical-records-cross-border.html" },
+        { "label": "Before you pay for healthcare abroad: 10 things EU patients need to check", "url": "/blog/eu-healthcare-abroad-what-to-check-before-paying.html" },
+        { "label": "Your EU prescription abroad: can you get your medicine in another country?", "url": "/blog/eu-prescription-abroad-cross-border-pharmacy.html" },
+        { "label": "When healthcare goes wrong abroad: who do you complain to?", "url": "/blog/eu-healthcare-abroad-complaint-escalation.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
