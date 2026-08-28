@@ -434,6 +434,67 @@ const GENERATORS = {
     prompt_template:
       "Draft a polite, clear written request from {requester_full_name} to {provider_name} asking for information about {service_of_interest} before making a decision. Specifically request the following: {information_requested}. If a response deadline was requested, politely include it: {response_deadline_requested} — otherwise omit any deadline reference. Professional, straightforward tone — this is a pre-decision information request, not a complaint.",
   },
+
+  // ---- Financial & Banking (first generators for this block) ----
+  // gumroad_product_id is PLACEHOLDER_ for all 8 below: Carlos created the Gumroad
+  // products with the permalinks used on each frontend page (confirmed live), but
+  // the internal Gumroad product_id needed here for server-side license
+  // verification has not been supplied yet — do not guess it from the permalink.
+  // Real IDs land in a follow-up prompt; swap each PLACEHOLDER_ below then.
+  'bank-complaint-letter': {
+    title: 'Bank Complaint Letter Generator',
+    gumroad_product_id: 'PLACEHOLDER_BANK_COMPLAINT',
+    prompt_template:
+      "Write a formal complaint letter from {customer_name} to {bank_name} regarding {issue_category}, described as: {issue_description}. If prior_contact indicates a prior unresolved attempt was already made, reference that this issue was already raised without resolution: {prior_contact} — otherwise do not mention any prior contact at all. State the desired outcome clearly: {desired_outcome}. For jurisdiction={jurisdiction}, note that if unresolved within a reasonable period, the customer may escalate to the appropriate financial ombudsman/regulator — keep this generic ('the applicable financial complaints body in your area') unless independently verified; never invent a specific agency name. Account/reference: {account_reference}. Tone: professional, firm, factual.",
+  },
+  'unauthorized-transaction-dispute-letter': {
+    title: 'Unauthorized Transaction Dispute Letter Generator',
+    gumroad_product_id: 'PLACEHOLDER_UNAUTHORIZED_TXN_DISPUTE',
+    prompt_template:
+      "Write a formal unauthorized transaction dispute letter from {customer_name} to {bank_name}. State the customer does not recognize or authorize the transaction on {transaction_date} for {transaction_amount} at {merchant_name}, first noticed on {detected_date}. Reference the status of the card/access device: {card_or_account_status}. For jurisdiction={jurisdiction}, note the customer's liability protections generally depend on prompt reporting (e.g. Regulation E in the US) — keep specific liability figures and deadlines generic ('the liability limit that applies based on how quickly you report this') unless independently verified for the jurisdiction; never invent a specific dollar cap or day count. Request the transaction be investigated and reversed, and ask for written confirmation of the case reference number. Tone: firm, factual, urgent but professional.",
+  },
+  'card-transaction-billing-dispute': {
+    title: 'Card Transaction & Billing Dispute Generator',
+    // Consolidated generator — covers billing/service disputes (never received,
+    // not as described, duplicate charge, incorrect amount, cancelled-but-charged)
+    // via a 'dispute_reason' branch. Explicitly does NOT cover fraud/unauthorized
+    // transactions — that's 'unauthorized-transaction-dispute-letter' above.
+    // Never split this back into separate generators per dispute reason, and
+    // never let fraud language leak into this one's output.
+    gumroad_product_id: 'PLACEHOLDER_CARD_BILLING_DISPUTE',
+    prompt_template:
+      "Write a formal card transaction dispute letter from {customer_name} to {card_issuer}, matching the selected reason: {dispute_reason}. This is a billing/service dispute, NOT a fraud or unauthorized-transaction claim — never use fraud-related language ('unauthorized', 'I did not make this transaction', 'stolen card', 'someone else used my card') anywhere in the letter, regardless of dispute_reason. The disputed transaction was on {transaction_date} for {transaction_amount} from {merchant_name}. If merchant_contact_attempted indicates an attempt was already made, reference that attempt and its outcome: {merchant_contact_attempted} — otherwise state the merchant has not yet been contacted directly. Additional details: {details}. Note the dispute is being filed within the cardholder's standard filing window — keep the specific number of days generic ('within the filing window that applies to your card network') rather than inventing a figure, since this varies by network and dispute reason. Request a formal chargeback/dispute be opened and a written case reference provided. Tone: firm, factual, professional.",
+  },
+  'bank-fee-refund-request': {
+    title: 'Bank Fee Refund Request Generator',
+    gumroad_product_id: 'PLACEHOLDER_BANK_FEE_REFUND',
+    prompt_template:
+      "Write a formal fee refund request letter from {customer_name} to {bank_name} for a {fee_type} of {fee_amount} charged on {fee_date}. Present the customer's basis for disputing it: {dispute_basis}. For jurisdiction={jurisdiction}, reference the bank's general obligation to disclose fees and any changes clearly before charging them — keep this generic ('applicable fee transparency requirements in your area') unless independently verified; never invent a specific regulation name or number. Request a full refund and written confirmation. Tone: firm, factual, professional.",
+  },
+  'loan-credit-agreement-cancellation-withdrawal': {
+    title: 'Loan / Credit Agreement Cancellation & Withdrawal Generator',
+    gumroad_product_id: 'PLACEHOLDER_LOAN_CANCELLATION',
+    prompt_template:
+      "Write a formal notice of cancellation/withdrawal from {customer_name} to {lender_name}, for the credit agreement referenced {agreement_reference}, signed on {signing_date}. If cancellation_reason was provided, include it briefly to add clarity: {cancellation_reason} — otherwise state the cancellation is being exercised as a right and no reason is required. For jurisdiction={jurisdiction}, reference that many jurisdictions provide a statutory cooling-off/right-of-withdrawal period for certain consumer credit agreements — keep the specific number of days generic ('within the withdrawal period that applies to your agreement and location') rather than inventing a figure, and note the customer should confirm this period applies to their specific product before relying on it. Request written confirmation the agreement is cancelled and confirmation of any amount owed or refundable. Tone: formal, clear, professional.",
+  },
+  'financial-ombudsman-regulator-complaint': {
+    title: 'Financial Ombudsman / Regulator Complaint Generator',
+    gumroad_product_id: 'PLACEHOLDER_OMBUDSMAN_COMPLAINT',
+    prompt_template:
+      "Write a formal escalation complaint from {customer_name} to the appropriate financial ombudsman/regulator for jurisdiction={jurisdiction} (e.g. the CFPB in the US, the Financial Ombudsman Service in the UK, FIN-NET / the national competent authority in the EU, or AFCA in Australia — reference the general type of body appropriate for the jurisdiction given without asserting a specific one if the jurisdiction is ambiguous). Regarding {institution_name}, summarize the issue: {issue_summary}. State the institution was first contacted on {prior_complaint_date}, and describe its response so far: {institution_response}. State the desired outcome clearly: {desired_outcome}. Structure the letter with a clear chronology. Note this escalation should generally only be filed after the institution's own complaints process has been exhausted or a reasonable response period has passed — keep any specific deadline generic. Tone: formal, clear, factual — this is a regulatory submission, not an emotional appeal.",
+  },
+  'debt-collection-dispute-letter': {
+    title: 'Debt Collection Dispute Letter Generator',
+    gumroad_product_id: 'PLACEHOLDER_DEBT_COLLECTION_DISPUTE',
+    prompt_template:
+      "Write a formal debt validation/dispute letter from {customer_name} to {collector_name} regarding a claimed debt of {claimed_amount}, originally from {original_creditor} if known. State the basis for the dispute: {dispute_basis}, and the following details: {details}. For jurisdiction={jurisdiction}, reference the consumer's general right to request written validation of a disputed debt before the collector continues collection activity — keep any specific statutory deadline generic ('within the validation period that applies in your area') unless independently verified; never invent a specific day count. Explicitly request: written proof of the debt, verification the collector is legally entitled to collect it, and confirmation of the exact amount owed with an itemized breakdown. Tone: firm, factual, formal — this is a legal validation request, not an admission of the debt.",
+  },
+  'credit-report-error-dispute-letter': {
+    title: 'Credit Report Error Dispute Letter Generator',
+    gumroad_product_id: 'PLACEHOLDER_CREDIT_REPORT_DISPUTE',
+    prompt_template:
+      "Write a formal credit report dispute letter from {customer_name} to {credit_bureau} regarding {error_type} on the account/reference {account_reference} if provided. Describe the error and why it's incorrect: {details}. For jurisdiction={jurisdiction}, reference the consumer's general right to dispute inaccurate information on their credit file and have it investigated within a defined period — keep any specific deadline generic ('within the investigation period required in your area') unless independently verified; never invent a specific day count. Request correction or removal of the disputed item and a copy of the updated report once the investigation concludes. Tone: firm, factual, formal.",
+  },
 };
 
 const OUTPUT_RULES =
