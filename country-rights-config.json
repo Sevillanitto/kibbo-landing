@@ -68,7 +68,12 @@
         { "label": "Your right to access medical records in the UK", "url": "/blog/uk-right-to-access-medical-records.html" },
         { "label": "The private healthcare quote trap: when a £2,000 treatment becomes £3,500", "url": "/blog/private-healthcare-quote-trap-uk.html" },
         { "label": "What to check before paying for private dental treatment in the UK", "url": "/blog/private-dental-treatment-what-to-check-uk.html" },
-        { "label": "What happens to your medical information in private healthcare?", "url": "/blog/private-healthcare-data-sharing-nhs-england.html" }
+        { "label": "What happens to your medical information in private healthcare?", "url": "/blog/private-healthcare-data-sharing-nhs-england.html" },
+        { "label": "The UK subscription trap: free trial into a paid contract", "url": "/blog/uk-free-trial-auto-renewal.html" },
+        { "label": "Can a UK company make you give 3 months' notice to cancel?", "url": "/blog/uk-three-month-notice-subscription.html" },
+        { "label": "The subscription renewal nobody warned you about", "url": "/blog/uk-subscription-renewal-nobody-warned.html" },
+        { "label": "Your gym says you can't cancel: when a membership becomes a rights problem", "url": "/blog/uk-gym-membership-cannot-cancel.html" },
+        { "label": "You cancelled your broadband. Why is the provider still charging you?", "url": "/blog/uk-broadband-cancelled-still-charging.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -135,7 +140,12 @@
         { "label": "Find a verified, licensed attorney through your state bar", "url": "/blog/state-bar-lawyer-referral-us.html" },
         { "label": "Wage theft? Report unpaid overtime to the DOL (FLSA)", "url": "/blog/wage-theft-dol-complaint-us.html" },
         { "label": "Is your non-compete enforceable? It depends on your state", "url": "/blog/non-compete-agreements-by-state-us.html" },
-        { "label": "Your state probably has its own privacy law now (beyond CCPA)", "url": "/blog/state-privacy-laws-beyond-ccpa-us.html" }
+        { "label": "Your state probably has its own privacy law now (beyond CCPA)", "url": "/blog/state-privacy-laws-beyond-ccpa-us.html" },
+        { "label": "The free trial trap: how a $0 offer turns into a recurring bill", "url": "/blog/free-trial-trap-recurring-bill.html" },
+        { "label": "Click to subscribe, call to cancel: is that still allowed?", "url": "/blog/click-to-subscribe-call-to-cancel.html" },
+        { "label": "The subscription price increase you didn't notice", "url": "/blog/subscription-price-increase-renewal-price.html" },
+        { "label": "The $35 million subscription warning: the Shutterstock case", "url": "/blog/shutterstock-35-million-subscription-warning.html" },
+        { "label": "Cancelled a subscription but the charges keep coming?", "url": "/blog/subscription-cancelled-charges-keep-coming.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -210,7 +220,12 @@
         { "label": "You have the right to your health records: what Australian doctors can't refuse", "url": "/blog/australia-right-to-health-records-access.html" },
         { "label": "Something went wrong with your healthcare in Australia: who do you complain to?", "url": "/blog/australia-healthcare-complaint-who-to-contact.html" },
         { "label": "The private health insurance trap: what your policy doesn't automatically pay for", "url": "/blog/private-health-insurance-trap-australia.html" },
-        { "label": "Your My Health Record is not just a medical file: when your health data is mishandled", "url": "/blog/my-health-record-data-mishandled-who-to-tell.html" }
+        { "label": "Your My Health Record is not just a medical file: when your health data is mishandled", "url": "/blog/my-health-record-data-mishandled-who-to-tell.html" },
+        { "label": "The free trial that wasn't free: automatic renewals in Australia", "url": "/blog/au-free-trial-automatic-renewal-subscription-trap.html" },
+        { "label": "You cancelled the subscription. Charged anyway. What now?", "url": "/blog/au-cancelled-subscription-charged-anyway.html" },
+        { "label": "The price changed without you expecting it: what to check", "url": "/blog/au-subscription-price-change.html" },
+        { "label": "The gym membership trap: minimum terms and cancellation fees", "url": "/blog/au-gym-membership-trap.html" },
+        { "label": "When a service provider won't cancel: building a consumer complaint", "url": "/blog/au-service-provider-wont-cancel-consumer-complaint.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -292,7 +307,12 @@
         { "label": "The EU medical records problem: your health data is moving across borders", "url": "/blog/eu-health-data-space-medical-records-cross-border.html" },
         { "label": "Before you pay for healthcare abroad: 10 things EU patients need to check", "url": "/blog/eu-healthcare-abroad-what-to-check-before-paying.html" },
         { "label": "Your EU prescription abroad: can you get your medicine in another country?", "url": "/blog/eu-prescription-abroad-cross-border-pharmacy.html" },
-        { "label": "When healthcare goes wrong abroad: who do you complain to?", "url": "/blog/eu-healthcare-abroad-complaint-escalation.html" }
+        { "label": "When healthcare goes wrong abroad: who do you complain to?", "url": "/blog/eu-healthcare-abroad-complaint-escalation.html" },
+        { "label": "The EU subscription trap: free trial into a paid contract", "url": "/blog/eu-free-trial-paid-contract.html" },
+        { "label": "Can an EU company hide automatic renewal in the small print?", "url": "/blog/eu-automatic-renewal-small-print.html" },
+        { "label": "The digital subscription you can't cancel: what EU consumers should do", "url": "/blog/eu-digital-subscription-cannot-cancel.html" },
+        { "label": "Your streaming service raised the price: what to check", "url": "/blog/eu-streaming-subscription-price-increase.html" },
+        { "label": "The EU subscription cancellation file: everything to save", "url": "/blog/eu-subscription-cancellation-evidence-file.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
