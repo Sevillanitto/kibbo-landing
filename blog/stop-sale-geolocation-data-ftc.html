@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents — Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="How FTC enforcement against Kochava, Mobilewalla, Gravy Analytics and X-Mode changed the privacy landscape for sensitive location data, plus practical iOS and Android controls.">
+
+<meta name="author" content="Carlos Lopez">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents">
+<meta property="og:description" content="How FTC enforcement against Kochava, Mobilewalla, Gravy Analytics and X-Mode changed the privacy landscape for sensitive location data, plus practical iOS and Android controls.">
+<meta property="og:url" content="https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc">
+<meta property="og:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+<meta property="article:published_time" content="2026-08-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stop the Sale of Your Geolocation Data">
+<meta name="twitter:description" content="Recent FTC orders show that selling sensitive location data can trigger serious federal enforcement. What that means, and how to lock down app permissions.">
+<meta name="twitter:image" content="https://www.getkibbo.com/images/products/web-guardian.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.getkibbo.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents", "item": "https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc#article",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc" },
+      "headline": "How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents",
+      "description": "How FTC enforcement against Kochava, Mobilewalla, Gravy Analytics and X-Mode changed the privacy landscape for sensitive location data, plus practical iOS and Android controls.",
+      "image": "https://www.getkibbo.com/images/products/web-guardian.png",
+      "datePublished": "2026-08-25T00:00:00Z",
+      "dateModified": "2026-08-25T00:00:00Z",
+      "author": { "@type": "Person", "name": "Carlos Lopez", "url": "https://www.getkibbo.com/about" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/", "logo": { "@type": "ImageObject", "url": "https://www.getkibbo.com/favicon.png" } },
+      "inLanguage": "en",
+      "url": "https://www.getkibbo.com/blog/stop-sale-geolocation-data-ftc"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html" class="active">Blog</a>
+      <a href="/dark-patterns.html">Dark Patterns</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<article data-category="Privacy & Data">
+  <header class="post-head">
+    <div class="post-head-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog.html">← Blog</a></nav>
+      <time datetime="2026-08-25">August 25, 2026</time>
+      <div class="author-line">
+        <img src="../images/authors/carlos-lopez.jpg" alt="Carlos Lopez" class="author-avatar" />
+        <span>By <a href="https://www.getkibbo.com/about.html">Carlos Lopez</a></span>
+      </div>
+      <p class="post-kicker">Privacy & Data · United States</p>
+      <h1 class="post-h1">How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents</h1>
+    </div>
+  </header>
+
+  <div class="post-body">
+
+<p><em>Precise location can reveal visits to medical facilities, places of worship and other sensitive locations. Recent FTC orders show that selling sensitive location data can trigger serious federal enforcement — but the exact legal theory matters.</em></p>
+
+<h2>The FTC Has Taken Concrete Action Against Location-Data Brokers</h2>
+<p>Recent FTC matters include final orders involving <strong>X-Mode/Outlogic</strong>, <strong>Mobilewalla</strong>, and <strong>Gravy Analytics/Venntel</strong>. The FTC alleged that these companies sold or used sensitive location information in ways that lacked appropriate consent or safeguards.</p>
+<p>In May 2026, the FTC announced a proposed order resolving its Kochava litigation that would prohibit Kochava and its successor data-broker business from selling, licensing, transferring, sharing or disclosing sensitive location data unless the required affirmative express consent and other conditions are satisfied. The proposal arose from the FTC's 2022 lawsuit and should therefore be described as a proposed resolution, not as a final court judgment.</p>
+
+<h2>What "Sensitive Location Data" Can Reveal</h2>
+<p>FTC cases have identified location information capable of revealing visits to health facilities, places of worship, domestic-violence shelters, addiction-recovery facilities and other sensitive sites.</p>
+<p>The important legal point is not that every GPS coordinate is automatically unlawful to collect or sell. The FTC's enforcement has focused on particular collection, consent, disclosure, deception and unfairness allegations.</p>
+
+<h2>Turn Off Unnecessary App Location Access</h2>
+<p><strong>iPhone:</strong> go to <strong>Settings → Privacy &amp; Security → Location Services</strong>, select an app and change its access. Where available, turn off <strong>Precise Location</strong> if the app does not need exact location.</p>
+<p><strong>Android:</strong> go to <strong>Settings → Location → App location permissions</strong>, select the app and choose the least access that still works for the feature. Android also allows approximate rather than precise location for supported apps.</p>
+<p>These device settings control an app's access to device location; they do not by themselves erase location information already collected by a company or data broker.</p>
+
+<h2>What if the App Says Location Is Mandatory?</h2>
+<p>Do not assume that a refusal to provide location access automatically violates federal law. Whether a business can condition a service on location can depend on the service, its representations, state privacy laws, platform rules and the circumstances.</p>
+<p>If the app claims location is technically necessary but appears to use it for unrelated advertising or data-broker purposes, save the wording, privacy policy, permission screen and any error message you receive.</p>
+
+<h2>What to Save Before Making a Complaint</h2>
+<ul>
+<li>App permission screen.</li>
+<li>Privacy-policy language about location.</li>
+<li>Any statement about selling or sharing location data.</li>
+<li>Account or advertising settings showing your choices.</li>
+<li>Screenshots and dates.</li>
+<li>Any response from the developer or data broker.</li>
+</ul>
+
+<h2>Reporting Suspected Misconduct</h2>
+<p>If you believe a company is using or selling location data in a deceptive or unfair way, you can report the conduct to the FTC through ReportFraud.ftc.gov. California consumers may also have state privacy rights depending on the business and processing activity.</p>
+<p>A complaint is strongest when it identifies the specific representation, permission, data practice or transaction and includes documentary evidence.</p>
+
+<h2>What This Means Practically</h2>
+<ul>
+<li>Recent FTC orders make sensitive geolocation a serious enforcement issue.</li>
+<li>Turn off unnecessary precise/background access at the device level.</li>
+<li>Remember that stopping future access does not erase historical data.</li>
+<li>Do not claim that every location-based service must operate without location permission.</li>
+<li>Preserve the app's disclosures if you believe the practice is deceptive or unfair.</li>
+</ul>
+
+<h2>Related Kibbo Tools</h2>
+<ul>
+<li><a href="/checklists/app-permissions-checklist.html">App Permissions Checklist →</a></li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+<li>Federal Trade Commission — Kochava proposed order on sensitive location data, May 2026. <a href="https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-ban-kochava-subsidiary-selling-sensitive-location-data-settle-charges-they-sold-location-data" target="_blank" rel="noopener noreferrer">ftc.gov</a></li>
+<li>Federal Trade Commission — Mobilewalla final order, January 2025. <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-finalizes-order-banning-mobilewalla-selling-sensitive-location-data" target="_blank" rel="noopener noreferrer">ftc.gov</a></li>
+<li>Federal Trade Commission — Gravy Analytics/Venntel final order, January 2025. <a href="https://search.ftc.gov/news-events/news/press-releases/2025/01/ftc-finalizes-order-prohibiting-gravy-analytics-venntel-selling-sensitive-location-data" target="_blank" rel="noopener noreferrer">ftc.gov</a></li>
+<li>Federal Trade Commission — X-Mode/Outlogic final order, April 2024. <a href="https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-finalizes-order-x-mode-successor-outlogic-prohibiting-it-sharing-or-selling-sensitive-location" target="_blank" rel="noopener noreferrer">ftc.gov</a></li>
+<li>Apple Support — Control location information shared with apps. <a href="https://support.apple.com/es-es/guide/iphone/iph3dd5f9be/26/ios/26" target="_blank" rel="noopener noreferrer">support.apple.com</a></li>
+<li>Google Android Help — Manage app location permissions. <a href="https://support.google.com/android/answer/6179507?hl=en" target="_blank" rel="noopener noreferrer">support.google.com</a></li>
+</ul>
+
+  </div>
+</article>
+
+<div id="engagement-footer"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/engagement-footer.js"></script>
+</body>
+</html>

@@ -73,7 +73,12 @@
         { "label": "Can a UK company make you give 3 months' notice to cancel?", "url": "/blog/uk-three-month-notice-subscription.html" },
         { "label": "The subscription renewal nobody warned you about", "url": "/blog/uk-subscription-renewal-nobody-warned.html" },
         { "label": "Your gym says you can't cancel: when a membership becomes a rights problem", "url": "/blog/uk-gym-membership-cannot-cancel.html" },
-        { "label": "You cancelled your broadband. Why is the provider still charging you?", "url": "/blog/uk-broadband-cancelled-still-charging.html" }
+        { "label": "You cancelled your broadband. Why is the provider still charging you?", "url": "/blog/uk-broadband-cancelled-still-charging.html" },
+        { "label": "Subject Access Request (SAR) guide: get your personal data from a UK organisation", "url": "/blog/uk-subject-access-request-sar-guide.html" },
+        { "label": "Are they scanning your face? UK rights against retail facial recognition", "url": "/blog/uk-retail-facial-recognition-rights.html" },
+        { "label": "How to use PECR to report unwanted spam calls", "url": "/blog/uk-pecr-spam-calls-tps.html" },
+        { "label": "Data-breach compensation in the UK: when distress can support a claim", "url": "/blog/uk-data-breach-distress-compensation.html" },
+        { "label": "Illegal cookie walls? What UK websites must do for valid consent", "url": "/blog/uk-cookie-consent-audit-reject-all.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -145,7 +150,12 @@
         { "label": "Click to subscribe, call to cancel: is that still allowed?", "url": "/blog/click-to-subscribe-call-to-cancel.html" },
         { "label": "The subscription price increase you didn't notice", "url": "/blog/subscription-price-increase-renewal-price.html" },
         { "label": "The $35 million subscription warning: the Shutterstock case", "url": "/blog/shutterstock-35-million-subscription-warning.html" },
-        { "label": "Cancelled a subscription but the charges keep coming?", "url": "/blog/subscription-cancelled-charges-keep-coming.html" }
+        { "label": "Cancelled a subscription but the charges keep coming?", "url": "/blog/subscription-cancelled-charges-keep-coming.html" },
+        { "label": "Practical CCPA/CPRA guide: make a California business reveal, delete and limit your data", "url": "/blog/ccpa-cpra-rights-california.html" },
+        { "label": "How to stop the sale of your geolocation data (FTC enforcement precedents)", "url": "/blog/stop-sale-geolocation-data-ftc.html" },
+        { "label": "The FTC Health Breach Notification Rule, explained for health apps and wearables", "url": "/blog/health-breach-notification-rule-health-apps-wearables.html" },
+        { "label": "How to delete your info from people-search sites under California's Delete Act", "url": "/blog/california-delete-act-data-brokers.html" },
+        { "label": "Children's online privacy rights under COPPA", "url": "/blog/coppa-child-privacy-rights.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -225,7 +235,12 @@
         { "label": "You cancelled the subscription. Charged anyway. What now?", "url": "/blog/au-cancelled-subscription-charged-anyway.html" },
         { "label": "The price changed without you expecting it: what to check", "url": "/blog/au-subscription-price-change.html" },
         { "label": "The gym membership trap: minimum terms and cancellation fees", "url": "/blog/au-gym-membership-trap.html" },
-        { "label": "When a service provider won't cancel: building a consumer complaint", "url": "/blog/au-service-provider-wont-cancel-consumer-complaint.html" }
+        { "label": "When a service provider won't cancel: building a consumer complaint", "url": "/blog/au-service-provider-wont-cancel-consumer-complaint.html" },
+        { "label": "Australia's Privacy Reform: what consumers actually gain from the new rules", "url": "/blog/au-privacy-act-reform-small-business-rights.html" },
+        { "label": "Facial recognition and ID scanners in Australian venues: what the APPs require", "url": "/blog/au-facial-recognition-id-scanners-venues.html" },
+        { "label": "How the Notifiable Data Breaches scheme works after a cyberattack", "url": "/blog/au-notifiable-data-breaches-consumer-response.html" },
+        { "label": "Coles, Flybuys and Woolworths Rewards: challenging loyalty-data profiling", "url": "/blog/au-loyalty-program-data-profiling.html" },
+        { "label": "De-identification in Australia: deleting data vs. breaking the identity link", "url": "/blog/au-de-identification-personal-data.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -312,7 +327,12 @@
         { "label": "Can an EU company hide automatic renewal in the small print?", "url": "/blog/eu-automatic-renewal-small-print.html" },
         { "label": "The digital subscription you can't cancel: what EU consumers should do", "url": "/blog/eu-digital-subscription-cannot-cancel.html" },
         { "label": "Your streaming service raised the price: what to check", "url": "/blog/eu-streaming-subscription-price-increase.html" },
-        { "label": "The EU subscription cancellation file: everything to save", "url": "/blog/eu-subscription-cancellation-evidence-file.html" }
+        { "label": "The EU subscription cancellation file: everything to save", "url": "/blog/eu-subscription-cancellation-evidence-file.html" },
+        { "label": "Consent or pay cookies in the EU: what the EDPB says about fair choice", "url": "/blog/eu-consent-or-pay-cookies-edpb.html" },
+        { "label": "How to object to AI training with your personal data (GDPR & the AI Act)", "url": "/blog/eu-object-ai-training-personal-data-gdpr.html" },
+        { "label": "How to complain about a multinational tech company under the GDPR One-Stop-Shop", "url": "/blog/eu-gdpr-one-stop-shop-cross-border-complaint.html" },
+        { "label": "The EU right to be forgotten: requesting search-engine delisting", "url": "/blog/eu-right-to-be-forgotten-search-engines.html" },
+        { "label": "Where does your data go? Auditing an EU-U.S. Data Privacy Framework transfer", "url": "/blog/eu-us-data-privacy-framework-audit.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
