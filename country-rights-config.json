@@ -78,7 +78,12 @@
         { "label": "Are they scanning your face? UK rights against retail facial recognition", "url": "/blog/uk-retail-facial-recognition-rights.html" },
         { "label": "How to use PECR to report unwanted spam calls", "url": "/blog/uk-pecr-spam-calls-tps.html" },
         { "label": "Data-breach compensation in the UK: when distress can support a claim", "url": "/blog/uk-data-breach-distress-compensation.html" },
-        { "label": "Illegal cookie walls? What UK websites must do for valid consent", "url": "/blog/uk-cookie-consent-audit-reject-all.html" }
+        { "label": "Illegal cookie walls? What UK websites must do for valid consent", "url": "/blog/uk-cookie-consent-audit-reject-all.html" },
+        { "label": "Use your 30-day right to reject faulty goods (Consumer Rights Act 2015)", "url": "/blog/uk-30-day-right-reject-faulty-goods.html" },
+        { "label": "Know when the seller — not the courier — is responsible for a lost package", "url": "/blog/uk-lost-damaged-package-seller-responsibility.html" },
+        { "label": "Check who has to pay return shipping costs", "url": "/blog/uk-return-shipping-costs-faulty-online-purchase.html" },
+        { "label": "Know your rights after the first month (the six-month presumption)", "url": "/blog/uk-faulty-goods-six-months-six-years.html" },
+        { "label": "Know when Section 75 protects a Klarna or Clearpay purchase", "url": "/blog/uk-bnpl-klarna-clearpay-section-75.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -155,7 +160,12 @@
         { "label": "How to stop the sale of your geolocation data (FTC enforcement precedents)", "url": "/blog/stop-sale-geolocation-data-ftc.html" },
         { "label": "The FTC Health Breach Notification Rule, explained for health apps and wearables", "url": "/blog/health-breach-notification-rule-health-apps-wearables.html" },
         { "label": "How to delete your info from people-search sites under California's Delete Act", "url": "/blog/california-delete-act-data-brokers.html" },
-        { "label": "Children's online privacy rights under COPPA", "url": "/blog/coppa-child-privacy-rights.html" }
+        { "label": "Children's online privacy rights under COPPA", "url": "/blog/coppa-child-privacy-rights.html" },
+        { "label": "Spot fake discounts and inflated \"list prices\" (FTC rules)", "url": "/blog/us-fake-discounts-inflated-list-prices.html" },
+        { "label": "Know your refund rights for a delayed online order (FTC Mail Order Rule)", "url": "/blog/us-online-order-delays-mail-order-rule-refund.html" },
+        { "label": "Who's responsible when your package is stolen from the porch (UCC risk of loss)", "url": "/blog/us-porch-piracy-package-stolen-ucc.html" },
+        { "label": "Identify and report fake e-commerce reviews (FTC Fake Reviews Rule)", "url": "/blog/us-fake-reviews-ftc-rule-ecommerce.html" },
+        { "label": "Dispute an online purchase under the Fair Credit Billing Act", "url": "/blog/us-fcba-online-purchase-billing-error-dispute.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -240,7 +250,12 @@
         { "label": "Facial recognition and ID scanners in Australian venues: what the APPs require", "url": "/blog/au-facial-recognition-id-scanners-venues.html" },
         { "label": "How the Notifiable Data Breaches scheme works after a cyberattack", "url": "/blog/au-notifiable-data-breaches-consumer-response.html" },
         { "label": "Coles, Flybuys and Woolworths Rewards: challenging loyalty-data profiling", "url": "/blog/au-loyalty-program-data-profiling.html" },
-        { "label": "De-identification in Australia: deleting data vs. breaking the identity link", "url": "/blog/au-de-identification-personal-data.html" }
+        { "label": "De-identification in Australia: deleting data vs. breaking the identity link", "url": "/blog/au-de-identification-personal-data.html" },
+        { "label": "Know why \"No Refund\" policies can't override the ACL", "url": "/blog/au-no-refund-policy-consumer-guarantees.html" },
+        { "label": "Know your rights when dropshipping delivery times or origin were misleading", "url": "/blog/au-hidden-dropshipping-delivery-delays.html" },
+        { "label": "Get your money back on a cancelled or delayed pre-order", "url": "/blog/au-preorder-refund-cancelled-delayed.html" },
+        { "label": "Check for hidden currency or double-pricing charges", "url": "/blog/au-hidden-currency-double-pricing-ecommerce.html" },
+        { "label": "Know your rights when a product arrives damaged in transit", "url": "/blog/au-damaged-in-transit-consumer-guarantees.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -332,7 +347,12 @@
         { "label": "How to object to AI training with your personal data (GDPR & the AI Act)", "url": "/blog/eu-object-ai-training-personal-data-gdpr.html" },
         { "label": "How to complain about a multinational tech company under the GDPR One-Stop-Shop", "url": "/blog/eu-gdpr-one-stop-shop-cross-border-complaint.html" },
         { "label": "The EU right to be forgotten: requesting search-engine delisting", "url": "/blog/eu-right-to-be-forgotten-search-engines.html" },
-        { "label": "Where does your data go? Auditing an EU-U.S. Data Privacy Framework transfer", "url": "/blog/eu-us-data-privacy-framework-audit.html" }
+        { "label": "Where does your data go? Auditing an EU-U.S. Data Privacy Framework transfer", "url": "/blog/eu-us-data-privacy-framework-audit.html" },
+        { "label": "Spot a fake \"previous price\" discount (EU Omnibus rules)", "url": "/blog/eu-previous-price-rule-fake-discounts.html" },
+        { "label": "Use the EU's 2-year legal guarantee without paying for unnecessary reports", "url": "/blog/eu-two-year-legal-guarantee-burden-proof.html" },
+        { "label": "Understand what the Digital Services Act requires of EU marketplaces", "url": "/blog/eu-marketplace-dsa-trader-traceability-consumer-rights.html" },
+        { "label": "Untangle IOSS VAT and duplicate import charges", "url": "/blog/eu-ioss-double-vat-import-charges.html" },
+        { "label": "Use the EU's 14-day withdrawal right (and know the exceptions)", "url": "/blog/eu-14-day-withdrawal-right-returns-refunds.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
