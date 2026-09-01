@@ -538,6 +538,34 @@ const GENERATORS = {
     prompt_template:
       "Write a formal complaint to the correct data protection regulator regarding {company_name}. Determine the regulator strictly from the jurisdiction (and, only if jurisdiction is European Union, the EU country) provided, using these rules and no others: if jurisdiction is 'United States', address the complaint to the Federal Trade Commission (FTC); if jurisdiction is 'United Kingdom', address it to the Information Commissioner's Office (ICO); if jurisdiction is 'Australia', address it to the Office of the Australian Information Commissioner (OAIC); if jurisdiction is 'European Union' and eu_country is 'Spain', address it to the Agencia Espanola de Proteccion de Datos (AEPD); if eu_country is 'France', address it to the Commission Nationale de l'Informatique et des Libertes (CNIL); if eu_country is 'Germany', address it to the Bundesbeauftragte fur den Datenschutz (BfDI) and add a brief note that Germany also has state-level (Lander) data protection authorities and the consumer should confirm the correct one for their region; if eu_country is 'Other EU country' or 'Not applicable — I selected a different jurisdiction' while jurisdiction is still 'European Union', do not name any specific regulator — instead address the letter generically to 'your national data protection authority' and add a note advising the consumer to confirm the correct authority for their specific EU member state before sending. Ignore the eu_country field entirely if jurisdiction is not 'European Union'. If prior_contact_date is provided and not N/A, state the consumer first raised this issue directly with the company on {prior_contact_date}, referencing the following response if given: {prior_contact_outcome} — otherwise ignore these two fields entirely. Issue: {issue_summary}. The consumer is requesting: {desired_outcome}. Format this as an appropriate formal complaint to a data protection regulator, including a clear factual summary, relevant dates, and a specific request for investigation or action. Do not invent any facts, regulations, case numbers, or figures beyond what was provided. Do not name any regulator other than the single one determined by the rules above.",
   },
+  'refund-warranty-claim': {
+    title: 'Refund & Warranty Claim Generator',
+    // Real Gumroad product_id, confirmed by the user (product "lidrwt") — permalink
+    // "refund-warranty-claim-generator" verified live (HTTP 200, matching title) on
+    // carlosdevlop.gumroad.com before wiring.
+    gumroad_product_id: 'lidrwt',
+    prompt_template:
+      "Write a formal, courteous but firm letter from a consumer to {seller_name} regarding order {order_number} for {item_name}, purchased on {purchase_date}. This claim is described as: {claim_reason}. If this is described as the item not being as described, not working as expected, or not being satisfactory, state the following issue: {issue_description} — otherwise ignore this field entirely. If this is described as the item being defective, broken, or having stopped working, state the following defect: {defect_description}, referencing a stated warranty period if given: {warranty_period_stated} — otherwise ignore these two fields entirely. Only use the fields belonging to the selected claim type; never write 'N/A' or reference an inapplicable field in the letter itself. State the consumer's desired outcome clearly: {desired_outcome}. Request a response within a reasonable timeframe (10 business days), and note that if unresolved, the consumer will pursue a card issuer dispute or the relevant consumer protection avenue. Keep the tone professional, courteous but firm, not aggressive. Do not invent any facts, warranty terms, laws, or figures beyond what was provided.",
+  },
+  'chargeback-letter': {
+    title: 'Chargeback Letter Generator',
+    // Real Gumroad product_id, confirmed by the user (product "frpxfr") — permalink
+    // "chargeback-letter-generator" verified live (HTTP 200, matching title) on
+    // carlosdevlop.gumroad.com before wiring.
+    gumroad_product_id: 'frpxfr',
+    prompt_template:
+      "Write a formal chargeback request from a cardholder to {card_issuer_name} regarding a transaction of {transaction_amount} on {transaction_date} with {seller_name}. Order reference: {order_number} — ignore this entirely if not provided or marked N/A. Reason for dispute: {dispute_reason}. Whether the cardholder already attempted to resolve this directly with the seller: {prior_contact_attempted}. If yes, state what happened: {prior_contact_outcome} — otherwise ignore this field entirely. Request that the bank open a formal chargeback/dispute investigation for this transaction, referencing the card network dispute reason category that the facts given most plausibly fall under, without inventing a specific reason code number. Ask for confirmation of the dispute reference number and expected timeline. Keep the tone factual and direct. Do not invent any facts, dates, figures, or specific card network rules beyond what was provided.",
+  },
+  'marketplace-complaint': {
+    title: 'Marketplace Complaint Generator',
+    // PENDING — Carlos ran out of Gumroad product-creation quota for today (1 Sep 2026);
+    // this third product will be created tomorrow. Replace this placeholder with the real
+    // product_id once given, matching it via the same verify-before-wiring process used
+    // for the other two generators in this block (never assume ID order).
+    gumroad_product_id: 'PLACEHOLDER_marketplace-complaint',
+    prompt_template:
+      "Write a formal complaint regarding seller {seller_name}, order {order_number}, to the marketplace platform. The platform is: {platform}. If the platform is 'Another marketplace — I'll name it below', use the specific name given here instead: {platform_name} — otherwise ignore this field entirely. Issue: {issue_description}. Whether the buyer already contacted the seller directly: {seller_contacted}. If yes, state what response was received: {seller_response} — otherwise ignore this field entirely. The buyer is requesting: {desired_outcome}. Format this as an appropriate complaint to submit through that platform's buyer protection or resolution center, using a factual, evidence-oriented tone consistent with what that type of platform process expects. Do not invent specific platform policy names, deadlines, or guarantee terms beyond general, appropriately hedged language — instead, outside the letter itself, add a note reminding the buyer to confirm the exact policy details and deadline on the platform's own resolution center page before submitting. Do not invent any facts beyond what was provided.",
+  },
 };
 
 const OUTPUT_RULES =
