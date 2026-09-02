@@ -83,7 +83,12 @@
         { "label": "Know when the seller — not the courier — is responsible for a lost package", "url": "/blog/uk-lost-damaged-package-seller-responsibility.html" },
         { "label": "Check who has to pay return shipping costs", "url": "/blog/uk-return-shipping-costs-faulty-online-purchase.html" },
         { "label": "Know your rights after the first month (the six-month presumption)", "url": "/blog/uk-faulty-goods-six-months-six-years.html" },
-        { "label": "Know when Section 75 protects a Klarna or Clearpay purchase", "url": "/blog/uk-bnpl-klarna-clearpay-section-75.html" }
+        { "label": "Know when Section 75 protects a Klarna or Clearpay purchase", "url": "/blog/uk-bnpl-klarna-clearpay-section-75.html" },
+        { "label": "Challenge a shock catch-up energy bill (Ofgem's 12-month back-billing rule)", "url": "/blog/uk-ofgem-back-billing-12-month-rule.html" },
+        { "label": "Know your rights under Ofcom's ban on inflation-linked mid-contract price rises", "url": "/blog/uk-mid-contract-price-rises-cpi-ban.html" },
+        { "label": "Know what you're owed under Ofcom's automatic compensation scheme for broadband delays", "url": "/blog/uk-ofcom-automatic-compensation-scheme.html" },
+        { "label": "Know your protections against a forced prepayment meter installation", "url": "/blog/uk-forced-prepayment-meter-rights.html" },
+        { "label": "Escalate an unresolved energy or telecom complaint to the right ombudsman", "url": "/blog/uk-energy-telecom-ombudsman-escalation.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -165,7 +170,12 @@
         { "label": "Know your refund rights for a delayed online order (FTC Mail Order Rule)", "url": "/blog/us-online-order-delays-mail-order-rule-refund.html" },
         { "label": "Who's responsible when your package is stolen from the porch (UCC risk of loss)", "url": "/blog/us-porch-piracy-package-stolen-ucc.html" },
         { "label": "Identify and report fake e-commerce reviews (FTC Fake Reviews Rule)", "url": "/blog/us-fake-reviews-ftc-rule-ecommerce.html" },
-        { "label": "Dispute an online purchase under the Fair Credit Billing Act", "url": "/blog/us-fcba-online-purchase-billing-error-dispute.html" }
+        { "label": "Dispute an online purchase under the Fair Credit Billing Act", "url": "/blog/us-fcba-online-purchase-billing-error-dispute.html" },
+        { "label": "Spot and dispute cramming (unauthorized charges) on your phone bill", "url": "/blog/us-telco-cramming-hidden-charges.html" },
+        { "label": "Know your rights when your phone provider was changed without consent (slamming)", "url": "/blog/us-slamming-unauthorized-provider-change.html" },
+        { "label": "Cancel internet or TV without paying an unjustified early termination fee", "url": "/blog/us-broadband-early-termination-fee-cancel.html" },
+        { "label": "Know when you can demand a billing credit for an internet outage", "url": "/blog/us-broadband-outage-billing-credit.html" },
+        { "label": "Keep your phone number when switching carriers (and know what debt does — and doesn't — block)", "url": "/blog/us-number-portability-switch-carrier.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -255,7 +265,12 @@
         { "label": "Know your rights when dropshipping delivery times or origin were misleading", "url": "/blog/au-hidden-dropshipping-delivery-delays.html" },
         { "label": "Get your money back on a cancelled or delayed pre-order", "url": "/blog/au-preorder-refund-cancelled-delayed.html" },
         { "label": "Check for hidden currency or double-pricing charges", "url": "/blog/au-hidden-currency-double-pricing-ecommerce.html" },
-        { "label": "Know your rights when a product arrives damaged in transit", "url": "/blog/au-damaged-in-transit-consumer-guarantees.html" }
+        { "label": "Know your rights when a product arrives damaged in transit", "url": "/blog/au-damaged-in-transit-consumer-guarantees.html" },
+        { "label": "Know your right to data usage alerts before bill shock hits (TCP Code)", "url": "/blog/au-tcp-code-bill-shock-usage-alerts.html" },
+        { "label": "Know why your internet provider — not NBN Co — is responsible for fixing NBN problems", "url": "/blog/au-nbn-rsp-responsibility-acl.html" },
+        { "label": "Use your 10-day cooling-off right after a door-to-door energy sign-up", "url": "/blog/au-door-to-door-energy-cooling-off.html" },
+        { "label": "Complain to the Telecommunications Industry Ombudsman (TIO) the right way", "url": "/blog/au-tio-complaint-process.html" },
+        { "label": "Get a faulty energy or water meter tested and dispute the bill", "url": "/blog/au-meter-dispute-state-ombudsman.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -352,7 +367,12 @@
         { "label": "Use the EU's 2-year legal guarantee without paying for unnecessary reports", "url": "/blog/eu-two-year-legal-guarantee-burden-proof.html" },
         { "label": "Understand what the Digital Services Act requires of EU marketplaces", "url": "/blog/eu-marketplace-dsa-trader-traceability-consumer-rights.html" },
         { "label": "Untangle IOSS VAT and duplicate import charges", "url": "/blog/eu-ioss-double-vat-import-charges.html" },
-        { "label": "Use the EU's 14-day withdrawal right (and know the exceptions)", "url": "/blog/eu-14-day-withdrawal-right-returns-refunds.html" }
+        { "label": "Use the EU's 14-day withdrawal right (and know the exceptions)", "url": "/blog/eu-14-day-withdrawal-right-returns-refunds.html" },
+        { "label": "Challenge an inflated estimated energy bill under EU electricity market rules", "url": "/blog/eu-estimated-energy-bills-electricity-directive.html" },
+        { "label": "Know the EU's 24-month cap on telecom contract lock-in", "url": "/blog/eu-eecc-contract-duration-limits.html" },
+        { "label": "Know your rights when broadband speed falls short of what was advertised", "url": "/blog/eu-open-internet-regulation-speed-rights.html" },
+        { "label": "Know your rights before an energy disconnection in the EU", "url": "/blog/eu-energy-disconnection-vulnerable-customer-rights.html" },
+        { "label": "Cancel an insurance or maintenance add-on bundled with your energy bill", "url": "/blog/eu-ancillary-services-energy-bill-withdrawal-rights.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
