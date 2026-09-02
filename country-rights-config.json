@@ -88,7 +88,12 @@
         { "label": "Know your rights under Ofcom's ban on inflation-linked mid-contract price rises", "url": "/blog/uk-mid-contract-price-rises-cpi-ban.html" },
         { "label": "Know what you're owed under Ofcom's automatic compensation scheme for broadband delays", "url": "/blog/uk-ofcom-automatic-compensation-scheme.html" },
         { "label": "Know your protections against a forced prepayment meter installation", "url": "/blog/uk-forced-prepayment-meter-rights.html" },
-        { "label": "Escalate an unresolved energy or telecom complaint to the right ombudsman", "url": "/blog/uk-energy-telecom-ombudsman-escalation.html" }
+        { "label": "Escalate an unresolved energy or telecom complaint to the right ombudsman", "url": "/blog/uk-energy-telecom-ombudsman-escalation.html" },
+        { "label": "Check whether a US supplement (like melatonin) is actually an unlicensed medicine in the UK", "url": "/blog/uk-mhra-borderline-products-melatonin.html" },
+        { "label": "Check the FSA's public list before buying CBD as a novel food in the UK", "url": "/blog/uk-cbd-fsa-novel-foods-public-list.html" },
+        { "label": "Know what the ASA's CAP Code actually bans in supplement and influencer advertising", "url": "/blog/uk-asa-cap-code-supplement-advertising.html" },
+        { "label": "Know which supplement ingredients get parcels seized by UK customs", "url": "/blog/uk-customs-seized-supplement-ingredients.html" },
+        { "label": "Spot protein spiking in whey powder and know your UK consumer rights", "url": "/blog/uk-protein-spiking-whey-consumer-rights.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -175,7 +180,12 @@
         { "label": "Know your rights when your phone provider was changed without consent (slamming)", "url": "/blog/us-slamming-unauthorized-provider-change.html" },
         { "label": "Cancel internet or TV without paying an unjustified early termination fee", "url": "/blog/us-broadband-early-termination-fee-cancel.html" },
         { "label": "Know when you can demand a billing credit for an internet outage", "url": "/blog/us-broadband-outage-billing-credit.html" },
-        { "label": "Keep your phone number when switching carriers (and know what debt does — and doesn't — block)", "url": "/blog/us-number-portability-switch-carrier.html" }
+        { "label": "Keep your phone number when switching carriers (and know what debt does — and doesn't — block)", "url": "/blog/us-number-portability-switch-carrier.html" },
+        { "label": "Know the difference between a legal supplement claim and an illegal disease claim (DSHEA)", "url": "/blog/us-dshea-structure-function-disease-claims.html" },
+        { "label": "Understand what a Proposition 65 heavy-metal warning on your protein powder actually means", "url": "/blog/us-prop-65-heavy-metals-protein-powder.html" },
+        { "label": "Spot DMAA, DMHA and other banned stimulants hiding in pre-workout supplements", "url": "/blog/us-dmaa-dmha-banned-preworkout-stimulants.html" },
+        { "label": "Know what USP, NSF Certified for Sport, and Informed Sport certifications actually verify", "url": "/blog/us-usp-nsf-informed-sport-certifications-explained.html" },
+        { "label": "Know what \"clinically proven\" is actually supposed to mean under FTC guidance", "url": "/blog/us-ftc-clinically-proven-standard.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -270,7 +280,12 @@
         { "label": "Know why your internet provider — not NBN Co — is responsible for fixing NBN problems", "url": "/blog/au-nbn-rsp-responsibility-acl.html" },
         { "label": "Use your 10-day cooling-off right after a door-to-door energy sign-up", "url": "/blog/au-door-to-door-energy-cooling-off.html" },
         { "label": "Complain to the Telecommunications Industry Ombudsman (TIO) the right way", "url": "/blog/au-tio-complaint-process.html" },
-        { "label": "Get a faulty energy or water meter tested and dispute the bill", "url": "/blog/au-meter-dispute-state-ombudsman.html" }
+        { "label": "Get a faulty energy or water meter tested and dispute the bill", "url": "/blog/au-meter-dispute-state-ombudsman.html" },
+        { "label": "Know what the AUST L and AUST R codes on your supplement label actually confirm", "url": "/blog/au-tga-artg-aust-l-r-codes.html" },
+        { "label": "Reduce accidental doping risk from contaminated supplements with HASTA and Informed Sport certification", "url": "/blog/au-accidental-doping-hasta-informed-sport.html" },
+        { "label": "Know which pre-workout stimulants are banned under Australia's Poisons Standard", "url": "/blog/au-poisons-standard-preworkout-stimulants.html" },
+        { "label": "Know why \"TGA approved\" is never a legitimate supplement marketing claim in Australia", "url": "/blog/au-tga-approved-claim-myth.html" },
+        { "label": "Know your ACL refund rights for a supplement that didn't work or caused a reaction", "url": "/blog/au-acl-supplement-refund-rights.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -372,7 +387,12 @@
         { "label": "Know the EU's 24-month cap on telecom contract lock-in", "url": "/blog/eu-eecc-contract-duration-limits.html" },
         { "label": "Know your rights when broadband speed falls short of what was advertised", "url": "/blog/eu-open-internet-regulation-speed-rights.html" },
         { "label": "Know your rights before an energy disconnection in the EU", "url": "/blog/eu-energy-disconnection-vulnerable-customer-rights.html" },
-        { "label": "Cancel an insurance or maintenance add-on bundled with your energy bill", "url": "/blog/eu-ancillary-services-energy-bill-withdrawal-rights.html" }
+        { "label": "Cancel an insurance or maintenance add-on bundled with your energy bill", "url": "/blog/eu-ancillary-services-energy-bill-withdrawal-rights.html" },
+        { "label": "Check whether a supplement's health claim is actually authorised under EU Regulation 1924/2006", "url": "/blog/eu-efsa-health-claims-regulation-1924-2006.html" },
+        { "label": "Check the EU's RASFF portal for ethylene oxide contamination in your supplements", "url": "/blog/eu-rasff-ethylene-oxide-supplement-contamination.html" },
+        { "label": "Know why the EU banned titanium dioxide (E171) in supplement capsules", "url": "/blog/eu-titanium-dioxide-e171-supplement-ban.html" },
+        { "label": "Know why vitamin and mineral dose limits still differ across EU member states", "url": "/blog/eu-vitamin-mineral-dose-limits-member-states.html" },
+        { "label": "Check whether your lion's mane or reishi supplement is legal under EU novel food rules", "url": "/blog/eu-novel-food-catalogue-adaptogenic-mushrooms.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
