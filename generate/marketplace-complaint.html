@@ -163,12 +163,9 @@ window.KIBBO_GENERATOR = {
   id: 'marketplace-complaint',
   title: 'Marketplace Complaint Generator',
   price: '$4.60',
-  // PLACEHOLDER — no Gumroad product created yet (pending tomorrow, per Carlos).
-  // The free preview flow works fine without this; only the paid "Unlock" button
-  // will 404 until this is replaced with the real permalink. Do not guess a slug —
-  // wire the real one once the product exists, verified live the same way the other
-  // two generators in this block were (never assume ID/permalink from name alone).
-  gumroad_permalink: 'PLACEHOLDER_marketplace-complaint',
+  // Real permalink, verified live (HTTP 200, matching title) on
+  // carlosdevlop.gumroad.com before wiring.
+  gumroad_permalink: 'marketplace-complaint-generator',
   questions: [
     { id: 'seller_name', label: 'Seller/store name on the marketplace', type: 'text' },
     { id: 'order_number', label: 'Order number', type: 'text' },

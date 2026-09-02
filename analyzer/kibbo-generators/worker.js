@@ -558,11 +558,10 @@ const GENERATORS = {
   },
   'marketplace-complaint': {
     title: 'Marketplace Complaint Generator',
-    // PENDING — Carlos ran out of Gumroad product-creation quota for today (1 Sep 2026);
-    // this third product will be created tomorrow. Replace this placeholder with the real
-    // product_id once given, matching it via the same verify-before-wiring process used
-    // for the other two generators in this block (never assume ID order).
-    gumroad_product_id: 'PLACEHOLDER_marketplace-complaint',
+    // Real Gumroad product_id, given directly by Carlos — permalink
+    // "marketplace-complaint-generator" verified live (HTTP 200, matching title)
+    // on carlosdevlop.gumroad.com before wiring.
+    gumroad_product_id: 'ppxiud',
     prompt_template:
       "Write a formal complaint regarding seller {seller_name}, order {order_number}, to the marketplace platform. The platform is: {platform}. If the platform is 'Another marketplace — I'll name it below', use the specific name given here instead: {platform_name} — otherwise ignore this field entirely. Issue: {issue_description}. Whether the buyer already contacted the seller directly: {seller_contacted}. If yes, state what response was received: {seller_response} — otherwise ignore this field entirely. The buyer is requesting: {desired_outcome}. Format this as an appropriate complaint to submit through that platform's buyer protection or resolution center, using a factual, evidence-oriented tone consistent with what that type of platform process expects. Do not invent specific platform policy names, deadlines, or guarantee terms beyond general, appropriately hedged language — instead, outside the letter itself, add a note reminding the buyer to confirm the exact policy details and deadline on the platform's own resolution center page before submitting. Do not invent any facts beyond what was provided.",
   },
