@@ -60,9 +60,31 @@
   }
 
   // ---- 1. Render the form from config.questions ----
+  // Two config-only additions on top of the original flat form, both optional
+  // and backward-compatible with every existing generator's questions[]:
+  //   - { type: 'note', html: '...' } — a static info callout, not an input,
+  //     skipped entirely by collectAnswers(). Used e.g. to point to a related
+  //     evidence-pack template right above a branch selector.
+  //   - { showWhen: { field: 'other_question_id', equals: 'Some Option' } } —
+  //     hides the field unless the referenced question currently has that
+  //     value. Hidden fields are never required; if left blank they're sent
+  //     to the Worker as 'N/A' (matching this site's established convention
+  //     for conditionally-irrelevant fields) rather than blocking submission.
   function renderForm() {
     cfg.questions.forEach(function (q) {
+      if (q.type === 'note') {
+        var note = el('div', 'gen-note');
+        note.innerHTML = q.html || q.text || '';
+        form.appendChild(note);
+        return;
+      }
+
       var field = el('div', 'gen-field');
+      if (q.showWhen) {
+        field.dataset.showWhenField = q.showWhen.field;
+        field.dataset.showWhenEquals = q.showWhen.equals;
+        field.classList.add('gen-field-branch');
+      }
       var label = el('label', null, q.label);
       label.setAttribute('for', 'q_' + q.id);
       field.appendChild(label);
@@ -94,15 +116,45 @@
       field.appendChild(input);
       form.appendChild(field);
     });
+    updateBranchVisibility();
+    form.addEventListener('change', updateBranchVisibility);
+  }
+
+  // Show/hide any field with showWhen based on the current value of the
+  // question it depends on. Runs once after render, then on every form change.
+  function updateBranchVisibility() {
+    var branchFields = form.querySelectorAll('.gen-field-branch');
+    // Two passes: a showWhen can itself reference a field that's also
+    // conditionally hidden (e.g. an "Other — describe" field nested under a
+    // branch-only select), so a field's real visibility depends on its
+    // reference field's resolved visibility, not just its raw value.
+    for (var pass = 0; pass < 2; pass++) {
+      for (var i = 0; i < branchFields.length; i++) {
+        var field = branchFields[i];
+        var refInput = document.getElementById('q_' + field.dataset.showWhenField);
+        var refField = refInput && refInput.closest('.gen-field');
+        var refVisible = !refField || refField.style.display !== 'none';
+        var match = !!refInput && refVisible && refInput.value === field.dataset.showWhenEquals;
+        field.style.display = match ? '' : 'none';
+      }
+    }
   }
 
   function collectAnswers() {
     var answers = {};
     var missing = false;
     cfg.questions.forEach(function (q) {
-      var v = (document.getElementById('q_' + q.id).value || '').trim();
-      if (!v) missing = true;
-      answers[q.id] = v;
+      if (q.type === 'note') return;
+      var input = document.getElementById('q_' + q.id);
+      var field = input.closest('.gen-field');
+      var visible = !field || field.style.display !== 'none';
+      var v = (input.value || '').trim();
+      if (visible) {
+        if (!v) missing = true;
+        answers[q.id] = v;
+      } else {
+        answers[q.id] = v || 'N/A';
+      }
     });
     return missing ? null : answers;
   }

@@ -565,10 +565,33 @@ const GENERATORS = {
     prompt_template:
       "Write a formal complaint regarding seller {seller_name}, order {order_number}, to the marketplace platform. The platform is: {platform}. If the platform is 'Another marketplace — I'll name it below', use the specific name given here instead: {platform_name} — otherwise ignore this field entirely. Issue: {issue_description}. Whether the buyer already contacted the seller directly: {seller_contacted}. If yes, state what response was received: {seller_response} — otherwise ignore this field entirely. The buyer is requesting: {desired_outcome}. Format this as an appropriate complaint to submit through that platform's buyer protection or resolution center, using a factual, evidence-oriented tone consistent with what that type of platform process expects. Do not invent specific platform policy names, deadlines, or guarantee terms beyond general, appropriately hedged language — instead, outside the letter itself, add a note reminding the buyer to confirm the exact policy details and deadline on the platform's own resolution center page before submitting. Do not invent any facts beyond what was provided.",
   },
+  'scope-of-work-generator': {
+    title: 'Scope of Work Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_scope-of-work',
+    output_rules: DOCUMENT_OUTPUT_RULES,
+    prompt_template:
+      "Draft a professional, formal Scope of Work document — not a letter — intended for attachment to a renovation/repair contract between {homeowner_name} and {contractor_name} for the property at {project_address}. Structure it as a numbered document with these sections: 1) Project Overview (project type {project_type} — if 'Other', use {project_type_other} — start date {start_date}, target completion {completion_date}), 2) Detailed Scope of Work (the specific tasks from {work_description}, in the order provided), 3) Materials & Supplies ({materials} and who supplies them: {materials_responsibility} — if 'Mixed — specify which items below', use this breakdown: {materials_responsibility_detail}), 4) Permits & Compliance ({permit_status} — if 'Yes', responsibility sits with {permit_responsibility}), 5) Cleanup & Site Responsibility ({cleanup_responsibility}), 6) Exclusions (explicitly list {exclusions} as NOT included in this scope), 7) Price & Payment Terms ({price_and_payment}), 8) Signature blocks for both homeowner and contractor with date lines. Use factual, contract-appropriate language throughout — this is a legal-adjacent document meant to prevent scope disputes, not a narrative description. Do not invent contract clauses or legal terms beyond what the user provided.",
+  },
+  'contractor-dispute-demand-letter-generator': {
+    title: 'Contractor Dispute & Demand Letter Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_contractor-dispute-letter',
+    prompt_template:
+      "Write a formal demand letter addressed to {contractor_name} regarding the contract dated {contract_date} for work at {property_address}, with a total contract price of {contract_price}. The specific issue is: {issue_type}. If issue_type is 'Incomplete work', state that approximately {incomplete_pct_complete}% of the contracted work is complete, describe the work not yet done: {incomplete_work_remaining}, and note the contractor stopped or left the site on {incomplete_stop_date} — otherwise ignore these three fields entirely. If issue_type is 'Defective work', describe the defect: {defect_description}, located at {defect_location}, first noticed on {defect_noticed_date}, with an estimated repair cost of {defect_repair_cost} if known — otherwise ignore these four fields entirely. If issue_type is 'Unauthorized overcharge', state the disputed amount of {overcharge_amount} and the reason it is unauthorized: {overcharge_reason} (if 'Other', use {overcharge_reason_other} instead) — otherwise ignore these fields entirely. If issue_type is 'Project delay', state the original agreed completion date of {delay_original_date}, the current status of the work: {delay_current_status}, and the reason given by the contractor for the delay, if any: {delay_reason_given} — otherwise ignore these three fields entirely. Clearly state the desired outcome: {desired_outcome} (if 'Partial refund — specify amount', the amount requested is {desired_outcome_amount}; if 'Completion by a specific date — specify date', the requested date is {desired_outcome_date}). Reference that supporting evidence (photos, communications log) is attached separately. Keep tone firm, factual, and professional — this is a demand letter, not an emotional complaint. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent legal citations or threaten specific legal action beyond stating that further steps will be considered if unresolved.",
+  },
 };
 
 const OUTPUT_RULES =
   '\n\nOutput ONLY the finished letter itself, ready to send — start with a date and address block and end with a signature line. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide (e.g. [Your name], [Your address]).';
+
+// Override for generators producing a formatted document rather than a letter
+// (e.g. a Scope of Work attached to a contract) — no date/address block at the
+// top, numbered sections instead, signature blocks at the end for both parties.
+const DOCUMENT_OUTPUT_RULES =
+  '\n\nOutput ONLY the finished document itself, ready to attach to a contract or print — a numbered document with clear section headers, not a letter. Do not start with a date or address block. End with labeled signature blocks (with date lines) for both parties named in the instructions above. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide.';
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -604,14 +627,17 @@ function sleep(ms) {
 
 // Fill {placeholders} from answers, then append every answer verbatim so values
 // referenced only in prose (e.g. country) are always available to the model.
-function buildPrompt(template, answers) {
+// outputRules defaults to the standard letter framing (OUTPUT_RULES below);
+// a generator can override it via its own `output_rules` field for a
+// structurally different deliverable (e.g. a numbered document, not a letter).
+function buildPrompt(template, answers, outputRules) {
   let filled = template.replace(/\{(\w+)\}/g, (m, key) =>
     answers[key] != null && answers[key] !== '' ? String(answers[key]) : m
   );
   const details = Object.keys(answers)
     .map((k) => `- ${k}: ${answers[k]}`)
     .join('\n');
-  return `${filled}\n\nAll details provided by the user:\n${details}${OUTPUT_RULES}`;
+  return `${filled}\n\nAll details provided by the user:\n${details}${outputRules || OUTPUT_RULES}`;
 }
 
 export default {
@@ -676,7 +702,7 @@ async function handlePreview(request, env) {
     }
   }
 
-  const prompt = buildPrompt(gen.prompt_template, answers);
+  const prompt = buildPrompt(gen.prompt_template, answers, gen.output_rules);
 
   let letter;
   try {
@@ -794,7 +820,7 @@ async function handleUnlock(request, env) {
     }
     if (Object.keys(answers).length && env.ANTHROPIC_API_KEY) {
       try {
-        letter = await generateLetter(env.ANTHROPIC_API_KEY, buildPrompt(gen.prompt_template, answers));
+        letter = await generateLetter(env.ANTHROPIC_API_KEY, buildPrompt(gen.prompt_template, answers, gen.output_rules));
       } catch (err) {
         letter = null;
       }

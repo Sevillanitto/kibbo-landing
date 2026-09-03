@@ -558,6 +558,8 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 }
 .gen-field textarea { resize: vertical; min-height: 96px; line-height: 1.5; }
 .gen-field input:focus, .gen-field select:focus, .gen-field textarea:focus { border-color: var(--supp-accent); }
+.gen-note { background: var(--bg-card); border: 1px solid var(--supp-line); border-left: 3px solid var(--supp-accent); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 4px; font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--supp-ink); }
+.gen-note a { color: var(--supp-accent); font-weight: 600; }
 .gen-result { display: none; margin-top: 56px; }
 .gen-letter {
   white-space: pre-wrap; font-family: var(--font-sans); font-size: 15px; line-height: 1.75;
