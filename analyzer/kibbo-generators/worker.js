@@ -25,6 +25,15 @@ const DAILY_PREVIEW_LIMIT = 3; // shared across ALL generators, per IP per day
 const MAX_TOKENS = 1200; // one-page letter — Haiku, template filling not reasoning
 const KV_TTL = 86400; // 24h for previews and redeemed keys
 
+// Override for generators producing a formatted document rather than a letter
+// (e.g. a Scope of Work attached to a contract) — no date/address block at the
+// top, numbered sections instead, signature blocks at the end for both parties.
+// Declared here, before GENERATORS, since several entries reference it directly
+// in their object literal (referencing a const declared later in the module
+// throws a ReferenceError at load time — this ordering avoids that).
+const DOCUMENT_OUTPUT_RULES =
+  '\n\nOutput ONLY the finished document itself, ready to attach to a contract or print — a numbered document with clear section headers, not a letter. Do not start with a date or address block. End with labeled signature blocks (with date lines) for both parties named in the instructions above. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide.';
+
 // ---- Config-driven generator definitions ----
 // Only the server-side concerns live here (prompt + product id). The frontend
 // carries the question set + Gumroad permalink in its own page config. The
@@ -606,16 +615,53 @@ const GENERATORS = {
     prompt_template:
       "Write a formal information request addressed to {agency_name}, referencing case/reference number {reference_number} if provided. Clearly and specifically state what is being requested: {information_requested}. If a reason is provided ({reason} — if 'Yes — free text', use {reason_detail}), include it briefly, noting that a reason is being offered voluntarily and is not a precondition for the request — otherwise omit any reason. If a legal basis is specified ({legal_basis} — if 'Other', use {legal_basis_other}), reference it appropriately — for example, framing the request explicitly as a Freedom of Information request or a data/privacy access request if selected, without inventing specific statutory citations the user didn't provide. State the preferred format/delivery method ({delivery_preference}). Keep tone neutral and straightforward — this is a routine administrative request, not a complaint. Close with a request for a specific response timeframe and contact details for reply. Sender: {full_name}.",
   },
+  'contract-demand-letter-generator': {
+    title: 'Contract & Demand Letter Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_contract-demand-letter',
+    prompt_template:
+      "Write a formal demand/dispute letter from {your_name} to {other_party_name} regarding the contract {contract_reference}. Based on the branch selected ({issue_type}): for 'Breach of contract', describe the specific obligation breached ({breach_obligation}), the date the breach occurred or was discovered ({breach_date}), and the evidence available ({breach_evidence}) — otherwise ignore these fields entirely. For 'Payment owed to you', state the amount owed ({payment_amount}), what the payment is for ({payment_for}), the original due date ({payment_due_date}), and note any partial payment already received ({payment_partial_received} — if 'Yes — specify amount', the amount is {payment_partial_amount}) — otherwise ignore these fields entirely. For 'Refund owed to you', state the amount paid originally ({refund_amount}) for {refund_item}, why a refund is owed ({refund_reason}), and the date of original payment ({refund_payment_date}) — otherwise ignore these fields entirely. For 'General dispute over obligations or interpretation', state the specific clause or obligation in dispute ({dispute_clause}), the sender's interpretation versus the other party's ({dispute_interpretation}), and the impact of the disagreement ({dispute_impact}) — otherwise ignore these fields entirely. For 'Final notice before small claims', note whether a prior demand was sent ({finalnotice_prior_demand} — if 'Yes — specify date', the date was {finalnotice_prior_demand_date}), any response received ({finalnotice_response_received}), the amount being claimed ({finalnotice_amount_claimed}), and the court/jurisdiction intended if known ({finalnotice_jurisdiction}) — otherwise ignore these fields entirely, and state explicitly that this is a final opportunity to resolve the matter before a small claims filing is made, without naming a specific court procedure beyond what the user provided. Reference that supporting evidence is attached separately where applicable. State the desired outcome clearly: {desired_outcome} (if 'Partial payment — specify amount', the amount is {desired_outcome_amount}; if 'Other — free text', use {desired_outcome_other}). Keep tone firm, factual, and professional — escalate firmness only for the final-notice branch. Close with a reasonable response deadline (14 days, or 7 days for the final-notice branch) and contact details for reply. Do not invent legal citations, statutes, or threaten specific legal action beyond stating that further steps will be considered.",
+  },
+  'contract-termination-renewal-notice-generator': {
+    title: 'Contract Termination & Renewal Notice Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_termination-renewal-notice',
+    prompt_template:
+      "Write a formal notice from {your_name} to {other_party_name} regarding the contract {contract_reference}, effective {effective_date}. Based on the branch selected ({notice_type}): for 'Terminating the contract now', state the reason ({termination_reason} — if 'Other — free text', use {termination_reason_other}), reference the relevant termination clause if provided ({termination_clause}), and note any outstanding obligations to settle ({outstanding_obligations}) — otherwise ignore these fields entirely. For 'Declining to renew at term end', confirm the contract will end on {contract_end_date} per the required notice period ({required_notice_period}), including the optional reason ({nonrenewal_reason}) only if provided — otherwise ignore these fields entirely. For 'Confirming renewal', confirm the new term ({new_term_length}) and any changes to terms being confirmed alongside the renewal ({renewal_changes}) — otherwise ignore these fields entirely. Keep tone clear, factual, and unambiguous about the exact effective date — this is the most common source of disputes after a termination or non-renewal notice. Close with contact details for any questions. Do not invent legal citations or contract terms beyond what the user provided.",
+  },
+  'contract-amendment-counteroffer-generator': {
+    title: 'Contract Amendment & Counteroffer Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_amendment-counteroffer',
+    output_rules: DOCUMENT_OUTPUT_RULES,
+    prompt_template:
+      "Draft a formal contract amendment or counteroffer document — not a conversational letter — from {your_name} to {other_party_name} regarding the contract {contract_reference}, addressing the clause(s): {clause_reference}. Based on the branch selected ({amendment_type}): for 'Propose a change — counteroffer', present the current wording ({current_wording}), the proposed new wording ({proposed_wording}), and the reason for the change ({change_reason}), and request a response by {response_deadline} if provided — otherwise ignore these fields entirely. For 'Document a change already agreed', state that the original wording ({original_wording}) is replaced with the new agreed wording ({new_agreed_wording}) as of {agreement_date}, and explicitly confirm that all other terms and conditions of the original contract remain unchanged and in full force — otherwise ignore these fields entirely. Keep tone professional and precise — this is a document meant to prevent future ambiguity about what was actually agreed, not a persuasive letter. Include signature lines for both parties with date lines, especially in the amendment-documentation branch.",
+  },
+  'terms-conditions-generator': {
+    title: 'Terms & Conditions Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_terms-conditions',
+    output_rules: DOCUMENT_OUTPUT_RULES,
+    prompt_template:
+      "Draft a basic Terms & Conditions document for {business_name}, a {offering_type} business (if 'Other — free text', use {offering_type_other}) operating under the laws of {jurisdiction}. Include standard numbered sections: acceptance of terms, description of service, account terms if applicable ({has_accounts}), payment terms if applicable ({processes_payments}), the provided return/refund policy summary ({refund_policy}), user-generated content terms if applicable ({has_ugc} — if 'Yes', describe: {ugc_description}), age restrictions ({age_restriction}), limitation of liability, termination of access, governing law, changes to terms, and contact information ({contact_email}). Use clear, plain-language legal drafting appropriate for a basic T&C document. Do not invent specific statutory citations. Include a prominent disclaimer that this is a starting template and should be reviewed by a qualified attorney before publication, especially for businesses handling sensitive data, regulated products, or operating across multiple jurisdictions.",
+  },
+  'service-agreement-generator': {
+    title: 'Service Agreement Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_service-agreement',
+    output_rules: DOCUMENT_OUTPUT_RULES,
+    prompt_template:
+      "Draft a basic Service Agreement between {provider_name} (Provider) and {client_name} (Client), governed by the laws of {jurisdiction}. Include numbered sections: 1) Services — describe {service_description} clearly as the scope of work, 2) Price & Payment — {price_and_payment}, 3) Term — starting {start_date} for {duration}, 4) Termination — {termination_terms} (if 'Either party with notice — specify days', the notice period is {termination_notice_days} days), 5) Confidentiality clause if {confidentiality_needed} is 'Yes', 6) Liability limitation if {liability_needed} is 'Yes' (cap: {liability_cap}, or a reasonable limitation if not specified), 7) Independent contractor status (Provider is not an employee of Client), 8) Governing law, 9) Signature blocks for both parties with date lines. Use clear, factual, contract-appropriate language. Do not invent specific clauses beyond what the user provided. Include a prominent disclaimer that this is a starting template and should be reviewed by a qualified attorney before use, particularly for higher-value or more complex engagements.",
+  },
 };
 
 const OUTPUT_RULES =
   '\n\nOutput ONLY the finished letter itself, ready to send — start with a date and address block and end with a signature line. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide (e.g. [Your name], [Your address]).';
-
-// Override for generators producing a formatted document rather than a letter
-// (e.g. a Scope of Work attached to a contract) — no date/address block at the
-// top, numbered sections instead, signature blocks at the end for both parties.
-const DOCUMENT_OUTPUT_RULES =
-  '\n\nOutput ONLY the finished document itself, ready to attach to a contract or print — a numbered document with clear section headers, not a letter. Do not start with a date or address block. End with labeled signature blocks (with date lines) for both parties named in the instructions above. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide.';
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
