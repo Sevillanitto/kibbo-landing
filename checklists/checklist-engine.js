@@ -47,6 +47,7 @@
   if (cfg.difficulty) meta.appendChild(chip(cfg.difficulty, ''));
   if (cfg.last_updated) meta.appendChild(chip(null, 'Updated ' + cfg.last_updated));
   head.appendChild(meta);
+  if (cfg.description) head.appendChild(el('p', 'cl-description', cfg.description));
   mount.appendChild(head);
 
   // ---- Progress ----

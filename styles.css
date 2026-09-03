@@ -799,6 +799,7 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .cl-meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .cl-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-secondary); background: var(--bg); border: 1px solid var(--border); padding: 5px 12px; border-radius: 100px; }
 .cl-chip strong { color: var(--text-primary); font-weight: 600; }
+.cl-description { font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin: 16px 0 0; max-width: 640px; }
 
 /* progress */
 .cl-progress { position: sticky; top: 64px; z-index: 20; margin: 20px 0 8px; padding: 14px 16px; background: rgba(247,245,240,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); }
