@@ -93,7 +93,12 @@
         { "label": "Check the FSA's public list before buying CBD as a novel food in the UK", "url": "/blog/uk-cbd-fsa-novel-foods-public-list.html" },
         { "label": "Know what the ASA's CAP Code actually bans in supplement and influencer advertising", "url": "/blog/uk-asa-cap-code-supplement-advertising.html" },
         { "label": "Know which supplement ingredients get parcels seized by UK customs", "url": "/blog/uk-customs-seized-supplement-ingredients.html" },
-        { "label": "Spot protein spiking in whey powder and know your UK consumer rights", "url": "/blog/uk-protein-spiking-whey-consumer-rights.html" }
+        { "label": "Spot protein spiking in whey powder and know your UK consumer rights", "url": "/blog/uk-protein-spiking-whey-consumer-rights.html" },
+        { "label": "Know why a missing FENSA or Gas Safe certificate could delay selling your home", "url": "/blog/uk-fensa-gas-safe-regularisation-certificate.html" },
+        { "label": "Know the Party Wall Act notice rules before building an extension", "url": "/blog/uk-party-wall-act-1996-guide.html" },
+        { "label": "Know your rights against a cowboy builder under the Consumer Rights Act 2015", "url": "/blog/uk-cowboy-builders-consumer-rights-act.html" },
+        { "label": "Know how CDM 2015 site-safety duties transfer to your contractor", "url": "/blog/uk-cdm-2015-domestic-client-duties.html" },
+        { "label": "Know how to legalise an extension built without Building Control approval", "url": "/blog/uk-regularisation-certificate-unapproved-extension.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -185,7 +190,12 @@
         { "label": "Understand what a Proposition 65 heavy-metal warning on your protein powder actually means", "url": "/blog/us-prop-65-heavy-metals-protein-powder.html" },
         { "label": "Spot DMAA, DMHA and other banned stimulants hiding in pre-workout supplements", "url": "/blog/us-dmaa-dmha-banned-preworkout-stimulants.html" },
         { "label": "Know what USP, NSF Certified for Sport, and Informed Sport certifications actually verify", "url": "/blog/us-usp-nsf-informed-sport-certifications-explained.html" },
-        { "label": "Know what \"clinically proven\" is actually supposed to mean under FTC guidance", "url": "/blog/us-ftc-clinically-proven-standard.html" }
+        { "label": "Know what \"clinically proven\" is actually supposed to mean under FTC guidance", "url": "/blog/us-ftc-clinically-proven-standard.html" },
+        { "label": "Know how lien waivers protect you from a subcontractor's mechanic's lien", "url": "/blog/us-mechanics-lien-waivers-guide.html" },
+        { "label": "Know what the EPA's Lead RRP Rule requires before renovating a pre-1978 home", "url": "/blog/us-epa-lead-rrp-rule-pre-1978-homes.html" },
+        { "label": "Audit a contractor's license, bond, and complaint history before you sign", "url": "/blog/us-audit-contractor-license-cslb.html" },
+        { "label": "Know the risks of a PACE loan before financing solar or insulation through your property taxes", "url": "/blog/us-pace-loan-trap-property-tax-financing.html" },
+        { "label": "Know your liability risk if an uninsured contractor's worker is injured on your property", "url": "/blog/us-homeowner-liability-uninsured-contractor-injury.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -285,7 +295,12 @@
         { "label": "Reduce accidental doping risk from contaminated supplements with HASTA and Informed Sport certification", "url": "/blog/au-accidental-doping-hasta-informed-sport.html" },
         { "label": "Know which pre-workout stimulants are banned under Australia's Poisons Standard", "url": "/blog/au-poisons-standard-preworkout-stimulants.html" },
         { "label": "Know why \"TGA approved\" is never a legitimate supplement marketing claim in Australia", "url": "/blog/au-tga-approved-claim-myth.html" },
-        { "label": "Know your ACL refund rights for a supplement that didn't work or caused a reaction", "url": "/blog/au-acl-supplement-refund-rights.html" }
+        { "label": "Know your ACL refund rights for a supplement that didn't work or caused a reaction", "url": "/blog/au-acl-supplement-refund-rights.html" },
+        { "label": "Verify a builder's HBCF or DBI insurance certificate before paying a deposit", "url": "/blog/au-hbcf-vmia-insurance-verification.html" },
+        { "label": "Know the AS 3740 waterproofing standard before your bathroom is tiled over", "url": "/blog/au-as3740-bathroom-waterproofing-standard.html" },
+        { "label": "Know why unwritten contract variations may not be enforceable under the Home Building Act", "url": "/blog/au-contract-variations-home-building-act.html" },
+        { "label": "Check the NSW deposit limit and milestone rules before you pay a builder", "url": "/blog/au-progress-payments-deposit-limits-guide.html" },
+        { "label": "Know the DBDRV or NSW Fair Trading process before escalating a building dispute", "url": "/blog/au-dbdrv-nsw-fair-trading-dispute-process.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -392,7 +407,12 @@
         { "label": "Check the EU's RASFF portal for ethylene oxide contamination in your supplements", "url": "/blog/eu-rasff-ethylene-oxide-supplement-contamination.html" },
         { "label": "Know why the EU banned titanium dioxide (E171) in supplement capsules", "url": "/blog/eu-titanium-dioxide-e171-supplement-ban.html" },
         { "label": "Know why vitamin and mineral dose limits still differ across EU member states", "url": "/blog/eu-vitamin-mineral-dose-limits-member-states.html" },
-        { "label": "Check whether your lion's mane or reishi supplement is legal under EU novel food rules", "url": "/blog/eu-novel-food-catalogue-adaptogenic-mushrooms.html" }
+        { "label": "Check whether your lion's mane or reishi supplement is legal under EU novel food rules", "url": "/blog/eu-novel-food-catalogue-adaptogenic-mushrooms.html" },
+        { "label": "Know your legal position if a contractor delay costs you an EU energy efficiency grant", "url": "/blog/eu-nextgen-grant-loss-contractor-delay.html" },
+        { "label": "Use your 14-day EU withdrawal right on a renovation contract signed at home", "url": "/blog/eu-14-day-withdrawal-right-renovation-contract.html" },
+        { "label": "Ask for the Declaration of Performance behind your renovation materials' CE mark", "url": "/blog/eu-ce-marking-declaration-of-performance-materials.html" },
+        { "label": "Know how long your structural defect warranty actually lasts across the EU", "url": "/blog/eu-decennial-liability-structural-defects-comparison.html" },
+        { "label": "Know why you can't legally self-install an EU air conditioning split system", "url": "/blog/eu-fgas-regulation-certified-ac-installer.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
