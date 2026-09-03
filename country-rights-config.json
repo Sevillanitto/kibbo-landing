@@ -98,7 +98,12 @@
         { "label": "Know the Party Wall Act notice rules before building an extension", "url": "/blog/uk-party-wall-act-1996-guide.html" },
         { "label": "Know your rights against a cowboy builder under the Consumer Rights Act 2015", "url": "/blog/uk-cowboy-builders-consumer-rights-act.html" },
         { "label": "Know how CDM 2015 site-safety duties transfer to your contractor", "url": "/blog/uk-cdm-2015-domestic-client-duties.html" },
-        { "label": "Know how to legalise an extension built without Building Control approval", "url": "/blog/uk-regularisation-certificate-unapproved-extension.html" }
+        { "label": "Know how to legalise an extension built without Building Control approval", "url": "/blog/uk-regularisation-certificate-unapproved-extension.html" },
+        { "label": "Know what changed under the UK's Procurement Act 2023", "url": "/blog/uk-procurement-act-2023-transition-guide.html" },
+        { "label": "Know what a Section 114 notice means for your council's services", "url": "/blog/uk-section-114-notice-council-services.html" },
+        { "label": "Know why there's no small-client IR35 exemption for public sector contracts", "url": "/blog/uk-ir35-public-sector-cest-tool.html" },
+        { "label": "Know when your complaint needs an MP referral to reach the Ombudsman", "url": "/blog/uk-ombudsman-mp-filter-nhs-complaints.html" },
+        { "label": "Know your rights against facial recognition cameras in public", "url": "/blog/uk-facial-recognition-cctv-dpia-gdpr.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -195,7 +200,12 @@
         { "label": "Know what the EPA's Lead RRP Rule requires before renovating a pre-1978 home", "url": "/blog/us-epa-lead-rrp-rule-pre-1978-homes.html" },
         { "label": "Audit a contractor's license, bond, and complaint history before you sign", "url": "/blog/us-audit-contractor-license-cslb.html" },
         { "label": "Know the risks of a PACE loan before financing solar or insulation through your property taxes", "url": "/blog/us-pace-loan-trap-property-tax-financing.html" },
-        { "label": "Know your liability risk if an uninsured contractor's worker is injured on your property", "url": "/blog/us-homeowner-liability-uninsured-contractor-injury.html" }
+        { "label": "Know your liability risk if an uninsured contractor's worker is injured on your property", "url": "/blog/us-homeowner-liability-uninsured-contractor-injury.html" },
+        { "label": "Know what your city or state must do under the ADA's web accessibility rule", "url": "/blog/us-ada-title-ii-wcag-web-accessibility.html" },
+        { "label": "Appeal excessive FOIA redactions under Exemptions 5 and 7", "url": "/blog/us-foia-appeal-exemption-5-7-redactions.html" },
+        { "label": "Know your due process rights if an algorithm cuts your Medicaid", "url": "/blog/us-algorithm-medicaid-benefits-due-process.html" },
+        { "label": "Know what SAM.gov small business set-asides actually require", "url": "/blog/us-sam-gov-small-business-set-asides.html" },
+        { "label": "Know what the Hatch Act allows public employees to do politically", "url": "/blog/us-hatch-act-political-activity-limits.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -412,7 +422,12 @@
         { "label": "Use your 14-day EU withdrawal right on a renovation contract signed at home", "url": "/blog/eu-14-day-withdrawal-right-renovation-contract.html" },
         { "label": "Ask for the Declaration of Performance behind your renovation materials' CE mark", "url": "/blog/eu-ce-marking-declaration-of-performance-materials.html" },
         { "label": "Know how long your structural defect warranty actually lasts across the EU", "url": "/blog/eu-decennial-liability-structural-defects-comparison.html" },
-        { "label": "Know why you can't legally self-install an EU air conditioning split system", "url": "/blog/eu-fgas-regulation-certified-ac-installer.html" }
+        { "label": "Know why you can't legally self-install an EU air conditioning split system", "url": "/blog/eu-fgas-regulation-certified-ac-installer.html" },
+        { "label": "Know the new 2027 deadline for high-risk public sector AI systems", "url": "/blog/eu-ai-act-public-administration-high-risk.html" },
+        { "label": "Know what the EU's once-only principle actually requires governments to reuse", "url": "/blog/eu-once-only-principle-single-digital-gateway.html" },
+        { "label": "Know your rights under the EU Pay Transparency Directive, even if your country missed the deadline", "url": "/blog/eu-pay-transparency-directive-public-sector.html" },
+        { "label": "Spot a contract-splitting scheme that avoids EU procurement thresholds", "url": "/blog/eu-contract-splitting-procurement-thresholds.html" },
+        { "label": "Know how administrative silence works when a government agency doesn't respond", "url": "/blog/eu-administrative-silence-positive-negative.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
