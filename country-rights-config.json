@@ -103,7 +103,12 @@
         { "label": "Know what a Section 114 notice means for your council's services", "url": "/blog/uk-section-114-notice-council-services.html" },
         { "label": "Know why there's no small-client IR35 exemption for public sector contracts", "url": "/blog/uk-ir35-public-sector-cest-tool.html" },
         { "label": "Know when your complaint needs an MP referral to reach the Ombudsman", "url": "/blog/uk-ombudsman-mp-filter-nhs-complaints.html" },
-        { "label": "Know your rights against facial recognition cameras in public", "url": "/blog/uk-facial-recognition-cctv-dpia-gdpr.html" }
+        { "label": "Know your rights against facial recognition cameras in public", "url": "/blog/uk-facial-recognition-cctv-dpia-gdpr.html" },
+        { "label": "Know your rights against 7 common unfair contract term types", "url": "/blog/uk-unfair-contract-terms-cra-2015.html" },
+        { "label": "Know when a UK business can actually change your contract after you sign", "url": "/blog/uk-contract-variation-clause-rights.html" },
+        { "label": "Build your evidence before filing a UK small claims case", "url": "/blog/uk-small-claims-court-evidence-guide.html" },
+        { "label": "Know the difference between cancellation, termination, and cooling-off", "url": "/blog/uk-cancellation-termination-cooling-off-difference.html" },
+        { "label": "Spot hidden contract terms that fail the transparency test", "url": "/blog/uk-hidden-contract-terms-transparency.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -205,7 +210,12 @@
         { "label": "Appeal excessive FOIA redactions under Exemptions 5 and 7", "url": "/blog/us-foia-appeal-exemption-5-7-redactions.html" },
         { "label": "Know your due process rights if an algorithm cuts your Medicaid", "url": "/blog/us-algorithm-medicaid-benefits-due-process.html" },
         { "label": "Know what SAM.gov small business set-asides actually require", "url": "/blog/us-sam-gov-small-business-set-asides.html" },
-        { "label": "Know what the Hatch Act allows public employees to do politically", "url": "/blog/us-hatch-act-political-activity-limits.html" }
+        { "label": "Know what the Hatch Act allows public employees to do politically", "url": "/blog/us-hatch-act-political-activity-limits.html" },
+        { "label": "Know when a company can actually change your contract without your consent", "url": "/blog/us-unilateral-contract-modification-rights.html" },
+        { "label": "Know what actually counts as a breach of contract", "url": "/blog/us-what-counts-as-contract-breach.html" },
+        { "label": "Know how arbitration clauses and class-action waivers limit your options", "url": "/blog/us-arbitration-clauses-class-action-waivers.html" },
+        { "label": "Prepare for small claims court before you file", "url": "/blog/us-small-claims-court-preparation.html" },
+        { "label": "Know when clicking \"I agree\" actually creates a binding contract", "url": "/blog/us-clickwrap-browsewrap-online-contracts.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -310,7 +320,12 @@
         { "label": "Know the AS 3740 waterproofing standard before your bathroom is tiled over", "url": "/blog/au-as3740-bathroom-waterproofing-standard.html" },
         { "label": "Know why unwritten contract variations may not be enforceable under the Home Building Act", "url": "/blog/au-contract-variations-home-building-act.html" },
         { "label": "Check the NSW deposit limit and milestone rules before you pay a builder", "url": "/blog/au-progress-payments-deposit-limits-guide.html" },
-        { "label": "Know the DBDRV or NSW Fair Trading process before escalating a building dispute", "url": "/blog/au-dbdrv-nsw-fair-trading-dispute-process.html" }
+        { "label": "Know the DBDRV or NSW Fair Trading process before escalating a building dispute", "url": "/blog/au-dbdrv-nsw-fair-trading-dispute-process.html" },
+        { "label": "Know Australia's unfair contract terms law and its penalties", "url": "/blog/au-unfair-contract-terms-acl.html" },
+        { "label": "Know your options when a business breaches your contract", "url": "/blog/au-business-breach-contract-options.html" },
+        { "label": "Know when an Australian business can change your contract after signing", "url": "/blog/au-contract-variation-after-signing.html" },
+        { "label": "Build a strong case before filing at an Australian tribunal", "url": "/blog/au-small-claims-tribunal-preparation.html" },
+        { "label": "Check 8 fine print clauses before you sign in Australia", "url": "/blog/au-contract-fine-print-clauses-check.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -427,7 +442,12 @@
         { "label": "Know what the EU's once-only principle actually requires governments to reuse", "url": "/blog/eu-once-only-principle-single-digital-gateway.html" },
         { "label": "Know your rights under the EU Pay Transparency Directive, even if your country missed the deadline", "url": "/blog/eu-pay-transparency-directive-public-sector.html" },
         { "label": "Spot a contract-splitting scheme that avoids EU procurement thresholds", "url": "/blog/eu-contract-splitting-procurement-thresholds.html" },
-        { "label": "Know how administrative silence works when a government agency doesn't respond", "url": "/blog/eu-administrative-silence-positive-negative.html" }
+        { "label": "Know how administrative silence works when a government agency doesn't respond", "url": "/blog/eu-administrative-silence-positive-negative.html" },
+        { "label": "Know what EU law says you don't have to accept in a contract", "url": "/blog/eu-unfair-contract-terms-directive.html" },
+        { "label": "Know how the EU's 14-day cooling-off period actually works", "url": "/blog/eu-14-day-cooling-off-withdrawal-button.html" },
+        { "label": "Know what happens legally when you click \"I agree\" online in the EU", "url": "/blog/eu-online-contracts-click-acceptance.html" },
+        { "label": "Know your EU remedy options when a company doesn't deliver as promised", "url": "/blog/eu-non-conformity-remedies-consumer-rights.html" },
+        { "label": "Check 10 things before signing a cross-border EU contract", "url": "/blog/eu-cross-border-contract-checklist.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
