@@ -674,6 +674,38 @@ const GENERATORS = {
     prompt_template:
       "Write a formal complaint letter addressed to {shop_name} regarding a repair performed on {vehicle_details}, dropped off on {dropoff_date} and {completion_status}, for a total cost of {amount_paid}. Describe the specific issue based on the type selected ({issue_type}): {issue_description}. If the matter was previously raised with the shop ({prior_contact} — if 'Yes — free text describing their response', reference that prior contact and the shop's response: {prior_contact_response}) — otherwise state this is the first formal contact. State the desired outcome clearly: {desired_outcome}. Keep tone factual and professional. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent regulatory citations or threaten specific legal action beyond stating that further steps will be considered.",
   },
+  'insurance-claim-letter-generator': {
+    title: 'Insurance Claim Letter Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_insurance-claim-letter',
+    prompt_template:
+      "Write a formal insurance claim letter addressed to {insurance_company} regarding policy number {policy_number} ({claim_number_if_any}). Describe the incident that occurred on {incident_date}: {incident_description}. Describe the resulting damages or losses: {damages_description}. State the coverage believed to apply: {relevant_coverage}. List the supporting documentation enclosed: {documentation_list}. State the amount being claimed ({amount_claimed}) and the desired outcome ({desired_outcome}) clearly. Keep tone factual, organized, and professional — this is a first submission, not a dispute. Close with a request for acknowledgement and next steps, and contact details for reply. Do not invent policy clause numbers, regulatory citations, or specific coverage guarantees not stated by the user.",
+  },
+  'insurance-claim-followup-escalation-generator': {
+    title: 'Insurance Claim Follow-Up & Escalation Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_claim-followup-escalation',
+    prompt_template:
+      "Write a formal letter addressed to {insurance_company} regarding claim number {claim_number} under policy {policy_number}, originally submitted on {claim_submission_date}. Based on the branch selected: for a routine follow-up, reference the date of last contact ({last_contact_date}) and any missed deadline ({missed_deadline}), and request an update. For a formal escalation, summarize the prior contact and responses received ({prior_contact_summary}), explain why they were unsatisfactory ({unsatisfactory_reason}), and address the letter to the appropriate escalation target ({escalation_target}) — if the target is unsure, phrase the letter to request the correct internal escalation contact. State the desired outcome ({desired_outcome}) clearly in either branch. Keep tone firmer and more formal for the escalation branch than for the routine follow-up branch, reflecting the unresolved prior attempt. Close with a reasonable response deadline (7 days for escalations, 14 days for routine follow-ups) and contact details for reply. Do not invent regulatory citations, ombudsman procedures, or specific compensation entitlements not stated by the user.",
+  },
+  'insurance-denial-coverage-dispute-generator': {
+    title: 'Insurance Denial & Coverage Dispute Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_denial-coverage-dispute',
+    prompt_template:
+      "Write a formal dispute letter addressed to {insurance_company} regarding claim number {claim_number} under policy {policy_number}, in response to the decision dated {decision_date}. Quote or summarize the insurer's stated reason(s): {insurer_reasons}. Based on the branch selected: for an outright denial, reference the policy clause(s) cited ({cited_clauses}), explain why this reasoning is disputed ({dispute_reasoning}), and reference the counter-evidence available ({counter_evidence}). For a coverage/amount dispute, state the amount or scope offered ({amount_offered}) versus what is believed correct ({amount_believed_correct}) and why, referencing supporting valuation or evidence ({supporting_evidence}). State the amount in dispute ({amount_in_dispute}) and desired outcome ({desired_outcome}) clearly. Keep tone factual, firm, and professional — this is a formal dispute, not a first-time complaint. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent policy clause numbers, regulatory citations, or ombudsman procedures not stated by the user.",
+  },
+  'third-party-liability-claim-letter-generator': {
+    title: 'Third-Party Liability Claim Letter Generator',
+    // Gumroad product not yet created — Carlos uploads the file directly and
+    // will provide the real product id in a follow-up prompt. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_third-party-liability-letter',
+    prompt_template:
+      "Write a formal liability claim letter addressed to {at_fault_party_name} ({insurer_if_known}) regarding an incident that occurred on {incident_date} at {incident_location}. Describe what happened: {incident_description}. Describe the damages or losses suffered: {damages_description}. Reference the supporting evidence available: {evidence_list}. State the amount being claimed ({amount_claimed}) and the basis for that amount ({amount_basis}). State the desired outcome ({desired_outcome}) clearly. Keep tone factual, professional, and non-accusatory in describing fault — state what happened and let the facts establish liability, rather than using inflammatory language. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent legal citations, liability percentages, or threaten specific legal action beyond stating that further steps will be considered.",
+  },
 };
 
 const OUTPUT_RULES =
