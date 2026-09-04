@@ -1,6 +1,6 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
-  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education"],
+  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education", "Food & Hospitality", "Telecoms & Utilities", "Health & Supplements"],
   "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
@@ -480,6 +480,144 @@
         { "label": "Exercise the 14-day right of withdrawal in writing, if still within the window", "days_from_start": 0 },
         { "label": "If the window has passed, contact the provider directly citing the withdrawal right and request a refund", "days_from_start": 1 },
         { "label": "If refused, check your national consumer protection authority via the European Education Area", "days_from_start": 14 }
+      ]
+    },
+    "Telecoms & Utilities|US": {
+      "directory": { "name": "FCC — Consumer Complaint Center", "url": "/directory/telecoms-utilities.html#fcc-complaint-portal" },
+      "article": { "title": "How to File an FCC Complaint About Your Telecom Provider", "url": "/blog/fcc-telecom-complaint-us.html" },
+      "tool": { "name": "FCC Informal Complaint Letter Generator", "url": "/generate/fcc-complaint.html", "type": "generator" },
+      "template": { "name": "Internet & Broadband Service Incident Log", "url": "/templates/internet-broadband-service-incident-log.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Contact your provider directly to request a billing credit for a verified outage or billing error", "days_from_start": 0 },
+        { "label": "If unresolved, file a complaint with the FCC's Consumer Complaint Center", "days_from_start": 7 },
+        { "label": "Your provider is legally required to respond in writing within 30 days", "days_from_start": 37 },
+        { "label": "If billed by card, dispute it under the Fair Credit Billing Act (60-day window from the bill)", "days_from_start": 60 }
+      ]
+    },
+    "Telecoms & Utilities|UK": {
+      "directory": { "name": "UK — Energy Ombudsman", "url": "/directory/telecoms-utilities.html#energy-ombudsman-uk" },
+      "article": { "title": "How to Escalate an Unresolved Energy or Telecom Complaint to the Ombudsman", "url": "/blog/uk-energy-telecom-ombudsman-escalation.html" },
+      "tool": { "name": "Service Complaint & Escalation Generator", "url": "/generate/service-complaint-escalation.html", "type": "generator" },
+      "template": { "name": "Billing Dispute & Overcharge Evidence Pack", "url": "/templates/billing-dispute-overcharge-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Raise the billing/service issue with your provider in writing", "days_from_start": 0 },
+        { "label": "Check whether you're owed automatic compensation (e.g. Ofcom's scheme for broadband delays/faults)", "days_from_start": 1 },
+        { "label": "Give your provider a reasonable window to respond before pursuing ADR (commonly 8 weeks)", "days_from_start": 56 },
+        { "label": "Escalate to the correct ADR scheme for your issue — Communications Ombudsman/CISAS for telecom, Energy Ombudsman for energy/water", "days_from_start": 57 }
+      ]
+    },
+    "Telecoms & Utilities|Australia": {
+      "directory": { "name": "EWON — Energy & Water Ombudsman (NSW; check your state's scheme)", "url": "/directory/telecoms-utilities.html#ewon-ombudsman-au" },
+      "article": { "title": "Sky-High Energy or Water Bill? How to Get a Faulty Meter Tested in Australia", "url": "/blog/au-meter-dispute-state-ombudsman.html" },
+      "tool": { "name": "Service Complaint & Escalation Generator", "url": "/generate/service-complaint-escalation.html", "type": "generator" },
+      "template": { "name": "Utility Meter Reading Dispute Log", "url": "/templates/utility-meter-reading-dispute-log.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Request a meter test/billing review from your provider in writing", "days_from_start": 0 },
+        { "label": "Keep your own photographed meter readings as independent evidence", "days_from_start": 0 },
+        { "label": "Give the provider a reasonable window to respond", "days_from_start": 14 },
+        { "label": "Escalate to your state's Energy & Water Ombudsman (EWON/EWOV/EWOQ etc. — check which covers you), or the TIO for a telecom issue", "days_from_start": 15 }
+      ]
+    },
+    "Telecoms & Utilities|EU": {
+      "directory": { "name": "ECC-Net — Cross-Border Telecom/Utility Complaint (EU)", "url": "/directory/telecoms-utilities.html#ecc-net-eu" },
+      "article": { "title": "Challenging Estimated Energy Bills in the EU: Your Rights Under the Electricity Market Directive", "url": "/blog/eu-estimated-energy-bills-electricity-directive.html" },
+      "tool": { "name": "Service Complaint & Escalation Generator", "url": "/generate/service-complaint-escalation.html", "type": "generator" },
+      "template": { "name": "Utility Billing Audit Workbook", "url": "/templates/utility-billing-audit-workbook.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Request an actual-usage bill correction from your provider, citing the Electricity Market Directive", "days_from_start": 0 },
+        { "label": "Give the provider a reasonable window to respond (national timelines vary by member state)", "days_from_start": 14 },
+        { "label": "Escalate to your national energy regulator/ombudsman, or ECC-Net for a cross-border dispute", "days_from_start": 15 }
+      ]
+    },
+    "Food & Hospitality|US": {
+      "directory": { "name": "US — FTC Complaint Portal", "url": "/directory/food-hospitality.html#us-ftc-complaints" },
+      "article": { "title": "Denied Entry With a Service Animal? Restaurant and Hotel Rules Under the ADA", "url": "/blog/us-ada-service-animals-restaurant-hotel.html" },
+      "tool": null,
+      "template": { "name": "Restaurant Complaint Communication Log", "url": "/templates/restaurant-complaint-communication-log.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Document exactly what happened, including staff/manager names if possible", "days_from_start": 0 },
+        { "label": "Request a resolution directly from the restaurant or hotel manager", "days_from_start": 0 },
+        { "label": "File a complaint with the FTC (or the DOJ specifically for an ADA violation)", "days_from_start": 3 },
+        { "label": "If billed for a service not rendered as described, dispute the charge with your card issuer", "days_from_start": 5 }
+      ]
+    },
+    "Food & Hospitality|UK": {
+      "directory": { "name": "UK — Citizens Advice Consumer Help", "url": "/directory/food-hospitality.html#uk-citizens-advice" },
+      "article": { "title": "Natasha's Law: Allergen Labelling Rules for Prepacked-for-Direct-Sale Food", "url": "/blog/uk-natashas-law-ppds-labelling.html" },
+      "tool": null,
+      "template": { "name": "Restaurant Allergen Communication Record", "url": "/templates/restaurant-allergen-communication-record.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Raise the issue directly with the restaurant/venue in writing, citing the allergen information you were given", "days_from_start": 0 },
+        { "label": "Give the venue a reasonable window to respond", "days_from_start": 7 },
+        { "label": "Contact Citizens Advice for guidance on your next step if unresolved", "days_from_start": 14 },
+        { "label": "Report a labelling/allergen failure to your local authority's Trading Standards or Environmental Health team", "days_from_start": 15 }
+      ]
+    },
+    "Food & Hospitality|EU": {
+      "directory": { "name": "EU — European Consumer Centres Network (ECC-Net)", "url": "/directory/food-hospitality.html#eu-eccnet" },
+      "article": { "title": "Restaurant Allergen Disclosure Under EU Regulation 1169/2011 (FIC Regulation)", "url": "/blog/eu-regulation-1169-2011-allergen-menu.html" },
+      "tool": null,
+      "template": { "name": "Restaurant Allergen Communication Record", "url": "/templates/restaurant-allergen-communication-record.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Raise the issue directly with the restaurant/venue in writing, citing Regulation (EU) 1169/2011", "days_from_start": 0 },
+        { "label": "Give the venue a reasonable window to respond (national timelines vary by member state)", "days_from_start": 14 },
+        { "label": "If unresolved and the business is in another EU country, escalate via ECC-Net", "days_from_start": 15 }
+      ]
+    },
+    "Health & Supplements|US": {
+      "directory": { "name": "FDA MedWatch — Report a Supplement Side Effect", "url": "/directory/health-supplements.html#fda-medwatch" },
+      "article": { "title": "How to Report a Supplement Side Effect to the FDA (MedWatch)", "url": "/blog/fda-medwatch-supplement-report-us.html" },
+      "tool": { "name": "Supplement Analyzer", "url": "/supplement-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Adverse Reaction Report", "url": "/templates/adverse-reaction-report.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Stop taking the product and seek medical attention if needed", "days_from_start": 0 },
+        { "label": "Report the adverse reaction to FDA MedWatch", "days_from_start": 1 },
+        { "label": "Request a refund directly from the seller, citing the safety issue", "days_from_start": 2 },
+        { "label": "If billed by card and the seller refuses, dispute the charge with your card issuer", "days_from_start": 5 }
+      ]
+    },
+    "Health & Supplements|UK": {
+      "directory": { "name": "MHRA Yellow Card — Report an Unsafe Supplement (UK)", "url": "/directory/health-supplements.html#mhra-yellow-card" },
+      "article": { "title": "How to Report a Supplement Side Effect via the MHRA Yellow Card Scheme", "url": "/blog/mhra-yellow-card-uk.html" },
+      "tool": { "name": "Supplement Analyzer", "url": "/supplement-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Adverse Reaction Report", "url": "/templates/adverse-reaction-report.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Stop taking the product and seek medical attention if needed", "days_from_start": 0 },
+        { "label": "Report the reaction via the MHRA Yellow Card scheme", "days_from_start": 1 },
+        { "label": "Request a refund from the retailer, citing the Consumer Rights Act (satisfactory quality)", "days_from_start": 2 },
+        { "label": "Escalate to Trading Standards if refused", "days_from_start": 14 }
+      ]
+    },
+    "Health & Supplements|Australia": {
+      "directory": { "name": "TGA / Product Safety Australia — Safety Reporting", "url": "/directory/health-supplements.html#au-safety-reporting-resources" },
+      "article": { "title": "How to Report a Supplement Side Effect to the TGA (Australia)", "url": "/blog/report-side-effect-tga-australia.html" },
+      "tool": { "name": "Supplement Analyzer", "url": "/supplement-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Adverse Reaction Report", "url": "/templates/adverse-reaction-report.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Stop taking the product and seek medical attention if needed", "days_from_start": 0 },
+        { "label": "Report to the TGA (Report a Problem) and check the DAEN database", "days_from_start": 1 },
+        { "label": "Request a refund or replacement from the retailer under the ACL", "days_from_start": 2 },
+        { "label": "Escalate to Product Safety Australia (ACCC) or your state consumer protection agency if refused", "days_from_start": 14 }
       ]
     }
   }
