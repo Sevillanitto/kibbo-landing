@@ -1,6 +1,6 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
-  "problems": ["Scam", "Bank", "Subscription", "Parcel", "Landlord", "Work"],
+  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment"],
   "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
@@ -32,7 +32,7 @@
         { "label": "Follow up or escalate if unresolved", "days_from_start": 30 }
       ]
     },
-    "Bank|UK": {
+    "Financial & Banking|UK": {
       "directory": { "name": "Financial Ombudsman Service", "url": "/directory/financial-banking.html#fos-ombudsman" },
       "article": { "title": "The 8-Week Wall: UK Financial Ombudsman Guide", "url": "/blog/fos-ombudsman-uk-bank-dispute.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
@@ -46,7 +46,7 @@
         { "label": "Deadline to refer to the FOS (6 months from final response)", "days_from_start": 237 }
       ]
     },
-    "Bank|US": {
+    "Financial & Banking|US": {
       "directory": { "name": "CFPB Complaint Portal", "url": "/directory/financial-banking.html#cfpb-complaint" },
       "article": { "title": "How to File a CFPB Complaint", "url": "/blog/cfpb-complaint-bank-fraud-refund.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
@@ -59,7 +59,7 @@
         { "label": "Expected final resolution (CFPB target)", "days_from_start": 60 }
       ]
     },
-    "Subscription|UK": {
+    "Subscriptions & Services|UK": {
       "directory": { "name": "Gov.uk Consumer Rights (30-day rule)", "url": "/directory/shopping-ecommerce.html#gov-uk-consumer-rights" },
       "article": { "title": "The 30-Day Right to Reject", "url": "/blog/30-day-right-to-reject-uk.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
@@ -72,7 +72,7 @@
         { "label": "6-month window where the burden of proof is on the retailer", "days_from_start": 180 }
       ]
     },
-    "Subscription|US": {
+    "Subscriptions & Services|US": {
       "directory": { "name": "Better Business Bureau", "url": "/directory/shopping-ecommerce.html#better-business-bureau" },
       "article": { "title": "How to Check a Company's BBB Complaint History", "url": "/blog/bbb-company-complaint-history-us.html" },
       "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
@@ -86,7 +86,7 @@
         { "label": "Follow up if unresolved", "days_from_start": 30 }
       ]
     },
-    "Parcel|UK": {
+    "Parcel & Delivery|UK": {
       "directory": { "name": "Royal Mail / Evri / DPD Claims", "url": "/directory/delivery-parcels.html#royal-mail" },
       "article": { "title": "Claiming for a Lost Royal Mail Parcel", "url": "/blog/royal-mail-lost-parcel-claim-uk.html" },
       "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
@@ -99,7 +99,7 @@
         { "label": "Escalate to a chargeback with your bank if unresolved", "days_from_start": 14 }
       ]
     },
-    "Parcel|US": {
+    "Parcel & Delivery|US": {
       "directory": { "name": "eConsumer.gov", "url": "/directory/shopping-ecommerce.html#econsumer-gov" },
       "article": { "title": "Reporting an International Shopping Scam", "url": "/blog/econsumer-gov-international-scam.html" },
       "tool": { "name": "Lost Parcel Legal Demand Generator", "url": "/generate/lost-parcel-demand.html", "type": "generator" },
@@ -113,7 +113,7 @@
         { "label": "Follow up if unresolved", "days_from_start": 30 }
       ]
     },
-    "Landlord|UK": {
+    "Housing & Rentals|UK": {
       "directory": { "name": "Citizens Advice Consumer Helpline", "url": "/directory/shopping-ecommerce.html#citizens-advice-consumer-helpline" },
       "article": { "title": "Citizens Advice: Free Consumer Legal Advice", "url": "/blog/citizens-advice-consumer-helpline-uk.html" },
       "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand-letter.html", "type": "generator" },
@@ -127,7 +127,7 @@
         { "label": "Adjudicator decision (typically a few weeks)", "days_from_start": 42 }
       ]
     },
-    "Landlord|US": {
+    "Housing & Rentals|US": {
       "directory": { "name": "HUD Tenant Rights (deposit law by state)", "url": "/directory/housing-rentals.html#security-deposit-by-state" },
       "article": { "title": "The Security Deposit Clock: How Long Your Landlord Has to Return Your Money (By State)", "url": "/blog/security-deposit-state-laws-us.html" },
       "tool": { "name": "Landlord Deposit Demand Letter Generator", "url": "/generate/landlord-deposit-demand-letter.html", "type": "generator" },
@@ -141,7 +141,7 @@
         { "label": "Consider small claims court", "days_from_start": 45 }
       ]
     },
-    "Work|UK": {
+    "Employment|UK": {
       "directory": { "name": "Resolver", "url": "/directory/shopping-ecommerce.html#resolver" },
       "article": { "title": "How to Use Resolver to Escalate a Complaint", "url": "/blog/resolver-complaint-escalation-uk.html" },
       "tool": null,
@@ -155,7 +155,7 @@
         { "label": "Refer to the relevant ombudsman or consider small claims", "days_from_start": 56 }
       ]
     },
-    "Work|US": {
+    "Employment|US": {
       "directory": null,
       "article": { "title": "Red Flags That Prove a Freelance Client Won't Pay You", "url": "/blog/freelancer-client-red-flags-non-payment.html" },
       "tool": null,
@@ -169,7 +169,7 @@
         { "label": "File in small claims court", "days_from_start": 45 }
       ]
     },
-    "Bank|Australia": {
+    "Financial & Banking|Australia": {
       "directory": { "name": "Bank Dispute & AFCA Resources (Australia)", "url": "/directory/financial-banking.html#au-banking-dispute-resources" },
       "article": { "title": "Take a Bank or Insurer Dispute to AFCA", "url": "/blog/afca-complaint-australia.html" },
       "tool": { "name": "Unauthorised Transaction Dispute Letter (Australia)", "url": "/generate/au-unauthorised-transaction-dispute.html", "type": "generator" },
@@ -182,7 +182,7 @@
         { "label": "Escalate to AFCA if unresolved or unsatisfactory", "days_from_start": 46 }
       ]
     },
-    "Landlord|Australia": {
+    "Housing & Rentals|Australia": {
       "directory": { "name": "Rental Bond & Repairs Dispute Resources (Australia)", "url": "/directory/housing-rentals.html#au-tenancy-dispute-resources" },
       "article": { "title": "Rental Bond Not Returned? How to Dispute Deductions", "url": "/blog/rental-bond-dispute-australia.html" },
       "tool": { "name": "Notice to Remedy / Urgent Repairs Letter (Australia)", "url": "/generate/au-notice-to-remedy-repairs.html", "type": "generator" },
@@ -209,7 +209,7 @@
         { "label": "Escalate to AFCA if the bank won't act (including the receiving bank)", "days_from_start": 30 }
       ]
     },
-    "Bank|EU": {
+    "Financial & Banking|EU": {
       "directory": { "name": "EU Banking Dispute & Payment Fraud Resources", "url": "/directory/financial-banking.html#eu-banking-dispute-resources" },
       "article": { "title": "How to File a Complaint Against Your Bank in the EU", "url": "/blog/eu-bank-complaint-fin-net.html" },
       "tool": { "name": "Bank Complaint Letter (EU / PSD2 / FIN-NET)", "url": "/generate/eu-bank-complaint-finnet.html", "type": "generator" },
@@ -223,7 +223,7 @@
         { "label": "No response, or unsatisfactory reply? Escalate to FIN-NET", "days_from_start": 50 }
       ]
     },
-    "Subscription|EU": {
+    "Subscriptions & Services|EU": {
       "directory": { "name": "EU Subscription Cancellation & Renewal Law Resources", "url": "/directory/shopping-ecommerce.html#eu-subscription-cancellation-resources" },
       "article": { "title": "How to Cancel a Subscription Under EU Law: What \"Easy Exit\" Actually Covers Today", "url": "/blog/eu-cancel-subscription-easy-exit.html" },
       "tool": { "name": "Subscription Cancellation & Refund Demand Letter (EU)", "url": "/generate/eu-subscription-cancellation-demand.html", "type": "generator" },
@@ -235,6 +235,88 @@
         { "label": "If not, check whether your country has a specific cancellation-button law (e.g. Germany, France) or an unnotified-renewal notice rule", "days_from_start": 1 },
         { "label": "Send a formal cancellation/refund demand citing the correct basis for your country and scenario", "days_from_start": 2 },
         { "label": "If the company keeps billing, revoke the payment mandate directly through your bank (PSD2)", "days_from_start": 14 }
+      ]
+    },
+    "Scam|EU": {
+      "directory": { "name": "Cross-Border Scam & Payment-Fraud Support (ECC-Net)", "url": "/directory/financial-banking.html#eu-ecc-net-fraud" },
+      "article": { "title": "Bank Spoofing Scams: Your Refund Rights Under PSD2 in the EU", "url": "/blog/bank-spoofing-scams-psd2-refund-rights-eu.html" },
+      "tool": { "name": "AI Phishing Detector", "url": "/phishing-detector.html", "type": "analyzer" },
+      "template": { "name": "Phishing & Scam Incident Report Template", "url": "/templates/phishing-scam-report.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report the scam to your bank/payment provider and request a refund for the unauthorised transaction", "days_from_start": 0 },
+        { "label": "Your PSP must refund by the end of the next business day unless it suspects fraud (PSD2, Article 73)", "days_from_start": 1 },
+        { "label": "If the trader/scammer is in another EU country, also report it to ECC-Net", "days_from_start": 2 },
+        { "label": "If refused or delayed, escalate via FIN-NET to your national ombudsman", "days_from_start": 15 }
+      ]
+    },
+    "Subscriptions & Services|Australia": {
+      "directory": { "name": "TIO — Resolve an Individual Phone/Internet Dispute (Australia)", "url": "/directory/telecoms-utilities.html#tio-ombudsman-au" },
+      "article": { "title": "The TIO Mandate: Force ISPs to Cancel Contracts and Waive Termination Fees", "url": "/blog/tio-cancel-internet-contract-australia.html" },
+      "tool": { "name": "Legal Contract Auditor", "url": "/legal-contract-auditor.html", "type": "analyzer" },
+      "template": { "name": "Subscription Cancellation Email Pack", "url": "/templates/subscription-cancellation-email-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact your provider in writing to cancel, or dispute the early termination fee", "days_from_start": 0 },
+        { "label": "Give the provider a reasonable window to resolve it directly (TCP Code timeframes)", "days_from_start": 10 },
+        { "label": "Escalate to the TIO if it's unresolved or ignored", "days_from_start": 11 }
+      ]
+    },
+    "Parcel & Delivery|Australia": {
+      "directory": { "name": "Australia Post — Lost or Damaged Parcel Complaints", "url": "/directory/delivery-parcels.html#australia-post" },
+      "article": { "title": "Australia Post's $100 Default Cover, and Why Extra Cover Claims Get Rejected", "url": "/blog/au-australia-post-compensation-extra-cover.html" },
+      "tool": null,
+      "template": { "name": "Delivery Evidence Log", "url": "/templates/delivery-evidence-log.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact the retailer (not the courier) in writing", "days_from_start": 0 },
+        { "label": "Lodge a complaint with Australia Post/StarTrack if the delivery itself failed", "days_from_start": 2 },
+        { "label": "Escalate to the Postal Industry Ombudsman if unresolved (only accepted after the carrier complaint above)", "days_from_start": 14 },
+        { "label": "Escalate to a chargeback with your bank if still unresolved", "days_from_start": 21 }
+      ]
+    },
+    "Parcel & Delivery|EU": {
+      "directory": { "name": "European Consumer Centres Network (ECC-Net) — Delivery Disputes", "url": "/directory/delivery-parcels.html#eu-eccnet-consumer" },
+      "article": { "title": "ECC-Net: Free Cross-Border Mediation for a Delivery Dispute With an EU Seller", "url": "/blog/eu-ecc-net-cross-border-delivery-mediation.html" },
+      "tool": null,
+      "template": { "name": "Cross-Border Consumer Complaint Pack", "url": "/templates/cross-border-consumer-complaint-pack.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact the seller in writing — the seller is responsible for delivery, not the courier (Article 20)", "days_from_start": 0 },
+        { "label": "Give the seller a reasonable additional deadline to deliver (Article 18)", "days_from_start": 14 },
+        { "label": "If still missed, cancel the order and demand a refund", "days_from_start": 15 },
+        { "label": "If the seller is in another EU country and refuses, escalate to ECC-Net for free mediation", "days_from_start": 21 }
+      ]
+    },
+    "Employment|Australia": {
+      "directory": { "name": "Fair Work Commission Complaints (Australia)", "url": "/directory/employment.html#fwc-complaints" },
+      "article": { "title": "Wage Theft Is Now a Crime in Australia: Restaurant Award Compliance Guide", "url": "/blog/au-wage-theft-restaurant-award-compliance.html" },
+      "tool": null,
+      "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Request the unpaid wages/entitlements in writing from your employer", "days_from_start": 0 },
+        { "label": "Check your correct rate against the Fair Work Pay Calculator", "days_from_start": 1 },
+        { "label": "Give a final deadline before escalating", "days_from_start": 14 },
+        { "label": "Lodge a dispute with the Fair Work Commission if still unresolved", "days_from_start": 21 }
+      ]
+    },
+    "Employment|EU": {
+      "directory": { "name": "EU Platform Work Directive", "url": "/directory/employment.html#eu-platform-work" },
+      "article": { "title": "The EU Platform Work Directive: Rebuttable Presumption of Employment", "url": "/blog/eu-platform-work-directive-employment-presumption.html" },
+      "tool": null,
+      "template": { "name": "Freelancer Client Vetting Checklist", "url": "/templates/freelancer-client-vetting.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Document your working pattern and any signs of employer control (relevant to the rebuttable presumption)", "days_from_start": 0 },
+        { "label": "Send a written request to the platform/employer for reclassification or unpaid entitlements", "days_from_start": 3 },
+        { "label": "If ignored, escalate to your national labour inspectorate, or the European Labour Authority for cross-border cases", "days_from_start": 21 }
       ]
     }
   }
