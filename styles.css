@@ -653,7 +653,7 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .rc-cta {
   display: inline-block; margin: 20px 0 0; padding: 14px 22px; font-family: var(--font-sans); font-size: 15px;
   font-weight: 600; color: #fff; background: var(--accent-green); border-radius: 100px; text-decoration: none;
-  transition: var(--transition);
+  border: none; cursor: pointer; transition: var(--transition);
 }
 .rc-cta:hover { background: #345c44; }
 

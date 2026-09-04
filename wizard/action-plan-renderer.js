@@ -1,8 +1,17 @@
-/* Consumer Rights Wizard — Screen 3 renderer.
+/* Shared Action Plan renderer — the ONE result component for both the Consumer
+ * Rights Wizard and the Rights Checker.
  *
- * Provides window.WIZARD_RESULT(combo, ctx) to decision-tree-core.js. Renders a
+ * Provides window.ACTION_PLAN(combo, ctx) to decision-tree-core.js. Renders a
  * resource card for each non-null field (directory / article / tool / template);
  * null fields are simply skipped — never a broken link or empty box.
+ *
+ * Called from two places with the same combination data:
+ *   - wizard.html          — directly after the country step (ctx.stepLabel "Step 3 of 3")
+ *   - rights-checker.html  — after its own 5-rights checklist screen
+ *                             (ctx.stepLabel "Step 4 of 4"), via the "Continue" button
+ *                             on that screen. Both render identical output for the
+ *                             same problem+country — there is no second copy of this
+ *                             logic anywhere else.
  */
 (function () {
   var CARD_META = {
@@ -24,7 +33,7 @@
     );
   }
 
-  window.WIZARD_RESULT = function (combo, ctx) {
+  window.ACTION_PLAN = function (combo, ctx) {
     var esc = ctx.esc;
     var cards = [];
     if (combo.directory) cards.push(card(esc, 'directory', combo.directory.name, combo.directory.url));
@@ -37,7 +46,7 @@
 
     var html =
       '<div class="wiz-screen">' +
-      '<p class="wiz-step">Step 3 of 3</p>' +
+      '<p class="wiz-step">' + esc(ctx.stepLabel || 'Step 3 of 3') + '</p>' +
       '<h2 class="wiz-q">Your action plan: ' + esc(ctx.problem) + ' · ' + esc(ctx.country) + '</h2>';
 
     if (cards.length) {
@@ -53,7 +62,8 @@
 
     html +=
       '<div class="wiz-actions">' +
-      '<button type="button" class="wiz-back" data-back="country">← Change country</button>' +
+      '<button type="button" class="wiz-back" data-back="' + (ctx.backTarget || 'country') + '">' +
+      esc(ctx.backLabel || '← Change country') + '</button>' +
       '<button type="button" class="wiz-restart" data-back="problems">Start over</button>' +
       '</div>' +
       '</div>';
