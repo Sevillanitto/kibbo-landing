@@ -108,7 +108,12 @@
         { "label": "Know when a UK business can actually change your contract after you sign", "url": "/blog/uk-contract-variation-clause-rights.html" },
         { "label": "Build your evidence before filing a UK small claims case", "url": "/blog/uk-small-claims-court-evidence-guide.html" },
         { "label": "Know the difference between cancellation, termination, and cooling-off", "url": "/blog/uk-cancellation-termination-cooling-off-difference.html" },
-        { "label": "Spot hidden contract terms that fail the transparency test", "url": "/blog/uk-hidden-contract-terms-transparency.html" }
+        { "label": "Spot hidden contract terms that fail the transparency test", "url": "/blog/uk-hidden-contract-terms-transparency.html" },
+        { "label": "Check these things before paying a UK dealer for a used car", "url": "/blog/uk-used-car-dealer-checks-before-paying.html" },
+        { "label": "Know your rights when a used car develops a problem after purchase", "url": "/blog/uk-used-car-problem-after-purchase-rights.html" },
+        { "label": "Know what MOT history can and can't tell you about a used car", "url": "/blog/uk-mot-history-not-full-vehicle-history.html" },
+        { "label": "Know the risks of buying a car privately that a dealer purchase doesn't carry", "url": "/blog/uk-buying-car-privately-risks.html" },
+        { "label": "Build strong evidence before filing a garage repair complaint", "url": "/blog/uk-garage-repair-complaint-evidence.html" }
       ],
       "templates": [
         { "label": "Tenant Move-In & Move-Out Inspection Checklist", "url": "/templates/tenant-inspection-checklist.html" },
@@ -215,7 +220,12 @@
         { "label": "Know what actually counts as a breach of contract", "url": "/blog/us-what-counts-as-contract-breach.html" },
         { "label": "Know how arbitration clauses and class-action waivers limit your options", "url": "/blog/us-arbitration-clauses-class-action-waivers.html" },
         { "label": "Prepare for small claims court before you file", "url": "/blog/us-small-claims-court-preparation.html" },
-        { "label": "Know when clicking \"I agree\" actually creates a binding contract", "url": "/blog/us-clickwrap-browsewrap-online-contracts.html" }
+        { "label": "Know when clicking \"I agree\" actually creates a binding contract", "url": "/blog/us-clickwrap-browsewrap-online-contracts.html" },
+        { "label": "Know how dealer fees can turn an advertised price into a much bigger bill", "url": "/blog/us-used-car-dealer-fees-price-trap.html" },
+        { "label": "Know what a clean title does and doesn't tell you about a used car", "url": "/blog/us-clean-title-what-it-actually-means.html" },
+        { "label": "Know what an \"As Is\" used car sale actually means before you sign", "url": "/blog/us-as-is-used-car-sale-buyers-guide.html" },
+        { "label": "Take the right first steps when a used car has problems after purchase", "url": "/blog/us-used-car-problems-after-purchase-steps.html" },
+        { "label": "Spot the warning signs of a stolen, flooded, or odometer-tampered car", "url": "/blog/us-stolen-flood-odometer-tampered-car-signs.html" }
       ],
       "templates": [],
       "templates_note": "No US-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in the US.",
@@ -325,7 +335,12 @@
         { "label": "Know your options when a business breaches your contract", "url": "/blog/au-business-breach-contract-options.html" },
         { "label": "Know when an Australian business can change your contract after signing", "url": "/blog/au-contract-variation-after-signing.html" },
         { "label": "Build a strong case before filing at an Australian tribunal", "url": "/blog/au-small-claims-tribunal-preparation.html" },
-        { "label": "Check 8 fine print clauses before you sign in Australia", "url": "/blog/au-contract-fine-print-clauses-check.html" }
+        { "label": "Check 8 fine print clauses before you sign in Australia", "url": "/blog/au-contract-fine-print-clauses-check.html" },
+        { "label": "Check these things before buying a used car in Australia", "url": "/blog/au-used-car-buying-checklist.html" },
+        { "label": "Know why a PPSR check matters before buying a used car", "url": "/blog/au-ppsr-check-explained.html" },
+        { "label": "Document a major used car fault before you complain", "url": "/blog/au-used-car-major-fault-documentation.html" },
+        { "label": "Know why dealer vs private seller matters in Australia", "url": "/blog/au-dealer-vs-private-seller.html" },
+        { "label": "Budget for the hidden costs of an interstate used car purchase", "url": "/blog/au-interstate-used-car-purchase.html" }
       ],
       "templates": [],
       "templates_note": "No Australia-exclusive templates yet — every Kibbo template (chargeback pack, identity-theft recovery plan, subscription cancellation and more) applies in Australia too.",
@@ -447,7 +462,12 @@
         { "label": "Know how the EU's 14-day cooling-off period actually works", "url": "/blog/eu-14-day-cooling-off-withdrawal-button.html" },
         { "label": "Know what happens legally when you click \"I agree\" online in the EU", "url": "/blog/eu-online-contracts-click-acceptance.html" },
         { "label": "Know your EU remedy options when a company doesn't deliver as promised", "url": "/blog/eu-non-conformity-remedies-consumer-rights.html" },
-        { "label": "Check 10 things before signing a cross-border EU contract", "url": "/blog/eu-cross-border-contract-checklist.html" }
+        { "label": "Check 10 things before signing a cross-border EU contract", "url": "/blog/eu-cross-border-contract-checklist.html" },
+        { "label": "Check these documents before buying a used car in the EU", "url": "/blog/eu-used-car-documents-checklist.html" },
+        { "label": "Verify these documents before buying a used car from another EU country", "url": "/blog/eu-cross-border-used-car-documents.html" },
+        { "label": "Keep the right evidence when a used car doesn't match its advert", "url": "/blog/eu-used-car-not-as-advertised-evidence.html" },
+        { "label": "Check for outstanding finance before buying a used car", "url": "/blog/eu-used-car-outstanding-finance-check.html" },
+        { "label": "Know how dealer and private used-car purchases compare in Europe", "url": "/blog/eu-dealer-vs-private-seller.html" }
       ],
       "templates": [
         { "label": "EU Purchase Evidence Log", "url": "/templates/eu-purchase-evidence-log.html" },
