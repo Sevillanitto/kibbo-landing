@@ -1,6 +1,6 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
-  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment"],
+  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education"],
   "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
@@ -317,6 +317,169 @@
         { "label": "Document your working pattern and any signs of employer control (relevant to the rebuttable presumption)", "days_from_start": 0 },
         { "label": "Send a written request to the platform/employer for reclassification or unpaid entitlements", "days_from_start": 3 },
         { "label": "If ignored, escalate to your national labour inspectorate, or the European Labour Authority for cross-border cases", "days_from_start": 21 }
+      ]
+    },
+    "Flights & Travel|UK": {
+      "directory": { "name": "UK CAA — Am I Entitled to Compensation?", "url": "/directory/flights-travel.html#uk-passenger-rights" },
+      "article": { "title": "UK261 Consumer Framework: Passenger Entitlements, CAA Oversight, and ADR Audits", "url": "/blog/uk261-consumer-framework-adr-audit.html" },
+      "tool": { "name": "Flight Disruption Compensation & Reimbursement Letter Generator", "url": "/generate/flight-disruption-compensation-reimbursement.html", "type": "generator" },
+      "template": { "name": "Flight Disruption Communication Log", "url": "/templates/flight-disruption-communication-log.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Submit a compensation/refund claim directly to the airline, citing UK261", "days_from_start": 0 },
+        { "label": "Give the airline a reasonable window to respond before pursuing ADR", "days_from_start": 56 },
+        { "label": "Escalate to CEDR or AviationADR — check first which scheme your airline actually belongs to, not all airlines are members", "days_from_start": 57 }
+      ]
+    },
+    "Flights & Travel|US": {
+      "directory": { "name": "US DOT — Air Consumer Protection", "url": "/directory/flights-travel.html#us-passenger-rights" },
+      "article": { "title": "Automatic Refunds and the DOT Rules for Significant Flight Delays", "url": "/blog/automatic-refunds-dot-significant-delay.html" },
+      "tool": { "name": "Flight Disruption Compensation & Reimbursement Letter Generator", "url": "/generate/flight-disruption-compensation-reimbursement.html", "type": "generator" },
+      "template": { "name": "Flight Disruption Expense Tracker", "url": "/templates/flight-disruption-expense-tracker.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Request a refund from the airline for a cancelled or significantly changed flight", "days_from_start": 0 },
+        { "label": "Airline must issue the refund within 7 business days for credit-card purchases (DOT automatic refund rule)", "days_from_start": 7 },
+        { "label": "If refused, file a complaint with the DOT's Aviation Consumer Protection division", "days_from_start": 14 }
+      ]
+    },
+    "Flights & Travel|Australia": {
+      "directory": { "name": "ACCC — Travel Delays and Cancellations", "url": "/directory/flights-travel.html#au-passenger-rights" },
+      "article": { "title": "Flight Delayed in Australia: What Are Your Rights?", "url": "/blog/flight-delay-rights-australia.html" },
+      "tool": { "name": "Flight Disruption Compensation & Reimbursement Letter Generator", "url": "/generate/flight-disruption-compensation-reimbursement.html", "type": "generator" },
+      "template": { "name": "Flight Disruption Expense Tracker", "url": "/templates/flight-disruption-expense-tracker.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact the airline directly and insist on a cash refund (not just a voucher) if the disruption is severe", "days_from_start": 0 },
+        { "label": "Keep every receipt for meals, transport and accommodation caused by the disruption", "days_from_start": 0 },
+        { "label": "Escalate to the Airline Customer Advocate if the airline won't budge (covers only Jetstar, Qantas, Rex and Virgin Australia)", "days_from_start": 14 },
+        { "label": "For a substantive ACL claim, go to your state/territory consumer protection agency instead", "days_from_start": 15 }
+      ]
+    },
+    "Flights & Travel|EU": {
+      "directory": { "name": "EU Air Passenger Rights (Your Europe)", "url": "/directory/flights-travel.html#eu-passenger-rights" },
+      "article": { "title": "Flight Delayed? EU261 Compensation Explained", "url": "/blog/eu-flight-delay-eu261-compensation.html" },
+      "tool": { "name": "EU261 Flight Delay/Cancellation Compensation Claim Generator", "url": "/generate/eu261-flight-compensation-claim.html", "type": "generator" },
+      "template": { "name": "EU Travel Disruption Evidence Log", "url": "/templates/eu-travel-disruption-evidence-log.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Submit a compensation claim directly to the airline, citing EU261", "days_from_start": 0 },
+        { "label": "Give the airline a reasonable window to respond before escalating (enforcement timelines vary by member state)", "days_from_start": 14 },
+        { "label": "Escalate to your national enforcement body, or ECC-Net for a cross-border claim", "days_from_start": 15 }
+      ]
+    },
+    "Crypto & Fintech|UK": {
+      "directory": { "name": "UK — Action Fraud (Crypto Scam Reporting)", "url": "/directory/crypto-fintech.html#actionfraud-scam-report" },
+      "article": { "title": "APP Fraud Reimbursement and Crypto: Why the UK's Mandatory Refund Rule Often Doesn't Cover Crypto Investment Scams", "url": "/blog/uk-app-fraud-reimbursement-crypto-gap.html" },
+      "tool": { "name": "Crypto Complaint Generator", "url": "/generate/crypto-complaint-generator.html", "type": "generator" },
+      "template": null,
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report to your bank/exchange immediately and request a freeze", "days_from_start": 0 },
+        { "label": "Report to Action Fraud", "days_from_start": 1 },
+        { "label": "Ask your bank about APP fraud reimbursement — be aware crypto investment scams are frequently excluded from the mandatory scheme", "days_from_start": 2 },
+        { "label": "If you paid by card, pursue a Section 75/chargeback claim instead", "days_from_start": 3 }
+      ]
+    },
+    "Crypto & Fintech|US": {
+      "directory": { "name": "US — FBI Internet Crime Complaint Center (IC3)", "url": "/directory/crypto-fintech.html#ic3-scam-report" },
+      "article": { "title": "Crypto ATM Scams: Why Regulators Are Cracking Down on These Machines", "url": "/blog/crypto-atm-kiosk-scam-warning.html" },
+      "tool": { "name": "Crypto Complaint Generator", "url": "/generate/crypto-complaint-generator.html", "type": "generator" },
+      "template": null,
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Stop all further transfers and contact the exchange to attempt a freeze", "days_from_start": 0 },
+        { "label": "Report to the FBI's IC3 and the FTC", "days_from_start": 1 },
+        { "label": "If funded by card, dispute the charge with your card issuer", "days_from_start": 2 },
+        { "label": "Follow up or escalate if unresolved", "days_from_start": 30 }
+      ]
+    },
+    "Crypto & Fintech|Australia": {
+      "directory": { "name": "Australia — Scamwatch (ACCC)", "url": "/directory/crypto-fintech.html#scamwatch-scam-report" },
+      "article": { "title": "Financial Liability & Crypto Transactions in Task Scams under the ACL", "url": "/blog/au-crypto-task-scam-financial-liability.html" },
+      "tool": { "name": "Crypto Complaint Generator", "url": "/generate/crypto-complaint-generator.html", "type": "generator" },
+      "template": null,
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact your bank immediately and report the transaction", "days_from_start": 0 },
+        { "label": "Report to ReportCyber and Scamwatch", "days_from_start": 1 },
+        { "label": "If funded by card, dispute the charge with your bank", "days_from_start": 2 },
+        { "label": "Escalate to AFCA if your bank won't act", "days_from_start": 30 }
+      ]
+    },
+    "Crypto & Fintech|EU": {
+      "directory": { "name": "EU — Europol (Cross-Border Crypto Fraud)", "url": "/directory/crypto-fintech.html#europol-scam-report" },
+      "article": { "title": "The EU's Transfer of Funds Regulation: What Actually Changed for Your Crypto Transfers", "url": "/blog/eu-tfr-travel-rule-crypto-transfers.html" },
+      "tool": { "name": "Crypto Complaint Generator", "url": "/generate/crypto-complaint-generator.html", "type": "generator" },
+      "template": null,
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Report to your bank/payment provider immediately and request a freeze", "days_from_start": 0 },
+        { "label": "Report to your national police or cybercrime unit (Europol supports cross-border cases but doesn't take individual reports directly)", "days_from_start": 1 },
+        { "label": "If funded by card, pursue a chargeback through your card issuer", "days_from_start": 2 },
+        { "label": "Follow up with your national regulator if the platform itself was unlicensed", "days_from_start": 14 }
+      ]
+    },
+    "Training & Education|UK": {
+      "directory": { "name": "UK — Office of the Independent Adjudicator (OIA)", "url": "/directory/training-education.html#uk-oia" },
+      "article": { "title": "Reclaiming a University Tuition Deposit: Your Rights Under UK Consumer Law", "url": "/blog/uk-university-deposit-refund-cma-rights.html" },
+      "tool": { "name": "Education Contract Analyzer", "url": "/education-contract-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Tuition Fee Dispute Toolkit", "url": "/templates/tuition-fee-dispute-toolkit.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Request your deposit/tuition refund from the university in writing", "days_from_start": 0 },
+        { "label": "Give the university a reasonable window to respond via its own complaints process", "days_from_start": 14 },
+        { "label": "Escalate to the OIA once the university's internal complaints process is exhausted", "days_from_start": 15 },
+        { "label": "Deadline to refer to the OIA (12 months from the university's final Completion of Procedures letter)", "days_from_start": 380 }
+      ]
+    },
+    "Training & Education|US": {
+      "directory": { "name": "US — Federal Trade Commission (Education & Bootcamp Claims)", "url": "/directory/training-education.html#us-ftc-education" },
+      "article": { "title": "Fake Job Placement Rates: How Bootcamps Inflate Outcomes and What the FTC Requires", "url": "/blog/us-ftc-bootcamp-job-placement-claims.html" },
+      "tool": { "name": "Course Advertisement Analyzer", "url": "/course-advertisement-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Online Course Refund Toolkit", "url": "/templates/online-course-refund-toolkit.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "File a complaint with the FTC about the deceptive job-placement claims", "days_from_start": 0 },
+        { "label": "Request a refund directly from the school/bootcamp in writing, citing the misrepresentation", "days_from_start": 1 },
+        { "label": "If paid by card, dispute the charge with your card issuer", "days_from_start": 3 },
+        { "label": "Check your state's specific vocational-school refund law for an additional deadline", "days_from_start": 5 }
+      ]
+    },
+    "Training & Education|Australia": {
+      "directory": { "name": "Australia — Tuition Protection Service (TPS)", "url": "/directory/training-education.html#au-tps-complaints" },
+      "article": { "title": "Your Australian College Closed: How the Tuition Protection Service Actually Works", "url": "/blog/au-tuition-protection-service-provider-closure.html" },
+      "tool": { "name": "Education Contract Analyzer", "url": "/education-contract-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Online Course Refund Toolkit", "url": "/templates/online-course-refund-toolkit.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Contact your provider in writing about the closure or non-delivery of your course", "days_from_start": 0 },
+        { "label": "Contact the Tuition Protection Service — it should place you in a replacement course or arrange a refund", "days_from_start": 1 },
+        { "label": "Follow up if the replacement course or refund isn't arranged", "days_from_start": 14 }
+      ]
+    },
+    "Training & Education|EU": {
+      "directory": { "name": "EU — European Education Area (European Commission)", "url": "/directory/training-education.html#eu-education-training" },
+      "article": { "title": "The 14-Day Right of Withdrawal for Online Courses in the EU", "url": "/blog/eu-right-of-withdrawal-online-courses.html" },
+      "tool": { "name": "Education Contract Analyzer", "url": "/education-contract-analyzer.html", "type": "analyzer" },
+      "template": { "name": "Online Course Refund Toolkit", "url": "/templates/online-course-refund-toolkit.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Exercise the 14-day right of withdrawal in writing, if still within the window", "days_from_start": 0 },
+        { "label": "If the window has passed, contact the provider directly citing the withdrawal right and request a refund", "days_from_start": 1 },
+        { "label": "If refused, check your national consumer protection authority via the European Education Area", "days_from_start": 14 }
       ]
     }
   }
