@@ -41,7 +41,15 @@
   "description": "Kibbo's resources, tools and templates for recovering from a scam, organized by scam type: identity theft, bank fraud, online shopping, phishing and investment scams.",
   "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
   "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
-  "inLanguage": "en"
+  "inLanguage": "en",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Consumer Rights Wizard", "item": "https://www.getkibbo.com/wizard" },
+      { "@type": "ListItem", "position": 3, "name": "Scam Recovery Hub", "item": "https://www.getkibbo.com/scam-recovery-hub" }
+    ]
+  }
 }
 </script>
 </head>
@@ -68,6 +76,7 @@
 <!-- PAGE HEAD -->
 <div class="section-page-hero">
   <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/wizard.html">← Back to Wizard</a></nav>
     <p class="section-label">Scam Recovery Hub</p>
     <h1 class="section-title">Been scammed? Start with <em>what happened</em></h1>
     <p class="section-subtitle">Everything Kibbo has for getting your money back and reporting what happened — grouped by scam type, not by resource type, so you can go straight to the ones that fit your situation.</p>

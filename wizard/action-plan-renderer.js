@@ -12,6 +12,12 @@
  *                             on that screen. Both render identical output for the
  *                             same problem+country — there is no second copy of this
  *                             logic anywhere else.
+ *
+ * When ctx.problem is "Scam" (any country — currently UK/US/Australia per
+ * wizard-config.json; EU has no Scam combination so this never fires for EU), a
+ * 5th card links to the standalone Scam Recovery Hub (scam-recovery-hub.html,
+ * URL unchanged, no longer in main nav) so users can drill into their specific
+ * scam sub-type. No other category gets this card.
  */
 (function () {
   var CARD_META = {
@@ -20,6 +26,7 @@
     template: { eyebrow: 'Ready-made template', cta: 'Get the template' },
     tool_analyzer: { eyebrow: 'AI analyzer', cta: 'Open the analyzer' },
     tool_generator: { eyebrow: 'Letter generator', cta: 'Open the generator' },
+    scam_hub: { eyebrow: 'Explore by scam type', cta: 'Browse the Scam Recovery Hub' },
   };
 
   function card(esc, metaKey, title, url) {
@@ -43,6 +50,9 @@
       cards.push(card(esc, metaKey, combo.tool.name, combo.tool.url));
     }
     if (combo.template) cards.push(card(esc, 'template', combo.template.name, combo.template.url));
+    if (ctx.problem === 'Scam') {
+      cards.push(card(esc, 'scam_hub', 'Scam Recovery Hub', '/scam-recovery-hub.html'));
+    }
 
     var html =
       '<div class="wiz-screen">' +
