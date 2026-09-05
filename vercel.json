@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/templates/supplement-tracking-diary",
+      "destination": "/templates/supplement-tracking-diary-free",
+      "permanent": true
+    },
+    {
+      "source": "/templates/supplement-tracking-diary.html",
+      "destination": "/templates/supplement-tracking-diary-free",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
