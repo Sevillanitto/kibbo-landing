@@ -70,7 +70,9 @@
   /* Tools by type */
   .cv-subhead { font-family: var(--font-serif); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); margin: 36px 0 16px; }
   .cv-subhead:first-of-type { margin-top: 22px; }
-  .cv-tool-note { font-size: 14px; color: var(--text-secondary); margin: -10px 0 16px; }
+  .cv-tool-note { font-size: 14px; color: var(--text-secondary); margin: 0 0 20px; }
+  .cv-tool-panel { display: none; }
+  .cv-tool-panel.active { display: block; }
 
   /* Directory accordion */
   .cv-accordion { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
@@ -173,7 +175,13 @@
     <h2 id="cv-tools-h2" class="cl-hub-cat">Tools by type</h2>
     <p class="cl-hub-cat-sub">Every generator, template, and checklist Kibbo has built for buying, owning, and disputing a vehicle, grouped by what it actually does.</p>
 
-    <h3 class="cv-subhead">Generators (2)</h3>
+    <div class="crc-tabs" role="tablist" aria-label="Tool type" id="cvToolTabs">
+      <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="generators">Generators (2)</button>
+      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="templates">Templates (7)</button>
+      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="checklists">Checklists (7)</button>
+    </div>
+
+    <div class="cv-tool-panel active" data-toolpanel="generators">
     <p class="cv-tool-note">Answer a few questions, get a formal letter instantly. Gumroad checkout is still being finalised for both — the on-site tools are live now, the buy button will go live once that's connected.</p>
     <div class="prod-grid">
       <article class="prod-card">
@@ -195,8 +203,9 @@
         </div>
       </article>
     </div>
+    </div>
 
-    <h3 class="cv-subhead">Templates (7)</h3>
+    <div class="cv-tool-panel" data-toolpanel="templates">
     <p class="cv-tool-note">Paid, downloadable — inspecting a used car before you buy, tracking ownership costs and history, and building the evidence for a dealer dispute, a repair, or an accident. Gumroad checkout is still being finalised for these seven — same as the generators above.</p>
     <div class="prod-grid">
       <article class="prod-card">
@@ -263,8 +272,9 @@
         </div>
       </article>
     </div>
+    </div>
 
-    <h3 class="cv-subhead">Checklists (7)</h3>
+    <div class="cv-tool-panel" data-toolpanel="checklists">
     <p class="cv-tool-note">Free, interactive — inspect a used car before you buy, verify its history, spot a seller's red flags, and build the evidence for a dealer dispute, a repair, a warranty claim, or an accident.</p>
     <div class="cl-hub-grid">
       <a class="cl-card" href="/checklists/used-car-buying-inspection-checklist.html">
@@ -310,7 +320,14 @@
         <div class="cl-card-meta"><span>⏱ 10 min</span><span>✓ 16 checks</span><span class="cl-card-go">Start →</span></div>
       </a>
     </div>
+    </div>
   </section>
+
+  <!-- CALCULATORS / CASES / INVESTIGATIONS — populated by JS only when content exists.
+       See the script at the bottom: each data array is empty (verified — none of these
+       3 content types exist anywhere on the site yet), so renderCardSection() creates
+       zero DOM nodes for them. Not a "Coming soon" message — nothing at all. -->
+  <div id="cvFutureSections"></div>
 
   <!-- DIRECTORY, GROUPED -->
   <section aria-labelledby="cv-directory-h2" style="margin-top: 56px;">
@@ -556,6 +573,74 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-panel') === region); });
     });
   });
+})();
+
+// Tools type tabs (Update 1 — same tabbed pattern as the Guides tabs above)
+(function () {
+  var tabs = document.querySelectorAll('#cvToolTabs .crc-tab');
+  var panels = document.querySelectorAll('.cv-tool-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var cat = tab.getAttribute('data-toolcat');
+      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+      panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
+    });
+  });
+})();
+
+// Calculators / Cases / Investigations (Update 2) — structurally ready, but each
+// array is empty today (verified: none of these 3 content types exist anywhere on
+// the site yet). renderCardSection() creates zero DOM nodes when its array is
+// empty — no <section>, no heading, no "coming soon" placeholder. To add content
+// later: populate the matching array with { title, desc, url } objects; the
+// section, heading and cards will appear automatically on next page load.
+(function () {
+  var CALCULATORS = [];
+  var CASES = [];
+  var INVESTIGATIONS = [];
+
+  function buildToolCard(item) {
+    var a = document.createElement('a');
+    a.className = 'cl-card';
+    a.href = item.url;
+    var tag = document.createElement('span');
+    tag.className = 'cl-card-tag';
+    tag.textContent = item.tag || 'Calculator';
+    var h3 = document.createElement('h3');
+    h3.className = 'cl-card-title';
+    h3.textContent = item.title;
+    var p = document.createElement('p');
+    p.className = 'cl-card-desc';
+    p.textContent = item.desc;
+    a.appendChild(tag); a.appendChild(h3); a.appendChild(p);
+    return a;
+  }
+
+  function renderCardSection(container, id, heading, sub, items) {
+    if (!items || !items.length) return; // zero DOM output when empty — no placeholder
+    var section = document.createElement('section');
+    section.id = id;
+    section.setAttribute('aria-labelledby', id + '-h2');
+    section.style.marginTop = '56px';
+    var h2 = document.createElement('h2');
+    h2.id = id + '-h2';
+    h2.className = 'cl-hub-cat';
+    h2.textContent = heading;
+    var p = document.createElement('p');
+    p.className = 'cl-hub-cat-sub';
+    p.textContent = sub;
+    var grid = document.createElement('div');
+    grid.className = 'cl-hub-grid';
+    items.forEach(function (item) { grid.appendChild(buildToolCard(item)); });
+    section.appendChild(h2); section.appendChild(p); section.appendChild(grid);
+    container.appendChild(section);
+  }
+
+  var futureContainer = document.getElementById('cvFutureSections');
+  renderCardSection(futureContainer, 'cv-calculators', 'Calculators', 'Interactive calculators for this block.', CALCULATORS);
+  renderCardSection(futureContainer, 'cv-cases', 'Cases', 'Real, anonymized case studies.', CASES);
+  renderCardSection(futureContainer, 'cv-investigations', 'Investigations', 'Original investigative reporting for this block.', INVESTIGATIONS);
 })();
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
