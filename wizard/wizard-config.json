@@ -1,6 +1,6 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
-  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education", "Food & Hospitality", "Telecoms & Utilities", "Health & Supplements", "Home Renovations & Services", "Public Services & Administration", "Legal & Contracts"],
+  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education", "Food & Hospitality", "Telecoms & Utilities", "Health & Supplements", "Home Renovations & Services", "Public Services & Administration", "Legal & Contracts", "Cars & Vehicles", "Healthcare & Medical", "Privacy & Data"],
   "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
@@ -744,6 +744,160 @@
         { "label": "Give a reasonable deadline to resolve it directly", "days_from_start": 14 },
         { "label": "Prepare your evidence file (contract, timeline, communications) before filing", "days_from_start": 15 },
         { "label": "File with your state's civil/administrative tribunal (NCAT/VCAT)", "days_from_start": 21 }
+      ]
+    },
+    "Cars & Vehicles|US": {
+      "directory": { "name": "Better Business Bureau — File a Dealer Complaint (US)", "url": "/directory/cars-vehicles.html#bbb-dealer-complaint-us" },
+      "article": { "title": "A Used Car Problem After Purchase: The Step-by-Step Procedure", "url": "/blog/us-used-car-problems-after-purchase-steps.html" },
+      "tool": { "name": "Vehicle Purchase & Warranty Complaint Generator", "url": "/generate/vehicle-purchase-warranty-complaint-generator.html", "type": "generator" },
+      "template": { "name": "Car Dealer Dispute Evidence Pack", "url": "/templates/car-dealer-dispute-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Document the fault and gather all purchase paperwork (contract, Buyers Guide, any warranty)", "days_from_start": 0 },
+        { "label": "Get an independent inspection or diagnosis to establish the fault existed at the time of sale", "days_from_start": 3 },
+        { "label": "Contact the dealer in writing, citing any applicable warranty or your state's lemon law", "days_from_start": 5 },
+        { "label": "File a complaint with the BBB or your state's dealer licensing board if unresolved", "days_from_start": 14 }
+      ]
+    },
+    "Cars & Vehicles|UK": {
+      "directory": { "name": "The Motor Ombudsman — Escalate a Dealer or Garage Dispute (UK)", "url": "/directory/cars-vehicles.html#motor-ombudsman-uk" },
+      "article": { "title": "A Used Car Fault After Purchase: How the Consumer Rights Act 2015 Applies", "url": "/blog/uk-used-car-problem-after-purchase-rights.html" },
+      "tool": { "name": "Vehicle Purchase & Warranty Complaint Generator", "url": "/generate/vehicle-purchase-warranty-complaint-generator.html", "type": "generator" },
+      "template": { "name": "Car Dealer Dispute Evidence Pack", "url": "/templates/car-dealer-dispute-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Confirm whether you bought from a dealer or a private seller — this changes your rights entirely (CRA 2015 only covers a dealer)", "days_from_start": 0 },
+        { "label": "If from a dealer, reject the car for a full refund within the 30-day short-term right to reject", "days_from_start": 30 },
+        { "label": "After 30 days, request a repair or replacement first, before a refund", "days_from_start": 31 },
+        { "label": "Escalate to the Motor Ombudsman if the dealer is a member scheme, or small claims otherwise", "days_from_start": 45 }
+      ]
+    },
+    "Cars & Vehicles|Australia": {
+      "directory": { "name": "NSW Fair Trading — Vehicle Dealer/Repairer Complaint (Australia)", "url": "/directory/cars-vehicles.html#nsw-fair-trading-dealer-au" },
+      "article": { "title": "Documenting a Major Fault for an Australian Consumer Guarantee Claim", "url": "/blog/au-used-car-major-fault-documentation.html" },
+      "tool": { "name": "Vehicle Purchase & Warranty Complaint Generator", "url": "/generate/vehicle-purchase-warranty-complaint-generator.html", "type": "generator" },
+      "template": { "name": "Car Dealer Dispute Evidence Pack", "url": "/templates/car-dealer-dispute-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Document the fault with photos, dates, and an independent assessment where possible", "days_from_start": 0 },
+        { "label": "Contact the dealer in writing, citing the relevant Australian Consumer Law guarantee", "days_from_start": 3 },
+        { "label": "Lodge a complaint with your state's Fair Trading or Consumer Affairs agency if unresolved", "days_from_start": 14 },
+        { "label": "Apply to your state tribunal (NCAT/VCAT) for a binding decision if still unresolved", "days_from_start": 30 }
+      ]
+    },
+    "Cars & Vehicles|EU": {
+      "directory": { "name": "ECC-Net — Cross-Border EU Vehicle Purchase Dispute", "url": "/directory/cars-vehicles.html#ecc-net-vehicles-eu" },
+      "article": { "title": "A Used Car Not as Advertised: Proving Your Claim Under EU Conformity Rules", "url": "/blog/eu-used-car-not-as-advertised-evidence.html" },
+      "tool": { "name": "Vehicle Purchase & Warranty Complaint Generator", "url": "/generate/vehicle-purchase-warranty-complaint-generator.html", "type": "generator" },
+      "template": { "name": "Used Car Seller / Listing Evidence Pack", "url": "/templates/used-car-seller-listing-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": true, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Compare the vehicle against exactly what was advertised or promised, and preserve the original listing", "days_from_start": 0 },
+        { "label": "Notify the seller in writing of the non-conformity, citing your consumer rights", "days_from_start": 7 },
+        { "label": "Request repair or replacement first, then a price reduction or refund if that fails", "days_from_start": 14 },
+        { "label": "If the seller is in another EU member state, escalate via ECC-Net", "days_from_start": 21 }
+      ]
+    },
+    "Healthcare & Medical|US": {
+      "directory": { "name": "CMS — Hospital Price Transparency & No Surprises Help Desk (US)", "url": "/directory/healthcare-medical.html#us-cms-price-transparency" },
+      "article": { "title": "The No Surprises Act: What's Still Protected From Balance Billing in 2026", "url": "/blog/no-surprises-act-2026-balance-billing-protections.html" },
+      "tool": { "name": "Healthcare Billing Dispute & Refund Letter Generator", "url": "/generate/healthcare-billing-dispute-refund-letter.html", "type": "generator" },
+      "template": { "name": "Medical Expenses & Billing Dispute Tracker", "url": "/templates/medical-billing-dispute-tracker.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Compare the bill to your insurance EOB and check whether it falls under an NSA-protected situation (emergency, in-network facility, or air ambulance)", "days_from_start": 0 },
+        { "label": "Dispute the balance bill directly with your provider and insurer if it's improperly applied", "days_from_start": 7 },
+        { "label": "File a complaint with CMS's No Surprises Help Desk if unresolved", "days_from_start": 14 },
+        { "label": "Escalate to your state insurance regulator or the CFPB if it becomes a debt-collection or credit-reporting issue", "days_from_start": 30 }
+      ]
+    },
+    "Healthcare & Medical|UK": {
+      "directory": { "name": "Care Quality Commission (CQC) — Health & Social Care Regulator (England)", "url": "/directory/healthcare-medical.html#uk-cqc" },
+      "article": { "title": "The NHS Complaint Deadlock: The Exact Procedure for Escalating to the PHSO", "url": "/blog/nhs-complaint-deadlock-phso-escalation.html" },
+      "tool": { "name": "Healthcare Complaint Letter Generator", "url": "/generate/healthcare-complaint-letter.html", "type": "generator" },
+      "template": { "name": "Healthcare Complaint & Escalation Evidence Log", "url": "/templates/healthcare-complaint-escalation-log.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Raise the complaint with the GP, hospital, or dentist directly", "days_from_start": 0 },
+        { "label": "The organisation must acknowledge your complaint within 3 working days", "days_from_start": 3 },
+        { "label": "Target full written response within around 25 working days (longer for genuinely complex cases)", "days_from_start": 25 },
+        { "label": "If unresolved, escalate to the PHSO — you have 12 months from the incident to do this", "days_from_start": 365 }
+      ]
+    },
+    "Healthcare & Medical|Australia": {
+      "directory": { "name": "AHPRA — Lodge a Notification About a Practitioner (Australia)", "url": "/directory/healthcare-medical.html#au-ahpra-notifications" },
+      "article": { "title": "Doctor or Hospital? Finding the Right Australian Healthcare Complaints Body", "url": "/blog/australia-healthcare-complaint-who-to-contact.html" },
+      "tool": { "name": "Healthcare Complaint Letter Generator", "url": "/generate/healthcare-complaint-letter.html", "type": "generator" },
+      "template": { "name": "Healthcare Complaint & Escalation Evidence Log", "url": "/templates/healthcare-complaint-escalation-log.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Identify your state or territory first — NSW (HCCC) and Queensland (Office of the Health Ombudsman) run their own separate systems instead of AHPRA", "days_from_start": 0 },
+        { "label": "Raise the concern directly with the provider first, where it's safe and reasonable to do so", "days_from_start": 0 },
+        { "label": "Lodge your complaint with the correct body for your state and complaint type", "days_from_start": 7 },
+        { "label": "If unsure which body applies, check AHPRA's own list of state-based health complaints organisations", "days_from_start": 7 }
+      ]
+    },
+    "Privacy & Data|US": {
+      "directory": { "name": "FTC — Report a Company Privacy Violation (US)", "url": "/directory/privacy-data.html#us-ftc-privacy-regulator" },
+      "article": { "title": "When a Privacy Policy Doesn't Match Reality: Filing an FTC Complaint", "url": "/blog/ftc-privacy-complaint-us.html" },
+      "tool": { "name": "Privacy Regulator Complaint Generator", "url": "/generate/privacy-regulator-complaint.html", "type": "generator" },
+      "template": { "name": "Privacy Complaint & Escalation Evidence Pack", "url": "/templates/privacy-complaint-escalation-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Compare the company's actual practices against its own stated privacy policy", "days_from_start": 0 },
+        { "label": "Contact the company directly and request it stop the practice or correct the issue", "days_from_start": 7 },
+        { "label": "Gather evidence — the privacy policy text, screenshots, and correspondence", "days_from_start": 7 },
+        { "label": "File a complaint with the FTC via reportfraud.ftc.gov if unresolved", "days_from_start": 14 }
+      ]
+    },
+    "Privacy & Data|UK": {
+      "directory": { "name": "ICO — Report a GDPR Data Protection Violation (UK)", "url": "/directory/privacy-data.html#uk-ico-privacy-regulator" },
+      "article": { "title": "How to Report a GDPR Violation to the ICO When a Company Ignores Your Right to Erasure", "url": "/blog/ico-gdpr-complaint-uk.html" },
+      "tool": { "name": "Privacy Regulator Complaint Generator", "url": "/generate/privacy-regulator-complaint.html", "type": "generator" },
+      "template": { "name": "Privacy Complaint & Escalation Evidence Pack", "url": "/templates/privacy-complaint-escalation-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Send a written erasure or deletion request to the company, citing UK GDPR", "days_from_start": 0 },
+        { "label": "The company has one calendar month to respond (extendable by up to 2 further months for complex requests)", "days_from_start": 30 },
+        { "label": "If ignored or refused without valid grounds, escalate to the ICO", "days_from_start": 31 },
+        { "label": "The ICO investigates and can take enforcement action", "days_from_start": 60 }
+      ]
+    },
+    "Privacy & Data|Australia": {
+      "directory": { "name": "OAIC — Australian Privacy Complaint Resources", "url": "/directory/privacy-data.html#au-privacy-dispute-resources" },
+      "article": { "title": "Filing a Privacy Act Complaint With the OAIC", "url": "/blog/oaic-privacy-complaint-australia.html" },
+      "tool": { "name": "Privacy Regulator Complaint Generator", "url": "/generate/privacy-regulator-complaint.html", "type": "generator" },
+      "template": { "name": "Privacy Complaint & Escalation Evidence Pack", "url": "/templates/privacy-complaint-escalation-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Complain in writing directly to the organisation first, citing the specific Australian Privacy Principle breached", "days_from_start": 0 },
+        { "label": "Give the organisation a reasonable opportunity to respond — generally 30 days", "days_from_start": 30 },
+        { "label": "If ignored or the response is unsatisfactory, lodge a formal complaint with the OAIC", "days_from_start": 31 },
+        { "label": "The OAIC investigates and can make a determination", "days_from_start": 60 }
+      ]
+    },
+    "Privacy & Data|EU": {
+      "directory": { "name": "EDPB — EU GDPR Rights & Data Protection Authority Resources", "url": "/directory/privacy-data.html#eu-gdpr-privacy-resources" },
+      "article": { "title": "How to File a GDPR Complaint, Step by Step", "url": "/blog/eu-gdpr-complaint-guide.html" },
+      "tool": { "name": "Privacy Regulator Complaint Generator", "url": "/generate/privacy-regulator-complaint.html", "type": "generator" },
+      "template": { "name": "Privacy Complaint & Escalation Evidence Pack", "url": "/templates/privacy-complaint-escalation-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Contact the company's Data Protection Officer (DPO) directly if it has one — details are usually in the privacy policy", "days_from_start": 0 },
+        { "label": "Give the DPO/company 30 days to respond satisfactorily", "days_from_start": 30 },
+        { "label": "If unresolved, compile your correspondence and file a formal complaint with your national Data Protection Authority", "days_from_start": 31 },
+        { "label": "Your DPA investigates, coordinating with the company's lead authority via the One-Stop-Shop if it operates in multiple member states", "days_from_start": 60 }
       ]
     }
   }
