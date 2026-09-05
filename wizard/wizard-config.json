@@ -1,6 +1,6 @@
 {
   "_readme": "Consumer Rights Wizard + Rights Checker + Timeline Generator config — the ONLY file you edit to change any of the three tools. decision-tree-core.js reads 'problems', 'countries' and 'combinations' and renders screens 1-2 dynamically (no problem/country-specific code); each page supplies its own screen-3 renderer. TO ADD A PROBLEM: add its name to 'problems' and add a 'Problem|Country' entry for each country. TO ADD A COUNTRY (e.g. 'EU'): add it to 'countries' and add a 'Problem|EU' entry for each problem. Each combination may carry: directory, article, tool, template (any may be null — the Wizard result screen skips null cards); 'rights' (Refund/Replacement/Repair/Chargeback/Escalation booleans, shown by the Rights Checker); and 'timeline' (ordered steps with a label and days_from_start integer, shown by the Timeline Generator) plus 'timeline_recommended' (true when the steps are practical recommendations rather than statutory deadlines, so the UI can label them honestly). A right/deadline is set only when supported by the linked article/resource. All urls are site-absolute (leading slash).",
-  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education", "Food & Hospitality", "Telecoms & Utilities", "Health & Supplements"],
+  "problems": ["Scam", "Financial & Banking", "Subscriptions & Services", "Parcel & Delivery", "Housing & Rentals", "Employment", "Flights & Travel", "Crypto & Fintech", "Training & Education", "Food & Hospitality", "Telecoms & Utilities", "Health & Supplements", "Home Renovations & Services", "Public Services & Administration", "Legal & Contracts"],
   "countries": ["UK", "US", "Australia", "EU"],
   "combinations": {
     "Scam|UK": {
@@ -618,6 +618,132 @@
         { "label": "Report to the TGA (Report a Problem) and check the DAEN database", "days_from_start": 1 },
         { "label": "Request a refund or replacement from the retailer under the ACL", "days_from_start": 2 },
         { "label": "Escalate to Product Safety Australia (ACCC) or your state consumer protection agency if refused", "days_from_start": 14 }
+      ]
+    },
+    "Home Renovations & Services|US": {
+      "directory": { "name": "CSLB — Check a Contractor's License (California)", "url": "/directory/home-renovations-services.html#cslb-license-check" },
+      "article": { "title": "How to Check a Contractor's License Before You Hire (CSLB)", "url": "/blog/us-audit-contractor-license-cslb.html" },
+      "tool": { "name": "Contractor Dispute & Demand Letter Generator", "url": "/generate/contractor-dispute-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Defective Work / Contractor Dispute Evidence Pack", "url": "/templates/defective-work-contractor-dispute-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Verify the contractor's license status before signing anything or paying a deposit", "days_from_start": 0 },
+        { "label": "If work is defective or incomplete, document it and request repair or a refund in writing", "days_from_start": 7 },
+        { "label": "File a complaint with your state licensing board's intervention/complaint program if unresolved", "days_from_start": 14 },
+        { "label": "Consider small claims court for an unresolved payment or damage dispute", "days_from_start": 30 }
+      ]
+    },
+    "Home Renovations & Services|UK": {
+      "directory": { "name": "Citizens Advice — General Consumer Complaint Guidance", "url": "/directory/home-renovations-services.html#citizens-advice-uk" },
+      "article": { "title": "Cowboy Builders and Your Rights Under the Consumer Rights Act 2015", "url": "/blog/uk-cowboy-builders-consumer-rights-act.html" },
+      "tool": { "name": "Contractor Dispute & Demand Letter Generator", "url": "/generate/contractor-dispute-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Defective Work / Contractor Dispute Evidence Pack", "url": "/templates/defective-work-contractor-dispute-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Notify the builder in writing of the defect, giving a reasonable chance to fix it (Consumer Rights Act 2015 — repeat performance)", "days_from_start": 0 },
+        { "label": "If unresolved or refused, request a price reduction or refund instead", "days_from_start": 14 },
+        { "label": "Get free guidance from Citizens Advice and consider small claims court", "days_from_start": 21 },
+        { "label": "File a claim (Money Claim Online or county court) for amounts up to £10,000", "days_from_start": 30 }
+      ]
+    },
+    "Home Renovations & Services|Australia": {
+      "directory": { "name": "DBDRV — Free Government Building Dispute Conciliation (Victoria)", "url": "/directory/home-renovations-services.html#dbdrv-au" },
+      "article": { "title": "Structural Defect Your Builder Won't Fix? The DBDRV and NSW Fair Trading Process", "url": "/blog/au-dbdrv-nsw-fair-trading-dispute-process.html" },
+      "tool": { "name": "Contractor Dispute & Demand Letter Generator", "url": "/generate/contractor-dispute-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Defective Work / Contractor Dispute Evidence Pack", "url": "/templates/defective-work-contractor-dispute-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Notify the builder in writing of the defect", "days_from_start": 0 },
+        { "label": "Lodge a complaint with your state's free government conciliation service (DBDRV in Victoria, Fair Trading in NSW)", "days_from_start": 14 },
+        { "label": "Obtain a conciliation certificate if unresolved — required before you can escalate to tribunal", "days_from_start": 30 },
+        { "label": "Apply to your state tribunal (VCAT/NCAT) for a binding decision", "days_from_start": 31 }
+      ]
+    },
+    "Home Renovations & Services|EU": {
+      "directory": { "name": "ECC-Net — Cross-Border EU Consumer Complaint (Home Renovation)", "url": "/directory/home-renovations-services.html#ecc-net-eu-renovations" },
+      "article": { "title": "The 14-Day Withdrawal Right for a Renovation Contract Signed at Your Door", "url": "/blog/eu-14-day-withdrawal-right-renovation-contract.html" },
+      "tool": { "name": "Contractor Dispute & Demand Letter Generator", "url": "/generate/contractor-dispute-demand-letter-generator.html", "type": "generator" },
+      "template": null,
+      "rights": { "Refund": true, "Replacement": false, "Repair": true, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Check whether the contract was signed off-premises (e.g. at your home) — this can extend your withdrawal window well beyond 14 days if you weren't told about it", "days_from_start": 0 },
+        { "label": "Send a written withdrawal notice within the 14-day period if still applicable", "days_from_start": 14 },
+        { "label": "If the window has passed, request a refund or repair directly, citing your national consumer protection law", "days_from_start": 15 },
+        { "label": "Escalate via ECC-Net if the contractor is based in a different EU member state", "days_from_start": 21 }
+      ]
+    },
+    "Public Services & Administration|US": {
+      "directory": { "name": "Office of Information Policy (DOJ) — Federal FOIA Policy", "url": "/directory/public-services-administration.html#oip-us" },
+      "article": { "title": "How to Appeal a FOIA Response That Overuses Exemptions 5 and 7", "url": "/blog/us-foia-appeal-exemption-5-7-redactions.html" },
+      "tool": { "name": "Administrative Appeal, Review & Decision Response Generator", "url": "/generate/administrative-appeal-review-decision-response-generator.html", "type": "generator" },
+      "template": { "name": "Administrative Decision Review & Appeal Evidence Pack", "url": "/templates/administrative-decision-review-appeal-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": false,
+      "timeline": [
+        { "label": "Identify the specific FOIA exemption cited in the denial or redaction", "days_from_start": 0 },
+        { "label": "File a formal administrative appeal with the agency (typically within 90 days of the response)", "days_from_start": 5 },
+        { "label": "The agency must respond to your appeal within 20 business days (statutory)", "days_from_start": 33 },
+        { "label": "If denied again, you can file suit in US federal district court", "days_from_start": 34 }
+      ]
+    },
+    "Public Services & Administration|UK": {
+      "directory": { "name": "Parliamentary and Health Service Ombudsman (PHSO)", "url": "/directory/public-services-administration.html#phso-uk" },
+      "article": { "title": "The MP Filter for NHS Complaints: A Rule That Never Actually Applied", "url": "/blog/uk-ombudsman-mp-filter-nhs-complaints.html" },
+      "tool": { "name": "Government Complaint Letter Generator", "url": "/generate/government-complaint-letter-generator.html", "type": "generator" },
+      "template": { "name": "Government Complaint Evidence Pack", "url": "/templates/government-complaint-evidence-pack.html" },
+      "rights": { "Refund": false, "Replacement": false, "Repair": false, "Chargeback": false, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Complete the agency or department's own complaints process first", "days_from_start": 0 },
+        { "label": "For an NHS complaint, escalate directly to the PHSO — no MP referral is required", "days_from_start": 30 },
+        { "label": "For most other government department complaints, check the current MP-referral requirement, which is being phased out", "days_from_start": 30 },
+        { "label": "PHSO investigates and issues its findings (timeline varies by case)", "days_from_start": 60 }
+      ]
+    },
+    "Legal & Contracts|US": {
+      "directory": { "name": "ABA — Lawyer Referral Directory (Find Your State Bar)", "url": "/directory/legal-contracts.html#state-bar-lawyer-referral" },
+      "article": { "title": "How to Verify a Lawyer Is Licensed Through Your State Bar", "url": "/blog/state-bar-lawyer-referral-us.html" },
+      "tool": { "name": "Contract & Demand Letter Generator", "url": "/generate/contract-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Small Claims Evidence Pack", "url": "/templates/small-claims-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Verify the other party (or your attorney) is licensed and in good standing via your state bar", "days_from_start": 0 },
+        { "label": "Send a formal demand letter citing the specific contract breach", "days_from_start": 3 },
+        { "label": "Consider AAA consumer arbitration or mediation if the contract has an arbitration clause", "days_from_start": 14 },
+        { "label": "File in small claims court if arbitration doesn't apply and the amount qualifies", "days_from_start": 21 }
+      ]
+    },
+    "Legal & Contracts|UK": {
+      "directory": { "name": "Citizens Advice — Using Alternative Dispute Resolution", "url": "/directory/legal-contracts.html#citizens-advice-adr" },
+      "article": { "title": "Check Your Case Before You File: Citizens Advice's Free Legal Guidance", "url": "/blog/citizens-advice-legal-help-uk.html" },
+      "tool": { "name": "Contract & Demand Letter Generator", "url": "/generate/contract-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Small Claims Evidence Pack", "url": "/templates/small-claims-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Get free guidance from Citizens Advice to check your legal position before acting", "days_from_start": 0 },
+        { "label": "Send a formal demand letter (Letter Before Action)", "days_from_start": 3 },
+        { "label": "Attempt ADR or mediation if the other party is willing", "days_from_start": 14 },
+        { "label": "File in the small claims track (claims up to £10,000) if unresolved", "days_from_start": 21 }
+      ]
+    },
+    "Legal & Contracts|Australia": {
+      "directory": { "name": "NSW Civil and Administrative Tribunal (NCAT)", "url": "/directory/legal-contracts.html#au-ncat-small-claims" },
+      "article": { "title": "Before You Think About a Tribunal, Build the File: Preparing an Australian Small Claim", "url": "/blog/au-small-claims-tribunal-preparation.html" },
+      "tool": { "name": "Contract & Demand Letter Generator", "url": "/generate/contract-demand-letter-generator.html", "type": "generator" },
+      "template": { "name": "Small Claims Evidence Pack", "url": "/templates/small-claims-evidence-pack.html" },
+      "rights": { "Refund": true, "Replacement": false, "Repair": false, "Chargeback": true, "Escalation": true },
+      "timeline_recommended": true,
+      "timeline": [
+        { "label": "Send a formal demand letter citing the specific contract breach", "days_from_start": 0 },
+        { "label": "Give a reasonable deadline to resolve it directly", "days_from_start": 14 },
+        { "label": "Prepare your evidence file (contract, timeline, communications) before filing", "days_from_start": 15 },
+        { "label": "File with your state's civil/administrative tribunal (NCAT/VCAT)", "days_from_start": 21 }
       ]
     }
   }
