@@ -70,7 +70,9 @@
   /* Tools by type */
   .ch-subhead { font-family: var(--font-serif); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); margin: 36px 0 16px; }
   .ch-subhead:first-of-type { margin-top: 22px; }
-  .ch-tool-note { font-size: 14px; color: var(--text-secondary); margin: -10px 0 16px; }
+  .ch-tool-note { font-size: 14px; color: var(--text-secondary); margin: 0 0 20px; }
+  .ch-tool-panel { display: none; }
+  .ch-tool-panel.active { display: block; }
 
   /* Directory accordion */
   .ch-accordion { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
@@ -173,7 +175,13 @@
     <h2 id="ch-tools-h2" class="cl-hub-cat">Tools by type</h2>
     <p class="cl-hub-cat-sub">Every generator, template and checklist Kibbo has built for subscriptions and services, grouped by what it actually does.</p>
 
-    <h3 class="ch-subhead">Generators (3)</h3>
+    <div class="crc-tabs" role="tablist" aria-label="Tool type" id="chToolTabs">
+      <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="generators">Generators (3)</button>
+      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="templates">Templates (6)</button>
+      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="checklists">Checklists (9)</button>
+    </div>
+
+    <div class="ch-tool-panel active" data-toolpanel="generators">
     <p class="ch-tool-note">Answer a few questions, get a formal letter — a cancellation, a billing dispute, or a complaint escalation.</p>
     <div class="prod-grid">
       <article class="prod-card">
@@ -204,8 +212,9 @@
         </div>
       </article>
     </div>
+    </div>
 
-    <h3 class="ch-subhead">Templates (6)</h3>
+    <div class="ch-tool-panel" data-toolpanel="templates">
     <p class="ch-tool-note">Paid, downloadable — for building the evidence a cancellation, a billing dispute, or an escalation actually needs.</p>
     <div class="prod-grid">
       <article class="prod-card">
@@ -263,8 +272,9 @@
         </div>
       </article>
     </div>
+    </div>
 
-    <h3 class="ch-subhead">Checklists (9)</h3>
+    <div class="ch-tool-panel" data-toolpanel="checklists">
     <p class="ch-tool-note">Free, interactive — before you sign up, cancel, or complain, and what to check if a charge already went wrong.</p>
     <div class="cl-hub-grid">
       <a class="cl-card" href="/checklists/subscription-before-you-buy-checklist.html">
@@ -322,7 +332,14 @@
         <div class="cl-card-meta"><span>⏱ 8 min</span><span>✓ 12 checks</span><span class="cl-card-go">Start →</span></div>
       </a>
     </div>
+    </div>
   </section>
+
+  <!-- CALCULATORS / CASES / INVESTIGATIONS — populated by JS only when content exists.
+       See the script at the bottom: each data array is empty (verified — none of these
+       3 content types exist anywhere on the site yet), so renderCardSection() creates
+       zero DOM nodes for them. Not a "Coming soon" message — nothing at all. -->
+  <div id="chFutureSections"></div>
 
   <!-- DIRECTORY, GROUPED -->
   <section aria-labelledby="ch-directory-h2" style="margin-top: 56px;">
@@ -573,6 +590,74 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-panel') === region); });
     });
   });
+})();
+
+// Tools type tabs (Update 1 — same tabbed pattern as the Guides tabs above)
+(function () {
+  var tabs = document.querySelectorAll('#chToolTabs .crc-tab');
+  var panels = document.querySelectorAll('.ch-tool-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var cat = tab.getAttribute('data-toolcat');
+      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+      panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
+    });
+  });
+})();
+
+// Calculators / Cases / Investigations (Update 2) — structurally ready, but each
+// array is empty today (verified: none of these 3 content types exist anywhere on
+// the site yet). renderCardSection() creates zero DOM nodes when its array is
+// empty — no <section>, no heading, no "coming soon" placeholder. To add content
+// later: populate the matching array with { title, desc, url } objects; the
+// section, heading and cards will appear automatically on next page load.
+(function () {
+  var CALCULATORS = [];
+  var CASES = [];
+  var INVESTIGATIONS = [];
+
+  function buildToolCard(item) {
+    var a = document.createElement('a');
+    a.className = 'cl-card';
+    a.href = item.url;
+    var tag = document.createElement('span');
+    tag.className = 'cl-card-tag';
+    tag.textContent = item.tag || 'Calculator';
+    var h3 = document.createElement('h3');
+    h3.className = 'cl-card-title';
+    h3.textContent = item.title;
+    var p = document.createElement('p');
+    p.className = 'cl-card-desc';
+    p.textContent = item.desc;
+    a.appendChild(tag); a.appendChild(h3); a.appendChild(p);
+    return a;
+  }
+
+  function renderCardSection(container, id, heading, sub, items) {
+    if (!items || !items.length) return; // zero DOM output when empty — no placeholder
+    var section = document.createElement('section');
+    section.id = id;
+    section.setAttribute('aria-labelledby', id + '-h2');
+    section.style.marginTop = '56px';
+    var h2 = document.createElement('h2');
+    h2.id = id + '-h2';
+    h2.className = 'cl-hub-cat';
+    h2.textContent = heading;
+    var p = document.createElement('p');
+    p.className = 'cl-hub-cat-sub';
+    p.textContent = sub;
+    var grid = document.createElement('div');
+    grid.className = 'cl-hub-grid';
+    items.forEach(function (item) { grid.appendChild(buildToolCard(item)); });
+    section.appendChild(h2); section.appendChild(p); section.appendChild(grid);
+    container.appendChild(section);
+  }
+
+  var futureContainer = document.getElementById('chFutureSections');
+  renderCardSection(futureContainer, 'ch-calculators', 'Calculators', 'Interactive calculators for this block.', CALCULATORS);
+  renderCardSection(futureContainer, 'ch-cases', 'Cases', 'Real, anonymized case studies.', CASES);
+  renderCardSection(futureContainer, 'ch-investigations', 'Investigations', 'Original investigative reporting for this block.', INVESTIGATIONS);
 })();
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
