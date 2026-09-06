@@ -91,383 +91,452 @@
   </div>
   <div class="resource-list">
 
-  <div id="employment-authorities">
+  <details class="dir-acc-item" id="employment-authorities" open>
+    <summary>
+      <span class="section-label">Section 1 · Employment Authorities</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 1 · Employment Authorities</span>
     <p class="resource-when">The regulators with actual jurisdiction over employment matters, one source per function — not every US federal labor agency resolved to a working page (see note below).</p>
-  </div>
-  <div class="directory-resource" id="eeoc-authority">
-    <h3>US — Equal Employment Opportunity Commission (EEOC)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">U.S. Equal Employment Opportunity Commission</span>
-      <a href="https://www.eeoc.gov" target="_blank" rel="noopener" class="resource-link">eeoc.gov →</a>
+ 
+    <div class="directory-resource" id="eeoc-authority">
+      <h3>US — Equal Employment Opportunity Commission (EEOC)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">U.S. Equal Employment Opportunity Commission</span>
+        <a href="https://www.eeoc.gov" target="_blank" rel="noopener" class="resource-link">eeoc.gov →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The federal agency enforcing workplace discrimination law in the US. Verified official domain is eeoc.gov specifically — eeoc.com and similar look-alike domains are not official.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The federal agency enforcing workplace discrimination law in the US. Verified official domain is eeoc.gov specifically — eeoc.com and similar look-alike domains are not official.</p>
-  </div>
-  <div class="directory-resource" id="ftc-job-scams-authority">
-    <h3>FTC — Job Scam Resources</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Trade Commission — Consumer Advice</span>
-      <a href="https://consumer.ftc.gov/articles/job-scams" target="_blank" rel="noopener" class="resource-link">consumer.ftc.gov — job scams →</a>
+    <div class="directory-resource" id="ftc-job-scams-authority">
+      <h3>FTC — Job Scam Resources</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Trade Commission — Consumer Advice</span>
+        <a href="https://consumer.ftc.gov/articles/job-scams" target="_blank" rel="noopener" class="resource-link">consumer.ftc.gov — job scams →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The FTC's consumer-facing guidance on identifying and avoiding job scams, mystery shopper scams, and work-from-home fraud.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The FTC's consumer-facing guidance on identifying and avoiding job scams, mystery shopper scams, and work-from-home fraud.</p>
-  </div>
-  <div class="directory-resource" id="ic3-authority">
-    <h3>FBI Internet Crime Complaint Center (IC3)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Bureau of Investigation</span>
-      <a href="https://www.ic3.gov" target="_blank" rel="noopener" class="resource-link">ic3.gov →</a>
+    <div class="directory-resource" id="ic3-authority">
+      <h3>FBI Internet Crime Complaint Center (IC3)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Bureau of Investigation</span>
+        <a href="https://www.ic3.gov" target="_blank" rel="noopener" class="resource-link">ic3.gov →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The FBI's official portal for reporting internet-facilitated crime, including job scams involving fraudulent payment requests or identity theft.</p>
+      <!-- NOTE: U.S. Department of Labor (dol.gov, all paths and subdomains tested) and the National
+           Labor Relations Board (nlrb.gov) could both not be verified live — dol.gov returns HTTP 403
+           (Akamai bot-block) on every path tested with full browser headers, and nlrb.gov times out at
+           the TLS handshake on every attempt. Omitted rather than guessed; report this gap so it can be
+           re-checked from a different network if these are needed here. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> The FBI's official portal for reporting internet-facilitated crime, including job scams involving fraudulent payment requests or identity theft.</p>
-    <!-- NOTE: U.S. Department of Labor (dol.gov, all paths and subdomains tested) and the National
-         Labor Relations Board (nlrb.gov) could both not be verified live — dol.gov returns HTTP 403
-         (Akamai bot-block) on every path tested with full browser headers, and nlrb.gov times out at
-         the TLS handshake on every attempt. Omitted rather than guessed; report this gap so it can be
-         re-checked from a different network if these are needed here. -->
-  </div>
 
-  <div id="employment-rights">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="employment-rights">
+    <summary>
+      <span class="section-label">Section 2 · Employment Rights</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 2 · Employment Rights</span>
     <p class="resource-when">The official statement of what employment rights actually exist in each region — not a complaint portal (see Section 9 for that).</p>
-  </div>
-  <div class="directory-resource" id="fwc-rights">
-    <h3>Australia — Fair Work Commission</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Fair Work Commission</span>
-      <a href="https://www.fwc.gov.au" target="_blank" rel="noopener" class="resource-link">fwc.gov.au →</a>
+ 
+    <div class="directory-resource" id="fwc-rights">
+      <h3>Australia — Fair Work Commission</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Fair Work Commission</span>
+        <a href="https://www.fwc.gov.au" target="_blank" rel="noopener" class="resource-link">fwc.gov.au →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Australia's national workplace relations tribunal — awards, agreements, and dispute resolution.</p>
+      <!-- NOTE: www.fairwork.gov.au (the Fair Work Ombudsman's own site, the originally requested
+           domain) timed out at the TLS handshake on every verification attempt from this environment,
+           including via http and its bare no-www form (which itself redirects back to the same
+           unreachable www host). Its calculate.fairwork.gov.au subdomain IS reachable (used in Section
+           6) and fwc.gov.au (a separate, related domain) is reachable and used here instead. Re-verify
+           fairwork.gov.au directly if this section needs the Ombudsman specifically rather than the
+           Commission. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> Australia's national workplace relations tribunal — awards, agreements, and dispute resolution.</p>
-    <!-- NOTE: www.fairwork.gov.au (the Fair Work Ombudsman's own site, the originally requested
-         domain) timed out at the TLS handshake on every verification attempt from this environment,
-         including via http and its bare no-www form (which itself redirects back to the same
-         unreachable www host). Its calculate.fairwork.gov.au subdomain IS reachable (used in Section
-         6) and fwc.gov.au (a separate, related domain) is reachable and used here instead. Re-verify
-         fairwork.gov.au directly if this section needs the Ombudsman specifically rather than the
-         Commission. -->
-  </div>
-  <div class="directory-resource" id="govuk-rights">
-    <h3>UK — Employment Rights (GOV.UK)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">GOV.UK</span>
-      <a href="https://www.gov.uk/browse/working" target="_blank" rel="noopener" class="resource-link">gov.uk — working, jobs and pensions →</a>
+    <div class="directory-resource" id="govuk-rights">
+      <h3>UK — Employment Rights (GOV.UK)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">GOV.UK</span>
+        <a href="https://www.gov.uk/browse/working" target="_blank" rel="noopener" class="resource-link">gov.uk — working, jobs and pensions →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The UK government's hub for employment rights, contracts, pay, and workplace entitlements.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The UK government's hub for employment rights, contracts, pay, and workplace entitlements.</p>
-  </div>
-  <div class="directory-resource" id="acas-rights">
-    <h3>Acas (UK)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Advisory, Conciliation and Arbitration Service</span>
-      <a href="https://www.acas.org.uk" target="_blank" rel="noopener" class="resource-link">acas.org.uk →</a>
+    <div class="directory-resource" id="acas-rights">
+      <h3>Acas (UK)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Advisory, Conciliation and Arbitration Service</span>
+        <a href="https://www.acas.org.uk" target="_blank" rel="noopener" class="resource-link">acas.org.uk →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Free, impartial advice on UK employment rights and workplace disputes, and the body that runs early conciliation before an Employment Tribunal claim.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Free, impartial advice on UK employment rights and workplace disputes, and the body that runs early conciliation before an Employment Tribunal claim.</p>
-  </div>
-  <div class="directory-resource" id="ela-rights">
-    <h3>European Labour Authority (ELA)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">European Labour Authority</span>
-      <a href="https://www.ela.europa.eu" target="_blank" rel="noopener" class="resource-link">ela.europa.eu →</a>
+    <div class="directory-resource" id="ela-rights">
+      <h3>European Labour Authority (ELA)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">European Labour Authority</span>
+        <a href="https://www.ela.europa.eu" target="_blank" rel="noopener" class="resource-link">ela.europa.eu →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The EU body supporting fair labour mobility across member states and coordinating enforcement of EU labour rights rules.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The EU body supporting fair labour mobility across member states and coordinating enforcement of EU labour rights rules.</p>
-  </div>
 
-  <div id="job-scam-reporting">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="job-scam-reporting">
+    <summary>
+      <span class="section-label">Section 3 · Job Scam Reporting</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 3 · Job Scam Reporting</span>
     <p class="resource-when">Where to actually report a fake job offer, by region — plus the Kibbo tools built for exactly this.</p>
-  </div>
-  <div class="directory-resource" id="ftc-reportfraud">
-    <h3>US — FTC ReportFraud</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Trade Commission</span>
-      <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener" class="resource-link">reportfraud.ftc.gov →</a>
+ 
+    <div class="directory-resource" id="ftc-reportfraud">
+      <h3>US — FTC ReportFraud</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Trade Commission</span>
+        <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener" class="resource-link">reportfraud.ftc.gov →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The FTC's official fraud reporting portal, including job and employment scams.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The FTC's official fraud reporting portal, including job and employment scams.</p>
-  </div>
-  <div class="directory-resource" id="scamwatch-reporting">
-    <h3>Australia — Scamwatch</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Australian Competition &amp; Consumer Commission</span>
-      <a href="https://www.scamwatch.gov.au" target="_blank" rel="noopener" class="resource-link">scamwatch.gov.au →</a>
+    <div class="directory-resource" id="scamwatch-reporting">
+      <h3>Australia — Scamwatch</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Australian Competition &amp; Consumer Commission</span>
+        <a href="https://www.scamwatch.gov.au" target="_blank" rel="noopener" class="resource-link">scamwatch.gov.au →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The ACCC's official scam reporting and awareness site, including job and employment scam categories.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The ACCC's official scam reporting and awareness site, including job and employment scam categories.</p>
-  </div>
-  <div class="directory-resource" id="actionfraud-reporting">
-    <h3>UK — Report Fraud (formerly Action Fraud)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Report Fraud — City of London Police</span>
-      <a href="https://www.reportfraud.police.uk/" target="_blank" rel="noopener" class="resource-link">reportfraud.police.uk →</a>
+    <div class="directory-resource" id="actionfraud-reporting">
+      <h3>UK — Report Fraud (formerly Action Fraud)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Report Fraud — City of London Police</span>
+        <a href="https://www.reportfraud.police.uk/" target="_blank" rel="noopener" class="resource-link">reportfraud.police.uk →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The UK's national reporting centre for fraud and cybercrime, run by the City of London Police.</p>
+      <!-- Corrected: the originally requested actionfraud.police.uk redirects to reportfraud.police.uk
+           (a genuine domain migration/rebrand, not a hijack — confirmed by matching Cloudflare-fronted
+           infrastructure and a clean 200 with real content headers on the new domain). The old domain
+           also serves a bot-block challenge page on direct hits. Linked straight to the new domain
+           rather than the redirect chain. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> The UK's national reporting centre for fraud and cybercrime, run by the City of London Police.</p>
-    <!-- Corrected: the originally requested actionfraud.police.uk redirects to reportfraud.police.uk
-         (a genuine domain migration/rebrand, not a hijack — confirmed by matching Cloudflare-fronted
-         infrastructure and a clean 200 with real content headers on the new domain). The old domain
-         also serves a bot-block challenge page on direct hits. Linked straight to the new domain
-         rather than the redirect chain. -->
-  </div>
-  <div class="directory-resource" id="europol-reporting">
-    <h3>Europol</h3>
-    <div class="resource-meta">
-      <span class="resource-name">European Union Agency for Law Enforcement Cooperation</span>
-      <a href="https://www.europol.europa.eu" target="_blank" rel="noopener" class="resource-link">europol.europa.eu →</a>
+    <div class="directory-resource" id="europol-reporting">
+      <h3>Europol</h3>
+      <div class="resource-meta">
+        <span class="resource-name">European Union Agency for Law Enforcement Cooperation</span>
+        <a href="https://www.europol.europa.eu" target="_blank" rel="noopener" class="resource-link">europol.europa.eu →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Europol coordinates cross-border EU law enforcement, including organised online fraud networks that run job scams across multiple member states.</p>
+      <p class="resource-when"><strong>Use this evidence for:</strong><br>
+        <a href="/checklists/job-offer-scam-checklist.html">Job Offer Scam Checklist — spot it and know what to do next →</a><br>
+        <a href="/templates/job-scam-incident-report.html">Job Scam Incident Report — document it before the posting disappears →</a>
+      </p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Europol coordinates cross-border EU law enforcement, including organised online fraud networks that run job scams across multiple member states.</p>
-    <p class="resource-when"><strong>Use this evidence for:</strong><br>
-      <a href="/checklists/job-offer-scam-checklist.html">Job Offer Scam Checklist — spot it and know what to do next →</a><br>
-      <a href="/templates/job-scam-incident-report.html">Job Scam Incident Report — document it before the posting disappears →</a>
-    </p>
-  </div>
 
-  <div id="background-checks">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="background-checks">
+    <summary>
+      <span class="section-label">Section 4 · Background Checks</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 4 · Background Checks</span>
     <p class="resource-when">Official sources on what a background check can and can't include, by region.</p>
-  </div>
-  <div class="directory-resource" id="dbs-background">
-    <h3>UK — Disclosure and Barring Service (DBS)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Disclosure and Barring Service</span>
-      <a href="https://www.gov.uk/government/organisations/disclosure-and-barring-service" target="_blank" rel="noopener" class="resource-link">gov.uk — DBS →</a>
+ 
+    <div class="directory-resource" id="dbs-background">
+      <h3>UK — Disclosure and Barring Service (DBS)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Disclosure and Barring Service</span>
+        <a href="https://www.gov.uk/government/organisations/disclosure-and-barring-service" target="_blank" rel="noopener" class="resource-link">gov.uk — DBS →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The UK body issuing criminal record checks for employment — Basic, Standard, and Enhanced levels, each with different eligibility rules.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The UK body issuing criminal record checks for employment — Basic, Standard, and Enhanced levels, each with different eligibility rules.</p>
-  </div>
-  <div class="directory-resource" id="afp-background">
-    <h3>Australia — National Police Checks</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Australian Federal Police</span>
-      <a href="https://www.afp.gov.au/what-we-do/national-police-checks" target="_blank" rel="noopener" class="resource-link">afp.gov.au — national police checks →</a>
+    <div class="directory-resource" id="afp-background">
+      <h3>Australia — National Police Checks</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Australian Federal Police</span>
+        <a href="https://www.afp.gov.au/what-we-do/national-police-checks" target="_blank" rel="noopener" class="resource-link">afp.gov.au — national police checks →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The AFP's official guidance on national police checks used for employment purposes in Australia.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The AFP's official guidance on national police checks used for employment purposes in Australia.</p>
-  </div>
-  <div class="directory-resource" id="fcra-background">
-    <h3>US — FCRA Background Check Rights</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Trade Commission</span>
-      <a href="https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know" target="_blank" rel="noopener" class="resource-link">ftc.gov — using consumer reports →</a>
+    <div class="directory-resource" id="fcra-background">
+      <h3>US — FCRA Background Check Rights</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Trade Commission</span>
+        <a href="https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know" target="_blank" rel="noopener" class="resource-link">ftc.gov — using consumer reports →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The FTC's guidance on employer obligations under the Fair Credit Reporting Act (FCRA) when using background checks — disclosure, consent, and adverse-action notice requirements.</p>
+      <p class="resource-when"><strong>Use this before your check:</strong><br>
+        <a href="/checklists/background-check-preparation-checklist.html">Background Check Preparation Checklist →</a>
+      </p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The FTC's guidance on employer obligations under the Fair Credit Reporting Act (FCRA) when using background checks — disclosure, consent, and adverse-action notice requirements.</p>
-    <p class="resource-when"><strong>Use this before your check:</strong><br>
-      <a href="/checklists/background-check-preparation-checklist.html">Background Check Preparation Checklist →</a>
-    </p>
-  </div>
 
-  <div id="privacy-data-protection">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="privacy-data-protection">
+    <summary>
+      <span class="section-label">Section 5 · Privacy &amp; Data Protection</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 5 · Privacy &amp; Data Protection</span>
     <p class="resource-when">Who regulates what happens to your personal data during and after a job application, by region.</p>
-  </div>
-  <div class="directory-resource" id="ico-privacy">
-    <h3>UK — Information Commissioner's Office (ICO)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Information Commissioner's Office</span>
-      <a href="https://ico.org.uk" target="_blank" rel="noopener" class="resource-link">ico.org.uk →</a>
+ 
+    <div class="directory-resource" id="ico-privacy">
+      <h3>UK — Information Commissioner's Office (ICO)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Information Commissioner's Office</span>
+        <a href="https://ico.org.uk" target="_blank" rel="noopener" class="resource-link">ico.org.uk →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The UK's independent data protection regulator, enforcing UK GDPR — including how employers and recruiters handle candidate and employee data.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The UK's independent data protection regulator, enforcing UK GDPR — including how employers and recruiters handle candidate and employee data.</p>
-  </div>
-  <div class="directory-resource" id="oaic-privacy">
-    <h3>Australia — Office of the Australian Information Commissioner (OAIC)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Office of the Australian Information Commissioner</span>
-      <a href="https://www.oaic.gov.au" target="_blank" rel="noopener" class="resource-link">oaic.gov.au →</a>
+    <div class="directory-resource" id="oaic-privacy">
+      <h3>Australia — Office of the Australian Information Commissioner (OAIC)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Office of the Australian Information Commissioner</span>
+        <a href="https://www.oaic.gov.au" target="_blank" rel="noopener" class="resource-link">oaic.gov.au →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Australia's privacy regulator, enforcing the Privacy Act 1988 and the Australian Privacy Principles.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Australia's privacy regulator, enforcing the Privacy Act 1988 and the Australian Privacy Principles.</p>
-  </div>
-  <div class="directory-resource" id="edpb-privacy">
-    <h3>European Data Protection Board (EDPB)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">European Data Protection Board</span>
-      <a href="https://edpb.europa.eu" target="_blank" rel="noopener" class="resource-link">edpb.europa.eu →</a>
+    <div class="directory-resource" id="edpb-privacy">
+      <h3>European Data Protection Board (EDPB)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">European Data Protection Board</span>
+        <a href="https://edpb.europa.eu" target="_blank" rel="noopener" class="resource-link">edpb.europa.eu →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The EU body ensuring consistent GDPR application across member states.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The EU body ensuring consistent GDPR application across member states.</p>
-  </div>
-  <div class="directory-resource" id="eu-dpa-list-privacy">
-    <h3>National EU Data Protection Authorities</h3>
-    <div class="resource-meta">
-      <span class="resource-name">EDPB — Members</span>
-      <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener" class="resource-link">edpb.europa.eu — national DPAs →</a>
+    <div class="directory-resource" id="eu-dpa-list-privacy">
+      <h3>National EU Data Protection Authorities</h3>
+      <div class="resource-meta">
+        <span class="resource-name">EDPB — Members</span>
+        <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener" class="resource-link">edpb.europa.eu — national DPAs →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The full list of national data protection authorities across EU/EEA member states — use this to find your specific country's regulator.</p>
+      <p class="resource-when"><strong>Use this for:</strong><br>
+        <a href="/checklists/gdpr-job-application-privacy-checklist.html">GDPR Job Application Privacy Checklist →</a><br>
+        <a href="/generate/employment-data-access-request.html">Employment Data Access Request — generate a formal letter →</a>
+      </p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The full list of national data protection authorities across EU/EEA member states — use this to find your specific country's regulator.</p>
-    <p class="resource-when"><strong>Use this for:</strong><br>
-      <a href="/checklists/gdpr-job-application-privacy-checklist.html">GDPR Job Application Privacy Checklist →</a><br>
-      <a href="/generate/employment-data-access-request.html">Employment Data Access Request — generate a formal letter →</a>
-    </p>
-  </div>
 
-  <div id="wages-pay">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="wages-pay">
+    <summary>
+      <span class="section-label">Section 6 · Wages &amp; Pay</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 6 · Wages &amp; Pay</span>
     <p class="resource-when">Official minimum wage and pay-transparency information, by region.</p>
-  </div>
-  <div class="directory-resource" id="uk-minimum-wage">
-    <h3>UK — National Minimum Wage</h3>
-    <div class="resource-meta">
-      <span class="resource-name">GOV.UK</span>
-      <a href="https://www.gov.uk/national-minimum-wage" target="_blank" rel="noopener" class="resource-link">gov.uk — national minimum wage →</a>
+ 
+    <div class="directory-resource" id="uk-minimum-wage">
+      <h3>UK — National Minimum Wage</h3>
+      <div class="resource-meta">
+        <span class="resource-name">GOV.UK</span>
+        <a href="https://www.gov.uk/national-minimum-wage" target="_blank" rel="noopener" class="resource-link">gov.uk — national minimum wage →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Current UK minimum wage rates by age band, and how they're enforced.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Current UK minimum wage rates by age band, and how they're enforced.</p>
-  </div>
-  <div class="directory-resource" id="au-pay-calculator">
-    <h3>Australia — Fair Work Pay Calculator</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Fair Work Ombudsman</span>
-      <a href="https://calculate.fairwork.gov.au/" target="_blank" rel="noopener" class="resource-link">calculate.fairwork.gov.au →</a>
+    <div class="directory-resource" id="au-pay-calculator">
+      <h3>Australia — Fair Work Pay Calculator</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Fair Work Ombudsman</span>
+        <a href="https://calculate.fairwork.gov.au/" target="_blank" rel="noopener" class="resource-link">calculate.fairwork.gov.au →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The official calculator for minimum pay rates, penalty rates, and allowances under Australian awards.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The official calculator for minimum pay rates, penalty rates, and allowances under Australian awards.</p>
-  </div>
-  <div class="directory-resource" id="eu-pay-transparency">
-    <h3>EU — Pay Transparency Directive</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Directive (EU) 2023/970</span>
-      <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2023/970 →</a>
+    <div class="directory-resource" id="eu-pay-transparency">
+      <h3>EU — Pay Transparency Directive</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Directive (EU) 2023/970</span>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2023/970 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The EU directive strengthening equal pay enforcement through pay transparency obligations. Member state transposition is still in progress — check your specific country's implementation status before assuming the full directive already applies domestically.</p>
+      <p class="resource-when"><strong>Use this to draft a claim:</strong><br>
+        <a href="/generate/unpaid-wage-compensation-demand.html">Unpaid Wage &amp; Compensation Demand Letter — generate a formal letter →</a>
+      </p>
+      <!-- NOTE: U.S. Department of Labor minimum wage information (dol.gov) could not be verified live —
+           see the Section 1 note on dol.gov's domain-wide 403 block. Omitted rather than guessed. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> The EU directive strengthening equal pay enforcement through pay transparency obligations. Member state transposition is still in progress — check your specific country's implementation status before assuming the full directive already applies domestically.</p>
-    <p class="resource-when"><strong>Use this to draft a claim:</strong><br>
-      <a href="/generate/unpaid-wage-compensation-demand.html">Unpaid Wage &amp; Compensation Demand Letter — generate a formal letter →</a>
-    </p>
-    <!-- NOTE: U.S. Department of Labor minimum wage information (dol.gov) could not be verified live —
-         see the Section 1 note on dol.gov's domain-wide 403 block. Omitted rather than guessed. -->
-  </div>
 
-  <div id="gig-economy">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="gig-economy">
+    <summary>
+      <span class="section-label">Section 7 · Gig Economy</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 7 · Gig Economy</span>
     <p class="resource-when">Official guidance specific to gig and platform work, by region.</p>
-  </div>
-  <div class="directory-resource" id="eu-platform-work">
-    <h3>EU — Platform Work Directive</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Directive (EU) 2024/2831</span>
-      <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2831" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2024/2831 →</a>
+ 
+    <div class="directory-resource" id="eu-platform-work">
+      <h3>EU — Platform Work Directive</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Directive (EU) 2024/2831</span>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2831" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2024/2831 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The EU directive establishing a rebuttable presumption of employment for platform workers and rules on algorithmic management. Member states have until December 2026 to transpose it — it is not yet uniformly in force across the EU.</p>
+      <p class="resource-when"><strong>Use this to check your numbers:</strong><br>
+        <a href="/checklists/gig-worker-earnings-checklist.html">Gig Worker Earnings Checklist →</a>
+      </p>
+      <!-- NOTE: Neither an FTC-specific gig-economy resource page nor a Fair Work Ombudsman
+           gig-economy subpage could be verified live for this section — the FTC gig-economy URLs
+           tested all returned 404, and fairwork.gov.au subpages time out (see Section 2 note).
+           Omitted rather than guessed; this section is thinner than the other 9 as a result. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> The EU directive establishing a rebuttable presumption of employment for platform workers and rules on algorithmic management. Member states have until December 2026 to transpose it — it is not yet uniformly in force across the EU.</p>
-    <p class="resource-when"><strong>Use this to check your numbers:</strong><br>
-      <a href="/checklists/gig-worker-earnings-checklist.html">Gig Worker Earnings Checklist →</a>
-    </p>
-    <!-- NOTE: Neither an FTC-specific gig-economy resource page nor a Fair Work Ombudsman
-         gig-economy subpage could be verified live for this section — the FTC gig-economy URLs
-         tested all returned 404, and fairwork.gov.au subpages time out (see Section 2 note).
-         Omitted rather than guessed; this section is thinner than the other 9 as a result. -->
-  </div>
 
-  <div id="recruitment-agencies">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="recruitment-agencies">
+    <summary>
+      <span class="section-label">Section 8 · Recruitment Agencies</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 8 · Recruitment Agencies</span>
     <p class="resource-when">Verify a recruitment or relocation agency independently before you pay a fee or share personal documents.</p>
-  </div>
-  <div class="directory-resource" id="eas-recruitment">
-    <h3>UK — Employment Agency Standards (EAS) Inspectorate</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Employment Agency Standards Inspectorate</span>
-      <a href="https://www.gov.uk/government/organisations/employment-agency-standards-inspectorate" target="_blank" rel="noopener" class="resource-link">gov.uk — EAS Inspectorate →</a>
+ 
+    <div class="directory-resource" id="eas-recruitment">
+      <h3>UK — Employment Agency Standards (EAS) Inspectorate</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Employment Agency Standards Inspectorate</span>
+        <a href="https://www.gov.uk/government/organisations/employment-agency-standards-inspectorate" target="_blank" rel="noopener" class="resource-link">gov.uk — EAS Inspectorate →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The UK body enforcing the law that recruitment agencies cannot charge work-seekers a fee for finding them work.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The UK body enforcing the law that recruitment agencies cannot charge work-seekers a fee for finding them work.</p>
-  </div>
-  <div class="directory-resource" id="eures-recruitment">
-    <h3>EURES — EU Cross-Border Employment Network</h3>
-    <div class="resource-meta">
-      <span class="resource-name">European Employment Services</span>
-      <a href="https://eures.europa.eu" target="_blank" rel="noopener" class="resource-link">eures.europa.eu →</a>
+    <div class="directory-resource" id="eures-recruitment">
+      <h3>EURES — EU Cross-Border Employment Network</h3>
+      <div class="resource-meta">
+        <span class="resource-name">European Employment Services</span>
+        <a href="https://eures.europa.eu" target="_blank" rel="noopener" class="resource-link">eures.europa.eu →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The official EU network for cross-border job mobility, including verified employer listings for jobs in other EU member states.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The official EU network for cross-border job mobility, including verified employer listings for jobs in other EU member states.</p>
-  </div>
-  <div class="directory-resource" id="mara-recruitment">
-    <h3>Australia — Registered Migration Agents</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Migration Agents Registration Authority</span>
-      <a href="https://www.mara.gov.au" target="_blank" rel="noopener" class="resource-link">mara.gov.au →</a>
+    <div class="directory-resource" id="mara-recruitment">
+      <h3>Australia — Registered Migration Agents</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Migration Agents Registration Authority</span>
+        <a href="https://www.mara.gov.au" target="_blank" rel="noopener" class="resource-link">mara.gov.au →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Verify whether a migration agent handling a relocation-adjacent job offer is actually registered before paying them anything.</p>
+      <p class="resource-when"><strong>Before you send your CV or ID to any of these:</strong><br>
+        <a href="/checklists/before-sending-cv-third-party-checklist.html">Before Sending Your CV to a Third Party Checklist →</a>
+      </p>
+      <!-- NOTE: No major job board's own scam-warning page (Indeed, Glassdoor, LinkedIn) could be
+           verified live — all three tested returned HTTP 403 or 404. Per "if publicly available" in
+           the original brief, omitted rather than guessed. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> Verify whether a migration agent handling a relocation-adjacent job offer is actually registered before paying them anything.</p>
-    <p class="resource-when"><strong>Before you send your CV or ID to any of these:</strong><br>
-      <a href="/checklists/before-sending-cv-third-party-checklist.html">Before Sending Your CV to a Third Party Checklist →</a>
-    </p>
-    <!-- NOTE: No major job board's own scam-warning page (Indeed, Glassdoor, LinkedIn) could be
-         verified live — all three tested returned HTTP 403 or 404. Per "if publicly available" in
-         the original brief, omitted rather than guessed. -->
-  </div>
 
-  <div id="employment-complaints">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="employment-complaints">
+    <summary>
+      <span class="section-label">Section 9 · Employment Complaints</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 9 · Employment Complaints</span>
     <p class="resource-when">Where to actually file a complaint, by region — distinct from Section 2's general rights information.</p>
-  </div>
-  <div class="directory-resource" id="eeoc-complaints">
-    <h3>US — EEOC Charge Filing</h3>
-    <div class="resource-meta">
-      <span class="resource-name">U.S. Equal Employment Opportunity Commission</span>
-      <a href="https://www.eeoc.gov/filing-charge-discrimination" target="_blank" rel="noopener" class="resource-link">eeoc.gov — filing a charge of discrimination →</a>
+ 
+    <div class="directory-resource" id="eeoc-complaints">
+      <h3>US — EEOC Charge Filing</h3>
+      <div class="resource-meta">
+        <span class="resource-name">U.S. Equal Employment Opportunity Commission</span>
+        <a href="https://www.eeoc.gov/filing-charge-discrimination" target="_blank" rel="noopener" class="resource-link">eeoc.gov — filing a charge of discrimination →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The EEOC's official process and deadlines for filing a workplace discrimination charge — generally the required first step before a discrimination lawsuit in the US.</p>
+      <!-- NOTE: The US DOL complaint portal (dol.gov) could not be verified live — see the Section 1
+           note on dol.gov's domain-wide 403 block. Omitted rather than guessed. -->
     </div>
-    <p class="resource-what"><strong>What:</strong> The EEOC's official process and deadlines for filing a workplace discrimination charge — generally the required first step before a discrimination lawsuit in the US.</p>
-    <!-- NOTE: The US DOL complaint portal (dol.gov) could not be verified live — see the Section 1
-         note on dol.gov's domain-wide 403 block. Omitted rather than guessed. -->
-  </div>
-  <div class="directory-resource" id="tribunal-complaints">
-    <h3>UK — Employment Tribunal</h3>
-    <div class="resource-meta">
-      <span class="resource-name">GOV.UK</span>
-      <a href="https://www.gov.uk/employment-tribunals" target="_blank" rel="noopener" class="resource-link">gov.uk — employment tribunals →</a>
+    <div class="directory-resource" id="tribunal-complaints">
+      <h3>UK — Employment Tribunal</h3>
+      <div class="resource-meta">
+        <span class="resource-name">GOV.UK</span>
+        <a href="https://www.gov.uk/employment-tribunals" target="_blank" rel="noopener" class="resource-link">gov.uk — employment tribunals →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> How to bring a claim to an Employment Tribunal in the UK, including the mandatory Acas early conciliation step and time limits.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> How to bring a claim to an Employment Tribunal in the UK, including the mandatory Acas early conciliation step and time limits.</p>
-  </div>
-  <div class="directory-resource" id="fwc-complaints">
-    <h3>Australia — Fair Work Commission Complaints</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Fair Work Commission</span>
-      <a href="https://www.fwc.gov.au/apply-or-lodge" target="_blank" rel="noopener" class="resource-link">fwc.gov.au — apply or lodge →</a>
+    <div class="directory-resource" id="fwc-complaints">
+      <h3>Australia — Fair Work Commission Complaints</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Fair Work Commission</span>
+        <a href="https://www.fwc.gov.au/apply-or-lodge" target="_blank" rel="noopener" class="resource-link">fwc.gov.au — apply or lodge →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The Fair Work Commission's portal for lodging an unfair dismissal claim, general protections dispute, or other workplace application.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The Fair Work Commission's portal for lodging an unfair dismissal claim, general protections dispute, or other workplace application.</p>
-  </div>
-  <div class="directory-resource" id="ela-complaints">
-    <h3>EU — European Labour Authority</h3>
-    <div class="resource-meta">
-      <span class="resource-name">European Labour Authority</span>
-      <a href="https://www.ela.europa.eu" target="_blank" rel="noopener" class="resource-link">ela.europa.eu →</a>
+    <div class="directory-resource" id="ela-complaints">
+      <h3>EU — European Labour Authority</h3>
+      <div class="resource-meta">
+        <span class="resource-name">European Labour Authority</span>
+        <a href="https://www.ela.europa.eu" target="_blank" rel="noopener" class="resource-link">ela.europa.eu →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> For cross-border EU employment disputes, the ELA's general portal — a dedicated complaints-routing subpage could not be verified live, so this links to the main site rather than a guessed URL.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> For cross-border EU employment disputes, the ELA's general portal — a dedicated complaints-routing subpage could not be verified live, so this links to the main site rather than a guessed URL.</p>
-  </div>
 
-  <div id="employment-laws">
+    
+    </div>
+  </details>
+  <details class="dir-acc-item" id="employment-laws">
+    <summary>
+      <span class="section-label">Section 10 · Employment Laws</span>
+    </summary>
+    <div class="dir-acc-body">
     <span class="section-label">Section 10 · Employment Laws</span>
     <p class="resource-when">Reference texts for the underlying laws cited elsewhere in this block — not a complaint portal.</p>
-  </div>
-  <div class="directory-resource" id="fcra-law">
-    <h3>Fair Credit Reporting Act (FCRA, US)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Trade Commission</span>
-      <a href="https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act" target="_blank" rel="noopener" class="resource-link">ftc.gov — Fair Credit Reporting Act →</a>
+ 
+    <div class="directory-resource" id="fcra-law">
+      <h3>Fair Credit Reporting Act (FCRA, US)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Trade Commission</span>
+        <a href="https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act" target="_blank" rel="noopener" class="resource-link">ftc.gov — Fair Credit Reporting Act →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The US federal law governing background check accuracy, disclosure, and adverse-action notice requirements.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The US federal law governing background check accuracy, disclosure, and adverse-action notice requirements.</p>
-  </div>
-  <div class="directory-resource" id="era-law">
-    <h3>Employment Rights Act 1996 (UK)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">legislation.gov.uk</span>
-      <a href="https://www.legislation.gov.uk/ukpga/1996/18/contents" target="_blank" rel="noopener" class="resource-link">legislation.gov.uk — Employment Rights Act 1996 →</a>
+    <div class="directory-resource" id="era-law">
+      <h3>Employment Rights Act 1996 (UK)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">legislation.gov.uk</span>
+        <a href="https://www.legislation.gov.uk/ukpga/1996/18/contents" target="_blank" rel="noopener" class="resource-link">legislation.gov.uk — Employment Rights Act 1996 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The core UK statute covering unfair dismissal, written statements of employment particulars, notice periods, and redundancy rights.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The core UK statute covering unfair dismissal, written statements of employment particulars, notice periods, and redundancy rights.</p>
-  </div>
-  <div class="directory-resource" id="fwa-law">
-    <h3>Fair Work Act 2009 (Australia)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Federal Register of Legislation</span>
-      <a href="https://www.legislation.gov.au/C2009A00028/latest/text" target="_blank" rel="noopener" class="resource-link">legislation.gov.au — Fair Work Act 2009 →</a>
+    <div class="directory-resource" id="fwa-law">
+      <h3>Fair Work Act 2009 (Australia)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Federal Register of Legislation</span>
+        <a href="https://www.legislation.gov.au/C2009A00028/latest/text" target="_blank" rel="noopener" class="resource-link">legislation.gov.au — Fair Work Act 2009 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Australia's primary workplace relations statute — the National Employment Standards, unfair dismissal, and general protections all derive from this Act.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Australia's primary workplace relations statute — the National Employment Standards, unfair dismissal, and general protections all derive from this Act.</p>
-  </div>
-  <div class="directory-resource" id="gdpr-law">
-    <h3>GDPR (EU)</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Regulation (EU) 2016/679</span>
-      <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — GDPR full text →</a>
+    <div class="directory-resource" id="gdpr-law">
+      <h3>GDPR (EU)</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Regulation (EU) 2016/679</span>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — GDPR full text →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> The regulation underlying every EU/UK employment data-privacy right referenced in this block, including candidate CV data and employee records.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> The regulation underlying every EU/UK employment data-privacy right referenced in this block, including candidate CV data and employee records.</p>
-  </div>
-  <div class="directory-resource" id="pay-transparency-law">
-    <h3>EU Pay Transparency Directive</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Directive (EU) 2023/970</span>
-      <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2023/970 →</a>
+    <div class="directory-resource" id="pay-transparency-law">
+      <h3>EU Pay Transparency Directive</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Directive (EU) 2023/970</span>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2023/970 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Same directive referenced in Section 6 — included here for a single reference list of the block's underlying laws.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Same directive referenced in Section 6 — included here for a single reference list of the block's underlying laws.</p>
-  </div>
-  <div class="directory-resource" id="platform-work-law">
-    <h3>EU Platform Work Directive</h3>
-    <div class="resource-meta">
-      <span class="resource-name">Directive (EU) 2024/2831</span>
-      <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2831" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2024/2831 →</a>
+    <div class="directory-resource" id="platform-work-law">
+      <h3>EU Platform Work Directive</h3>
+      <div class="resource-meta">
+        <span class="resource-name">Directive (EU) 2024/2831</span>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2831" target="_blank" rel="noopener" class="resource-link">eur-lex.europa.eu — Directive 2024/2831 →</a>
+      </div>
+      <p class="resource-what"><strong>What:</strong> Same directive referenced in Section 7 — included here for a single reference list of the block's underlying laws.</p>
     </div>
-    <p class="resource-what"><strong>What:</strong> Same directive referenced in Section 7 — included here for a single reference list of the block's underlying laws.</p>
-  </div>
+    </div>
+  </details>
 
   </div>
 </main>
@@ -512,6 +581,7 @@
   });
 })();
 </script>
+<script src="/directory-accordion.js" defer></script>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 </body>
 </html>
