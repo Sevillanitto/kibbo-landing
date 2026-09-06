@@ -443,6 +443,23 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .resource-guide { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--accent-green); transition: var(--transition); }
 .resource-guide:hover { color: var(--accent-terra); }
 
+/* ---- Directory: collapsible sub-sections (dir-acc-item) ----
+   Real <details>/<summary> accordion for a directory page's sub-sections.
+   Established on Insurance & Claims first; reuse these exact classes when
+   retrofitting the other 19 /directory/*.html pages -- no new CSS needed,
+   just wrap each page's existing section-label + .directory-resource group
+   in this same markup shape. See /directory-accordion.js for the JS. */
+.dir-acc-item { max-width: 820px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; transition: var(--transition); }
+.dir-acc-item[open] { border-color: rgba(61,107,79,0.3); }
+.dir-acc-item summary { list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.dir-acc-item summary::-webkit-details-marker { display: none; }
+.dir-acc-item summary .section-label { margin-bottom: 0; }
+.dir-acc-item summary::after { content: '+'; font-family: var(--font-sans); font-size: 22px; font-weight: 400; color: var(--accent-green); flex: 0 0 auto; transition: var(--transition); }
+.dir-acc-item[open] summary::after { transform: rotate(45deg); }
+.dir-acc-body { padding: 0 24px 24px; }
+.dir-acc-body > .resource-when { margin: -4px 0 20px; }
+.dir-acc-body .directory-resource:first-child { padding-top: 0; }
+
 /* ---- Product pages ---- */
 .product-hero { padding: clamp(100px, 14vh, 160px) 0 clamp(48px, 6vh, 72px); border-bottom: 1px solid var(--border); }
 .product-hero-inner { max-width: 720px; }
