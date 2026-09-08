@@ -415,9 +415,11 @@
   </section>
 
   <!-- CALCULATORS / CASES / INVESTIGATIONS — populated by JS only when content exists.
-       See the script at the bottom: each data array is empty (verified — none of these
-       3 content types exist anywhere on the site yet), so renderCardSection() creates
-       zero DOM nodes for them. Not a "Coming soon" message — nothing at all. -->
+       See the script at the bottom: Calculators now has its first entry (Security
+       Deposit Return Calculator); Cases and Investigations are still empty arrays
+       (verified — neither exists anywhere on the site yet), so renderCardSection()
+       creates zero DOM nodes for those two. Not a "Coming soon" message — nothing
+       at all for an empty array. -->
   <div id="chFutureSections"></div>
 
   <!-- DIRECTORY, GROUPED -->
@@ -739,14 +741,16 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   });
 })();
 
-// Calculators / Cases / Investigations (Update 2) — structurally ready, but each
-// array is empty today (verified: none of these 3 content types exist anywhere on
-// the site yet). renderCardSection() creates zero DOM nodes when its array is
-// empty — no <section>, no heading, no "coming soon" placeholder. To add content
-// later: populate the matching array with { title, desc, url } objects; the
-// section, heading and cards will appear automatically on next page load.
+// Calculators / Cases / Investigations (Update 2) — structurally ready; Cases and
+// Investigations arrays are still empty (verified: neither exists anywhere on the
+// site yet) and render zero DOM nodes — no "coming soon" placeholder. Calculators
+// now has its first entry (Security Deposit Return Calculator) — to add more,
+// populate the matching array with { title, desc, url } objects; the section,
+// heading and cards appear automatically on next page load.
 (function () {
-  var CALCULATORS = [];
+  var CALCULATORS = [
+    { title: 'Security Deposit Return Calculator', desc: 'Find out exactly when your landlord must return your deposit — state-by-state US deadlines, UK deposit schemes, EU and Australia rules.', url: '/housing-rentals/calculators/security-deposit-return-calculator.html' }
+  ];
   var CASES = [];
   var INVESTIGATIONS = [];
 

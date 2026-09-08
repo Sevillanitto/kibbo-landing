@@ -17,16 +17,16 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. Browse by category. No account required.">
+<meta name="description" content="Free calculators that give an instant, plain-number estimate of what you're owed — covering flight compensation (EU, UK, US, Canada) and security deposit returns, with more categories on the way. Browse by category. No account required.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
 <meta property="og:title" content="Free Consumer Calculators — Instant Estimates">
-<meta property="og:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. No account required.">
+<meta property="og:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — covering flight compensation and security deposit returns, with more categories on the way. No account required.">
 <meta property="og:url" content="https://www.getkibbo.com/calculators">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Consumer Calculators — Instant Estimates">
-<meta name="twitter:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. No account required.">
+<meta name="twitter:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — covering flight compensation and security deposit returns, with more categories on the way. No account required.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +49,7 @@
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 2,
+    "numberOfItems": 3,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -62,6 +62,12 @@
         "position": 2,
         "name": "Flight Delay Compensation Calculator (UK, US & Canada)",
         "url": "https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Security Deposit Return Calculator",
+        "url": "https://www.getkibbo.com/housing-rentals/calculators/security-deposit-return-calculator"
       }
     ]
   }
@@ -71,11 +77,10 @@
   /* Calculators hub — tabbed by block (same pattern as templates.html and
      checklists.html). Prefix .calch- (Calculators Hub), matching the
      per-page-prefix convention (.tp- for templates, .ckh- for checklists).
-     Only one tab exists today because only one block (Flights & Travel)
-     has any calculators yet — per site convention, never show an empty
-     category/tab; add more <button class="crc-tab">/<div
-     class="calch-tool-panel"> pairs here as each block's first calculator
-     ships. */
+     Only tabs for blocks that actually have a calculator exist here — per
+     site convention, never show an empty category/tab; add more
+     <button class="crc-tab">/<div class="calch-tool-panel"> pairs here as
+     each block's first calculator ships. */
   .calch-tool-panel { display: none; }
   .calch-tool-panel.active { display: block; }
 </style>
@@ -105,7 +110,7 @@
   <div class="container">
     <p class="section-label">Free Calculators</p>
     <h1 class="section-title">Calculate what you're owed, <em>instantly</em></h1>
-    <p class="section-subtitle">Free calculators that turn a specific situation into a plain number — no account required. Starting with Flights &amp; Travel; more categories are added as each block's first calculator ships.</p>
+    <p class="section-subtitle">Free calculators that turn a specific situation into a plain number — no account required. Browse by category below; more are added as each block's first calculator ships.</p>
   </div>
 </div>
 
@@ -114,6 +119,7 @@
 
     <div class="crc-tabs" role="tablist" aria-label="Block" id="calculatorsTabs">
       <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="flights-travel">Flights &amp; Travel (2)</button>
+      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals">Housing &amp; Rentals (1)</button>
     </div>
 
     <div class="calch-tool-panel active" data-toolpanel="flights-travel">
@@ -128,6 +134,17 @@
           <span class="cl-card-tag">Calculator</span>
           <h3 class="cl-card-title">Flight Delay Compensation Calculator (UK, US &amp; Canada)</h3>
           <p class="cl-card-desc">The jurisdictions EU261 doesn't cover — UK261, US DOT rules, and Canada's APPR. Instant estimate, or a clear explanation of your refund/procedural rights in the US.</p>
+          <div class="cl-card-meta"><span>⏱ 1 min</span><span class="cl-card-go">Calculate →</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="calch-tool-panel" data-toolpanel="housing-rentals">
+      <div class="cl-hub-grid">
+        <a class="cl-card" href="/housing-rentals/calculators/security-deposit-return-calculator.html">
+          <span class="cl-card-tag">Calculator</span>
+          <h3 class="cl-card-title">Security Deposit Return Calculator</h3>
+          <p class="cl-card-desc">Find out exactly when your landlord must return your deposit — state-by-state US deadlines, UK deposit schemes, EU and Australia rules.</p>
           <div class="cl-card-meta"><span>⏱ 1 min</span><span class="cl-card-go">Calculate →</span></div>
         </a>
       </div>
