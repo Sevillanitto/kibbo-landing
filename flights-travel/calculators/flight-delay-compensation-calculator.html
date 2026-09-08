@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Flight Delay Compensation Calculator (UK, US & Canada) — Instant Result | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator for UK261, US DOT, and Canada APPR flight delay, cancellation and denied boarding rules. Instant answer on what you're owed — cash compensation in the UK and Canada, refund rights in the US.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Flight Delay Compensation Calculator (UK, US & Canada) — Instant Result">
+<meta property="og:description" content="Free calculator for UK261, US DOT, and Canada APPR flight delay, cancellation and denied boarding rules. Instant answer on what you're owed.">
+<meta property="og:url" content="https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Flight Delay Compensation Calculator (UK, US & Canada) — Instant Result">
+<meta name="twitter:description" content="Free calculator for UK261, US DOT, and Canada APPR flight delay, cancellation and denied boarding rules. Instant answer on what you're owed.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Flight Delay Compensation Calculator", "item": "https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Flight Delay Compensation Calculator (UK, US & Canada)",
+      "url": "https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator covering UK261, US DOT, and Canada's Air Passenger Protection Regulations (APPR) — the flight delay, cancellation and denied boarding jurisdictions EU261 doesn't cover.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Flight delay compensation calculator — UK, US &amp; Canada</h1>
+    <p class="section-subtitle">Free, instant calculator covering the jurisdictions EU261 doesn't: UK261, US DOT rules, and Canada's Air Passenger Protection Regulations (APPR). Answer a few quick questions and see exactly what you're owed — or, in the US, exactly what right you actually have.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="fdCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="jurisdiction">Where did your flight depart from, or which airline operated it?</label>
+        <select class="calc-select" id="jurisdiction" name="jurisdiction">
+          <option value="" disabled selected>Select one</option>
+          <option value="uk">UK</option>
+          <option value="us">US domestic, or to/from the US</option>
+          <option value="ca">Canada</option>
+        </select>
+        <span class="calc-help">Flying to/from the EU instead? Use the <a href="/flights-travel/calculators/eu261-compensation-calculator.html">EU261 Compensation Calculator</a>.</span>
+      </div>
+
+      <!-- ============ UK261 ============ -->
+      <div id="ukFields" hidden>
+
+        <div class="calc-field">
+          <label class="calc-label" for="ukDistanceKm">Flight distance (km)</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="ukDistanceKm" placeholder="e.g. 1200">
+          <span class="calc-help">Not sure? Check the distance on <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> or <a href="https://greatcirclemapper.net" target="_blank" rel="noopener">greatcirclemapper.net</a>.</span>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="ukScenario">What happened?</label>
+          <select class="calc-select" id="ukScenario">
+            <option value="" disabled selected>Select one</option>
+            <option value="delay">Delay</option>
+            <option value="cancellation">Cancellation</option>
+            <option value="denied">Denied boarding</option>
+          </select>
+        </div>
+
+        <div class="calc-field" id="ukDelayField" hidden>
+          <label class="calc-label" for="ukDelayHours">How many hours late did you arrive at your final destination?</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="ukDelayHours" placeholder="e.g. 4">
+        </div>
+
+        <div class="calc-field" id="ukNoticeField" hidden>
+          <label class="calc-label" for="ukNotice">How much notice were you given before the cancellation?</label>
+          <select class="calc-select" id="ukNotice">
+            <option value="" disabled selected>Select one</option>
+            <option value="lt7">Less than 7 days</option>
+            <option value="7to14">7–14 days</option>
+            <option value="gt14">More than 14 days</option>
+          </select>
+        </div>
+
+        <div class="calc-field" id="ukAltCloseField" hidden>
+          <label class="calc-label" id="ukAltCloseLabel">Was an alternative flight offered that arrived close to your original scheduled time?</label>
+          <div class="calc-radio-group" role="radiogroup" aria-labelledby="ukAltCloseLabel">
+            <label class="calc-radio-option"><input type="radio" name="ukAltClose" value="yes"> Yes</label>
+            <label class="calc-radio-option"><input type="radio" name="ukAltClose" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="ukExtraordinary">Did the airline cite a reason like bad weather, air traffic control restrictions, or a strike unrelated to the airline's own staff?</label>
+          <select class="calc-select" id="ukExtraordinary">
+            <option value="" disabled selected>Select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unsure">Not sure</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- ============ US DOT ============ -->
+      <div id="usFields" hidden>
+
+        <p class="calc-help">There's no per-hour cash compensation like EU261/UK261 in the US — DOT rules give you a refund right and procedural protections instead, not a payout. This calculator will never show you a dollar compensation figure for a US flight.</p>
+
+        <div class="calc-field">
+          <label class="calc-label" for="usScenario">What happened?</label>
+          <select class="calc-select" id="usScenario">
+            <option value="" disabled selected>Select one</option>
+            <option value="cancelled">Airline cancelled or significantly changed my flight</option>
+            <option value="tarmac">Delayed on the tarmac</option>
+          </select>
+        </div>
+
+        <div class="calc-field" id="usRefundField" hidden>
+          <label class="calc-label" id="usRefundLabel">Did you accept the airline's replacement flight, or do you want your money back for the unused ticket?</label>
+          <div class="calc-radio-group" role="radiogroup" aria-labelledby="usRefundLabel">
+            <label class="calc-radio-option"><input type="radio" name="usRefundChoice" value="refund"> I want a refund of the unused ticket</label>
+          </div>
+          <div class="calc-radio-group" role="radiogroup" aria-labelledby="usRefundLabel" style="margin-top:10px;">
+            <label class="calc-radio-option"><input type="radio" name="usRefundChoice" value="accepted"> I accepted the replacement flight</label>
+          </div>
+        </div>
+
+        <div class="calc-field" id="usDomesticField" hidden>
+          <label class="calc-label" for="usDomestic">Domestic or international flight?</label>
+          <select class="calc-select" id="usDomestic">
+            <option value="" disabled selected>Select one</option>
+            <option value="domestic">Domestic (within the US)</option>
+            <option value="international">International</option>
+          </select>
+        </div>
+
+        <div class="calc-field" id="usTarmacHoursField" hidden>
+          <label class="calc-label" for="usTarmacHours">How many hours were you stuck on the tarmac?</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="usTarmacHours" placeholder="e.g. 3.5">
+        </div>
+
+      </div>
+
+      <!-- ============ Canada APPR ============ -->
+      <div id="caFields" hidden>
+
+        <p class="calc-help">APPR applies when Canada is your departure point, or you're arriving on a Canadian carrier. UK261 and APPR can't both apply to the same flight — only one jurisdiction, based on where you departed, governs.</p>
+
+        <div class="calc-field">
+          <label class="calc-label" for="caScenario">What happened?</label>
+          <select class="calc-select" id="caScenario">
+            <option value="" disabled selected>Select one</option>
+            <option value="delay">Delay</option>
+            <option value="cancellation">Cancellation</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="caDelayHours">In total, how many hours late did you arrive at your final destination?</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="caDelayHours" placeholder="e.g. 5">
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="caAirlineSize">Airline size</label>
+          <select class="calc-select" id="caAirlineSize">
+            <option value="" disabled selected>Select one</option>
+            <option value="large">Large airline (e.g. Air Canada, WestJet)</option>
+            <option value="small">Small / regional airline</option>
+            <option value="unsure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="caControl">Was the delay/cancellation within the airline's control?</label>
+          <select class="calc-select" id="caControl">
+            <option value="" disabled selected>Select one</option>
+            <option value="within">Yes, and not a safety issue</option>
+            <option value="safety">Yes, but it was a safety issue</option>
+            <option value="outside">No — weather, air traffic control, security, or another reason outside the airline's control</option>
+            <option value="unsure">Not sure</option>
+          </select>
+        </div>
+
+      </div>
+
+      <p class="calc-error" id="fdCalcError" hidden>Please answer every question above before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my compensation</button>
+    </form>
+
+    <div class="calc-result" id="fdCalcResult" hidden>
+      <div class="calc-result-figure" id="fdResultFigure"></div>
+      <div class="calc-result-headline" id="fdResultHeadline"></div>
+      <div class="calc-result-context" id="fdResultContext"></div>
+      <div id="fdResultCtas"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Flight Delay Compensation Calculator (UK / US / Canada) — companion to
+// the EU261 Compensation Calculator, second of 27 planned calculators.
+// One top-level jurisdiction question branches into three independent
+// sub-forms/engines. UK261 reuses the EU261 engine's shape (same
+// eligibility branches: delay/cancellation-notice/denied-boarding,
+// extraordinary-circumstances caveat) with its own currency table and a
+// UK-specific long-haul 3-4h reduced tier that EU261 doesn't have. US has
+// NO cash-compensation engine at all by design — every US branch renders
+// text, never a dollar figure. Canada uses its own delay-hour tier lookup.
+// Still one scrollable page throughout — jurisdiction and scenario
+// changes show/hide field groups via JS, no reload, no wizard steps.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('fdCalcForm');
+  var jurisdictionSelect = document.getElementById('jurisdiction');
+  var ukFields = document.getElementById('ukFields');
+  var usFields = document.getElementById('usFields');
+  var caFields = document.getElementById('caFields');
+  var errorEl = document.getElementById('fdCalcError');
+  var resultEl = document.getElementById('fdCalcResult');
+  var figureEl = document.getElementById('fdResultFigure');
+  var headlineEl = document.getElementById('fdResultHeadline');
+  var contextEl = document.getElementById('fdResultContext');
+  var ctasEl = document.getElementById('fdResultCtas');
+
+  // UK sub-fields
+  var ukScenario = document.getElementById('ukScenario');
+  var ukDelayField = document.getElementById('ukDelayField');
+  var ukDelayHours = document.getElementById('ukDelayHours');
+  var ukNoticeField = document.getElementById('ukNoticeField');
+  var ukNotice = document.getElementById('ukNotice');
+  var ukAltCloseField = document.getElementById('ukAltCloseField');
+
+  // US sub-fields
+  var usScenario = document.getElementById('usScenario');
+  var usRefundField = document.getElementById('usRefundField');
+  var usDomesticField = document.getElementById('usDomesticField');
+  var usTarmacHoursField = document.getElementById('usTarmacHoursField');
+
+  function radioValue(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  // ---- Top-level jurisdiction switch -- shows exactly one field group. ----
+  jurisdictionSelect.addEventListener('change', function () {
+    var v = jurisdictionSelect.value;
+    ukFields.hidden = v !== 'uk';
+    usFields.hidden = v !== 'us';
+    caFields.hidden = v !== 'ca';
+  });
+
+  // ---- UK: what-happened -> conditional sub-fields (same shape as EU261) ----
+  ukScenario.addEventListener('change', function () {
+    var v = ukScenario.value;
+    ukDelayField.hidden = v !== 'delay';
+    ukNoticeField.hidden = v !== 'cancellation';
+    ukAltCloseField.hidden = v !== 'cancellation';
+  });
+
+  // ---- US: what-happened -> conditional sub-fields ----
+  usScenario.addEventListener('change', function () {
+    var v = usScenario.value;
+    usRefundField.hidden = v !== 'cancelled';
+    usDomesticField.hidden = v !== 'tarmac';
+    usTarmacHoursField.hidden = v !== 'tarmac';
+  });
+
+  function fmtGBP(n) { return '£' + n.toLocaleString('en-GB'); }
+  function fmtCAD(n) { return n.toLocaleString('en-CA') + ' CAD'; }
+
+  // ==================== UK261 ====================
+  // Same eligibility engine as EU261 (delay 3h threshold, cancellation
+  // notice bands, extraordinary-circumstances caveat), same article
+  // structure (UK261 retained the EU261 regulation's numbering when it
+  // was carried into UK law) -- only the currency table changes, plus
+  // one UK-specific addition: the >3,500km band splits into a 3-4h
+  // reduced tier and a 4h+ full tier for the Delay branch specifically.
+  function ukBandFor(distanceKm) {
+    if (distanceKm <= 1500) return { label: '1,500 km or less', full: 220 };
+    if (distanceKm <= 3500) return { label: '1,500–3,500 km', full: 350 };
+    return { label: 'more than 3,500 km', full: 520, longHaulReduced: 260 };
+  }
+
+  function calculateUK(inputs) {
+    var band = ukBandFor(inputs.distanceKm);
+    var eligible = false, amount = 0, reasonKey = '';
+
+    if (inputs.scenario === 'delay') {
+      if (inputs.delayHours >= 3) {
+        eligible = true;
+        if (band.longHaulReduced && inputs.delayHours < 4) {
+          amount = band.longHaulReduced; reasonKey = 'uk-delay-long-reduced';
+        } else {
+          amount = band.full; reasonKey = 'uk-delay-full';
+        }
+      } else {
+        eligible = false; reasonKey = 'uk-delay-under-3h';
+      }
+    } else if (inputs.scenario === 'cancellation') {
+      if (inputs.notice === 'gt14') {
+        eligible = false; reasonKey = 'uk-cancel-14days';
+      } else if (inputs.notice === '7to14') {
+        if (inputs.altClose === 'yes') { eligible = false; reasonKey = 'uk-cancel-7to14-close'; }
+        else { eligible = true; amount = band.full; reasonKey = 'uk-cancel-7to14-notclose'; }
+      } else { // lt7
+        if (inputs.altClose === 'yes') { eligible = false; reasonKey = 'uk-cancel-lt7-close'; }
+        else { eligible = true; amount = band.full; reasonKey = 'uk-cancel-lt7-notclose'; }
+      }
+    } else if (inputs.scenario === 'denied') {
+      eligible = true; amount = band.full; reasonKey = 'uk-denied-boarding';
+    }
+
+    var extraordinaryFlag = (inputs.extraordinary === 'yes' || inputs.extraordinary === 'unsure');
+    return { jurisdiction: 'uk', eligible: eligible, amount: amount, band: band, reasonKey: reasonKey, extraordinaryFlag: extraordinaryFlag };
+  }
+
+  var UK_REASON_TEXT = {
+    'uk-delay-full': function (r) {
+      return 'Your flight arrived 3 or more hours late — UK case law (carried over from the Sturgeon ruling) treats this the same as a cancellation for compensation purposes. For a route of ' + r.band.label + ', that’s a fixed ' + fmtGBP(r.band.full) + ' per passenger under UK261 Article 7.';
+    },
+    'uk-delay-long-reduced': function (r) {
+      return 'Your flight covered more than 3,500 km and arrived between 3 and 4 hours late. UK261 specifically allows airlines to pay a reduced amount for long-haul delays in this narrower window: ' + fmtGBP(r.band.longHaulReduced) + ' per passenger, rather than the full ' + fmtGBP(r.band.full) + ' that applies at 4+ hours.';
+    },
+    'uk-delay-under-3h': function () {
+      return 'A delay of under 3 hours on arrival doesn’t meet the threshold UK261 compensation requires. Based on delay length alone, no compensation applies here.';
+    },
+    'uk-cancel-14days': function () {
+      return 'You were given 14 or more days’ notice of the cancellation. Under UK261 Article 5(1)(c)(i), that removes the right to compensation regardless of the reason given.';
+    },
+    'uk-cancel-7to14-close': function () {
+      return 'You were given 7–14 days’ notice, and the replacement flight departed no more than 2 hours before and arrived no more than 4 hours after your original scheduled time. Under UK261 Article 5(1)(c)(ii), that combination removes the right to compensation entirely — no partial payout, either inside that window (£0) or outside it (full compensation).';
+    },
+    'uk-cancel-7to14-notclose': function (r) {
+      return 'You were given 7–14 days’ notice, but the replacement flight fell outside the departed-no-more-than-2h-before/arrived-no-more-than-4h-after window — so the right to compensation stands in full. For a route of ' + r.band.label + ', that’s ' + fmtGBP(r.band.full) + ' per passenger under UK261 Article 7.';
+    },
+    'uk-cancel-lt7-close': function () {
+      return 'You were given less than 7 days’ notice, and the replacement flight departed no more than 1 hour before and arrived no more than 2 hours after your original scheduled time. Under UK261 Article 5(1)(c)(iii), that combination removes the right to compensation entirely — no partial payout, either inside that window (£0) or outside it (full compensation).';
+    },
+    'uk-cancel-lt7-notclose': function (r) {
+      return 'You were given less than 7 days’ notice, and the replacement flight fell outside the departed-no-more-than-1h-before/arrived-no-more-than-2h-after window — so the right to compensation stands in full. For a route of ' + r.band.label + ', that’s ' + fmtGBP(r.band.full) + ' per passenger under UK261 Article 7.';
+    },
+    'uk-denied-boarding': function (r) {
+      return 'Involuntary denied boarding carries a compensation right almost automatically, regardless of the reason given. For a route of ' + r.band.label + ', that’s a fixed ' + fmtGBP(r.band.full) + ' per passenger under UK261 Article 7.';
+    }
+  };
+
+  // ==================== US DOT ====================
+  // No cash-compensation table anywhere in this branch, by design.
+  function calculateUS(inputs) {
+    if (inputs.scenario === 'cancelled') {
+      if (inputs.refundChoice === 'refund') {
+        return { jurisdiction: 'us', reasonKey: 'us-cancelled-refund' };
+      }
+      return { jurisdiction: 'us', reasonKey: 'us-cancelled-accepted' };
+    }
+    // tarmac
+    var threshold = inputs.domestic === 'domestic' ? 3 : 4;
+    if (inputs.tarmacHours >= threshold) {
+      return { jurisdiction: 'us', reasonKey: 'us-tarmac-met', threshold: threshold };
+    }
+    return { jurisdiction: 'us', reasonKey: 'us-tarmac-notmet', threshold: threshold };
+  }
+
+  var US_RESULT = {
+    'us-cancelled-refund': {
+      figure: 'Full refund', headline: 'You’re entitled to a refund of the unused ticket',
+      context: 'Since the DOT’s 2024 automatic-refund rule, airlines must give you a full cash refund — not a travel voucher — for the unused portion of your ticket when they cancel or significantly change your flight and you decline the alternative offered. There’s no per-hour cash compensation like EU261/UK261 in the US — this is a refund of what you already paid, not an extra payout.',
+      cta: true
+    },
+    'us-cancelled-accepted': {
+      figure: 'No refund right', headline: 'The automatic refund right doesn’t apply here',
+      context: 'The DOT’s automatic full-refund rule specifically covers passengers who decline the airline’s replacement flight. Since you accepted the rebooking, that refund right doesn’t apply to the unused-ticket portion. If the replacement itself was inadequate, or you had out-of-pocket costs, you can still raise that directly with the airline or the DOT — there’s no per-hour cash compensation like EU261/UK261 in the US either way.',
+      cta: true
+    },
+    'us-tarmac-met': {
+      figure: 'Right to deplane', headline: 'You’ve hit the DOT tarmac-delay threshold',
+      context: function (r) { return 'At ' + r.threshold + '+ hours on the tarmac (' + (r.threshold === 3 ? 'domestic' : 'international') + ' flights), DOT rules require the airline to give you the chance to deplane, and to provide food and water within 2 hours of the delay beginning. This is a procedural right, not cash compensation — there’s no per-hour payout like EU261/UK261 in the US.'; },
+      cta: true
+    },
+    'us-tarmac-notmet': {
+      figure: 'Threshold not yet met', headline: '',
+      context: function (r) { return 'At this length, the delay hasn’t yet reached the DOT tarmac-delay threshold (3+ hours domestic, 4+ hours international) that triggers the right to deplane and to food/water. Keep records in case the delay continues — and remember there’s no per-hour cash compensation like EU261/UK261 in the US even once it does.'; },
+      cta: false
+    }
+  };
+
+  // ==================== Canada APPR ====================
+  function caTierFor(hours, size) {
+    var tier = hours >= 9 ? 3 : hours >= 6 ? 2 : hours >= 3 ? 1 : 0;
+    var LARGE = [0, 400, 700, 1000];
+    var SMALL = [0, 125, 250, 500];
+    return { tier: tier, large: LARGE[tier], small: SMALL[tier] };
+  }
+
+  function calculateCA(inputs) {
+    if (inputs.control === 'outside' || inputs.control === 'safety') {
+      return { jurisdiction: 'ca', eligible: false, reasonKey: inputs.control === 'safety' ? 'ca-safety' : 'ca-outside-control' };
+    }
+    if (inputs.delayHours < 3) {
+      return { jurisdiction: 'ca', eligible: false, reasonKey: 'ca-under-3h' };
+    }
+    var t = caTierFor(inputs.delayHours, inputs.airlineSize);
+    if (t.tier === 0) {
+      return { jurisdiction: 'ca', eligible: false, reasonKey: 'ca-under-3h' };
+    }
+    var amount = inputs.airlineSize === 'small' ? t.small : t.large; // unsure -> shows the large figure with a caveat
+    return {
+      jurisdiction: 'ca', eligible: true, amount: amount, smallAmount: t.small, tier: t.tier, airlineSize: inputs.airlineSize,
+      scenario: inputs.scenario, unsureFlag: inputs.control === 'unsure', sizeUnsureFlag: inputs.airlineSize === 'unsure',
+      reasonKey: 'ca-eligible'
+    };
+  }
+
+  var CA_TIER_RANGE = { 1: '3–6 hours', 2: '6–9 hours', 3: '9+ hours' };
+
+  var CA_REASON_TEXT = {
+    'ca-outside-control': function () {
+      return 'You indicated the delay/cancellation was outside the airline’s control (weather, air traffic control, security, or similar). Under APPR, no compensation is owed in that case — only your rebooking and refund rights, not a cash payment.';
+    },
+    'ca-safety': function () {
+      return 'You indicated this was a safety-related issue, even though it was within the airline’s control. APPR specifically excludes safety-related disruptions from compensation, whoever caused them — you still have rebooking and refund rights, but not a cash payment.';
+    },
+    'ca-under-3h': function () {
+      return 'APPR’s compensation tiers start at a 3-hour delay on arrival. Based on the length you entered, that threshold isn’t met, so no compensation applies here.';
+    },
+    'ca-eligible': function (r) {
+      var sizeLabel = r.airlineSize === 'small' ? 'a small/regional airline' : 'a large airline';
+      var eventLabel = r.scenario === 'cancellation' ? 'Your cancellation, which left you arriving' : 'Your delay of';
+      var tail = r.scenario === 'cancellation' ? ' late,' : '';
+      return eventLabel + ' ' + CA_TIER_RANGE[r.tier] + tail + ' was within the airline’s control and not safety-related, so APPR compensation applies. Based on ' + sizeLabel + '’s fixed tier, that’s ' + fmtCAD(r.amount) + ' per passenger.';
+    }
+  };
+
+  // ---- Result rendering ----
+  function renderResult(r) {
+    ctasEl.innerHTML = '';
+
+    if (r.jurisdiction === 'uk') {
+      var ukText = UK_REASON_TEXT[r.reasonKey](r);
+      var ukHtml = '<p>' + ukText + '</p>';
+      if (r.eligible && r.extraordinaryFlag) {
+        ukHtml += '<p>You indicated the airline cited a reason like bad weather, unrelated strikes, security risks, or air traffic control restrictions. Under UK261 Article 5(3), airlines can cite these “extraordinary circumstances” to avoid paying — but this defense is applied narrowly, and many claims initially refused on these grounds succeed anyway. If you disagree with the airline’s reasoning, you can still file a claim.</p>';
+      }
+      figureEl.textContent = r.eligible ? fmtGBP(r.amount) : '£0';
+      headlineEl.textContent = r.eligible ? 'Estimated compensation per passenger' : 'No compensation applies based on your answers';
+      contextEl.innerHTML = ukHtml;
+      if (r.eligible) {
+        ctasEl.innerHTML = '<a class="calc-cta" href="/generate/flight-disruption-compensation-reimbursement.html">Generate your UK261 claim letter →</a>';
+      }
+
+    } else if (r.jurisdiction === 'us') {
+      var us = US_RESULT[r.reasonKey];
+      figureEl.textContent = us.figure;
+      headlineEl.textContent = us.headline;
+      contextEl.innerHTML = '<p>' + (typeof us.context === 'function' ? us.context(r) : us.context) + '</p>';
+      if (us.cta) {
+        ctasEl.innerHTML =
+          '<div class="calc-cta-group">' +
+          '<a class="calc-cta" href="https://airconsumer.dot.gov/escomplaint/ContactUs.aspx" target="_blank" rel="noopener">File a DOT complaint →</a>' +
+          '<a class="calc-cta" href="/generate/flight-disruption-compensation-reimbursement.html">Generate your refund demand letter →</a>' +
+          '</div>';
+      }
+
+    } else if (r.jurisdiction === 'ca') {
+      var caHtml = '<p>' + CA_REASON_TEXT[r.reasonKey](r) + '</p>';
+      if (r.eligible && r.sizeUnsureFlag) {
+        caHtml += '<p>You weren’t sure of the airline’s size, so this figure uses the large-airline tier. If it turns out to be a small or regional airline instead, the fixed tier is lower — ' + fmtCAD(r.smallAmount) + ' for this delay length, not ' + fmtCAD(r.amount) + '. Check the airline’s size to get the right number.</p>';
+      }
+      if (r.eligible && r.unsureFlag) {
+        caHtml += '<p>You weren’t sure whether this was within the airline’s control. If the airline claims it was a safety issue or genuinely outside their control (weather, ATC, security), they may dispute this figure — but you can still file a claim with the CTA below if you disagree.</p>';
+      }
+      figureEl.textContent = r.eligible ? fmtCAD(r.amount) : '$0 CAD';
+      headlineEl.textContent = r.eligible ? 'Estimated compensation per passenger' : 'No compensation applies based on your answers';
+      contextEl.innerHTML = caHtml;
+      if (r.eligible) {
+        ctasEl.innerHTML = '<a class="calc-cta" href="/generate/flight-disruption-compensation-reimbursement.html">Generate your APPR claim letter →</a>';
+      }
+    }
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var jurisdiction = jurisdictionSelect.value;
+    if (!jurisdiction) { errorEl.hidden = false; return; }
+
+    if (jurisdiction === 'uk') {
+      var distanceKm = parseFloat(document.getElementById('ukDistanceKm').value);
+      var scenario = ukScenario.value;
+      var extraordinary = document.getElementById('ukExtraordinary').value;
+      if (!distanceKm || distanceKm <= 0 || !scenario || !extraordinary) { errorEl.hidden = false; return; }
+
+      var inputs = { distanceKm: distanceKm, scenario: scenario, extraordinary: extraordinary };
+      if (scenario === 'delay') {
+        var delayHours = parseFloat(ukDelayHours.value);
+        if (isNaN(delayHours) || delayHours < 0) { errorEl.hidden = false; return; }
+        inputs.delayHours = delayHours;
+      } else if (scenario === 'cancellation') {
+        var notice = ukNotice.value;
+        var altClose = radioValue('ukAltClose');
+        if (!notice || !altClose) { errorEl.hidden = false; return; }
+        inputs.notice = notice;
+        inputs.altClose = altClose;
+      }
+      renderResult(calculateUK(inputs));
+
+    } else if (jurisdiction === 'us') {
+      var uScenario = usScenario.value;
+      if (!uScenario) { errorEl.hidden = false; return; }
+
+      if (uScenario === 'cancelled') {
+        var refundChoice = radioValue('usRefundChoice');
+        if (!refundChoice) { errorEl.hidden = false; return; }
+        renderResult(calculateUS({ scenario: uScenario, refundChoice: refundChoice }));
+      } else {
+        var domestic = document.getElementById('usDomestic').value;
+        var tarmacHours = parseFloat(document.getElementById('usTarmacHours').value);
+        if (!domestic || isNaN(tarmacHours) || tarmacHours < 0) { errorEl.hidden = false; return; }
+        renderResult(calculateUS({ scenario: uScenario, domestic: domestic, tarmacHours: tarmacHours }));
+      }
+
+    } else if (jurisdiction === 'ca') {
+      var caScenario = document.getElementById('caScenario').value;
+      var caDelayHours = parseFloat(document.getElementById('caDelayHours').value);
+      var caAirlineSize = document.getElementById('caAirlineSize').value;
+      var caControl = document.getElementById('caControl').value;
+      if (!caScenario || isNaN(caDelayHours) || caDelayHours < 0 || !caAirlineSize || !caControl) { errorEl.hidden = false; return; }
+      renderResult(calculateCA({ scenario: caScenario, delayHours: caDelayHours, airlineSize: caAirlineSize, control: caControl }));
+    }
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>

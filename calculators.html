@@ -17,16 +17,16 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with EU261 flight compensation. Browse by category. No account required.">
+<meta name="description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. Browse by category. No account required.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
 <meta property="og:title" content="Free Consumer Calculators — Instant Estimates">
-<meta property="og:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with EU261 flight compensation. No account required.">
+<meta property="og:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. No account required.">
 <meta property="og:url" content="https://www.getkibbo.com/calculators">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Consumer Calculators — Instant Estimates">
-<meta name="twitter:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with EU261 flight compensation. No account required.">
+<meta name="twitter:description" content="Free calculators that give an instant, plain-number estimate of what you're owed — starting with flight compensation calculators for the EU, UK, US and Canada. No account required.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,13 +49,19 @@
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 1,
+    "numberOfItems": 2,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "EU261 Compensation Calculator",
         "url": "https://www.getkibbo.com/flights-travel/calculators/eu261-compensation-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Flight Delay Compensation Calculator (UK, US & Canada)",
+        "url": "https://www.getkibbo.com/flights-travel/calculators/flight-delay-compensation-calculator"
       }
     ]
   }
@@ -65,10 +71,11 @@
   /* Calculators hub — tabbed by block (same pattern as templates.html and
      checklists.html). Prefix .calch- (Calculators Hub), matching the
      per-page-prefix convention (.tp- for templates, .ckh- for checklists).
-     Only one tab exists today because only one block has a calculator —
-     per site convention, never show an empty category/tab; add more
-     <button class="crc-tab">/<div class="calch-tool-panel"> pairs here as
-     each block's first calculator ships. */
+     Only one tab exists today because only one block (Flights & Travel)
+     has any calculators yet — per site convention, never show an empty
+     category/tab; add more <button class="crc-tab">/<div
+     class="calch-tool-panel"> pairs here as each block's first calculator
+     ships. */
   .calch-tool-panel { display: none; }
   .calch-tool-panel.active { display: block; }
 </style>
@@ -98,7 +105,7 @@
   <div class="container">
     <p class="section-label">Free Calculators</p>
     <h1 class="section-title">Calculate what you're owed, <em>instantly</em></h1>
-    <p class="section-subtitle">Free calculators that turn a specific situation into a plain number — no account required. Starting with EU261 flight compensation; more categories are added as each block's calculator ships.</p>
+    <p class="section-subtitle">Free calculators that turn a specific situation into a plain number — no account required. Starting with Flights &amp; Travel; more categories are added as each block's first calculator ships.</p>
   </div>
 </div>
 
@@ -106,7 +113,7 @@
   <div class="container">
 
     <div class="crc-tabs" role="tablist" aria-label="Block" id="calculatorsTabs">
-      <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="flights-travel">Flights &amp; Travel (1)</button>
+      <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="flights-travel">Flights &amp; Travel (2)</button>
     </div>
 
     <div class="calch-tool-panel active" data-toolpanel="flights-travel">
@@ -115,6 +122,12 @@
           <span class="cl-card-tag">Calculator</span>
           <h3 class="cl-card-title">EU261 Compensation Calculator</h3>
           <p class="cl-card-desc">Answer a few questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger.</p>
+          <div class="cl-card-meta"><span>⏱ 1 min</span><span class="cl-card-go">Calculate →</span></div>
+        </a>
+        <a class="cl-card" href="/flights-travel/calculators/flight-delay-compensation-calculator.html">
+          <span class="cl-card-tag">Calculator</span>
+          <h3 class="cl-card-title">Flight Delay Compensation Calculator (UK, US &amp; Canada)</h3>
+          <p class="cl-card-desc">The jurisdictions EU261 doesn't cover — UK261, US DOT rules, and Canada's APPR. Instant estimate, or a clear explanation of your refund/procedural rights in the US.</p>
           <div class="cl-card-meta"><span>⏱ 1 min</span><span class="cl-card-go">Calculate →</span></div>
         </a>
       </div>

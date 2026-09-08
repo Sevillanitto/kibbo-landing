@@ -581,13 +581,14 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // Calculators / Cases / Investigations (Update 2) — structurally ready; Cases and
 // Investigations arrays are still empty (verified: neither content type exists
 // anywhere on the site yet) and render zero DOM nodes — no "coming soon"
-// placeholder. Calculators now has its first entry (EU261 Compensation
-// Calculator, the template for 27 planned calculators sitewide) — to add more,
-// populate the matching array with { title, desc, url } objects; the section,
-// heading and cards appear automatically on next page load.
+// placeholder. Calculators now has two entries (EU261, then its UK/US/Canada
+// companion) — to add more, populate the matching array with
+// { title, desc, url } objects; the section, heading and cards appear
+// automatically on next page load.
 (function () {
   var CALCULATORS = [
-    { title: 'EU261 Compensation Calculator', desc: 'Answer a few questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger.', url: '/flights-travel/calculators/eu261-compensation-calculator.html' }
+    { title: 'EU261 Compensation Calculator', desc: 'Answer a few questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger.', url: '/flights-travel/calculators/eu261-compensation-calculator.html' },
+    { title: 'Flight Delay Compensation Calculator (UK, US & Canada)', desc: 'The jurisdictions EU261 doesn\'t cover — UK261, US DOT rules, and Canada\'s APPR. Instant estimate, or a clear explanation of your refund/procedural rights in the US.', url: '/flights-travel/calculators/flight-delay-compensation-calculator.html' }
   ];
   var CASES = [];
   var INVESTIGATIONS = [];

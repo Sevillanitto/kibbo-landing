@@ -961,3 +961,8 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
   padding: 12px 20px; transition: var(--transition);
 }
 .calc-cta:hover { border-color: var(--text-primary); }
+/* Stacked variant for a result with more than one CTA (e.g. a jurisdiction
+   branch that offers both an external complaint portal and a Kibbo tool) —
+   single column always, never side-by-side. */
+.calc-cta-group { display: flex; flex-direction: column; gap: 10px; margin-top: 26px; }
+.calc-cta-group .calc-cta { margin-top: 0; }
