@@ -255,15 +255,24 @@
     return '€' + n.toLocaleString('en-IE');
   }
 
-  // Distance -> compensation band, per EU261 Art. 7.
+  // Distance -> compensation band, per EU261 Art. 7. Deliberately no
+  // "reduced" figure here: an earlier version of this calculator wrongly
+  // applied a 50% reduction in the cancellation-notice branch below.
+  // Art. 7.2's reduction is a distinct mechanism (it applies when a
+  // rerouted passenger's own arrival delay falls under a distance-band
+  // threshold) that this calculator doesn't currently model anywhere —
+  // the cancellation-notice branch is correctly binary (€0 or full), and
+  // the Delay branch's 3-hour cutoff (Sturgeon case law) is also
+  // correctly binary, not banded. Don't reintroduce a reduced figure
+  // here without modeling Art. 7.2 properly first.
   function bandFor(distanceKm) {
     if (distanceKm <= 1500) {
-      return { key: 'short', label: '1,500 km or less', full: 250, reduced: 125, reducedHours: 2 };
+      return { key: 'short', label: '1,500 km or less', full: 250 };
     }
     if (distanceKm <= 3500) {
-      return { key: 'medium', label: '1,500–3,500 km', full: 400, reduced: 200, reducedHours: 3 };
+      return { key: 'medium', label: '1,500–3,500 km', full: 400 };
     }
-    return { key: 'long', label: 'more than 3,500 km', full: 600, reduced: 300, reducedHours: 4 };
+    return { key: 'long', label: 'more than 3,500 km', full: 600 };
   }
 
   function calculate(inputs) {
@@ -287,7 +296,7 @@
         if (inputs.altClose === 'yes') { eligible = false; reasonKey = 'cancel-7to14-close'; }
         else { eligible = true; amount = band.full; reasonKey = 'cancel-7to14-notclose'; }
       } else { // lt7
-        if (inputs.altClose === 'yes') { eligible = true; amount = band.reduced; reasonKey = 'cancel-lt7-close'; }
+        if (inputs.altClose === 'yes') { eligible = false; reasonKey = 'cancel-lt7-close'; }
         else { eligible = true; amount = band.full; reasonKey = 'cancel-lt7-notclose'; }
       }
     } else if (inputs.scenario === 'denied') {
@@ -310,16 +319,16 @@
       return 'You were given 14 or more days’ notice of the cancellation. Under EU261 Article 5(1)(c)(i), that removes the right to compensation regardless of the reason given.';
     },
     'cancel-7to14-close': function () {
-      return 'You were given 7–14 days’ notice, and the replacement flight arrived close to your original scheduled time. Under EU261 Article 5(1)(c)(ii), that combination removes the right to compensation.';
+      return 'You were given 7–14 days’ notice, and the replacement flight departed no more than 2 hours before and arrived no more than 4 hours after your original scheduled time. Under EU261 Article 5(1)(c)(ii), that combination removes the right to compensation entirely — there’s no partial/reduced payout at this notice band, either you’re inside that window (€0) or outside it (full compensation).';
     },
     'cancel-7to14-notclose': function (r) {
-      return 'You were given 7–14 days’ notice, but the replacement flight didn’t arrive close to your original scheduled time — so the right to compensation stands. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+      return 'You were given 7–14 days’ notice, but the replacement flight fell outside the departed-no-more-than-2h-before/arrived-no-more-than-4h-after window — so the right to compensation stands in full, not reduced. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
     },
-    'cancel-lt7-close': function (r) {
-      return 'You were given less than 7 days’ notice, but the airline rerouted you close to your original arrival time. Under EU261 Article 7.2, that halves the compensation for a route of ' + r.band.label + ' to ' + fmtEUR(r.band.reduced) + ' per passenger.';
+    'cancel-lt7-close': function () {
+      return 'You were given less than 7 days’ notice, and the replacement flight departed no more than 1 hour before and arrived no more than 2 hours after your original scheduled time. Under EU261 Article 5(1)(c)(iii), that combination removes the right to compensation entirely — there’s no partial/reduced payout at this notice band, either you’re inside that window (€0) or outside it (full compensation).';
     },
     'cancel-lt7-notclose': function (r) {
-      return 'You were given less than 7 days’ notice and the replacement flight didn’t arrive close to your original time — so the full right to compensation stands. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+      return 'You were given less than 7 days’ notice, and the replacement flight fell outside the departed-no-more-than-1h-before/arrived-no-more-than-2h-after window — so the right to compensation stands in full, not reduced. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
     },
     'denied-boarding': function (r) {
       return 'Involuntary denied boarding carries a compensation right almost automatically, regardless of the reason given. For a route of ' + r.band.label + ', that’s a fixed ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
