@@ -149,6 +149,56 @@ The config lives in TWO places — get both right or the generator fails:
 
 ---
 
+## New CALCULATOR
+
+Established on the EU261 Compensation Calculator (the first of 27
+planned) — reuse this shape for every one that follows.
+
+1. URL: `/<block-slug>/calculators/<calculator-slug>.html` — nested
+   under its block, not under a shared top-level `/calculators/`
+   folder (that path is reserved for the hub page only).
+2. Design (deliberately distinct from every other interactive tool on
+   the site — `.wiz`, `.cl-card`, etc. — do not reuse their classes):
+   mobile-first single column ALWAYS, even on desktop; no box-shadow;
+   no large border-radius; no gradients; no decorative icons. Reuse
+   the shared `.calc-*` classes in styles.css — no new CSS needed per
+   calculator. Brand green appears ONLY on the calculate button and
+   the result figure, nowhere else on the page (borders, focus
+   states, and the closing CTA all stay neutral ink/gray).
+3. Form fields stacked vertically, labels above each input (never
+   placeholder-only). `type="number" inputmode="decimal"` for numeric
+   fields. Conditional fields (relevant only for some answers) show/
+   hide via JS on the same page — no step/screen change, no reload.
+4. Calculation logic is bespoke per calculator (not a shared engine —
+   each one's math differs too much); the shared piece is the CSS and
+   the interaction shape only. Result renders inline below the form:
+   a large legible figure, then 2-3 lines of plain text explaining
+   WHY that figure applies (not a boxed card). One CTA at the end
+   linking to the most directly relevant existing template/generator
+   for that result — never invent a new one just for the link.
+5. Add a BreadcrumbList (Home → Calculators → this calculator) and a
+   WebApplication JSON-LD block, matching the pattern on rights-
+   checker.html.
+6. Add the card to calculators.html under its block's tab — only show
+   a tab for a block that actually has a calculator (same "never show
+   an empty category" rule as checklists.html).
+7. Un-hide (or add to, if others already exist) the Calculators
+   section on that block's pillar page — populate the `CALCULATORS`
+   array in the pillar page's own script; `renderCardSection()`
+   creates the section automatically once the array is non-empty.
+8. Add to sitemap.xml (both the calculator page and, the first time,
+   the calculators.html hub).
+9. Mandatory verification: test the calculator end-to-end with
+   several different input combinations covering the distinct
+   eligibility/output branches — confirm each produces the
+   mathematically correct result. Confirm the mobile layout at a
+   narrow viewport. Confirm the pillar page's Calculators section
+   now renders. Reload edited files to confirm changes are present.
+10. Commit and push.
+11. (Manual) Request Indexing in Search Console.
+
+---
+
 ## Cross-cutting rules — apply to every content type above
 
 - Never link to a resource, tool, or page that doesn't actually exist

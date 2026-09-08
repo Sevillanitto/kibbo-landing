@@ -911,3 +911,53 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
   .newsletter-submit-btn { width: 100%; }
 }
 @media print { .newsletter-signup { display: none !important; } }
+
+/* ============================================================
+   CALCULATORS (shared component)
+   Established on the EU261 Compensation Calculator, the first of 27
+   planned calculators nested under /<block>/calculators/<slug>.html.
+   Reuse these exact classes for every calculator that follows -- no
+   new CSS needed per page, same as the directory accordion pattern.
+
+   Deliberately minimal, distinct from every other interactive tool on
+   the site (.wiz, .cl-card, etc.): mobile-first single column ALWAYS
+   (no desktop multi-column switch), no box-shadow anywhere, no large
+   border-radius, no gradients, no decorative icons. Brand green is
+   used ONLY on the calculate button and the result figure -- every
+   other element (borders, focus states, the CTA link) stays neutral
+   ink/gray so those two elements stay the visual focus.
+   ============================================================ */
+.calc-wrap { max-width: 600px; margin: 0 auto; }
+.calc-field { margin-bottom: 22px; }
+.calc-field[hidden] { display: none; }
+.calc-label { display: block; font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.calc-help { display: block; font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: var(--text-muted); margin-top: 6px; }
+.calc-input, .calc-select {
+  display: block; width: 100%; font-family: var(--font-sans); font-size: 16px;
+  color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px; appearance: none;
+}
+.calc-select { background-image: none; }
+.calc-input:focus, .calc-select:focus { outline: none; border-color: var(--text-primary); }
+.calc-radio-group { display: flex; gap: 22px; flex-wrap: wrap; padding-top: 2px; }
+.calc-radio-option { display: flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 15px; color: var(--text-primary); cursor: pointer; }
+.calc-radio-option input { margin: 0; width: 17px; height: 17px; accent-color: var(--text-primary); }
+.calc-btn {
+  display: block; width: 100%; font-family: var(--font-sans); font-size: 16px; font-weight: 700;
+  color: #fff; background: var(--accent-green); border: none; border-radius: var(--radius-sm);
+  padding: 15px 20px; cursor: pointer; margin-top: 6px; transition: var(--transition);
+}
+.calc-btn:hover { background: #345C44; }
+.calc-error { font-family: var(--font-sans); font-size: 14px; color: var(--text-secondary); margin-top: 14px; }
+.calc-result { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border); }
+.calc-result-figure { font-family: var(--font-serif); font-weight: 700; font-size: clamp(40px, 11vw, 56px); line-height: 1.1; color: var(--accent-green); }
+.calc-result-headline { font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 10px; }
+.calc-result-context { font-family: var(--font-sans); font-size: 15px; line-height: 1.65; color: var(--text-secondary); margin-top: 14px; }
+.calc-result-context p { margin-top: 10px; }
+.calc-result-context p:first-child { margin-top: 0; }
+.calc-cta {
+  display: inline-block; margin-top: 26px; font-family: var(--font-sans); font-size: 15px; font-weight: 600;
+  color: var(--text-primary); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 20px; transition: var(--transition);
+}
+.calc-cta:hover { border-color: var(--text-primary); }

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/flights-travel/calculators/eu261-compensation-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free EU261 Flight Compensation Calculator — Instant Estimate | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Calculate your EU261 flight delay, cancellation or denied boarding compensation in seconds. Free calculator — enter your flight distance and what happened for an instant estimate, up to €600 per passenger.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free EU261 Flight Compensation Calculator — Instant Estimate">
+<meta property="og:description" content="Calculate your EU261 flight delay, cancellation or denied boarding compensation in seconds. Free, instant estimate up to €600 per passenger.">
+<meta property="og:url" content="https://www.getkibbo.com/flights-travel/calculators/eu261-compensation-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free EU261 Flight Compensation Calculator — Instant Estimate">
+<meta name="twitter:description" content="Calculate your EU261 flight delay, cancellation or denied boarding compensation in seconds. Free, instant estimate up to €600 per passenger.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "EU261 Compensation Calculator", "item": "https://www.getkibbo.com/flights-travel/calculators/eu261-compensation-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "EU261 Flight Compensation Calculator",
+      "url": "https://www.getkibbo.com/flights-travel/calculators/eu261-compensation-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that computes the EU261 compensation amount owed for a flight delay, cancellation or denied boarding, based on flight distance and official EU261 rules.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">EU261 flight compensation calculator</h1>
+    <p class="section-subtitle">Answer a few quick questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger, based on official EU261 rules.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="euCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" id="euApplicableLabel">Was your flight departing from an EU/EEA airport, or arriving in the EU/EEA on an EU-licensed airline?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="euApplicableLabel">
+          <label class="calc-radio-option"><input type="radio" name="euApplicable" value="yes" required> Yes</label>
+          <label class="calc-radio-option"><input type="radio" name="euApplicable" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="distanceKm">Flight distance (km)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="distanceKm" name="distanceKm" placeholder="e.g. 1200">
+        <span class="calc-help">Not sure? Check the distance on <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> or <a href="https://greatcirclemapper.net" target="_blank" rel="noopener">greatcirclemapper.net</a>.</span>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="scenario">What happened?</label>
+        <select class="calc-select" id="scenario" name="scenario">
+          <option value="" disabled selected>Select one</option>
+          <option value="delay">Delay</option>
+          <option value="cancellation">Cancellation</option>
+          <option value="denied">Denied boarding</option>
+        </select>
+      </div>
+
+      <div class="calc-field" id="delayField" hidden>
+        <label class="calc-label" for="delayHours">How many hours late did you arrive at your final destination?</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="delayHours" name="delayHours" placeholder="e.g. 4">
+      </div>
+
+      <div class="calc-field" id="noticeField" hidden>
+        <label class="calc-label" for="notice">How much notice were you given before the cancellation?</label>
+        <select class="calc-select" id="notice" name="notice">
+          <option value="" disabled selected>Select one</option>
+          <option value="lt7">Less than 7 days</option>
+          <option value="7to14">7–14 days</option>
+          <option value="gt14">More than 14 days</option>
+        </select>
+      </div>
+
+      <div class="calc-field" id="altCloseField" hidden>
+        <label class="calc-label" id="altCloseLabel">Was an alternative flight offered that arrived close to your original scheduled time?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="altCloseLabel">
+          <label class="calc-radio-option"><input type="radio" name="altClose" value="yes"> Yes</label>
+          <label class="calc-radio-option"><input type="radio" name="altClose" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="extraordinary">Did the airline cite a reason like bad weather, air traffic control restrictions, or a strike unrelated to the airline's own staff?</label>
+        <select class="calc-select" id="extraordinary" name="extraordinary">
+          <option value="" disabled selected>Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="unsure">Not sure</option>
+        </select>
+      </div>
+
+      <p class="calc-error" id="euCalcError" hidden>Please answer every question above before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my compensation</button>
+    </form>
+
+    <div class="calc-result" id="euCalcResult" hidden>
+      <div class="calc-result-figure" id="euResultFigure"></div>
+      <div class="calc-result-headline" id="euResultHeadline"></div>
+      <div class="calc-result-context" id="euResultContext"></div>
+      <a class="calc-cta" id="euResultCta" href="/generate/eu261-flight-compensation-claim.html" hidden>Generate your EU261 claim letter →</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// EU261 Compensation Calculator — first of 27 planned calculators.
+// Bespoke calculation logic per calculator (not a shared engine); the
+// shared piece across all future calculators is the .calc-* CSS in
+// styles.css and the overall interaction shape: stacked single-column
+// form -> inline result on the same page, no reload, no wizard steps.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('euCalcForm');
+  var scenarioSelect = document.getElementById('scenario');
+  var delayField = document.getElementById('delayField');
+  var delayHoursInput = document.getElementById('delayHours');
+  var noticeField = document.getElementById('noticeField');
+  var noticeSelect = document.getElementById('notice');
+  var altCloseField = document.getElementById('altCloseField');
+  var errorEl = document.getElementById('euCalcError');
+  var resultEl = document.getElementById('euCalcResult');
+  var figureEl = document.getElementById('euResultFigure');
+  var headlineEl = document.getElementById('euResultHeadline');
+  var contextEl = document.getElementById('euResultContext');
+  var ctaEl = document.getElementById('euResultCta');
+
+  // Show/hide the scenario-specific fields — everything stays on this
+  // one scrollable page, no step/screen change.
+  scenarioSelect.addEventListener('change', function () {
+    var v = scenarioSelect.value;
+    delayField.hidden = v !== 'delay';
+    delayHoursInput.required = v === 'delay';
+    noticeField.hidden = v !== 'cancellation';
+    altCloseField.hidden = v !== 'cancellation';
+    noticeSelect.required = v === 'cancellation';
+  });
+
+  function radioValue(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  function fmtEUR(n) {
+    return '€' + n.toLocaleString('en-IE');
+  }
+
+  // Distance -> compensation band, per EU261 Art. 7.
+  function bandFor(distanceKm) {
+    if (distanceKm <= 1500) {
+      return { key: 'short', label: '1,500 km or less', full: 250, reduced: 125, reducedHours: 2 };
+    }
+    if (distanceKm <= 3500) {
+      return { key: 'medium', label: '1,500–3,500 km', full: 400, reduced: 200, reducedHours: 3 };
+    }
+    return { key: 'long', label: 'more than 3,500 km', full: 600, reduced: 300, reducedHours: 4 };
+  }
+
+  function calculate(inputs) {
+    if (inputs.euApplicable !== 'yes') {
+      return { applies: false };
+    }
+
+    var band = bandFor(inputs.distanceKm);
+    var eligible = false, amount = 0, reasonKey = '';
+
+    if (inputs.scenario === 'delay') {
+      if (inputs.delayHours >= 3) {
+        eligible = true; amount = band.full; reasonKey = 'delay-full';
+      } else {
+        eligible = false; reasonKey = 'delay-under-3h';
+      }
+    } else if (inputs.scenario === 'cancellation') {
+      if (inputs.notice === 'gt14') {
+        eligible = false; reasonKey = 'cancel-14days';
+      } else if (inputs.notice === '7to14') {
+        if (inputs.altClose === 'yes') { eligible = false; reasonKey = 'cancel-7to14-close'; }
+        else { eligible = true; amount = band.full; reasonKey = 'cancel-7to14-notclose'; }
+      } else { // lt7
+        if (inputs.altClose === 'yes') { eligible = true; amount = band.reduced; reasonKey = 'cancel-lt7-close'; }
+        else { eligible = true; amount = band.full; reasonKey = 'cancel-lt7-notclose'; }
+      }
+    } else if (inputs.scenario === 'denied') {
+      eligible = true; amount = band.full; reasonKey = 'denied-boarding';
+    }
+
+    var extraordinaryFlag = (inputs.extraordinary === 'yes' || inputs.extraordinary === 'unsure');
+
+    return { applies: true, eligible: eligible, amount: amount, band: band, reasonKey: reasonKey, extraordinaryFlag: extraordinaryFlag };
+  }
+
+  var REASON_TEXT = {
+    'delay-full': function (r) {
+      return 'Your flight arrived 3 or more hours late — the threshold UK/EU case law (the Sturgeon ruling) treats the same as a cancellation for compensation purposes. For a route of ' + r.band.label + ', that’s a fixed ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+    },
+    'delay-under-3h': function () {
+      return 'A delay of under 3 hours on arrival doesn’t meet the threshold EU261 compensation requires — the Sturgeon ruling set that bar at 3 hours or more. Based on delay length alone, no compensation applies here.';
+    },
+    'cancel-14days': function () {
+      return 'You were given 14 or more days’ notice of the cancellation. Under EU261 Article 5(1)(c)(i), that removes the right to compensation regardless of the reason given.';
+    },
+    'cancel-7to14-close': function () {
+      return 'You were given 7–14 days’ notice, and the replacement flight arrived close to your original scheduled time. Under EU261 Article 5(1)(c)(ii), that combination removes the right to compensation.';
+    },
+    'cancel-7to14-notclose': function (r) {
+      return 'You were given 7–14 days’ notice, but the replacement flight didn’t arrive close to your original scheduled time — so the right to compensation stands. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+    },
+    'cancel-lt7-close': function (r) {
+      return 'You were given less than 7 days’ notice, but the airline rerouted you close to your original arrival time. Under EU261 Article 7.2, that halves the compensation for a route of ' + r.band.label + ' to ' + fmtEUR(r.band.reduced) + ' per passenger.';
+    },
+    'cancel-lt7-notclose': function (r) {
+      return 'You were given less than 7 days’ notice and the replacement flight didn’t arrive close to your original time — so the full right to compensation stands. For a route of ' + r.band.label + ', that’s ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+    },
+    'denied-boarding': function (r) {
+      return 'Involuntary denied boarding carries a compensation right almost automatically, regardless of the reason given. For a route of ' + r.band.label + ', that’s a fixed ' + fmtEUR(r.band.full) + ' per passenger under EU261 Article 7.';
+    }
+  };
+
+  function renderResult(r) {
+    ctaEl.hidden = true;
+
+    if (!r.applies) {
+      figureEl.textContent = 'EU261 likely doesn’t apply';
+      headlineEl.textContent = '';
+      contextEl.innerHTML = '<p>EU261 only covers flights departing from an EU/EEA airport (any airline), or arriving in the EU/EEA on an EU-licensed airline. Based on your answer, neither applies here, so this calculator can’t estimate a compensation figure for this flight — a different country’s rules (for example UK261, or your destination’s consumer law) may apply instead.</p>';
+      resultEl.hidden = false;
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    var contextHtml = '<p>' + REASON_TEXT[r.reasonKey](r) + '</p>';
+
+    if (r.eligible && r.extraordinaryFlag) {
+      contextHtml += '<p>You indicated the airline cited a reason like bad weather, unrelated strikes, security risks, or air traffic control restrictions. Under EU261 Article 5(3), airlines can cite these “extraordinary circumstances” to avoid paying — but courts apply this defense narrowly, and many claims initially refused on these grounds succeed anyway. If you disagree with the airline’s reasoning, you can still file a claim.</p>';
+    }
+
+    if (r.eligible) {
+      figureEl.textContent = fmtEUR(r.amount);
+      headlineEl.textContent = 'Estimated compensation per passenger';
+      ctaEl.hidden = false;
+    } else {
+      figureEl.textContent = '€0';
+      headlineEl.textContent = 'No compensation applies based on your answers';
+    }
+
+    contextEl.innerHTML = contextHtml;
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var euApplicable = radioValue('euApplicable');
+    if (!euApplicable) { errorEl.hidden = false; return; }
+
+    if (euApplicable === 'no') {
+      renderResult({ applies: false });
+      return;
+    }
+
+    var distanceKm = parseFloat(document.getElementById('distanceKm').value);
+    var scenario = scenarioSelect.value;
+    var extraordinary = document.getElementById('extraordinary').value;
+
+    if (!distanceKm || distanceKm <= 0 || !scenario || !extraordinary) { errorEl.hidden = false; return; }
+
+    var inputs = { euApplicable: euApplicable, distanceKm: distanceKm, scenario: scenario, extraordinary: extraordinary };
+
+    if (scenario === 'delay') {
+      var delayHours = parseFloat(delayHoursInput.value);
+      if (isNaN(delayHours) || delayHours < 0) { errorEl.hidden = false; return; }
+      inputs.delayHours = delayHours;
+    } else if (scenario === 'cancellation') {
+      var notice = noticeSelect.value;
+      var altClose = radioValue('altClose');
+      if (!notice || !altClose) { errorEl.hidden = false; return; }
+      inputs.notice = notice;
+      inputs.altClose = altClose;
+    }
+
+    renderResult(calculate(inputs));
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>
