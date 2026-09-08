@@ -966,3 +966,25 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
    single column always, never side-by-side. */
 .calc-cta-group { display: flex; flex-direction: column; gap: 10px; margin-top: 26px; }
 .calc-cta-group .calc-cta { margin-top: 0; }
+
+/* ============================================================
+   QUESTIONS — image-only cards (shared component)
+   Established on the questions.html hub and the Flights & Travel
+   pillar page's Questions section, first batch of the Questions
+   content type. The cover image IS the card -- no title/excerpt
+   rendered outside it (the title is baked into the artwork itself).
+   Reuse .q-card-grid/.q-img-card exactly for every future block's
+   batch -- no new CSS needed per block.
+
+   No box-shadow (unlike .cl-card) -- deliberately flatter. border-
+   radius reuses --radius-lg, the same value .cl-card already uses,
+   not a new one. aspect-ratio matches the cover images' own native
+   1200x2133 px exactly, so object-fit: cover never has anything to
+   crop -- the baked-in title text is never cut into at any width.
+   ============================================================ */
+.q-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (min-width: 640px) { .q-card-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 960px) { .q-card-grid { grid-template-columns: repeat(4, 1fr); } }
+.q-img-card { display: block; aspect-ratio: 1200 / 2133; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); transition: var(--transition); }
+.q-img-card:hover { border-color: var(--accent-green); }
+.q-img-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
