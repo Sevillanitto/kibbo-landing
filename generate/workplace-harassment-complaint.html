@@ -17,11 +17,11 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Generate a formal harassment complaint letter to HR — verbal harassment, unwanted contact, discriminatory harassment, or retaliation — requesting a specific, timely response. $4.60 per letter.">
+<meta name="description" content="Generate a formal harassment complaint letter to HR — verbal harassment, unwanted contact, discriminatory harassment, or retaliation — requesting a specific, timely response. Free.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
 <meta property="og:title" content="Workplace Harassment Complaint Letter Generator — Kibbo">
-<meta property="og:description" content="Answer a few questions and get a formal harassment complaint letter addressed to HR, framed to preserve any anti-discrimination or anti-retaliation protections that apply. $4.60 per letter.">
+<meta property="og:description" content="Answer a few questions and get a formal harassment complaint letter addressed to HR, framed to preserve any anti-discrimination or anti-retaliation protections that apply. Free.">
 <meta property="og:url" content="https://www.getkibbo.com/generate/workplace-harassment-complaint">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,8 +29,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-<!-- Gumroad overlay checkout -->
-<script src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +39,7 @@
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
   "description": "Generate a formal workplace harassment complaint letter addressed to HR.",
-  "offers": { "@type": "Offer", "price": "4.60", "priceCurrency": "USD" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
   "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
   "inLanguage": "en"
@@ -74,7 +72,7 @@
 
   <div class="supp-intro">
     <div class="supp-eyebrow">Workplace Harassment Complaint Letter</div>
-    <div class="supp-tagline">Formal, factual, and on the record · $4.60</div>
+    <div class="supp-tagline">Formal, factual, and on the record · Free</div>
   </div>
 
   <main>
@@ -85,14 +83,14 @@
 
     <button class="supp-analyze" id="genBtn" type="button">Generate letter — free preview</button>
 
-    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · $4.60 to unlock a full letter</p>
+    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · free to unlock — just enter your email</p>
 
     <div class="supp-error" id="genError" style="display:none;"></div>
   </main>
 
   <section class="supp-limit" id="genLimit">
     <div class="supp-limit-title">Daily preview limit reached</div>
-    <p>You've used your 3 free letter previews today (shared across all Kibbo generators). Come back tomorrow — or unlock a full letter now for $4.60.</p>
+    <p>You've used your 3 free letter previews today (shared across all Kibbo generators). Come back tomorrow.</p>
   </section>
 
   <section class="gen-result" id="genResult"></section>
@@ -153,13 +151,11 @@
   </div>
 </footer>
 
-<!-- Generator config (drives the form, checkout and license verification) -->
+<!-- Generator config (drives the form; unlocking is handled by generator-engine.js + /api/unlock-generators) -->
 <script>
 window.KIBBO_GENERATOR = {
   id: 'workplace-harassment-complaint',
   title: 'Workplace Harassment Complaint Letter',
-  price: '$4.60',
-  gumroad_permalink: 'WorkplaceHarassmentComplaintLetter',
   questions: [
     { id: 'company_name', label: 'Company name', type: 'text' },
     { id: 'harasser_role', label: 'Relationship of the person involved to you', type: 'select', options: ['Direct manager/supervisor', 'Colleague/peer', 'Someone senior but not my direct manager', 'Client/third party while at work'] },

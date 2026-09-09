@@ -1,21 +1,32 @@
 /* Kibbo generic letter-generator engine.
  *
  * One reusable engine for every generator. A page defines its generator entirely
- * through `window.KIBBO_GENERATOR` (id, title, price, gumroad_permalink,
- * questions[]) and includes this file — no generator-specific code.
+ * through `window.KIBBO_GENERATOR` (id, title, questions[]) and includes this
+ * file — no generator-specific code.
  *
  * Flow: render form from config.questions -> POST /preview (free, rate-limited,
- * returns only the first paragraph + blur hint) -> show blurred teaser with a
- * Gumroad overlay checkout + license-key field -> POST /unlock (verifies the
- * license server-side by product_id) -> reveal the full letter.
+ * returns only the first paragraph + blur hint) -> show blurred teaser with an
+ * inline email-capture form -> submitting the email calls /api/unlock-generators
+ * (Vercel function: Mailchimp + Resend, best-effort) and sets a SITE-WIDE
+ * localStorage unlock flag (kibbo_generators_unlocked), then POSTs to the
+ * Worker's /unlock endpoint (no license key required any more -- unlocking is
+ * free, gated only by having submitted an email once) to reveal the full
+ * letter. Once that site-wide flag is set, every generator -- including ones
+ * never visited before -- skips the blurred teaser and email form entirely and
+ * reveals the full letter as soon as the preview call succeeds.
+ *
+ * Formerly Gumroad/license-key gated (removed 2026-09-11): no purchase links,
+ * no license verification anywhere in this file any more.
  */
 (function () {
   var WORKER_URL = 'https://kibbo-generators.carlos-lopez-tejeiro.workers.dev';
-  var GUMROAD_BASE = 'https://carlosdevlop.gumroad.com/l/';
+  var UNLOCK_API_URL = '/api/unlock-generators';
+  var SITE_UNLOCK_KEY = 'kibbo_generators_unlocked';
   var cfg = window.KIBBO_GENERATOR;
   if (!cfg) return;
 
   var LS_KEY = 'kibbo_gen_' + cfg.id;
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   var form = document.getElementById('genForm');
   var genBtn = document.getElementById('genBtn');
@@ -40,22 +51,20 @@
     errorBox.style.display = msg ? 'block' : 'none';
   }
 
-  // Daily free-preview limit reached: show the notice AND a real Gumroad
-  // buy button (otherwise the user is told to "unlock for $4.60" with no
-  // way to actually pay).
+  function isUnlocked() {
+    try { return localStorage.getItem(SITE_UNLOCK_KEY) === 'true'; } catch (e) { return false; }
+  }
+
+  function setUnlocked() {
+    try { localStorage.setItem(SITE_UNLOCK_KEY, 'true'); } catch (e) {}
+  }
+
+  // Daily free-preview limit reached: just the notice. No paid bypass any
+  // more (unlocking itself is now free, so there's nothing left to buy
+  // one's way past a preview-count limit with).
   function showLimit() {
     if (!limitBox) return;
     limitBox.style.display = 'block';
-    if (!limitBox.querySelector('.supp-limit-btn')) {
-      var buy = document.createElement('a');
-      buy.className = 'supp-limit-btn gumroad-button';
-      buy.href = GUMROAD_BASE + cfg.gumroad_permalink + '?wanted=true';
-      buy.target = '_blank';
-      buy.rel = 'noopener';
-      buy.setAttribute('data-gumroad-single-product', 'true');
-      buy.textContent = 'Unlock a full letter now — ' + (cfg.price || '$4.60') + ' →';
-      limitBox.appendChild(buy);
-    }
     limitBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
@@ -192,6 +201,15 @@
         state.previewId = r.data.previewId;
         state.answers = answers;
         persist();
+
+        // Already unlocked site-wide (from a previous generator, or this
+        // one on an earlier visit): skip the blurred teaser and email form
+        // entirely, go straight to the full letter.
+        if (isUnlocked()) {
+          unlockFullLetter();
+          return;
+        }
+
         renderPreview(r.data.preview, r.data.blurLines);
         if (fineprint && typeof r.data.remaining === 'number') {
           fineprint.textContent =
@@ -208,7 +226,7 @@
       });
   }
 
-  // ---- 3. Render the blurred teaser + unlock controls ----
+  // ---- 3. Render the blurred teaser + inline email-capture unlock ----
   function renderPreview(visible, blurLines) {
     result.innerHTML = '';
     result.style.display = 'block';
@@ -228,34 +246,26 @@
       el('p', 'gen-overlay-sub', 'See the complete demand, the legal citations and the deadline — delivered instantly.')
     );
 
-    var buy = document.createElement('a');
-    buy.className = 'supp-limit-btn gumroad-button';
-    buy.href = GUMROAD_BASE + cfg.gumroad_permalink + '?wanted=true';
-    buy.target = '_blank';
-    buy.rel = 'noopener';
-    buy.setAttribute('data-gumroad-single-product', 'true');
-    buy.textContent = 'Unlock full letter — ' + (cfg.price || '$4.60') + ' →';
-    overlay.appendChild(buy);
-
-    var lic = el('div', 'gen-license');
-    var input = document.createElement('input');
-    input.className = 'supp-access-input';
-    input.id = 'licenseKey';
-    input.placeholder = 'Paste your license key to unlock';
-    input.autocomplete = 'off';
-    input.spellcheck = false;
-    lic.appendChild(input);
+    var emailBox = el('div', 'gen-license');
+    var emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.className = 'supp-access-input';
+    emailInput.id = 'unlockEmail';
+    emailInput.placeholder = 'you@example.com';
+    emailInput.autocomplete = 'email';
+    emailInput.spellcheck = false;
+    emailBox.appendChild(emailInput);
     var unlockBtn = document.createElement('button');
     unlockBtn.className = 'supp-access-btn';
     unlockBtn.type = 'button';
     unlockBtn.id = 'unlockBtn';
-    unlockBtn.textContent = 'Unlock';
-    lic.appendChild(unlockBtn);
+    unlockBtn.textContent = 'Unlock full letter — free';
+    emailBox.appendChild(unlockBtn);
     var msg = el('p', 'supp-access-msg', '');
     msg.id = 'unlockMsg';
-    lic.appendChild(msg);
-    lic.appendChild(el('p', 'gen-license-hint', 'After paying, Gumroad shows and emails you a license key. Paste it above.'));
-    overlay.appendChild(lic);
+    emailBox.appendChild(msg);
+    emailBox.appendChild(el('p', 'gen-license-hint', 'One email unlocks every generator on Kibbo — not just this one.'));
+    overlay.appendChild(emailBox);
 
     locked.appendChild(overlay);
     letter.appendChild(locked);
@@ -266,25 +276,50 @@
     copy.type = 'button';
     result.appendChild(copy);
 
-    unlockBtn.addEventListener('click', unlock);
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') unlock();
+    unlockBtn.addEventListener('click', submitEmail);
+    emailInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submitEmail();
     });
     copy.addEventListener('click', copyLetter);
   }
 
-  // ---- 4. Verify the license and reveal the full letter ----
-  function unlock() {
+  // ---- 4. Capture the email (Mailchimp + Resend, server-side), unlock site-wide ----
+  function submitEmail() {
     var msg = document.getElementById('unlockMsg');
     var unlockBtn = document.getElementById('unlockBtn');
-    var key = (document.getElementById('licenseKey').value || '').trim();
-    if (!key) {
-      setMsg(msg, 'Please paste your license key.', 'err');
+    var email = (document.getElementById('unlockEmail').value || '').trim();
+    if (!EMAIL_RE.test(email)) {
+      setMsg(msg, 'Please enter a valid email address.', 'err');
       return;
     }
     unlockBtn.disabled = true;
     unlockBtn.textContent = 'Unlocking…';
     setMsg(msg, '', '');
+
+    fetch(UNLOCK_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email }),
+    })
+      .then(function () {
+        // Per spec: a backend hiccup (Mailchimp or Resend individually
+        // failing) must never block access -- the API route always
+        // responds 200 once the email itself is well-formed.
+        setUnlocked();
+        unlockFullLetter();
+      })
+      .catch(function () {
+        // Even a network failure reaching our own API shouldn't block a
+        // user who typed a real email -- unlock anyway.
+        setUnlocked();
+        unlockFullLetter();
+      });
+  }
+
+  // ---- 5. Retrieve and reveal the full letter (free -- no license check) ----
+  function unlockFullLetter() {
+    var msg = document.getElementById('unlockMsg');
+    var unlockBtn = document.getElementById('unlockBtn');
 
     fetch(WORKER_URL + '/unlock', {
       method: 'POST',
@@ -293,7 +328,6 @@
         generatorId: cfg.id,
         previewId: state.previewId,
         answers: state.answers,
-        licenseKey: key,
       }),
     })
       .then(function (res) {
@@ -309,15 +343,17 @@
           } catch (e) {}
           return;
         }
-        setMsg(msg, (r.data && r.data.message) || 'Could not verify that license key.', 'err');
+        if (msg) setMsg(msg, (r.data && r.data.message) || 'Could not retrieve your full letter. Please try again.', 'err');
+        else showError('Could not retrieve your full letter. Please try generating the preview again.');
       })
       .catch(function () {
-        setMsg(msg, 'Could not reach the unlock service. Please try again.', 'err');
+        if (msg) setMsg(msg, 'Could not reach the unlock service. Please try again.', 'err');
+        else showError('Could not reach the unlock service. Please try again.');
       })
       .finally(function () {
         if (unlockBtn) {
           unlockBtn.disabled = false;
-          unlockBtn.textContent = 'Unlock';
+          unlockBtn.textContent = 'Unlock full letter — free';
         }
       });
   }

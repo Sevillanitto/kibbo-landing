@@ -17,23 +17,21 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. $4.60.">
+<meta name="description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. Free.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
 <meta property="og:title" content="Vehicle Purchase & Warranty Complaint Generator — Kibbo">
-<meta property="og:description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. $4.60.">
+<meta property="og:description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. Free.">
 <meta property="og:url" content="https://www.getkibbo.com/generate/vehicle-purchase-warranty-complaint-generator">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vehicle Purchase & Warranty Complaint Generator — Kibbo">
-<meta name="twitter:description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. $4.60.">
+<meta name="twitter:description" content="Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. Free.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-<!-- Gumroad overlay checkout -->
-<script src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,8 +41,8 @@
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
-  "description": "Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. $4.60.",
-  "offers": { "@type": "Offer", "price": "4.60", "priceCurrency": "USD" },
+  "description": "Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. Free.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
   "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
   "inLanguage": "en"
@@ -77,7 +75,7 @@
 
   <div class="supp-intro">
     <div class="supp-eyebrow">Vehicle Purchase & Warranty Complaint Generator</div>
-    <div class="supp-tagline">Listing mismatch, a defect, a warranty claim, or an escalation — $4.60 per letter</div>
+    <div class="supp-tagline">Listing mismatch, a defect, a warranty claim, or an escalation — Free</div>
   </div>
 
   <main>
@@ -88,14 +86,14 @@
 
     <button class="supp-analyze" id="genBtn" type="button">Generate letter — free preview</button>
 
-    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · $4.60 to unlock the full letter</p>
+    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · free to unlock — just enter your email</p>
 
     <div class="supp-error" id="genError" style="display:none;"></div>
   </main>
 
   <section class="supp-limit" id="genLimit">
     <div class="supp-limit-title">Daily preview limit reached</div>
-    <p>You've used your 3 free previews today (shared across all Kibbo generators). Come back tomorrow — or unlock the full letter now for $4.60.</p>
+    <p>You've used your 3 free previews today (shared across all Kibbo generators). Come back tomorrow.</p>
   </section>
 
   <section class="gen-result" id="genResult"></section>
@@ -152,15 +150,11 @@
   </div>
 </footer>
 
-<!-- Generator config (drives the form, checkout and license verification) -->
+<!-- Generator config (drives the form; unlocking is handled by generator-engine.js + /api/unlock-generators) -->
 <script>
 window.KIBBO_GENERATOR = {
   id: 'vehicle-purchase-warranty-complaint-generator',
   title: 'Vehicle Purchase & Warranty Complaint Generator',
-  price: '$4.60',
-  // Gumroad product not yet created — Carlos uploads the file directly and
-  // will provide the real permalink in a follow-up prompt. PLACEHOLDER.
-  gumroad_permalink: 'PLACEHOLDER_vehicle-purchase-warranty-complaint',
   questions: [
     { id: 'your_name', label: 'Your full name', type: 'text' },
     { id: 'seller_dealer_name', label: 'Seller/dealer name', type: 'text' },

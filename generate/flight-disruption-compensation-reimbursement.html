@@ -17,23 +17,21 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Generate a formal flight disruption letter for delay, cancellation, overbooking, missed connection, or baggage claims — EU261, UK261, US, or Australia — plus duty-of-care reimbursement, in one letter. $4.60 per letter.">
+<meta name="description" content="Generate a formal flight disruption letter for delay, cancellation, overbooking, missed connection, or baggage claims — EU261, UK261, US, or Australia — plus duty-of-care reimbursement, in one letter. Free.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
 <meta property="og:title" content="Flight Disruption Compensation & Reimbursement Letter Generator — Kibbo">
-<meta property="og:description" content="Answer a few questions and get a formal flight disruption letter — compensation, baggage, and duty-of-care reimbursement combined, tailored to your jurisdiction and scenario. $4.60 per letter.">
+<meta property="og:description" content="Answer a few questions and get a formal flight disruption letter — compensation, baggage, and duty-of-care reimbursement combined, tailored to your jurisdiction and scenario. Free.">
 <meta property="og:url" content="https://www.getkibbo.com/generate/flight-disruption-compensation-reimbursement">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Flight Disruption Compensation & Reimbursement Letter Generator — Kibbo">
-<meta name="twitter:description" content="A formal flight disruption letter — compensation, baggage, and duty-of-care reimbursement combined, tailored to your jurisdiction and scenario. $4.60 per letter.">
+<meta name="twitter:description" content="A formal flight disruption letter — compensation, baggage, and duty-of-care reimbursement combined, tailored to your jurisdiction and scenario. Free.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-<!-- Gumroad overlay checkout -->
-<script src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,7 +42,7 @@
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
   "description": "Generate a formal flight disruption letter combining a compensation claim, baggage claim, and duty-of-care reimbursement demand, tailored to jurisdiction and scenario.",
-  "offers": { "@type": "Offer", "price": "4.60", "priceCurrency": "USD" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
   "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
   "inLanguage": "en"
@@ -77,7 +75,7 @@
 
   <div class="supp-intro">
     <div class="supp-eyebrow">Flight Disruption Compensation &amp; Reimbursement Letter</div>
-    <div class="supp-tagline">Delay, cancellation, overbooking, missed connection, or baggage — one letter · $4.60</div>
+    <div class="supp-tagline">Delay, cancellation, overbooking, missed connection, or baggage — one letter · Free</div>
   </div>
 
   <main>
@@ -88,14 +86,14 @@
 
     <button class="supp-analyze" id="genBtn" type="button">Generate letter — free preview</button>
 
-    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · $4.60 to unlock a full letter</p>
+    <p class="supp-fineprint" id="genFineprint">3 free previews per day · shared across all generators · free to unlock — just enter your email</p>
 
     <div class="supp-error" id="genError" style="display:none;"></div>
   </main>
 
   <section class="supp-limit" id="genLimit">
     <div class="supp-limit-title">Daily preview limit reached</div>
-    <p>You've used your 3 free letter previews today (shared across all Kibbo generators). Come back tomorrow — or unlock a full letter now for $4.60.</p>
+    <p>You've used your 3 free letter previews today (shared across all Kibbo generators). Come back tomorrow.</p>
   </section>
 
   <section class="gen-result" id="genResult"></section>
@@ -160,13 +158,11 @@
   </div>
 </footer>
 
-<!-- Generator config (drives the form, checkout and license verification) -->
+<!-- Generator config (drives the form; unlocking is handled by generator-engine.js + /api/unlock-generators) -->
 <script>
 window.KIBBO_GENERATOR = {
   id: 'flight-disruption-compensation-reimbursement',
   title: 'Flight Disruption Compensation & Reimbursement Letter',
-  price: '$4.60',
-  gumroad_permalink: 'flight-disruption-compensation-reimbursement',
   questions: [
     { id: 'jurisdiction', label: "Which country's rules apply? (where you departed from, or the airline's home country)", type: 'select', options: ['EU (EU261)', 'UK (UK261)', 'US (DOT rules)', 'Australia (ACL)', 'Not sure'] },
     { id: 'airline_name', label: 'Airline name', type: 'text' },

@@ -6,8 +6,10 @@ compatibility_date = "2024-01-01"
 #   - free-preview rate limiter, SHARED across all generators
 #     (key: ip:{IP}:{date}:generators, 3/day, TTL 86400)
 #   - server-side full letters awaiting unlock  (key: preview:{previewId}, TTL 86400)
-#   - redeemed license key -> letter, so a refresh after paying keeps access
-#     (key: redeem:{licenseKey}, TTL 86400)
+#
+#   Unlocking itself is free (email-capture, handled entirely on the main
+#   Vercel site at /api/unlock-generators) since 2026-09-11 -- no more
+#   redeemed-license-key entries here. See worker.js's top-of-file comment.
 #
 #   npx wrangler kv namespace create generators-rate-limit
 [[kv_namespaces]]

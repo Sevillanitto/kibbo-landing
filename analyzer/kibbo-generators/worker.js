@@ -3,19 +3,25 @@
 // One Worker powers every letter generator. Adding a generator = adding an entry
 // to GENERATORS below (+ a config-only frontend page); no new Worker code.
 //
-// Pricing model (pay-per-generation, instant unlock — NOT the analyzers' model):
+// Pricing model (email-capture unlock, free — replaced the Gumroad/license-key
+// model on 2026-09-11; see verifyGumroadLicense() below, kept but unused in
+// case this needs to be reverted):
 //   - Free tier: PREVIEW ONLY. The Worker generates the full letter server-side
 //     but only releases the first paragraph to the browser; the rest stays in KV.
-//   - $4.60 unlocks ONE full letter, delivered instantly via a Gumroad license key.
+//   - Submitting an email (handled entirely on the main Vercel site, at
+//     /api/unlock-generators — Mailchimp + Resend, never touches this Worker)
+//     unlocks every generator site-wide via a client-side localStorage flag.
+//     This Worker's /unlock endpoint no longer checks anything -- it just
+//     releases the full letter for a given previewId.
 //
 // Endpoints:
 //   POST /preview  { generatorId, answers }
 //       -> rate-limited 3/day per IP, SHARED across all generators.
 //          Generates the full letter, stores it server-side, returns only the
 //          first paragraph + a blur hint. { previewId, preview, blurLines, remaining }
-//   POST /unlock   { generatorId, previewId, answers, licenseKey }
-//       -> verifies the Gumroad license by product_id (server-side, never trusts a
-//          client-supplied product id), then releases the full letter. { letter }
+//   POST /unlock   { generatorId, previewId, answers }
+//       -> releases the full letter for that preview (regenerating from
+//          answers if the preview already expired). { letter }
 //
 // Required bindings / secrets:
 //   - ANTHROPIC_API_KEY (secret): wrangler secret put ANTHROPIC_API_KEY
@@ -23,7 +29,7 @@
 
 const DAILY_PREVIEW_LIMIT = 3; // shared across ALL generators, per IP per day
 const MAX_TOKENS = 1200; // one-page letter — Haiku, template filling not reasoning
-const KV_TTL = 86400; // 24h for previews and redeemed keys
+const KV_TTL = 86400; // 24h for previews and the rate-limit counter
 
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
@@ -35,10 +41,11 @@ const DOCUMENT_OUTPUT_RULES =
   '\n\nOutput ONLY the finished document itself, ready to attach to a contract or print — a numbered document with clear section headers, not a letter. Do not start with a date or address block. End with labeled signature blocks (with date lines) for both parties named in the instructions above. Do not include any commentary, explanation, notes, or markdown code fences. Use [square brackets] for any detail the user did not provide.';
 
 // ---- Config-driven generator definitions ----
-// Only the server-side concerns live here (prompt + product id). The frontend
-// carries the question set + Gumroad permalink in its own page config. The
-// gumroad_product_id is looked up here by generatorId so a client can never
-// substitute a different product's id during license verification.
+// Only the server-side concerns live here (prompt template + output rules).
+// gumroad_product_id fields below are DEPRECATED and unused since the
+// 2026-09-11 switch to free, email-capture unlocking -- left in place
+// rather than deleted, in case Gumroad monetization needs to be reverted
+// to later. The frontend carries the question set in its own page config.
 const GENERATORS = {
   'lost-parcel': {
     title: 'Lost Parcel Legal Demand',
@@ -855,7 +862,12 @@ async function handlePreview(request, env) {
   });
 }
 
-// ---- Paid unlock: verify Gumroad license by product_id, release full letter ----
+// ---- Free unlock: release the full letter for a given preview ----
+// No license/payment check any more (see the pricing-model comment at the
+// top of this file) -- the actual unlock gate is the email-capture step on
+// the main site, entirely upstream of this Worker. This endpoint's only job
+// is to hand back the letter the /preview call already generated, or
+// regenerate it from the submitted answers if that preview expired from KV.
 async function handleUnlock(request, env) {
   let body;
   try {
@@ -865,63 +877,9 @@ async function handleUnlock(request, env) {
   }
   const gen = GENERATORS[body && body.generatorId];
   if (!gen) return jsonResponse({ error: 'Unknown generator' }, 400);
-  const licenseKey = ((body && body.licenseKey) || '').toString().trim();
-  if (!licenseKey) return jsonResponse({ error: 'Please enter your license key.' }, 400);
 
   const kv = env.GENERATORS_KV;
 
-  // Refresh-safe: if this key already unlocked a letter, return it without
-  // re-verifying (so refreshing the page keeps access and never double-charges
-  // the uses count).
-  if (kv) {
-    try {
-      const already = await kv.get(`redeem:${licenseKey}`);
-      if (already) return jsonResponse({ letter: already, alreadyRedeemed: true });
-    } catch (err) {
-      /* fall through to verification */
-    }
-  }
-
-  // Verify by product_id (looked up server-side) — NEVER by product_permalink,
-  // which has a known key-forgery vulnerability.
-  let verify;
-  try {
-    verify = await verifyGumroadLicense(gen.gumroad_product_id, licenseKey);
-  } catch (err) {
-    return jsonResponse(
-      { error: 'Could not reach the license service, please try again.', detail: err.message },
-      503
-    );
-  }
-
-  if (!verify || verify.success !== true) {
-    return jsonResponse(
-      { error: 'invalid_license', message: 'That license key is not valid for this generator.' },
-      403
-    );
-  }
-  const purchase = verify.purchase || {};
-  if (purchase.refunded || purchase.chargebacked || purchase.disputed) {
-    return jsonResponse(
-      { error: 'invalid_license', message: 'This purchase is no longer valid (refunded or disputed).' },
-      403
-    );
-  }
-  // One letter per purchase: with increment_uses_count=true, uses === 1 on the
-  // first legitimate redemption. A higher count with no stored letter means the
-  // key was already used elsewhere.
-  if (typeof verify.uses === 'number' && verify.uses > 1) {
-    return jsonResponse(
-      {
-        error: 'license_used',
-        message: 'This license key has already been used to unlock a letter.',
-      },
-      403
-    );
-  }
-
-  // Retrieve the exact previewed letter; regenerate from answers if the preview
-  // expired (so the buyer still gets a letter).
   let letter = null;
   const previewId = (body && body.previewId) || '';
   if (kv && previewId) {
@@ -933,9 +891,6 @@ async function handleUnlock(request, env) {
   }
   if (!letter) {
     const answers = (body && body.answers) || {};
-    if (!Object.keys(answers).length && env.ANTHROPIC_API_KEY == null) {
-      return jsonResponse({ error: 'Your preview expired — please generate it again.' }, 410);
-    }
     if (Object.keys(answers).length && env.ANTHROPIC_API_KEY) {
       try {
         letter = await generateLetter(env.ANTHROPIC_API_KEY, buildPrompt(gen.prompt_template, answers, gen.output_rules));
@@ -948,13 +903,6 @@ async function handleUnlock(request, env) {
     return jsonResponse({ error: 'Your preview expired — please generate it again.' }, 410);
   }
 
-  if (kv) {
-    try {
-      await kv.put(`redeem:${licenseKey}`, letter, { expirationTtl: KV_TTL });
-    } catch (err) {
-      /* non-fatal; buyer still gets the letter this time */
-    }
-  }
   return jsonResponse({ letter });
 }
 
@@ -1031,6 +979,9 @@ async function anthropicFetch(apiKey, prompt) {
   }
 }
 
+// ---- DEPRECATED, unused since 2026-09-11 (see the pricing-model comment at
+// the top of this file) -- handleUnlock() no longer calls this. Kept in
+// place, not deleted, in case Gumroad monetization needs to be reverted to.
 // ---- Gumroad license verification (by product_id, increments the uses count) ----
 async function verifyGumroadLicense(productId, licenseKey) {
   const controller = new AbortController();
