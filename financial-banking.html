@@ -825,7 +825,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // later: populate the matching array with { title, desc, url } objects; the
 // section, heading and cards will appear automatically on next page load.
 (function () {
-  var CALCULATORS = [];
+  var CALCULATORS = [
+    { title: 'Hidden Bank Fee Calculator', desc: 'Add up your monthly maintenance fee, out-of-network ATM charges, overdraft fees, and foreign transaction fees to see how much your bank is quietly costing you every year.', url: '/financial-banking/calculators/hidden-bank-fee-calculator.html' }
+  ];
   var CASES = [];
   var INVESTIGATIONS = [];
 
