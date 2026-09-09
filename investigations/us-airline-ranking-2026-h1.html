@@ -72,7 +72,7 @@
   .site-nav .links { display: flex; gap: 28px; font-size: 15px; font-weight: 500; }
   .site-nav .links a { color: var(--text-primary); text-decoration: none; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  .hero-image { width: 100%; max-height: 480px; object-fit: cover; display: block; }
+  .hero-image { width: 100%; aspect-ratio: 1600 / 900; object-fit: cover; display: block; }
   .q-header { padding: 40px 0 28px; }
   .q-category { display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
   .q-header h1 { font-family: var(--font-serif); font-size: 34px; font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
@@ -111,7 +111,7 @@
     table.compare { font-size: 12.5px; }
     .site-nav { padding: 16px 20px; }
   }
-  .hero-placeholder { width: 100%; aspect-ratio: 1600 / 900; max-height: 480px; background: #EFEBE2; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 14px; text-align: center; padding: 20px; }
+  .hero-clear { padding-top: 64px; background: var(--bg); }
   .breadcrumb-inv { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 0 0 24px; color: var(--accent-green); }
   .breadcrumb-inv a { color: var(--accent-green); text-decoration: none; }
   .breadcrumb-inv a:hover { color: var(--text-primary); }
@@ -139,14 +139,11 @@
   </div>
 </nav>
 
-<nav class="breadcrumb-inv" aria-label="Breadcrumb"><a href="/investigations.html">← Investigations</a></nav>
-<!-- HERO IMAGE — 1600x900px pending (investigations-images/us-airline-ranking-2026-h1-hero.jpg not
-     supplied yet). Placeholder box shown instead of a broken <img> per the
-     publish instructions. Swap this div for:
-     <img class="hero-image" src="/investigations-images/us-airline-ranking-2026-h1-hero.jpg" alt="US airline performance ranking 2026">
-     once the real file is in place -- no other change needed, the OG/Twitter
-     meta above already point at the correct final path. -->
-<div class="hero-placeholder" role="img" aria-label="US airline performance ranking 2026">Hero image pending — US airline ranking 2026</div>
+<div class="hero-clear">
+  <nav class="breadcrumb-inv" aria-label="Breadcrumb"><a href="/investigations.html">← Investigations</a></nav>
+  <!-- HERO IMAGE — 1600x900px, supplied 2026-09-10 -->
+  <img class="hero-image" src="/investigations-images/us-airline-ranking-2026-h1-hero.jpg" alt="US airline performance ranking 2026" width="1600" height="900">
+</div>
 
 <div class="wrap">
 
