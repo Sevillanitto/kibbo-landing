@@ -1,10 +1,10 @@
-Rank,Airline,On-time %,Cancelled %,Baggage mishandled /100,"Bumped /10,000",Composite score
-1,Allegiant Air,72.71,0.90,0.12,0.00,2.50
-2,Delta Air Lines,79.33,2.35,0.37,0.00,3.25
-2,Southwest Airlines,74.76,1.05,0.32,0.01,3.25
-4,Alaska Airlines,80.51,1.24,0.53,0.09,4.25
-5,United Airlines,77.60,1.76,0.69,0.01,4.75
-6,JetBlue Airways,71.02,2.86,0.31,0.07,5.50
-7,Frontier Airlines,72.06,1.99,0.51,1.42,6.75
-8,American Airlines,74.38,3.32,0.67,0.52,7.00
-9,Spirit Airlines,59.84,7.47,0.47,0.91,7.75
+airline,on_time_pct_ytd_h1_2026,cancelled_pct_ytd_h1_2026,baggage_mishandled_per_100_ytd_h1_2026,involuntary_bumping_per_10000_ytd_h1_2026,composite_rank_avg,composite_rank_position
+Allegiant Air,72.71,0.90,0.12,0.00,2.50,1
+Delta Air Lines,79.33,2.35,0.37,0.00,3.25,2
+Southwest Airlines,74.76,1.05,0.32,0.01,3.25,2
+Alaska Airlines,80.51,1.24,0.53,0.09,4.25,4
+United Airlines,77.60,1.76,0.69,0.01,4.75,5
+JetBlue Airways,71.02,2.86,0.31,0.07,5.50,6
+Frontier Airlines,72.06,1.99,0.51,1.42,6.75,7
+American Airlines,74.38,3.32,0.67,0.52,7.00,8
+Spirit Airlines,59.84,7.47,0.47,0.91,7.75,9
