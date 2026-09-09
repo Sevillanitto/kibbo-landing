@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/financial-banking/calculators/credit-card-interest-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Credit Card Interest & Payoff Calculator — How Much Interest Will I Pay? | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Enter your balance, APR, and monthly payment to see instantly how much interest you'll pay and how long it will take to pay off your credit card. Free calculator, instant result.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Credit Card Interest & Payoff Calculator">
+<meta property="og:description" content="Enter your balance, APR, and monthly payment to see instantly how much interest you'll pay and how long it will take to pay off your credit card. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/financial-banking/calculators/credit-card-interest-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Credit Card Interest & Payoff Calculator">
+<meta name="twitter:description" content="Enter your balance, APR, and monthly payment to see instantly how much interest you'll pay and how long it will take to pay off your credit card. Free, instant result.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Credit Card Interest & Payoff Calculator", "item": "https://www.getkibbo.com/financial-banking/calculators/credit-card-interest-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Credit Card Interest & Payoff Calculator",
+      "url": "https://www.getkibbo.com/financial-banking/calculators/credit-card-interest-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that computes total interest paid and time to pay off a credit card balance, given the balance, APR, and monthly payment, including a minimum-payment-only scenario.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/investigations.html">Investigations</a>
+      <a href="/questions.html">Questions</a>
+      <a href="/checklists.html">Checklists</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">How much interest will I pay on my credit card?</h1>
+    <p class="section-subtitle">Enter your balance, APR, and monthly payment for an instant answer — total interest paid and exactly how long it will take to pay off. Free, no account required.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="ccCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="currency">Currency</label>
+        <select class="calc-select" id="currency" name="currency" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="£">£ (GBP)</option>
+          <option value="€">€ (EUR)</option>
+          <option value="$">$ (USD/AUD/CAD)</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="balance">Current balance</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="balance" name="balance" placeholder="e.g. 4000" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="apr">APR — annual percentage rate (%)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="apr" name="apr" placeholder="e.g. 24.9" required>
+        <span class="calc-help">Check your card statement or provider app — typically 18–29% for standard cards.</span>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-radio-option" style="margin-bottom: 4px;"><input type="checkbox" id="minPaymentOnly" name="minPaymentOnly"> Minimum payment only</label>
+        <span class="calc-help">Uses the standard industry approximation: 1% of the balance plus that month's interest, or a $25/£25/€25 floor, whichever is higher — your issuer's actual formula may vary slightly.</span>
+      </div>
+
+      <div class="calc-field" id="paymentField">
+        <label class="calc-label" for="monthlyPayment">Monthly payment you plan to make</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="monthlyPayment" name="monthlyPayment" placeholder="e.g. 200">
+      </div>
+
+      <p class="calc-error" id="ccCalcError" hidden>Please fill in your balance, APR, and monthly payment before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my interest and payoff time</button>
+    </form>
+
+    <div class="calc-result" id="ccCalcResult" hidden>
+      <div class="calc-result-figure" id="ccResultFigure"></div>
+      <div class="calc-result-headline" id="ccResultHeadline"></div>
+      <div class="calc-result-context" id="ccResultContext"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <a class="footer-trapmart" href="/demo.html">Try TrapMart — see dark patterns in action →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Credit Card Interest & Payoff Calculator — purely arithmetic, no
+// jurisdiction branching, so no country selector: just a generic
+// currency symbol picker. Same interaction shape as every other
+// .calc-* calculator. No CTA block: no Finance & Banking template/
+// generator specifically about planning a debt payoff is confirmed
+// live on the site today (checked generate/, templates/, checklists/ —
+// the closest candidates, a statement-audit workbook and a pre-signup
+// loan-agreement checklist, are both the wrong scope) -- add one here
+// if/when such a tool ships.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('ccCalcForm');
+  var minPaymentCheckbox = document.getElementById('minPaymentOnly');
+  var paymentField = document.getElementById('paymentField');
+  var paymentInput = document.getElementById('monthlyPayment');
+  var errorEl = document.getElementById('ccCalcError');
+  var resultEl = document.getElementById('ccCalcResult');
+  var figureEl = document.getElementById('ccResultFigure');
+  var headlineEl = document.getElementById('ccResultHeadline');
+  var contextEl = document.getElementById('ccResultContext');
+
+  var MAX_MONTHS = 600; // 50 years
+
+  minPaymentCheckbox.addEventListener('change', function () {
+    var isMin = minPaymentCheckbox.checked;
+    paymentField.hidden = isMin;
+    paymentInput.required = !isMin;
+    if (isMin) paymentInput.value = '';
+  });
+
+  function fmt(symbol, n) {
+    return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
+  function monthsToYearsText(months) {
+    var years = months / 12;
+    if (months < 12) return months + ' month' + (months === 1 ? '' : 's');
+    return months + ' months (about ' + (Math.round(years * 10) / 10).toLocaleString('en-US') + ' years)';
+  }
+
+  // Standard monthly-compounding amortization. If minPaymentOnly, each
+  // month's payment is recalculated as 1% of that month's balance plus
+  // that month's interest, floored at 25 (currency-neutral) -- the
+  // common industry-standard approximation, since exact issuer formulas
+  // vary and aren't disclosed in a machine-readable way.
+  function amortize(balance, monthlyRate, minPaymentOnly, fixedPayment) {
+    var months = 0;
+    var totalInterest = 0;
+
+    while (balance > 0.005 && months < MAX_MONTHS) {
+      var interest = balance * monthlyRate;
+      var payoffAmount = balance + interest;
+      var payment = minPaymentOnly ? Math.max(balance * 0.01 + interest, 25) : fixedPayment;
+      if (payment > payoffAmount) payment = payoffAmount;
+
+      totalInterest += interest;
+      balance = balance + interest - payment;
+      if (balance < 0) balance = 0;
+      months++;
+    }
+
+    return { months: months, totalInterest: totalInterest, paidOff: balance <= 0.005 };
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var symbol = document.getElementById('currency').value;
+    var balance = parseFloat(document.getElementById('balance').value);
+    var apr = parseFloat(document.getElementById('apr').value);
+    var minPaymentOnly = minPaymentCheckbox.checked;
+    var fixedPayment = parseFloat(paymentInput.value);
+
+    var valid = symbol && !isNaN(balance) && balance > 0 && !isNaN(apr) && apr >= 0;
+    if (!minPaymentOnly) valid = valid && !isNaN(fixedPayment) && fixedPayment > 0;
+
+    if (!valid) {
+      errorEl.hidden = false;
+      return;
+    }
+
+    var monthlyRate = apr / 100 / 12;
+    var r = amortize(balance, monthlyRate, minPaymentOnly, fixedPayment);
+
+    var html = '';
+
+    if (!r.paidOff) {
+      figureEl.textContent = 'Never, at this rate';
+      headlineEl.textContent = 'This balance will not be paid off at this payment level';
+      html += '<p>Over ' + MAX_MONTHS + ' months (50 years), your payment doesn\'t cover the interest fast enough to bring the balance to zero. <strong>Increase your monthly payment</strong> and try again — even a small increase can make a large difference on a high-APR balance.</p>';
+    } else {
+      figureEl.textContent = fmt(symbol, r.totalInterest);
+      headlineEl.textContent = 'Total interest you\'ll pay';
+      html += '<p>At this rate, it will take <strong>' + monthsToYearsText(r.months) + '</strong> to pay off ' + fmt(symbol, balance) + ' in full.</p>';
+      if (minPaymentOnly) {
+        html += '<p>This uses the standard minimum-payment approximation — 1% of the balance plus that month\'s interest, floored at ' + symbol + '25 — since exact issuer formulas vary slightly.</p>';
+      }
+    }
+
+    html += '<p>Making only minimum payments can multiply the total interest you pay several times over compared with a fixed higher payment, since so little of each minimum payment goes toward the balance itself. Under UK/EU consumer credit rules and the US Truth in Lending Act (TILA), your APR has to be disclosed clearly before you sign up — if it wasn\'t, that\'s worth raising with your provider.</p>';
+
+    contextEl.innerHTML = html;
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>
