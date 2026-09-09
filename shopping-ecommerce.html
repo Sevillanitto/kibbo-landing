@@ -510,7 +510,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // later: populate the matching array with { title, desc, url } objects; the
 // section, heading and cards will appear automatically on next page load.
 (function () {
-  var SHOPPING_CALCULATORS = [];
+  var SHOPPING_CALCULATORS = [
+    { title: 'Real Discount Calculator', desc: 'Compare the advertised discount against the lowest price you’ve actually seen recently, to find out if a "sale" is genuine or built on an inflated "original" price.', url: '/shopping-ecommerce/calculators/real-discount-calculator.html' }
+  ];
   var SHOPPING_CASES = [];
   var SHOPPING_INVESTIGATIONS = [];
 
