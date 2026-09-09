@@ -121,6 +121,7 @@
       <a href="/analyze.html">Analyze</a>
       <a href="/generate.html">Generate</a>
       <a href="/templates.html">Templates</a>
+      <a href="/investigations.html">Investigations</a>
       <a href="/questions.html">Questions</a>
       <a href="/checklists.html">Checklists</a>
       <a href="/directory.html">Directory</a>
@@ -605,20 +606,23 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   });
 })();
 
-// Calculators / Cases / Investigations (Update 2) — structurally ready; Cases and
-// Investigations arrays are still empty (verified: neither content type exists
-// anywhere on the site yet) and render zero DOM nodes — no "coming soon"
-// placeholder. Calculators now has two entries (EU261, then its UK/US/Canada
-// companion) — to add more, populate the matching array with
-// { title, desc, url } objects; the section, heading and cards appear
-// automatically on next page load.
+// Calculators / Cases / Investigations (Update 3) — structurally ready; Cases is
+// still an empty array (verified: that content type doesn't exist anywhere on
+// the site yet) and renders zero DOM nodes — no "coming soon" placeholder.
+// Calculators has two entries (EU261, then its UK/US/Canada companion).
+// Investigations now has its first entry (the pilot US airline ranking piece)
+// — to add more, populate the matching array with { title, desc, url, tag }
+// objects; the section, heading and cards appear automatically on next page
+// load.
 (function () {
   var CALCULATORS = [
     { title: 'EU261 Compensation Calculator', desc: 'Answer a few questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger.', url: '/flights-travel/calculators/eu261-compensation-calculator.html' },
     { title: 'Flight Delay Compensation Calculator (UK, US & Canada)', desc: 'The jurisdictions EU261 doesn\'t cover — UK261, US DOT rules, and Canada\'s APPR. Instant estimate, or a clear explanation of your refund/procedural rights in the US.', url: '/flights-travel/calculators/flight-delay-compensation-calculator.html' }
   ];
   var CASES = [];
-  var INVESTIGATIONS = [];
+  var INVESTIGATIONS = [
+    { title: 'Which US Airline Performed Worst in 2026? We Ranked All 9 on DOT\'s Own Data', desc: 'We combined four official DOT metrics — on-time rate, cancellations, mishandled baggage, and involuntary bumping — to rank all 9 major US airlines for H1 2026. Full dataset included.', url: '/investigations/us-airline-ranking-2026-h1.html', tag: 'Investigation' }
+  ];
 
   function buildToolCard(item) {
     var a = document.createElement('a');
