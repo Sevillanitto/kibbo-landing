@@ -11,6 +11,16 @@
       "source": "/templates/supplement-tracking-diary.html",
       "destination": "/templates/supplement-tracking-diary-free",
       "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
     }
   ],
   "headers": [
