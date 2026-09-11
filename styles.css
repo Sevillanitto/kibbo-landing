@@ -956,6 +956,12 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .calc-btn:hover { background: #345C44; }
 .calc-error { font-family: var(--font-sans); font-size: 14px; color: var(--text-secondary); margin-top: 14px; }
 .calc-result { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border); }
+/* Small comparison line above the main figure -- e.g. "Advertised rate:
+   14.9%" sitting above the big effective-APR number, for a calculator
+   whose whole point is contrasting an advertised figure against the
+   real one. Reuses --text-muted at .calc-help's size/weight rather than
+   inventing a new text style. */
+.calc-result-compare { font-family: var(--font-sans); font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
 .calc-result-figure { font-family: var(--font-serif); font-weight: 700; font-size: clamp(40px, 11vw, 56px); line-height: 1.1; color: var(--accent-green); }
 .calc-result-headline { font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 10px; }
 .calc-result-context { font-family: var(--font-sans); font-size: 15px; line-height: 1.65; color: var(--text-secondary); margin-top: 14px; }

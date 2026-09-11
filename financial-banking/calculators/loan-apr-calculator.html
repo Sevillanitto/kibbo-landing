@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/financial-banking/calculators/loan-apr-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Loan APR Calculator — Instant Real APR & True Loan Cost | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator that shows the true, effective APR of your loan once fees are folded in — not just the advertised rate. Enter your loan amount, rate, term and fees for an instant result: your real APR and the total cost of the loan.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Loan APR Calculator — Instant Real APR & True Loan Cost">
+<meta property="og:description" content="Find the true effective APR of your loan once fees are included — not just the advertised rate. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/financial-banking/calculators/loan-apr-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Loan APR Calculator — Instant Real APR & True Loan Cost">
+<meta name="twitter:description" content="Find the true effective APR of your loan once fees are included — not just the advertised rate. Free, instant result.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Loan APR Calculator", "item": "https://www.getkibbo.com/financial-banking/calculators/loan-apr-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Loan APR Calculator",
+      "url": "https://www.getkibbo.com/financial-banking/calculators/loan-apr-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that computes the true effective APR of a loan once upfront fees are folded in, alongside the advertised nominal rate and the total cost of the loan.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/investigations.html">Investigations</a>
+      <a href="/questions.html">Questions</a>
+      <a href="/checklists.html">Checklists</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Loan APR calculator: what's the true cost of your loan?</h1>
+    <p class="section-subtitle">Lenders advertise a "nominal" interest rate — but once origination or admin fees are folded in, the effective APR you actually pay can be meaningfully higher. This calculator works out your loan's real APR and true total cost, instantly.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="loanCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="currency">Currency</label>
+        <select class="calc-select" id="currency" name="currency" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="£">£ (GBP)</option>
+          <option value="€">€ (EUR)</option>
+          <option value="$">$ (USD/AUD/CAD)</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="principal">Loan amount (principal)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="principal" name="principal" placeholder="e.g. 10000" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="nominalRate">Advertised (nominal) annual interest rate (%)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="nominalRate" name="nominalRate" placeholder="e.g. 9.9" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="termMonths">Loan term (months)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="1" step="1" id="termMonths" name="termMonths" placeholder="e.g. 36" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="upfrontFees">Upfront fees</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="upfrontFees" name="upfrontFees" value="0">
+        <span class="calc-help">Add any one-time fee charged when you take out the loan — origination fee, admin fee, and so on — not recurring charges.</span>
+      </div>
+
+      <p class="calc-error" id="loanCalcError" hidden>Please fill in the currency, loan amount, rate, and term before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my real APR</button>
+    </form>
+
+    <div class="calc-result" id="loanCalcResult" hidden>
+      <div class="calc-result-compare" id="loanResultCompare"></div>
+      <div class="calc-result-figure" id="loanResultFigure"></div>
+      <div class="calc-result-headline" id="loanResultHeadline">Your real APR, once fees are included</div>
+      <div class="calc-result-context" id="loanResultContext"></div>
+      <a class="calc-cta" id="loanResultCta" href="/generate/loan-credit-agreement-cancellation-withdrawal.html">Still inside your cooling-off window? Generate a cancellation/withdrawal letter →</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Loan APR Calculator — purely arithmetic, no jurisdiction branching, so
+// no country selector: just a generic currency symbol picker, same
+// pattern as credit-card-interest-calculator.html in this same block.
+//
+// The whole point of this calculator: a loan's advertised ("nominal")
+// interest rate isn't what a borrower actually pays once upfront fees
+// are folded in. The lender still calculates the monthly payment off
+// the FULL principal at the nominal rate, but the borrower only
+// actually RECEIVES principal-minus-fees. Solving for the rate that
+// would amortize that smaller net amount at the same fixed payment
+// gives the true, effective APR -- which has no closed-form solution,
+// so it's solved by bisection (standard IRR-style approach), not
+// algebraically.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('loanCalcForm');
+  var errorEl = document.getElementById('loanCalcError');
+  var resultEl = document.getElementById('loanCalcResult');
+  var compareEl = document.getElementById('loanResultCompare');
+  var figureEl = document.getElementById('loanResultFigure');
+  var contextEl = document.getElementById('loanResultContext');
+
+  // Standard loan amortization payment formula:
+  // payment = P * [r(1+r)^n] / [(1+r)^n - 1], with the r=0 limit (P/n)
+  // handled explicitly since the formula divides by zero there.
+  function monthlyPayment(principal, monthlyRate, months) {
+    if (monthlyRate === 0) return principal / months;
+    var factor = Math.pow(1 + monthlyRate, months);
+    return principal * (monthlyRate * factor) / (factor - 1);
+  }
+
+  // Finds the monthly rate that amortizes `netAmount` down to zero over
+  // `months` at the fixed `payment` already set by the nominal-rate
+  // schedule. monthlyPayment(netAmount, r, months) is strictly increasing
+  // in r (a higher rate needs a bigger payment to clear the same balance
+  // in the same time), so bisection converges to a single root. Starts
+  // at [0, 5] (0%–500% per month, far beyond anything realistic) and
+  // defensively doubles the upper bound if that's somehow not enough.
+  function solveEffectiveMonthlyRate(netAmount, payment, months) {
+    var lo = 0, hi = 5;
+    function f(r) { return monthlyPayment(netAmount, r, months) - payment; }
+    var guard = 0;
+    while (f(hi) < 0 && guard < 40) { hi *= 2; guard++; }
+    for (var i = 0; i < 100; i++) {
+      var mid = (lo + hi) / 2;
+      if (f(mid) > 0) hi = mid; else lo = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  function fmt(symbol, n) {
+    return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var symbol = document.getElementById('currency').value;
+    var principal = parseFloat(document.getElementById('principal').value);
+    var nominalRatePct = parseFloat(document.getElementById('nominalRate').value);
+    var termMonths = parseInt(document.getElementById('termMonths').value, 10);
+    var upfrontFeesRaw = document.getElementById('upfrontFees').value;
+    var upfrontFees = upfrontFeesRaw === '' ? 0 : parseFloat(upfrontFeesRaw);
+
+    var valid = symbol && !isNaN(principal) && principal > 0 && !isNaN(nominalRatePct) && nominalRatePct >= 0 &&
+      !isNaN(termMonths) && termMonths >= 1 && !isNaN(upfrontFees) && upfrontFees >= 0 && upfrontFees < principal;
+
+    if (!valid) {
+      errorEl.hidden = false;
+      return;
+    }
+
+    var nominalMonthlyRate = nominalRatePct / 100 / 12;
+    var payment = monthlyPayment(principal, nominalMonthlyRate, termMonths);
+    var netAmountReceived = principal - upfrontFees;
+
+    var effectiveAPR;
+    if (upfrontFees === 0) {
+      // No fees: the effective rate is trivially the nominal rate (the
+      // solver would converge to the same value, but skip it so a
+      // zero-fee run is exact rather than bisection-approximate).
+      effectiveAPR = nominalRatePct;
+    } else {
+      var rEff = solveEffectiveMonthlyRate(netAmountReceived, payment, termMonths);
+      effectiveAPR = rEff * 12 * 100;
+    }
+
+    var totalPaid = payment * termMonths;
+    var totalCostVsPrincipal = totalPaid - principal;
+
+    compareEl.textContent = 'Advertised (nominal) rate: ' + nominalRatePct.toLocaleString('en-US', { maximumFractionDigits: 2 }) + '%';
+    figureEl.textContent = effectiveAPR.toLocaleString('en-US', { maximumFractionDigits: 2 }) + '%';
+
+    var html = '';
+    html += '<p>You\'ll pay back <strong>' + fmt(symbol, totalPaid) + '</strong> in total over ' + termMonths + ' months on a ' + fmt(symbol, principal) + ' loan — ' +
+      fmt(symbol, totalCostVsPrincipal) + ' more than you borrowed, in interest.' +
+      (upfrontFees > 0
+        ? ' On top of that, the ' + fmt(symbol, upfrontFees) + ' upfront fee means you only actually received ' + fmt(symbol, netAmountReceived) + ' — so relative to what you actually walked away with, the true cost of this loan is ' + fmt(symbol, totalPaid - netAmountReceived) + '.'
+        : ' There were no upfront fees to account for on this loan.') +
+      '</p>';
+
+    if (upfrontFees > 0) {
+      var gap = effectiveAPR - nominalRatePct;
+      html += '<p>The ' + gap.toLocaleString('en-US', { maximumFractionDigits: 2 }) + ' percentage-point gap between the advertised rate and your real APR comes entirely from the upfront fee — and that gap gets bigger the shorter the loan term, since a fixed fee is spread over fewer months of repayment.</p>';
+    }
+
+    html += '<p>In the UK and EU, consumer credit law (the Consumer Credit Directive, and FCA rules in the UK) legally requires lenders to disclose the APR — including fees — in their advertising, so a properly disclosed UK/EU loan\'s advertised APR should already match what this calculator computes. In the US, the Truth in Lending Act (TILA) similarly requires fees to be folded into the disclosed APR, but it\'s calculated differently and some charges can still be structured as separate fees outside that figure — so it\'s worth running the numbers yourself.</p>';
+
+    contextEl.innerHTML = html;
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>
