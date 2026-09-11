@@ -1011,3 +1011,31 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
    chart-embed placeholder convention, not a new undocumented color
    ("Clean Lab bg" isn't a defined token anywhere in the codebase). */
 .inv-img-placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: #EFEBE2; color: var(--text-secondary); font-size: 13px; text-align: center; padding: 12px; }
+
+/* ============================================================
+   FOOTER — legal links row (Privacy Policy / Cookie Policy /
+   Terms of Use), sits between the copyright line and the TrapMart
+   link inside .footer-bottom's existing flex row.
+   ============================================================ */
+.footer-legal { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-legal a { font-size: 13px; color: rgba(247,245,240,0.4); transition: var(--transition); }
+.footer-legal a:hover { color: var(--text-inverse); }
+
+/* ============================================================
+   COOKIE CONSENT BANNER — fixed to viewport bottom, shown by
+   /cookie-consent.js on first visit until Accept/Decline is chosen.
+   Flat bar, no box-shadow, no new border-radius (buttons reuse the
+   site's existing 100px pill convention from .nav-cta/.btn-primary).
+   In-flow (not an overlay) so it never blocks page scroll/interaction.
+   ============================================================ */
+.cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--bg-dark); border-top: 1px solid var(--border-dark); padding: 18px clamp(20px, 4vw, 40px); display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.cookie-banner-copy { flex: 1 1 480px; max-width: 720px; margin: 0; font-size: 14px; line-height: 1.6; color: rgba(247,245,240,0.75); }
+.cookie-banner-copy a { color: var(--accent-green); text-decoration: underline; text-decoration-color: rgba(61,107,79,0.5); text-underline-offset: 3px; }
+.cookie-banner-copy a:hover { text-decoration-color: var(--accent-green); }
+.cookie-banner-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.cookie-banner-btn { font-family: var(--font-sans); font-size: 14px; font-weight: 600; padding: 10px 22px; border-radius: 100px; transition: var(--transition); letter-spacing: -0.01em; cursor: pointer; border: 1px solid transparent; }
+.cookie-banner-accept { background: var(--accent-green); color: var(--text-inverse); }
+.cookie-banner-accept:hover { background: #345c43; }
+.cookie-banner-decline { background: transparent; color: var(--text-inverse); border-color: rgba(247,245,240,0.3); }
+.cookie-banner-decline:hover { border-color: rgba(247,245,240,0.6); }
+@media (max-width: 640px) { .cookie-banner { justify-content: flex-start; } .cookie-banner-actions { width: 100%; } .cookie-banner-btn { flex: 1; text-align: center; } }
