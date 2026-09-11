@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/employment/calculators/final-pay-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Final Pay Calculator — When Must Your Last Paycheck Arrive? | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator for your final paycheck deadline after quitting or being let go — state-by-state US law and the UK payroll principle. Instant answer on when your last pay is legally due.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Final Pay Calculator — When Must Your Last Paycheck Arrive?">
+<meta property="og:description" content="Find out exactly when your final paycheck is legally due after quitting or being let go. Free, instant calculator.">
+<meta property="og:url" content="https://www.getkibbo.com/employment/calculators/final-pay-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Final Pay Calculator — When Must Your Last Paycheck Arrive?">
+<meta name="twitter:description" content="Find out exactly when your final paycheck is legally due after quitting or being let go. Free, instant calculator.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Final Pay Calculator", "item": "https://www.getkibbo.com/employment/calculators/final-pay-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Final Pay Calculator",
+      "url": "https://www.getkibbo.com/employment/calculators/final-pay-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that determines the legal deadline for a final paycheck after quitting or being terminated, using US state-specific final-pay laws where verified and the UK payroll principle.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/investigations.html">Investigations</a>
+      <a href="/questions.html">Questions</a>
+      <a href="/checklists.html">Checklists</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Final pay calculator</h1>
+    <p class="section-subtitle">Free, instant calculator — find out exactly when your last paycheck is legally due after quitting or being let go, and what to do if the deadline has already passed.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="fpCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="fpCountry">Country</label>
+        <select class="calc-select" id="fpCountry">
+          <option value="" disabled selected>Select one</option>
+          <option value="us">US</option>
+          <option value="uk">UK</option>
+        </select>
+        <span class="calc-help">EU and Australia final-pay rules aren't covered by this calculator yet.</span>
+      </div>
+
+      <div class="calc-field" id="fpStateField" hidden>
+        <label class="calc-label" for="fpState">State</label>
+        <select class="calc-select" id="fpState">
+          <option value="" disabled selected>Select one</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+
+      <div class="calc-field" id="fpStatusField" hidden>
+        <label class="calc-label" for="fpStatus">Did you quit, or were you fired/laid off?</label>
+        <select class="calc-select" id="fpStatus">
+          <option value="" disabled selected>Select one</option>
+          <option value="quit">I quit</option>
+          <option value="fired">I was fired / laid off</option>
+        </select>
+      </div>
+
+      <div class="calc-field" id="fpCa72hField" hidden>
+        <label class="calc-label" id="fpCa72hLabel">Did you give your employer at least 72 hours' notice before quitting?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="fpCa72hLabel">
+          <label class="calc-radio-option"><input type="radio" name="fpCa72h" value="yes"> Yes</label>
+          <label class="calc-radio-option"><input type="radio" name="fpCa72h" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="fpAkNoticeField" hidden>
+        <label class="calc-label" for="fpAkNoticeDate">What date did you give notice you were quitting?</label>
+        <input class="calc-input" type="date" id="fpAkNoticeDate">
+      </div>
+
+      <div class="calc-field" id="fpArDemandedField" hidden>
+        <label class="calc-label" id="fpArDemandedLabel">Did you specifically demand your final pay within 7 working days of your last day?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="fpArDemandedLabel">
+          <label class="calc-radio-option"><input type="radio" name="fpArDemanded" value="yes"> Yes</label>
+          <label class="calc-radio-option"><input type="radio" name="fpArDemanded" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="fpLastDayField" hidden>
+        <label class="calc-label" for="fpLastDay">Last day worked</label>
+        <input class="calc-input" type="date" id="fpLastDay">
+      </div>
+
+      <div class="calc-field" id="fpPaydayField" hidden>
+        <label class="calc-label" for="fpNextPayday">Next scheduled payday <em>(optional)</em></label>
+        <input class="calc-input" type="date" id="fpNextPayday">
+        <span class="calc-help">Only used where the rule references your regular payday — leave blank if you're not sure.</span>
+      </div>
+
+      <p class="calc-error" id="fpCalcError" hidden>Please answer every question above before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my deadline</button>
+    </form>
+
+    <div class="calc-result" id="fpCalcResult" hidden>
+      <div class="calc-result-figure" id="fpResultFigure"></div>
+      <div class="calc-result-headline" id="fpResultHeadline"></div>
+      <div class="calc-result-context" id="fpResultContext"></div>
+      <a class="calc-cta" id="fpResultCta" href="/generate/unpaid-wage-compensation-demand.html">Generate an unpaid wages demand letter →</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Final Pay Calculator — one country question branches into US (state
+// lookup table, explicitly limited to 5 individually-verified states:
+// CA, AK, AZ, AR, DC -- every other state, including Colorado despite an
+// early informal note about it, falls back to the federal-baseline
+// message rather than an invented figure) and UK (no fixed countdown,
+// principle-based, per the source material -- same "never invent a
+// jurisdiction figure that wasn't verified" discipline as the Security
+// Deposit Return Calculator this is patterned on).
+(function () {
+  'use strict';
+
+  var form = document.getElementById('fpCalcForm');
+  var countrySelect = document.getElementById('fpCountry');
+  var stateField = document.getElementById('fpStateField');
+  var stateSelect = document.getElementById('fpState');
+  var statusField = document.getElementById('fpStatusField');
+  var statusSelect = document.getElementById('fpStatus');
+  var ca72hField = document.getElementById('fpCa72hField');
+  var akNoticeField = document.getElementById('fpAkNoticeField');
+  var akNoticeDateInput = document.getElementById('fpAkNoticeDate');
+  var arDemandedField = document.getElementById('fpArDemandedField');
+  var lastDayField = document.getElementById('fpLastDayField');
+  var lastDayInput = document.getElementById('fpLastDay');
+  var paydayField = document.getElementById('fpPaydayField');
+  var paydayInput = document.getElementById('fpNextPayday');
+  var errorEl = document.getElementById('fpCalcError');
+  var resultEl = document.getElementById('fpCalcResult');
+  var figureEl = document.getElementById('fpResultFigure');
+  var headlineEl = document.getElementById('fpResultHeadline');
+  var contextEl = document.getElementById('fpResultContext');
+
+  var STATE_NAMES = {};
+  Array.prototype.forEach.call(stateSelect.options, function (o) { if (o.value) STATE_NAMES[o.value] = o.textContent; });
+
+  function radioValue(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  // Re-evaluated after every relevant change -- shows/hides + toggles
+  // `required` together so a hidden field never silently blocks submit.
+  function updateFields() {
+    var country = countrySelect.value;
+    var isUS = country === 'us';
+    var state = stateSelect.value;
+    var status = statusSelect.value;
+
+    stateField.hidden = !isUS;
+    statusField.hidden = !country;
+    lastDayField.hidden = !country;
+    paydayField.hidden = !country;
+
+    var showCa72h = isUS && state === 'CA' && status === 'quit';
+    var showAkNotice = isUS && state === 'AK' && status === 'quit';
+    var showArDemanded = isUS && state === 'AR' && status === 'fired';
+
+    ca72hField.hidden = !showCa72h;
+    akNoticeField.hidden = !showAkNotice;
+    arDemandedField.hidden = !showArDemanded;
+    akNoticeDateInput.required = showAkNotice;
+  }
+
+  countrySelect.addEventListener('change', updateFields);
+  stateSelect.addEventListener('change', updateFields);
+  statusSelect.addEventListener('change', updateFields);
+
+  function parseDateInput(value) {
+    if (!value) return null;
+    var parts = value.split('-');
+    return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+  }
+
+  function addCalendarDays(date, n) {
+    var d = new Date(date.getTime());
+    d.setDate(d.getDate() + n);
+    return d;
+  }
+
+  function addWorkingDays(date, n) {
+    var d = new Date(date.getTime());
+    var added = 0;
+    while (added < n) {
+      d.setDate(d.getDate() + 1);
+      var day = d.getDay();
+      if (day !== 0 && day !== 6) added++;
+    }
+    return d;
+  }
+
+  function fmtDate(d) {
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function diffFromToday(deadline) {
+    var a = new Date(deadline.getFullYear(), deadline.getMonth(), deadline.getDate());
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    return Math.round((a - today) / 86400000);
+  }
+
+  // Explicitly limited, individually-verified 5-state set. Everything
+  // else -- including Colorado, mentioned only informally as a "same
+  // day if fired" idea that was never added to the verified set --
+  // falls through to the federal-baseline default rather than guessing.
+  function computeUS(state, status, lastDay, nextPayday, extra) {
+    var deadline = null, rule = '', cite = '';
+
+    if (state === 'CA') {
+      cite = status === 'fired' ? 'California Labor Code § 201' : 'California Labor Code § 202';
+      if (status === 'fired') {
+        deadline = lastDay; rule = 'Immediately, on your last day worked';
+      } else if (extra.ca72h === 'yes') {
+        deadline = lastDay; rule = "Immediately, on your last day worked (you gave 72+ hours' notice)";
+      } else {
+        deadline = addCalendarDays(lastDay, 3); rule = "Within 72 hours of your last day (you gave less than 72 hours' notice)";
+      }
+    } else if (state === 'AK') {
+      cite = 'Alaska Stat. § 23.05.140';
+      if (status === 'fired') {
+        deadline = addWorkingDays(lastDay, 3); rule = 'Within 3 working days of your last day';
+      } else {
+        var noticeDate = extra.akNoticeDate || lastDay;
+        var minDate = addCalendarDays(noticeDate, 3);
+        deadline = (nextPayday && nextPayday.getTime() >= minDate.getTime()) ? nextPayday : minDate;
+        rule = 'Your next payday that falls at least 3 days after you gave notice';
+      }
+    } else if (state === 'AZ') {
+      cite = 'Ariz. Rev. Stat. § 23-353';
+      if (status === 'fired') {
+        var byWorkDaysAZ = addWorkingDays(lastDay, 7);
+        deadline = nextPayday ? new Date(Math.min(byWorkDaysAZ.getTime(), nextPayday.getTime())) : byWorkDaysAZ;
+        rule = 'Within 7 working days, or your next payday if that comes sooner';
+      } else {
+        deadline = nextPayday; rule = 'Your next scheduled payday';
+      }
+    } else if (state === 'AR') {
+      cite = 'Ark. Code Ann. § 11-4-405';
+      if (status === 'fired' && extra.arDemanded === 'yes') {
+        deadline = addWorkingDays(lastDay, 7); rule = 'Within 7 working days (you demanded early payment)';
+      } else {
+        deadline = nextPayday; rule = 'Your next scheduled payday';
+      }
+    } else if (state === 'DC') {
+      cite = 'D.C. Code § 32-1303';
+      if (status === 'fired') {
+        deadline = addWorkingDays(lastDay, 1); rule = 'The next business day after your last day';
+      } else {
+        var byWorkDaysDC = addWorkingDays(lastDay, 7);
+        deadline = nextPayday ? new Date(Math.min(byWorkDaysDC.getTime(), nextPayday.getTime())) : byWorkDaysDC;
+        rule = 'Your next scheduled payday, or within 7 days if that comes sooner';
+      }
+    } else {
+      cite = 'Fair Labor Standards Act (federal baseline)';
+      deadline = nextPayday;
+      rule = 'No specific state law beyond the federal baseline — final pay is generally due by your next regularly scheduled payday';
+    }
+
+    return { deadline: deadline, rule: rule, cite: cite };
+  }
+
+  function renderFigureAndHeadline(deadline, ruleText, subjectLabel) {
+    if (deadline) {
+      var diff = diffFromToday(deadline);
+      if (diff > 0) figureEl.textContent = diff + (diff === 1 ? ' day' : ' days') + ' remaining';
+      else if (diff === 0) figureEl.textContent = 'Due today';
+      else figureEl.textContent = Math.abs(diff) + (Math.abs(diff) === 1 ? ' day' : ' days') + ' overdue';
+      headlineEl.textContent = subjectLabel + ' deadline: ' + fmtDate(deadline) + ' (' + ruleText + ')';
+    } else {
+      figureEl.textContent = 'Depends on your payday';
+      headlineEl.textContent = subjectLabel + ' rule: ' + ruleText;
+    }
+  }
+
+  function renderUS(state, r) {
+    var stateName = STATE_NAMES[state];
+    renderFigureAndHeadline(r.deadline, r.rule, stateName + '’s');
+
+    var ctx = '';
+    if (r.cite.indexOf('federal baseline') !== -1) {
+      ctx += '<p>' + stateName + ' has no specific final-pay deadline law beyond the federal baseline — final pay is generally due by your next regularly scheduled payday, under the Fair Labor Standards Act\'s general payroll timing principle.</p>';
+    } else {
+      ctx += '<p>Under ' + r.cite + ', ' + stateName + '’s deadline for this situation is: ' + r.rule.toLowerCase() + '.</p>';
+    }
+    if (!r.deadline) {
+      ctx += '<p>Enter your next scheduled payday above for an exact countdown — without it, this can only describe the rule, not a specific date.</p>';
+    }
+    ctx += '<p>This covers wages already earned — it doesn\'t include severance (which is a matter of contract or company policy, not law, in most states) or accrued but unused vacation/PTO payout, which some states require and others leave to your employer\'s policy.</p>';
+    contextEl.innerHTML = ctx;
+  }
+
+  function renderUK(nextPayday) {
+    renderFigureAndHeadline(nextPayday, 'due on your normal/next payroll date', 'Your');
+    contextEl.innerHTML =
+      '<p>The UK has no separate "final pay" deadline distinct from normal payroll. Under standard contract law and Employment Rights Act principles, your final pay — including any wages already earned — is legally due on your normal or next scheduled payroll date, unless your employment contract specifically promises something faster.</p>' +
+      '<p>Check your contract\'s notice and pay clauses for anything more specific to your situation.</p>' +
+      '<p>One commonly missed component: any statutory annual leave you\'ve accrued but not taken (the UK minimum is 5.6 weeks per year, pro-rata for the time you worked) must be paid out as part of your final pay. It\'s worth checking this was actually included.</p>';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var country = countrySelect.value;
+    var status = statusSelect.value;
+    var lastDay = parseDateInput(lastDayInput.value);
+    var nextPayday = parseDateInput(paydayInput.value);
+
+    if (!country || !status || !lastDay) { errorEl.hidden = false; return; }
+
+    if (country === 'us') {
+      var state = stateSelect.value;
+      if (!state) { errorEl.hidden = false; return; }
+
+      var extra = {};
+      if (state === 'CA' && status === 'quit') {
+        extra.ca72h = radioValue('fpCa72h');
+        if (!extra.ca72h) { errorEl.hidden = false; return; }
+      }
+      if (state === 'AK' && status === 'quit') {
+        if (!akNoticeDateInput.value) { errorEl.hidden = false; return; }
+        extra.akNoticeDate = parseDateInput(akNoticeDateInput.value);
+      }
+      if (state === 'AR' && status === 'fired') {
+        extra.arDemanded = radioValue('fpArDemanded');
+        if (!extra.arDemanded) { errorEl.hidden = false; return; }
+      }
+
+      renderUS(state, computeUS(state, status, lastDay, nextPayday, extra));
+    } else {
+      renderUK(nextPayday);
+    }
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>
