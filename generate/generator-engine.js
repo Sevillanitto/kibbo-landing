@@ -361,14 +361,16 @@
       return;
     }
 
+    // Deliberately NOT .gen-overlay here -- that class is position:absolute,
+    // meant to sit inside .gen-locked's bounded box over a blurred letter.
+    // There's no letter to overlay in this state, so this renders as plain
+    // in-flow content instead (same pattern as showComingSoon() below).
     result.appendChild(el('h2', 'supp-ingredients-heading', 'Almost ready'));
-    var overlay = el('div', 'gen-overlay');
-    overlay.appendChild(el('p', 'gen-overlay-title', 'Enter your email to get notified'));
-    overlay.appendChild(
-      el('p', 'gen-overlay-sub', "We're putting the finishing touches on this generator. Leave your email and you'll have full access the moment it's ready — and it unlocks every generator on Kibbo, not just this one.")
+    result.appendChild(el('p', 'gen-overlay-title', 'Enter your email to get notified'));
+    result.appendChild(
+      el('p', 'supp-subtext', "We're putting the finishing touches on this generator. Leave your email and you'll have full access the moment it's ready — and it unlocks every generator on Kibbo, not just this one.")
     );
-    overlay.appendChild(buildEmailCaptureBox(showComingSoon, 'Notify me — free', 'Submitting…'));
-    result.appendChild(overlay);
+    result.appendChild(buildEmailCaptureBox(showComingSoon, 'Notify me — free', 'Submitting…'));
   }
 
   // Plain text, no box/border/error styling -- an intentional "coming soon"
