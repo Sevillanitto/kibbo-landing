@@ -18,3 +18,15 @@ id = "b6ddd53f1be6447c86147048ba4cdc96"
 
 # Required secret (set once, not stored in git):
 #   npx wrangler secret put ANTHROPIC_API_KEY
+
+# Billing-pause toggle (added 2026-09-11) — a Worker SECRET, not a [vars]
+# entry here, specifically so it survives future code-only deploys and can
+# be flipped without one. To PAUSE (skip all Anthropic calls, show the
+# "coming soon" message instead):
+#   npx wrangler secret put GENERATORS_PAUSED     (enter: true)
+# To RESUME once Anthropic credit is restored, either delete the secret or
+# set it to anything other than "true":
+#   npx wrangler secret put GENERATORS_PAUSED     (enter: false)
+# Both take effect immediately -- no `wrangler deploy` needed. Can also be
+# edited directly: Cloudflare dashboard -> Workers & Pages -> kibbo-generators
+# -> Settings -> Variables and Secrets.

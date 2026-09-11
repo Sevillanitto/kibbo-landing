@@ -746,6 +746,18 @@ function randomId() {
   return Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+// Billing pause toggle. Deliberately set as a Worker SECRET
+// (`wrangler secret put GENERATORS_PAUSED`), not a wrangler.toml [vars]
+// entry -- secrets aren't touched by a code-only `wrangler deploy`, so
+// flipping this in the Cloudflare dashboard (or via `wrangler secret put`
+// again) takes effect immediately with NO redeploy, and a future code
+// change won't silently reset it back. Any value other than the exact
+// string "true" is treated as unpaused (so an unset/missing secret defaults
+// to normal operation, not paused).
+function isGeneratorsPaused(env) {
+  return env.GENERATORS_PAUSED === 'true';
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -784,10 +796,6 @@ export default {
 
 // ---- Free preview: generate full letter, release only the first paragraph ----
 async function handlePreview(request, env) {
-  if (!env.ANTHROPIC_API_KEY) {
-    return jsonResponse({ error: 'Server is missing ANTHROPIC_API_KEY' }, 500);
-  }
-
   let body;
   try {
     body = await request.json();
@@ -796,6 +804,18 @@ async function handlePreview(request, env) {
   }
   const gen = GENERATORS[body && body.generatorId];
   if (!gen) return jsonResponse({ error: 'Unknown generator' }, 400);
+
+  // Billing pause (see the top-of-file comment) -- checked before anything
+  // else touches Anthropic, the KV rate limiter, or requires answers to be
+  // present at all. Zero Anthropic calls while this is set, full stop.
+  if (isGeneratorsPaused(env)) {
+    return jsonResponse({ paused: true });
+  }
+
+  if (!env.ANTHROPIC_API_KEY) {
+    return jsonResponse({ error: 'Server is missing ANTHROPIC_API_KEY' }, 500);
+  }
+
   const answers = (body && body.answers) || {};
   if (typeof answers !== 'object' || !Object.keys(answers).length) {
     return jsonResponse({ error: 'Missing answers' }, 400);
@@ -877,6 +897,14 @@ async function handleUnlock(request, env) {
   }
   const gen = GENERATORS[body && body.generatorId];
   if (!gen) return jsonResponse({ error: 'Unknown generator' }, 400);
+
+  // Billing pause -- defense in depth. The front-end never calls /unlock at
+  // all while paused (it already knows from /preview's { paused: true }
+  // response and shows the "coming soon" message directly), but this stays
+  // paused too in case /unlock is ever hit directly.
+  if (isGeneratorsPaused(env)) {
+    return jsonResponse({ paused: true });
+  }
 
   const kv = env.GENERATORS_KV;
 

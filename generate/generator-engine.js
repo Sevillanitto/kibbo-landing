@@ -17,6 +17,18 @@
  *
  * Formerly Gumroad/license-key gated (removed 2026-09-11): no purchase links,
  * no license verification anywhere in this file any more.
+ *
+ * BILLING PAUSE (added 2026-09-11): the Worker's /preview responds
+ * { paused: true } (skipping Anthropic entirely, server-side) while
+ * GENERATORS_PAUSED is set -- see worker.js. When paused, this file still
+ * runs the email-capture step exactly as normal (same Mailchimp + Resend
+ * call, same localStorage flag), but shows a "coming soon" message instead
+ * of ever fetching a real letter -- /unlock is never called at all in this
+ * state. An already-unlocked visitor skips straight to that message, no
+ * email form. Remove nothing here to resume: once GENERATORS_PAUSED is
+ * unset on the Worker, /preview stops returning { paused: true } and this
+ * file's normal flow (renderPreview -> submitEmail -> unlockFullLetter)
+ * runs exactly as it did before the pause, unchanged.
  */
 (function () {
   var WORKER_URL = 'https://kibbo-generators.carlos-lopez-tejeiro.workers.dev';
@@ -195,6 +207,15 @@
           showLimit();
           return;
         }
+
+        // Billing pause: server-side, skips Anthropic entirely (see
+        // worker.js). Email capture still runs exactly as normal below --
+        // only the final "reveal a real letter" step is replaced.
+        if (r.data && r.data.paused) {
+          renderPaused();
+          return;
+        }
+
         if (r.status !== 200 || !r.data || !r.data.previewId) {
           throw new Error((r.data && (r.data.message || r.data.error)) || 'Please try again.');
         }
@@ -226,6 +247,75 @@
       });
   }
 
+  // Shared email-capture box (.gen-license / .supp-access-* -- the same
+  // classes the old license-key input used, so no new CSS). `onSubmit` is
+  // called with no arguments once a well-formed email has been entered and
+  // the button clicked (or Enter pressed); it owns disabling the button /
+  // showing its own success or error message via the returned refs.
+  // `btnText`/`btnTextBusy` default to the normal unlock wording; the
+  // paused state passes its own so the button never promises an instant
+  // letter that isn't actually available yet.
+  function buildEmailCaptureBox(onSubmit, btnText, btnTextBusy) {
+    btnText = btnText || 'Unlock full letter — free';
+    btnTextBusy = btnTextBusy || 'Unlocking…';
+    var emailBox = el('div', 'gen-license');
+    var emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.className = 'supp-access-input';
+    emailInput.id = 'unlockEmail';
+    emailInput.placeholder = 'you@example.com';
+    emailInput.autocomplete = 'email';
+    emailInput.spellcheck = false;
+    emailBox.appendChild(emailInput);
+    var unlockBtn = document.createElement('button');
+    unlockBtn.className = 'supp-access-btn';
+    unlockBtn.type = 'button';
+    unlockBtn.id = 'unlockBtn';
+    unlockBtn.textContent = btnText;
+    emailBox.appendChild(unlockBtn);
+    var msg = el('p', 'supp-access-msg', '');
+    msg.id = 'unlockMsg';
+    emailBox.appendChild(msg);
+    emailBox.appendChild(el('p', 'gen-license-hint', 'One email unlocks every generator on Kibbo — not just this one.'));
+
+    function submit() {
+      var email = (emailInput.value || '').trim();
+      if (!EMAIL_RE.test(email)) {
+        setMsg(msg, 'Please enter a valid email address.', 'err');
+        return;
+      }
+      unlockBtn.disabled = true;
+      unlockBtn.textContent = btnTextBusy;
+      setMsg(msg, '', '');
+
+      fetch(UNLOCK_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email }),
+      })
+        .then(function () {
+          // Per spec: a backend hiccup (Mailchimp or Resend individually
+          // failing) must never block access -- the API route always
+          // responds 200 once the email itself is well-formed.
+          setUnlocked();
+          onSubmit();
+        })
+        .catch(function () {
+          // Even a network failure reaching our own API shouldn't block a
+          // user who typed a real email -- unlock anyway.
+          setUnlocked();
+          onSubmit();
+        });
+    }
+
+    unlockBtn.addEventListener('click', submit);
+    emailInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submit();
+    });
+
+    return emailBox;
+  }
+
   // ---- 3. Render the blurred teaser + inline email-capture unlock ----
   function renderPreview(visible, blurLines) {
     result.innerHTML = '';
@@ -245,27 +335,7 @@
     overlay.appendChild(
       el('p', 'gen-overlay-sub', 'See the complete demand, the legal citations and the deadline — delivered instantly.')
     );
-
-    var emailBox = el('div', 'gen-license');
-    var emailInput = document.createElement('input');
-    emailInput.type = 'email';
-    emailInput.className = 'supp-access-input';
-    emailInput.id = 'unlockEmail';
-    emailInput.placeholder = 'you@example.com';
-    emailInput.autocomplete = 'email';
-    emailInput.spellcheck = false;
-    emailBox.appendChild(emailInput);
-    var unlockBtn = document.createElement('button');
-    unlockBtn.className = 'supp-access-btn';
-    unlockBtn.type = 'button';
-    unlockBtn.id = 'unlockBtn';
-    unlockBtn.textContent = 'Unlock full letter — free';
-    emailBox.appendChild(unlockBtn);
-    var msg = el('p', 'supp-access-msg', '');
-    msg.id = 'unlockMsg';
-    emailBox.appendChild(msg);
-    emailBox.appendChild(el('p', 'gen-license-hint', 'One email unlocks every generator on Kibbo — not just this one.'));
-    overlay.appendChild(emailBox);
+    overlay.appendChild(buildEmailCaptureBox(unlockFullLetter));
 
     locked.appendChild(overlay);
     letter.appendChild(locked);
@@ -276,44 +346,45 @@
     copy.type = 'button';
     result.appendChild(copy);
 
-    unlockBtn.addEventListener('click', submitEmail);
-    emailInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') submitEmail();
-    });
     copy.addEventListener('click', copyLetter);
   }
 
-  // ---- 4. Capture the email (Mailchimp + Resend, server-side), unlock site-wide ----
-  function submitEmail() {
-    var msg = document.getElementById('unlockMsg');
-    var unlockBtn = document.getElementById('unlockBtn');
-    var email = (document.getElementById('unlockEmail').value || '').trim();
-    if (!EMAIL_RE.test(email)) {
-      setMsg(msg, 'Please enter a valid email address.', 'err');
+  // ---- 3b. Billing pause: email capture still runs, "coming soon" instead
+  // of a real letter. An already-unlocked visitor skips straight to the
+  // message with no form at all. ----
+  function renderPaused() {
+    result.innerHTML = '';
+    result.style.display = 'block';
+
+    if (isUnlocked()) {
+      showComingSoon();
       return;
     }
-    unlockBtn.disabled = true;
-    unlockBtn.textContent = 'Unlocking…';
-    setMsg(msg, '', '');
 
-    fetch(UNLOCK_API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email }),
-    })
-      .then(function () {
-        // Per spec: a backend hiccup (Mailchimp or Resend individually
-        // failing) must never block access -- the API route always
-        // responds 200 once the email itself is well-formed.
-        setUnlocked();
-        unlockFullLetter();
-      })
-      .catch(function () {
-        // Even a network failure reaching our own API shouldn't block a
-        // user who typed a real email -- unlock anyway.
-        setUnlocked();
-        unlockFullLetter();
-      });
+    result.appendChild(el('h2', 'supp-ingredients-heading', 'Almost ready'));
+    var overlay = el('div', 'gen-overlay');
+    overlay.appendChild(el('p', 'gen-overlay-title', 'Enter your email to get notified'));
+    overlay.appendChild(
+      el('p', 'gen-overlay-sub', "We're putting the finishing touches on this generator. Leave your email and you'll have full access the moment it's ready — and it unlocks every generator on Kibbo, not just this one.")
+    );
+    overlay.appendChild(buildEmailCaptureBox(showComingSoon, 'Notify me — free', 'Submitting…'));
+    result.appendChild(overlay);
+  }
+
+  // Plain text, no box/border/error styling -- an intentional "coming soon"
+  // state, not an error. Reuses .supp-subtext (already plain-text-only,
+  // no new CSS needed).
+  function showComingSoon() {
+    result.innerHTML = '';
+    result.style.display = 'block';
+    result.appendChild(el('h2', 'supp-ingredients-heading', "You're all set"));
+    result.appendChild(
+      el(
+        'p',
+        'supp-subtext',
+        "Thanks — you're all set! We're putting the finishing touches on this generator and it'll be ready to create your document very soon. We'll have it live within the next few days — no need to do anything else, just check back here."
+      )
+    );
   }
 
   // ---- 5. Retrieve and reveal the full letter (free -- no license check) ----
