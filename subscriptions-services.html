@@ -656,7 +656,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // later: populate the matching array with { title, desc, url } objects; the
 // section, heading and cards will appear automatically on next page load.
 (function () {
-  var CALCULATORS = [];
+  var CALCULATORS = [
+    { title: 'Unused Subscription Cost Calculator', desc: 'Add up everything on autopay — Netflix, Spotify, your gym membership — and see exactly how much you’re wasting per year on the ones you barely use.', url: '/subscriptions-services/calculators/unused-subscription-cost-calculator.html' }
+  ];
   var CASES = [];
   var INVESTIGATIONS = [];
 

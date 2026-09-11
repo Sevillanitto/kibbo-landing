@@ -979,6 +979,32 @@ footer:not(.footer) .footer-copy { font-family: var(--font-sans); font-size: 12p
 .calc-cta-group { display: flex; flex-direction: column; gap: 10px; margin-top: 26px; }
 .calc-cta-group .calc-cta { margin-top: 0; }
 
+/* Repeatable-row calculators (e.g. multiple subscriptions in one run) --
+   each row groups a few .calc-field-style inputs inside a bordered box
+   with its own remove control; "add row" reuses the same bordered/
+   radius language as .calc-cta rather than inventing a new button style. */
+.calc-rows { display: flex; flex-direction: column; gap: 18px; margin-bottom: 20px; }
+.calc-row { position: relative; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; }
+.calc-row .calc-field:last-child { margin-bottom: 0; }
+.calc-row-remove {
+  position: absolute; top: 14px; right: 14px; background: none; border: none; cursor: pointer;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--text-muted); padding: 4px 6px;
+}
+.calc-row-remove:hover { color: var(--accent-terra); }
+.calc-add-row-btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
+  background: transparent; border: 1px dashed var(--border); border-radius: var(--radius-sm);
+  padding: 13px 20px; font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+  color: var(--text-primary); cursor: pointer; transition: var(--transition); margin-bottom: 28px;
+}
+.calc-add-row-btn:hover { border-color: var(--text-primary); border-style: solid; }
+.calc-result-list { list-style: none; margin: 0 0 14px; padding: 0; }
+.calc-result-list li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+.calc-result-list li:last-child { border-bottom: none; }
+.calc-result-list .crl-name { color: var(--text-primary); font-weight: 600; }
+.calc-result-list .crl-meta { color: var(--text-muted); font-weight: 400; }
+.calc-result-list .crl-amount { color: var(--text-primary); white-space: nowrap; }
+
 /* ============================================================
    QUESTIONS — image-only cards (shared component)
    Established on the questions.html hub and the Flights & Travel

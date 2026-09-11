@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/subscriptions-services/calculators/unused-subscription-cost-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Subscription Cost Calculator — How Much Are You Wasting? | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator that adds up every subscription you're paying for and shows exactly how much money you're wasting on the ones you barely use. Instant result — see which to cancel first.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Subscription Cost Calculator — How Much Are You Wasting?">
+<meta property="og:description" content="Add up your subscriptions and see instantly how much you're wasting on the ones you barely use. Free calculator.">
+<meta property="og:url" content="https://www.getkibbo.com/subscriptions-services/calculators/unused-subscription-cost-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Subscription Cost Calculator — How Much Are You Wasting?">
+<meta name="twitter:description" content="Add up your subscriptions and see instantly how much you're wasting on the ones you barely use. Free calculator.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Unused Subscription Cost Calculator", "item": "https://www.getkibbo.com/subscriptions-services/calculators/unused-subscription-cost-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Unused Subscription Cost Calculator",
+      "url": "https://www.getkibbo.com/subscriptions-services/calculators/unused-subscription-cost-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that adds up multiple subscriptions and estimates how much money is wasted per year on the ones used rarely or never, ranked highest-waste first.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Kibbo</a>
+    <div class="nav-links">
+      <a href="/analyze.html">Analyze</a>
+      <a href="/generate.html">Generate</a>
+      <a href="/templates.html">Templates</a>
+      <a href="/investigations.html">Investigations</a>
+      <a href="/questions.html">Questions</a>
+      <a href="/checklists.html">Checklists</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/developer-tools.html">Dev Tools</a>
+      <a href="/blog.html">Guides</a>
+      <a href="/consumer-rights-by-country.html">By Country</a>
+    </div>
+    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">How much money are you wasting on subscriptions?</h1>
+    <p class="section-subtitle">Add up your Netflix, Spotify, gym membership, and everything else on autopay — then tell us how often you actually use each one. This free calculator shows instantly how much you're throwing away every year, and which to cancel first.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="subCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="currency">Currency</label>
+        <select class="calc-select" id="currency" name="currency" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="£">£ (GBP)</option>
+          <option value="€">€ (EUR)</option>
+          <option value="$">$ (USD/AUD/CAD)</option>
+        </select>
+      </div>
+
+      <div class="calc-rows" id="subRows"></div>
+
+      <button class="calc-add-row-btn" type="button" id="subAddRow">+ Add another subscription</button>
+
+      <p class="calc-error" id="subCalcError" hidden>Please select a currency, and fill in a name, monthly cost, and usage for every subscription before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate what I'm wasting</button>
+    </form>
+
+    <div class="calc-result" id="subCalcResult" hidden>
+      <div class="calc-result-compare" id="subResultCompare"></div>
+      <div class="calc-result-figure" id="subResultFigure"></div>
+      <div class="calc-result-headline">Estimated money wasted per year on subscriptions you barely use</div>
+      <div class="calc-result-context" id="subResultContext"></div>
+      <a class="calc-cta" id="subResultCta" href="/generate/subscription-service-cancellation.html">Generate a cancellation letter →</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Row template — cloned by JS for each subscription. Implicit
+     <label>-wraps-input (no id/for pairing) so cloned rows never
+     collide on duplicate ids. -->
+<template id="subRowTemplate">
+  <div class="calc-row">
+    <button type="button" class="calc-row-remove" aria-label="Remove this subscription">Remove</button>
+    <div class="calc-field">
+      <label class="calc-label">Subscription name
+        <input class="calc-input" type="text" data-role="name" placeholder="e.g. Netflix" required style="margin-top: 8px;">
+      </label>
+    </div>
+    <div class="calc-field">
+      <label class="calc-label">Monthly cost
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" data-role="cost" placeholder="e.g. 15.99" required style="margin-top: 8px;">
+      </label>
+    </div>
+    <div class="calc-field">
+      <label class="calc-label">How often do you actually use it?
+        <select class="calc-select" data-role="usage" required style="margin-top: 8px;">
+          <option value="" disabled selected>Select one</option>
+          <option value="frequent">Daily/weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="rarely">Rarely</option>
+          <option value="never">Never</option>
+        </select>
+      </label>
+    </div>
+  </div>
+</template>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KIBBO</div>
+        <p>Consumer protection tools for the open web. AI analyzers, legal generators, templates and free resources.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/analyze.html">Analyze</a>
+        <a href="/generate.html">Generate</a>
+        <a href="/templates.html">Templates</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/developer-tools.html">Developer Tools</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/blog.html">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="mailto:hello@getkibbo.com">Contact</a>
+        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Unused Subscription Cost Calculator — purely arithmetic, no
+// jurisdiction branching, so just a currency symbol picker (same
+// pattern as every other .calc-* calculator in this block). The one
+// thing this calculator does that no other one on the site does yet:
+// a repeatable row per subscription, added/removed entirely client-side
+// via a <template>, so the "add another subscription" flow never
+// touches the network or reloads the page.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('subCalcForm');
+  var rowsContainer = document.getElementById('subRows');
+  var rowTemplate = document.getElementById('subRowTemplate');
+  var addRowBtn = document.getElementById('subAddRow');
+  var errorEl = document.getElementById('subCalcError');
+  var resultEl = document.getElementById('subCalcResult');
+  var compareEl = document.getElementById('subResultCompare');
+  var figureEl = document.getElementById('subResultFigure');
+  var contextEl = document.getElementById('subResultContext');
+
+  // Approximate, honest-estimate weighting -- not a precise accounting
+  // figure, framed as such in the result copy below.
+  var WASTE_PCT = { frequent: 0, monthly: 0.40, rarely: 0.75, never: 1.00 };
+  var USAGE_LABEL = { frequent: 'Daily/weekly', monthly: 'Monthly', rarely: 'Rarely', never: 'Never' };
+
+  function addRow() {
+    var node = rowTemplate.content.cloneNode(true);
+    var row = node.querySelector('.calc-row');
+    row.querySelector('.calc-row-remove').addEventListener('click', function () {
+      // Keep at least one row on the page at all times -- removing the
+      // last one just clears it instead, rather than leaving an empty
+      // form with no way to add a subscription back except the button
+      // (which is still there either way, but this avoids a jarring
+      // "everything just vanished" moment on a single-row form).
+      if (rowsContainer.children.length <= 1) {
+        row.querySelectorAll('input, select').forEach(function (el) { el.value = ''; });
+        return;
+      }
+      row.remove();
+    });
+    rowsContainer.appendChild(node);
+  }
+
+  addRowBtn.addEventListener('click', addRow);
+  addRow(); // start with one row visible
+
+  function fmt(symbol, n) {
+    return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+
+  function escapeHtml(s) {
+    var div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var symbol = document.getElementById('currency').value;
+    var rowEls = Array.prototype.slice.call(rowsContainer.querySelectorAll('.calc-row'));
+
+    var subs = [];
+    var allValid = !!symbol && rowEls.length > 0;
+
+    rowEls.forEach(function (row) {
+      var name = row.querySelector('[data-role="name"]').value.trim();
+      var cost = parseFloat(row.querySelector('[data-role="cost"]').value);
+      var usage = row.querySelector('[data-role="usage"]').value;
+
+      if (!name || isNaN(cost) || cost <= 0 || !usage) {
+        allValid = false;
+        return;
+      }
+
+      var annualCost = cost * 12;
+      var wastedPct = WASTE_PCT[usage];
+      var wastedAnnual = annualCost * wastedPct;
+
+      subs.push({ name: name, annualCost: annualCost, usage: usage, wastedPct: wastedPct, wastedAnnual: wastedAnnual });
+    });
+
+    if (!allValid || subs.length === 0) {
+      errorEl.hidden = false;
+      return;
+    }
+
+    var totalAnnualSpend = subs.reduce(function (sum, s) { return sum + s.annualCost; }, 0);
+    var totalWasted = subs.reduce(function (sum, s) { return sum + s.wastedAnnual; }, 0);
+
+    // Highest-waste first, so the user immediately sees which to cancel.
+    var sorted = subs.slice().sort(function (a, b) { return b.wastedAnnual - a.wastedAnnual; });
+
+    compareEl.textContent = 'You\'re spending ' + fmt(symbol, totalAnnualSpend) + '/year on subscriptions in total';
+    figureEl.textContent = fmt(symbol, totalWasted);
+
+    var listHtml = '<ul class="calc-result-list">';
+    sorted.forEach(function (s) {
+      listHtml += '<li><span><span class="crl-name">' + escapeHtml(s.name) + '</span> <span class="crl-meta">(' + USAGE_LABEL[s.usage] + ')</span></span><span class="crl-amount">' + fmt(symbol, s.wastedAnnual) + '/yr wasted</span></li>';
+    });
+    listHtml += '</ul>';
+
+    var html = '';
+    html += '<p>Here\'s where that\'s coming from, highest-waste first — cancel from the top down for the biggest impact:</p>';
+    html += listHtml;
+    html += '<p>These "wasted" percentages (0% for daily/weekly use, 40% for monthly, 75% for rarely, 100% for never) are a rough estimate to help you prioritize — not a precise accounting figure. A subscription you use monthly still has real value; this just flags where the biggest gaps between cost and use are likely to be.</p>';
+    html += '<p>For the full picture, it\'s worth scrolling back through a bank or card statement — subscriptions are exactly the kind of recurring charge people forget they\'re even paying for, and this calculator can only total up what you remember to add.</p>';
+
+    contextEl.innerHTML = html;
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>
