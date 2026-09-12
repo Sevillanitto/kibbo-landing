@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/generate/credit-report-error-dispute-letter",
+      "destination": "/generate/fcra-credit-dispute",
+      "permanent": true
+    },
+    {
+      "source": "/generate/credit-report-error-dispute-letter.html",
+      "destination": "/generate/fcra-credit-dispute",
+      "permanent": true
+    },
+    {
       "source": "/templates/supplement-tracking-diary",
       "destination": "/templates/supplement-tracking-diary-free",
       "permanent": true

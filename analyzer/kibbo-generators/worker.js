@@ -100,10 +100,19 @@ const GENERATORS = {
       'Write a formal demand letter addressed to the RETAILER (not the courier/shipping company) demanding a full refund within 48 hours for a lost or damaged parcel. If country is UK, cite the Consumer Rights Act 2015 (the retailer remains liable for goods until they reach the consumer, regardless of courier used). If country is US, cite general state consumer protection law language without inventing a specific statute number. Retailer: {retailer}. Order date: {order_date}. Amount paid: {amount}. Issue: {issue}. Tone: professional, firm, cites the relevant legal basis, gives a specific 48-hour deadline.',
   },
   'fcra-credit-dispute': {
-    title: 'Credit Report Dispute Letter (FCRA)',
+    // Merged with the former 'credit-report-error-dispute-letter' generator
+    // (retired, never had a real Gumroad product wired, not in cross-link-map.json)
+    // -- both produced the same deliverable (a dispute letter to a credit
+    // bureau) with meaningful overlap. This one keeps its wired Gumroad
+    // product and absorbs the other's jurisdiction handling: the US branch
+    // below is unchanged from before the merge (still cites FCRA Section 611
+    // and the 30/45-day window); the UK/EU/Australia branch reuses the
+    // retired generator's own general-but-accurate phrasing verbatim rather
+    // than inventing new claims for jurisdictions not yet legally verified.
+    title: 'Credit Report Dispute Letter Generator',
     gumroad_product_id: 'vytma',
     prompt_template:
-      'Write a formal FCRA Section 611 credit report dispute letter addressed to the named credit bureau. State clearly that the consumer is disputing the specific account/item as inaccurate, incomplete, or unverifiable under the Fair Credit Reporting Act, describe the specific error using the details provided, and formally request that the bureau conduct a reasonable reinvestigation and delete or correct the item if it cannot be verified within the 30-day statutory window (45 days if applicable). Bureau: {bureau}. Account/creditor: {account_name}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, cites the correct legal basis, no emotional language.',
+      "Write a formal credit report dispute letter from {customer_name} to {bureau} regarding {issue_type} on the account/reference {account_reference}, if provided, describing the specific error: {details}. Jurisdiction: {jurisdiction}. If jurisdiction is 'US': explicitly identify this as an FCRA Section 611 dispute, state clearly that the consumer is disputing the specific account/item as inaccurate, incomplete, or unverifiable under the Fair Credit Reporting Act, and formally request that the bureau conduct a reasonable reinvestigation and delete or correct the item if it cannot be verified within the 30-day statutory window (45 days if applicable). If jurisdiction is 'UK', 'EU', or 'Australia': reference the consumer's general right to dispute inaccurate information on their credit file and have it investigated within a defined period — keep any specific deadline generic ('within the investigation period required in your area') unless independently verified; never invent a specific day count, and do not cite a specific statute name. Request correction or removal of the disputed item and a copy of the updated report once the investigation concludes. Tone: professional, factual, formal, no emotional language.",
   },
   'fdcpa-cease-desist': {
     title: 'Debt Collector Cease & Desist Letter (FDCPA)',
@@ -550,12 +559,6 @@ const GENERATORS = {
     gumroad_product_id: 'PLACEHOLDER_DEBT_COLLECTION_DISPUTE',
     prompt_template:
       "Write a formal debt validation/dispute letter from {customer_name} to {collector_name} regarding a claimed debt of {claimed_amount}, originally from {original_creditor} if known. State the basis for the dispute: {dispute_basis}, and the following details: {details}. For jurisdiction={jurisdiction}, reference the consumer's general right to request written validation of a disputed debt before the collector continues collection activity — keep any specific statutory deadline generic ('within the validation period that applies in your area') unless independently verified; never invent a specific day count. Explicitly request: written proof of the debt, verification the collector is legally entitled to collect it, and confirmation of the exact amount owed with an itemized breakdown. Tone: firm, factual, formal — this is a legal validation request, not an admission of the debt.",
-  },
-  'credit-report-error-dispute-letter': {
-    title: 'Credit Report Error Dispute Letter Generator',
-    gumroad_product_id: 'PLACEHOLDER_CREDIT_REPORT_DISPUTE',
-    prompt_template:
-      "Write a formal credit report dispute letter from {customer_name} to {credit_bureau} regarding {error_type} on the account/reference {account_reference} if provided. Describe the error and why it's incorrect: {details}. For jurisdiction={jurisdiction}, reference the consumer's general right to dispute inaccurate information on their credit file and have it investigated within a defined period — keep any specific deadline generic ('within the investigation period required in your area') unless independently verified; never invent a specific day count. Request correction or removal of the disputed item and a copy of the updated report once the investigation concludes. Tone: firm, factual, formal.",
   },
 
   // ---- Subscriptions & Services (first generators for this block) ----

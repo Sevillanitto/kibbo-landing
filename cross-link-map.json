@@ -280,7 +280,7 @@
         "credit-report-dispute": [
           {
             "type": "generator",
-            "name": "Credit Report Dispute Letter (FCRA)",
+            "name": "Credit Report Dispute Letter Generator",
             "url": "https://www.getkibbo.com/generate/fcra-credit-dispute"
           }
         ],

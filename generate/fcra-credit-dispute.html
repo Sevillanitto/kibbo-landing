@@ -113,7 +113,7 @@
 
   <main>
     <h1 class="supp-h1">Dispute an inaccurate item on your credit report.</h1>
-    <p class="supp-subtext">Under the Fair Credit Reporting Act, a credit bureau must reinvestigate a disputed item and delete or correct it if it can't be verified — usually within 30 days. Answer 4 questions and generate a correctly worded FCRA Section 611 dispute letter.</p>
+    <p class="supp-subtext">In the US, the Fair Credit Reporting Act requires a bureau to reinvestigate a disputed item and delete or correct it if it can't be verified — usually within 30 days. Other countries give you a similar right to dispute inaccurate information, under different rules. Answer a few questions and generate a correctly worded dispute letter for your bureau.</p>
 
     <form id="genForm" class="gen-form" autocomplete="off"></form>
 
@@ -195,11 +195,13 @@
 <script>
 window.KIBBO_GENERATOR = {
   id: 'fcra-credit-dispute',
-  title: 'Credit Report Dispute Letter (FCRA)',
+  title: 'Credit Report Dispute Letter Generator',
   questions: [
-    { id: 'bureau', label: 'Which credit bureau?', type: 'select', options: ['Experian', 'Equifax', 'TransUnion'] },
-    { id: 'account_name', label: 'Name of the account/creditor being disputed', type: 'text' },
-    { id: 'issue_type', label: 'What\'s wrong with it?', type: 'select', options: ['Account isn\'t mine', 'Late payment reported incorrectly', 'Balance is wrong', 'Account status is wrong (open/closed)', 'Duplicate account'] },
+    { id: 'jurisdiction', label: 'Jurisdiction', type: 'select', options: ['US', 'UK', 'EU', 'Australia'] },
+    { id: 'customer_name', label: 'Your name', type: 'text' },
+    { id: 'bureau', label: 'Credit bureau/reporting agency name', type: 'text' },
+    { id: 'issue_type', label: 'What\'s wrong with it?', type: 'select', options: ['Account isn\'t mine', 'Late payment reported incorrectly', 'Incorrect balance/amount', 'Account status is wrong (open/closed)', 'Duplicate account', 'Outdated information that should have been removed', 'Other'] },
+    { id: 'account_reference', label: 'Name of the account/creditor and/or reference number, if known', type: 'text' },
     { id: 'details', label: 'Briefly describe the specific error', type: 'textarea' }
   ]
 };
