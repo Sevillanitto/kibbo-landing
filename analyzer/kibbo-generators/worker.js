@@ -16,20 +16,66 @@
 //
 // Endpoints:
 //   POST /preview  { generatorId, answers }
-//       -> rate-limited 3/day per IP, SHARED across all generators.
-//          Generates the full letter, stores it server-side, returns only the
-//          first paragraph + a blur hint. { previewId, preview, blurLines, remaining }
+//       -> rate-limited DAILY_GENERATION_LIMIT/day per IP, SHARED across all
+//          generators (any Anthropic-calling request draws from the same
+//          per-IP budget -- see checkGenerationLimits()). Generates the full
+//          letter, stores it server-side, returns only the first paragraph +
+//          a blur hint. { previewId, preview, blurLines, remaining }
 //   POST /unlock   { generatorId, previewId, answers }
 //       -> releases the full letter for that preview (regenerating from
-//          answers if the preview already expired). { letter }
+//          answers -- itself subject to the same per-IP/global limits below
+//          -- if the preview already expired). { letter }
+//
+// Cost guardrails (added 2026-09-12, generation still gated behind
+// GENERATORS_PAUSED='true' until Carlos confirms Anthropic credit is loaded
+// -- see the "go live" note near isGeneratorsPaused() below):
+//   - Model: claude-haiku-4-5-20251001 (see anthropicFetch() below) -- this
+//     was already the case before this change, for every generator AND every
+//     analyzer Worker in this codebase; there was never a Sonnet call to
+//     switch away from here. Confirmed by grepping every worker.js in
+//     analyzer/ -- all eleven, generators included, already read
+//     'claude-haiku-4-5-20251001'. Left as-is; nothing to change.
+//   - Per-IP daily limit: DAILY_GENERATION_LIMIT (10) per IP per 24h, shared
+//     across every generator combined -- NOT new; a per-IP shared limit
+//     already existed here at 3/day (checked only in /preview). This raises
+//     it to 10 per the new spec and closes the one real gap: /unlock's
+//     regenerate-from-expired-preview path used to call Anthropic with NO
+//     limit check at all. Both paths now go through checkGenerationLimits().
+//   - Global daily kill switch: GENERATOR_DAILY_CALL_CAP (env var, default
+//     500) across ALL IPs combined. Once hit, every request gets the exact
+//     same { paused: true } response the manual billing pause already
+//     produces -- the existing frontend "coming soon" UI (generator-engine.js)
+//     handles that response shape already, so no frontend change was needed
+//     for this part. Trip events are logged via console.log (visible in the
+//     Cloudflare dashboard's Worker logs) with the day/time/cap/count.
+//   - Prompt caching: NOT implemented. Every prompt_template below interleaves
+//     its fixed instructional text with inline {placeholder} substitutions
+//     throughout the string (not a clean fixed-prefix + variable-suffix
+//     split), so a cache_control breakpoint can't be placed safely without
+//     rewriting all ~89 templates to move every {placeholder} to the end --
+//     real restructuring risk for a change that's about cost, not features.
+//     Flagged as a future optimization, not attempted here.
+//   - Monthly cap: NOT a code control. Carlos still needs to set a monthly
+//     spend limit in the Anthropic Console (Settings -> Billing) as the
+//     final backstop independent of everything above.
 //
 // Required bindings / secrets:
 //   - ANTHROPIC_API_KEY (secret): wrangler secret put ANTHROPIC_API_KEY
 //   - GENERATORS_KV (KV namespace binding): namespace "generators-rate-limit"
+//     -- also used for the global kill-switch counter (see globalCallKey()).
+//     This is the same KV-based rate-limiting PATTERN every analyzer Worker
+//     uses via its own RATE_LIMIT_KV binding (DAILY_LIMIT const + rateKey()
+//     + fail-open-on-KV-error); reused here under its existing binding name
+//     rather than introducing a second KV namespace, which would need a new
+//     Cloudflare-side `wrangler kv namespace create` + dashboard binding step
+//     with no functional benefit over the binding already wired up here.
+//   - GENERATOR_DAILY_CALL_CAP (optional env var / wrangler.toml [vars]):
+//     the global kill-switch cap; defaults to 500 if unset or invalid.
 
-const DAILY_PREVIEW_LIMIT = 3; // shared across ALL generators, per IP per day
+const DAILY_GENERATION_LIMIT = 10; // shared across ALL generators, per IP per day (was 3)
+const DEFAULT_DAILY_CALL_CAP = 500; // global kill-switch default if GENERATOR_DAILY_CALL_CAP is unset
 const MAX_TOKENS = 1200; // one-page letter — Haiku, template filling not reasoning
-const KV_TTL = 86400; // 24h for previews and the rate-limit counter
+const KV_TTL = 86400; // 24h for previews and the rate-limit counters
 
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
@@ -740,12 +786,114 @@ function rateKey(ip) {
   return `ip:${ip}:${day}:generators`;
 }
 
+// Global (all-IPs-combined) counter key for the daily spend kill switch --
+// same UTC-day derivation as rateKey() above, just not scoped to one IP.
+function globalCallKey() {
+  const day = new Date().toISOString().slice(0, 10);
+  return `global:${day}:generators:calls`;
+}
+
+function getDailyCallCap(env) {
+  const n = parseInt(env.GENERATOR_DAILY_CALL_CAP, 10);
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_DAILY_CALL_CAP;
+}
+
+// Checked immediately before EVERY Anthropic call in this file (both the
+// /preview generation and /unlock's regenerate-from-expired-preview
+// fallback), so the two limits below are enforced identically everywhere
+// generation can actually happen, not just on one endpoint.
+//
+// Returns { blocked: false, kv, ipKey, ipUsed, gKey, globalUsed } when the
+// caller may proceed -- it does NOT increment anything itself; call
+// recordGenerationUsage() with these fields after a successful generation,
+// so a failed/errored Anthropic call never consumes budget from either
+// counter (matches this file's pre-existing preview behavior, just now
+// shared with /unlock too).
+//
+// Returns { blocked: true, response } when either limit is already hit;
+// `response` is the exact Response to return to the caller.
+//
+// Both counters fail OPEN on a KV read error -- consistent with this file's
+// existing per-IP limiter and preview-storage logic elsewhere, which already
+// tolerate a transient KV blip rather than treating it as a hard failure.
+// If GENERATORS_KV isn't bound at all, neither limit is enforced (same
+// fail-open stance the original per-IP-only check already had).
+async function checkGenerationLimits(env, ip) {
+  const kv = env.GENERATORS_KV;
+  if (!kv) return { blocked: false, kv: null };
+
+  const cap = getDailyCallCap(env);
+  const gKey = globalCallKey();
+  let globalUsed = 0;
+  try {
+    const stored = await kv.get(gKey);
+    globalUsed = stored ? parseInt(stored, 10) || 0 : 0;
+  } catch (err) {
+    globalUsed = 0; // fail open
+  }
+  if (globalUsed >= cap) {
+    console.log('[kibbo-generators] daily call cap reached', {
+      day: new Date().toISOString().slice(0, 10),
+      time: new Date().toISOString(),
+      cap,
+      globalUsed,
+    });
+    return { blocked: true, response: jsonResponse({ paused: true }) };
+  }
+
+  const ipKey = rateKey(ip);
+  let ipUsed = 0;
+  try {
+    const stored = await kv.get(ipKey);
+    ipUsed = stored ? parseInt(stored, 10) || 0 : 0;
+  } catch (err) {
+    ipUsed = 0; // fail open
+  }
+  if (ipUsed >= DAILY_GENERATION_LIMIT) {
+    return {
+      blocked: true,
+      response: jsonResponse(
+        {
+          error: 'limit_reached',
+          message: "You've reached today's limit for generating documents. Please try again tomorrow.",
+        },
+        429
+      ),
+    };
+  }
+
+  return { blocked: false, kv, ipKey, ipUsed, gKey, globalUsed };
+}
+
+// Best-effort increment of both counters after a successful generation.
+// Swallows write errors individually so one failing write never blocks the
+// other, or the response already prepared for the caller.
+async function recordGenerationUsage(limits) {
+  if (!limits || !limits.kv) return;
+  try {
+    await limits.kv.put(limits.ipKey, String(limits.ipUsed + 1), { expirationTtl: KV_TTL });
+  } catch (err) {
+    /* best-effort */
+  }
+  try {
+    await limits.kv.put(limits.gKey, String(limits.globalUsed + 1), { expirationTtl: KV_TTL });
+  } catch (err) {
+    /* best-effort */
+  }
+}
+
 function randomId() {
   const bytes = new Uint8Array(16);
   crypto.getRandomValues(bytes);
   return Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+// TO GO LIVE (manual, one line, do this yourself once Anthropic credit is
+// confirmed loaded AND a monthly cap is set in the Anthropic Console ->
+// Settings -> Billing -- see the top-of-file comment):
+//   npx wrangler secret put GENERATORS_PAUSED     (enter: false)
+// or delete the secret entirely. Takes effect immediately, no redeploy.
+//
 // Billing pause toggle. Deliberately set as a Worker SECRET
 // (`wrangler secret put GENERATORS_PAUSED`), not a wrangler.toml [vars]
 // entry -- secrets aren't touched by a code-only `wrangler deploy`, so
@@ -822,30 +970,12 @@ async function handlePreview(request, env) {
   }
 
   const ip = clientIp(request);
-  const kv = env.GENERATORS_KV;
-  const key = rateKey(ip);
 
-  // Shared free-preview rate limit (fails open on KV error so a KV blip never
-  // blocks a paying customer's preview).
-  let used = 0;
-  if (kv) {
-    try {
-      const stored = await kv.get(key);
-      used = stored ? parseInt(stored, 10) || 0 : 0;
-    } catch (err) {
-      used = 0;
-    }
-    if (used >= DAILY_PREVIEW_LIMIT) {
-      return jsonResponse(
-        {
-          error: 'limit_reached',
-          message:
-            'You have used your 3 free letter previews today (shared across all generators). Come back tomorrow, or unlock a full letter below.',
-        },
-        429
-      );
-    }
-  }
+  // Per-IP daily limit + global daily kill switch, checked together right
+  // before the one Anthropic call this endpoint makes (see the top-of-file
+  // comment and checkGenerationLimits() for what each one does).
+  const limits = await checkGenerationLimits(env, ip);
+  if (limits.blocked) return limits.response;
 
   const prompt = buildPrompt(gen.prompt_template, answers, gen.output_rules);
 
@@ -865,20 +995,20 @@ async function handlePreview(request, env) {
   // Split: reveal the first paragraph, keep the rest server-side.
   const { visible, blurLines } = splitPreview(letter);
   const previewId = randomId();
-  if (kv) {
+  if (limits.kv) {
     try {
-      await kv.put(`preview:${previewId}`, letter, { expirationTtl: KV_TTL });
-      await kv.put(key, String(used + 1), { expirationTtl: KV_TTL });
+      await limits.kv.put(`preview:${previewId}`, letter, { expirationTtl: KV_TTL });
     } catch (err) {
       /* preview just won't survive a refresh; unlock will regenerate from answers */
     }
   }
+  await recordGenerationUsage(limits);
 
   return jsonResponse({
     previewId,
     preview: visible,
     blurLines,
-    remaining: Math.max(0, DAILY_PREVIEW_LIMIT - (used + 1)),
+    remaining: Math.max(0, DAILY_GENERATION_LIMIT - (limits.kv ? limits.ipUsed + 1 : 0)),
   });
 }
 
@@ -918,10 +1048,18 @@ async function handleUnlock(request, env) {
     }
   }
   if (!letter) {
+    // Regenerating from scratch means a second Anthropic call this preview
+    // didn't already account for -- subject to the exact same per-IP/global
+    // limits as /preview (this path used to call Anthropic with NO limit
+    // check at all; that gap is closed here).
     const answers = (body && body.answers) || {};
     if (Object.keys(answers).length && env.ANTHROPIC_API_KEY) {
+      const ip = clientIp(request);
+      const limits = await checkGenerationLimits(env, ip);
+      if (limits.blocked) return limits.response;
       try {
         letter = await generateLetter(env.ANTHROPIC_API_KEY, buildPrompt(gen.prompt_template, answers, gen.output_rules));
+        if (letter) await recordGenerationUsage(limits);
       } catch (err) {
         letter = null;
       }

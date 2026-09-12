@@ -2,10 +2,28 @@ name = "kibbo-generators"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
+# Cost guardrails (2026-09-12) -- global daily kill-switch cap for total
+# Anthropic-calling requests across ALL generators and ALL IPs combined.
+# Defaults to 500/day in code (getDailyCallCap() in worker.js) if this is
+# unset or not a positive number, so this entry is optional but documented
+# here for visibility. Raise it once real usage patterns are visible;
+# Carlos can edit this value directly, or override it without a redeploy
+# via Cloudflare dashboard -> Workers & Pages -> kibbo-generators -> Settings
+# -> Variables and Secrets.
+[vars]
+GENERATOR_DAILY_CALL_CAP = "500"
+
 # Shared KV namespace for the generator engine. Holds:
-#   - free-preview rate limiter, SHARED across all generators
-#     (key: ip:{IP}:{date}:generators, 3/day, TTL 86400)
+#   - per-IP daily generation limit, SHARED across all generators
+#     (key: ip:{IP}:{date}:generators, 10/day, TTL 86400)
+#   - global daily kill-switch counter, ALL IPs combined
+#     (key: global:{date}:generators:calls, capped by GENERATOR_DAILY_CALL_CAP
+#     above, TTL 86400)
 #   - server-side full letters awaiting unlock  (key: preview:{previewId}, TTL 86400)
+#
+#   This is the same KV-based rate-limiting pattern every analyzer Worker in
+#   this repo uses via its own RATE_LIMIT_KV binding -- reused here under its
+#   existing binding name rather than adding a second KV namespace.
 #
 #   Unlocking itself is free (email-capture, handled entirely on the main
 #   Vercel site at /api/unlock-generators) since 2026-09-11 -- no more
