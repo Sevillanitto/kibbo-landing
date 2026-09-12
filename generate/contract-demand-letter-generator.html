@@ -50,15 +50,15 @@
   <div class="container nav-inner">
     <a href="/" class="nav-logo">Kibbo</a>
     <div class="nav-links">
-      <a href="/analyze.html">Analyze</a>
-      <a href="/generate.html" class="active">Generate</a>
-      <a href="/templates.html">Templates</a>
-      <a href="/investigations.html">Investigations</a>
-      <a href="/questions.html">Questions</a>
-      <a href="/directory.html">Directory</a>
-      <a href="/developer-tools.html">Dev Tools</a>
-      <a href="/blog.html">Guides</a>
-      <a href="/consumer-rights-by-country.html">By Country</a>
+      <a href="/analyze">Analyze</a>
+      <a href="/generate" class="active">Generate</a>
+      <a href="/templates">Templates</a>
+      <a href="/investigations">Investigations</a>
+      <a href="/questions">Questions</a>
+      <a href="/directory">Directory</a>
+      <a href="/developer-tools">Dev Tools</a>
+      <a href="/blog">Guides</a>
+      <a href="/consumer-rights-by-country">By Country</a>
     </div>
     <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
   </div>
@@ -94,7 +94,7 @@
 
   <aside class="supp-cross">
     <p class="supp-cross-title">Related resources</p>
-    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the demand letter itself. To organize the full evidence behind your dispute, use Kibbo's <a href="/templates/contract-dispute-evidence-pack.html">Contract Dispute Evidence Pack →</a> — and if the matter is heading to small claims court, build on that with the <a href="/templates/small-claims-evidence-pack.html">Small Claims Evidence Pack →</a>.</p>
+    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the demand letter itself. To organize the full evidence behind your dispute, use Kibbo's <a href="/templates/contract-dispute-evidence-pack">Contract Dispute Evidence Pack →</a> — and if the matter is heading to small claims court, build on that with the <a href="/templates/small-claims-evidence-pack">Small Claims Evidence Pack →</a>.</p>
   </aside>
 
 </div>
@@ -123,26 +123,26 @@
       </div>
       <div class="footer-col">
         <h4>Tools</h4>
-        <a href="/analyze.html">Analyze</a>
-        <a href="/generate.html">Generate</a>
-        <a href="/templates.html">Templates</a>
-        <a href="/directory.html">Directory</a>
-        <a href="/developer-tools.html">Developer Tools</a>
+        <a href="/analyze">Analyze</a>
+        <a href="/generate">Generate</a>
+        <a href="/templates">Templates</a>
+        <a href="/directory">Directory</a>
+        <a href="/developer-tools">Developer Tools</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
-        <a href="/blog.html">Guides</a>
-        <a href="/about.html">About</a>
+        <a href="/blog">Guides</a>
+        <a href="/about">About</a>
         <a href="mailto:hello@getkibbo.com">Contact</a>
-        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+        <a href="/supplement-analyzer">Supplement Analyzer</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
       <div class="footer-legal">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cookie-policy.html">Cookie Policy</a>
-        <a href="/terms-of-use.html">Terms of Use</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
       </div>
     </div>
   </div>
@@ -160,7 +160,7 @@ window.KIBBO_GENERATOR = {
     { id: 'desired_outcome', label: 'Desired outcome', type: 'select', options: ['Full payment', 'Partial payment — specify amount', 'Specific performance of the obligation', 'Refund', 'Written explanation', 'Other — free text'] },
     { id: 'desired_outcome_amount', label: 'Partial payment amount requested', type: 'text', showWhen: { field: 'desired_outcome', equals: 'Partial payment — specify amount' } },
     { id: 'desired_outcome_other', label: 'Describe the desired outcome', type: 'text', showWhen: { field: 'desired_outcome', equals: 'Other — free text' } },
-    { id: 'issue_note', type: 'note', html: `<strong>This generator produces the demand letter itself.</strong> To organize the full evidence behind your dispute, use Kibbo's <a href="/templates/contract-dispute-evidence-pack.html">Contract Dispute Evidence Pack →</a> — and if the matter is heading to small claims court, build on that with the <a href="/templates/small-claims-evidence-pack.html">Small Claims Evidence Pack →</a>.` },
+    { id: 'issue_note', type: 'note', html: `<strong>This generator produces the demand letter itself.</strong> To organize the full evidence behind your dispute, use Kibbo's <a href="/templates/contract-dispute-evidence-pack">Contract Dispute Evidence Pack →</a> — and if the matter is heading to small claims court, build on that with the <a href="/templates/small-claims-evidence-pack">Small Claims Evidence Pack →</a>.` },
     { id: 'issue_type', label: 'What\'s the issue?', type: 'select', options: ['Breach of contract', 'Payment owed to you', 'Refund owed to you', 'General dispute over obligations or interpretation', 'Final notice before small claims'], branch: true },
     { id: 'breach_obligation', label: 'Specific obligation that was breached', type: 'textarea', showWhen: { field: 'issue_type', equals: 'Breach of contract' } },
     { id: 'breach_date', label: 'Date the breach occurred or was discovered', type: 'date', showWhen: { field: 'issue_type', equals: 'Breach of contract' } },

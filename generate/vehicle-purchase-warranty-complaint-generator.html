@@ -50,15 +50,15 @@
   <div class="container nav-inner">
     <a href="/" class="nav-logo">Kibbo</a>
     <div class="nav-links">
-      <a href="/analyze.html">Analyze</a>
-      <a href="/generate.html" class="active">Generate</a>
-      <a href="/templates.html">Templates</a>
-      <a href="/investigations.html">Investigations</a>
-      <a href="/questions.html">Questions</a>
-      <a href="/directory.html">Directory</a>
-      <a href="/developer-tools.html">Dev Tools</a>
-      <a href="/blog.html">Guides</a>
-      <a href="/consumer-rights-by-country.html">By Country</a>
+      <a href="/analyze">Analyze</a>
+      <a href="/generate" class="active">Generate</a>
+      <a href="/templates">Templates</a>
+      <a href="/investigations">Investigations</a>
+      <a href="/questions">Questions</a>
+      <a href="/directory">Directory</a>
+      <a href="/developer-tools">Dev Tools</a>
+      <a href="/blog">Guides</a>
+      <a href="/consumer-rights-by-country">By Country</a>
     </div>
     <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
   </div>
@@ -94,7 +94,7 @@
 
   <aside class="supp-cross">
     <p class="supp-cross-title">Related resources</p>
-    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the complaint letter itself. To organize the full evidence behind your case, use Kibbo's <a href="/templates/car-dealer-dispute-evidence-pack.html">Car Dealer Dispute &amp; Evidence Pack →</a> — and if the issue stems from a mismatch with the original listing, preserve that evidence with the <a href="/templates/used-car-seller-listing-evidence-pack.html">Used Car Seller &amp; Listing Evidence Pack →</a></p>
+    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the complaint letter itself. To organize the full evidence behind your case, use Kibbo's <a href="/templates/car-dealer-dispute-evidence-pack">Car Dealer Dispute &amp; Evidence Pack →</a> — and if the issue stems from a mismatch with the original listing, preserve that evidence with the <a href="/templates/used-car-seller-listing-evidence-pack">Used Car Seller &amp; Listing Evidence Pack →</a></p>
   </aside>
 
 </div>
@@ -123,26 +123,26 @@
       </div>
       <div class="footer-col">
         <h4>Tools</h4>
-        <a href="/analyze.html">Analyze</a>
-        <a href="/generate.html">Generate</a>
-        <a href="/templates.html">Templates</a>
-        <a href="/directory.html">Directory</a>
-        <a href="/developer-tools.html">Developer Tools</a>
+        <a href="/analyze">Analyze</a>
+        <a href="/generate">Generate</a>
+        <a href="/templates">Templates</a>
+        <a href="/directory">Directory</a>
+        <a href="/developer-tools">Developer Tools</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
-        <a href="/blog.html">Guides</a>
-        <a href="/about.html">About</a>
+        <a href="/blog">Guides</a>
+        <a href="/about">About</a>
         <a href="mailto:hello@getkibbo.com">Contact</a>
-        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+        <a href="/supplement-analyzer">Supplement Analyzer</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
       <div class="footer-legal">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cookie-policy.html">Cookie Policy</a>
-        <a href="/terms-of-use.html">Terms of Use</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
       </div>
     </div>
   </div>
@@ -162,7 +162,7 @@ window.KIBBO_GENERATOR = {
     { id: 'purchase_price', label: 'Purchase price', type: 'text' },
     { id: 'desired_outcome', label: 'Desired outcome', type: 'select', options: ['Repair the defect', 'Full refund', 'Reject the vehicle and return it', 'Warranty coverage for the repair', 'Partial refund — specify amount', 'Written explanation'] },
     { id: 'desired_outcome_amount', label: 'Partial refund amount requested', type: 'text', showWhen: { field: 'desired_outcome', equals: 'Partial refund — specify amount' } },
-    { id: 'situation_note', type: 'note', html: `<strong>This generator produces the complaint letter itself.</strong> To organize the full evidence behind your case, use Kibbo's <a href="/templates/car-dealer-dispute-evidence-pack.html">Car Dealer Dispute &amp; Evidence Pack →</a> — and if the issue stems from a mismatch with the original listing, preserve that evidence with the <a href="/templates/used-car-seller-listing-evidence-pack.html">Used Car Seller &amp; Listing Evidence Pack →</a>` },
+    { id: 'situation_note', type: 'note', html: `<strong>This generator produces the complaint letter itself.</strong> To organize the full evidence behind your case, use Kibbo's <a href="/templates/car-dealer-dispute-evidence-pack">Car Dealer Dispute &amp; Evidence Pack →</a> — and if the issue stems from a mismatch with the original listing, preserve that evidence with the <a href="/templates/used-car-seller-listing-evidence-pack">Used Car Seller &amp; Listing Evidence Pack →</a>` },
     { id: 'situation_type', label: 'What\'s the situation?', type: 'select', options: ['Vehicle doesn\'t match the listing/description', 'Defect discovered after purchase', 'Warranty claim', 'Escalation of an unresolved complaint'], branch: true },
     { id: 'listing_claim', label: 'What the listing/seller claimed (quote the exact wording if possible)', type: 'textarea', showWhen: { field: 'situation_type', equals: 'Vehicle doesn\'t match the listing/description' } },
     { id: 'actual_finding', label: 'What you actually found', type: 'textarea', showWhen: { field: 'situation_type', equals: 'Vehicle doesn\'t match the listing/description' } },

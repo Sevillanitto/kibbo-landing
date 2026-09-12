@@ -7,161 +7,161 @@
           {
             "type": "template",
             "name": "Security Deposit Dispute Tracker",
-            "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker.html"
+            "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker"
           },
           {
             "type": "checklist",
             "name": "Deposit Dispute Evidence Checklist",
-            "url": "https://www.getkibbo.com/checklists/deposit-dispute-evidence.html"
+            "url": "https://www.getkibbo.com/checklists/deposit-dispute-evidence"
           },
           {
             "type": "generator",
             "name": "Landlord Deposit Demand Letter",
-            "url": "https://www.getkibbo.com/generate/landlord-deposit-demand-letter.html"
+            "url": "https://www.getkibbo.com/generate/landlord-deposit-demand-letter"
           }
         ],
         "habitability": [
           {
             "type": "template",
             "name": "Repair Request & Habitability Log",
-            "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"
+            "url": "https://www.getkibbo.com/templates/repair-request-habitability-log"
           },
           {
             "type": "checklist",
             "name": "Habitability Issue Checklist",
-            "url": "https://www.getkibbo.com/checklists/habitability-issue.html"
+            "url": "https://www.getkibbo.com/checklists/habitability-issue"
           },
           {
             "type": "generator",
             "name": "Repair Request Formal Notice",
-            "url": "https://www.getkibbo.com/generate/repair-request-formal-notice.html"
+            "url": "https://www.getkibbo.com/generate/repair-request-formal-notice"
           }
         ],
         "repair-and-deduct": [
           {
             "type": "template",
             "name": "Repair Request & Habitability Log",
-            "url": "https://www.getkibbo.com/templates/repair-request-habitability-log.html"
+            "url": "https://www.getkibbo.com/templates/repair-request-habitability-log"
           },
           {
             "type": "checklist",
             "name": "Repair and Deduct Eligibility Checklist",
-            "url": "https://www.getkibbo.com/checklists/repair-and-deduct-eligibility.html"
+            "url": "https://www.getkibbo.com/checklists/repair-and-deduct-eligibility"
           },
           {
             "type": "generator",
             "name": "Repair Request Formal Notice",
-            "url": "https://www.getkibbo.com/generate/repair-request-formal-notice.html"
+            "url": "https://www.getkibbo.com/generate/repair-request-formal-notice"
           }
         ],
         "eviction": [
           {
             "type": "template",
             "name": "Eviction Response Workbook",
-            "url": "https://www.getkibbo.com/templates/eviction-response-workbook.html"
+            "url": "https://www.getkibbo.com/templates/eviction-response-workbook"
           },
           {
             "type": "generator",
             "name": "Illegal Eviction Warning Letter",
-            "url": "https://www.getkibbo.com/generate/illegal-eviction-warning-letter.html"
+            "url": "https://www.getkibbo.com/generate/illegal-eviction-warning-letter"
           }
         ],
         "illegal-lockout": [
           {
             "type": "checklist",
             "name": "Locked Out? What to Do Right Now",
-            "url": "https://www.getkibbo.com/checklists/illegal-lockout-emergency.html"
+            "url": "https://www.getkibbo.com/checklists/illegal-lockout-emergency"
           }
         ],
         "move-in-inspection": [
           {
             "type": "template",
             "name": "Move-In / Move-Out Condition Report",
-            "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report.html"
+            "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report"
           },
           {
             "type": "checklist",
             "name": "Move-In Inspection Checklist",
-            "url": "https://www.getkibbo.com/checklists/move-in-inspection.html"
+            "url": "https://www.getkibbo.com/checklists/move-in-inspection"
           }
         ],
         "move-out-deposit-return": [
           {
             "type": "template",
             "name": "Move-In / Move-Out Condition Report",
-            "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report.html"
+            "url": "https://www.getkibbo.com/templates/move-in-move-out-condition-report"
           },
           {
             "type": "template",
             "name": "Security Deposit Dispute Tracker",
-            "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker.html"
+            "url": "https://www.getkibbo.com/templates/security-deposit-dispute-tracker"
           },
           {
             "type": "checklist",
             "name": "Moving Out Deposit Checklist",
-            "url": "https://www.getkibbo.com/checklists/moving-out-deposit.html"
+            "url": "https://www.getkibbo.com/checklists/moving-out-deposit"
           }
         ],
         "rental-scam": [
           {
             "type": "checklist",
             "name": "Before Paying a Rental Deposit Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-paying-rental-deposit.html"
+            "url": "https://www.getkibbo.com/checklists/before-paying-rental-deposit"
           },
           {
             "type": "generator",
             "name": "Rental Scam Refund Demand",
-            "url": "https://www.getkibbo.com/generate/rental-scam-refund-demand.html"
+            "url": "https://www.getkibbo.com/generate/rental-scam-refund-demand"
           }
         ],
         "lease-red-flags": [
           {
             "type": "checklist",
             "name": "Rental Contract Red Flags Checklist",
-            "url": "https://www.getkibbo.com/checklists/rental-contract-red-flags.html"
+            "url": "https://www.getkibbo.com/checklists/rental-contract-red-flags"
           },
           {
             "type": "generator",
             "name": "Lease Clause Challenge Letter",
-            "url": "https://www.getkibbo.com/generate/lease-clause-challenge-letter.html"
+            "url": "https://www.getkibbo.com/generate/lease-clause-challenge-letter"
           }
         ],
         "airbnb-booking-damage": [
           {
             "type": "checklist",
             "name": "Airbnb / Booking Damage Claim Checklist",
-            "url": "https://www.getkibbo.com/checklists/airbnb-booking-damage-claim.html"
+            "url": "https://www.getkibbo.com/checklists/airbnb-booking-damage-claim"
           }
         ],
         "au-bond-repairs": [
           {
             "type": "checklist",
             "name": "Moving Out? Bond Return Evidence Checklist (Australia)",
-            "url": "https://www.getkibbo.com/checklists/au-bond-return-check.html"
+            "url": "https://www.getkibbo.com/checklists/au-bond-return-check"
           },
           {
             "type": "generator",
             "name": "Notice to Remedy / Urgent Repairs Letter (Australia)",
-            "url": "https://www.getkibbo.com/generate/au-notice-to-remedy-repairs.html"
+            "url": "https://www.getkibbo.com/generate/au-notice-to-remedy-repairs"
           }
         ],
         "lease-violation-landlord": [
           {
             "type": "template",
             "name": "Lease Violation Notice Log",
-            "url": "https://www.getkibbo.com/templates/lease-violation-notice-log.html"
+            "url": "https://www.getkibbo.com/templates/lease-violation-notice-log"
           },
           {
             "type": "generator",
             "name": "Lease Violation Notice Generator",
-            "url": "https://www.getkibbo.com/generate/lease-violation-notice-generator.html"
+            "url": "https://www.getkibbo.com/generate/lease-violation-notice-generator"
           }
         ],
         "rent-increase-landlord": [
           {
             "type": "template",
             "name": "Rent Increase Notice Tracker",
-            "url": "https://www.getkibbo.com/templates/rent-increase-notice-tracker.html"
+            "url": "https://www.getkibbo.com/templates/rent-increase-notice-tracker"
           }
         ]
       }
@@ -172,105 +172,105 @@
           {
             "type": "template",
             "name": "Healthcare Complaint & Escalation Evidence Log",
-            "url": "https://www.getkibbo.com/templates/healthcare-complaint-escalation-log.html"
+            "url": "https://www.getkibbo.com/templates/healthcare-complaint-escalation-log"
           },
           {
             "type": "generator",
             "name": "Healthcare Complaint Letter Generator",
-            "url": "https://www.getkibbo.com/generate/healthcare-complaint-letter.html"
+            "url": "https://www.getkibbo.com/generate/healthcare-complaint-letter"
           }
         ],
         "medical-records-access": [
           {
             "type": "template",
             "name": "Medical Records Request & Access Tracker",
-            "url": "https://www.getkibbo.com/templates/medical-records-request-access-tracker.html"
+            "url": "https://www.getkibbo.com/templates/medical-records-request-access-tracker"
           },
           {
             "type": "generator",
             "name": "Medical Records Request Letter Generator",
-            "url": "https://www.getkibbo.com/generate/medical-records-request-letter.html"
+            "url": "https://www.getkibbo.com/generate/medical-records-request-letter"
           }
         ],
         "provider-comparison": [
           {
             "type": "template",
             "name": "Healthcare Provider Comparison & Decision Workbook",
-            "url": "https://www.getkibbo.com/templates/healthcare-provider-comparison-workbook.html"
+            "url": "https://www.getkibbo.com/templates/healthcare-provider-comparison-workbook"
           },
           {
             "type": "checklist",
             "name": "Choosing a Healthcare Provider & Red Flags Checklist",
-            "url": "https://www.getkibbo.com/checklists/choosing-healthcare-provider-red-flags.html"
+            "url": "https://www.getkibbo.com/checklists/choosing-healthcare-provider-red-flags"
           },
           {
             "type": "generator",
             "name": "Healthcare Provider Information Request Generator",
-            "url": "https://www.getkibbo.com/generate/healthcare-provider-information-request.html"
+            "url": "https://www.getkibbo.com/generate/healthcare-provider-information-request"
           }
         ],
         "medical-billing-dispute": [
           {
             "type": "template",
             "name": "Medical Expenses & Billing Dispute Tracker",
-            "url": "https://www.getkibbo.com/templates/medical-billing-dispute-tracker.html"
+            "url": "https://www.getkibbo.com/templates/medical-billing-dispute-tracker"
           },
           {
             "type": "generator",
             "name": "Healthcare Billing Dispute & Refund Letter Generator",
-            "url": "https://www.getkibbo.com/generate/healthcare-billing-dispute-refund-letter.html"
+            "url": "https://www.getkibbo.com/generate/healthcare-billing-dispute-refund-letter"
           }
         ],
         "health-insurance-claim": [
           {
             "type": "checklist",
             "name": "Health Insurance Claim Checklist",
-            "url": "https://www.getkibbo.com/checklists/health-insurance-claim.html"
+            "url": "https://www.getkibbo.com/checklists/health-insurance-claim"
           }
         ],
         "pharmacy-safety": [
           {
             "type": "checklist",
             "name": "Online Pharmacy Safety Checklist",
-            "url": "https://www.getkibbo.com/checklists/online-pharmacy-safety.html"
+            "url": "https://www.getkibbo.com/checklists/online-pharmacy-safety"
           }
         ],
         "medical-product-purchase": [
           {
             "type": "checklist",
             "name": "Medical Product & Device Purchase Checklist",
-            "url": "https://www.getkibbo.com/checklists/medical-product-device-purchase.html"
+            "url": "https://www.getkibbo.com/checklists/medical-product-device-purchase"
           },
           {
             "type": "template",
             "name": "Medical Product / Device Purchase & Warranty File",
-            "url": "https://www.getkibbo.com/templates/medical-device-purchase-warranty-file.html"
+            "url": "https://www.getkibbo.com/templates/medical-device-purchase-warranty-file"
           }
         ],
         "medical-product-complaint": [
           {
             "type": "generator",
             "name": "Medical Product Complaint Letter Generator",
-            "url": "https://www.getkibbo.com/generate/medical-product-complaint-letter.html"
+            "url": "https://www.getkibbo.com/generate/medical-product-complaint-letter"
           }
         ],
         "medical-appointment-records": [
           {
             "type": "template",
             "name": "Medical Appointment & Treatment Record",
-            "url": "https://www.getkibbo.com/templates/medical-appointment-treatment-record.html"
+            "url": "https://www.getkibbo.com/templates/medical-appointment-treatment-record"
           },
           {
             "type": "template",
             "name": "Treatment Consent & Information Record",
-            "url": "https://www.getkibbo.com/templates/treatment-consent-information-record.html"
+            "url": "https://www.getkibbo.com/templates/treatment-consent-information-record"
           }
         ],
         "healthcare-evidence-organizer": [
           {
             "type": "template",
             "name": "Healthcare Evidence & Document Organizer",
-            "url": "https://www.getkibbo.com/templates/healthcare-evidence-document-organizer.html"
+            "url": "https://www.getkibbo.com/templates/healthcare-evidence-document-organizer"
           }
         ]
       }
@@ -281,106 +281,106 @@
           {
             "type": "generator",
             "name": "Credit Report Dispute Letter (FCRA)",
-            "url": "https://www.getkibbo.com/generate/fcra-credit-dispute.html"
+            "url": "https://www.getkibbo.com/generate/fcra-credit-dispute"
           }
         ],
         "debt-collector-harassment": [
           {
             "type": "generator",
             "name": "Debt Collector Cease & Desist Letter (FDCPA)",
-            "url": "https://www.getkibbo.com/generate/fdcpa-cease-desist.html"
+            "url": "https://www.getkibbo.com/generate/fdcpa-cease-desist"
           }
         ],
         "state-ag-complaint": [
           {
             "type": "generator",
             "name": "State Attorney General Complaint Letter",
-            "url": "https://www.getkibbo.com/generate/state-ag-complaint.html"
+            "url": "https://www.getkibbo.com/generate/state-ag-complaint"
           }
         ],
         "au-unauthorised-transaction": [
           {
             "type": "checklist",
             "name": "Unauthorised Transaction or Scam? First 24 Hours (Australia)",
-            "url": "https://www.getkibbo.com/checklists/au-unauthorised-transaction-scam.html"
+            "url": "https://www.getkibbo.com/checklists/au-unauthorised-transaction-scam"
           },
           {
             "type": "generator",
             "name": "Bank Dispute Letter — Unauthorised Transaction (Australia)",
-            "url": "https://www.getkibbo.com/generate/au-unauthorised-transaction-dispute.html"
+            "url": "https://www.getkibbo.com/generate/au-unauthorised-transaction-dispute"
           }
         ],
         "eu-bank-complaint": [
           {
             "type": "generator",
             "name": "Bank Complaint Letter (EU / PSD2 / FIN-NET)",
-            "url": "https://www.getkibbo.com/generate/eu-bank-complaint-finnet.html"
+            "url": "https://www.getkibbo.com/generate/eu-bank-complaint-finnet"
           },
           {
             "type": "template",
             "name": "EU Banking Dispute Evidence Log",
-            "url": "https://www.getkibbo.com/templates/eu-banking-dispute-evidence-log.html"
+            "url": "https://www.getkibbo.com/templates/eu-banking-dispute-evidence-log"
           }
         ],
         "eu-sepa-recall": [
           {
             "type": "generator",
             "name": "SEPA Recall Request Letter",
-            "url": "https://www.getkibbo.com/generate/eu-sepa-recall-request.html"
+            "url": "https://www.getkibbo.com/generate/eu-sepa-recall-request"
           }
         ],
         "eu-psd2-unauthorised-transaction": [
           {
             "type": "checklist",
             "name": "Was This Payment Properly Authenticated? (SCA Check, EU)",
-            "url": "https://www.getkibbo.com/checklists/eu-sca-check.html"
+            "url": "https://www.getkibbo.com/checklists/eu-sca-check"
           },
           {
             "type": "generator",
             "name": "Unauthorised Transaction Refund Demand (PSD2)",
-            "url": "https://www.getkibbo.com/generate/eu-unauthorised-transaction-psd2.html"
+            "url": "https://www.getkibbo.com/generate/eu-unauthorised-transaction-psd2"
           }
         ],
         "deposit-insurance": [
           {
             "type": "checklist",
             "name": "Verify Your Deposit Insurance Coverage",
-            "url": "https://www.getkibbo.com/checklists/deposit-insurance-check.html"
+            "url": "https://www.getkibbo.com/checklists/deposit-insurance-check"
           }
         ],
         "bank-transfer-scam-prevention": [
           {
             "type": "checklist",
             "name": "Before Sending a Bank Transfer to Someone New",
-            "url": "https://www.getkibbo.com/checklists/bank-transfer-new-payee.html"
+            "url": "https://www.getkibbo.com/checklists/bank-transfer-new-payee"
           }
         ],
         "chargeback-dispute": [
           {
             "type": "template",
             "name": "Chargeback Dispute Evidentiary Pack",
-            "url": "https://www.getkibbo.com/templates/chargeback-dispute-pack.html"
+            "url": "https://www.getkibbo.com/templates/chargeback-dispute-pack"
           }
         ],
         "credit-card-statement-audit": [
           {
             "type": "template",
             "name": "Credit Card Statement Audit Sheet",
-            "url": "https://www.getkibbo.com/templates/credit-card-statement-audit.html"
+            "url": "https://www.getkibbo.com/templates/credit-card-statement-audit"
           }
         ],
         "hidden-fees-overcharge": [
           {
             "type": "template",
             "name": "Hidden Fees & Overcharge Calculator",
-            "url": "https://www.getkibbo.com/templates/hidden-fees-calculator.html"
+            "url": "https://www.getkibbo.com/templates/hidden-fees-calculator"
           }
         ],
         "phishing-scam-report": [
           {
             "type": "template",
             "name": "Phishing & Scam Incident Report Template",
-            "url": "https://www.getkibbo.com/templates/phishing-scam-report.html"
+            "url": "https://www.getkibbo.com/templates/phishing-scam-report"
           }
         ]
       }
@@ -391,67 +391,67 @@
           {
             "type": "checklist",
             "name": "Flight Disruption Evidence Checklist",
-            "url": "https://www.getkibbo.com/checklists/flight-disruption-evidence-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/flight-disruption-evidence-checklist"
           },
           {
             "type": "template",
             "name": "Flight Disruption Expense Tracker",
-            "url": "https://www.getkibbo.com/templates/flight-disruption-expense-tracker.html"
+            "url": "https://www.getkibbo.com/templates/flight-disruption-expense-tracker"
           },
           {
             "type": "template",
             "name": "Flight Disruption Communication Log",
-            "url": "https://www.getkibbo.com/templates/flight-disruption-communication-log.html"
+            "url": "https://www.getkibbo.com/templates/flight-disruption-communication-log"
           },
           {
             "type": "generator",
             "name": "Flight Disruption Compensation & Reimbursement Letter",
-            "url": "https://www.getkibbo.com/generate/flight-disruption-compensation-reimbursement.html"
+            "url": "https://www.getkibbo.com/generate/flight-disruption-compensation-reimbursement"
           }
         ],
         "baggage-claim": [
           {
             "type": "checklist",
             "name": "Baggage Claim Checklist",
-            "url": "https://www.getkibbo.com/checklists/baggage-claim-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/baggage-claim-checklist"
           },
           {
             "type": "template",
             "name": "Lost Luggage Inventory Template",
-            "url": "https://www.getkibbo.com/templates/lost-luggage-inventory-template.html"
+            "url": "https://www.getkibbo.com/templates/lost-luggage-inventory-template"
           },
           {
             "type": "generator",
             "name": "Flight Disruption Compensation & Reimbursement Letter",
-            "url": "https://www.getkibbo.com/generate/flight-disruption-compensation-reimbursement.html"
+            "url": "https://www.getkibbo.com/generate/flight-disruption-compensation-reimbursement"
           }
         ],
         "codeshare-responsibility": [
           {
             "type": "checklist",
             "name": "Codeshare Flight Responsibility Checklist",
-            "url": "https://www.getkibbo.com/checklists/codeshare-responsibility-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/codeshare-responsibility-checklist"
           }
         ],
         "duty-of-care": [
           {
             "type": "checklist",
             "name": "Duty of Care Checklist",
-            "url": "https://www.getkibbo.com/checklists/duty-of-care-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/duty-of-care-checklist"
           }
         ],
         "uk261-claim": [
           {
             "type": "checklist",
             "name": "UK261 Claim Checklist",
-            "url": "https://www.getkibbo.com/checklists/uk261-claim-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/uk261-claim-checklist"
           }
         ],
         "travel-delay-insurance": [
           {
             "type": "template",
             "name": "Travel Delay Insurance Claim Worksheet",
-            "url": "https://www.getkibbo.com/templates/travel-delay-insurance-claim-worksheet.html"
+            "url": "https://www.getkibbo.com/templates/travel-delay-insurance-claim-worksheet"
           }
         ]
       }
@@ -462,130 +462,130 @@
           {
             "type": "checklist",
             "name": "Job Offer Scam Checklist",
-            "url": "https://www.getkibbo.com/checklists/job-offer-scam-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/job-offer-scam-checklist"
           },
           {
             "type": "template",
             "name": "Job Scam Incident Report",
-            "url": "https://www.getkibbo.com/templates/job-scam-incident-report.html"
+            "url": "https://www.getkibbo.com/templates/job-scam-incident-report"
           }
         ],
         "employment-contract-review": [
           {
             "type": "checklist",
             "name": "Before Signing an Employment Contract Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-signing-employment-contract-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-signing-employment-contract-checklist"
           }
         ],
         "non-compete": [
           {
             "type": "checklist",
             "name": "Non-Compete Clause Checklist",
-            "url": "https://www.getkibbo.com/checklists/non-compete-clause-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/non-compete-clause-checklist"
           },
           {
             "type": "template",
             "name": "Non-Compete Legal Review Worksheet",
-            "url": "https://www.getkibbo.com/templates/non-compete-legal-review-worksheet.html"
+            "url": "https://www.getkibbo.com/templates/non-compete-legal-review-worksheet"
           }
         ],
         "wage-dispute": [
           {
             "type": "generator",
             "name": "Unpaid Wage & Compensation Demand Letter",
-            "url": "https://www.getkibbo.com/generate/unpaid-wage-compensation-demand.html"
+            "url": "https://www.getkibbo.com/generate/unpaid-wage-compensation-demand"
           },
           {
             "type": "generator",
             "name": "Wrongful/Unlawful Wage Deduction Letter",
-            "url": "https://www.getkibbo.com/generate/wrongful-wage-deduction-letter.html"
+            "url": "https://www.getkibbo.com/generate/wrongful-wage-deduction-letter"
           },
           {
             "type": "template",
             "name": "Employment Communication Log",
-            "url": "https://www.getkibbo.com/templates/employment-communication-log.html"
+            "url": "https://www.getkibbo.com/templates/employment-communication-log"
           }
         ],
         "workplace-harassment": [
           {
             "type": "generator",
             "name": "Workplace Harassment Complaint Letter",
-            "url": "https://www.getkibbo.com/generate/workplace-harassment-complaint.html"
+            "url": "https://www.getkibbo.com/generate/workplace-harassment-complaint"
           }
         ],
         "background-check": [
           {
             "type": "checklist",
             "name": "Background Check Preparation Checklist",
-            "url": "https://www.getkibbo.com/checklists/background-check-preparation-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/background-check-preparation-checklist"
           }
         ],
         "gig-worker": [
           {
             "type": "checklist",
             "name": "Gig Worker Earnings Checklist",
-            "url": "https://www.getkibbo.com/checklists/gig-worker-earnings-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/gig-worker-earnings-checklist"
           }
         ],
         "cv-third-party": [
           {
             "type": "checklist",
             "name": "Before Sending Your CV to a Third Party Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-sending-cv-third-party-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-sending-cv-third-party-checklist"
           }
         ],
         "ssn-sharing": [
           {
             "type": "checklist",
             "name": "Before Sharing Your SSN Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-sharing-ssn-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-sharing-ssn-checklist"
           }
         ],
         "gdpr-job-application": [
           {
             "type": "checklist",
             "name": "GDPR Job Application Privacy Checklist",
-            "url": "https://www.getkibbo.com/checklists/gdpr-job-application-privacy-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/gdpr-job-application-privacy-checklist"
           },
           {
             "type": "generator",
             "name": "Employment Data Access Request",
-            "url": "https://www.getkibbo.com/generate/employment-data-access-request.html"
+            "url": "https://www.getkibbo.com/generate/employment-data-access-request"
           }
         ],
         "trial-shift": [
           {
             "type": "checklist",
             "name": "Before Accepting a Trial Shift Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-accepting-trial-shift-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-accepting-trial-shift-checklist"
           }
         ],
         "contractor-misclassification": [
           {
             "type": "checklist",
             "name": "Before Signing a Contractor Agreement Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-signing-contractor-agreement-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-signing-contractor-agreement-checklist"
           }
         ],
         "constructive-dismissal": [
           {
             "type": "generator",
             "name": "Constructive Dismissal Complaint Letter",
-            "url": "https://www.getkibbo.com/generate/constructive-dismissal-complaint.html"
+            "url": "https://www.getkibbo.com/generate/constructive-dismissal-complaint"
           }
         ],
         "flexible-working": [
           {
             "type": "generator",
             "name": "Flexible Working Request",
-            "url": "https://www.getkibbo.com/generate/flexible-working-request.html"
+            "url": "https://www.getkibbo.com/generate/flexible-working-request"
           }
         ],
         "reference-request": [
           {
             "type": "generator",
             "name": "Employment Reference Request",
-            "url": "https://www.getkibbo.com/generate/employment-reference-request.html"
+            "url": "https://www.getkibbo.com/generate/employment-reference-request"
           }
         ]
       }
@@ -596,62 +596,62 @@
           {
             "type": "checklist",
             "name": "Frozen Account Response Checklist",
-            "url": "https://www.getkibbo.com/checklists/frozen-account-response-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/frozen-account-response-checklist"
           },
           {
             "type": "template",
             "name": "Source of Funds Explanation Letter",
-            "url": "https://www.getkibbo.com/templates/source-of-funds-explanation-letter.html"
+            "url": "https://www.getkibbo.com/templates/source-of-funds-explanation-letter"
           },
           {
             "type": "generator",
             "name": "Source of Funds Package Generator",
-            "url": "https://www.getkibbo.com/generate/source-of-funds-package-generator.html"
+            "url": "https://www.getkibbo.com/generate/source-of-funds-package-generator"
           },
           {
             "type": "generator",
             "name": "Exchange Account Freeze/Lockout Response Letter",
-            "url": "https://www.getkibbo.com/generate/exchange-account-freeze-response.html"
+            "url": "https://www.getkibbo.com/generate/exchange-account-freeze-response"
           }
         ],
         "crypto-scam": [
           {
             "type": "checklist",
             "name": "Crypto Scam Red Flags Checklist",
-            "url": "https://www.getkibbo.com/checklists/crypto-scam-red-flags-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/crypto-scam-red-flags-checklist"
           },
           {
             "type": "generator",
             "name": "Crypto Complaint Generator",
-            "url": "https://www.getkibbo.com/generate/crypto-complaint-generator.html"
+            "url": "https://www.getkibbo.com/generate/crypto-complaint-generator"
           }
         ],
         "exchange-deposit-safety": [
           {
             "type": "checklist",
             "name": "Exchange Before Deposit Checklist",
-            "url": "https://www.getkibbo.com/checklists/exchange-before-deposit-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/exchange-before-deposit-checklist"
           }
         ],
         "self-custody": [
           {
             "type": "checklist",
             "name": "Self-Custody Security Checklist",
-            "url": "https://www.getkibbo.com/checklists/self-custody-security-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/self-custody-security-checklist"
           }
         ],
         "kyc-verification": [
           {
             "type": "checklist",
             "name": "KYC Verification Checklist",
-            "url": "https://www.getkibbo.com/checklists/kyc-verification-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/kyc-verification-checklist"
           }
         ],
         "crypto-tax": [
           {
             "type": "checklist",
             "name": "Crypto Tax Records Checklist",
-            "url": "https://www.getkibbo.com/checklists/crypto-tax-records-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/crypto-tax-records-checklist"
           }
         ]
       }
@@ -662,119 +662,119 @@
           {
             "type": "template",
             "name": "Student Academic Appeal Toolkit",
-            "url": "https://www.getkibbo.com/templates/student-academic-appeal-toolkit.html"
+            "url": "https://www.getkibbo.com/templates/student-academic-appeal-toolkit"
           },
           {
             "type": "generator",
             "name": "Formal Complaint Generator",
-            "url": "https://www.getkibbo.com/generate/formal-complaint-generator.html"
+            "url": "https://www.getkibbo.com/generate/formal-complaint-generator"
           }
         ],
         "academic-misconduct": [
           {
             "type": "template",
             "name": "Academic Misconduct Defence Workbook",
-            "url": "https://www.getkibbo.com/templates/academic-misconduct-defence-workbook.html"
+            "url": "https://www.getkibbo.com/templates/academic-misconduct-defence-workbook"
           },
           {
             "type": "template",
             "name": "AI Academic Integrity Documentation Kit",
-            "url": "https://www.getkibbo.com/templates/ai-academic-integrity-documentation-kit.html"
+            "url": "https://www.getkibbo.com/templates/ai-academic-integrity-documentation-kit"
           }
         ],
         "tuition-fee-dispute": [
           {
             "type": "template",
             "name": "Tuition Fee Dispute Toolkit",
-            "url": "https://www.getkibbo.com/templates/tuition-fee-dispute-toolkit.html"
+            "url": "https://www.getkibbo.com/templates/tuition-fee-dispute-toolkit"
           },
           {
             "type": "generator",
             "name": "Formal Complaint Generator",
-            "url": "https://www.getkibbo.com/generate/formal-complaint-generator.html"
+            "url": "https://www.getkibbo.com/generate/formal-complaint-generator"
           }
         ],
         "course-scam-vetting": [
           {
             "type": "checklist",
             "name": "Education Scam Checklist",
-            "url": "https://www.getkibbo.com/checklists/education-scam-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/education-scam-checklist"
           },
           {
             "type": "checklist",
             "name": "Before Paying Any Course Checklist",
-            "url": "https://www.getkibbo.com/checklists/before-paying-any-course-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/before-paying-any-course-checklist"
           }
         ],
         "online-course-refund": [
           {
             "type": "checklist",
             "name": "Online Course Refund Checklist",
-            "url": "https://www.getkibbo.com/checklists/online-course-refund-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/online-course-refund-checklist"
           },
           {
             "type": "template",
             "name": "Online Course Refund Toolkit",
-            "url": "https://www.getkibbo.com/templates/online-course-refund-toolkit.html"
+            "url": "https://www.getkibbo.com/templates/online-course-refund-toolkit"
           }
         ],
         "student-loan": [
           {
             "type": "checklist",
             "name": "Education Loan Safety Checklist",
-            "url": "https://www.getkibbo.com/checklists/education-loan-safety-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/education-loan-safety-checklist"
           },
           {
             "type": "template",
             "name": "Student Loan Dispute Organizer",
-            "url": "https://www.getkibbo.com/templates/student-loan-dispute-organizer.html"
+            "url": "https://www.getkibbo.com/templates/student-loan-dispute-organizer"
           }
         ],
         "bootcamp-job-guarantee": [
           {
             "type": "checklist",
             "name": "Bootcamp Job Guarantee Verification Checklist",
-            "url": "https://www.getkibbo.com/checklists/bootcamp-job-guarantee-verification-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/bootcamp-job-guarantee-verification-checklist"
           }
         ],
         "student-visa": [
           {
             "type": "checklist",
             "name": "Student Visa School Verification Checklist",
-            "url": "https://www.getkibbo.com/checklists/student-visa-school-verification-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/student-visa-school-verification-checklist"
           },
           {
             "type": "template",
             "name": "Study Abroad Documentation Kit",
-            "url": "https://www.getkibbo.com/templates/study-abroad-documentation-kit.html"
+            "url": "https://www.getkibbo.com/templates/study-abroad-documentation-kit"
           }
         ],
         "scholarship-appeal": [
           {
             "type": "template",
             "name": "Scholarship Appeal Toolkit",
-            "url": "https://www.getkibbo.com/templates/scholarship-appeal-toolkit.html"
+            "url": "https://www.getkibbo.com/templates/scholarship-appeal-toolkit"
           }
         ],
         "student-scam": [
           {
             "type": "template",
             "name": "Student Scam Recovery Kit",
-            "url": "https://www.getkibbo.com/templates/student-scam-recovery-kit.html"
+            "url": "https://www.getkibbo.com/templates/student-scam-recovery-kit"
           }
         ],
         "internship-problem": [
           {
             "type": "template",
             "name": "Internship Problem Documentation Kit",
-            "url": "https://www.getkibbo.com/templates/internship-problem-documentation-kit.html"
+            "url": "https://www.getkibbo.com/templates/internship-problem-documentation-kit"
           }
         ],
         "course-provider-policies": [
           {
             "type": "generator",
             "name": "Course Provider Terms & Refund Policy Generator",
-            "url": "https://www.getkibbo.com/generate/course-provider-terms-refund-policy-generator.html"
+            "url": "https://www.getkibbo.com/generate/course-provider-terms-refund-policy-generator"
           }
         ]
       }
@@ -785,117 +785,117 @@
           {
             "type": "template",
             "name": "Restaurant Complaint Communication Log",
-            "url": "https://www.getkibbo.com/templates/restaurant-complaint-communication-log.html"
+            "url": "https://www.getkibbo.com/templates/restaurant-complaint-communication-log"
           }
         ],
         "food-delivery-problem": [
           {
             "type": "template",
             "name": "Food Delivery Order Problem Log",
-            "url": "https://www.getkibbo.com/templates/food-delivery-order-problem-log.html"
+            "url": "https://www.getkibbo.com/templates/food-delivery-order-problem-log"
           },
           {
             "type": "template",
             "name": "Food Delivery Refund Tracker",
-            "url": "https://www.getkibbo.com/templates/food-delivery-refund-tracker.html"
+            "url": "https://www.getkibbo.com/templates/food-delivery-refund-tracker"
           }
         ],
         "food-poisoning": [
           {
             "type": "template",
             "name": "Food Safety & Poisoning Incident Report",
-            "url": "https://www.getkibbo.com/templates/food-safety-poisoning-incident-report.html"
+            "url": "https://www.getkibbo.com/templates/food-safety-poisoning-incident-report"
           }
         ],
         "restaurant-bill-dispute": [
           {
             "type": "template",
             "name": "Restaurant Bill Dispute Worksheet",
-            "url": "https://www.getkibbo.com/templates/restaurant-bill-dispute-worksheet.html"
+            "url": "https://www.getkibbo.com/templates/restaurant-bill-dispute-worksheet"
           }
         ],
         "restaurant-reservation-deposit": [
           {
             "type": "template",
             "name": "Restaurant Reservation & Deposit Dispute Record",
-            "url": "https://www.getkibbo.com/templates/restaurant-reservation-deposit-dispute-record.html"
+            "url": "https://www.getkibbo.com/templates/restaurant-reservation-deposit-dispute-record"
           }
         ],
         "food-allergen": [
           {
             "type": "template",
             "name": "Restaurant Allergen Communication Record",
-            "url": "https://www.getkibbo.com/templates/restaurant-allergen-communication-record.html"
+            "url": "https://www.getkibbo.com/templates/restaurant-allergen-communication-record"
           },
           {
             "type": "generator",
             "name": "Allergen Menu Labeling Generator",
-            "url": "https://www.getkibbo.com/generate/allergen-menu-labeling-generator.html"
+            "url": "https://www.getkibbo.com/generate/allergen-menu-labeling-generator"
           }
         ],
         "food-product-recall": [
           {
             "type": "template",
             "name": "Food Product Complaint Evidence Tracker",
-            "url": "https://www.getkibbo.com/templates/food-product-complaint-evidence-tracker.html"
+            "url": "https://www.getkibbo.com/templates/food-product-complaint-evidence-tracker"
           },
           {
             "type": "template",
             "name": "Food Recall Check & Action Log",
-            "url": "https://www.getkibbo.com/templates/food-recall-check-action-log.html"
+            "url": "https://www.getkibbo.com/templates/food-recall-check-action-log"
           }
         ],
         "hotel-food-dispute": [
           {
             "type": "template",
             "name": "Hotel Food & Beverage Complaint Log",
-            "url": "https://www.getkibbo.com/templates/hotel-food-beverage-complaint-log.html"
+            "url": "https://www.getkibbo.com/templates/hotel-food-beverage-complaint-log"
           },
           {
             "type": "template",
             "name": "Hotel Restaurant/Minibar Charge Dispute Worksheet",
-            "url": "https://www.getkibbo.com/templates/hotel-restaurant-minibar-charge-dispute-worksheet.html"
+            "url": "https://www.getkibbo.com/templates/hotel-restaurant-minibar-charge-dispute-worksheet"
           }
         ],
         "food-subscription": [
           {
             "type": "template",
             "name": "Food & Meal Subscription Cancellation Tracker",
-            "url": "https://www.getkibbo.com/templates/food-meal-subscription-cancellation-tracker.html"
+            "url": "https://www.getkibbo.com/templates/food-meal-subscription-cancellation-tracker"
           }
         ],
         "restaurant-compliance": [
           {
             "type": "checklist",
             "name": "Food Safety Inspection Checklist",
-            "url": "https://www.getkibbo.com/checklists/food-safety-inspection-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/food-safety-inspection-checklist"
           },
           {
             "type": "checklist",
             "name": "Restaurant Compliance Checklist",
-            "url": "https://www.getkibbo.com/checklists/restaurant-compliance-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/restaurant-compliance-checklist"
           },
           {
             "type": "checklist",
             "name": "Opening & Closing Checklist",
-            "url": "https://www.getkibbo.com/checklists/opening-closing-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/opening-closing-checklist"
           },
           {
             "type": "generator",
             "name": "Restaurant Policies Generator",
-            "url": "https://www.getkibbo.com/generate/restaurant-policies-generator.html"
+            "url": "https://www.getkibbo.com/generate/restaurant-policies-generator"
           },
           {
             "type": "generator",
             "name": "Food Recall Action Plan Generator",
-            "url": "https://www.getkibbo.com/generate/food-recall-action-plan-generator.html"
+            "url": "https://www.getkibbo.com/generate/food-recall-action-plan-generator"
           }
         ],
         "delivery-partner-contract": [
           {
             "type": "checklist",
             "name": "Delivery Partner Checklist",
-            "url": "https://www.getkibbo.com/checklists/delivery-partner-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/delivery-partner-checklist"
           }
         ]
       }
@@ -906,91 +906,91 @@
           {
             "type": "checklist",
             "name": "Lost Parcel Verification Checklist",
-            "url": "https://www.getkibbo.com/checklists/lost-parcel-verification-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/lost-parcel-verification-checklist"
           },
           {
             "type": "template",
             "name": "Delivery Evidence Log",
-            "url": "https://www.getkibbo.com/templates/delivery-evidence-log.html"
+            "url": "https://www.getkibbo.com/templates/delivery-evidence-log"
           },
           {
             "type": "generator",
             "name": "Vendor Compensation Demand Letter",
-            "url": "https://www.getkibbo.com/generate/vendor-compensation-demand-letter.html"
+            "url": "https://www.getkibbo.com/generate/vendor-compensation-demand-letter"
           }
         ],
         "parcel-theft-false-delivery": [
           {
             "type": "template",
             "name": "Package Theft / Porch Piracy Report",
-            "url": "https://www.getkibbo.com/templates/package-theft-porch-piracy-report.html"
+            "url": "https://www.getkibbo.com/templates/package-theft-porch-piracy-report"
           },
           {
             "type": "template",
             "name": "Missed/Failed Delivery Dispute Log",
-            "url": "https://www.getkibbo.com/templates/missed-failed-delivery-dispute-log.html"
+            "url": "https://www.getkibbo.com/templates/missed-failed-delivery-dispute-log"
           },
           {
             "type": "generator",
             "name": "Courier Complaint Generator",
-            "url": "https://www.getkibbo.com/generate/courier-complaint-generator.html"
+            "url": "https://www.getkibbo.com/generate/courier-complaint-generator"
           }
         ],
         "customs-fees": [
           {
             "type": "checklist",
             "name": "Unexpected Customs Charges Checklist",
-            "url": "https://www.getkibbo.com/checklists/unexpected-customs-charges-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/unexpected-customs-charges-checklist"
           },
           {
             "type": "template",
             "name": "Customs Duty & Import Fee Dispute Worksheet",
-            "url": "https://www.getkibbo.com/templates/customs-duty-import-fee-dispute-worksheet.html"
+            "url": "https://www.getkibbo.com/templates/customs-duty-import-fee-dispute-worksheet"
           },
           {
             "type": "generator",
             "name": "Customs Fee Dispute Generator",
-            "url": "https://www.getkibbo.com/generate/customs-fee-dispute-generator.html"
+            "url": "https://www.getkibbo.com/generate/customs-fee-dispute-generator"
           }
         ],
         "high-value-delivery": [
           {
             "type": "checklist",
             "name": "Receiving High-Value Deliveries Checklist",
-            "url": "https://www.getkibbo.com/checklists/receiving-high-value-deliveries-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/receiving-high-value-deliveries-checklist"
           },
           {
             "type": "template",
             "name": "Shipping Insurance Claim Form",
-            "url": "https://www.getkibbo.com/templates/shipping-insurance-claim-form.html"
+            "url": "https://www.getkibbo.com/templates/shipping-insurance-claim-form"
           }
         ],
         "return-shipment": [
           {
             "type": "checklist",
             "name": "Return Shipment Protection Checklist",
-            "url": "https://www.getkibbo.com/checklists/return-shipment-protection-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/return-shipment-protection-checklist"
           }
         ],
         "click-collect": [
           {
             "type": "checklist",
             "name": "Click & Collect / Locker Pickup Checklist",
-            "url": "https://www.getkibbo.com/checklists/click-collect-locker-pickup-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/click-collect-locker-pickup-checklist"
           }
         ],
         "postal-ombudsman-escalation": [
           {
             "type": "checklist",
             "name": "Postal Ombudsman Escalation Checklist",
-            "url": "https://www.getkibbo.com/checklists/postal-ombudsman-escalation-checklist.html"
+            "url": "https://www.getkibbo.com/checklists/postal-ombudsman-escalation-checklist"
           }
         ],
         "cross-border-complaint": [
           {
             "type": "template",
             "name": "Cross-Border Consumer Complaint Pack",
-            "url": "https://www.getkibbo.com/templates/cross-border-consumer-complaint-pack.html"
+            "url": "https://www.getkibbo.com/templates/cross-border-consumer-complaint-pack"
           }
         ]
       }

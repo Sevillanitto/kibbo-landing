@@ -30,9 +30,10 @@ Expected article markers (already used in Kibbo draft articles):
         uses CROSSLINK_TAGS to decide what to inject.
 
 Output pattern (matches the live site's existing Related Kibbo Tools blocks
-exactly):
+exactly -- clean URL, no .html, since the site serves clean URLs as
+canonical and cross-link-map.json's stored URLs are clean too):
     <ul>
-    <li><a href="/templates/some-template.html">Some Template →</a></li>
+    <li><a href="/templates/some-template">Some Template →</a></li>
     </ul>
 """
 
@@ -65,8 +66,11 @@ def load_cross_link_map():
 
 def url_to_relative(url):
     """Convert a full getkibbo.com URL to the site-relative path used in
-    on-page hrefs (e.g. https://www.getkibbo.com/templates/x.html -> /templates/x.html).
-    Leaves non-getkibbo.com URLs untouched (defensive, not currently used)."""
+    on-page hrefs (e.g. https://www.getkibbo.com/templates/x -> /templates/x).
+    cross-link-map.json's stored URLs are already clean (no .html -- see the
+    2026-09-12 fix for the sitewide indexing issue), so this just strips the
+    domain; it doesn't need to strip an extension too. Leaves non-getkibbo.com
+    URLs untouched (defensive, not currently used)."""
     if url.startswith(SITE_ORIGIN):
         return url[len(SITE_ORIGIN):]
     return url

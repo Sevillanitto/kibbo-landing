@@ -50,15 +50,15 @@
   <div class="container nav-inner">
     <a href="/" class="nav-logo">Kibbo</a>
     <div class="nav-links">
-      <a href="/analyze.html">Analyze</a>
-      <a href="/generate.html" class="active">Generate</a>
-      <a href="/templates.html">Templates</a>
-      <a href="/investigations.html">Investigations</a>
-      <a href="/questions.html">Questions</a>
-      <a href="/directory.html">Directory</a>
-      <a href="/developer-tools.html">Dev Tools</a>
-      <a href="/blog.html">Guides</a>
-      <a href="/consumer-rights-by-country.html">By Country</a>
+      <a href="/analyze">Analyze</a>
+      <a href="/generate" class="active">Generate</a>
+      <a href="/templates">Templates</a>
+      <a href="/investigations">Investigations</a>
+      <a href="/questions">Questions</a>
+      <a href="/directory">Directory</a>
+      <a href="/developer-tools">Dev Tools</a>
+      <a href="/blog">Guides</a>
+      <a href="/consumer-rights-by-country">By Country</a>
     </div>
     <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
   </div>
@@ -94,7 +94,7 @@
 
   <aside class="supp-cross">
     <p class="supp-cross-title">Related resources</p>
-    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the demand letter itself. For organizing the full evidence behind your dispute (photos, communications log, cost impact), use Kibbo's <a href="/templates/defective-work-contractor-dispute-evidence-pack.html">Defective Work &amp; Contractor Dispute Evidence Pack →</a> alongside this generator.</p>
+    <p style="font-size:14px; line-height:1.6; color:var(--supp-ink);">This generator produces the demand letter itself. For organizing the full evidence behind your dispute (photos, communications log, cost impact), use Kibbo's <a href="/templates/defective-work-contractor-dispute-evidence-pack">Defective Work &amp; Contractor Dispute Evidence Pack →</a> alongside this generator.</p>
   </aside>
 
 </div>
@@ -123,26 +123,26 @@
       </div>
       <div class="footer-col">
         <h4>Tools</h4>
-        <a href="/analyze.html">Analyze</a>
-        <a href="/generate.html">Generate</a>
-        <a href="/templates.html">Templates</a>
-        <a href="/directory.html">Directory</a>
-        <a href="/developer-tools.html">Developer Tools</a>
+        <a href="/analyze">Analyze</a>
+        <a href="/generate">Generate</a>
+        <a href="/templates">Templates</a>
+        <a href="/directory">Directory</a>
+        <a href="/developer-tools">Developer Tools</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
-        <a href="/blog.html">Guides</a>
-        <a href="/about.html">About</a>
+        <a href="/blog">Guides</a>
+        <a href="/about">About</a>
         <a href="mailto:hello@getkibbo.com">Contact</a>
-        <a href="/supplement-analyzer.html">Supplement Analyzer</a>
+        <a href="/supplement-analyzer">Supplement Analyzer</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 · Built by Carlos Lopez, an independent developer</p>
       <div class="footer-legal">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cookie-policy.html">Cookie Policy</a>
-        <a href="/terms-of-use.html">Terms of Use</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@ window.KIBBO_GENERATOR = {
     { id: 'desired_outcome_amount', label: 'Partial refund amount requested', type: 'text', showWhen: { field: 'desired_outcome', equals: 'Partial refund — specify amount' } },
     { id: 'desired_outcome_date', label: 'Requested completion date', type: 'date', showWhen: { field: 'desired_outcome', equals: 'Completion by a specific date — specify date' } },
 
-    { id: 'issue_note', type: 'note', html: '<strong>This generator produces the demand letter itself.</strong> For organizing the full evidence behind your dispute (photos, communications log, cost impact), use Kibbo\'s <a href="/templates/defective-work-contractor-dispute-evidence-pack.html">Defective Work &amp; Contractor Dispute Evidence Pack →</a> alongside this generator.' },
+    { id: 'issue_note', type: 'note', html: '<strong>This generator produces the demand letter itself.</strong> For organizing the full evidence behind your dispute (photos, communications log, cost impact), use Kibbo\'s <a href="/templates/defective-work-contractor-dispute-evidence-pack">Defective Work &amp; Contractor Dispute Evidence Pack →</a> alongside this generator.' },
     { id: 'issue_type', label: "What's the issue?", type: 'select', options: ['Incomplete work', 'Defective work', 'Unauthorized overcharge', 'Project delay'], branch: true },
 
     { id: 'incomplete_pct_complete', label: 'Estimated % of contracted work actually completed', type: 'text', showWhen: { field: 'issue_type', equals: 'Incomplete work' } },
