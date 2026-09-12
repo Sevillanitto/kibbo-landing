@@ -3,6 +3,7 @@
 <head>
 <script src="/cookie-consent.js" defer></script>
 <script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
 
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.getkibbo.com/checklists/medical-product-device-purchase">
@@ -139,21 +140,177 @@
 <body>
 
 <!-- NAV -->
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">Kibbo</a>
-    <div class="nav-links">
-      <a href="/analyze">Analyze</a>
-      <a href="/generate">Generate</a>
-      <a href="/templates">Templates</a>
-      <a href="/investigations">Investigations</a>
-      <a href="/questions">Questions</a>
-      <a href="/checklists" class="active">Checklists</a>
-      <a href="/directory">Directory</a>
-      <a href="/blog">Guides</a>
-      <a href="/consumer-rights-by-country">By Country</a>
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
-    <a href="https://carlosdevlop.gumroad.com" target="_blank" rel="noopener" class="nav-cta">Get tools →</a>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
   </div>
 </nav>
 
