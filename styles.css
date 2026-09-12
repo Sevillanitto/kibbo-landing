@@ -188,6 +188,34 @@ padding: 12px 16px;
 .kibbo-mobile-menu .kibbo-mobile-disabled { color: var(--text-muted); }
 .kibbo-mobile-cta { margin: 8px 0 4px; justify-content: center; }
 }
+/* Homepage-only dark headline hero (index.html). Scoped under .hero-headline
+   so the shared .hero rules below (still used elsewhere) are untouched. */
+.hero-headline {
+margin-top: 108px;
+background: var(--bg-dark);
+padding: clamp(96px, 16vh, 160px) 24px;
+text-align: center;
+}
+.hero-headline-text {
+font-family: var(--font-sans);
+font-weight: 500;
+font-size: clamp(34px, 6vw, 64px);
+line-height: 1.2;
+letter-spacing: -0.02em;
+color: var(--text-inverse);
+margin: 0;
+}
+.hero-headline-accent { color: var(--accent-green); }
+.hero-headline-link {
+display: inline-flex; align-items: center; gap: 6px;
+margin-top: 32px;
+font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+color: var(--text-muted); transition: var(--transition);
+}
+.hero-headline-link:hover { color: var(--text-inverse); }
+@media (max-width: 720px) {
+.hero-headline { margin-top: 96px; }
+}
 .hero { padding: clamp(120px, 16vh, 180px) 0 clamp(64px, 8vh, 96px); text-align: left; position: relative; overflow: hidden; background-image: radial-gradient(circle, rgba(61,107,79,0.10) 1px, transparent 1px); background-size: 28px 28px; }
 .hero::before { content: ''; position: absolute; top: -40%; left: 50%; transform: translateX(-50%); width: 800px; height: 600px; background: radial-gradient(ellipse at center, rgba(61,107,79,0.07) 0%, transparent 65%); pointer-events: none; }
 .hero > .container { position: relative; display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: clamp(40px, 6vw, 80px); }
