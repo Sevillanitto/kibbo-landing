@@ -80,25 +80,20 @@ font-family: var(--font-sans);
 }
 .kibbo-navbar-inner {
 pointer-events: auto;
-width: 100%; max-width: 980px;
-display: flex; align-items: center; gap: 8px;
+display: flex; align-items: center; gap: 4px;
 background: var(--bg-card);
 border-radius: 100px;
 box-shadow: 0 12px 32px rgba(15,14,12,0.10), 0 2px 8px rgba(15,14,12,0.05);
-padding: 8px 8px 8px 22px;
+padding: 6px 6px 6px 18px;
 }
-.kibbo-logo { display: flex; align-items: center; gap: 10px; margin-right: 8px; }
-.kibbo-logo-icon {
-width: 32px; height: 32px; border-radius: 9px; background: var(--accent-green);
-display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.kibbo-logo-text { font-family: var(--font-sans); font-size: 19px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; }
-.kibbo-nav-links { position: relative; display: flex; align-items: center; gap: 2px; flex: 1; }
+.kibbo-logo { display: flex; align-items: center; margin-right: 12px; }
+.kibbo-logo-text { font-family: var(--font-sans); font-size: 17px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; white-space: nowrap; }
+.kibbo-nav-links { position: relative; display: flex; align-items: center; gap: 0; margin-right: 10px; }
 .kibbo-nav-item {
-font-family: var(--font-sans); display: inline-flex; align-items: center; gap: 5px;
+font-family: var(--font-sans); display: inline-flex; align-items: center; gap: 4px;
 background: none; border: none; cursor: pointer;
-font-size: 15px; font-weight: 500; color: var(--text-secondary);
-padding: 9px 14px; border-radius: 100px; transition: var(--transition);
+font-size: 14px; font-weight: 500; color: var(--text-secondary); white-space: nowrap;
+padding: 7px 9px; border-radius: 100px; transition: var(--transition);
 }
 .kibbo-nav-item:hover { color: var(--text-primary); }
 .kibbo-nav-item.is-open { background: var(--accent-green-light); color: var(--accent-green); }
@@ -106,9 +101,9 @@ padding: 9px 14px; border-radius: 100px; transition: var(--transition);
 .kibbo-nav-item.is-open .kibbo-chevron { transform: rotate(180deg); }
 .kibbo-cta {
 font-family: var(--font-sans); background: #FFFF00; color: #141210;
-font-size: 14.5px; font-weight: 700; padding: 12px 20px;
+font-size: 13.5px; font-weight: 700; padding: 9px 16px;
 border-radius: 100px; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;
-transition: var(--transition); margin-left: auto;
+transition: var(--transition);
 }
 .kibbo-cta:hover { background: #F2F200; transform: translateY(-1px); }
 
@@ -171,14 +166,13 @@ padding: 10px 16px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; t
 
 /* Mobile hamburger + collapsed menu — functional placeholder, needs a
    proper mobile design pass. */
-.kibbo-hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 10px 12px; margin-left: auto; }
+.kibbo-hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 10px 12px; }
 .kibbo-hamburger span { display: block; width: 20px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: var(--transition); }
 .kibbo-mobile-menu { display: none; }
 @media (max-width: 860px) {
 .kibbo-nav-links { display: none; }
 .kibbo-cta { display: none; }
 .kibbo-hamburger { display: flex; }
-.kibbo-navbar-inner { padding: 8px 8px 8px 18px; }
 .kibbo-mobile-menu.is-open {
 display: flex; flex-direction: column; gap: 2px;
 width: calc(100% - 40px); max-width: 420px; margin: 10px auto 0;
