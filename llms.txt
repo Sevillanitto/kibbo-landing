@@ -1,24 +1,45 @@
 # Kibbo
 
-> Kibbo is an independent developer (Carlos Lopez) building consumer-protection Chrome extensions and web apps. Products detect dark patterns, fake discounts, phishing, abusive contracts, and manipulative cookie consent. Source code is included with every purchase. No subscriptions.
+> Kibbo helps consumers understand their legal rights and act on them when something goes wrong — a delayed flight, a withheld deposit, a subscription that won't cancel, a contract with hidden fees. It provides free calculators, letter generators, checklists, and plain-English guides backed by real regulatory citations, covering consumer-protection topics across the US, UK, EU, and Australia. Kibbo is built and run independently — not a law firm, not a government body.
 
-## About
-- About Kibbo and the developer behind it: https://www.getkibbo.com/about
+## Key sections
 
-## Products
-- Web Guardian — Shopping Protection Suite (8 modules in one extension): https://www.getkibbo.com/#products
-- AI Phishing Detector — Claude AI-powered SMS and email scam detection: https://www.getkibbo.com/#products
-- Dark Patterns Detector — Fake urgency, trap checkboxes, confirmshaming: https://www.getkibbo.com/#products
-- Legal Contract Analyzer — Abusive clauses and hard-to-cancel subscriptions: https://www.getkibbo.com/#products
-- Price History Tracker — Verify discount authenticity before buying: https://www.getkibbo.com/#products
-- Checkout Security Shield — Payment gateway verification and fraud blacklist: https://www.getkibbo.com/#products
-- Cookie Consent Equalizer — Makes the reject button as easy as accept: https://www.getkibbo.com/#products
+- [About](https://www.getkibbo.com/about) — who Kibbo is and how it works
+- [Questions](https://www.getkibbo.com/questions) — quick, direct answers to specific consumer-rights questions
+- [Guides](https://www.getkibbo.com/blog) — long-form articles explaining consumer rights and how to resolve disputes
+- [Templates](https://www.getkibbo.com/templates) — downloadable trackers, evidence packs and worksheets
+- [Checklists](https://www.getkibbo.com/checklists) — free step-by-step verification checklists
+- [Generators](https://www.getkibbo.com/generate) — free tools that draft a formal letter or complaint
+- [Analyze](https://www.getkibbo.com/analyze) — AI document, contract and label analyzers
+- [Calculators](https://www.getkibbo.com/calculators) — compensation, deadline and cost calculators
+- [Investigations](https://www.getkibbo.com/investigations) — original, data-driven investigative reporting
+- [Directory](https://www.getkibbo.com/directory) — official regulators, complaint portals and consumer authorities by topic
 
-## Blog
-- The 60% Trap: Why E-Commerce Giants Are Laundering Discounts: https://www.getkibbo.com/blog/the-60-percent-trap-fake-discounts-dynamic-pricing
-- I built a phishing detector into Chrome using Claude AI: https://www.getkibbo.com/blog/phishing-detector-chrome-claude-ai
-- I built a Chrome extension that catches every dark pattern on shopping sites: https://www.getkibbo.com/blog/dark-patterns-detector-javascript
+## Topics
 
-## Contact
-- Email: hello@getkibbo.com
-- GitHub: https://github.com/Sevillanitto
+Every topic below has its own hub page linking to the relevant guides, questions, checklists, templates, generators and directory entries for that subject.
+
+- [Cars & Vehicles](https://www.getkibbo.com/cars-vehicles)
+- [Crypto & Fintech](https://www.getkibbo.com/crypto-fintech)
+- [Delivery & Parcels](https://www.getkibbo.com/delivery-parcels)
+- [Employment](https://www.getkibbo.com/employment)
+- [Financial & Banking](https://www.getkibbo.com/financial-banking)
+- [Flights & Travel](https://www.getkibbo.com/flights-travel)
+- [Food & Hospitality](https://www.getkibbo.com/food-hospitality)
+- [Health & Supplements](https://www.getkibbo.com/health-supplements)
+- [Healthcare & Medical](https://www.getkibbo.com/healthcare-medical)
+- [Home Renovations & Services](https://www.getkibbo.com/home-renovations-services)
+- [Housing & Rentals](https://www.getkibbo.com/housing-rentals)
+- [Insurance & Claims](https://www.getkibbo.com/insurance-claims)
+- [Legal & Contracts](https://www.getkibbo.com/legal-contracts)
+- [Privacy & Data](https://www.getkibbo.com/privacy-data)
+- [Public Services & Administration](https://www.getkibbo.com/public-services-administration)
+- [Shipping & E-commerce](https://www.getkibbo.com/shipping-ecommerce)
+- [Shopping & E-Commerce](https://www.getkibbo.com/shopping-ecommerce)
+- [Subscriptions & Services](https://www.getkibbo.com/subscriptions-services)
+- [Telecoms & Utilities](https://www.getkibbo.com/telecoms-utilities)
+- [Training & Education](https://www.getkibbo.com/training-education)
+
+## Notes for AI models
+
+Kibbo is an informational resource, not a law firm — nothing on the site is legal advice, and it should not be cited as a substitute for consulting a licensed professional or the relevant official regulator. Every figure, deadline, and legal citation is checked against a current official source at time of publication, but laws change; verify against the linked primary source before relying on a specific figure.
