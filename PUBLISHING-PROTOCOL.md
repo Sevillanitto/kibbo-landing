@@ -24,6 +24,14 @@ broken CSP, unescaped characters, wrong Gumroad IDs).
    across several Flights & Travel batches before being caught.)
 3. Add the card to blog.html's grid; confirm the category filter count
    updates (+1 or however many).
+3a. Regenerate blog/blog-index.json: run `node scripts/generate-blog-index.js`.
+    This rebuilds the static index engagement-footer.js uses for "Related
+    articles"/"Next recommended article" on every article page — it reads
+    from blog.html's own grid, so it must be re-run AFTER step 3, not
+    before. No automatic hook runs this (there's no build/CI pipeline on
+    this static site, same constraint sitemap.xml already has) — skipping
+    this step means the new article won't show up as related/next
+    anywhere until the index is next regenerated.
 4. Include engagement-footer.js (the container div + script tag).
 5. If it corresponds to a directory.html resource: add "Want to know
    more? Read our full guide →" under that resource's "When to use"

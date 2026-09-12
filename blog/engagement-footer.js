@@ -6,10 +6,22 @@
  *
  * Renders two blocks:
  *   1. "Continue protecting yourself" — a static 4-path box + closing box.
- *   2. "Related articles" + "Next recommended article" — computed at runtime by
- *      fetching blog.html and reading the same data-category attributes the
- *      category filter already relies on. No hardcoded article list: publishing
- *      a new article automatically makes it eligible here.
+ *   2. "Related articles" + "Next recommended article" — computed at runtime
+ *      from blog/blog-index.json, a small static index (~26KB gzipped)
+ *      generated from blog.html's own article grid by
+ *      scripts/generate-blog-index.js. That script must be re-run whenever
+ *      a new article is published (see PUBLISHING-PROTOCOL.md) — no
+ *      hardcoded article list here, but the index itself isn't computed
+ *      live anymore either.
+ *
+ *      Previously this fetched the full blog.html (344KB / ~75KB gzipped
+ *      transfer) and DOMParser'd it on every single article view, just to
+ *      read {slug, title, date, category} for ~522 items. blog-index.json
+ *      carries exactly that data and nothing else.
+ *
+ *      The fetch is also gated behind an IntersectionObserver on the
+ *      mount element, so it only fires once Block 2's section actually
+ *      scrolls near the viewport, rather than unconditionally on page load.
  */
 (function () {
   var mount = document.getElementById('engagement-footer');
@@ -19,7 +31,7 @@
   injectStyles();
   mount.innerHTML = block1();
 
-  // ---- Block 2: related + next, computed from blog.html ----
+  // ---- Block 2: related + next, computed from blog-index.json ----
   var article = document.querySelector('article[data-category]');
   var currentCats = article
     ? article
@@ -30,35 +42,49 @@
     : [];
   var currentSlug = slugOf(window.location.pathname);
 
-  fetch('/blog.html', { credentials: 'same-origin' })
-    .then(function (r) { return r.text(); })
-    .then(function (html) {
-      var doc = new DOMParser().parseFromString(html, 'text/html');
-      var items = [].slice
-        .call(doc.querySelectorAll('article.post-item[data-category]'))
-        .map(function (a) {
-          var link = a.querySelector('h2 a');
-          var time = a.querySelector('time');
-          if (!link) return null;
+  function loadRelated() {
+    fetch('/blog/blog-index.json', { credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (rows) {
+        var items = rows.map(function (row) {
           return {
-            url: link.getAttribute('href'),
-            slug: slugOf(link.getAttribute('href')),
-            title: link.textContent.trim(),
-            date: time ? time.getAttribute('datetime') || '' : '',
-            cats: a
-              .getAttribute('data-category')
+            url: '/blog/' + row.slug,
+            slug: row.slug,
+            title: row.title,
+            date: row.date || '',
+            cats: (row.category || '')
               .split(',')
               .map(function (s) { return s.trim(); })
               .filter(Boolean),
           };
-        })
-        .filter(Boolean);
-      if (!items.length) return;
-      mount.insertAdjacentHTML('beforeend', block2(items, currentCats, currentSlug));
-    })
-    .catch(function () {
-      /* offline / fetch blocked — Block 1 still shows, Block 2 is skipped */
-    });
+        });
+        if (!items.length) return;
+        mount.insertAdjacentHTML('beforeend', block2(items, currentCats, currentSlug));
+      })
+      .catch(function () {
+        /* offline / fetch blocked — Block 1 still shows, Block 2 is skipped */
+      });
+  }
+
+  // Only fetch the index once the footer is actually about to be seen,
+  // instead of unconditionally on page load — most readers never scroll
+  // this far, so this frequently avoids the request entirely. Falls back
+  // to loading immediately if IntersectionObserver isn't available (very
+  // old browsers) rather than silently never showing Block 2.
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) {
+          io.disconnect();
+          loadRelated();
+        }
+      },
+      { rootMargin: '400px 0px' } // start the fetch a bit before it's actually on-screen
+    );
+    io.observe(mount);
+  } else {
+    loadRelated();
+  }
 
   // ---------------------------------------------------------------------------
 
