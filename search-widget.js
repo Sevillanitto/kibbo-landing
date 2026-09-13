@@ -129,9 +129,10 @@
         <div class="ps-best">
           <div class="ps-best-label">YOUR BEST MATCH</div>
           <div class="ps-best-card">
-            ${typeBadge(best.type)}
-            <h3 class="ps-best-title">${escapeHtml(best.title)}</h3>
-            <p class="ps-best-desc">${escapeHtml(best.description)}</p>
+            <div class="ps-best-text">
+              <h3 class="ps-best-title">${escapeHtml(best.title)}</h3>
+              <p class="ps-best-desc">${escapeHtml(best.description)}</p>
+            </div>
             <a class="ps-best-action" href="${best.url}">Go to ${escapeHtml(best.title)} →</a>
           </div>
         </div>
