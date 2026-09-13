@@ -6,6 +6,7 @@
 <script src="/newsletter-signup.js" defer></script>
 <script src="/kibbo-navbar.js" defer></script>
 <script src="/search-widget.js" defer></script>
+<script src="/core-tools-accordion.js" defer></script>
 <script src="/explore-carousel.js" defer></script>
 
 <meta charset="UTF-8">
@@ -305,6 +306,61 @@
       <button type="button" class="ps-tag" data-tag="Subscriptions">Subscriptions</button>
     </div>
     <div class="ps-result" hidden></div>
+  </div>
+</section>
+
+<!-- OUR CORE TOOLS -->
+<section class="core-tools">
+  <div class="container core-tools-inner">
+    <div class="core-tools-label-col">
+      <p class="core-tools-label">Our core tools</p>
+    </div>
+    <div class="core-tools-content">
+      <div class="core-tools-top">
+        <h2 class="core-tools-heading">Not sure where to start?</h2>
+        <a href="/pillar-pages.html" class="core-tools-cta">See all tools →</a>
+      </div>
+      <p class="core-tools-sub">Answer a few questions and we'll point you to exactly what you need.</p>
+
+      <div class="core-tools-accordion" id="coreToolsAccordion">
+        <div class="core-tools-row is-open" data-row>
+          <button type="button" class="core-tools-row-header" data-toggle>
+            <span class="core-tools-row-title">Consumer Rights Wizard</span>
+            <span class="core-tools-row-icon" aria-hidden="true"></span>
+          </button>
+          <div class="core-tools-row-body">
+            <div class="core-tools-row-body-inner">
+              <p class="core-tools-row-desc">Answer a few questions about what happened and get a personalized action plan — which rights apply, what to say, and what to do next.</p>
+              <a href="/wizard" class="core-tools-row-btn">Start the Wizard →</a>
+            </div>
+          </div>
+        </div>
+        <div class="core-tools-row" data-row>
+          <button type="button" class="core-tools-row-header" data-toggle>
+            <span class="core-tools-row-title">Rights Checker</span>
+            <span class="core-tools-row-icon" aria-hidden="true"></span>
+          </button>
+          <div class="core-tools-row-body">
+            <div class="core-tools-row-body-inner">
+              <p class="core-tools-row-desc">Not sure if your situation qualifies for a consumer right? Check in under a minute.</p>
+              <a href="/rights-checker" class="core-tools-row-btn">Check my rights →</a>
+            </div>
+          </div>
+        </div>
+        <div class="core-tools-row" data-row>
+          <button type="button" class="core-tools-row-header" data-toggle>
+            <span class="core-tools-row-title">Timeline Generator</span>
+            <span class="core-tools-row-icon" aria-hidden="true"></span>
+          </button>
+          <div class="core-tools-row-body">
+            <div class="core-tools-row-body-inner">
+              <p class="core-tools-row-desc">Find the exact deadlines that apply to your case — claim windows, response times, statutory limits.</p>
+              <a href="/timeline-generator" class="core-tools-row-btn">Find my deadline →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
