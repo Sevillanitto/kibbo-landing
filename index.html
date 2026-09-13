@@ -5,6 +5,7 @@
 <script src="/cookie-consent.js" defer></script>
 <script src="/newsletter-signup.js" defer></script>
 <script src="/kibbo-navbar.js" defer></script>
+<script src="/search-widget.js" defer></script>
 
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.getkibbo.com/">
@@ -282,6 +283,27 @@
         <a href="/consumer-rights-by-country">By country ↗</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- WHAT'S YOUR PROBLEM -->
+<section class="problem-search">
+  <div class="container ps-inner">
+    <h2 class="section-title">What's <em>your problem?</em></h2>
+    <p class="section-subtitle ps-sub">Describe it in plain English, or pick a starting point below.</p>
+    <div class="ps-search-row">
+      <input type="text" class="ps-input" placeholder="e.g. my flight was cancelled and the airline won't refund me" aria-label="Describe your problem">
+      <button type="button" class="ps-submit">Find my match →</button>
+    </div>
+    <div class="ps-tags">
+      <button type="button" class="ps-tag" data-tag="Housing">Housing</button>
+      <button type="button" class="ps-tag" data-tag="Employment">Employment</button>
+      <button type="button" class="ps-tag" data-tag="Shopping">Shopping</button>
+      <button type="button" class="ps-tag" data-tag="Banking">Banking</button>
+      <button type="button" class="ps-tag" data-tag="Travel">Travel</button>
+      <button type="button" class="ps-tag" data-tag="Subscriptions">Subscriptions</button>
+    </div>
+    <div class="ps-result" hidden></div>
   </div>
 </section>
 

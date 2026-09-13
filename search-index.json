@@ -1,0 +1,697 @@
+[
+  {
+    "title": "Consumer Rights Wizard",
+    "type": "wizard",
+    "block": "general",
+    "url": "/wizard",
+    "description": "Answer two questions — what happened and which country — and get a tailored action plan: the official authority to complain to, a plain-English guide, the right tool, and a ready-made template.",
+    "keywords": [
+      "my landlord won't return my deposit",
+      "airline cancelled my flight and won't refund me",
+      "company won't cancel my subscription",
+      "hotel charged me for something I didn't order",
+      "my employer won't pay my final paycheck",
+      "courier lost my package",
+      "doctor won't give me my medical records",
+      "not sure where to start"
+    ]
+  },
+  {
+    "title": "Rights Checker",
+    "type": "tool",
+    "block": "general",
+    "url": "/rights-checker",
+    "description": "Answer two questions — what happened and which country — and see which of the five consumer rights (refund, replacement, repair, chargeback, escalation) probably apply to your situation.",
+    "keywords": [
+      "do I have a right to a refund",
+      "can I get a chargeback on my card",
+      "do I have a right to compensation for a delayed flight",
+      "can I dispute an unauthorized transaction",
+      "do I have grounds to escalate a complaint",
+      "is this charge legal"
+    ]
+  },
+  {
+    "title": "Timeline Generator",
+    "type": "tool",
+    "block": "general",
+    "url": "/timeline-generator",
+    "description": "Answer two questions and enter a start date to get a calculated visual timeline of the key deadlines for your consumer problem — refund windows, response deadlines and escalation dates.",
+    "keywords": [
+      "how long does a refund take",
+      "when must my landlord return my deposit",
+      "how many days do I have to dispute a charge",
+      "what is the deadline to claim flight compensation",
+      "how long can my employer take to pay my final wages",
+      "when do I need to respond to a company"
+    ]
+  },
+  {
+    "title": "Can a Crypto App Freeze My Money Without Warning?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-crypto-app-freeze-my-money-without-warning",
+    "description": "Yes — and often the app is legally forbidden from telling you exactly why. Here's the real reason behind the silence, and what you can actually do about it.",
+    "keywords": [
+      "can a crypto app freeze my money without warning",
+      "crypto app freeze my money without warning",
+      "\"we can't discuss the details of your account\" isn't the platform being difficult — it's often the law forcing them into silence."
+    ]
+  },
+  {
+    "title": "Can a Fintech Company Close My Account Without Explaining Why?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-fintech-close-account-without-explaining",
+    "description": "In the US, largely yes, with almost no explanation required. In the UK, new rules from April 2026 finally force a written reason and 90 days' notice — here's exactly what changed and why.",
+    "keywords": [
+      "can a fintech company close my account without explaining why",
+      "fintech close account without explaining",
+      "the letter arrives, the reason doesn't — and until recently, that was almost always allowed on both sides of the atlantic. one side just changed the rules."
+    ]
+  },
+  {
+    "title": "Can I Get My Money Back If I Sent Crypto to the Wrong Address?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-i-get-money-back-crypto-wrong-address",
+    "description": "Blockchain transactions don't have an undo button — but 'wrong address' covers several very different scenarios, and one of them is genuinely recoverable.",
+    "keywords": [
+      "can i get my money back if i sent crypto to the wrong address",
+      "i get money back crypto wrong address",
+      "there's no bank to call and reverse the transfer — but \"wrong address\" isn't one problem, it's at least three, and only some of them are actually fatal."
+    ]
+  },
+  {
+    "title": "What Happens to My Money If a Fintech Company Goes Bankrupt?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/what-happens-money-fintech-company-bankrupt",
+    "description": "'FDIC-insured' didn't save Synapse's customers — because the insurance covered the bank underneath, not the fintech's own bookkeeping. Here's what that actually means for your money.",
+    "keywords": [
+      "what happens to my money if a fintech company goes bankrupt",
+      "money fintech company bankrupt",
+      "\"fdic-insured\" felt like a guarantee — until it wasn't, for over 100,000 real customers, because the insurance was never actually the weak point."
+    ]
+  },
+  {
+    "title": "Who Is Responsible If Someone Gets Into My Fintech Account?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/who-is-responsible-fintech-account-hacked",
+    "description": "The US caps your loss at $50-$500 for unauthorized access. The UK, since October 2024, can make the bank refund you even when you were tricked into approving the payment yourself.",
+    "keywords": [
+      "who is responsible if someone gets into my fintech account",
+      "is responsible fintech account hacked",
+      "the gap between us and uk protection here is enormous — and it hinges on one detail: did someone else move the money, or did they trick you into moving it yourself?"
+    ]
+  },
+  {
+    "title": "Can a Courier Leave My Parcel Outside Without My Permission?",
+    "type": "question",
+    "block": "delivery-parcels",
+    "url": "/questions/delivery-parcels/can-courier-leave-parcel-outside-without-permission",
+    "description": "Only if you authorized it. If a courier decides on their own to leave your package unattended, the seller stays responsible if it's lost or damaged.",
+    "keywords": [
+      "can a courier leave my parcel outside without my permission",
+      "courier leave parcel outside without permission",
+      "a courier's convenience isn't the same thing as your consent — and the difference matters if the parcel disappears."
+    ]
+  },
+  {
+    "title": "Can I Demand a Refund If My Parcel Arrives Weeks Late?",
+    "type": "question",
+    "block": "delivery-parcels",
+    "url": "/questions/delivery-parcels/can-i-demand-refund-parcel-arrives-weeks-late",
+    "description": "Past 30 days, yes, in both the US and UK — and in some cases sooner. Here's exactly when the right to a refund kicks in.",
+    "keywords": [
+      "can i demand a refund if my parcel arrives weeks late",
+      "i demand refund parcel arrives weeks late",
+      "thirty days is the number both systems keep coming back to — and it's not just a guideline, it's a legal trigger point."
+    ]
+  },
+  {
+    "title": "Can a Seller Blame the Courier When My Order Arrives Damaged?",
+    "type": "question",
+    "block": "delivery-parcels",
+    "url": "/questions/delivery-parcels/can-seller-blame-courier-order-arrives-damaged",
+    "description": "They can point fingers, but it doesn't change their legal obligation to you. Here's why 'talk to the courier' isn't a valid answer to a damaged order.",
+    "keywords": [
+      "can a seller blame the courier when my order arrives damaged",
+      "seller blame courier order arrives damaged",
+      "\"it's not our fault\" and \"it's not our problem to fix\" are two very different claims — only one of them is actually true."
+    ]
+  },
+  {
+    "title": "Who Is Responsible If My Parcel Says Delivered But I Never Received It?",
+    "type": "question",
+    "block": "delivery-parcels",
+    "url": "/questions/delivery-parcels/who-is-responsible-parcel-delivered-not-received",
+    "description": "Your contract is with the seller, not the courier. Here's why that matters, and exactly what to say to get a refund or redelivery.",
+    "keywords": [
+      "who is responsible if my parcel says delivered but i never received it",
+      "is responsible parcel delivered not received",
+      "a tracking status isn't a legal handoff — and the retailer knows that better than most customers do."
+    ]
+  },
+  {
+    "title": "Who Pays If a Courier Damages My Package?",
+    "type": "question",
+    "block": "delivery-parcels",
+    "url": "/questions/delivery-parcels/who-pays-courier-damages-package",
+    "description": "The seller does — your contract is with them, not the courier. Here's how the claims process actually flows, and how fast to act.",
+    "keywords": [
+      "who pays if a courier damages my package",
+      "pays courier damages package",
+      "the seller sorting things out with their courier is their problem to solve — not yours to referee."
+    ]
+  },
+  {
+    "title": "Can My Boss Contact Me Outside Working Hours?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-my-boss-contact-me-outside-working-hours",
+    "description": "Neither the US nor the UK has a general legal right to ignore your boss after hours — but that doesn't mean there's nothing protecting you. Here's where the real leverage actually is.",
+    "keywords": [
+      "can my boss contact me outside working hours",
+      "my boss contact me outside working hours",
+      "there's no button that legally silences your phone at 6pm — but constant after-hours contact can quietly turn into unpaid work, and that's where the real leverage is."
+    ]
+  },
+  {
+    "title": "Can My Boss Read Messages Sent Through My Work Phone?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-my-boss-read-messages-work-phone",
+    "description": "On a company-owned device, the answer leans heavily toward yes — but 'work phone' covers very different situations, and personal devices with work apps are a genuinely different legal question.",
+    "keywords": [
+      "can my boss read messages sent through my work phone",
+      "my boss read messages work phone",
+      "ownership of the device does most of the legal work here — but \"work phone\" hides at least three very different situations underneath one phrase."
+    ]
+  },
+  {
+    "title": "Can My Employer Deduct Money From My Salary for Mistakes?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-my-employer-deduct-salary-for-mistakes",
+    "description": "A broken plate, a short till, a dented laptop — most of the time, ordinary accidents are the cost of doing business, not something that comes out of your paycheck.",
+    "keywords": [
+      "can my employer deduct money from my salary for mistakes",
+      "my employer deduct salary for mistakes",
+      "a dropped tray or a short till feels like it should be \"your fault\" — but in most places, the law disagrees, and treats it as the ordinary cost of running a business."
+    ]
+  },
+  {
+    "title": "Can My Employer Make Me Stay After My Shift Without Paying Me?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-my-employer-make-me-stay-unpaid-after-shift",
+    "description": "If your employer knew or should have known you kept working, they owe you for it — even a few unpaid minutes a day, added up over a year, is real money.",
+    "keywords": [
+      "can my employer make me stay after my shift without paying me",
+      "my employer make me stay unpaid after shift",
+      "seven unpaid minutes a day doesn't sound like much — until you multiply it by a year, and then by every employee it's happening to."
+    ]
+  },
+  {
+    "title": "Can My Employer Make Me Use Vacation Days When the Business Is Closed?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-my-employer-make-me-use-vacation-days-shutdown",
+    "description": "Yes, in most cases — but the fairness of it hinges almost entirely on how much notice you were given, and that's exactly where employers most often cut corners.",
+    "keywords": [
+      "can my employer make me use vacation days when the business is closed",
+      "my employer make me use vacation days shutdown",
+      "the employer usually can do this — the real question is whether they gave you enough warning to actually plan around it."
+    ]
+  },
+  {
+    "title": "Can My Bank Ask Me Where My Money Came From?",
+    "type": "question",
+    "block": "financial-banking",
+    "url": "/questions/financial-banking/can-bank-ask-me-where-money-came-from",
+    "description": "Yes — and it's not your bank being nosy by choice. Anti-money-laundering law requires it. Here's when they can ask, what they can require, and how to respond.",
+    "keywords": [
+      "can my bank ask me where my money came from",
+      "bank ask me where money came from",
+      "it can feel intrusive, but the question isn't optional curiosity — it's a legal box your bank has to tick before it can let the transaction through."
+    ]
+  },
+  {
+    "title": "Can a Bank Refuse to Give Me Cash From My Own Account?",
+    "type": "question",
+    "block": "financial-banking",
+    "url": "/questions/financial-banking/can-bank-refuse-give-me-cash-from-own-account",
+    "description": "Yes, your bank can legally delay or refuse a cash withdrawal — even from your own account. Here's when that's allowed in the US and UK, and how to get your money released.",
+    "keywords": [
+      "can a bank refuse to give me cash from my own account",
+      "bank refuse give me cash from own account",
+      "it's your money — but \"your money\" and \"instant, no-questions-asked access to it\" turn out to be two different legal ideas."
+    ]
+  },
+  {
+    "title": "Can I Cancel a Direct Debit After Money Has Already Been Taken?",
+    "type": "question",
+    "block": "financial-banking",
+    "url": "/questions/financial-banking/can-i-cancel-direct-debit-after-money-taken",
+    "description": "Yes, you can cancel a direct debit any time — and if a payment goes out after you cancel or in error, you're entitled to get it back. Here's how it works in the US and UK.",
+    "keywords": [
+      "can i cancel a direct debit after money has already been taken",
+      "i cancel direct debit after money taken",
+      "cancelling stops what's coming next. getting back what's already gone is a separate right — and it's stronger than most people realize."
+    ]
+  },
+  {
+    "title": "What Happens If Someone Transfers Money Into My Account by Mistake?",
+    "type": "question",
+    "block": "financial-banking",
+    "url": "/questions/financial-banking/what-happens-money-transferred-into-account-by-mistake",
+    "description": "Money that lands in your account by mistake isn't yours to keep. Here's what the law actually requires in the US and UK, and what happens if you spend it.",
+    "keywords": [
+      "what happens if someone transfers money into my account by mistake",
+      "money transferred into account by mistake",
+      "an unexpected deposit can feel like good news for about a day — then it becomes a legal obligation, not a windfall."
+    ]
+  },
+  {
+    "title": "Who Pays If Someone Uses My Card Without Permission?",
+    "type": "question",
+    "block": "financial-banking",
+    "url": "/questions/financial-banking/who-pays-someone-uses-card-without-permission",
+    "description": "In almost every case, your bank bears the loss, not you — if you report it promptly. Here's exactly how the liability caps work in the US and UK.",
+    "keywords": [
+      "who pays if someone uses my card without permission",
+      "pays someone uses card without permission",
+      "the number that decides how much this costs you isn't the fraud amount — it's how many hours pass before you report it."
+    ]
+  },
+  {
+    "title": "Can an Airline Blame Bad Weather to Avoid Paying Me Compensation?",
+    "type": "question",
+    "block": "flights-travel",
+    "url": "/questions/flights-travel/can-an-airline-blame-weather-avoid-compensation",
+    "description": "Weather can genuinely excuse cash compensation under UK261 — but airlines routinely overuse the excuse for problems that are actually their own fault. Here's the exact test they have to meet.",
+    "keywords": [
+      "can an airline blame bad weather to avoid paying me compensation",
+      "an airline blame weather avoid compensation",
+      "real weather is a genuine excuse. a vague reference to \"operational reasons\" is not — and there's a specific legal test that separates the two."
+    ]
+  },
+  {
+    "title": "Can an Airline Bump Me From a Flight Even After I've Checked In?",
+    "type": "question",
+    "block": "flights-travel",
+    "url": "/questions/flights-travel/can-an-airline-bump-me-after-checkin",
+    "description": "Yes, an airline can still bump you after check-in — but if it's involuntary denied boarding, both the US and UK require real cash compensation. Here's exactly what you're owed and how to get it.",
+    "keywords": [
+      "can an airline bump me from a flight even after i've checked in",
+      "an airline bump me after checkin",
+      "checking in doesn't protect you from an oversold flight — but if you're bumped involuntarily, the airline owes you real cash, not just an apology and a later flight."
+    ]
+  },
+  {
+    "title": "Can an Airline Change My Flight Time Without Telling Me in Advance?",
+    "type": "question",
+    "block": "flights-travel",
+    "url": "/questions/flights-travel/can-an-airline-change-flight-time-without-telling-me",
+    "description": "Airlines can reschedule your flight, but if the change is significant enough, both the US and UK let you walk away with your money instead — and a flight moved earlier is treated more strictly than one delayed.",
+    "keywords": [
+      "can an airline change my flight time without telling me in advance",
+      "an airline change flight time without telling me",
+      "they can move the schedule — but move it far enough, and you get to decide whether you're still going."
+    ]
+  },
+  {
+    "title": "Can an Airline Charge Me for Correcting a Misspelled Name on My Ticket?",
+    "type": "question",
+    "block": "flights-travel",
+    "url": "/questions/flights-travel/can-an-airline-charge-me-for-name-correction",
+    "description": "Most major US and UK airlines fix genuine name typos for free — the fee only shows up when your 'correction' starts to look like handing the ticket to someone else. Here's the exact line they draw.",
+    "keywords": [
+      "can an airline charge me for correcting a misspelled name on my ticket",
+      "an airline charge me for name correction",
+      "one word decides whether it costs you nothing or gets rejected outright: \"correction,\" not \"change.\""
+    ]
+  },
+  {
+    "title": "Can I Get My Money Back If My Flight Is Delayed for Hours?",
+    "type": "question",
+    "block": "flights-travel",
+    "url": "/questions/flights-travel/can-i-get-my-money-back-flight-delayed-hours",
+    "description": "The US and UK handle a long delay completely differently — one pays you to walk away, the other pays you even if you still fly. Here's exactly what each system owes you.",
+    "keywords": [
+      "can i get my money back if my flight is delayed for hours",
+      "i get my money back flight delayed hours",
+      "two completely different systems: one pays you to walk away, the other pays you even if you still get on the plane."
+    ]
+  },
+  {
+    "title": "Can a Hotel Keep My Deposit Because of a Small Stain?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-hotel-keep-deposit-small-stain",
+    "description": "A small carpet stain from spilled coffee is normal wear and tear, not damage — and the hotel has to prove otherwise, not just assert it and keep your money.",
+    "keywords": [
+      "can a hotel keep my deposit because of a small stain",
+      "hotel keep deposit small stain",
+      "spilled coffee on a carpet is what carpets are for — the hotel has to prove real damage, not just point at a mark and keep your money."
+    ]
+  },
+  {
+    "title": "Can a Restaurant Add a Service Charge Without Telling Me?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-restaurant-add-service-charge-without-telling-me",
+    "description": "A growing wave of US state laws and a 2024 UK act both say no — but some restaurants have found a loophole that's technically legal and worth knowing about.",
+    "keywords": [
+      "can a restaurant add a service charge without telling me",
+      "restaurant add service charge without telling me",
+      "the law increasingly says no on both sides of the atlantic — but some restaurants found a workaround by simply changing the label on the line."
+    ]
+  },
+  {
+    "title": "Can a Restaurant Charge Me for Food I Never Ordered?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-restaurant-charge-me-food-never-ordered",
+    "description": "No — and this is one of the cleanest disputes in consumer law, in either country, because the restaurant has to show you actually agreed to the charge.",
+    "keywords": [
+      "can a restaurant charge me for food i never ordered",
+      "restaurant charge me food never ordered",
+      "this is one of the cleanest disputes you'll ever have — a bill has to reflect what you actually agreed to, and the burden of showing that is on the business, not you."
+    ]
+  },
+  {
+    "title": "Can a Restaurant Charge Me If I Don't Show Up for a Reservation?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-restaurant-charge-me-no-show-reservation",
+    "description": "Yes, if the terms were clear before you booked — the fee's enforceability lives or dies on disclosure, not on how annoyed the restaurant is about the empty table.",
+    "keywords": [
+      "can a restaurant charge me if i don't show up for a reservation",
+      "restaurant charge me no show reservation",
+      "yes — but the fee lives or dies entirely on whether you were told about it clearly before you booked, not on how empty the table looked that night."
+    ]
+  },
+  {
+    "title": "Who Pays If a Hotel Loses Something From My Room?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/who-pays-hotel-loses-something-room",
+    "description": "Both countries cap what a hotel owes you, often to a few hundred pounds or dollars — and in both, using the safe (and the hotel posting proper notice) is what decides whether the cap even applies.",
+    "keywords": [
+      "who pays if a hotel loses something from my room",
+      "pays hotel loses something room",
+      "both countries cap what the hotel owes you — and in both, whether you used the safe is often the single detail that decides everything."
+    ]
+  },
+  {
+    "title": "Can a Private Clinic Charge Me for an Appointment I Cancelled?",
+    "type": "question",
+    "block": "healthcare-medical",
+    "url": "/questions/healthcare-medical/can-clinic-charge-me-appointment-i-cancelled",
+    "description": "Usually, yes — if the policy was disclosed upfront. Here's when a cancellation fee is enforceable in the US and UK, and when it isn't.",
+    "keywords": [
+      "can a private clinic charge me for an appointment i cancelled",
+      "clinic charge me appointment i cancelled",
+      "the deciding factor isn't fairness in the abstract — it's whether you actually agreed to the fee before you booked."
+    ]
+  },
+  {
+    "title": "Can a Clinic Refuse Treatment Because I Cannot Pay Immediately?",
+    "type": "question",
+    "block": "healthcare-medical",
+    "url": "/questions/healthcare-medical/can-clinic-refuse-treatment-cannot-pay-immediately",
+    "description": "For genuine emergencies, no — both countries require stabilizing care regardless of ability to pay. For non-emergency private care, the picture is different.",
+    "keywords": [
+      "can a clinic refuse treatment because i cannot pay immediately",
+      "clinic refuse treatment cannot pay immediately",
+      "the word doing all the legal work here is \"emergency\" — it draws a hard line between what a provider must do and what it can choose to do."
+    ]
+  },
+  {
+    "title": "Can a Doctor Refuse to Give Me My Medical Records?",
+    "type": "question",
+    "block": "healthcare-medical",
+    "url": "/questions/healthcare-medical/can-doctor-refuse-give-me-medical-records",
+    "description": "No — you have a legal right to your own medical records in both the US and UK. Here's the exact timeline, what it can cost, and what to do if a provider stalls.",
+    "keywords": [
+      "can a doctor refuse to give me my medical records",
+      "doctor refuse give me medical records",
+      "your medical file belongs to you in every meaningful legal sense — providers just hold onto the physical or digital copy."
+    ]
+  },
+  {
+    "title": "Can a Doctor Share My Medical Information With My Employer?",
+    "type": "question",
+    "block": "healthcare-medical",
+    "url": "/questions/healthcare-medical/can-doctor-share-medical-information-employer",
+    "description": "Not without your consent, in almost every case. Here's exactly what a doctor can and can't disclose to your employer in the US and UK.",
+    "keywords": [
+      "can a doctor share my medical information with my employer",
+      "doctor share medical information employer",
+      "your employer can ask. your doctor still needs your yes before saying anything back."
+    ]
+  },
+  {
+    "title": "Can a Hospital Charge Me for Something I Was Not Told About Beforehand?",
+    "type": "question",
+    "block": "healthcare-medical",
+    "url": "/questions/healthcare-medical/can-hospital-charge-me-not-told-beforehand",
+    "description": "In the US, the No Surprises Act limits this significantly. In the UK, private clinics face strict cost-transparency rules. Here's what you're actually owed.",
+    "keywords": [
+      "can a hospital charge me for something i was not told about beforehand",
+      "hospital charge me not told beforehand",
+      "surprise medical bills used to be treated as an unavoidable part of getting care. recent law in both countries makes that a lot less true."
+    ]
+  },
+  {
+    "title": "Can My Landlord Keep My Deposit Because I Didn't Repaint the Walls?",
+    "type": "question",
+    "block": "housing-rentals",
+    "url": "/questions/housing-rentals/can-landlord-keep-deposit-didnt-repaint-walls",
+    "description": "Generally, no — unless you agreed to it in writing or caused real damage beyond normal wear and tear. Here's where the line actually sits.",
+    "keywords": [
+      "can my landlord keep my deposit because i didn't repaint the walls",
+      "landlord keep deposit didnt repaint walls",
+      "\"normal wear and tear\" is a real legal standard, not a phrase landlords can simply talk past."
+    ]
+  },
+  {
+    "title": "Can My Landlord Make Me Pay Three Months' Rent in Advance?",
+    "type": "question",
+    "block": "housing-rentals",
+    "url": "/questions/housing-rentals/can-landlord-make-me-pay-three-months-rent-advance",
+    "description": "In England, this is now capped by law. Here's the new one-month limit under the Renters' Rights Act 2025, and how US rules compare.",
+    "keywords": [
+      "can my landlord make me pay three months' rent in advance",
+      "landlord make me pay three months rent advance",
+      "this used to be a routine ask for anyone without a uk rental history. as of may 2026, in england, it's no longer legal."
+    ]
+  },
+  {
+    "title": "Can My Landlord Refuse to Give Me a Receipt for Rent?",
+    "type": "question",
+    "block": "housing-rentals",
+    "url": "/questions/housing-rentals/can-landlord-refuse-give-receipt-for-rent",
+    "description": "It depends on how you're paying and where you rent — but if you ask in writing, most landlords are expected to provide proof of payment. Here's the actual rule.",
+    "keywords": [
+      "can my landlord refuse to give me a receipt for rent",
+      "landlord refuse give receipt for rent",
+      "a receipt costs the landlord nothing to provide, and protects you in exactly the situations where you'll need it most: disputes, benefits, and visa paperwork."
+    ]
+  },
+  {
+    "title": "Can My Landlord Enter My Home Without Telling Me?",
+    "type": "question",
+    "block": "housing-rentals",
+    "url": "/questions/housing-rentals/can-my-landlord-enter-my-home-without-telling-me",
+    "description": "No, not in almost any situation. Both the US and UK require advance notice before a landlord can enter — here's exactly how much, and the narrow emergency exception.",
+    "keywords": [
+      "can my landlord enter my home without telling me",
+      "my landlord enter my home without telling me",
+      "owning the property and having the right to walk into it whenever you like turn out to be two very different things once someone else is living there."
+    ]
+  },
+  {
+    "title": "Who Pays If an Appliance Breaks in a Rented Property?",
+    "type": "question",
+    "block": "housing-rentals",
+    "url": "/questions/housing-rentals/who-pays-appliance-breaks-rented-property",
+    "description": "Usually your landlord — if the appliance was provided with the property and broke through normal use. Here's exactly where that responsibility shifts.",
+    "keywords": [
+      "who pays if an appliance breaks in a rented property",
+      "pays appliance breaks rented property",
+      "the dividing line isn't which appliance it is — it's whether it broke from age and normal use, or from something you did."
+    ]
+  },
+  {
+    "title": "Can I Cancel an Education Course After I Have Started It?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-i-cancel-education-course-after-started",
+    "description": "Starting a course doesn't automatically kill your right to cancel — but in the UK, one specific checkbox at signup might have already done it without you noticing.",
+    "keywords": [
+      "can i cancel an education course after i have started it",
+      "i cancel education course after started",
+      "starting a course doesn't automatically end your right to walk away — a specific checkbox at signup is usually what actually decides that."
+    ]
+  },
+  {
+    "title": "Can an Online Course Automatically Renew My Subscription?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-online-course-automatically-renew-subscription",
+    "description": "Yes, but a wave of 2025-2026 laws is closing off the tricks providers used to make cancelling harder than signing up — starting with California's toughest-in-the-nation rule.",
+    "keywords": [
+      "can an online course automatically renew my subscription",
+      "online course automatically renew subscription",
+      "auto-renewal itself is legal — it's how hard the provider makes you fight to cancel it that the law is increasingly cracking down on."
+    ]
+  },
+  {
+    "title": "Can an Online Course Refuse to Give Me a Refund?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-online-course-refuse-refund",
+    "description": "In the UK, a 14-day cooling-off period exists whether the provider likes it or not — and a 'no refunds' policy simply doesn't override it. The US picture is far weaker.",
+    "keywords": [
+      "can an online course refuse to give me a refund",
+      "online course refuse refund",
+      "a \"no refunds\" banner on the checkout page is a business preference, not a law — and in one of these two countries, it genuinely doesn't have the final say."
+    ]
+  },
+  {
+    "title": "Can a School Refuse to Let Me Take an Exam Because I Owe Money?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-school-refuse-exam-because-i-owe-money",
+    "description": "A 2024 US federal rule quietly banned one version of this practice — but it only covers debt tied to federal financial aid, and everything else is still a patchwork by state.",
+    "keywords": [
+      "can a school refuse to let me take an exam because i owe money",
+      "school refuse exam because i owe money",
+      "a quiet 2024 federal rule changed part of this picture in the us — but it only covers one specific kind of debt, and everywhere else still depends heavily on your state."
+    ]
+  },
+  {
+    "title": "Can a Private Training Centre Cancel My Course and Keep My Money?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-training-centre-cancel-course-keep-money",
+    "description": "No — if the provider is the one who cancels, you're generally entitled to a full refund. The harder question is what happens if they go under before paying it back.",
+    "keywords": [
+      "can a private training centre cancel my course and keep my money",
+      "training centre cancel course keep money",
+      "if they cancel, the refund is generally yours by right — the real risk isn't them refusing, it's them closing down before they can pay it."
+    ]
+  },
+  {
+    "title": "EU261 Compensation Calculator",
+    "type": "calculator",
+    "block": "flights-travel",
+    "url": "/flights-travel/calculators/eu261-compensation-calculator",
+    "description": "Answer a few questions about your EU flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger.",
+    "keywords": [
+      "eu261 compensation calculator",
+      "eu261 compensation calculator",
+      "answer a few questions about your eu flight and get an instant estimate of the compensation you may be owed — up to €600 per passenger."
+    ]
+  },
+  {
+    "title": "Flight Delay Compensation Calculator (UK, US & Canada)",
+    "type": "calculator",
+    "block": "flights-travel",
+    "url": "/flights-travel/calculators/flight-delay-compensation-calculator",
+    "description": "The jurisdictions EU261 doesn't cover — UK261, US DOT rules, and Canada's APPR. Instant estimate, or a clear explanation of your refund/procedural rights in the US.",
+    "keywords": [
+      "flight delay compensation calculator (uk, us & canada)",
+      "flight delay compensation calculator",
+      "the jurisdictions eu261 doesn't cover — uk261, us dot rules, and canada's appr."
+    ]
+  },
+  {
+    "title": "Security Deposit Return Calculator",
+    "type": "calculator",
+    "block": "housing-rentals",
+    "url": "/housing-rentals/calculators/security-deposit-return-calculator",
+    "description": "Find out exactly when your landlord must return your deposit — state-by-state US deadlines, UK deposit schemes, EU and Australia rules.",
+    "keywords": [
+      "security deposit return calculator",
+      "security deposit return calculator",
+      "find out exactly when your landlord must return your deposit — state-by-state us deadlines, uk deposit schemes, eu and australia rules."
+    ]
+  },
+  {
+    "title": "Hidden Bank Fee Calculator",
+    "type": "calculator",
+    "block": "financial-banking",
+    "url": "/financial-banking/calculators/hidden-bank-fee-calculator",
+    "description": "Add up your monthly maintenance fee, out-of-network ATM charges, overdraft fees, and foreign transaction fees to see how much your bank is quietly costing you every year.",
+    "keywords": [
+      "hidden bank fee calculator",
+      "hidden bank fee calculator",
+      "add up your monthly maintenance fee, out-of-network atm charges, overdraft fees, and foreign transaction fees to see how much your bank is quietly costing you every year."
+    ]
+  },
+  {
+    "title": "Credit Card Interest & Payoff Calculator",
+    "type": "calculator",
+    "block": "financial-banking",
+    "url": "/financial-banking/calculators/credit-card-interest-calculator",
+    "description": "Enter your balance, APR, and monthly payment to see exactly how much interest you'll pay and how long it will take to pay off your card.",
+    "keywords": [
+      "credit card interest & payoff calculator",
+      "credit card interest calculator",
+      "enter your balance, apr, and monthly payment to see exactly how much interest you'll pay and how long it will take to pay off your card."
+    ]
+  },
+  {
+    "title": "Loan APR Calculator",
+    "type": "calculator",
+    "block": "financial-banking",
+    "url": "/financial-banking/calculators/loan-apr-calculator",
+    "description": "Find your loan's true, effective APR once upfront fees are folded in — not just the advertised nominal rate — plus the total cost of the loan.",
+    "keywords": [
+      "loan apr calculator",
+      "loan apr calculator",
+      "find your loan's true, effective apr once upfront fees are folded in — not just the advertised nominal rate — plus the total cost of the loan."
+    ]
+  },
+  {
+    "title": "Real Discount Calculator",
+    "type": "calculator",
+    "block": "shopping-ecommerce",
+    "url": "/shopping-ecommerce/calculators/real-discount-calculator",
+    "description": "Compare the advertised discount against the lowest price you've actually seen recently, to find out if a \"sale\" is genuine or built on an inflated \"original\" price.",
+    "keywords": [
+      "real discount calculator",
+      "real discount calculator",
+      "compare the advertised discount against the lowest price you've actually seen recently, to find out if a \"sale\" is genuine or built on an inflated \"original\" price."
+    ]
+  },
+  {
+    "title": "Unused Subscription Cost Calculator",
+    "type": "calculator",
+    "block": "subscriptions-services",
+    "url": "/subscriptions-services/calculators/unused-subscription-cost-calculator",
+    "description": "Add up everything on autopay — Netflix, Spotify, your gym membership — and see exactly how much you're wasting per year on the ones you barely use.",
+    "keywords": [
+      "unused subscription cost calculator",
+      "unused subscription cost calculator",
+      "add up everything on autopay — netflix, spotify, your gym membership — and see exactly how much you're wasting per year on the ones you barely use."
+    ]
+  },
+  {
+    "title": "Final Pay Calculator",
+    "type": "calculator",
+    "block": "employment",
+    "url": "/employment/calculators/final-pay-calculator",
+    "description": "Find out exactly when your last paycheck is legally due after quitting or being let go — state-by-state US law, plus the UK payroll principle.",
+    "keywords": [
+      "final pay calculator",
+      "final pay calculator",
+      "find out exactly when your last paycheck is legally due after quitting or being let go — state-by-state us law, plus the uk payroll principle."
+    ]
+  }
+]

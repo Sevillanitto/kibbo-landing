@@ -272,6 +272,71 @@ margin-bottom: 20px;
 .section-page-hero { padding: clamp(80px, 10vh, 120px) 0 clamp(48px, 6vh, 72px); border-bottom: 1px solid var(--border); margin-bottom: clamp(48px, 6vh, 72px); }
 .section-page-hero .section-title { max-width: 760px; }
 .section-page-hero .section-subtitle { max-width: 640px; }
+/* "What's your problem?" search widget (index.html only) */
+.problem-search { padding: clamp(64px, 8vh, 96px) 0; background: var(--bg); }
+.ps-inner { max-width: 720px; text-align: center; }
+.ps-sub { margin-left: auto; margin-right: auto; }
+.ps-search-row { display: flex; gap: 10px; margin-top: 32px; }
+.ps-input {
+flex: 1; font-family: var(--font-sans); font-size: 15px; color: var(--text-primary);
+background: var(--bg-card); border: 1.5px solid var(--border); border-radius: 100px;
+padding: 14px 20px; outline: none; transition: var(--transition);
+}
+.ps-input:focus { border-color: var(--accent-green); }
+.ps-submit {
+font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-inverse);
+background: var(--text-primary); border: none; border-radius: 100px; padding: 14px 24px;
+white-space: nowrap; cursor: pointer; transition: var(--transition);
+}
+.ps-submit:hover { background: var(--accent-green); }
+.ps-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+.ps-tags[hidden], .ps-result[hidden] { display: none; }
+.ps-tag {
+font-family: var(--font-sans); font-size: 13.5px; font-weight: 500; color: var(--text-secondary);
+background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px;
+padding: 9px 16px; cursor: pointer; transition: var(--transition);
+}
+.ps-tag:hover { border-color: var(--accent-green); color: var(--accent-green); }
+.ps-result { margin-top: 28px; text-align: left; }
+.ps-best-label, .ps-related-label {
+font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+color: var(--text-muted); margin-bottom: 10px;
+}
+.ps-best-card {
+background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+padding: 24px; box-shadow: var(--shadow-sm);
+}
+.ps-best-title { font-family: var(--font-sans); font-size: 19px; font-weight: 700; color: var(--text-primary); margin: 10px 0 6px; }
+.ps-best-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin: 0 0 16px; }
+.ps-best-action {
+display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600;
+color: var(--text-inverse); background: var(--accent-green); border-radius: 100px; padding: 11px 20px;
+transition: var(--transition);
+}
+.ps-best-action:hover { transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+.ps-related { margin-top: 20px; }
+.ps-related-list { display: flex; flex-direction: column; gap: 2px; }
+.ps-related-row {
+display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px;
+background: var(--bg-card); border: 1px solid var(--border); transition: var(--transition);
+}
+.ps-related-row + .ps-related-row { margin-top: 8px; }
+.ps-related-row:hover { border-color: var(--accent-green); }
+.ps-related-title { flex: 1; font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.ps-related-go { color: var(--text-muted); }
+.ps-type-badge {
+display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+padding: 3px 9px; border-radius: 100px; flex-shrink: 0;
+}
+.ps-tag-question { background: var(--accent-green-light); color: var(--accent-green); }
+.ps-tag-guide { background: var(--accent-amber-light); color: var(--accent-amber); }
+.ps-tag-calculator { background: var(--border); color: var(--text-secondary); }
+.ps-tag-tool { background: var(--bg); color: var(--text-primary); border: 1px solid var(--border); }
+.ps-fallback { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; text-align: center; }
+.ps-fallback-text { font-size: 15px; color: var(--text-secondary); margin: 0 0 16px; }
+@media (max-width: 560px) {
+.ps-search-row { flex-direction: column; }
+}
 .categories { padding: clamp(64px, 8vh, 96px) 0; }
 .categories-header { text-align: center; margin-bottom: 48px; }
 .categories-header .section-subtitle { margin-left: auto; margin-right: auto; }
