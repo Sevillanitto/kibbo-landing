@@ -3717,5 +3717,691 @@
       "tila income share agreement",
       "cfpb bootcamp isa consumer lending law"
     ]
+  },
+  {
+    "title": "Shipping Insurance Claim Form",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/shipping-insurance-claim-form",
+    "description": "A multi-section shipping insurance claim-preparation form — why declared value matters, separate Loss and Damage sections, a Required Documents Checklist, and a Claim Submission Tracker. PDF + Excel.",
+    "keywords": [
+      "shipping insurance claim form",
+      "declared value shipping insurance claim",
+      "shipping loss and damage claim template",
+      "shipping insurance required documents checklist",
+      "shipping insurance claim submission tracker"
+    ]
+  },
+  {
+    "title": "Delivery Evidence Log",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/delivery-evidence-log",
+    "description": "A structured delivery evidence log — Case Overview, Tracking Evidence Log, Physical Evidence Checklist, Communication Log, and Case Reference Numbers — built to support both a direct claim and a later chargeback. PDF + Excel.",
+    "keywords": [
+      "delivery evidence log",
+      "track delivery tracking evidence for claim",
+      "delivery dispute evidence tracker",
+      "chargeback delivery evidence log",
+      "case reference numbers delivery claim"
+    ]
+  },
+  {
+    "title": "Cross-Border Consumer Complaint Pack",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/cross-border-consumer-complaint-pack",
+    "description": "A preparation pack for a cross-border consumer complaint — Purchase & Parties Details, an Applicable Rules guide (ECC-Net vs. ADR vs. neither), an Evidence Checklist, and a Complaint Routing Tracker. PDF + Word.",
+    "keywords": [
+      "cross border consumer complaint pack",
+      "ecc-net vs adr complaint guide",
+      "cross border purchase dispute pack",
+      "international order complaint routing",
+      "cross border consumer complaint evidence"
+    ]
+  },
+  {
+    "title": "Package Theft / Porch Piracy Report",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/package-theft-porch-piracy-report",
+    "description": "Document a stolen package properly — Delivery Details, a Verification Checklist to rule out misdelivery, a Police Report tracker, a Seller vs. Carrier claim routing table, and Prevention Notes. PDF + Excel.",
+    "keywords": [
+      "package theft porch piracy report",
+      "stolen package documentation template",
+      "porch piracy police report tracker",
+      "seller vs carrier claim routing porch piracy",
+      "rule out misdelivery before reporting theft"
+    ]
+  },
+  {
+    "title": "Missed/Failed Delivery Dispute Log",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/missed-failed-delivery-dispute-log",
+    "description": "Dispute a carrier's claimed delivery attempt — Claimed Attempt Details, a Contradicting Evidence Checklist, an Attempt History table for recurring issues, and an Escalation tracker. PDF + Excel.",
+    "keywords": [
+      "missed failed delivery dispute log",
+      "dispute claimed delivery attempt",
+      "courier says attempted delivery but didn't",
+      "contradicting evidence missed delivery",
+      "delivery attempt history tracker"
+    ]
+  },
+  {
+    "title": "Customs Duty & Import Fee Dispute Worksheet",
+    "type": "template",
+    "block": "delivery-parcels",
+    "url": "/templates/customs-duty-import-fee-dispute-worksheet",
+    "description": "A Charges Breakdown with automatic billed-vs-expected calculation, Shipment & Declaration Details, an Evidence Checklist, and a Dispute Tracker — challenge an unexpected customs or import charge with real numbers. Excel only.",
+    "keywords": [
+      "customs duty import fee dispute worksheet",
+      "dispute unexpected customs charge",
+      "customs charges billed vs expected",
+      "import vat dispute worksheet",
+      "customs fee evidence tracker"
+    ]
+  },
+  {
+    "title": "Lost Parcel Legal Demand",
+    "type": "generator",
+    "block": "delivery-parcels",
+    "url": "/generate/lost-parcel-demand",
+    "description": "Generate a formal demand letter to the retailer for a lost or damaged parcel — citing the Consumer Rights Act 2015 (UK) or state consumer law (US), with a 48-hour deadline. Free.",
+    "keywords": [
+      "lost parcel legal demand letter generator",
+      "demand letter for lost parcel retailer",
+      "consumer rights act parcel demand",
+      "48 hour deadline parcel demand letter",
+      "lost parcel refund demand letter"
+    ]
+  },
+  {
+    "title": "Vendor Compensation Demand Letter",
+    "type": "generator",
+    "block": "delivery-parcels",
+    "url": "/generate/vendor-compensation-demand-letter",
+    "description": "Generate a formal demand letter to a seller or vendor for a lost, damaged, or significantly late parcel — one letter, whichever went wrong. Free.",
+    "keywords": [
+      "vendor compensation demand letter generator",
+      "demand letter to seller for lost parcel",
+      "damaged parcel demand letter seller",
+      "late delivery demand letter vendor",
+      "one letter lost damaged or late parcel"
+    ]
+  },
+  {
+    "title": "Courier Complaint Generator",
+    "type": "generator",
+    "block": "delivery-parcels",
+    "url": "/generate/courier-complaint-generator",
+    "description": "Generate a formal complaint letter addressed directly to the carrier or courier — UK, US, Australia, or elsewhere — for a lost, damaged, delayed, or misdelivered parcel. Free.",
+    "keywords": [
+      "courier complaint letter generator",
+      "complain directly to courier lost parcel",
+      "formal complaint carrier damaged parcel",
+      "misdelivered parcel complaint letter",
+      "courier complaint generator uk us australia"
+    ]
+  },
+  {
+    "title": "Customs Fee Dispute Generator",
+    "type": "generator",
+    "block": "delivery-parcels",
+    "url": "/generate/customs-fee-dispute-generator",
+    "description": "Generate a formal dispute letter for an incorrect customs duty, import VAT, or handling fee — request a recalculation and refund of the difference. Free.",
+    "keywords": [
+      "customs fee dispute letter generator",
+      "dispute incorrect customs duty letter",
+      "import vat dispute letter generator",
+      "handling fee dispute letter",
+      "request customs fee recalculation refund"
+    ]
+  },
+  {
+    "title": "Postal Ombudsman Escalation Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/postal-ombudsman-escalation-checklist",
+    "description": "A free checklist for escalating an unresolved parcel complaint to a postal ombudsman — prerequisites, distinguishing a carrier dispute from a retailer dispute, and what evidence to prepare. No account required.",
+    "keywords": [
+      "postal ombudsman escalation checklist",
+      "escalate parcel complaint to ombudsman",
+      "carrier dispute vs retailer dispute",
+      "postal ombudsman evidence checklist",
+      "when to escalate parcel complaint"
+    ]
+  },
+  {
+    "title": "Unexpected Customs Charges Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/unexpected-customs-charges-checklist",
+    "description": "A free checklist for a surprise customs, import VAT, or handling fee on delivery — what makes a charge legitimate, and what to check before you pay or dispute it. No account required.",
+    "keywords": [
+      "unexpected customs charges checklist",
+      "surprise customs fee on delivery",
+      "is this customs charge legitimate",
+      "import vat handling fee checklist",
+      "check before paying customs charge"
+    ]
+  },
+  {
+    "title": "Lost Parcel Verification Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/lost-parcel-verification-checklist",
+    "description": "A free checklist to confirm a parcel is genuinely lost before you declare it — tracking history, waiting periods, customs holds, and what to rule out first. No account required.",
+    "keywords": [
+      "lost parcel verification checklist",
+      "is my parcel actually lost",
+      "how long before declaring parcel lost",
+      "parcel tracking history waiting period",
+      "customs hold vs lost parcel"
+    ]
+  },
+  {
+    "title": "Return Shipment Protection Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/return-shipment-protection-checklist",
+    "description": "A free checklist to protect yourself when sending a return — proof of drop-off, tracking to delivery, and what to do if the seller claims they never received it. No account required.",
+    "keywords": [
+      "return shipment protection checklist",
+      "proof of drop off return parcel",
+      "seller says never received my return",
+      "protect yourself sending a return",
+      "track return shipment to delivery"
+    ]
+  },
+  {
+    "title": "Receiving High-Value Deliveries Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/receiving-high-value-deliveries-checklist",
+    "description": "A free checklist for receiving an expensive delivery — signature-on-delivery, insurance limits, inspecting on arrival, and what to document before and after. No account required.",
+    "keywords": [
+      "receiving high value deliveries checklist",
+      "signature on delivery expensive item",
+      "inspect expensive delivery on arrival",
+      "insurance limits high value delivery",
+      "document expensive delivery before and after"
+    ]
+  },
+  {
+    "title": "Click & Collect / Locker Pickup Checklist",
+    "type": "checklist",
+    "block": "delivery-parcels",
+    "url": "/checklists/click-collect-locker-pickup-checklist",
+    "description": "A free checklist for click & collect and parcel locker pickups — pickup codes, missed windows, and what to do if a location shows 'collected' but you never picked it up. No account required.",
+    "keywords": [
+      "click and collect locker pickup checklist",
+      "locker shows collected but i never picked up",
+      "missed pickup window locker",
+      "click and collect pickup code problem",
+      "parcel locker pickup dispute"
+    ]
+  },
+  {
+    "title": "Carrier Complaint Directory",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#carrier-complaint-directory",
+    "description": "Organized by carrier, not by country — the direct complaint or claims link for each major carrier operating in the UK, US, or Australia.",
+    "keywords": [
+      "carrier complaint directory",
+      "royal mail evri dpd dhl ups fedex claims",
+      "direct complaint link courier",
+      "carrier claims portal by carrier",
+      "find carrier complaint page"
+    ]
+  },
+  {
+    "title": "Postal Ombudsman Directory",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#postal-ombudsman-directory",
+    "description": "Where to escalate once the carrier's own complaints process hasn't resolved it — a genuinely independent ombudsman, distinct from the carrier's own customer service.",
+    "keywords": [
+      "postal ombudsman directory",
+      "independent postal ombudsman",
+      "escalate beyond carrier customer service",
+      "postrs postal industry ombudsman",
+      "postal ombudsman by country"
+    ]
+  },
+  {
+    "title": "Consumer Authorities",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#consumer-authorities",
+    "description": "The general consumer protection regulator in each region — broader than parcel disputes specifically, but the right body once a delivery dispute becomes a wider consumer-rights issue.",
+    "keywords": [
+      "consumer authorities directory",
+      "consumer protection regulator by country",
+      "ftc accc citizens advice ecc-net",
+      "general consumer rights regulator",
+      "delivery dispute consumer authority"
+    ]
+  },
+  {
+    "title": "Package Tracking Directory",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#package-tracking-directory",
+    "description": "Verify what the carrier told you independently — these are tracking lookups, not a price or service comparison tool.",
+    "keywords": [
+      "package tracking directory",
+      "independent parcel tracking lookup",
+      "17track parcelsapp multi carrier tracking",
+      "verify carrier tracking status",
+      "universal package tracking tool"
+    ]
+  },
+  {
+    "title": "Customs Authorities Directory",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#customs-authorities-directory",
+    "description": "The official body governing customs duty, import VAT, and tariffs in each region — the actual authority behind a disputed import charge.",
+    "keywords": [
+      "customs authorities directory",
+      "official customs authority by country",
+      "cbp customs and border protection",
+      "import vat tariff authority",
+      "who governs customs duty charges"
+    ]
+  },
+  {
+    "title": "Payment Dispute Resources",
+    "type": "directory",
+    "block": "delivery-parcels",
+    "url": "/directory/delivery-parcels#payment-dispute-resources",
+    "description": "The specific dispute process runs through your own card issuer or bank — but the underlying rules and eligible reasons for a dispute are set at the network level, which is why these network-level pages are the stable reference point instead of individual bank pages.",
+    "keywords": [
+      "payment dispute resources directory",
+      "visa mastercard zero liability dispute",
+      "amex paypal dispute resolution center",
+      "card network dispute rules",
+      "chargeback network level resources"
+    ]
+  },
+  {
+    "title": "The \"Reasonable Time\" Delivery Guarantee Under Section 62 of the ACL",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/au-acl-section-62-reasonable-time-delivery",
+    "description": "No specific deadline in your order confirmation? The ACL still requires delivery within a reasonable time — and if the delay is bad enough, you're entitled to a cash refund, not store credit.",
+    "keywords": [
+      "acl section 62 reasonable time delivery",
+      "no delivery deadline reasonable time australia",
+      "acl delivery guarantee refund",
+      "reasonable time delivery cash refund not credit",
+      "section 62 australian consumer law"
+    ]
+  },
+  {
+    "title": "Safe Drop Without Your OK: Who's Liable When It's Stolen",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/au-safe-drop-unauthorized-theft-liability",
+    "description": "If you never opted into Safe Drop and a courier left your parcel unattended anyway, the retailer — not you — carries the risk if it's stolen.",
+    "keywords": [
+      "safe drop without permission stolen",
+      "who is liable unauthorized safe drop australia",
+      "courier left parcel unattended stolen",
+      "safe drop opt in liability",
+      "retailer risk safe drop theft"
+    ]
+  },
+  {
+    "title": "Australia Post's $100 Default Cover, and Why Extra Cover Claims Get Rejected",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/au-australia-post-compensation-extra-cover",
+    "description": "Standard cover included with Australia Post services tops out at $100 — and even paid Extra Cover claims are commonly rejected over packaging and missing proof of value.",
+    "keywords": [
+      "australia post 100 dollar default cover",
+      "extra cover claim rejected australia post",
+      "australia post compensation limit",
+      "australia post claim proof of value",
+      "australia post packaging claim rejected"
+    ]
+  },
+  {
+    "title": "How to Chargeback a Non-Delivery in Australia: What Your Bank Actually Needs",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/au-chargeback-non-delivery-evidence",
+    "description": "A chargeback for 'goods not received' isn't automatic — banks want a specific evidence package before they'll reverse the charge, and there's a real deadline.",
+    "keywords": [
+      "chargeback non delivery australia",
+      "goods not received chargeback evidence",
+      "bank chargeback deadline non delivery",
+      "chargeback evidence package australia",
+      "how to chargeback undelivered order"
+    ]
+  },
+  {
+    "title": "The Postal Industry Ombudsman: When It Applies, and When It's the Wrong Body",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/au-postal-industry-ombudsman-jurisdiction",
+    "description": "The PIO only investigates disputes where you personally sent something through Australia Post or a registered operator — an undelivered online order goes to the retailer under the ACL instead.",
+    "keywords": [
+      "postal industry ombudsman jurisdiction",
+      "pio wrong body online order",
+      "when does postal industry ombudsman apply",
+      "australia post pio complaint",
+      "pio vs acl retailer complaint"
+    ]
+  },
+  {
+    "title": "The EU's 30-Day Delivery Rule: When You Can Cancel Without Waiting Longer",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/eu-article-18-30-day-delivery-rule",
+    "description": "Article 18 of the Consumer Rights Directive gives sellers 30 days by default — but if delivery was time-critical or the seller already refused, you don't have to grant extra time at all.",
+    "keywords": [
+      "eu 30 day delivery rule",
+      "article 18 consumer rights directive",
+      "cancel order eu delivery deadline",
+      "time critical delivery cancel without waiting",
+      "eu delivery deadline default 30 days"
+    ]
+  },
+  {
+    "title": "Article 20: Why an EU Seller Can't Point to a Courier's GPS Scan",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/eu-article-20-risk-transfer-delivery",
+    "description": "Risk of loss stays with the seller across the EU until you or someone you specifically designated has physical possession — a photo of a doorstep drop doesn't change that.",
+    "keywords": [
+      "article 20 risk transfer delivery eu",
+      "eu seller gps scan not proof of delivery",
+      "risk of loss stays with seller eu",
+      "eu delivery risk transfer rule",
+      "courier gps scan not physical possession"
+    ]
+  },
+  {
+    "title": "Return Shipping Costs on a Withdrawal: Who Actually Pays",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/eu-withdrawal-return-shipping-costs-refund",
+    "description": "If a seller never told you upfront that you'd cover return shipping, they're the ones who owe it — and they can hold your refund only under specific conditions, not indefinitely.",
+    "keywords": [
+      "return shipping costs withdrawal eu",
+      "who pays return shipping eu law",
+      "seller never told me return shipping cost",
+      "eu refund hold return shipping conditions",
+      "return shipping cost dispute eu"
+    ]
+  },
+  {
+    "title": "IOSS and Surprise \"Customs Clearance\" Fees: What's Actually Legal",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/eu-ioss-hidden-customs-clearance-fees",
+    "description": "If your order was under €150 and the seller was IOSS-registered, VAT should already be paid — a courier's surprise handling fee on top of that may not hold up.",
+    "keywords": [
+      "ioss surprise customs clearance fee",
+      "ioss registered vat already paid",
+      "courier handling fee ioss order",
+      "eu 150 euro ioss customs fee",
+      "hidden customs clearance fee legal"
+    ]
+  },
+  {
+    "title": "ECC-Net: Free Cross-Border Mediation for a Delivery Dispute With an EU Seller",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/eu-ecc-net-cross-border-delivery-mediation",
+    "description": "When a seller in another EU country won't resolve a delivery dispute, ECC-Net can mediate on your behalf for free — the old ODR platform is gone, so this is the current route.",
+    "keywords": [
+      "ecc-net cross border delivery mediation",
+      "free mediation eu seller dispute",
+      "ecc-net delivery dispute eu",
+      "odr platform replacement eu",
+      "cross border eu seller wont resolve"
+    ]
+  },
+  {
+    "title": "Why \"Delivered\" Doesn't Mean It's Your Problem: Section 29 of the Consumer Rights Act",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-section-29-cra-passing-of-risk",
+    "description": "Goods stay legally at the seller's risk until you or someone you nominated physically has them — a courier's GPS scan showing 'delivered' doesn't change that.",
+    "keywords": [
+      "section 29 consumer rights act delivered",
+      "delivered tracking not my problem uk",
+      "goods stay at seller risk uk law",
+      "retailer points to courier uk illegal",
+      "section 29 passing of risk"
+    ]
+  },
+  {
+    "title": "Left in the Wheelie Bin? Why an Unauthorized \"Safe Place\" Delivery Isn't Your Loss",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-unauthorized-safe-place-delivery-theft",
+    "description": "A courier choosing where to leave your parcel — instead of you choosing — usually means the retailer, not you, remains legally responsible if it goes missing.",
+    "keywords": [
+      "unauthorized safe place delivery uk",
+      "left in wheelie bin parcel stolen",
+      "courier chose safe place not me uk",
+      "retailer responsible safe place theft uk",
+      "safe place delivery not my loss"
+    ]
+  },
+  {
+    "title": "Royal Mail Compensation Limits by Service: What You're Actually Owed",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-royal-mail-compensation-limits-claims",
+    "description": "Standard post caps at £20, Tracked 24/48 at £100, and Special Delivery Guaranteed up to £2,500 — but each has a different claims window, and missing it means no claim at all.",
+    "keywords": [
+      "royal mail compensation limits by service",
+      "royal mail standard post 20 pound cap",
+      "royal mail tracked 24 48 compensation",
+      "royal mail special delivery guaranteed claim",
+      "royal mail claims window deadline"
+    ]
+  },
+  {
+    "title": "Section 75 vs. Chargeback: Which One Actually Gets Your Money Back",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-section-75-chargeback-non-delivery",
+    "description": "For purchases over £100 on a credit card, Section 75 makes your card issuer equally liable by law. Below that, or on a debit card, chargeback is a different, non-statutory route.",
+    "keywords": [
+      "section 75 vs chargeback uk",
+      "section 75 credit card issuer liable",
+      "chargeback non statutory route uk",
+      "section 75 100 pound threshold",
+      "section 75 non delivery claim"
+    ]
+  },
+  {
+    "title": "POSTRS Explained: When to Use It, and When It's the Wrong Place to Complain",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-postrs-ofcom-courier-complaint-jurisdiction",
+    "description": "POSTRS only handles disputes where you personally contracted with the courier — if you're complaining about an online order that never arrived, it's the wrong body entirely.",
+    "keywords": [
+      "postrs explained when to use",
+      "postrs wrong place to complain",
+      "postrs personally contracted courier",
+      "postrs online order not eligible",
+      "postal redress service jurisdiction"
+    ]
+  },
+  {
+    "title": "The FTC's 30-Day Shipping Rule: When a Seller Must Refund You Automatically",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/us-ftc-30-day-shipping-rule-automatic-refund",
+    "description": "If a seller can't ship within the promised time (or 30 days by default) and you don't consent to a new date, they're legally required to cancel and refund you — no request needed.",
+    "keywords": [
+      "ftc 30 day shipping rule",
+      "seller must refund automatically shipping delay",
+      "ftc automatic refund no shipping",
+      "30 day shipping rule us",
+      "seller cant ship in time refund"
+    ]
+  },
+  {
+    "title": "Porch Piracy and Who's Actually Liable: The UCC Risk of Loss Rules",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/us-porch-piracy-ucc-risk-of-loss",
+    "description": "Whether a seller or you bear the loss for a stolen 'delivered' package often turns on one legal distinction most people have never heard of — shipment contract vs. destination contract.",
+    "keywords": [
+      "porch piracy who is liable ucc",
+      "ucc risk of loss rules",
+      "shipment contract vs destination contract",
+      "stolen package legal liability us",
+      "porch piracy seller or buyer liable"
+    ]
+  },
+  {
+    "title": "Reporting Mail Theft: Why a USPIS Report Beats a Regular Police Report",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/us-mail-theft-uspis-federal-reporting",
+    "description": "Mail theft is a federal felony investigated by the US Postal Inspection Service — and a sworn USPIS report carries evidentiary weight a merchant can't easily dismiss.",
+    "keywords": [
+      "report mail theft uspis",
+      "uspis report vs police report",
+      "mail theft federal felony",
+      "us postal inspection service report",
+      "uspis report merchant denial"
+    ]
+  },
+  {
+    "title": "Never Received It? The FCBA Billing Dispute Route Most People Skip",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/us-fcba-non-receipt-billing-dispute",
+    "description": "A basic tracking scan showing drop-off isn't automatically enough to defeat your billing dispute — the FCBA puts the burden on the merchant to prove you actually received it.",
+    "keywords": [
+      "fcba billing dispute non receipt",
+      "never received item billing dispute",
+      "fair credit billing act dispute",
+      "burden of proof merchant fcba",
+      "fcba dispute card issuer"
+    ]
+  },
+  {
+    "title": "USPS vs. FedEx vs. UPS vs. DHL: What Their Included Liability Actually Covers",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/us-carrier-liability-limits-comparison",
+    "description": "Every major US carrier includes $100 of default liability — but the claim windows, exclusions, and what counts as 'covered' differ more than most people realize.",
+    "keywords": [
+      "usps fedex ups dhl liability comparison",
+      "carrier default liability 100 dollars",
+      "carrier claim window comparison",
+      "does carrier cover porch piracy",
+      "carrier liability limits compared"
+    ]
+  },
+  {
+    "title": "How to Claim Compensation for a Lost or Damaged DHL Parcel (And Why the Payout Might Be Capped by Weight, Not Value)",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/dhl-lost-parcel-claim",
+    "description": "DHL's liability is capped by weight, not value — roughly 22 SDR per kilogram. The deadlines, the divisions, and exactly what you need to file a DHL parcel claim.",
+    "keywords": [
+      "dhl lost parcel claim",
+      "dhl compensation capped by weight not value",
+      "dhl international shipment lost",
+      "dhl claim deadline",
+      "how much does dhl pay for lost parcel"
+    ]
+  },
+  {
+    "title": "How to File a UPS Claim for a Lost or Damaged Package (And Why \"Delivered\" Might End the Conversation)",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/ups-missing-package-claim",
+    "description": "Every UPS shipment includes just $100 of liability by default, not the value of your item — and a 'Delivered' scan makes a claim much harder. How to file one that gets approved.",
+    "keywords": [
+      "ups missing package claim",
+      "ups 100 dollar default liability",
+      "ups delivered but not received",
+      "how to file ups claim",
+      "ups claim denied delivered scan"
+    ]
+  },
+  {
+    "title": "How to File a FedEx Claim for a Missing or Damaged Shipment (And What \"Delivered\" Actually Means for Your Payout)",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/fedex-missing-shipment-claim",
+    "description": "FedEx's default liability is $100, not your item's value, and a 'Delivered' scan is treated as fulfilling delivery. The filing deadlines by shipment type, and what gets a claim approved.",
+    "keywords": [
+      "fedex missing shipment claim",
+      "fedex 100 dollar default liability",
+      "fedex delivered but not received",
+      "how to file fedex claim",
+      "fedex claim illegible signature"
+    ]
+  },
+  {
+    "title": "Your Parcel Never Arrived? Here's What UK Law Actually Says (And Why It's the Retailer's Problem, Not the Courier's)",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/uk-parcel-rights-consumer-law",
+    "description": "'Contact the courier' is wrong every time. Under the Consumer Rights Act 2015 (Sections 28 & 29) an undelivered online order is the retailer's problem, not the courier's — here's how to enforce it.",
+    "keywords": [
+      "parcel never arrived uk law",
+      "contact the courier wrong uk",
+      "consumer rights act 2015 sections 28 29",
+      "retailer responsible not courier uk",
+      "undelivered online order uk rights"
+    ]
+  },
+  {
+    "title": "How to Claim Compensation from Royal Mail for a Lost or Damaged Parcel (And Why the Payout Might Be Smaller Than You Expect)",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/royal-mail-lost-parcel-claim-uk",
+    "description": "Royal Mail's standard compensation is capped far lower than most people assume. The deadlines, the caps by service, and exactly what you need to file a claim.",
+    "keywords": [
+      "royal mail lost parcel claim",
+      "royal mail compensation smaller than expected",
+      "royal mail 20 pound cap 2nd class",
+      "royal mail claim deadline",
+      "how to claim from royal mail"
+    ]
+  },
+  {
+    "title": "Evri Says Your Parcel Was Delivered But You Don't Have It? Here's Who's Actually Responsible",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/evri-lost-parcel-uk",
+    "description": "If Evri tracking says delivered but you never got it, the retailer — not Evri — is usually responsible under Section 29. The Denial of Receipt process and claim window explained.",
+    "keywords": [
+      "evri says delivered but i don't have it",
+      "evri lost parcel who is responsible",
+      "evri denial of receipt process",
+      "evri tracking says delivered no parcel",
+      "evri parcel claim uk"
+    ]
+  },
+  {
+    "title": "DPD Lost or Damaged Your Parcel? Why You Should Contact the Retailer First, Not DPD",
+    "type": "blog",
+    "block": "delivery-parcels",
+    "url": "/blog/dpd-lost-damaged-parcel-uk",
+    "description": "For a retailer order shipped by DPD, the retailer — not DPD — owes you a refund under Section 29. Why DPD's compensation cap doesn't limit what you're owed.",
+    "keywords": [
+      "dpd lost or damaged parcel",
+      "contact retailer first not dpd",
+      "dpd compensation cap doesn't limit refund",
+      "dpd parcel claim section 29",
+      "dpd lost parcel who to contact"
+    ]
   }
 ]
