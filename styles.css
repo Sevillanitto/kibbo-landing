@@ -1155,6 +1155,16 @@ color: var(--text-primary); cursor: pointer; transition: var(--transition); marg
 .inv-img-card:hover { border-color: var(--accent-green); }
 .inv-img-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .inv-img-placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: #EFEBE2; color: var(--text-secondary); font-size: 13px; text-align: center; padding: 12px; }
+/* Investigation card — image + category label + title, whole card clickable.
+   Reusable pattern: every future investigation is another
+   <a class="inv-card"><div class="inv-img-card">...</div><span class="inv-card-category">...</span><h3 class="inv-card-title">...</h3></a>
+   in the same .q-card-grid, no restructuring. Label styling matches .q-category
+   (same font/size/weight/letter-spacing/color) used on question and investigation detail pages. */
+.inv-card { display: block; text-decoration: none; color: inherit; }
+.inv-card-category { display: block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin: 14px 0 6px; }
+.inv-card-title { font-family: var(--font-serif); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; color: var(--text-primary); transition: var(--transition); }
+.inv-card:hover .inv-img-card { border-color: var(--accent-green); }
+.inv-card:hover .inv-card-title { color: var(--accent-green); }
 .footer-legal { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer-legal a { font-size: 13px; color: rgba(247,245,240,0.4); transition: var(--transition); }
 .footer-legal a:hover { color: var(--text-inverse); }

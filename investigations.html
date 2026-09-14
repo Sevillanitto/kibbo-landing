@@ -58,9 +58,11 @@
      Questions, Investigations aren't organized by block (tagged, not
      nested per the taxonomy), so there's one grid, not a tab bar filtering
      multiple panels. Reuses .q-card-grid (generic responsive grid, not
-     portrait-specific) + the new .inv-img-card/.inv-img-placeholder pair
-     from styles.css. Built to scale: adding a card later is just another
-     <a class="inv-img-card"> in this same grid, no restructuring. */
+     portrait-specific) + the .inv-card/.inv-img-card/.inv-card-category/
+     .inv-card-title set from styles.css (image, then block label, then
+     title, whole card linked). Built to scale: adding a card later is
+     just another <a class="inv-card"> block in this same grid — see
+     styles.css for the exact markup to copy. */
 </style>
 </head>
 <body>
@@ -253,8 +255,12 @@
   <div class="container">
 
     <div class="q-card-grid">
-      <a class="inv-img-card" href="/investigations/us-airline-ranking-2026-h1">
-        <img src="/investigations-images/us-airline-ranking-2026-h1-square.png" alt="Which US airline performed worst in 2026?" loading="lazy" width="1080" height="1080">
+      <a class="inv-card" href="/investigations/us-airline-ranking-2026-h1">
+        <div class="inv-img-card">
+          <img src="/investigations-images/us-airline-ranking-2026-h1-square.png" alt="Which US airline performed worst in 2026?" loading="lazy" width="1080" height="1080">
+        </div>
+        <span class="inv-card-category">Flights &amp; Travel · Investigation</span>
+        <h3 class="inv-card-title">Which US airline performed worst in 2026? We ranked all 9 on the DOT's own data.</h3>
       </a>
     </div>
 
