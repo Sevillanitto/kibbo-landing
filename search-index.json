@@ -3073,5 +3073,649 @@
       "can restaurant ask for service animal documentation",
       "service dog restaurant rights ada"
     ]
+  },
+  {
+    "title": "Student Academic Appeal Toolkit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/student-academic-appeal-toolkit",
+    "description": "Build a properly documented academic appeal — timeline, evidence tracker, grade calculation worksheet with automatic mark-difference calculation, deadline tracker, and submission checklist. PDF + Excel.",
+    "keywords": [
+      "student academic appeal toolkit",
+      "how to appeal a grade",
+      "academic appeal evidence tracker",
+      "grade calculation worksheet appeal",
+      "university appeal submission checklist"
+    ]
+  },
+  {
+    "title": "Academic Misconduct Defence Workbook",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/academic-misconduct-defence-workbook",
+    "description": "For students accused of plagiarism, AI misuse, cheating, or collusion — timeline, evidence inventory, source tracker, AI usage disclosure, witness log, and hearing preparation. PDF + Word.",
+    "keywords": [
+      "academic misconduct defence workbook",
+      "accused of plagiarism defense",
+      "ai misuse academic misconduct",
+      "cheating accusation evidence log",
+      "academic misconduct hearing preparation"
+    ]
+  },
+  {
+    "title": "Tuition Fee Dispute Toolkit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/tuition-fee-dispute-toolkit",
+    "description": "A fee breakdown with automatic billed-vs-expected calculation, contract summary, payment tracker, refund eligibility, and escalation tracker — build a tuition fee dispute with real numbers. Excel only.",
+    "keywords": [
+      "tuition fee dispute toolkit",
+      "tuition billed vs expected worksheet",
+      "dispute university tuition fees",
+      "tuition refund eligibility tracker",
+      "tuition fee escalation tracker"
+    ]
+  },
+  {
+    "title": "Student Loan Dispute Organizer",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/student-loan-dispute-organizer",
+    "description": "Loan summary, payment history, interest tracker, communication log, complaint history, and escalation timeline — organize a student loan servicer dispute properly. Excel only.",
+    "keywords": [
+      "student loan dispute organizer",
+      "student loan servicer dispute",
+      "track student loan payment history",
+      "student loan complaint tracker",
+      "student loan escalation timeline"
+    ]
+  },
+  {
+    "title": "Internship Problem Documentation Kit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/internship-problem-documentation-kit",
+    "description": "Hours worked (planned vs. actual), tasks performed checked against the advertised role, supervisor log, and complaint tracker — document an internship that doesn't match what you were promised. PDF + Excel.",
+    "keywords": [
+      "internship problem documentation kit",
+      "internship doesn't match what was promised",
+      "track internship hours worked",
+      "unpaid internship documentation",
+      "internship complaint tracker"
+    ]
+  },
+  {
+    "title": "Online Course Refund Toolkit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/online-course-refund-toolkit",
+    "description": "Purchase details, an advertised promises checklist, course differences log, refund timeline, and chargeback notes — build a refund case for an online course that didn't deliver. PDF + Excel.",
+    "keywords": [
+      "online course refund toolkit",
+      "build a case for course refund",
+      "course didn't deliver refund evidence",
+      "online course chargeback notes",
+      "course refund timeline tracker"
+    ]
+  },
+  {
+    "title": "Scholarship Appeal Toolkit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/scholarship-appeal-toolkit",
+    "description": "Eligibility comparison, supporting evidence checklist, a structured appeal statement framework, and an appeal tracker — challenge a scholarship denial or revocation properly. PDF + Word.",
+    "keywords": [
+      "scholarship appeal toolkit",
+      "appeal scholarship denial",
+      "scholarship revocation appeal",
+      "scholarship appeal statement framework",
+      "challenge scholarship decision"
+    ]
+  },
+  {
+    "title": "Study Abroad Documentation Kit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/study-abroad-documentation-kit",
+    "description": "Visa and immigration, insurance, flights, host university, accommodation, emergency contacts, payments, and deadlines — every study-abroad document in one place before you leave. PDF only.",
+    "keywords": [
+      "study abroad documentation kit",
+      "study abroad document checklist",
+      "organize study abroad paperwork",
+      "visa insurance flights study abroad tracker",
+      "study abroad emergency contacts document"
+    ]
+  },
+  {
+    "title": "Student Scam Recovery Kit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/student-scam-recovery-kit",
+    "description": "Scam timeline, money lost, accounts and platforms involved, evidence preservation checklist, bank contact, police report, and recovery tracker — respond to a scam targeting a student properly. PDF + Excel.",
+    "keywords": [
+      "student scam recovery kit",
+      "student targeted by scam recovery",
+      "scam timeline documentation student",
+      "student scam evidence preservation",
+      "student scam police report tracker"
+    ]
+  },
+  {
+    "title": "AI Academic Integrity Documentation Kit",
+    "type": "template",
+    "block": "training-education",
+    "url": "/templates/ai-academic-integrity-documentation-kit",
+    "description": "Prompt log, AI usage declaration, sources referenced, draft/edit history, and submission details — document legitimate AI tool use before an integrity question is even raised. PDF + Excel.",
+    "keywords": [
+      "ai academic integrity documentation kit",
+      "document legitimate ai use for school",
+      "ai usage declaration student",
+      "prompt log academic integrity",
+      "defend against ai misuse accusation"
+    ]
+  },
+  {
+    "title": "Formal Complaint Generator",
+    "type": "generator",
+    "block": "training-education",
+    "url": "/generate/formal-complaint-generator",
+    "description": "Generate a formal complaint letter for a course, bootcamp, or education platform problem — institution closure, refund refusal, misleading advertising, fake certificates, and more. Free.",
+    "keywords": [
+      "formal complaint generator course",
+      "complain about bootcamp or education platform",
+      "institution closure complaint letter",
+      "misleading course advertising complaint",
+      "fake certificate complaint letter"
+    ]
+  },
+  {
+    "title": "Course Provider Terms & Refund Policy Generator",
+    "type": "generator",
+    "block": "training-education",
+    "url": "/generate/course-provider-terms-refund-policy-generator",
+    "description": "For course creators, bootcamp operators, and academy owners — generate an Enrollment & Cancellation Policy, Refund Policy, Certificate/Completion Policy, or Marketing Claims Disclaimer. Free.",
+    "keywords": [
+      "course provider terms and refund policy generator",
+      "bootcamp operator generate refund policy",
+      "course creator enrollment cancellation policy",
+      "academy owner marketing claims disclaimer",
+      "generate course completion policy"
+    ]
+  },
+  {
+    "title": "Education Scam Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/education-scam-checklist",
+    "description": "A free checklist to spot a fraudulent institution, bootcamp, or credential program — diploma mills, fake job guarantees, RPL fraud, and payment red flags. No account required.",
+    "keywords": [
+      "education scam checklist",
+      "spot a diploma mill",
+      "fake job guarantee bootcamp red flags",
+      "fraudulent training provider checklist",
+      "rpl fraud warning signs"
+    ]
+  },
+  {
+    "title": "Before Paying Any Course Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/before-paying-any-course-checklist",
+    "description": "A free checklist to run before paying for any course, bootcamp, or certificate program — accreditation, refund terms, financing, reviews, and what you're actually buying. No account required.",
+    "keywords": [
+      "before paying any course checklist",
+      "due diligence before buying a course",
+      "check course accreditation before paying",
+      "course refund terms checklist",
+      "what to check before enrolling in course"
+    ]
+  },
+  {
+    "title": "Online Course Refund Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/online-course-refund-checklist",
+    "description": "A free checklist for requesting a refund on an online course — check the refund window, build your case, submit the request properly, and what to do if it's declined. No account required.",
+    "keywords": [
+      "online course refund checklist",
+      "how to request online course refund",
+      "build case for course refund",
+      "course refund declined what to do",
+      "online course refund window checklist"
+    ]
+  },
+  {
+    "title": "Student Visa School Verification Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/student-visa-school-verification-checklist",
+    "description": "A free checklist to verify a school's visa-sponsorship status before you commit — CRICOS (Australia), Sponsor Licence (UK), SEVP certification (US), and cross-checks beyond the school's own claims. No account required.",
+    "keywords": [
+      "student visa school verification checklist",
+      "verify school visa sponsorship status",
+      "cricos sponsor licence sevp check",
+      "is my school authorized for student visa",
+      "student visa school fraud check"
+    ]
+  },
+  {
+    "title": "Education Loan Safety Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/education-loan-safety-checklist",
+    "description": "A free checklist to check before signing an education loan or Income Share Agreement — total cost, what happens if things go wrong, and what to confirm before you sign. No account required.",
+    "keywords": [
+      "education loan safety checklist",
+      "income share agreement checklist",
+      "what am i signing education loan",
+      "student loan total cost checklist",
+      "education loan red flags"
+    ]
+  },
+  {
+    "title": "Bootcamp Job Guarantee Verification Checklist",
+    "type": "checklist",
+    "block": "training-education",
+    "url": "/checklists/bootcamp-job-guarantee-verification-checklist",
+    "description": "A free checklist to verify what a bootcamp's 'job guarantee' actually means before you enroll — the real definition, the actual remedy, and how to check the outcome statistics. No account required.",
+    "keywords": [
+      "bootcamp job guarantee verification checklist",
+      "what does bootcamp job guarantee mean",
+      "bootcamp outcome statistics check",
+      "bootcamp job guarantee remedy",
+      "verify bootcamp job placement claims"
+    ]
+  },
+  {
+    "title": "Training & Education Directory",
+    "type": "directory",
+    "block": "training-education",
+    "url": "/directory/training-education",
+    "description": "Official education regulators, accreditation and qualification databases, student visa verification, and student complaint/ombudsman bodies — by region.",
+    "keywords": [
+      "training and education directory",
+      "education regulator contact",
+      "accreditation database check",
+      "student visa verification resource",
+      "student ombudsman complaint body"
+    ]
+  },
+  {
+    "title": "Education Contract Analyzer",
+    "type": "analyzer",
+    "block": "training-education",
+    "url": "/education-contract-analyzer",
+    "description": "Paste or upload a course, academy, bootcamp or training provider enrollment contract and get a plain-English risk breakdown of lock-in periods, linked financing, refund policy, cancellation terms, arbitration and jurisdiction clauses. Free tool by Kibbo.",
+    "keywords": [
+      "education contract analyzer",
+      "check course enrollment contract risk",
+      "bootcamp contract lock-in period check",
+      "analyze training provider contract",
+      "course enrollment arbitration clause check"
+    ]
+  },
+  {
+    "title": "Course Advertisement Analyzer",
+    "type": "analyzer",
+    "block": "training-education",
+    "url": "/course-advertisement-analyzer",
+    "description": "Paste a course, academy or bootcamp landing page URL or text and get an itemized list of misleading marketing patterns detected — unverified job guarantees, unsourced salary claims, vague accreditation claims, fake-looking testimonials, and more. Free tool by Kibbo.",
+    "keywords": [
+      "course advertisement analyzer",
+      "check bootcamp landing page for misleading claims",
+      "unverified job guarantee claim checker",
+      "course marketing red flags analyzer",
+      "fake testimonial course ad checker"
+    ]
+  },
+  {
+    "title": "\"Certified to Practice\" Claims: Which Online Certificates Actually Have Legal Standing",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/company-fake-professional-accreditation-claims",
+    "description": "A platform diploma claiming to qualify you to practice a regulated profession is meaningless unless it comes from a body legally authorized to grant that qualification — here's how to check.",
+    "keywords": [
+      "certified to practice online certificate legal standing",
+      "is this online certificate legitimate",
+      "platform diploma legal recognition",
+      "check certificate authorized body",
+      "fake professional accreditation claim"
+    ]
+  },
+  {
+    "title": "Trapped by an Exam Prep Academy's Financing? How Linked Credit Law Can Free You",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/company-linked-credit-exam-prep-academy",
+    "description": "If your civil service exam prep academy sold you a course bundled with bank financing, Spain's linked credit law can let you cancel the loan when the academy fails to deliver.",
+    "keywords": [
+      "exam prep academy financing trapped",
+      "linked credit law cancel loan academy",
+      "spain linked credit education loan",
+      "academy failed to deliver cancel financing",
+      "civil service exam prep academy loan"
+    ]
+  },
+  {
+    "title": "Kajabi or Teachable Won't Refund You? Here's Who's Actually Responsible",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/company-kajabi-teachable-refund-responsibility",
+    "description": "The hosting platform will tell you it's just software. Your card issuer or PayPal often has real leverage the platform doesn't — here's how the responsibility actually breaks down.",
+    "keywords": [
+      "kajabi teachable refund responsibility",
+      "course hosting platform wont refund",
+      "card issuer chargeback course platform",
+      "who is responsible for course refund",
+      "paypal chargeback online course"
+    ]
+  },
+  {
+    "title": "Your Course Got Pirated on Udemy or Skillshare: The DMCA Takedown Process",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/company-course-piracy-dmca-takedown",
+    "description": "A properly filed DMCA notice legally obligates the platform to act quickly — here's exactly what to include so your takedown request doesn't get delayed or rejected.",
+    "keywords": [
+      "course pirated udemy skillshare dmca",
+      "dmca takedown course piracy",
+      "file dmca notice course platform",
+      "course creator piracy takedown process",
+      "pirated course removal request"
+    ]
+  },
+  {
+    "title": "Canceling a Surprise EdTech Subscription Charge: What the Law Actually Requires",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/company-edtech-subscription-cancellation-rights",
+    "description": "The FTC's federal 'Click to Cancel' rule was struck down in court — but California's own auto-renewal law, now stricter than ever, still applies to platforms like Coursera and MasterClass.",
+    "keywords": [
+      "cancel surprise edtech subscription charge",
+      "coursera masterclass auto renewal cancel",
+      "california auto renewal law edtech",
+      "click to cancel rule edtech",
+      "edtech subscription cancellation rights"
+    ]
+  },
+  {
+    "title": "Vocational Placement or Illegal Unpaid Work? Know the Difference",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/au-vocational-placement-unpaid-work-fair-work",
+    "description": "A genuine vocational placement can be lawfully unpaid — but stray outside the specific criteria the Fair Work Act sets, and it becomes an employment relationship entitled to wages.",
+    "keywords": [
+      "vocational placement or illegal unpaid work",
+      "is my placement supposed to be paid",
+      "fair work act vocational placement criteria",
+      "unpaid work placement australia rights",
+      "vocational placement employment relationship"
+    ]
+  },
+  {
+    "title": "Education Agent Commissions and Your Rights Under the ESOS Act",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/au-education-agent-esos-act-commission-rights",
+    "description": "If your education agent steered you toward a course based on their commission rather than your interests, the provider — not just the agent — bears legal responsibility.",
+    "keywords": [
+      "education agent commission esos act",
+      "education agent steered me wrong course",
+      "esos act student rights australia",
+      "education agent provider responsibility",
+      "education agent complaint australia"
+    ]
+  },
+  {
+    "title": "RPL Fast-Track Qualifications: How to Spot a Fraudulent Provider",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/au-rpl-fast-track-qualification-fraud",
+    "description": "A genuine Recognition of Prior Learning assessment requires real evidence of your actual competency — a provider offering a qualification with little or no evidence check is a serious red flag.",
+    "keywords": [
+      "rpl fast track qualification fraud",
+      "recognition of prior learning fraud",
+      "spot fraudulent rpl provider",
+      "rpl qualification without evidence check",
+      "fake rpl assessment red flags"
+    ]
+  },
+  {
+    "title": "The 2025 Standards for RTOs: What Changed and How to Stay Audit-Ready",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/au-asqa-2025-standards-rto-audit",
+    "description": "ASQA's new 2025 Standards for RTOs replaced the 2015 framework on July 1, 2025 — shifting from compliance checklists to demonstrated outcomes. Here's what auditors now actually look for.",
+    "keywords": [
+      "2025 standards for rtos asqa",
+      "asqa audit ready rto",
+      "rto compliance 2025 standards",
+      "asqa new standards changed",
+      "rto audit outcomes vs checklist"
+    ]
+  },
+  {
+    "title": "Your Australian College Closed: How the Tuition Protection Service Actually Works",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/au-tuition-protection-service-provider-closure",
+    "description": "If your RTO or university stops operating, the TPS gives you a legal right to a place in another course or a refund — here's exactly how to use it.",
+    "keywords": [
+      "australian college closed tuition protection service",
+      "tps refund or new course place",
+      "rto closed down what to do",
+      "tuition protection service how it works",
+      "college closure student rights australia"
+    ]
+  },
+  {
+    "title": "The European Micro-Credentials Framework: What It Actually Guarantees",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/eu-micro-credentials-framework-recognition",
+    "description": "The EU's 2022 micro-credentials recommendation is not a binding law — implementation still varies significantly by country, and a 'standardized' badge doesn't guarantee automatic recognition.",
+    "keywords": [
+      "european micro credentials framework",
+      "does micro credential guarantee recognition",
+      "eu micro credentials recommendation binding",
+      "micro credential badge recognition eu",
+      "micro credentials framework explained"
+    ]
+  },
+  {
+    "title": "\"European Master\" or Private Certificate? How to Check What a Degree Is Actually Worth",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/eu-official-vs-private-degree-verification",
+    "description": "A \"Master\" marketed as accredited by the European Higher Education Area can still be an unofficial private qualification with no access to doctoral study or public exams.",
+    "keywords": [
+      "european master or private certificate",
+      "is my masters degree official eu",
+      "check degree accreditation eu",
+      "unofficial private qualification eu",
+      "european higher education area degree verification"
+    ]
+  },
+  {
+    "title": "Surviving an Erasmus+ Funding Audit: Documentation That Actually Protects You",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/eu-erasmus-plus-audit-documentation",
+    "description": "Erasmus+ National Agencies can demand full repayment of mobility grants over missing paperwork — here's what documentation actually holds up under audit.",
+    "keywords": [
+      "erasmus plus funding audit documentation",
+      "erasmus national agency repayment demand",
+      "survive erasmus plus audit",
+      "erasmus mobility grant paperwork",
+      "erasmus plus audit protect yourself"
+    ]
+  },
+  {
+    "title": "The 14-Day Right of Withdrawal for Online Courses in the EU",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/eu-right-of-withdrawal-online-courses",
+    "description": "A platform claiming you lose your right to a refund the moment you click 'access the classroom' may be misapplying EU consumer law — here's how the exception actually works.",
+    "keywords": [
+      "14 day right of withdrawal online course eu",
+      "eu consumer law online course refund",
+      "lost right to refund accessed classroom",
+      "online course withdrawal right eu",
+      "eu cooling off period online course"
+    ]
+  },
+  {
+    "title": "When School Software Violates GDPR: The Google Workspace Rulings Explained",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/eu-gdpr-edtech-google-workspace-schools",
+    "description": "Denmark's data protection authority banned Google Chromebooks and Workspace in schools across 53 municipalities — here's what EU schools and EdTech providers need to check.",
+    "keywords": [
+      "school software gdpr violation",
+      "google workspace schools gdpr banned",
+      "denmark chromebook ban schools",
+      "edtech gdpr compliance schools eu",
+      "google workspace ruling schools"
+    ]
+  },
+  {
+    "title": "Apprenticeship Levy Fraud: How to Audit Your Training Provider",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/uk-apprenticeship-levy-fraud-provider-audit",
+    "description": "Levy funds paid to a training provider that delivers little or nothing can trigger a Department for Education audit of your business, not just the provider — here's how to check.",
+    "keywords": [
+      "apprenticeship levy fraud uk",
+      "audit training provider levy funds",
+      "department for education levy audit",
+      "training provider delivers nothing levy",
+      "apprenticeship levy fraud business audit"
+    ]
+  },
+  {
+    "title": "Essay Mills Are a Criminal Offence in the UK: What Students Need to Know",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/uk-essay-mills-criminal-offence-2022-act",
+    "description": "Since April 2022, providing or advertising a contract cheating service to UK students is a criminal offence — separate from, and in addition to, university disciplinary consequences.",
+    "keywords": [
+      "essay mills criminal offence uk",
+      "is contract cheating illegal uk",
+      "essay mill law 2022 act",
+      "essay writing service illegal uk",
+      "contract cheating service criminal offence"
+    ]
+  },
+  {
+    "title": "Reclaiming a University Tuition Deposit: Your Rights Under UK Consumer Law",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/uk-university-deposit-refund-cma-rights",
+    "description": "A blanket 'no refunds under any circumstances' deposit policy is exactly the kind of term the CMA has warned universities against — here's how to challenge one.",
+    "keywords": [
+      "reclaim university tuition deposit uk",
+      "university no refunds policy challenge",
+      "cma university deposit rights",
+      "university deposit refund consumer law",
+      "challenge university deposit term"
+    ]
+  },
+  {
+    "title": "Ofsted's New Report Cards: What Training Providers Need to Know",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/uk-ofsted-report-cards-training-providers",
+    "description": "Single-word Ofsted judgements like 'Inadequate' are gone, replaced by a 5-point report card system since November 2025. Here's how the new framework actually works.",
+    "keywords": [
+      "ofsted new report cards",
+      "ofsted 5 point report card system",
+      "ofsted inadequate rating gone",
+      "training provider ofsted framework 2025",
+      "ofsted report card explained"
+    ]
+  },
+  {
+    "title": "Your College Lost Its Student Sponsor Licence: What Happens Next",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/uk-student-sponsor-licence-revoked",
+    "description": "A revoked sponsor licence curtails your visa to 60 days — here's exactly what that means, what you can do, and how to pursue a deposit refund.",
+    "keywords": [
+      "college lost student sponsor licence",
+      "sponsor licence revoked visa 60 days",
+      "what happens sponsor licence revoked",
+      "college sponsor licence revoked deposit refund",
+      "student visa curtailed sponsor licence"
+    ]
+  },
+  {
+    "title": "How to Verify a Degree Is Real: CHEA, DAPIP, and Spotting Diploma Mills",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/us-verify-degree-accreditation-diploma-mills",
+    "description": "A diploma mill's fake accreditor can look convincing on a website. Two free federal and independent databases let you check the real accreditation status directly.",
+    "keywords": [
+      "how to verify a degree is real",
+      "chea dapip accreditation database",
+      "spot a diploma mill",
+      "check degree accreditation status us",
+      "fake accreditor diploma mill"
+    ]
+  },
+  {
+    "title": "Borrower Defense to Repayment in 2026: Which Rules Actually Apply Now",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/us-borrower-defense-repayment-2026",
+    "description": "The 2019 borrower defense rules — not the more borrower-friendly 2022 rules — now govern most claims, after the 2025 One Big Beautiful Bill Act rolled back the standard.",
+    "keywords": [
+      "borrower defense to repayment 2026",
+      "which borrower defense rules apply now",
+      "2019 vs 2022 borrower defense rules",
+      "student loan borrower defense claim",
+      "one big beautiful bill borrower defense"
+    ]
+  },
+  {
+    "title": "COPPA 2025 Amendments: What EdTech Platforms Must Do Now",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/us-coppa-ferpa-edtech-compliance",
+    "description": "The FTC's updated COPPA Rule is now in full effect — separate consent for third-party data sharing, expanded personal information definitions, and no EdTech-specific carve-out.",
+    "keywords": [
+      "coppa 2025 amendments edtech",
+      "ftc coppa rule edtech compliance",
+      "ferpa edtech compliance requirements",
+      "coppa third party data sharing consent",
+      "edtech coppa ferpa rules"
+    ]
+  },
+  {
+    "title": "Fake Job Placement Rates: How Bootcamps Inflate Outcomes and What the FTC Requires",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/us-ftc-bootcamp-job-placement-claims",
+    "description": "A '99% job placement rate' built on unpaid internships and unrelated jobs can be an FTC violation — here's how outcome claims are supposed to work.",
+    "keywords": [
+      "fake job placement rate bootcamp",
+      "bootcamp 99 percent job placement claim",
+      "ftc bootcamp outcome claims",
+      "bootcamp inflated job placement stats",
+      "ftc violation bootcamp advertising"
+    ]
+  },
+  {
+    "title": "Income Share Agreements Are Credit Products: Your Rights Under CFPB Rules",
+    "type": "blog",
+    "block": "training-education",
+    "url": "/blog/us-income-share-agreement-cfpb-rights",
+    "description": "The CFPB has established that bootcamp Income Share Agreements are extensions of credit under TILA — not a special product exempt from consumer lending law.",
+    "keywords": [
+      "income share agreement credit product cfpb",
+      "isa bootcamp cfpb rights",
+      "is income share agreement a loan",
+      "tila income share agreement",
+      "cfpb bootcamp isa consumer lending law"
+    ]
   }
 ]
