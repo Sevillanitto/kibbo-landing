@@ -1911,5 +1911,537 @@
       "misleading gig driver pay ad",
       "real hourly pay gig work calculation"
     ]
+  },
+  {
+    "title": "Source of Funds Explanation Letter",
+    "type": "template",
+    "block": "crypto-fintech",
+    "url": "/templates/source-of-funds-explanation-letter",
+    "description": "Organize proof of where your money came from — before an exchange or bank freezes your account waiting for it. 7 fixed categories, PDF + Word.",
+    "keywords": [
+      "source of funds explanation letter",
+      "proof of where money came from crypto",
+      "source of funds template exchange",
+      "explain source of funds to bank",
+      "source of funds categories document"
+    ]
+  },
+  {
+    "title": "Source of Funds Package Generator",
+    "type": "generator",
+    "block": "crypto-fintech",
+    "url": "/generate/source-of-funds-package-generator",
+    "description": "Generate a full Source of Funds compliance package — cover letter, timeline, income breakdown table, narrative and document checklist — not just a single letter. Free.",
+    "keywords": [
+      "source of funds package generator",
+      "aml compliance package generator",
+      "source of funds cover letter and timeline",
+      "exchange asking for source of funds",
+      "generate source of funds documents"
+    ]
+  },
+  {
+    "title": "Exchange Account Freeze/Lockout Response Letter",
+    "type": "generator",
+    "block": "crypto-fintech",
+    "url": "/generate/exchange-account-freeze-response",
+    "description": "Generate a firm, cooperative response letter to a crypto exchange that's frozen or restricted your account — request the specific reason, the document list, and a resolution timeline. Free.",
+    "keywords": [
+      "exchange account freeze response letter generator",
+      "crypto exchange froze my account letter",
+      "request reason for account freeze exchange",
+      "crypto account lockout response",
+      "exchange restricted my account letter"
+    ]
+  },
+  {
+    "title": "Crypto Complaint Generator",
+    "type": "generator",
+    "block": "crypto-fintech",
+    "url": "/generate/crypto-complaint-generator",
+    "description": "Generate a formal complaint letter routed to the correct regulator for your country and problem type — FTC/SEC/FinCEN/CFPB (US), FCA/FOS (UK), your national MiCA authority (EU), ASIC/AFCA/Scamwatch (AU). Free.",
+    "keywords": [
+      "crypto complaint letter generator",
+      "which regulator to complain about crypto exchange",
+      "report crypto exchange to regulator",
+      "crypto complaint sec fca asic",
+      "generate crypto regulator complaint"
+    ]
+  },
+  {
+    "title": "Exchange Before Deposit Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/exchange-before-deposit-checklist",
+    "description": "A free checklist to vet a crypto exchange before you deposit — regulatory status, proof of reserves, reputation, and withdrawal terms. No account required.",
+    "keywords": [
+      "exchange before deposit checklist",
+      "is this crypto exchange legit",
+      "vet crypto exchange before depositing",
+      "proof of reserves check exchange",
+      "crypto exchange withdrawal terms checklist"
+    ]
+  },
+  {
+    "title": "Crypto Scam Red Flags Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/crypto-scam-red-flags-checklist",
+    "description": "A free checklist of crypto scam warning signs — guaranteed returns, pig-butchering relationship scams, AI deepfakes, and small-withdrawal tests. No account required.",
+    "keywords": [
+      "crypto scam red flags checklist",
+      "how to spot a crypto scam",
+      "pig butchering scam warning signs",
+      "guaranteed returns crypto scam",
+      "ai deepfake crypto scam"
+    ]
+  },
+  {
+    "title": "Self-Custody Security Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/self-custody-security-checklist",
+    "description": "A free checklist for securing crypto you hold yourself — hardware wallets, seed phrase storage, phishing and permission risks, and backup practices. No account required.",
+    "keywords": [
+      "self custody security checklist",
+      "how to secure my crypto wallet",
+      "seed phrase storage best practices",
+      "hardware wallet security checklist",
+      "protect crypto from phishing"
+    ]
+  },
+  {
+    "title": "KYC Verification Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/kyc-verification-checklist",
+    "description": "A free checklist to get crypto exchange KYC verification right the first time — document quality, common rejection causes, and what to do if you're rejected. No account required.",
+    "keywords": [
+      "kyc verification checklist crypto",
+      "exchange kyc rejected what to do",
+      "kyc document requirements crypto exchange",
+      "why was my kyc rejected",
+      "crypto exchange identity verification checklist"
+    ]
+  },
+  {
+    "title": "Frozen Account Response Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/frozen-account-response-checklist",
+    "description": "A free checklist for what to do when a crypto exchange or bank freezes your account — evidence to gather immediately, how to escalate, and what to do if it's unresolved. No account required.",
+    "keywords": [
+      "frozen account response checklist",
+      "bank or exchange froze my account what to do",
+      "evidence to gather frozen account",
+      "escalate frozen crypto account",
+      "account freeze checklist"
+    ]
+  },
+  {
+    "title": "Crypto Tax Records Checklist",
+    "type": "checklist",
+    "block": "crypto-fintech",
+    "url": "/checklists/crypto-tax-records-checklist",
+    "description": "A free checklist for the crypto tax records you need year-round — US/UK/AU notes included — so tax season isn't a scramble to reconstruct a year of trading. No account required.",
+    "keywords": [
+      "crypto tax records checklist",
+      "what records do i need for crypto taxes",
+      "crypto tax documentation year round",
+      "crypto tax season preparation",
+      "crypto trading records for taxes"
+    ]
+  },
+  {
+    "title": "Crypto & Fintech Directory",
+    "type": "directory",
+    "block": "crypto-fintech",
+    "url": "/directory/crypto-fintech",
+    "description": "Official crypto regulators, exchange licensing registers, blockchain explorers, tax software, AML tools, proof-of-reserves status, security auditors, and scam reporting authorities for the US, UK, Australia, and EU.",
+    "keywords": [
+      "crypto and fintech directory",
+      "crypto regulator contact",
+      "blockchain explorer tool",
+      "report crypto scam authority",
+      "exchange licensing register"
+    ]
+  },
+  {
+    "title": "Smart Contract Permission Analyzer",
+    "type": "analyzer",
+    "block": "crypto-fintech",
+    "url": "/smart-contract-permission-analyzer",
+    "description": "Paste an Ethereum wallet address and see its real on-chain token approvals — which are unlimited, how old they are, and which combine unlimited access with an unfamiliar or dormant contract. Ethereum mainnet only. Free tool by Kibbo.",
+    "keywords": [
+      "smart contract permission analyzer",
+      "check wallet token approvals",
+      "revoke unlimited token approval",
+      "ethereum wallet approval checker",
+      "dormant contract unlimited access wallet"
+    ]
+  },
+  {
+    "title": "Crypto Scam Analyzer",
+    "type": "analyzer",
+    "block": "crypto-fintech",
+    "url": "/crypto-scam-analyzer",
+    "description": "Paste a crypto investment pitch, message or URL and get an itemized list of fraud patterns detected — guaranteed returns, urgency, pig-butchering, Telegram redirects, and more. Free tool by Kibbo.",
+    "keywords": [
+      "crypto scam analyzer",
+      "is this crypto investment a scam",
+      "check crypto pitch for scam signs",
+      "analyze crypto message for fraud",
+      "telegram crypto scam checker"
+    ]
+  },
+  {
+    "title": "Funds Frozen for AML Compliance: How to Get Through a Source of Funds Questionnaire",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/cex-withdrawal-freeze-source-of-funds",
+    "description": "Binance, OKX, and similar exchanges can freeze your withdrawal indefinitely pending a source-of-funds review. Here's how to structure your evidence and force a real answer within a reasonable timeframe.",
+    "keywords": [
+      "exchange froze my withdrawal source of funds",
+      "binance okx withdrawal frozen aml",
+      "source of funds questionnaire exchange",
+      "how to answer source of funds review",
+      "crypto withdrawal stuck pending review"
+    ]
+  },
+  {
+    "title": "Fake VIP Trading Groups on Telegram: How the Scam Actually Works",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/telegram-vip-investment-scam-anatomy",
+    "description": "A convincing 'analyst' persona, a private group full of fake success stories, and a dApp built to drain your wallet the moment you approve one transaction — the anatomy of the VIP investment scam.",
+    "keywords": [
+      "telegram vip trading group scam",
+      "fake crypto analyst telegram",
+      "dapp drains wallet on approval",
+      "vip investment scam anatomy",
+      "telegram crypto trading scam"
+    ]
+  },
+  {
+    "title": "When a Bridge Gets Hacked, Who Owes You for Your Now-Worthless Wrapped Token?",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/bridge-hack-wrapped-token-liability",
+    "description": "A $292M bridge exploit in April 2026 showed exactly how fast a wrapped token's peg can collapse to zero — and how far the damage spreads to protocols that never touched the vulnerable code themselves.",
+    "keywords": [
+      "bridge hack wrapped token liability",
+      "who is liable for bridge exploit",
+      "wrapped token peg collapsed",
+      "crypto bridge exploit compensation",
+      "bridge hack lost funds recourse"
+    ]
+  },
+  {
+    "title": "Your DeFi Loan Got Liquidated on a Fake Price: What Oracle Manipulation Actually Looks Like",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/defi-oracle-manipulation-unfair-liquidation",
+    "description": "A flash loan can distort a price for a single blockchain transaction — long enough to trigger your liquidation on a number that was never real market price at all.",
+    "keywords": [
+      "defi loan liquidated unfairly",
+      "oracle price manipulation defi",
+      "flash loan attack liquidation",
+      "defi liquidation on fake price",
+      "unfair defi liquidation recourse"
+    ]
+  },
+  {
+    "title": "Crypto ATM Scams: Why Regulators Are Cracking Down on These Machines",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/crypto-atm-kiosk-scam-warning",
+    "description": "A stranger on the phone tells you to feed cash into a crypto ATM to 'protect your money.' Once it's sent, it's gone — and regulators worldwide are now moving to restrict these machines specifically because of this pattern.",
+    "keywords": [
+      "crypto atm scam",
+      "told to use crypto atm to protect money",
+      "crypto kiosk scam warning",
+      "bitcoin atm scam regulators",
+      "crypto atm fraud pattern"
+    ]
+  },
+  {
+    "title": "Does Your DeFi Protocol Need an AFSL in Australia? The New Digital Assets Framework",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/au-defi-afsl-digital-assets-framework",
+    "description": "A new law passed in April 2026 finally gives a real answer to whether a DeFi swap protocol needs a financial services licence — and small platforms may be exempt.",
+    "keywords": [
+      "defi protocol need afsl australia",
+      "digital assets framework australia",
+      "does defi need financial services licence",
+      "australia defi regulation 2026",
+      "afsl requirement crypto protocol"
+    ]
+  },
+  {
+    "title": "Crypto Exchange Collapses in Australia: Why the FCS Never Covered You, and What Just Changed",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/au-crypto-exchange-insolvency-creditor-status",
+    "description": "Australia has no deposit guarantee for crypto, and past collapses left investors as ordinary unsecured creditors. A new law passed in April 2026 changes the picture going forward — but not retroactively.",
+    "keywords": [
+      "crypto exchange collapse australia",
+      "fcs cover crypto deposits",
+      "unsecured creditor crypto exchange collapse",
+      "australia crypto exchange insolvency law",
+      "crypto exchange went bankrupt australia"
+    ]
+  },
+  {
+    "title": "ATO Crypto Audits: How to Respond When Your Exchange Data Doesn’t Match Your Return",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/au-ato-crypto-audit-data-matching",
+    "description": "The ATO already has your exchange transaction history before you file. Here's how the data-matching program actually works, and what a mismatch penalty can cost you.",
+    "keywords": [
+      "ato crypto audit data matching",
+      "ato has my exchange transaction history",
+      "crypto tax return mismatch penalty ato",
+      "respond to ato crypto audit",
+      "ato data matching crypto"
+    ]
+  },
+  {
+    "title": "Fake AI Trading Bots and Cloud Mining Scams: How to Report Them in Australia",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/au-fake-ai-trading-scam-reporting",
+    "description": "A Ponzi scheme dressed up as an AI trading algorithm still needs new deposits to pay out old ones. Here's how to spot it, and where to actually report it in Australia.",
+    "keywords": [
+      "fake ai trading bot scam",
+      "cloud mining scam report australia",
+      "ai trading algorithm ponzi scheme",
+      "report crypto trading bot scam australia",
+      "spot fake ai trading scam"
+    ]
+  },
+  {
+    "title": "Debanking in Australia: Legal Rights When a Bank Cuts Off Your Crypto Business",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/au-debanking-crypto-business-rights",
+    "description": "Australia's Big Four banks can close a crypto business's account with little explanation — and it's mostly legal. Here's what recourse actually exists.",
+    "keywords": [
+      "debanking crypto business australia",
+      "bank closed my crypto business account",
+      "big four bank debanking crypto",
+      "legal rights debanked crypto business",
+      "bank cut off crypto business"
+    ]
+  },
+  {
+    "title": "MiCA Whitepaper Requirements: What Token Issuers Are Actually Liable For",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/mica-whitepaper-requirements-issuer-liability",
+    "description": "A MiCA whitepaper isn't marketing copy — it's a legal document, and getting it wrong exposes issuers to civil liability, not just a regulatory slap on the wrist.",
+    "keywords": [
+      "mica whitepaper requirements",
+      "token issuer liability mica",
+      "mica whitepaper legal document",
+      "crypto token whitepaper compliance eu",
+      "mica issuer civil liability"
+    ]
+  },
+  {
+    "title": "The EU’s Transfer of Funds Regulation: What Actually Changed for Your Crypto Transfers",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/eu-tfr-travel-rule-crypto-transfers",
+    "description": "Every crypto transfer between EU platforms now requires full sender/receiver data — no minimum amount. But your own hardware wallet only triggers extra checks past €1,000. Two different rules, often confused as one.",
+    "keywords": [
+      "eu transfer of funds regulation crypto",
+      "travel rule crypto eu",
+      "crypto transfer sender receiver data eu",
+      "hardware wallet travel rule 1000 euros",
+      "eu tfr crypto transfers explained"
+    ]
+  },
+  {
+    "title": "Neobank Account Frozen? Your Rights and Where to Actually Complain in the EU",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/eu-neobank-frozen-account-complaint-rights",
+    "description": "Your neobank isn't necessarily supervised by your own country's central bank — passporting means the regulator with jurisdiction is often in a completely different EU member state.",
+    "keywords": [
+      "neobank account frozen eu",
+      "where to complain about neobank eu",
+      "neobank regulator jurisdiction passporting",
+      "eu neobank frozen my account",
+      "neobank complaint different member state"
+    ]
+  },
+  {
+    "title": "The EU Fintech Licensing Passport: How It Works, and Where Startups Still Get Stuck",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/eu-fintech-license-passporting-cross-border",
+    "description": "One license is supposed to work across all 27 member states. In practice, language requirements and local interpretation still create real friction for startups going cross-border.",
+    "keywords": [
+      "eu fintech license passporting",
+      "fintech license 27 member states",
+      "cross border fintech licensing eu",
+      "fintech passporting startup friction",
+      "eu fintech license explained"
+    ]
+  },
+  {
+    "title": "ECSP Crowdfunding Compliance: The €5 Million Cap and KIIS Requirements",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/eu-ecsp-crowdfunding-compliance-kiis",
+    "description": "Raise more than €5 million across any 12-month period and your crowdfunding campaign leaves ECSP protection entirely — triggering full prospectus requirements instead.",
+    "keywords": [
+      "ecsp crowdfunding compliance",
+      "eu crowdfunding 5 million cap",
+      "kiis requirements crowdfunding",
+      "ecsp prospectus requirement",
+      "eu crowdfunding regulation cap"
+    ]
+  },
+  {
+    "title": "Legal Crypto Marketing in the UK: FCA Financial Promotions Compliance Guide",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/uk-fca-financial-promotions-crypto-marketing",
+    "description": "Promoting a crypto app to UK users without FCA-approved sign-off isn't a grey area — it's a criminal offence. Here's what the rules actually require.",
+    "keywords": [
+      "fca financial promotions crypto",
+      "legal crypto marketing uk",
+      "fca approved crypto promotion",
+      "crypto marketing criminal offence uk",
+      "promote crypto app uk rules"
+    ]
+  },
+  {
+    "title": "Travel Rule Holds in the UK: How to Send Crypto to Private Wallets Without Exchange Delays",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/uk-travel-rule-private-wallet-holds",
+    "description": "Sending crypto to your own hardware wallet from a UK exchange can get frozen because the platform can't automatically verify who owns the receiving address. Here's what to fill in to avoid the hold.",
+    "keywords": [
+      "travel rule hold uk crypto",
+      "send crypto to private wallet uk exchange",
+      "uk exchange froze wallet withdrawal",
+      "avoid travel rule hold crypto",
+      "verify wallet ownership uk exchange"
+    ]
+  },
+  {
+    "title": "The Mule Account Trap: How to Protect Your Bank Account If You Trade P2P Crypto in the UK",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/uk-p2p-crypto-mule-account-protection",
+    "description": "Selling crypto peer-to-peer and accepting a bank transfer from a stranger can end your banking relationship permanently — even if you had no idea the money was stolen.",
+    "keywords": [
+      "p2p crypto mule account uk",
+      "bank account closed p2p crypto trading",
+      "mule account trap crypto",
+      "protect bank account trading p2p crypto",
+      "p2p crypto stranger bank transfer risk"
+    ]
+  },
+  {
+    "title": "NFT Taxes in the UK: A Capital Gains and VAT Guide for Artists and Collectors Under HMRC",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/uk-nft-tax-hmrc-capital-gains-vat",
+    "description": "Selling an NFT triggers Capital Gains Tax — that part's clear. Whether VAT applies to your sale depends on rules HMRC hasn't written a dedicated answer for yet.",
+    "keywords": [
+      "nft tax uk hmrc",
+      "nft capital gains tax uk",
+      "does vat apply to nft sales uk",
+      "nft tax guide artists collectors",
+      "hmrc nft taxation"
+    ]
+  },
+  {
+    "title": "APP Fraud Reimbursement and Crypto: Why the UK’s Mandatory Refund Rule Often Doesn’t Cover Crypto Investment Scams",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/uk-app-fraud-reimbursement-crypto-gap",
+    "description": "The UK's mandatory bank refund scheme sounds like it should cover crypto investment scams. For most cases, it structurally doesn't — here's the gap, and what you can actually claim.",
+    "keywords": [
+      "app fraud reimbursement crypto uk",
+      "does app fraud refund cover crypto scam",
+      "mandatory refund scheme crypto investment scam",
+      "uk app fraud rule crypto gap",
+      "claim after crypto investment scam uk"
+    ]
+  },
+  {
+    "title": "How to Avoid Security Classification: The Howey Test Applied to Utility Token Design",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/howey-test-utility-token-design-sec",
+    "description": "The SEC doesn't need Congress to pass a new law to sue a token project retroactively — it just needs your token to fail a 1946 test about orange groves. Here's what actually matters.",
+    "keywords": [
+      "howey test utility token",
+      "is my token a security sec",
+      "avoid security classification token design",
+      "sec howey test crypto",
+      "utility token vs security test"
+    ]
+  },
+  {
+    "title": "Tornado Cash Is No Longer Sanctioned — What That Actually Means for Your Wallet",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/tornado-cash-ofac-delisting-wallet-freeze",
+    "description": "OFAC delisted Tornado Cash in March 2025 after a federal court ruled it exceeded its authority. Here's what changed, what didn't, and what to do if a wallet was frozen under the old rule.",
+    "keywords": [
+      "tornado cash ofac delisting",
+      "is tornado cash still sanctioned",
+      "wallet frozen tornado cash old rule",
+      "ofac tornado cash court ruling",
+      "tornado cash sanctions lifted"
+    ]
+  },
+  {
+    "title": "DeFi Rug Pulls: How to Report the Fraud With On-Chain Evidence",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/defi-rug-pull-report-on-chain-evidence",
+    "description": "Local police almost never have the tools to trace a rug pull. Here's how to build the evidence trail yourself and route it to the agencies that actually can.",
+    "keywords": [
+      "defi rug pull report",
+      "how to report a rug pull",
+      "on chain evidence crypto fraud",
+      "rug pull evidence trail",
+      "who investigates defi rug pulls"
+    ]
+  },
+  {
+    "title": "The De-Risking Phenomenon: Your Legal Rights if a Bank Freezes Your Account Over Crypto Transfers",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/bank-account-closed-crypto-transfers-derisking",
+    "description": "Your bank doesn't need a reason, and it's legally allowed to say nothing about why. But your money is still yours — here's what actually happens next, and what to do about it.",
+    "keywords": [
+      "bank account closed crypto transfers",
+      "bank froze account over crypto derisking",
+      "de-risking bank crypto legal rights",
+      "bank won't explain account closure crypto",
+      "bank account closed no reason crypto"
+    ]
+  },
+  {
+    "title": "The DeFi Tax Maze: How to Report Crypto-to-Crypto Gains and Rewards Under IRS Rules",
+    "type": "blog",
+    "block": "crypto-fintech",
+    "url": "/blog/irs-crypto-wallet-by-wallet-cost-basis",
+    "description": "You can no longer pool your Bitcoin's cost basis across every exchange and wallet you own. Since January 2025, each wallet is its own universe — and the IRS will assume zero basis if you can't prove otherwise.",
+    "keywords": [
+      "irs crypto wallet by wallet cost basis",
+      "report crypto to crypto gains irs",
+      "bitcoin cost basis per wallet rule",
+      "irs assumes zero basis crypto",
+      "defi tax reporting irs rules"
+    ]
   }
 ]
