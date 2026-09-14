@@ -2443,5 +2443,635 @@
       "irs assumes zero basis crypto",
       "defi tax reporting irs rules"
     ]
+  },
+  {
+    "title": "Restaurant Allergen Communication Record",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/restaurant-allergen-communication-record",
+    "description": "A dated record of exactly what allergy or intolerance information you gave a restaurant and what staff confirmed back — free download, PDF.",
+    "keywords": [
+      "restaurant allergen communication record",
+      "document telling restaurant about allergy",
+      "proof restaurant confirmed my allergy",
+      "allergy communication log restaurant",
+      "record what i told restaurant about allergy"
+    ]
+  },
+  {
+    "title": "Food Safety & Poisoning Incident Report",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-safety-poisoning-incident-report",
+    "description": "Document a suspected food poisoning incident properly — what you ate, symptom timeline, and who else was affected — before you report it. Free download, PDF.",
+    "keywords": [
+      "food poisoning incident report template",
+      "document food poisoning symptoms",
+      "report food poisoning restaurant",
+      "food poisoning timeline template",
+      "suspected food poisoning record"
+    ]
+  },
+  {
+    "title": "Restaurant Complaint Communication Log",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/restaurant-complaint-communication-log",
+    "description": "A chronological record of every call, email, and in-person conversation with a restaurant about a complaint — free download, PDF + Excel.",
+    "keywords": [
+      "restaurant complaint communication log",
+      "track conversations with restaurant complaint",
+      "restaurant complaint call log",
+      "log emails with restaurant about complaint",
+      "restaurant dispute conversation tracker"
+    ]
+  },
+  {
+    "title": "Restaurant Bill Dispute Worksheet",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/restaurant-bill-dispute-worksheet",
+    "description": "Compare what you ordered against what you were actually charged, flag the discrepancy, and build your case before disputing the bill. Free download, Excel.",
+    "keywords": [
+      "restaurant bill dispute worksheet",
+      "overcharged at restaurant dispute",
+      "compare restaurant order to bill",
+      "restaurant billing error worksheet",
+      "dispute restaurant charge template"
+    ]
+  },
+  {
+    "title": "Restaurant Reservation & Deposit Dispute Record",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/restaurant-reservation-deposit-dispute-record",
+    "description": "Document a restaurant or event reservation deposit dispute — what was promised, what was charged, and the cancellation terms. Free download, PDF + Excel.",
+    "keywords": [
+      "restaurant reservation deposit dispute record",
+      "get restaurant deposit back",
+      "reservation deposit dispute template",
+      "event deposit dispute restaurant",
+      "restaurant cancellation terms record"
+    ]
+  },
+  {
+    "title": "Food Delivery Order Problem Log",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-delivery-order-problem-log",
+    "description": "Document exactly what went wrong with a delivery order — missing items, wrong order, late delivery — with the evidence platform support actually asks for. Free download, PDF + Excel.",
+    "keywords": [
+      "food delivery order problem log",
+      "missing items delivery order evidence",
+      "wrong order delivery complaint template",
+      "late delivery evidence log",
+      "food delivery problem documentation"
+    ]
+  },
+  {
+    "title": "Food Delivery Refund Tracker",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-delivery-refund-tracker",
+    "description": "Track every food delivery refund or credit you're owed across every platform, so nothing quietly expires unclaimed. Free download, Excel.",
+    "keywords": [
+      "food delivery refund tracker",
+      "track uber eats deliveroo refunds",
+      "delivery platform credit tracker",
+      "unclaimed delivery refund tracker",
+      "food delivery refund owed template"
+    ]
+  },
+  {
+    "title": "Food Product Complaint Evidence Tracker",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-product-complaint-evidence-tracker",
+    "description": "Log a problem with a packaged food product — contamination, mislabeling, a foreign object — with the batch details a manufacturer or regulator needs. Free download, PDF + Excel.",
+    "keywords": [
+      "food product complaint evidence tracker",
+      "foreign object in food complaint",
+      "packaged food contamination log",
+      "food product batch complaint template",
+      "report mislabeled food product"
+    ]
+  },
+  {
+    "title": "Food Recall Check & Action Log",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-recall-check-action-log",
+    "description": "Check whether a product you bought is under an active recall, and log the steps you took once you found out. Free download, PDF + Excel.",
+    "keywords": [
+      "food recall check and action log",
+      "is my food product recalled",
+      "food recall action log template",
+      "check active food recall",
+      "what to do if food is recalled"
+    ]
+  },
+  {
+    "title": "Food & Meal Subscription Cancellation Tracker",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/food-meal-subscription-cancellation-tracker",
+    "description": "Track every meal-kit or food subscription, when it renews, and the cancellation steps — so you stop paying for boxes you didn't want. Free download, Excel.",
+    "keywords": [
+      "food subscription cancellation tracker",
+      "meal kit subscription renewal tracker",
+      "cancel meal kit subscription template",
+      "food subscription boxes tracker",
+      "stop paying for meal kit i don't want"
+    ]
+  },
+  {
+    "title": "Hotel Food & Beverage Complaint Log",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/hotel-food-beverage-complaint-log",
+    "description": "Document a problem with hotel dining, room service, or the minibar — what happened, what was promised, and what you were actually charged. Free download, PDF + Excel.",
+    "keywords": [
+      "hotel food and beverage complaint log",
+      "room service complaint template",
+      "hotel minibar problem log",
+      "hotel dining complaint record",
+      "hotel restaurant complaint template"
+    ]
+  },
+  {
+    "title": "Hotel Restaurant/Minibar Charge Dispute Worksheet",
+    "type": "template",
+    "block": "food-hospitality",
+    "url": "/templates/hotel-restaurant-minibar-charge-dispute-worksheet",
+    "description": "Compare your hotel folio against what you actually consumed, and build the evidence to dispute a minibar or restaurant overcharge. Free download, Excel.",
+    "keywords": [
+      "hotel minibar charge dispute worksheet",
+      "dispute hotel folio overcharge",
+      "minibar charge i didn't use",
+      "hotel restaurant bill dispute",
+      "compare hotel folio to actual charges"
+    ]
+  },
+  {
+    "title": "Restaurant Policies Generator",
+    "type": "generator",
+    "block": "food-hospitality",
+    "url": "/generate/restaurant-policies-generator",
+    "description": "Generate a clear, customer-facing restaurant policy document — reservation, cancellation, no-show, refund, allergen, delivery, or privacy policy. Free.",
+    "keywords": [
+      "restaurant policies generator",
+      "restaurant owner generate cancellation policy",
+      "restaurant no-show policy template",
+      "generate restaurant refund policy",
+      "restaurant reservation policy generator"
+    ]
+  },
+  {
+    "title": "Food Recall Action Plan Generator",
+    "type": "generator",
+    "block": "food-hospitality",
+    "url": "/generate/food-recall-action-plan-generator",
+    "description": "Generate a 4-part food safety incident action plan — internal protocol, withdrawal checklist, communication templates, and an incident log. Free.",
+    "keywords": [
+      "food recall action plan generator",
+      "restaurant food recall protocol",
+      "food contamination incident plan restaurant",
+      "generate food withdrawal checklist",
+      "restaurant food safety incident response"
+    ]
+  },
+  {
+    "title": "Allergen Menu Labeling Generator",
+    "type": "generator",
+    "block": "food-hospitality",
+    "url": "/generate/allergen-menu-labeling-generator",
+    "description": "Enter your menu dish by dish and generate allergen declarations for each one, matched to EU, UK, US, or Australian allergen requirements. Free.",
+    "keywords": [
+      "allergen menu labeling generator",
+      "generate allergen declarations for menu",
+      "restaurant menu allergen labels",
+      "natasha's law menu labeling generator",
+      "faster act menu allergen generator"
+    ]
+  },
+  {
+    "title": "Food Safety Inspection Checklist",
+    "type": "checklist",
+    "block": "food-hospitality",
+    "url": "/checklists/food-safety-inspection-checklist",
+    "description": "A free, printable food safety self-inspection checklist for restaurant operators — temperature control, cleanliness, storage, cross-contamination, allergen management and staff practices. No account required.",
+    "keywords": [
+      "food safety inspection checklist restaurant",
+      "restaurant self inspection before health inspector",
+      "kitchen temperature control checklist",
+      "restaurant cross contamination checklist",
+      "food safety checklist for restaurant owners"
+    ]
+  },
+  {
+    "title": "Restaurant Compliance Checklist",
+    "type": "checklist",
+    "block": "food-hospitality",
+    "url": "/checklists/restaurant-compliance-checklist",
+    "description": "A free, printable restaurant compliance checklist for operators — licenses, alcohol service, hygiene standards, signage, pricing, allergen compliance, insurance and recordkeeping. No account required.",
+    "keywords": [
+      "restaurant compliance checklist",
+      "restaurant licensing checklist for owners",
+      "restaurant alcohol service compliance",
+      "restaurant signage and pricing compliance",
+      "what gets restaurants fined checklist"
+    ]
+  },
+  {
+    "title": "Opening & Closing Checklist",
+    "type": "checklist",
+    "block": "food-hospitality",
+    "url": "/checklists/opening-closing-checklist",
+    "description": "A free, printable restaurant opening and closing checklist for operators — pre-service setup and end-of-service shutdown in one place. No account required.",
+    "keywords": [
+      "restaurant opening and closing checklist",
+      "restaurant shift setup checklist",
+      "end of service shutdown checklist restaurant",
+      "restaurant pre-service checklist",
+      "restaurant closing procedures checklist"
+    ]
+  },
+  {
+    "title": "Delivery Partner Checklist",
+    "type": "checklist",
+    "block": "food-hospitality",
+    "url": "/checklists/delivery-partner-checklist",
+    "description": "A free, printable checklist for restaurant operators reviewing a delivery platform contract — commission, contract length, penalties, customer data ownership, and payments. No account required.",
+    "keywords": [
+      "delivery partner checklist restaurant",
+      "before signing with uber eats deliveroo",
+      "delivery platform contract checklist",
+      "restaurant delivery commission checklist",
+      "delivery platform exclusivity contract review"
+    ]
+  },
+  {
+    "title": "Food & Hospitality Directory",
+    "type": "directory",
+    "block": "food-hospitality",
+    "url": "/directory/food-hospitality",
+    "description": "Official food safety authorities, health inspection sources, restaurant licensing guidance by region, delivery and reservation platforms, food recall databases, and hospitality consumer authorities.",
+    "keywords": [
+      "food and hospitality directory",
+      "food safety authority contact",
+      "health inspection resources",
+      "food recall database",
+      "restaurant licensing guidance by region"
+    ]
+  },
+  {
+    "title": "Disputing Unfair Refunds and Withheld Payments From Uber Eats and Deliveroo",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/company-delivery-platform-refund-disputes",
+    "description": "Automated refund decisions for 'cold or undelivered food' claims often skip any real review — here's how restaurants can actually dispute a withheld payment.",
+    "keywords": [
+      "dispute uber eats withheld payment",
+      "deliveroo refund dispute restaurant",
+      "restaurant delivery platform refund unfair",
+      "cold food claim dispute restaurant",
+      "restaurant fight automated refund decision"
+    ]
+  },
+  {
+    "title": "Booking.com Price Parity Is Gone in the EU — What Hotels Can Do Now",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/company-booking-com-price-parity-dma",
+    "description": "Since December 2, 2024, both wide and narrow price parity clauses are banned across the EEA under the DMA. Hotels can now legally undercut Booking.com on their own website.",
+    "keywords": [
+      "booking.com price parity banned eu",
+      "hotel undercut booking.com website",
+      "dma price parity clause hotels",
+      "can hotels offer lower prices than booking.com",
+      "booking.com parity clause eu law"
+    ]
+  },
+  {
+    "title": "Fighting Fake Negative Reviews on Google and TripAdvisor",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/company-fake-reviews-google-tripadvisor",
+    "description": "A wave of coordinated 1-star reviews from a competitor is a real threat to a restaurant's revenue — here's what actually gets a fake review removed, and what doesn't.",
+    "keywords": [
+      "remove fake reviews google tripadvisor",
+      "competitor fake negative reviews restaurant",
+      "how to get fake review removed",
+      "coordinated 1 star review attack",
+      "restaurant fake review response"
+    ]
+  },
+  {
+    "title": "Franchisee vs. Corporate: Challenging Forced Supplier Pricing",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/company-franchise-supplier-pricing-disputes",
+    "description": "When your franchise agreement forces you to buy from an approved supplier at a 30% markup over identical local product, here's what actually gives you legal leverage.",
+    "keywords": [
+      "franchise forced supplier pricing dispute",
+      "franchisee challenge approved supplier markup",
+      "franchise agreement supplier pricing leverage",
+      "franchisor supplier markup dispute",
+      "franchise supplier pricing legal options"
+    ]
+  },
+  {
+    "title": "Protecting Your Deposit Policy From No-Show Chargebacks",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/company-no-show-deposit-chargeback-protection",
+    "description": "A clear cancellation policy and proper card authentication at booking are what actually get a no-show chargeback dismissed — not a strongly worded email after the fact.",
+    "keywords": [
+      "no show deposit chargeback protection",
+      "restaurant cancellation policy chargeback",
+      "dismiss no show chargeback",
+      "card authentication booking deposit",
+      "protect restaurant deposit from chargeback"
+    ]
+  },
+  {
+    "title": "Wage Theft Is Now a Crime in Australia: Restaurant Award Compliance Guide",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/au-wage-theft-restaurant-award-compliance",
+    "description": "Since January 1, 2025, intentionally underpaying hospitality staff can mean up to 10 years in prison for individuals — not just a civil back-pay order.",
+    "keywords": [
+      "wage theft crime australia hospitality",
+      "restaurant award compliance australia",
+      "underpaying hospitality staff penalty",
+      "wage theft prison australia restaurant",
+      "hospitality award wage compliance"
+    ]
+  },
+  {
+    "title": "Public Holiday Surcharges in Australia: The Exact Menu Wording the ACCC Requires",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/au-accc-surcharge-menu-disclosure",
+    "description": "Surcharges are legal — but two restaurants have already been fined for menus that didn't disclose them prominently enough. Here's the precise wording the ACCC expects.",
+    "keywords": [
+      "public holiday surcharge menu wording australia",
+      "accc surcharge disclosure requirements",
+      "restaurant surcharge menu compliance",
+      "accc menu surcharge fine",
+      "public holiday surcharge disclosure rules"
+    ]
+  },
+  {
+    "title": "Food Safety Supervisor Requirements Under Standard 3.2.2A",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/au-food-safety-supervisor-3222a",
+    "description": "Every category one and two food business in Australia now needs a certified Food Safety Supervisor, trained food handlers, and evidence records — nationally standardized since December 2023.",
+    "keywords": [
+      "food safety supervisor requirements australia",
+      "standard 3.2.2a food safety supervisor",
+      "certified food safety supervisor restaurant",
+      "food handler training requirements australia",
+      "food safety supervisor evidence records"
+    ]
+  },
+  {
+    "title": "Responsible Service of Alcohol: Protecting Your Liquor Licence in Australia",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/au-rsa-intoxicated-patrons-licence-protection",
+    "description": "Serving an unduly intoxicated patron can mean fines for the staff member, the licensee, and in some states, automatic licence suspension after repeat breaches.",
+    "keywords": [
+      "responsible service of alcohol licence protection",
+      "rsa intoxicated patron fine australia",
+      "liquor licence suspension australia",
+      "serving intoxicated patron penalty",
+      "protect liquor licence rsa breach"
+    ]
+  },
+  {
+    "title": "Shellfish Biotoxin Outbreaks: FSANZ Recalls and Restaurant Liability",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/au-shellfish-biotoxin-fsanz-recall-liability",
+    "description": "Marine biotoxins in shellfish aren't destroyed by cooking, and a supplier's cold chain failure can expose a restaurant to compensation claims under the ACL's consumer guarantees.",
+    "keywords": [
+      "shellfish biotoxin restaurant liability",
+      "fsanz shellfish recall",
+      "marine biotoxin food poisoning restaurant",
+      "cold chain failure supplier liability",
+      "shellfish poisoning restaurant compensation claim"
+    ]
+  },
+  {
+    "title": "EU Allergen Rules for Restaurants: Regulation 1169/2011 Explained",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/eu-regulation-1169-2011-allergen-menu",
+    "description": "Unlike the US, the EU requires allergen information for non-prepacked restaurant food by law since December 2014 — but whether it must be written or can stay verbal depends on your member state.",
+    "keywords": [
+      "eu allergen rules restaurants regulation 1169",
+      "restaurant allergen information eu law",
+      "non-prepacked food allergen disclosure eu",
+      "eu regulation 1169/2011 explained",
+      "restaurant allergen labelling eu requirements"
+    ]
+  },
+  {
+    "title": "HACCP Self-Control Plans for EU Restaurants: What Inspectors Actually Check",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/eu-haccp-self-control-restaurant",
+    "description": "A HACCP-based self-control system isn't optional paperwork in the EU — gaps in temperature logging, traceability, or pest control are what actually trigger preventive closures.",
+    "keywords": [
+      "haccp self control plan eu restaurant",
+      "what haccp inspectors check",
+      "haccp temperature logging requirements",
+      "eu restaurant preventive closure haccp",
+      "haccp traceability pest control restaurant"
+    ]
+  },
+  {
+    "title": "Spain's Food Waste Law: The Free Doggy Bag Obligation Explained",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/eu-spain-food-waste-law-doggy-bag",
+    "description": "Since April 3, 2025, every Spanish restaurant except buffets must offer a free, sustainable container for leftovers — and by April 2026 needs a documented prevention plan too.",
+    "keywords": [
+      "spain food waste law doggy bag",
+      "spanish restaurant free container leftovers",
+      "spain food waste prevention plan restaurant",
+      "doggy bag obligation spain law",
+      "restaurant food waste law spain"
+    ]
+  },
+  {
+    "title": "Sulphites in Meat and Fish: EU Additive Limits Most Kitchens Get Wrong",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/eu-sulphites-additives-meat-fish-limits",
+    "description": "Sulphites are not legally permitted in plain fresh mince at all under EU rules — only in specific, narrowly defined meat categories at strict maximum levels.",
+    "keywords": [
+      "sulphites meat and fish eu limits",
+      "sulphites fresh mince illegal eu",
+      "eu additive limits kitchen restaurant",
+      "sulphite regulations meat fish eu",
+      "restaurant additive compliance sulphites"
+    ]
+  },
+  {
+    "title": "Criminal Liability for Anaphylaxis: Why Kitchen Staff Face Real Legal Risk",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/eu-criminal-liability-anaphylaxis-cross-contamination",
+    "description": "When a customer dies or suffers serious harm from an allergic reaction after disclosing their allergy, chefs and managers across the EU can face criminal charges — not just a civil claim.",
+    "keywords": [
+      "criminal liability anaphylaxis restaurant",
+      "chef criminal charges allergic reaction",
+      "kitchen staff legal risk allergy death",
+      "restaurant cross contamination criminal liability",
+      "allergic reaction death restaurant charges eu"
+    ]
+  },
+  {
+    "title": "Natasha's Law Compliance: How to Label PPDS Food Correctly",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/uk-natashas-law-ppds-labelling",
+    "description": "Pre-packed for direct sale food needs a full ingredients list with 14 allergens emphasized — get it wrong and you're looking at an FSA enforcement notice, not just a fine.",
+    "keywords": [
+      "natasha's law ppds labelling",
+      "how to label ppds food correctly",
+      "14 allergens emphasized labelling uk",
+      "fsa enforcement notice ppds",
+      "natasha's law compliance restaurant"
+    ]
+  },
+  {
+    "title": "UK Tipping Law: How to Run a Compliant Tronc Under the Allocation of Tips Act",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/uk-allocation-of-tips-act-tronc",
+    "description": "Since 1 October 2024, UK employers must pass on 100% of tips with no deductions for card fees or admin costs — and must keep records for three years.",
+    "keywords": [
+      "allocation of tips act tronc uk",
+      "uk tipping law 100 percent tips",
+      "compliant tronc scheme uk",
+      "restaurant tips law no deductions uk",
+      "uk employer tips record keeping"
+    ]
+  },
+  {
+    "title": "How to Challenge or Improve a Low FSA Food Hygiene Rating",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/uk-fsa-food-hygiene-rating-appeal",
+    "description": "A low Food Hygiene Rating can cost you visibility on Deliveroo and Uber Eats overnight. Here's the difference between an appeal, a right to reply, and a paid revisit — and which one you actually need.",
+    "keywords": [
+      "challenge low fsa food hygiene rating",
+      "food hygiene rating appeal uk",
+      "fsa rating right to reply",
+      "improve food hygiene rating restaurant",
+      "food hygiene rating paid revisit"
+    ]
+  },
+  {
+    "title": "Trading Standards and Menu Descriptions: Avoiding False Origin Claims",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/uk-trading-standards-menu-description-fraud",
+    "description": "Calling imported meat 'local' or frozen fish 'fresh from the boat' isn't just bad marketing in the UK — Trading Standards treats it as a criminal offense under the CPUTR 2008.",
+    "keywords": [
+      "trading standards menu description fraud",
+      "false origin claims menu uk",
+      "cputr 2008 menu description",
+      "menu description criminal offense uk",
+      "misleading menu wording trading standards"
+    ]
+  },
+  {
+    "title": "Defending Your Alcohol License Against a Noise Complaint Review",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/uk-licensing-act-2003-review-noise-complaints",
+    "description": "A premises licence review triggered by resident noise complaints can end in suspension or revocation. Here's how the Licensing Act 2003 review process actually works.",
+    "keywords": [
+      "defend alcohol licence noise complaint",
+      "licensing act 2003 review process",
+      "premises licence review noise complaint",
+      "alcohol licence suspension noise",
+      "restaurant licence revocation noise complaint"
+    ]
+  },
+  {
+    "title": "How to Avoid Tip Pooling Lawsuits: FLSA-Legal Tip Pool Rules for Restaurants",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/us-flsa-tip-pooling-restaurant-guide",
+    "description": "Managers and supervisors can never share in a tip pool under the FLSA — not even when they work a shift as a server. Here's how to structure a compliant tip pool.",
+    "keywords": [
+      "flsa tip pooling rules restaurants",
+      "avoid tip pooling lawsuit",
+      "can managers share tip pool",
+      "compliant tip pool structure",
+      "flsa legal tip pool restaurant"
+    ]
+  },
+  {
+    "title": "Sesame as the 9th Major Food Allergen: FASTER Act Requirements Explained",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/us-faster-act-sesame-allergen-labeling",
+    "description": "Sesame has been a federally recognized major food allergen since January 1, 2023. Here's what the FASTER Act actually requires — and where restaurant menus fit in.",
+    "keywords": [
+      "faster act sesame allergen requirements",
+      "sesame 9th major food allergen",
+      "faster act restaurant menu labeling",
+      "sesame allergen labeling law us",
+      "faster act compliance restaurant"
+    ]
+  },
+  {
+    "title": "How to Avoid an ADA Website Lawsuit Over Your Restaurant's Digital Menu",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/us-ada-website-accessibility-restaurant-menu",
+    "description": "Over 3,100 ADA web accessibility lawsuits were filed in 2025 alone. A PDF-only menu with no screen-reader-readable alternative is one of the most common triggers.",
+    "keywords": [
+      "ada website lawsuit restaurant menu",
+      "restaurant digital menu accessibility",
+      "pdf only menu ada lawsuit",
+      "screen reader restaurant menu compliance",
+      "avoid ada web accessibility lawsuit restaurant"
+    ]
+  },
+  {
+    "title": "FDA FSMA Compliance for Restaurants: Preventive Controls and the Delayed Traceability Rule",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/us-fsma-preventive-controls-traceability-rule",
+    "description": "The FSMA Food Traceability Rule's compliance date has been pushed from January 2026 to July 2028 — but the separate Preventive Controls food safety plan requirement is already in force.",
+    "keywords": [
+      "fsma compliance restaurants",
+      "fsma preventive controls food safety plan",
+      "fsma traceability rule delayed",
+      "fda fsma restaurant requirements",
+      "food traceability rule compliance date"
+    ]
+  },
+  {
+    "title": "Service Animals in Your Restaurant: The Only Two Questions Staff Can Legally Ask",
+    "type": "blog",
+    "block": "food-hospitality",
+    "url": "/blog/us-ada-service-animals-restaurant-hotel",
+    "description": "Under the ADA, restaurant staff can ask only two specific questions about a service animal — and asking anything else, or demanding documentation, is a federal violation.",
+    "keywords": [
+      "service animals restaurant ada questions",
+      "two questions staff can ask service animal",
+      "ada service animal restaurant hotel",
+      "can restaurant ask for service animal documentation",
+      "service dog restaurant rights ada"
+    ]
   }
 ]
