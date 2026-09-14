@@ -1,10 +1,32 @@
-airline,on_time_pct_ytd_h1_2026,cancelled_pct_ytd_h1_2026,baggage_mishandled_per_100_ytd_h1_2026,involuntary_bumping_per_10000_ytd_h1_2026,composite_rank_avg,composite_rank_position
-Allegiant Air,72.71,0.90,0.12,0.00,2.50,1
-Delta Air Lines,79.33,2.35,0.37,0.00,3.25,2
-Southwest Airlines,74.76,1.05,0.32,0.01,3.25,2
-Alaska Airlines,80.51,1.24,0.53,0.09,4.25,4
-United Airlines,77.60,1.76,0.69,0.01,4.75,5
-JetBlue Airways,71.02,2.86,0.31,0.07,5.50,6
-Frontier Airlines,72.06,1.99,0.51,1.42,6.75,7
-American Airlines,74.38,3.32,0.67,0.52,7.00,8
-Spirit Airlines,59.84,7.47,0.47,0.91,7.75,9
+rank,airline,on_time_pct,cancelled_pct,baggage_mishandled_per_100,bumped_per_10000,composite_score
+1,Allegiant Air,72.71,0.90,0.12,0.00,2.50
+2,Delta Air Lines,79.33,2.35,0.37,0.00,3.25
+2,Southwest Airlines,74.76,1.05,0.32,0.01,3.25
+4,Alaska Airlines,80.51,1.24,0.53,0.09,4.25
+5,United Airlines,77.60,1.76,0.69,0.01,4.75
+6,JetBlue Airways,71.02,2.86,0.31,0.07,5.50
+7,Frontier Airlines,72.06,1.99,0.51,1.42,6.75
+8,American Airlines,74.38,3.32,0.67,0.52,7.00
+9,Spirit Airlines,59.84,7.47,0.47,0.91,7.75
+
+--- YEAR-OVER-YEAR COMPARISON (H1 2025 vs H1 2026) ---
+airline,cancelled_pct_h1_2025,cancelled_pct_h1_2026,change_points,change_relative_pct,on_time_pct_h1_2025,on_time_pct_h1_2026,on_time_change_points
+Allegiant Air,0.55,0.90,0.35,63.6,74.82,72.71,-2.11
+Southwest Airlines,0.95,1.05,0.10,10.5,78.91,74.76,-4.15
+Alaska Airlines,0.98,1.24,0.26,26.5,77.72,80.51,2.79
+United Airlines,1.35,1.76,0.41,30.4,77.42,77.60,0.18
+Frontier Airlines,1.85,1.99,0.14,7.6,70.01,72.06,2.05
+Delta Air Lines,1.22,2.35,1.13,92.6,78.70,79.33,0.63
+JetBlue Airways,1.04,2.86,1.82,175.0,74.49,71.02,-3.47
+American Airlines,2.69,3.32,0.63,23.4,73.35,74.38,1.03
+Spirit Airlines,1.41,7.47,6.06,429.8,78.34,59.84,-18.50
+
+--- SPIRIT MONTHLY ON-TIME RATE, JAN-MAY 2026 (ceased operations May 2, 2026) ---
+month,spirit_on_time_pct,industry_average_pct
+January,66.6,75.3
+February,62.8,78.5
+March,48.4,73.4
+April,63.0,79.2
+May,58.8,77.8
+
+Source: DOT Air Travel Consumer Report, August 2026 edition. Tables 1B, 1C, 6B.
