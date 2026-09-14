@@ -693,5 +693,579 @@
       "final pay calculator",
       "find out exactly when your last paycheck is legally due after quitting or being let go — state-by-state us law, plus the uk payroll principle."
     ]
+  },
+  {
+    "title": "EU Travel Disruption Evidence Log",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/eu-travel-disruption-evidence-log",
+    "description": "A PDF + Excel evidence log for EU flight, train and baggage disruptions in one place — delay/cancellation notice details, PIR reference, boarding pass, rail ticket validation, duty-of-care receipts, and the remedy requested.",
+    "keywords": [
+      "eu travel disruption evidence log",
+      "flight delay evidence template",
+      "pir reference log for flight claim",
+      "duty of care receipts template",
+      "eu261 evidence log"
+    ]
+  },
+  {
+    "title": "Flight Disruption Expense Tracker",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/flight-disruption-expense-tracker",
+    "description": "A PDF + Excel log for every expense caused by a flight delay, cancellation, or overbooking — flight details, a meals/hotel/transport expense breakdown with an automatic total, and an evidence checklist.",
+    "keywords": [
+      "flight disruption expense tracker",
+      "track expenses after flight delay",
+      "airline meal and hotel expense log",
+      "flight cancellation expense template",
+      "overbooking expense tracker"
+    ]
+  },
+  {
+    "title": "Flight Disruption Communication Log",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/flight-disruption-communication-log",
+    "description": "A PDF + Excel log of every conversation with the airline during a claim — date, contact, channel, what was said, next step agreed, reference/complaint IDs — plus a separate promises-and-follow-up tracker with deadlines.",
+    "keywords": [
+      "flight disruption communication log",
+      "track calls with airline about claim",
+      "airline complaint reference tracker",
+      "log conversations with airline",
+      "follow up tracker for flight claim"
+    ]
+  },
+  {
+    "title": "Lost Luggage Inventory Template",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/lost-luggage-inventory-template",
+    "description": "A PDF + Excel inventory of everything inside lost or damaged luggage, to justify a Montreal Convention baggage claim — item, brand, value, purchase date, receipt availability, and an automatic total declared value.",
+    "keywords": [
+      "lost luggage inventory template",
+      "list items in lost suitcase for claim",
+      "montreal convention baggage claim inventory",
+      "damaged luggage contents list",
+      "lost bag value template"
+    ]
+  },
+  {
+    "title": "Travel Delay Insurance Claim Worksheet",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/travel-delay-insurance-claim-worksheet",
+    "description": "An Excel worksheet that organises everything needed to claim against a travel insurance policy or credit card travel-delay benefit — policy details, covered vs. not-covered expenses with an automatic total, required documentation, and a claim status tracker.",
+    "keywords": [
+      "travel delay insurance claim worksheet",
+      "credit card travel delay benefit claim",
+      "travel insurance claim organizer",
+      "covered vs not covered travel expenses",
+      "travel delay claim tracker"
+    ]
+  },
+  {
+    "title": "Air Passenger Rights Compensation Claim Pack",
+    "type": "template",
+    "block": "flights-travel",
+    "url": "/templates/air-passenger-rights-claim-pack",
+    "description": "Claim letters for flight delays, cancellations, and lost baggage, plus an Excel tracker to total your reimbursable expenses.",
+    "keywords": [
+      "air passenger rights claim pack",
+      "flight delay claim letter template",
+      "flight cancellation claim letter",
+      "lost baggage claim letter",
+      "reimbursable expenses tracker for flight claim"
+    ]
+  },
+  {
+    "title": "Airline Complaint Letter (Australia)",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/au-airline-complaint",
+    "description": "Generate a realistic, ACL-grounded complaint letter to an Australian airline for a delay, cancellation, or baggage issue — framed as a claim, not an EU261-style guaranteed payout, and asking for a refund over a voucher where warranted. Free.",
+    "keywords": [
+      "airline complaint letter australia",
+      "acl airline complaint generator",
+      "australian flight delay complaint letter",
+      "generate letter to airline australia",
+      "flight refund instead of voucher letter"
+    ]
+  },
+  {
+    "title": "EU261 Flight Delay/Cancellation Compensation Claim",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/eu261-flight-compensation-claim",
+    "description": "Generate a formal EU261 flight compensation claim under Regulation (EC) No 261/2004 — the correct €250-600 distance tier, duty-of-care expenses, and why technical/crew faults aren't extraordinary circumstances. Free.",
+    "keywords": [
+      "eu261 compensation claim letter generator",
+      "eu261 flight delay claim letter",
+      "flight cancellation compensation letter eu",
+      "regulation ec 261/2004 claim generator",
+      "extraordinary circumstances flight claim letter"
+    ]
+  },
+  {
+    "title": "EU Baggage Claim Letter (Montreal Convention)",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/eu-baggage-claim-montreal",
+    "description": "Generate a formal baggage claim under the Montreal Convention for lost, delayed or damaged luggage — the 1,519 SDR liability cap, the 7-day damage deadline, and the 21-day lost-baggage threshold. Free.",
+    "keywords": [
+      "montreal convention baggage claim letter generator",
+      "lost luggage claim letter",
+      "damaged baggage claim letter airline",
+      "sdr liability cap baggage claim",
+      "21 day lost baggage claim letter"
+    ]
+  },
+  {
+    "title": "EU Train Delay Compensation Claim",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/eu-train-delay-claim",
+    "description": "Generate a formal EU rail delay compensation claim under Regulation (EU) 2021/782 — the 25% (60-119 min) and 50% (120+ min) refund tiers, duty of care that applies even in force majeure, and rerouting for missed connections. Free.",
+    "keywords": [
+      "eu train delay compensation claim generator",
+      "rail delay refund letter eu",
+      "train delay compensation letter",
+      "regulation eu 2021/782 claim",
+      "missed connection train rerouting claim"
+    ]
+  },
+  {
+    "title": "EU Package Holiday Complaint & Compensation Claim",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/eu-package-holiday-complaint",
+    "description": "Generate a formal package-holiday complaint under Directive (EU) 2015/2302 — the organiser is liable for the whole package, significant changes can be rejected for a full refund, and insolvency protection covers repatriation. Free.",
+    "keywords": [
+      "package holiday complaint letter generator",
+      "package travel directive complaint",
+      "holiday organiser refund letter",
+      "package holiday compensation claim",
+      "significant change package holiday refund"
+    ]
+  },
+  {
+    "title": "Flight Disruption Compensation & Reimbursement Letter",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/flight-disruption-compensation-reimbursement",
+    "description": "Generate a formal flight disruption letter for delay, cancellation, overbooking, missed connection, or baggage claims — EU261, UK261, US, or Australia — plus duty-of-care reimbursement, in one letter. Free.",
+    "keywords": [
+      "flight disruption compensation letter generator",
+      "flight delay and baggage claim letter",
+      "denied boarding compensation letter",
+      "duty of care reimbursement letter airline",
+      "one letter for flight delay and baggage claim"
+    ]
+  },
+  {
+    "title": "Flight Disruption Evidence Checklist",
+    "type": "checklist",
+    "block": "flights-travel",
+    "url": "/checklists/flight-disruption-evidence-checklist",
+    "description": "A free checklist for the evidence a flight delay, cancellation, or overbooking claim needs — boarding pass, written notice, receipts — plus the claim deadlines that genuinely vary by jurisdiction (there's no single worldwide deadline). No account required.",
+    "keywords": [
+      "flight disruption evidence checklist",
+      "what evidence do i need for flight delay claim",
+      "flight cancellation claim deadline by country",
+      "evidence for overbooking claim",
+      "boarding pass receipts flight claim checklist"
+    ]
+  },
+  {
+    "title": "Baggage Claim Checklist",
+    "type": "checklist",
+    "block": "flights-travel",
+    "url": "/checklists/baggage-claim-checklist",
+    "description": "A free checklist for a lost or damaged baggage claim — getting your PIR number before you leave the airport, the photos to take, the 7-day/21-day claim windows, and the Montreal Convention liability cap. No account required.",
+    "keywords": [
+      "baggage claim checklist",
+      "lost luggage checklist airport",
+      "pir number lost baggage",
+      "damaged baggage claim photos checklist",
+      "montreal convention baggage claim deadline"
+    ]
+  },
+  {
+    "title": "Codeshare Flight Responsibility Checklist",
+    "type": "checklist",
+    "block": "flights-travel",
+    "url": "/checklists/codeshare-responsibility-checklist",
+    "description": "A free checklist for working out which airline is actually responsible on a codeshare flight — the marketing carrier vs. the operating carrier — and why claiming from the wrong one wastes time. No account required.",
+    "keywords": [
+      "codeshare flight responsibility checklist",
+      "which airline is responsible codeshare flight",
+      "marketing carrier vs operating carrier claim",
+      "codeshare flight who do i claim from",
+      "codeshare flight complaint checklist"
+    ]
+  },
+  {
+    "title": "Duty of Care Checklist",
+    "type": "checklist",
+    "block": "flights-travel",
+    "url": "/checklists/duty-of-care-checklist",
+    "description": "A free checklist for what an airline owes you during a long delay — meals, hotel, calls — regardless of cause, and why duty-of-care reimbursement is separate from statutory cash compensation. No account required.",
+    "keywords": [
+      "duty of care checklist airline",
+      "what airline owes during long delay",
+      "meals and hotel during flight delay",
+      "duty of care vs compensation flight delay",
+      "airline duty of care checklist"
+    ]
+  },
+  {
+    "title": "UK261 Claim Checklist",
+    "type": "checklist",
+    "block": "flights-travel",
+    "url": "/checklists/uk261-claim-checklist",
+    "description": "A free checklist to check whether UK261 applies to your flight, confirm the right airline to claim from, and escalate for free via CEDR or AviationADR if the airline refuses or ignores you. No account required.",
+    "keywords": [
+      "uk261 claim checklist",
+      "does uk261 apply to my flight",
+      "cedr or aviationadr flight complaint",
+      "uk flight delay compensation checklist",
+      "escalate uk261 claim free"
+    ]
+  },
+  {
+    "title": "Flights & Travel Directory",
+    "type": "directory",
+    "block": "flights-travel",
+    "url": "/directory/flights-travel",
+    "description": "Official passenger-rights sources, airline complaint portals, aviation regulators, baggage-claim resources, live flight-status/weather tools to verify what an airline told you, and travel insurance dispute bodies.",
+    "keywords": [
+      "flights and travel directory",
+      "airline complaint portal",
+      "aviation regulator contact",
+      "flight status verification tool",
+      "travel insurance dispute body"
+    ]
+  },
+  {
+    "title": "Why Do Airlines Overbook Flights? The Revenue Algorithm Behind the Chaos",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/why-airlines-overbook-flights",
+    "description": "Airlines overbook flights on purpose, not by accident. Here's how the no-show prediction algorithms actually work, when they fail, and how to protect yourself from being bumped.",
+    "keywords": [
+      "why do airlines overbook flights",
+      "how does flight overbooking work",
+      "no-show prediction algorithm airline",
+      "how to avoid getting bumped from flight",
+      "airline overbooking explained"
+    ]
+  },
+  {
+    "title": "How Much Do Airlines Pay for Overbooked Flights? Limits and the 400% Rule",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/overbooked-flight-compensation-400-percent-rule",
+    "description": "The exact DOT compensation tiers for involuntary denied boarding — $1,075 and $2,150 caps, how the 200%/400% math works, and two fully worked examples.",
+    "keywords": [
+      "how much do airlines pay for overbooked flights",
+      "denied boarding compensation amount",
+      "dot 400% rule flight compensation",
+      "involuntary denied boarding pay",
+      "bumped from flight compensation amount"
+    ]
+  },
+  {
+    "title": "Passenger Rights in the U.S.: What the Airline Owes You During Overbooking",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/duty-of-care-overbooking-passenger-rights",
+    "description": "Cash compensation isn't the whole picture. Airlines also owe bumped passengers meals, hotels, and transport — regardless of cause. Here's what you're entitled to and how to claim it if they refuse.",
+    "keywords": [
+      "what does airline owe you when bumped",
+      "passenger rights overbooking us",
+      "meals and hotel after being bumped from flight",
+      "denied boarding rights",
+      "airline refuses to pay bumped passenger"
+    ]
+  },
+  {
+    "title": "U.S. Passenger Rights Audit: DOT Rule Enforcement and Performance Breakdown of Legacy vs. LCC Carriers",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/us-dot-passenger-rights-carrier-audit",
+    "description": "How the DOT's automatic refund rule actually works, what counts as a 'significant change,' and how legacy carriers, Southwest, and ultra-low-cost carriers compare on disruption handling.",
+    "keywords": [
+      "dot automatic refund rule",
+      "what counts as significant change flight",
+      "legacy airline vs low cost carrier delay handling",
+      "us passenger rights flight delay",
+      "dot flight refund rule explained"
+    ]
+  },
+  {
+    "title": "EC 261/2004 Regulatory Guide: Compensation Parameters, Strike Jurisprudence, and European Ancillary Fee Legality",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/eu261-regulatory-guide-strike-jurisprudence",
+    "description": "How EU261 compensation tiers actually work, why the CJEU says staff strikes don't excuse airlines from paying, and what the law says about cabin baggage fees.",
+    "keywords": [
+      "eu261 compensation tiers explained",
+      "does staff strike excuse flight compensation",
+      "cjeu strike flight delay ruling",
+      "cabin baggage fees legality eu",
+      "eu261 regulatory guide"
+    ]
+  },
+  {
+    "title": "UK261 Consumer Framework: Passenger Entitlements, CAA Oversight, and Alternative Dispute Resolution (ADR) Audits",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/uk261-consumer-framework-adr-audit",
+    "description": "How UK261 works post-Brexit, why the CAA won't adjudicate your individual claim, and which ADR scheme — CEDR or AviationADR — actually covers your airline.",
+    "keywords": [
+      "how does uk261 work after brexit",
+      "caa flight complaint",
+      "cedr or aviationadr which one",
+      "uk261 passenger rights explained",
+      "uk flight delay compensation scheme"
+    ]
+  },
+  {
+    "title": "Australian Sky Regulatory Regime: ACCC Enforcement, Consumer Law Rights, and Systemic Compensation Deficits",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/australia-accc-flight-compensation-gap",
+    "description": "Australia has no fixed flight compensation law like EU261 or UK261. Here's how the ACCC actually enforces the Australian Consumer Law instead — and what the Qantas 'ghost flights' case really cost the airline.",
+    "keywords": [
+      "does australia have flight compensation law",
+      "accc flight complaint",
+      "australian consumer law flight delay",
+      "qantas ghost flights case",
+      "flight compensation australia"
+    ]
+  },
+  {
+    "title": "The 1999 Montreal Convention: Carrier Liability Limits, SDR Calculations, and Baggage Claims Protocol",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/montreal-convention-liability-limits-baggage-protocol",
+    "description": "The exact SDR liability caps for international baggage and passenger delay claims, updated December 2024, plus the strict deadlines that determine whether you keep your legal claim at all.",
+    "keywords": [
+      "montreal convention liability limits",
+      "sdr calculation baggage claim",
+      "international baggage claim deadline",
+      "montreal convention baggage claim",
+      "airline liability cap international flight"
+    ]
+  },
+  {
+    "title": "Codeshare Legal Audits: Marketing vs. Operating Carrier Liability and Transatlantic Jurisdictional Applicability",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/codeshare-operating-carrier-liability",
+    "description": "On a codeshare flight, the airline you booked with and the airline that actually flew you can be different companies — and only one of them is legally liable for your claim.",
+    "keywords": [
+      "marketing carrier vs operating carrier liability",
+      "codeshare flight who is liable",
+      "codeshare flight legal claim",
+      "which airline to sue codeshare flight",
+      "codeshare flight complaint"
+    ]
+  },
+  {
+    "title": "Lost Luggage Compensation Guide: DOT Limits and the Montreal Convention",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/lost-luggage-compensation-dot-montreal-guide",
+    "description": "Your baggage compensation cap depends entirely on whether your flight is domestic or international — $4,700 under DOT rules, or 1,519 SDR under the Montreal Convention. Here's how to tell which applies.",
+    "keywords": [
+      "lost luggage compensation limit",
+      "dot baggage liability limit",
+      "domestic vs international baggage claim limit",
+      "how much can i claim for lost luggage",
+      "montreal convention vs dot baggage rules"
+    ]
+  },
+  {
+    "title": "When Is Luggage Officially Considered Lost? Timelines and Statutory Rights",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/luggage-lost-vs-delayed-21-day-rule",
+    "description": "Your bag isn't 'lost' the moment it doesn't show up on the carousel — it's legally 'delayed' for up to 21 days. Here's exactly when your rights change, and what to claim at each stage.",
+    "keywords": [
+      "when is luggage officially lost",
+      "21 day rule lost luggage",
+      "delayed baggage vs lost baggage",
+      "how long before luggage is considered lost",
+      "delayed bag claim rights"
+    ]
+  },
+  {
+    "title": "Airport Immediate Action Protocol: How to Properly File a P.I.R.",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/airport-pir-filing-protocol",
+    "description": "Leaving the arrivals hall without a stamped Property Irregularity Report can quietly cost you your entire baggage claim. Here's exactly what to do before you exit the terminal.",
+    "keywords": [
+      "how to file a pir at airport",
+      "property irregularity report",
+      "what to do if luggage is missing at airport",
+      "pir report baggage claim",
+      "file pir before leaving airport"
+    ]
+  },
+  {
+    "title": "Airline Baggage Depreciation Rules and Item Valuation Mechanics",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/airline-baggage-depreciation-valuation",
+    "description": "Airlines don't pay retail price for lost items — they pay depreciated actual cash value. Here's the formula they use, and how to document your claim so the depreciation cut is fair.",
+    "keywords": [
+      "airline baggage depreciation rules",
+      "how airlines value lost items",
+      "actual cash value lost luggage",
+      "airline lost item valuation formula",
+      "why did airline pay less for lost bag"
+    ]
+  },
+  {
+    "title": "Non-Covered Items: What Airlines Will Never Pay For in Checked Baggage",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/non-covered-checked-baggage-items",
+    "description": "Cash, jewelry, electronics, and medication packed in a checked bag are excluded from airline liability by contract — before you fly, know what to keep in your carry-on instead.",
+    "keywords": [
+      "items not covered by airline baggage claim",
+      "what airlines won't pay for lost baggage",
+      "excluded items checked baggage",
+      "electronics lost in checked bag claim",
+      "what to keep in carry-on instead of checked bag"
+    ]
+  },
+  {
+    "title": "Tarmac Delay Fines: American Airlines, Frontier, and the Interline Gap",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/us-tarmac-fines-legacy-ulcc-interline-gap",
+    "description": "A $4.1M fine against American and $1.5M against Frontier show what actual DOT enforcement looks like — and why a stranded ULCC passenger waits longer than a stranded legacy-carrier one.",
+    "keywords": [
+      "tarmac delay fines airlines",
+      "american airlines tarmac delay fine",
+      "frontier tarmac delay fine",
+      "dot tarmac delay enforcement",
+      "ultra low cost carrier tarmac delay"
+    ]
+  },
+  {
+    "title": "Civil Aviation Authority Oversight and ADR Regimes: British Airways vs. UK Low-Cost Carriers",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/jet2-uk261-adr-gap-non-member-carriers",
+    "description": "Most UK carriers belong to CEDR or AviationADR for free dispute resolution. Jet2 doesn't — here's exactly what that means for your claim, and how EasyJet's disputes differ from BA's.",
+    "keywords": [
+      "jet2 uk261 adr",
+      "is jet2 in cedr or aviationadr",
+      "british airways vs easyjet complaint process",
+      "uk low cost carrier flight complaint",
+      "airline not in adr scheme"
+    ]
+  },
+  {
+    "title": "Codeshare Flights and Alliance Networks: Jurisdiction and Carrier Liability under the Montreal Convention",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/montreal-convention-article-33-jurisdiction-forums",
+    "description": "Article 33 of the Montreal Convention gives you five different places you can legally file a claim on an international codeshare itinerary — including, sometimes, a country neither airline is based in.",
+    "keywords": [
+      "where can i sue an airline",
+      "montreal convention article 33",
+      "codeshare flight jurisdiction claim",
+      "which country to file airline claim",
+      "international flight claim jurisdiction"
+    ]
+  },
+  {
+    "title": "Claims Resolution under EU Regulation EC 261/2004: Legacy Networks vs. Ultra Low-Cost Carriers",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/ryanair-anti-assignment-spain-baggage-fines",
+    "description": "Ryanair and Wizz Air make it procedurally harder to use a claims agent. Spain fined five carriers €179 million over cabin bag fees — and the European Commission pushed back. Here's the actual state of play.",
+    "keywords": [
+      "ryanair anti assignment clause",
+      "can i use a claims agent against ryanair",
+      "spain baggage fee fine airlines",
+      "wizz air claims agent",
+      "cabin bag fee fine europe"
+    ]
+  },
+  {
+    "title": "Automatic Refunds and the New DOT Rules for Significant Flight Delays",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/automatic-refunds-dot-significant-delay",
+    "description": "Airlines can't force you into a travel voucher when your flight is significantly delayed. Here's exactly how to assert your right to a cash refund instead, step by step.",
+    "keywords": [
+      "automatic refund flight delay dot rule",
+      "airline forcing me to take voucher instead of refund",
+      "significant delay refund rights",
+      "dot cash refund flight rule",
+      "how to get cash refund instead of voucher"
+    ]
+  },
+  {
+    "title": "Extraordinary Circumstances and EC261/UK261 Flight Delay Jurisprudence",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/extraordinary-circumstances-technical-defect-defense",
+    "description": "A mechanical fault isn't automatically an excuse. The CJEU has drawn a strict line between what counts as extraordinary and what's just the ordinary risk of running an airline.",
+    "keywords": [
+      "extraordinary circumstances flight delay",
+      "technical fault excuse airline compensation",
+      "cjeu extraordinary circumstances ruling",
+      "mechanical fault flight delay compensation",
+      "is technical fault extraordinary circumstance"
+    ]
+  },
+  {
+    "title": "Tarmac Delays: Federal Limits and Passenger Care Requirements",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/tarmac-delay-federal-limits",
+    "description": "An aircraft can't legally sit on the tarmac indefinitely — 3 hours domestic, 4 hours international, with mandatory food, water, and updates along the way.",
+    "keywords": [
+      "how long can a plane sit on the tarmac",
+      "tarmac delay rule 3 hours",
+      "tarmac delay federal limit",
+      "passenger rights during tarmac delay",
+      "mandatory food and water tarmac delay"
+    ]
+  },
+  {
+    "title": "Mandatory Duty of Care: Hotel, Meal, and Transit Rights During Delays",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/duty-of-care-hotel-meal-transit-rights",
+    "description": "Weather, volcanic ash, ATC strikes — none of it excuses an airline from feeding and housing you. The McDonagh v. Ryanair ruling makes that obligation unconditional and unlimited.",
+    "keywords": [
+      "duty of care hotel and meal flight delay",
+      "mcdonagh v ryanair ruling",
+      "airline must pay hotel during delay",
+      "duty of care unlimited obligation",
+      "weather delay hotel and meal rights"
+    ]
+  },
+  {
+    "title": "Missed Connections, Codeshares, and Technical Evidences in Delay Claims",
+    "type": "blog",
+    "block": "flights-travel",
+    "url": "/blog/missed-connections-through-ticket-evidence",
+    "description": "A 2-minute delay on your first flight can still entitle you to full compensation if it costs you an 11-hour delay at your final destination — but only if you booked the right way.",
+    "keywords": [
+      "missed connection flight compensation",
+      "through ticket vs separate ticket compensation",
+      "connecting flight delay claim",
+      "missed connection codeshare compensation",
+      "booking through ticket for compensation"
+    ]
   }
 ]
