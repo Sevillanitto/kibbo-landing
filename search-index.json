@@ -1267,5 +1267,649 @@
       "missed connection codeshare compensation",
       "booking through ticket for compensation"
     ]
+  },
+  {
+    "title": "Freelancer Client Vetting Checklist",
+    "type": "template",
+    "block": "employment",
+    "url": "/templates/freelancer-client-vetting",
+    "description": "A 6-sheet Excel workbook that scores a new client against 20 red flags before you accept the work — with an automatic Green / Amber / Red verdict and the questions to ask first.",
+    "keywords": [
+      "freelancer client vetting checklist",
+      "red flags before accepting new client",
+      "vet a new client before freelance work",
+      "freelance client risk score",
+      "should i accept this client freelance"
+    ]
+  },
+  {
+    "title": "Job Scam Incident Report",
+    "type": "template",
+    "block": "employment",
+    "url": "/templates/job-scam-incident-report",
+    "description": "Document a fraudulent job offer properly — recruiter and company details, a payment request log, and an evidence checklist, structured for what the FTC and IC3 ask for. PDF + Word.",
+    "keywords": [
+      "job scam incident report template",
+      "report a job scam ftc",
+      "ic3 job scam report",
+      "recruiter scam evidence log",
+      "fake job offer report template"
+    ]
+  },
+  {
+    "title": "Non-Compete Legal Review Worksheet",
+    "type": "template",
+    "block": "employment",
+    "url": "/templates/non-compete-legal-review-worksheet",
+    "description": "Know exactly what your non-compete clause says — duration, geographic scope, restricted activity, compensation offered — plus a red flags checklist, before you sign or push back. PDF + Word.",
+    "keywords": [
+      "non-compete legal review worksheet",
+      "review my non-compete clause",
+      "non-compete duration and scope checklist",
+      "is my non-compete enforceable",
+      "questions to ask lawyer about non-compete"
+    ]
+  },
+  {
+    "title": "Employment Communication Log",
+    "type": "template",
+    "block": "employment",
+    "url": "/templates/employment-communication-log",
+    "description": "A dated, chronological record of what your employer actually said — date, contact, channel, what was agreed, next steps promised — plus a Key Contacts tab. PDF + Excel.",
+    "keywords": [
+      "employment communication log",
+      "track what employer said",
+      "record of conversations with employer",
+      "employer promises tracker",
+      "hr communication log template"
+    ]
+  },
+  {
+    "title": "DOL Wage Theft Complaint (FLSA)",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/dol-wage-complaint",
+    "description": "Generate a clear, factual wage complaint narrative for the US Department of Labor's Wage and Hour Division — unpaid overtime, off-the-clock work, minimum wage, or illegal tip deductions under the FLSA. Free.",
+    "keywords": [
+      "dol wage theft complaint generator",
+      "report unpaid overtime to department of labor",
+      "flsa wage complaint letter",
+      "off the clock work complaint",
+      "illegal tip deduction complaint"
+    ]
+  },
+  {
+    "title": "Unpaid Wage & Compensation Demand Letter",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/unpaid-wage-compensation-demand",
+    "description": "Generate a formal demand letter for unpaid wages, overtime, accrued vacation, unpaid trial shifts, or unpaid mandatory training time. Free.",
+    "keywords": [
+      "unpaid wages demand letter generator",
+      "employer won't pay my final paycheck letter",
+      "unpaid overtime demand letter",
+      "unpaid commission letter",
+      "unpaid trial shift demand letter"
+    ]
+  },
+  {
+    "title": "Wrongful/Unlawful Wage Deduction Letter",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/wrongful-wage-deduction-letter",
+    "description": "Generate a formal letter disputing a wage deduction — till shortage, damaged equipment, uniform cost, or an unexplained deduction taken without valid consent. Free.",
+    "keywords": [
+      "wrongful wage deduction letter generator",
+      "employer deducted money from my paycheck",
+      "till shortage deduction dispute",
+      "unlawful deduction from wages letter",
+      "dispute unauthorized pay deduction"
+    ]
+  },
+  {
+    "title": "Employment Reference Request",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/employment-reference-request",
+    "description": "Generate a polite but firm request for an employment reference from a former employer who's gone quiet or refused to provide one. Free.",
+    "keywords": [
+      "employment reference request letter generator",
+      "former employer won't give reference",
+      "request job reference letter",
+      "employer refuses to provide reference",
+      "reference request template"
+    ]
+  },
+  {
+    "title": "Constructive Dismissal Complaint Letter",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/constructive-dismissal-complaint",
+    "description": "Generate a formal letter documenting the case for constructive dismissal (constructive discharge in the US) — a single serious incident or a pattern of employer conduct that left resignation as the only option. Free.",
+    "keywords": [
+      "constructive dismissal complaint letter generator",
+      "forced to resign because of employer",
+      "constructive discharge letter",
+      "document reasons for resigning",
+      "constructive dismissal uk 2 year rule"
+    ]
+  },
+  {
+    "title": "Workplace Harassment Complaint Letter",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/workplace-harassment-complaint",
+    "description": "Generate a formal harassment complaint letter to HR — verbal harassment, unwanted contact, discriminatory harassment, or retaliation — requesting a specific, timely response. Free.",
+    "keywords": [
+      "workplace harassment complaint letter generator",
+      "report harassment to hr",
+      "formal harassment complaint template",
+      "retaliation after complaint letter",
+      "discriminatory harassment complaint hr"
+    ]
+  },
+  {
+    "title": "Flexible Working Request",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/flexible-working-request",
+    "description": "Generate a formal request for remote/hybrid work, reduced hours, changed start/end times, or a compressed work week — jurisdiction-aware on what's a statutory right to ask vs. a workplace request. Free.",
+    "keywords": [
+      "flexible working request letter generator",
+      "request remote work letter",
+      "statutory right to request flexible working",
+      "ask for reduced hours letter",
+      "compressed work week request letter"
+    ]
+  },
+  {
+    "title": "Employment Data Access Request (GDPR/Privacy)",
+    "type": "generator",
+    "block": "employment",
+    "url": "/generate/employment-data-access-request",
+    "description": "Generate a formal data access, deletion, or unauthorized-sharing complaint letter covering the full candidate-to-former-employee data lifecycle — GDPR-aware for EU/UK, general elsewhere. Free.",
+    "keywords": [
+      "employment subject access request generator",
+      "request my hr data gdpr",
+      "delete my cv from employer records",
+      "gdpr data request former employer",
+      "employer shared my cv without consent complaint"
+    ]
+  },
+  {
+    "title": "Job Offer Scam Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/job-offer-scam-checklist",
+    "description": "A free checklist to spot a fake job offer before you respond — and exactly what to do the moment you've identified one. No account required.",
+    "keywords": [
+      "job offer scam checklist",
+      "how to spot a fake job offer",
+      "red flags fake job offer",
+      "is this job offer a scam",
+      "job scam warning signs"
+    ]
+  },
+  {
+    "title": "Before Sharing Your SSN Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/before-sharing-ssn-checklist",
+    "description": "A free checklist for when it's actually legitimate for an employer to ask for your SSN or national ID number — and what to do if you've already shared it too early. No account required.",
+    "keywords": [
+      "before sharing ssn with employer checklist",
+      "when can employer ask for ssn",
+      "shared my ssn too early job application",
+      "is it safe to give employer my social security number",
+      "ssn request during hiring"
+    ]
+  },
+  {
+    "title": "Before Signing an Employment Contract Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/before-signing-employment-contract-checklist",
+    "description": "A free checklist for the core terms and restrictive clauses to verify before signing an employment contract, including UK-specific notes on written statements and notice periods. No account required.",
+    "keywords": [
+      "before signing employment contract checklist",
+      "what to check before signing job offer",
+      "employment contract red flags",
+      "notice period checklist uk",
+      "restrictive clauses employment contract"
+    ]
+  },
+  {
+    "title": "Background Check Preparation Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/background-check-preparation-checklist",
+    "description": "A free checklist to prepare for an employment background check, including UK DBS check levels, what to do if something comes back incorrect, and red flags to watch for. No account required.",
+    "keywords": [
+      "background check preparation checklist",
+      "dbs check levels explained",
+      "background check came back wrong",
+      "prepare for employment background check",
+      "dbs check rights"
+    ]
+  },
+  {
+    "title": "Non-Compete Clause Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/non-compete-clause-checklist",
+    "description": "A free checklist to read a non-compete clause properly — duration, geographic scope, restricted activity, and whether separate compensation was offered for it. No account required.",
+    "keywords": [
+      "non-compete clause checklist",
+      "what to check in non-compete clause",
+      "non-compete duration and geographic scope",
+      "was i paid for my non-compete",
+      "non-compete restricted activity checklist"
+    ]
+  },
+  {
+    "title": "Gig Worker Earnings Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/gig-worker-earnings-checklist",
+    "description": "A free checklist to calculate your real gig work take-home pay after platform fees and expenses, common miscalculations to avoid, and why your worker classification matters. No account required.",
+    "keywords": [
+      "gig worker earnings checklist",
+      "real take home pay after platform fees",
+      "gig worker classification matters",
+      "track gig economy earnings",
+      "uber driver real hourly pay"
+    ]
+  },
+  {
+    "title": "Before Sending Your CV to a Third Party Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/before-sending-cv-third-party-checklist",
+    "description": "A free checklist to verify a recruitment or relocation agency is legitimate before sending your CV, ID, or financial details. No account required.",
+    "keywords": [
+      "before sending cv to third party checklist",
+      "is this recruitment agency legitimate",
+      "verify recruiter before sharing cv",
+      "relocation agency scam check",
+      "sharing id with recruiter safe"
+    ]
+  },
+  {
+    "title": "GDPR Job Application Privacy Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/gdpr-job-application-privacy-checklist",
+    "description": "A free checklist for your GDPR privacy rights during a job application in the EU/UK — what to expect at application stage, after rejection, and if your CV was shared without consent. No account required.",
+    "keywords": [
+      "gdpr job application privacy checklist",
+      "privacy rights during job application",
+      "cv shared without consent gdpr",
+      "data rights after job rejection",
+      "gdpr job applicant rights"
+    ]
+  },
+  {
+    "title": "Before Accepting a Trial Shift Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/before-accepting-trial-shift-checklist",
+    "description": "A free checklist for what to confirm before and during an unpaid trial shift, and what to do if it should have been paid. No account required.",
+    "keywords": [
+      "before accepting trial shift checklist",
+      "is an unpaid trial shift legal",
+      "unpaid trial shift should have been paid",
+      "what to confirm before trial shift",
+      "trial shift rights"
+    ]
+  },
+  {
+    "title": "Before Signing a Contractor Agreement Checklist",
+    "type": "checklist",
+    "block": "employment",
+    "url": "/checklists/before-signing-contractor-agreement-checklist",
+    "description": "A free checklist for the signs you may actually be misclassified as an independent contractor, and why classification matters for your protections. No account required.",
+    "keywords": [
+      "before signing contractor agreement checklist",
+      "am i misclassified as independent contractor",
+      "contractor vs employee classification signs",
+      "independent contractor agreement red flags",
+      "worker misclassification checklist"
+    ]
+  },
+  {
+    "title": "Employment Directory",
+    "type": "directory",
+    "block": "employment",
+    "url": "/directory/employment",
+    "description": "Official employment authorities, job scam reporting portals, background check resources, privacy/data protection bodies, wage information, and employment complaint routes for the US, UK, Australia, and EU.",
+    "keywords": [
+      "employment directory",
+      "report a job scam",
+      "employment authority contact",
+      "wage and hour complaint agency",
+      "employment complaint routes by country"
+    ]
+  },
+  {
+    "title": "Privacy Audits and Background Verification: FCRA Compliance Across Job Portals",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/fcra-job-portal-automated-screening-compliance",
+    "description": "When Indeed or LinkedIn plugs in an automated background screening tool, that integration itself falls under FCRA — and a faulty name-matching algorithm can trigger the same statutory damages as a human error.",
+    "keywords": [
+      "fcra job portal background screening",
+      "indeed linkedin background check compliance",
+      "automated background screening fcra",
+      "job portal name matching error",
+      "fcra job platform integration"
+    ]
+  },
+  {
+    "title": "Regulatory Supervision of Recruitment Agencies and Umbrella Companies Under the EAS Inspectorate and IR35",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/uk-umbrella-companies-ir35-deductions",
+    "description": "Your umbrella company can't quietly deduct employer's National Insurance from your agreed contract rate without disclosing it — and 'loan' or 'grant' schemes instead of PAYE are a tax avoidance red flag, not a perk.",
+    "keywords": [
+      "umbrella company deductions ir35",
+      "umbrella company national insurance deduction",
+      "eas inspectorate umbrella company",
+      "loan scheme instead of paye red flag",
+      "umbrella company hidden deductions"
+    ]
+  },
+  {
+    "title": "Algorithmic Governance in Gig Economy Platforms: Uber, Bolt, and Deliveroo Under GDPR Article 22",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/algorithmic-firing-gdpr-article-22-platform-work",
+    "description": "An algorithm suspending or terminating your gig account isn't the end of the conversation — GDPR gives you the right to demand a human actually looks at it, and the Platform Work Directive makes that mandatory.",
+    "keywords": [
+      "algorithm fired me gig app",
+      "gdpr article 22 automated decision",
+      "uber deliveroo account deactivated by algorithm",
+      "right to human review gig platform",
+      "platform work directive algorithmic management"
+    ]
+  },
+  {
+    "title": "Labor-Hire Licensing Regimes and Award Compliance: FWO Enforcement of Service Marketplaces",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/au-labor-hire-licensing-gig-deactivation-rights",
+    "description": "A rideshare or delivery worker unfairly deactivated now has 21 days to challenge it at the Fair Work Commission — and the first successful case under this new law has already been decided.",
+    "keywords": [
+      "rideshare driver unfairly deactivated australia",
+      "fair work commission gig deactivation",
+      "challenge gig platform deactivation 21 days",
+      "delivery driver deactivation rights australia",
+      "fwo labor hire licensing"
+    ]
+  },
+  {
+    "title": "Financial Liability & Crypto Transactions in Task Scams under the ACL",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/au-crypto-task-scam-financial-liability",
+    "description": "Once you've voluntarily sent crypto to a task scam, the transaction is irreversible on the blockchain — and Australian consumer law can't reach an offshore operator anyway. Here's what recourse actually exists.",
+    "keywords": [
+      "crypto task scam job offer",
+      "sent crypto to task scam recourse",
+      "task scam job australia",
+      "irreversible crypto scam transaction",
+      "online task job scam crypto"
+    ]
+  },
+  {
+    "title": "Statutory Limits of Unpaid Trial Shifts Under the Fair Work Ombudsman (FWO)",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/au-unpaid-trial-shifts-fwo-limits",
+    "description": "An unpaid trial in Australia can legally last a few hours to demonstrate a skill — not a full unsupervised Friday night shift. Here's the FWO's actual line, and how to recover unpaid wages if it's crossed.",
+    "keywords": [
+      "unpaid trial shift australia legal limit",
+      "fair work ombudsman unpaid trial",
+      "how long can an unpaid trial shift be",
+      "recover unpaid wages trial shift australia",
+      "unpaid trial shift rules fwo"
+    ]
+  },
+  {
+    "title": "Prohibition of Advertising Job Vacancies Below Statutory Minimum Rates",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/au-job-ad-minimum-rate-ban-536aa",
+    "description": "An employer can't legally advertise a job at a rate that undercuts the award — and the penalties for getting caught are five times higher for a company than for an individual.",
+    "keywords": [
+      "job ad below minimum wage illegal",
+      "advertising job below award rate",
+      "section 536aa fair work act",
+      "job advertisement minimum rate law",
+      "underpaid job ad australia"
+    ]
+  },
+  {
+    "title": "Legality of Recruitment Costs and Background Checks Under Section 325",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/au-recruitment-costs-background-checks-section-325",
+    "description": "An employer can require a police check before you're hired — but forcing an existing employee to pay for a new one just for internal auditing is generally an unlawful deduction.",
+    "keywords": [
+      "employer making me pay for background check",
+      "section 325 fair work act",
+      "unlawful deduction police check cost",
+      "employer charging for police check",
+      "recruitment cost deduction australia"
+    ]
+  },
+  {
+    "title": "GDPR Violations by Intermediaries: Sharing CVs Without Explicit Consent",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/gdpr-cv-sharing-without-consent-intermediaries",
+    "description": "Recruitment agencies forwarding your CV to client companies without telling you isn't standard practice — it's a GDPR violation that can trigger fines up to €20 million or 4% of global turnover.",
+    "keywords": [
+      "recruitment agency shared my cv without consent",
+      "gdpr cv sharing violation",
+      "recruiter forwarded cv without permission",
+      "cv shared without consent complaint",
+      "gdpr fine recruitment agency"
+    ]
+  },
+  {
+    "title": "Restrictions on Health Data Collection in EU Recruitment Processes",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/eu-health-data-recruitment-restrictions",
+    "description": "A general medical questionnaire as a hiring condition is prohibited by default under GDPR — and even where a check is legitimate, HR should only ever see 'fit for duty,' never your actual medical file.",
+    "keywords": [
+      "employer asking for medical questionnaire hiring",
+      "gdpr health data recruitment",
+      "can employer ask for medical history job application",
+      "fit for duty vs medical file hr",
+      "health data collection recruitment eu"
+    ]
+  },
+  {
+    "title": "The EU Pay Transparency Directive and Job Advertising Regulations",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/eu-pay-transparency-directive-status",
+    "description": "The transposition deadline has passed — but only 4 of 27 EU countries met it. Whether a pay range in a job ad is your legal right depends entirely on which country you're job-hunting in.",
+    "keywords": [
+      "eu pay transparency directive status",
+      "is salary range required in job ads eu",
+      "pay transparency directive countries",
+      "job ad salary range legal right eu",
+      "eu pay transparency deadline"
+    ]
+  },
+  {
+    "title": "The EU Platform Work Directive: Rebuttable Presumption of Employment",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/eu-platform-work-directive-employment-presumption",
+    "description": "If a platform controls your rates, dispatches your tasks, and rates your performance, EU law now presumes you're an employee — and the platform has to prove otherwise, not you.",
+    "keywords": [
+      "eu platform work directive employment presumption",
+      "am i an employee gig platform eu",
+      "presumption of employment gig worker eu",
+      "platform controls my rates am i employee",
+      "eu gig worker employment status"
+    ]
+  },
+  {
+    "title": "Legal Enforceability of Training Repayment Agreements (TRAPs) in the UK",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/uk-training-repayment-agreements-traps",
+    "description": "A training repayment clause isn't automatically enforceable just because you signed it — the sum must be a genuine cost, and it must shrink over time or it's an unlawful penalty.",
+    "keywords": [
+      "training repayment agreement enforceable uk",
+      "traps training repayment clause",
+      "employer wants training costs back",
+      "is training repayment agreement legal",
+      "unlawful penalty training clause"
+    ]
+  },
+  {
+    "title": "Recruitment Agency Fee Bans & Enforcement Under the EAS Inspectorate",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/uk-recruitment-agency-fee-bans-eas",
+    "description": "No UK recruitment agency can lawfully charge you to find a job — with only a handful of narrow, capped exceptions. Here's what the law actually bans, and who enforces it.",
+    "keywords": [
+      "recruitment agency charging me a fee uk",
+      "is it legal for recruitment agency to charge job seeker",
+      "eas inspectorate recruitment agency",
+      "recruitment agency fee ban uk",
+      "agency asking for money to find job"
+    ]
+  },
+  {
+    "title": "Criminal Record Screening: DBS Levels and the Rehabilitation of Offenders Act 1974",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/dbs-levels-rehabilitation-offenders-act",
+    "description": "Not every job can demand an Enhanced DBS check, and most convictions become 'spent' faster than people think after the 2023 reforms — updated rehabilitation periods explained.",
+    "keywords": [
+      "dbs check levels explained",
+      "when does a conviction become spent",
+      "rehabilitation of offenders act 1974",
+      "enhanced dbs check when required",
+      "spent conviction job application uk"
+    ]
+  },
+  {
+    "title": "Employment Status in the Gig Economy: Worker vs. Self-Employed",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/uk-worker-status-gig-economy-aslam",
+    "description": "The UK Supreme Court ruled a contract's 'independent contractor' label doesn't matter if the real working relationship says otherwise — and 'Worker' status brings real rights most gig workers don't claim.",
+    "keywords": [
+      "worker vs self employed gig economy uk",
+      "aslam uber supreme court ruling",
+      "am i a worker or self employed",
+      "gig economy worker status rights uk",
+      "independent contractor label doesn't matter"
+    ]
+  },
+  {
+    "title": "Invalidity of Exclusivity Clauses in Zero-Hours Contracts",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/zero-hours-exclusivity-clauses-void",
+    "description": "If your zero-hours contract bans you from working for anyone else, that clause is legally void — and firing you for taking a second job is automatically unfair, no matter how long you've worked there.",
+    "keywords": [
+      "zero hours contract exclusivity clause void",
+      "can zero hours contract stop me working elsewhere",
+      "fired for second job zero hours contract",
+      "exclusivity clause zero hours illegal",
+      "zero hours contract second job rights"
+    ]
+  },
+  {
+    "title": "Legal Status of the FTC Non-Compete Ban",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/ftc-non-compete-ban-legal-status",
+    "description": "There is no federal non-compete ban. But the FTC hasn't gone quiet — a 2026 enforcement action freed 18,000 workers from their non-competes without any nationwide rule at all.",
+    "keywords": [
+      "ftc non-compete ban status",
+      "is the non-compete ban still in effect",
+      "ftc non-compete rule 2026",
+      "non-compete ban repealed",
+      "non-compete enforcement after ftc ban"
+    ]
+  },
+  {
+    "title": "FTC Job Scam Audit: Regulatory Directives & Platform Obligations",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/ftc-job-scam-audit-platform-obligations",
+    "description": "Reshipping fraud, identity harvesting, task scams — the FTC's own taxonomy of job scams, and what employment platforms are actually obligated to do about them.",
+    "keywords": [
+      "ftc job scam types",
+      "reshipping scam job offer",
+      "identity harvesting job scam",
+      "task scam job offer ftc",
+      "employment platform obligations job scams"
+    ]
+  },
+  {
+    "title": "Data Collection Limits in Selection Processes: Privacy under the FTC",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/pre-employment-data-collection-limits-ftc",
+    "description": "There's a specific stage where an employer is allowed to ask for your SSN — and it isn't the first interview. Here's the three-stage timeline and why jumping it can mean discrimination exposure too.",
+    "keywords": [
+      "when can employer ask for ssn interview",
+      "pre-employment data collection limits",
+      "ftc job applicant privacy",
+      "employer asking for ssn too early",
+      "three stage hiring data collection timeline"
+    ]
+  },
+  {
+    "title": "FCRA Stand-Alone Disclosure Rule: Background Check Requirements",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/fcra-stand-alone-disclosure-rule",
+    "description": "If your background check consent was buried inside a job application with a liability waiver attached, the disclosure may be legally invalid — and that's a $100-$1,000 statutory violation, per applicant.",
+    "keywords": [
+      "fcra stand alone disclosure rule",
+      "background check consent buried in application",
+      "invalid background check disclosure",
+      "fcra statutory violation background check",
+      "background check waiver liability invalid"
+    ]
+  },
+  {
+    "title": "Background Report Error Disputes: FCRA Section 611 Protocol",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/fcra-background-check-error-disputes",
+    "description": "Your background check has an inaccurate criminal record or outdated debt entry? The consumer reporting agency has a hard 30-day deadline to fix it or delete it — here's the exact timeline.",
+    "keywords": [
+      "background check has wrong information",
+      "dispute background check error",
+      "fcra section 611 dispute",
+      "background check 30 day deadline fix",
+      "incorrect criminal record background check"
+    ]
+  },
+  {
+    "title": "Deceptive Earnings Advertising in the Gig Economy: FTC Enforcement",
+    "type": "blog",
+    "block": "employment",
+    "url": "/blog/gig-economy-deceptive-earnings-ftc",
+    "description": "That '$35/hour' banner ad is calculated from the best hour of the best driver's best week. Uber paid $20M over exactly this — here's how to work out your own real numbers instead.",
+    "keywords": [
+      "gig economy deceptive earnings ad",
+      "uber 35 an hour false advertising",
+      "ftc gig economy earnings claims",
+      "misleading gig driver pay ad",
+      "real hourly pay gig work calculation"
+    ]
   }
 ]
