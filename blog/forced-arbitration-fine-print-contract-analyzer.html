@@ -57,7 +57,7 @@
       "description": "A streaming trial you forgot about can be used to dismiss an unrelated lawsuit years later. Here's how forced arbitration clauses work — and the code that reads the fine print so you don't have to.",
       "image": "https://www.getkibbo.com/images/products/legal-contract-analyzer.png",
       "datePublished": "2026-06-27T00:00:00Z",
-      "dateModified": "2026-06-27T00:00:00Z",
+      "dateModified": "2026-09-15T00:00:00Z",
       "author": { "@type": "Person", "name": "Margaret Spencer Breen", "url": "https://www.getkibbo.com/authors.html#margaret-spencer-breen" },
       "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/", "logo": { "@type": "ImageObject", "url": "https://www.getkibbo.com/favicon.png" } },
       "keywords": "consumer protection, legal tech, contracts, javascript, forced arbitration, terms of service",
@@ -282,7 +282,7 @@
 
     <p>The pattern is consistent across software subscriptions and streaming services: a promotional sign-up flow takes thirty seconds, with the discounted price prominent and the commitment terms minimised. Somewhere past the point most users stop reading, a clause specifies that cancelling before a fixed commitment period — often twelve months — triggers an early termination fee, sometimes calculated as a percentage of the remaining contract value.</p>
 
-    <p>The <a href="https://www.consumerfinance.gov/about-us/newsroom/cfpb-warns-against-deception-in-contract-fine-print/" target="_blank" rel="noopener">Consumer Financial Protection Bureau has issued formal warnings</a> about exactly this category of practice in financial contracts — fine print that creates obligations a reasonable consumer would not expect from the marketing they actually saw. The FTC's response to the broader pattern was the Click-to-Cancel rule, requiring that cancelling a subscription be no harder than signing up for one. Companies have continued appealing the rule in court, which tells you which side of that argument is currently winning on implementation speed.</p>
+    <p>The <a href="https://www.consumerfinance.gov/about-us/newsroom/cfpb-warns-against-deception-in-contract-fine-print/" target="_blank" rel="noopener">Consumer Financial Protection Bureau has issued formal warnings</a> about exactly this category of practice in financial contracts — fine print that creates obligations a reasonable consumer would not expect from the marketing they actually saw. The FTC's response to the broader pattern was the 2024 Click-to-Cancel rule, which would have required cancelling a subscription to be no harder than signing up for one. Companies appealed, and the Eighth Circuit vacated those amendments in 2025 — the FTC's February 2026 final action recodified the Negative Option Rule as it existed before them, and a new rulemaking process is starting over from scratch. That timeline tells you which side of the argument won on implementation speed, at least for now.</p>
 
     <h2>What a contract actually looks like to a parser</h2>
 
@@ -341,7 +341,7 @@ function scanContract(text) {
 
     <h2>Why this is a permanent feature, not a bug to be fixed</h2>
 
-    <p>It's tempting to read all of this as a problem waiting for a legislative fix. The Click-to-Cancel rule is moving in that direction. The FAIR Act, which the National Consumer Law Center is pushing for in response to the Disney case, would restrict forced arbitration in a meaningful way if passed.</p>
+    <p>It's tempting to read all of this as a problem waiting for a legislative fix. The FTC's Click-to-Cancel rulemaking was meant to move in that direction, but the 2024 version was vacated in 2025 and the agency is now rebuilding it from an Advance Notice of Proposed Rulemaking, not a finished rule. The FAIR Act, which the National Consumer Law Center is pushing for in response to the Disney case, would restrict forced arbitration in a meaningful way if passed.</p>
 
     <p>But the underlying economics don't change even with better regulation. You cannot opt out of clicking "I agree" to use a bank account, a rideshare app, a streaming service, or most software you need for work. The contract is a precondition of access, not a negotiation. No legislation currently proposed removes the requirement to accept terms — it only changes what terms are allowed to say.</p>
 
