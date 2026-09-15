@@ -5355,5 +5355,761 @@
       "documentation blocks deposit loophole",
       "uk tenant deposit rights moving out"
     ]
+  },
+  {
+    "title": "Medical Appointment & Treatment Record",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/medical-appointment-treatment-record",
+    "description": "Keep a clear, organized history of every appointment, diagnosis, and treatment — Appointment Log, Diagnosis & Treatment Notes, and a Medication Tracker. PDF + Excel.",
+    "keywords": [
+      "medical appointment treatment record template",
+      "track appointments diagnosis treatment history",
+      "medication tracker template free",
+      "appointment log diagnosis treatment notes",
+      "medical history organizer pdf excel"
+    ]
+  },
+  {
+    "title": "Medical Expenses & Billing Dispute Tracker",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/medical-billing-dispute-tracker",
+    "description": "Track medical bills, insurance responses, and disputed charges in one place, with an auto-calculating billed-vs-expected difference and appeal deadline tracking. PDF + Excel.",
+    "keywords": [
+      "medical expenses billing dispute tracker",
+      "track medical bills insurance responses",
+      "billed vs expected difference calculator",
+      "medical bill appeal deadline tracker",
+      "dispute medical charges tracker template"
+    ]
+  },
+  {
+    "title": "Healthcare Complaint & Escalation Evidence Log",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/healthcare-complaint-escalation-log",
+    "description": "Document a healthcare complaint from first contact through to final resolution — Complaint Timeline, Correspondence Log, and Escalation Stage Tracker. PDF + Excel.",
+    "keywords": [
+      "healthcare complaint escalation evidence log",
+      "document healthcare complaint first contact resolution",
+      "complaint timeline correspondence log",
+      "escalation stage tracker healthcare",
+      "healthcare complaint evidence template"
+    ]
+  },
+  {
+    "title": "Medical Records Request & Access Tracker",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/medical-records-request-access-tracker",
+    "description": "Track every records request, response deadline, and what you actually received — Request Log, Response Deadline Tracker, and Records Received Checklist. PDF + Excel.",
+    "keywords": [
+      "medical records request access tracker",
+      "track records request response deadline",
+      "records received checklist template",
+      "medical records request log",
+      "track what records i actually received"
+    ]
+  },
+  {
+    "title": "Treatment Consent & Information Record",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/treatment-consent-information-record",
+    "description": "Your own record of the information given to you before agreeing to a treatment or procedure — what was explained, the risks and alternatives discussed. PDF only.",
+    "keywords": [
+      "treatment consent information record template",
+      "record information given before treatment",
+      "risks and alternatives discussed record",
+      "treatment consent documentation pdf",
+      "own record of medical consent"
+    ]
+  },
+  {
+    "title": "Healthcare Provider Comparison & Decision Workbook",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/healthcare-provider-comparison-workbook",
+    "description": "Compare providers side by side on price, credentials, and policies before you decide, with an auto-calculating decision-scoring formula. PDF + Excel.",
+    "keywords": [
+      "healthcare provider comparison decision workbook",
+      "compare providers price credentials policies",
+      "auto calculating decision scoring healthcare",
+      "choose a healthcare provider workbook",
+      "compare doctors clinics side by side"
+    ]
+  },
+  {
+    "title": "Medical Product / Device Purchase & Warranty File",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/medical-device-purchase-warranty-file",
+    "description": "Track purchase details, warranty terms, and any defects for medical devices and equipment — Purchase & Warranty Log, Defect Log, and Warranty Claim Tracker. PDF + Excel.",
+    "keywords": [
+      "medical product device purchase warranty file",
+      "track medical device warranty terms",
+      "medical equipment defect log template",
+      "warranty claim tracker medical device",
+      "purchase and warranty log medical product"
+    ]
+  },
+  {
+    "title": "Healthcare Evidence & Document Organizer",
+    "type": "template",
+    "block": "healthcare-medical",
+    "url": "/templates/healthcare-evidence-document-organizer",
+    "description": "A permanent master index of every healthcare document you keep, across every provider and issue — Master Document Index, cross-references, and an ongoing update log. PDF + Excel.",
+    "keywords": [
+      "healthcare evidence document organizer",
+      "master index healthcare documents",
+      "organize every healthcare document by provider",
+      "healthcare document cross reference tracker",
+      "healthcare evidence organizer template"
+    ]
+  },
+  {
+    "title": "Healthcare Complaint Letter Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/healthcare-complaint-letter",
+    "description": "Generate a firm, professional complaint letter to a healthcare provider — clinic, hospital, or doctor — for the US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "healthcare complaint letter generator",
+      "formal complaint letter clinic hospital doctor",
+      "complain about healthcare provider letter",
+      "firm professional healthcare complaint letter",
+      "free healthcare complaint letter generator"
+    ]
+  },
+  {
+    "title": "Medical Records Request Letter Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/medical-records-request-letter",
+    "description": "Generate a formal request for access to your own medical records — for the US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "medical records request letter generator",
+      "formal request access own medical records",
+      "request medical records in writing",
+      "medical records request letter free",
+      "formal letter to get my medical records"
+    ]
+  },
+  {
+    "title": "Healthcare Billing Dispute & Refund Letter Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/healthcare-billing-dispute-refund-letter",
+    "description": "A firm, scenario-branched letter covering both an incorrect medical bill and a refund after cancelling a service — US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "healthcare billing dispute refund letter generator",
+      "dispute incorrect medical bill letter",
+      "refund letter after cancelling healthcare service",
+      "unexpected medical bill dispute letter",
+      "healthcare refund demand letter free"
+    ]
+  },
+  {
+    "title": "Healthcare Insurance Appeal Letter Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/healthcare-insurance-appeal-letter",
+    "description": "Generate a formal appeal letter for a denied insurance claim, directly countering the insurer's stated reason — US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "healthcare insurance appeal letter generator",
+      "appeal denied health insurance claim letter",
+      "formal insurance denial appeal letter",
+      "counter insurer denial reason letter",
+      "free health insurance appeal letter"
+    ]
+  },
+  {
+    "title": "Medical Product Complaint Letter Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/medical-product-complaint-letter",
+    "description": "Generate a formal complaint letter for a defective, unsafe, or misdescribed medical product or device — US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "medical product complaint letter generator",
+      "complaint letter defective medical device",
+      "unsafe misdescribed medical product complaint",
+      "formal medical device complaint letter",
+      "free medical product complaint letter"
+    ]
+  },
+  {
+    "title": "Healthcare Provider Information Request Generator",
+    "type": "generator",
+    "block": "healthcare-medical",
+    "url": "/generate/healthcare-provider-information-request",
+    "description": "Generate a clear pre-decision information request to a healthcare provider — pricing, credentials, policies, and more, before you commit. Free.",
+    "keywords": [
+      "healthcare provider information request generator",
+      "request pricing credentials from provider",
+      "pre decision healthcare provider request letter",
+      "ask healthcare provider for policy details",
+      "free provider information request letter"
+    ]
+  },
+  {
+    "title": "Choosing a Healthcare Provider & Red Flags Checklist",
+    "type": "checklist",
+    "block": "healthcare-medical",
+    "url": "/checklists/choosing-healthcare-provider-red-flags",
+    "description": "A free checklist for choosing a healthcare provider — verify licensing and credentials, get pricing and policies in writing, and know the red flags to watch for. No account required.",
+    "keywords": [
+      "choosing a healthcare provider checklist",
+      "verify doctor licensing and credentials",
+      "healthcare provider red flags checklist",
+      "get pricing and policies in writing",
+      "how to choose a safe healthcare provider"
+    ]
+  },
+  {
+    "title": "Medical Bill & Invoice Review Checklist",
+    "type": "checklist",
+    "block": "healthcare-medical",
+    "url": "/checklists/medical-bill-invoice-review",
+    "description": "A free checklist for reviewing a medical bill — check the basics, compare against what you expected, spot common discrepancies, and prepare before you dispute. No account required.",
+    "keywords": [
+      "medical bill invoice review checklist",
+      "review a medical bill before disputing",
+      "spot discrepancies on medical bill",
+      "compare medical bill against what i expected",
+      "checklist before disputing a medical bill"
+    ]
+  },
+  {
+    "title": "Health Insurance Claim Checklist",
+    "type": "checklist",
+    "block": "healthcare-medical",
+    "url": "/checklists/health-insurance-claim",
+    "description": "A free checklist for filing a health insurance claim — what to confirm before treatment, what to gather, how to file correctly, and how to follow up. No account required.",
+    "keywords": [
+      "health insurance claim checklist",
+      "what to confirm before treatment insurance",
+      "how to file health insurance claim correctly",
+      "gather documents for insurance claim",
+      "follow up on health insurance claim"
+    ]
+  },
+  {
+    "title": "Medical Product & Device Purchase Checklist",
+    "type": "checklist",
+    "block": "healthcare-medical",
+    "url": "/checklists/medical-product-device-purchase",
+    "description": "A free checklist before buying a medical product or device — verify the seller, check regulatory status, understand what you're buying, and know the red flags. No account required.",
+    "keywords": [
+      "medical product device purchase checklist",
+      "verify seller before buying medical device",
+      "check regulatory status medical product",
+      "medical device safety recall check",
+      "red flags buying medical equipment"
+    ]
+  },
+  {
+    "title": "Online Pharmacy Safety Checklist",
+    "type": "checklist",
+    "block": "healthcare-medical",
+    "url": "/checklists/online-pharmacy-safety",
+    "description": "A free checklist before buying medication from an online pharmacy — verify licensing, check prescription requirements, spot pricing red flags, and know the signs of fraud. No account required.",
+    "keywords": [
+      "online pharmacy safety checklist",
+      "verify online pharmacy is licensed",
+      "prescription requirements online pharmacy",
+      "online pharmacy pricing red flags",
+      "signs of fake online pharmacy fraud"
+    ]
+  },
+  {
+    "title": "Healthcare Regulators & Consumer Authorities",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#healthcare-regulators-consumer-authorities",
+    "description": "Who sets and enforces healthcare standards — the general oversight bodies, not a specific insurance, records, or complaints function (those are Sections 3, 4, and 6). The EU has no single equivalent: healthcare regulation is a member-state competence, not an EU-wide one, so no single body is listed here for the EU.",
+    "keywords": [
+      "healthcare regulators consumer authorities directory",
+      "general healthcare oversight body by country",
+      "cqc hhs ahpra healthcare regulator",
+      "who regulates healthcare standards",
+      "healthcare regulator directory"
+    ]
+  },
+  {
+    "title": "Medical Provider & Professional Verification",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#medical-provider-professional-verification",
+    "description": "Check whether a specific individual practitioner — doctor, dentist, optician, physiotherapist, or other health professional — is genuinely registered and in good standing. In the UK, each profession is regulated separately; in Australia, one national register covers all of them.",
+    "keywords": [
+      "medical provider professional verification directory",
+      "verify doctor is registered",
+      "gmc gdc nmc practitioner register",
+      "check dentist optician registration",
+      "ahpra practitioner register verification"
+    ]
+  },
+  {
+    "title": "Health Insurance & Claims",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#health-insurance-claims",
+    "description": "Insurance-specific dispute bodies only — for a denied or disputed health insurance claim. Not the general regulator (Section 1) or the care-complaint route (Section 6). No single EU-wide insurance ombudsman exists; insurance dispute resolution is handled at member-state level.",
+    "keywords": [
+      "health insurance claims directory",
+      "denied health insurance claim dispute body",
+      "state insurance commissioner health complaint",
+      "health fund ombudsman dispute",
+      "appeal denied health insurance claim body"
+    ]
+  },
+  {
+    "title": "Medical Records, Privacy & Data",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#medical-records-privacy-data",
+    "description": "Who to contact for a medical records access issue or a health data privacy complaint specifically.",
+    "keywords": [
+      "medical records privacy data directory",
+      "health data privacy complaint body",
+      "medical records access complaint contact",
+      "hipaa oaic ico health data complaint",
+      "who to contact medical records mishandled"
+    ]
+  },
+  {
+    "title": "Medicines, Medical Devices & Product Safety",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#medicines-devices-product-safety",
+    "description": "The national authority that approves and monitors the safety of medicines and medical devices. These same bodies may also appear in Section 8 for the pharmacy-dispensing angle specifically — that's intentional, not a duplicate.",
+    "keywords": [
+      "medicines medical devices product safety directory",
+      "mhra fda tga ema medicine safety",
+      "report unsafe medicine or device",
+      "medicine device approval authority",
+      "medical device safety regulator by country"
+    ]
+  },
+  {
+    "title": "Healthcare Complaints & Disputes",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#healthcare-complaints-disputes",
+    "description": "How to formally complain about the care you personally received — distinct from the general regulator (Section 1) and from an insurance dispute (Section 3).",
+    "keywords": [
+      "healthcare complaints disputes directory",
+      "formally complain about care received",
+      "cqc gmc ahpra complaint about doctor",
+      "how to escalate healthcare complaint",
+      "healthcare complaints body by country"
+    ]
+  },
+  {
+    "title": "Healthcare Costs, Pricing & Billing",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#healthcare-costs-pricing-billing",
+    "description": "Understanding what you should actually be charged, and where to go for a billing-specific issue.",
+    "keywords": [
+      "healthcare costs pricing billing directory",
+      "what should i actually be charged healthcare",
+      "medical bill sent to collections unfairly",
+      "hospital pricing disclosure requirements",
+      "nhs charge exemption check"
+    ]
+  },
+  {
+    "title": "Pharmacies & Medicines",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#pharmacies-medicines",
+    "description": "The dispensing-pharmacy angle specifically — regulators of pharmacies and pharmacists, and how to verify a medicine or online pharmacy is genuine. MHRA, FDA, and TGA also appear in Section 5 for their broader medicine/device safety role — the listing here is deliberately about the pharmacy-dispensing and counterfeit-verification angle instead.",
+    "keywords": [
+      "pharmacies medicines directory",
+      "verify pharmacy or pharmacist is registered",
+      "is this medicine counterfeit fake",
+      "online pharmacy verification logo eu",
+      "pharmacy board verification by state"
+    ]
+  },
+  {
+    "title": "Healthcare Laws & Official Guidance",
+    "type": "directory",
+    "block": "healthcare-medical",
+    "url": "/directory/healthcare-medical#healthcare-laws-official-guidance",
+    "description": "The core patient-rights laws and official guidance documents underlying the sections above.",
+    "keywords": [
+      "healthcare laws official guidance directory",
+      "hipaa patient rights official guidance",
+      "nhs patient rights baseline reference",
+      "australian healthcare entitlement guidance",
+      "eu health data legal basis reference"
+    ]
+  },
+  {
+    "title": "Medical Bill Analyzer",
+    "type": "analyzer",
+    "block": "healthcare-medical",
+    "url": "/medical-bill-analyzer",
+    "description": "Paste, upload, or photograph a medical bill and get an itemized list of charges worth double-checking with your provider — duplicate charges, vague fees, quantity mismatches, and more. Free tool by Kibbo.",
+    "keywords": [
+      "medical bill analyzer",
+      "check medical bill for errors free tool",
+      "duplicate charges medical bill checker",
+      "itemized medical bill review tool",
+      "spot vague fees on hospital bill"
+    ]
+  },
+  {
+    "title": "The No Surprises Act in 2026: What's Still Protected When You Get a Bill",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/no-surprises-act-2026-balance-billing-protections",
+    "description": "A 2026 federal rule changed how insurers and providers settle out-of-network payment disputes — but your protection against surprise balance billing hasn't changed. Here's the difference.",
+    "keywords": [
+      "no surprises act 2026 balance billing",
+      "surprise medical bill protection still applies",
+      "out of network payment dispute rule 2026",
+      "am i protected from surprise medical bill",
+      "no surprises act patient protections"
+    ]
+  },
+  {
+    "title": "HIPAA Right of Access: The 30-Day Rule for Your Medical Records",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/hipaa-right-of-access-30-day-medical-records-rule",
+    "description": "Your medical provider has 30 days to give you a copy of your own records — and federal regulators have fined dozens of providers for missing that deadline.",
+    "keywords": [
+      "hipaa right of access 30 day rule",
+      "legal deadline for medical records request",
+      "hipaa most enforced provision records",
+      "provider missed 30 day records deadline",
+      "hipaa right of access explained"
+    ]
+  },
+  {
+    "title": "ERISA vs. State-Regulated Health Plans: Why Your Appeal Rights Depend on Your Employer",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/erisa-vs-state-regulated-health-plans-appeal-rights",
+    "description": "Two people with a denied claim and identical diagnoses can have completely different appeal rights, depending on whether their employer self-funds its health plan.",
+    "keywords": [
+      "erisa vs state regulated health plans appeal",
+      "employer self funded health plan appeal rights",
+      "why denied claim appeal rights differ",
+      "erisa health plan appeal process",
+      "self funded vs fully insured health plan"
+    ]
+  },
+  {
+    "title": "Your Health App Isn't Covered by HIPAA — But It Might Be Covered by This",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/ftc-health-breach-notification-rule-health-apps",
+    "description": "Most health and fitness apps aren't bound by HIPAA at all. The FTC's Health Breach Notification Rule is the federal protection that actually applies to them.",
+    "keywords": [
+      "health app not covered by hipaa",
+      "ftc health breach notification rule",
+      "period tracker fitness app data protection",
+      "what protects health app data if not hipaa",
+      "ftc health app privacy rule"
+    ]
+  },
+  {
+    "title": "Medical Debt and Your Credit Report in 2026: What Actually Applies Now",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/medical-debt-credit-report-2026-what-applies",
+    "description": "A federal rule that would have banned medical debt from credit reports was struck down in court. Here's what protection actually remains in 2026.",
+    "keywords": [
+      "medical debt credit report 2026",
+      "medical debt ban credit report struck down",
+      "does medical debt still hurt credit score",
+      "state laws medical debt credit reporting",
+      "voluntary bureau policy medical debt"
+    ]
+  },
+  {
+    "title": "The NHS Complaint Deadlock: What to Do When Your Complaint Goes Nowhere",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/nhs-complaint-deadlock-phso-escalation",
+    "description": "You complained to your GP, hospital, or dentist. Their answer doesn't fix the problem. Here's the exact procedure, timeline, and how to escalate to the PHSO.",
+    "keywords": [
+      "nhs complaint deadlock phso escalation",
+      "nhs complaint goes nowhere what next",
+      "escalate nhs complaint to phso",
+      "gp hospital dentist complaint procedure uk",
+      "phso escalation timeline nhs complaint"
+    ]
+  },
+  {
+    "title": "Your Right to Access Medical Records in the UK",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/uk-right-to-access-medical-records",
+    "description": "Your GP practice holds your medical records — that doesn't mean you have to accept 'no' when you ask to see them. Here's exactly how the request process works in the UK.",
+    "keywords": [
+      "right to access medical records uk",
+      "gp practice refuses to show records",
+      "how to request medical records uk",
+      "uk medical records access process",
+      "gp wont give me my records"
+    ]
+  },
+  {
+    "title": "The Private Healthcare Quote Trap: When a £2,000 Treatment Becomes £3,500",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/private-healthcare-quote-trap-uk",
+    "description": "The clinic gave you a price. You agreed. Then the final invoice contains charges you never expected. Here's what to check before you accept any private treatment quote.",
+    "keywords": [
+      "private healthcare quote trap uk",
+      "unexpected charges private clinic invoice",
+      "consultant fee anaesthetist hidden charge",
+      "private treatment quote what to check uk",
+      "private healthcare final invoice surprise"
+    ]
+  },
+  {
+    "title": "What to Check Before Paying for Private Dental Treatment in the UK",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/private-dental-treatment-what-to-check-uk",
+    "description": "A dentist tells you that you need thousands of pounds of treatment. Do you really know what you're agreeing to? Here's what to verify before committing.",
+    "keywords": [
+      "private dental treatment what to check uk",
+      "dentist says i need thousands of treatment",
+      "verify before agreeing to dental treatment",
+      "private dentist quote red flags uk",
+      "what to ask before private dental work"
+    ]
+  },
+  {
+    "title": "What Happens to Your Medical Information in Private Healthcare?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/private-healthcare-data-sharing-nhs-england",
+    "description": "You paid a private clinic for treatment. But your medical information doesn't necessarily stay inside that clinic — here's what NHS England can request, and your opt-out rights.",
+    "keywords": [
+      "private healthcare data sharing nhs england",
+      "private clinic shares medical data with nhs",
+      "medical information private clinic data sharing",
+      "nhs england data request private clinic",
+      "opt out private healthcare data sharing"
+    ]
+  },
+  {
+    "title": "Getting Medical Treatment in Another EU Country: Who Pays the Bill?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/eu-cross-border-healthcare-who-pays",
+    "description": "You find a specialist in Germany, Spain, or France who can treat you sooner. Can you simply travel there and get your home healthcare system to pay? Here's how EU cross-border healthcare reimbursement actually works.",
+    "keywords": [
+      "eu cross border healthcare who pays",
+      "travel to another eu country for treatment reimbursement",
+      "home healthcare system pay for treatment abroad eu",
+      "eu cross border healthcare directive reimbursement",
+      "s2 form eu treatment abroad"
+    ]
+  },
+  {
+    "title": "The EU Medical Records Problem: Your Health Data Is Moving Across Borders",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/eu-health-data-space-medical-records-cross-border",
+    "description": "Your doctor in Italy, your specialist in Germany, and your GP at home may all need access to the same health information. Here's what the European Health Data Space actually changes, and when.",
+    "keywords": [
+      "eu medical records cross border",
+      "european health data space explained",
+      "doctor in another eu country access records",
+      "who controls my health data across eu borders",
+      "ehds medical records sharing"
+    ]
+  },
+  {
+    "title": "Before You Pay for Healthcare Abroad: 10 Things EU Patients Need to Check",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/eu-healthcare-abroad-what-to-check-before-paying",
+    "description": "A cheaper treatment abroad can become very expensive when you discover what the advertised price didn't include. Ten specific things to verify before you commit.",
+    "keywords": [
+      "before you pay for healthcare abroad eu",
+      "things to check before treatment abroad eu",
+      "cheaper treatment abroad hidden costs",
+      "eu patient checklist before paying for treatment",
+      "what advertised healthcare price didnt include"
+    ]
+  },
+  {
+    "title": "Your EU Prescription Abroad: Can You Get Your Medicine in Another Country?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/eu-prescription-abroad-cross-border-pharmacy",
+    "description": "You're travelling through Europe and run out of a prescription. Can a pharmacy in another EU country dispense it? Here's what's actually available today, and what isn't yet.",
+    "keywords": [
+      "eu prescription abroad cross border pharmacy",
+      "can pharmacy in another eu country fill my prescription",
+      "running out of prescription while travelling eu",
+      "cross border eu prescription rules",
+      "get medicine abroad eu prescription"
+    ]
+  },
+  {
+    "title": "When Healthcare Goes Wrong Abroad: Who Do You Complain To?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/eu-healthcare-abroad-complaint-escalation",
+    "description": "You travelled to another EU country for treatment. Something went wrong. The clinic is in another country, your insurer is somewhere else, and you're back home. Here's who actually handles it.",
+    "keywords": [
+      "when healthcare goes wrong abroad who to complain",
+      "complain about treatment in another eu country",
+      "clinic abroad insurer elsewhere complaint",
+      "eu cross border healthcare complaint escalation",
+      "who handles complaint healthcare abroad eu"
+    ]
+  },
+  {
+    "title": "The Medical Bill Gap: Why Medicare and Private Insurance Don't Always Cover the Full Cost",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/medicare-gap-payments-australia-explained",
+    "description": "You have Medicare. You have private health insurance. So why did you still receive a bill for hundreds or thousands of dollars? Here's how the gap actually works.",
+    "keywords": [
+      "medicare gap payments australia explained",
+      "why did i still get a bill medicare private insurance",
+      "medicare gap payment how it works",
+      "private health insurance still bill australia",
+      "out of pocket cost medicare gap"
+    ]
+  },
+  {
+    "title": "You Have the Right to Your Health Records: What Australian Doctors Can't Refuse",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/australia-right-to-health-records-access",
+    "description": "Your GP holds your medical records. That doesn't mean they can simply refuse to give you access. Here's how the access right actually works in Australia.",
+    "keywords": [
+      "right to health records access australia",
+      "gp refuses to give me records australia",
+      "how to request medical records australia",
+      "australian doctors cant refuse records access",
+      "australia health records access right"
+    ]
+  },
+  {
+    "title": "Something Went Wrong With Your Healthcare in Australia: Who Do You Complain To?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/australia-healthcare-complaint-who-to-contact",
+    "description": "The doctor says it's the hospital's problem. The hospital says it's the doctor's. Here's how to find the right complaints body in your specific state or territory.",
+    "keywords": [
+      "healthcare complaint who to contact australia",
+      "doctor hospital blame each other complaint",
+      "find state healthcare complaints body australia",
+      "australia healthcare complaint by state",
+      "who regulates healthcare complaints australia"
+    ]
+  },
+  {
+    "title": "The Private Health Insurance Trap: What Your Policy Doesn't Automatically Pay For",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/private-health-insurance-trap-australia",
+    "description": "Your policy says your treatment is covered. That doesn't necessarily mean you'll pay nothing. Here's what to check before you accept any treatment.",
+    "keywords": [
+      "private health insurance trap australia",
+      "policy covered but still paying australia",
+      "what private health insurance doesnt cover",
+      "gap payment private health insurance trap",
+      "check before accepting treatment insurance"
+    ]
+  },
+  {
+    "title": "Your My Health Record Is Not Just a Medical File: When Your Health Data Is Mishandled",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/my-health-record-data-mishandled-who-to-tell",
+    "description": "Someone mishandled your health information. Do you complain to the doctor, the hospital, your state regulator, or the OAIC? Here's how to tell.",
+    "keywords": [
+      "my health record data mishandled who to tell",
+      "who to complain to health data mishandled australia",
+      "oaic complaint my health record",
+      "my health record privacy complaint",
+      "health data mishandled doctor hospital regulator"
+    ]
+  },
+  {
+    "title": "Your Health App Knows More Than You Think: Who Gets Your Data?",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/health-app-data-who-gets-it",
+    "description": "You entered your symptoms into an app. You tracked your period. You logged your weight. Who else can see that information — and does 'private' actually mean private?",
+    "keywords": [
+      "health app knows more than you think",
+      "who gets my health app data",
+      "period tracker symptom checker data sharing",
+      "health app data privacy concerns",
+      "does health app data stay private"
+    ]
+  },
+  {
+    "title": "\"Clinically Proven\" Is Not a Magic Phrase: How Healthcare Products Are Sold With Science",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/clinically-proven-claims-what-they-require",
+    "description": "A supplement says 'clinically proven.' A device says 'doctor recommended.' What do those claims actually have to prove, and what should make you skeptical?",
+    "keywords": [
+      "clinically proven claims what they require",
+      "what does clinically proven actually mean",
+      "doctor recommended claim requirements",
+      "science backed health product claims",
+      "healthcare marketing science claims scrutiny"
+    ]
+  },
+  {
+    "title": "The Health Data Advertising Problem: When Your Medical Information Becomes a Marketing Tool",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/health-data-advertising-tracking-problem",
+    "description": "You searched for a medical condition. Suddenly you see ads for treatments and clinics. Coincidence? Here's how everyday behavior can reveal health information, and what's actually been done about it.",
+    "keywords": [
+      "health data advertising tracking problem",
+      "searched medical condition now seeing ads",
+      "health information used for targeted ads",
+      "medical search data advertising tracking",
+      "health data marketing tool concern"
+    ]
+  },
+  {
+    "title": "The Subscription Trap in Healthcare: Free Trials, Auto-Renewals, and Cancellation Barriers",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/healthcare-subscription-trap-free-trials-auto-renewal",
+    "description": "The consultation was $20. Then you discover you've been enrolled in a monthly healthcare subscription you never intended to keep. Here's what to check, and what's changing in 2026.",
+    "keywords": [
+      "healthcare subscription trap free trials",
+      "enrolled in healthcare subscription without knowing",
+      "cancel healthcare auto renewal subscription",
+      "telehealth subscription trap free trial",
+      "healthcare subscription cancellation barriers"
+    ]
+  },
+  {
+    "title": "When a Healthcare Company Gets It Wrong: How to Build an Evidence File Before You Complain",
+    "type": "blog",
+    "block": "healthcare-medical",
+    "url": "/blog/healthcare-complaint-evidence-file-guide",
+    "description": "The bill changed. The treatment wasn't what you were promised. Your records are incomplete. Here's how to turn a messy healthcare problem into a documented case.",
+    "keywords": [
+      "healthcare complaint evidence file guide",
+      "build evidence file before healthcare complaint",
+      "bill changed treatment not as promised evidence",
+      "document healthcare problem before complaining",
+      "healthcare evidence file how to build"
+    ]
   }
 ]
