@@ -9751,5 +9751,1363 @@
       "read company complaint pattern bbb",
       "bbb a plus f grade not enough"
     ]
+  },
+  {
+    "title": "Billing Dispute & Overcharge Evidence Pack",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/billing-dispute-overcharge-evidence-pack",
+    "description": "Document an incorrect telecom or utility charge line by line — type of discrepancy, what your contract actually says, a communications log, and an evidence checklist ready for the provider's complaints process. PDF + Word.",
+    "keywords": [
+      "billing dispute overcharge evidence pack",
+      "document incorrect telecom utility charge",
+      "communications log billing dispute template",
+      "evidence checklist provider complaints process",
+      "telecom utility overcharge dispute pack"
+    ]
+  },
+  {
+    "title": "Mobile Network Coverage & Service Complaint Pack",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/mobile-network-coverage-service-complaint-pack",
+    "description": "Document persistent coverage gaps, dropped calls, or slow data with real evidence — affected locations, speed test results, and a communications log built for a contract-exit or compensation claim. PDF + Word.",
+    "keywords": [
+      "mobile network coverage service complaint pack",
+      "document coverage gaps dropped calls slow data",
+      "speed test results evidence template",
+      "contract exit compensation claim mobile",
+      "mobile network complaint evidence pack"
+    ]
+  },
+  {
+    "title": "Service Cancellation & Final Bill Evidence Pack",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/service-cancellation-final-bill-evidence-pack",
+    "description": "Verify a final telecom or utility bill actually reflects a genuine cancellation — equipment return tracking, a final bill review table, and a dispute log for any charge that doesn't add up. PDF + Word.",
+    "keywords": [
+      "service cancellation final bill evidence pack",
+      "verify final telecom utility bill cancellation",
+      "equipment return tracking template",
+      "final bill review dispute log",
+      "cancellation final bill evidence pack"
+    ]
+  },
+  {
+    "title": "Internet / Broadband Service Incident Log",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/internet-broadband-service-incident-log",
+    "description": "Track every outage and slowdown with auto-calculated downtime hours, so a single bad night becomes a documented pattern strong enough for compensation or contract exit. Excel.",
+    "keywords": [
+      "internet broadband service incident log",
+      "track outages slowdowns auto calculated downtime",
+      "documented pattern compensation contract exit",
+      "broadband incident log excel",
+      "internet outage tracker template"
+    ]
+  },
+  {
+    "title": "Utility Billing Audit Workbook",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/utility-billing-audit-workbook",
+    "description": "Check electricity, gas, or water bills against actual usage with an auto-calculated discrepancy column, built to catch estimated readings that quietly inflate a bill. Excel.",
+    "keywords": [
+      "utility billing audit workbook",
+      "check electricity gas water bills against usage",
+      "auto calculated discrepancy utility bill",
+      "catch estimated readings inflate bill",
+      "utility bill audit excel workbook"
+    ]
+  },
+  {
+    "title": "Utility Meter Reading & Dispute Log",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/utility-meter-reading-dispute-log",
+    "description": "Keep your own photographed meter reading history, separate from the supplier's estimates, with auto-calculated usage between readings to catch discrepancies early. Excel.",
+    "keywords": [
+      "utility meter reading dispute log",
+      "photographed meter reading history template",
+      "separate from suppliers estimates log",
+      "catch usage discrepancies early meter",
+      "meter reading dispute log excel"
+    ]
+  },
+  {
+    "title": "Energy Tariff Comparison Workbook",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/energy-tariff-comparison-workbook",
+    "description": "Compare energy tariffs on unit rate, standing charge, and your own real usage — not just the headline price — before switching supplier. Excel.",
+    "keywords": [
+      "energy tariff comparison workbook",
+      "compare energy tariffs unit rate standing charge",
+      "real usage tariff comparison not headline price",
+      "before switching energy supplier workbook",
+      "energy tariff comparison excel"
+    ]
+  },
+  {
+    "title": "Telecom Contract & Plan Comparison Workbook",
+    "type": "template",
+    "block": "telecoms-utilities",
+    "url": "/templates/telecom-contract-plan-comparison-workbook",
+    "description": "Compare mobile, internet, or phone plans on the full contract cost — data limits, equipment fees, roaming, and cancellation terms — with a built-in red-flags checklist. Excel.",
+    "keywords": [
+      "telecom contract plan comparison workbook",
+      "compare mobile internet phone plans full cost",
+      "data limits equipment fees roaming comparison",
+      "telecom plan red flags checklist",
+      "telecom contract comparison excel"
+    ]
+  },
+  {
+    "title": "Facing a Utility Shutoff? What to Check Right Now",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/utility-shutoff-checklist",
+    "description": "A free, printable checklist for anyone facing a utility shutoff — check your state's moratorium and eligibility, confirm the notice you're owed, request a payment plan, and escalate to your state Public Utilities Commission.",
+    "keywords": [
+      "facing utility shutoff what to check",
+      "state shutoff moratorium eligibility checklist",
+      "request payment plan utility shutoff",
+      "escalate state public utilities commission",
+      "utility shutoff checklist right now"
+    ]
+  },
+  {
+    "title": "Cancel Your Telco Contract Without Fees (Australia)",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/au-telco-cancellation-check",
+    "description": "A free, printable checklist to cancel an Australian telco or internet contract without an early termination fee — check your grounds (unilateral price rise, poor service, no coverage), build a paper trail, and escalate to the TIO.",
+    "keywords": [
+      "cancel telco contract without fees australia",
+      "grounds cancel telco fee free au",
+      "build paper trail telco cancellation",
+      "escalate telecommunications industry ombudsman",
+      "au telco cancellation checklist"
+    ]
+  },
+  {
+    "title": "Telecom Contract Before Signing Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/telecom-contract-before-signing-checklist",
+    "description": "A free checklist: check the real price, contract length, coverage, and cancellation terms before you sign up for broadband or mobile. No account required.",
+    "keywords": [
+      "telecom contract before signing checklist",
+      "check real price contract length coverage",
+      "cancellation terms before signing broadband mobile",
+      "telecom contract pre signature checklist",
+      "broadband mobile signup checklist"
+    ]
+  },
+  {
+    "title": "Broadband Service Problem Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/broadband-service-problem-checklist",
+    "description": "A free checklist: document an outage or slow speed properly, run the right diagnostics, and build the case before you escalate. No account required.",
+    "keywords": [
+      "broadband service problem checklist",
+      "document outage slow speed properly",
+      "run right diagnostics broadband checklist",
+      "build case before escalate broadband",
+      "broadband problem documentation checklist"
+    ]
+  },
+  {
+    "title": "Mobile Network Complaint Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/mobile-network-complaint-checklist",
+    "description": "A free checklist: prove a coverage or signal problem with evidence, not just frustration, before you complain or cancel. No account required.",
+    "keywords": [
+      "mobile network complaint checklist",
+      "prove coverage signal problem evidence",
+      "complain or cancel mobile network checklist",
+      "mobile network problem evidence checklist",
+      "signal problem complaint checklist"
+    ]
+  },
+  {
+    "title": "Telecom Billing Dispute Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/telecom-billing-dispute-checklist",
+    "description": "A free checklist: compare your bill against your contract, spot the common overcharge patterns, and build a dispute with the numbers to back it up. No account required.",
+    "keywords": [
+      "telecom billing dispute checklist",
+      "compare bill against contract checklist",
+      "common overcharge patterns telecom",
+      "build dispute with numbers telecom",
+      "telecom bill dispute checklist"
+    ]
+  },
+  {
+    "title": "Telecom Cancellation Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/telecom-cancellation-checklist",
+    "description": "A free checklist: cancel broadband or mobile the right way — fees, notice period, equipment return, and proof it actually took effect. No account required.",
+    "keywords": [
+      "telecom cancellation checklist",
+      "cancel broadband mobile the right way",
+      "fees notice period equipment return checklist",
+      "proof cancellation took effect telecom",
+      "broadband mobile cancellation checklist"
+    ]
+  },
+  {
+    "title": "Utility Bill Audit Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/utility-bill-audit-checklist",
+    "description": "A free checklist: check your energy or water bill against your tariff and past bills to catch an error before you pay it. No account required.",
+    "keywords": [
+      "utility bill audit checklist",
+      "check energy water bill against tariff",
+      "catch error before you pay utility bill",
+      "utility bill vs past bills checklist",
+      "energy water bill audit checklist"
+    ]
+  },
+  {
+    "title": "Energy Bill High-Usage Investigation Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/energy-bill-high-usage-investigation-checklist",
+    "description": "A free checklist: work out whether a shockingly high bill is a real usage spike, an estimate, a meter fault, or a billing error. No account required.",
+    "keywords": [
+      "energy bill high usage investigation checklist",
+      "shockingly high bill real usage spike",
+      "estimate meter fault billing error checklist",
+      "high energy bill investigation checklist",
+      "why is my energy bill so high checklist"
+    ]
+  },
+  {
+    "title": "Utility Meter Reading Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/utility-meter-reading-checklist",
+    "description": "A free checklist: take and submit an accurate meter reading, with the proof to back it up if your supplier disputes it. No account required.",
+    "keywords": [
+      "utility meter reading checklist",
+      "take submit accurate meter reading",
+      "proof meter reading supplier disputes",
+      "meter reading accuracy checklist",
+      "submit meter reading correctly checklist"
+    ]
+  },
+  {
+    "title": "Energy Tariff Comparison Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/energy-tariff-comparison-checklist",
+    "description": "A free checklist: calculate the real annual cost of a tariff — not just the headline price — before you switch. No account required.",
+    "keywords": [
+      "energy tariff comparison checklist",
+      "calculate real annual cost tariff",
+      "not just headline price tariff checklist",
+      "before you switch energy tariff checklist",
+      "energy tariff switch checklist"
+    ]
+  },
+  {
+    "title": "Utility Service Complaint Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/utility-service-complaint-checklist",
+    "description": "A free checklist: document a supply, billing, or service failure properly and know when you're owed automatic compensation. No account required.",
+    "keywords": [
+      "utility service complaint checklist",
+      "document supply billing service failure",
+      "owed automatic compensation utility checklist",
+      "utility service failure documentation",
+      "utility complaint checklist automatic compensation"
+    ]
+  },
+  {
+    "title": "Utility Cancellation & Final Bill Checklist",
+    "type": "checklist",
+    "block": "telecoms-utilities",
+    "url": "/checklists/utility-cancellation-final-bill-checklist",
+    "description": "A free checklist: close or switch a utility account cleanly — final reading, final bill, deposit refund, and no lingering charges. No account required.",
+    "keywords": [
+      "utility cancellation final bill checklist",
+      "close switch utility account cleanly",
+      "final reading final bill deposit refund",
+      "no lingering charges utility checklist",
+      "utility account closure checklist"
+    ]
+  },
+  {
+    "title": "Telecom Regulators Directory",
+    "type": "directory",
+    "block": "telecoms-utilities",
+    "url": "/directory/telecoms-utilities#telecom-regulators-directory",
+    "description": "The bodies that set the rules for telecom markets — not necessarily who resolves your individual complaint (see Section 3).",
+    "keywords": [
+      "telecom regulators directory",
+      "who sets telecom market rules",
+      "fcc ofcom acma telecom regulator directory",
+      "telecom regulator by country directory",
+      "general telecom oversight body directory"
+    ]
+  },
+  {
+    "title": "Utility Regulators Directory",
+    "type": "directory",
+    "block": "telecoms-utilities",
+    "url": "/directory/telecoms-utilities#utility-regulators-directory",
+    "description": "Energy and water regulators — distinct bodies overseeing distinct markets from the telecom regulators above. No EU-wide entry here: there is no single EU consumer-facing energy/water regulator, since each member state runs its own — this gap is intentional.",
+    "keywords": [
+      "utility regulators directory",
+      "energy water regulator by country",
+      "ofgem puc energy regulator directory",
+      "no eu wide energy regulator explained",
+      "energy water market regulator directory"
+    ]
+  },
+  {
+    "title": "Ombudsman Directory",
+    "type": "directory",
+    "block": "telecoms-utilities",
+    "url": "/directory/telecoms-utilities#ombudsman-directory",
+    "description": "Complementary to Section 1's regulators: a regulator oversees the market, an ombudsman scheme resolves your individual dispute. No US entry here — there's no federal telecom/energy ombudsman in the US; US consumers use the complaint portals in Section 4 or their state PUC directly. This gap is intentional.",
+    "keywords": [
+      "telecom utility ombudsman directory",
+      "ombudsman resolves individual dispute telecom",
+      "tio ofcom ombudsman services directory",
+      "no us federal telecom energy ombudsman",
+      "ombudsman scheme directory by country"
+    ]
+  },
+  {
+    "title": "Consumer Complaint Portals",
+    "type": "directory",
+    "block": "telecoms-utilities",
+    "url": "/directory/telecoms-utilities#consumer-complaint-portals-directory",
+    "description": "Where to actually file a complaint — as distinct from the regulators (Section 1-2, set the rules) and ombudsman schemes (Section 3, resolve disputes once your provider's own process has failed).",
+    "keywords": [
+      "consumer complaint portals directory",
+      "where to file telecom utility complaint",
+      "fcc complaint portal directory",
+      "state puc complaint portal directory",
+      "file complaint telecom energy portal"
+    ]
+  },
+  {
+    "title": "Provider Cancellation Pages",
+    "type": "directory",
+    "block": "telecoms-utilities",
+    "url": "/directory/telecoms-utilities#provider-cancellation-pages-directory",
+    "description": "Not all of these are self-service \"cancel\" buttons — some require a phone call or chat. The value here is having the correct page or number immediately rather than searching for it; treat each entry's actual process as described, not assumed.",
+    "keywords": [
+      "provider cancellation pages directory",
+      "direct telecom utility cancellation page",
+      "find correct cancel page or number",
+      "provider cancellation process directory",
+      "cancel broadband mobile energy directory"
+    ]
+  },
+  {
+    "title": "The TIO Mandate: How to Force ISPs to Cancel Contracts and Waive Termination Fees Legally",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/tio-cancel-internet-contract-australia",
+    "description": "If your NBN or mobile plan fails to deliver, or the provider stonewalls your cancellation, you don't have to pay an early termination fee. How the Telecommunications Industry Ombudsman (TIO) gives you real leverage, and the paper trail to build.",
+    "keywords": [
+      "tio mandate force isps cancel contracts",
+      "waive termination fee legally australia",
+      "nbn mobile plan fails to deliver cancel",
+      "telecommunications industry ombudsman leverage",
+      "tio cancel internet contract australia"
+    ]
+  },
+  {
+    "title": "The Smartphone Guarantee: Enforcing ACL Rights Beyond the Manufacturer's 12-Month Warranty",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/mobile-phone-warranty-rights-australia",
+    "description": "A premium phone failing at 14 or 18 months isn't your problem to pay for just because the manufacturer's 12-month warranty expired. Under Australian Consumer Law that 12-month figure is a marketing limit, not a legal cutoff — the automatic guarantees can apply well beyond it.",
+    "keywords": [
+      "smartphone guarantee acl rights beyond warranty",
+      "phone failing after 12 month warranty australia",
+      "acl marketing limit not legal cutoff",
+      "retailer responsible not manufacturer phone",
+      "mobile phone warranty rights australia"
+    ]
+  },
+  {
+    "title": "Comcast, AT&T, or Verizon Ignoring You? How to File an FCC Complaint That Actually Gets a Response",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/fcc-telecom-complaint-us",
+    "description": "The FCC's informal complaint process skips the customer-service loop and puts your provider on a 30-day legal clock to respond in writing. How it works, what it won't resolve, and how to build a complaint that gets a real answer.",
+    "keywords": [
+      "comcast att verizon ignoring you fcc complaint",
+      "fcc informal complaint process telecom",
+      "30 day legal clock provider respond",
+      "file fcc complaint that gets response",
+      "fcc telecom complaint us guide"
+    ]
+  },
+  {
+    "title": "Facing a Utility Shutoff? Your State's Public Utilities Commission Has Real Power Here",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/state-puc-utility-shutoff-us",
+    "description": "Electricity, gas and water are regulated by your state's Public Utilities Commission — which has real power over billing disputes and shutoffs. Cold-weather rules, the notice you're owed, and how to open a PUC complaint that pauses disconnection.",
+    "keywords": [
+      "facing utility shutoff state puc power",
+      "electricity gas water regulated state puc",
+      "cold weather rules utility shutoff us",
+      "puc complaint pause disconnection",
+      "state puc utility shutoff us guide"
+    ]
+  },
+  {
+    "title": "Broadband or Mobile Complaint Going Nowhere? Here's How Ofcom's Complaint System Actually Works",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/ofcom-telecom-adr-rights-uk",
+    "description": "UK telecoms providers must belong to a free arbitration scheme you can use once you've given them a fair chance. How Ofcom's ADR system works — including the wait time drop to 6 weeks from 8 April 2026.",
+    "keywords": [
+      "broadband mobile complaint going nowhere ofcom",
+      "uk telecom free arbitration scheme adr",
+      "ofcom adr system how it works",
+      "ofcom wait time 6 weeks april 2026",
+      "ofcom telecom adr rights uk"
+    ]
+  },
+  {
+    "title": "Got a Shock Energy Bill? Ofgem's 12-Month Rule Might Mean You Don't Have to Pay It",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/ofgem-energy-backbilling-rule-uk",
+    "description": "A catch-up energy bill going back years is one of the most stressful surprises a supplier can send. Ofgem's back-billing rule (SLC 21BA) means you may not owe anything older than 12 months if the error was theirs.",
+    "keywords": [
+      "shock energy bill ofgem 12 month rule",
+      "catch up bill years back energy uk",
+      "ofgem back billing rule slc 21ba",
+      "don't have to pay old energy bill",
+      "ofgem energy backbilling rule uk"
+    ]
+  },
+  {
+    "title": "How to Escalate an Unresolved Energy or Broadband Complaint to the Ombudsman (Free, Binding, No Court Needed)",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/ombudsman-services-energy-broadband-uk",
+    "description": "There's a free arbitration route that's genuinely binding on the company — but energy and telecoms now run on different clocks. How to escalate to the Ombudsman, and how to build a case that gets a strong outcome.",
+    "keywords": [
+      "escalate unresolved energy broadband ombudsman",
+      "free binding arbitration route uk energy",
+      "energy telecoms different clocks ombudsman",
+      "build case ombudsman strong outcome",
+      "ombudsman services energy broadband uk"
+    ]
+  },
+  {
+    "title": "Struggling With Energy Bills or Switching Supplier? Start With Citizens Advice, Not Your Supplier's Retention Team",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/citizens-advice-energy-bills-uk",
+    "description": "A smart meter throwing up impossible spikes, or a supplier collapse dumping you onto a pricier tariff — UK energy consumers have real protections. The lesser-known ones, from the Debt Assignment Protocol to Supplier of Last Resort.",
+    "keywords": [
+      "struggling energy bills citizens advice uk",
+      "smart meter impossible spikes supplier collapse",
+      "debt assignment protocol supplier last resort",
+      "uk energy consumer protections lesser known",
+      "citizens advice energy bills uk"
+    ]
+  },
+  {
+    "title": "Got a Call From \"Your Bank\" or HMRC? Here's How to Actually Verify It (Not the Number on Screen)",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/verify-suspicious-phone-call-uk",
+    "description": "Your bank's real name and number on your screen isn't proof — caller ID spoofing can fake almost anything. The correct way to verify a suspicious call, the 7726 text shortcode, and how to report it.",
+    "keywords": [
+      "verify suspicious phone call uk bank hmrc",
+      "caller id spoofing fake number screen",
+      "correct way verify suspicious call uk",
+      "7726 text shortcode report spam call",
+      "verify suspicious phone call uk guide"
+    ]
+  },
+  {
+    "title": "How to Spot and Dispute Cramming on Your US Telecom Bill",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/us-telco-cramming-hidden-charges",
+    "description": "A practical guide to identifying unauthorized telephone-bill charges, contacting the carrier, documenting the dispute and filing an FCC complaint.",
+    "keywords": [
+      "spot dispute cramming us telecom bill",
+      "unauthorized telephone bill charges identify",
+      "contact carrier document cramming dispute",
+      "file fcc complaint cramming charges",
+      "us telco cramming hidden charges"
+    ]
+  },
+  {
+    "title": "The Slamming Complaint Process: What to Do When Your US Phone Provider Was Changed Without Your Consent",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/us-slamming-unauthorized-provider-change",
+    "description": "How FCC slamming rules work, why the federal slamming category is limited to wireline service, verification evidence, credits and complaint escalation.",
+    "keywords": [
+      "slamming complaint process us phone provider",
+      "provider changed without consent us",
+      "fcc slamming rules wireline service",
+      "verification evidence credits slamming",
+      "us slamming unauthorized provider change"
+    ]
+  },
+  {
+    "title": "How to Cancel Internet or TV Without Paying an Early Termination Fee",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/us-broadband-early-termination-fee-cancel",
+    "description": "How US consumers can assess broadband and pay-TV early termination fees, speed claims, contracts and the evidence needed for a waiver request.",
+    "keywords": [
+      "cancel internet tv without early termination fee",
+      "broadband pay tv etf waiver request us",
+      "speed claims contract etf evidence",
+      "us broadband early termination fee cancel",
+      "waive early termination fee broadband"
+    ]
+  },
+  {
+    "title": "Internet Outages in the US: When Can You Demand a Billing Credit?",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/us-broadband-outage-billing-credit",
+    "description": "What US broadband customers should know about outage credits, service agreements, state rules, FCC complaints and documenting prolonged outages.",
+    "keywords": [
+      "internet outages us demand billing credit",
+      "broadband outage credit service agreement",
+      "no federal rule prorated refund outage",
+      "document prolonged outage fcc complaint",
+      "us broadband outage billing credit"
+    ]
+  },
+  {
+    "title": "US Number Portability: How to Keep Your Phone Number When Switching Carriers",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/us-number-portability-switch-carrier",
+    "description": "How local number portability works, what an old carrier can still charge, why debt does not automatically block a port, and how to complain to the FCC.",
+    "keywords": [
+      "us number portability switching carriers",
+      "keep phone number switch carrier us",
+      "old carrier still charge after port",
+      "debt does not block number port",
+      "us number portability switch carrier guide"
+    ]
+  },
+  {
+    "title": "Ofgem's 12-Month Back-Billing Rule: Why You May Not Owe That Catch-Up Energy Bill",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/uk-ofgem-back-billing-12-month-rule",
+    "description": "How Ofgem's back-billing rule protects UK households from shock catch-up energy bills, when the 12-month limit doesn't apply, and how to challenge an overdue bill.",
+    "keywords": [
+      "ofgem 12 month back billing rule",
+      "catch up energy bill gas electricity uk",
+      "ofgem back billing rule protects households",
+      "when 12 month limit does not apply",
+      "uk ofgem back billing 12 month rule"
+    ]
+  },
+  {
+    "title": "Mid-Contract Price Rises: Your Rights Under Ofcom's CPI/RPI Ban",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/uk-mid-contract-price-rises-cpi-ban",
+    "description": "Ofcom banned inflation-linked mid-contract price rises for new UK telecom contracts from January 2025. What this means if you're still on an older CPI-linked deal.",
+    "keywords": [
+      "mid contract price rises cpi rpi ban",
+      "ofcom banned inflation linked price rise",
+      "cpi plus 3.9 percent telecom contract",
+      "january 2025 uk telecom price rise ban",
+      "uk mid contract price rises cpi ban"
+    ]
+  },
+  {
+    "title": "Ofcom's Automatic Compensation Scheme: What You're Owed for Broadband Delays",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/uk-ofcom-automatic-compensation-scheme",
+    "description": "Ofcom's automatic compensation rates for delayed broadband repairs, missed engineer appointments and delayed activations, and what to do if your provider doesn't pay.",
+    "keywords": [
+      "ofcom automatic compensation scheme broadband",
+      "owed compensation broadband delays uk",
+      "engineer no show delayed activation compensation",
+      "automatic compensation no claim form",
+      "uk ofcom automatic compensation scheme"
+    ]
+  },
+  {
+    "title": "Forced Prepayment Meter Installation: Your Protections Under Ofgem's Code of Practice",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/uk-forced-prepayment-meter-rights",
+    "description": "When UK energy suppliers can and can't force a prepayment meter installation, who is protected by Ofgem's mandatory Code of Practice, and how to challenge one.",
+    "keywords": [
+      "forced prepayment meter installation uk",
+      "ofgem code of practice prepayment meter",
+      "energy debt force prepayment meter home",
+      "who cant be forced prepayment meter uk",
+      "uk forced prepayment meter rights"
+    ]
+  },
+  {
+    "title": "How to Escalate an Unresolved Energy or Telecom Complaint to the Ombudsman",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/uk-energy-telecom-ombudsman-escalation",
+    "description": "UK energy and telecom complaints go to two separate ombudsman schemes, not one. How the waiting periods, deadlock letters and binding decisions actually work.",
+    "keywords": [
+      "escalate unresolved energy telecom ombudsman uk",
+      "no single energy telecoms ombudsman uk",
+      "two separate ombudsman schemes uk",
+      "different waiting periods energy telecom",
+      "uk energy telecom ombudsman escalation"
+    ]
+  },
+  {
+    "title": "Challenging Estimated Energy Bills in the EU: Your Rights Under the Electricity Market Directive",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/eu-estimated-energy-bills-electricity-directive",
+    "description": "How EU consumers can challenge inflated estimated electricity and gas bills, the right to accurate billing under Directive 2019/944, and how to force a correction.",
+    "keywords": [
+      "challenging estimated energy bills eu",
+      "inflated estimate electricity gas bill eu",
+      "right to accurate billing directive 2019/944",
+      "force correction estimated energy bill eu",
+      "eu estimated energy bills electricity directive"
+    ]
+  },
+  {
+    "title": "Telecom Contract Lock-In in the EU: The 24-Month Limit Under the European Electronic Communications Code",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/eu-eecc-contract-duration-limits",
+    "description": "EU rules limiting telecom contract commitment periods to 24 months, the ban on disincentives to switching, and how to calculate a fair early exit penalty.",
+    "keywords": [
+      "telecom contract lock-in eu 24 month limit",
+      "european electronic communications code contract",
+      "device financing shrinking penalty clause eu",
+      "eu telecom contract commitment period limit",
+      "eu eecc contract duration limits"
+    ]
+  },
+  {
+    "title": "Your Fibre Isn't Hitting the Advertised Speed: Your Rights Under the EU Open Internet Regulation",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/eu-open-internet-regulation-speed-rights",
+    "description": "How the EU's Open Internet Regulation treats persistent broadband speed shortfalls, why the measurement method matters, and when you can exit the contract.",
+    "keywords": [
+      "fibre not hitting advertised speed eu",
+      "eu open internet regulation speed rights",
+      "symmetric gigabit real world speed fraction",
+      "measurement method matters broadband speed eu",
+      "eu open internet regulation speed rights"
+    ]
+  },
+  {
+    "title": "Facing an Energy Disconnection in the EU? Your Rights Before Supply Can Be Cut Off",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/eu-energy-disconnection-vulnerable-customer-rights",
+    "description": "EU rules on protecting vulnerable customers from electricity and gas disconnection, what suppliers must offer before cutting supply, and how national rules vary.",
+    "keywords": [
+      "facing energy disconnection eu rights",
+      "vulnerable customer protection disconnection eu",
+      "supplier moving straight to disconnection eu",
+      "steps law requires before cutoff eu",
+      "eu energy disconnection vulnerable customer rights"
+    ]
+  },
+  {
+    "title": "Cancelling Insurance or Maintenance Add-Ons Bundled With Your Energy Bill in the EU",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/eu-ancillary-services-energy-bill-withdrawal-rights",
+    "description": "How the EU's 14-day withdrawal right applies to home insurance, boiler maintenance and other add-ons bundled with an energy contract, without cancelling your supply.",
+    "keywords": [
+      "cancelling insurance maintenance add-ons energy bill eu",
+      "boiler cover electrical maintenance energy bill eu",
+      "two separate eu rights ancillary services",
+      "remove add-on without touching supply eu",
+      "eu ancillary services energy bill withdrawal rights"
+    ]
+  },
+  {
+    "title": "Bill Shock and the TCP Code: Your Right to Data Usage Alerts in Australia",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/au-tcp-code-bill-shock-usage-alerts",
+    "description": "How the TCP Code's mandatory 50/85/100% usage alerts work, what happens when a telco fails to send them, and how to dispute excess data or roaming charges.",
+    "keywords": [
+      "bill shock tcp code data usage alerts",
+      "huge bill extra data roaming no warning",
+      "telecommunications consumer protections code alerts",
+      "telcos penalised skipping usage warnings",
+      "au tcp code bill shock usage alerts"
+    ]
+  },
+  {
+    "title": "NBN Problems? Why Your Internet Provider, Not NBN Co, Is Legally Responsible",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/au-nbn-rsp-responsibility-acl",
+    "description": "Why Australian Consumer Law makes your retail internet provider — not NBN Co — responsible for fixing NBN connection problems, and how to claim a remedy.",
+    "keywords": [
+      "nbn problems internet provider not nbn co",
+      "acl retail provider legally responsible nbn",
+      "connection dropping who owes remedy nbn",
+      "nbn co blame acl responsibility",
+      "au nbn rsp responsibility acl"
+    ]
+  },
+  {
+    "title": "Signed an Energy Contract at Your Door? Your 10-Day Cooling-Off Right in Australia",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/au-door-to-door-energy-cooling-off",
+    "description": "How the 10 business day cooling-off period works for door-to-door and telemarketed energy contracts in Australia, and how a breach extends your cancellation rights.",
+    "keywords": [
+      "signed energy contract at door cooling off",
+      "door to door energy salesperson australia",
+      "two legal frameworks walk away window",
+      "bad sales pitch extend cooling off window",
+      "au door to door energy cooling off"
+    ]
+  },
+  {
+    "title": "How to Complain to the Telecommunications Industry Ombudsman (TIO)",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/au-tio-complaint-process",
+    "description": "How the free TIO complaint process works in Australia, why providers have a real financial incentive to resolve your case quickly, and how to escalate correctly.",
+    "keywords": [
+      "how to complain telecommunications industry ombudsman",
+      "telstra optus tpg tio scheme by law",
+      "fee structure financial reason fix problem",
+      "tio complaint process australia",
+      "au tio complaint process guide"
+    ]
+  },
+  {
+    "title": "Sky-High Energy or Water Bill? How to Get a Faulty Meter Tested in Australia",
+    "type": "blog",
+    "block": "telecoms-utilities",
+    "url": "/blog/au-meter-dispute-state-ombudsman",
+    "description": "How to dispute an implausibly high electricity, gas or water bill in Australia, request an independent meter test, and escalate to your state's ombudsman.",
+    "keywords": [
+      "sky high energy water bill faulty meter",
+      "get faulty meter tested australia",
+      "average household could not generate consumption",
+      "clear free path meter test australia",
+      "au meter dispute state ombudsman"
+    ]
+  },
+  {
+    "title": "Supplement Tracking Diary",
+    "type": "template",
+    "block": "health-supplements",
+    "url": "/templates/supplement-tracking-diary-free",
+    "description": "Track your supplement stack for 30 days and see whether it's actually doing anything. Free download — no email required beyond checkout.",
+    "keywords": [
+      "supplement tracking diary template",
+      "track supplement stack 30 days",
+      "see if supplements are doing anything",
+      "free supplement tracking diary download",
+      "supplement diary no catch free"
+    ]
+  },
+  {
+    "title": "Adverse Reaction Report",
+    "type": "template",
+    "block": "health-supplements",
+    "url": "/templates/adverse-reaction-report",
+    "description": "A structured, factual record of a suspected adverse reaction to a supplement, medicine, or health product — product/batch details, symptom timeline, medical treatment, and an evidence checklist. PDF + Word.",
+    "keywords": [
+      "adverse reaction report template",
+      "record suspected adverse reaction supplement",
+      "symptom timeline medical treatment log",
+      "adverse reaction evidence checklist us uk eu au",
+      "adverse reaction report pdf word"
+    ]
+  },
+  {
+    "title": "Supplement Label & Claims Verification Worksheet",
+    "type": "template",
+    "block": "health-supplements",
+    "url": "/templates/supplement-label-claims-verification-worksheet",
+    "description": "Checks a supplement's label and marketing claims against what it actually contains and what it's legally allowed to claim — ingredient/dosage cross-check, claims risk checklist, and certification verification table. PDF only.",
+    "keywords": [
+      "supplement label claims verification worksheet",
+      "check label claims against contents",
+      "ingredient dosage cross check worksheet",
+      "health claims risk checklist certification",
+      "supplement label verification pdf"
+    ]
+  },
+  {
+    "title": "Product Recall & Contamination Incident Log",
+    "type": "template",
+    "block": "health-supplements",
+    "url": "/templates/product-recall-contamination-incident-log",
+    "description": "For when a product you own is subject to a safety recall or contamination alert — confirms whether your batch is affected, logs the actions taken, and a health-monitoring note. PDF + Word.",
+    "keywords": [
+      "product recall contamination incident log",
+      "safety recall contamination alert template",
+      "confirm batch affected recall log",
+      "health monitoring note recall incident",
+      "product recall incident log pdf word"
+    ]
+  },
+  {
+    "title": "Before Buying Supplements",
+    "type": "checklist",
+    "block": "health-supplements",
+    "url": "/checklists/before-buying-supplements",
+    "description": "A free, printable checklist before you buy a supplement: check the evidence for the active ingredient, compare the dose, check NHS guidance, and check for safety and interactions.",
+    "keywords": [
+      "before buying supplements checklist",
+      "check evidence active ingredient supplement",
+      "check nhs guidance before buying supplement",
+      "safety interactions supplement checklist",
+      "before you buy supplement checklist"
+    ]
+  },
+  {
+    "title": "Reporting an Unsafe Product or Medicine Side Effect (Australia)",
+    "type": "checklist",
+    "block": "health-supplements",
+    "url": "/checklists/au-safety-reporting-check",
+    "description": "A free, printable checklist for Australians reporting an unsafe consumer product (Product Safety Australia / ACCC) or a medicine, supplement or device side effect (the TGA) — which agency, what to record, and what a report can and can't do. No account required.",
+    "keywords": [
+      "reporting unsafe product medicine side effect australia",
+      "product safety australia accc vs tga",
+      "which agency to use safety report au",
+      "what to record before bin packaging",
+      "au safety reporting checklist"
+    ]
+  },
+  {
+    "title": "Supplement Label Safety Checklist",
+    "type": "checklist",
+    "block": "health-supplements",
+    "url": "/checklists/supplement-label-safety-checklist",
+    "description": "A free checklist: check ingredients, dosage, allergens, warnings, and label claims before you take a supplement. No account required.",
+    "keywords": [
+      "supplement label safety checklist",
+      "check ingredients dosage allergens warnings",
+      "label claims before you take supplement",
+      "supplement safety label checklist",
+      "read supplement label safely checklist"
+    ]
+  },
+  {
+    "title": "Supplement Claim & Marketing Red Flags Checklist",
+    "type": "checklist",
+    "block": "health-supplements",
+    "url": "/checklists/supplement-claim-marketing-red-flags-checklist",
+    "description": "A free checklist: spot miracle-cure language, unrealistic results, fake authority, and manipulative sales tactics in supplement marketing before you buy. No account required.",
+    "keywords": [
+      "supplement claim marketing red flags checklist",
+      "spot miracle cure language supplements",
+      "unrealistic results fake authority checklist",
+      "manipulative sales tactics supplement checklist",
+      "supplement marketing red flags checklist"
+    ]
+  },
+  {
+    "title": "Online Supplement Purchase Checklist",
+    "type": "checklist",
+    "block": "health-supplements",
+    "url": "/checklists/online-supplement-purchase-checklist",
+    "description": "A free checklist: check seller legitimacy, the listing, subscription traps, and the return policy before you buy a supplement online. No account required.",
+    "keywords": [
+      "online supplement purchase checklist",
+      "check seller legitimacy online supplement",
+      "subscription traps supplement checklist",
+      "return policy before buying supplement online",
+      "buying supplements online checklist"
+    ]
+  },
+  {
+    "title": "Third-Party Certification Directory",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#third-party-certification-directory",
+    "description": "Nobody pre-approves a supplement before it's sold. These are the independent marks that actually verify what's in the bottle — and how to look one up.",
+    "keywords": [
+      "third party certification directory supplements",
+      "usp nsf informed sport certification directory",
+      "independent marks verify supplement contents",
+      "look up supplement certification mark",
+      "supplement certification directory"
+    ]
+  },
+  {
+    "title": "Supplement Recall Directory",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#supplement-recall-directory",
+    "description": "Check whether something you bought — or are about to buy — has already been flagged as unsafe, contaminated, or adulterated. This connects directly to the Product Recall Databases section of our Shipping & E-commerce directory, which covers general consumer products — these entries are supplement- and food-specific.",
+    "keywords": [
+      "supplement recall directory",
+      "check if supplement flagged unsafe contaminated",
+      "fda fsa rasff tga recall directory",
+      "supplement food specific recall database",
+      "is my supplement recalled directory"
+    ]
+  },
+  {
+    "title": "Official Health Claim Database",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#official-health-claim-database-directory",
+    "description": "Which health claims are actually authorised to appear on a label or an ad — and where marketing crosses the line. Run a listing or an ad through our free Supplement Claim & Marketing Red Flags Checklist before you buy.",
+    "keywords": [
+      "official health claim database directory",
+      "which health claims are authorised label",
+      "eu uk au us health claim register directory",
+      "check if health claim is authorised",
+      "supplement health claim database directory"
+    ]
+  },
+  {
+    "title": "Novel Foods Directory",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#novel-foods-directory",
+    "description": "Some ingredients need pre-market safety approval before they can legally be sold at all — separate from whether a claim about them is allowed.",
+    "keywords": [
+      "novel foods directory supplements",
+      "ingredient needs pre-market safety approval",
+      "eu uk us au novel food catalogue directory",
+      "is this ingredient legal to sell directory",
+      "novel food approval status directory"
+    ]
+  },
+  {
+    "title": "Banned Ingredients Directory",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#banned-ingredients-directory",
+    "description": "Where undeclared, banned, or restricted ingredients get tracked once a supplement is already on shelves. Want to check a specific ingredient list yourself first? Try our free Supplement Ingredients Auditor.",
+    "keywords": [
+      "banned ingredients directory supplements",
+      "undeclared banned restricted ingredient tracker",
+      "wada prohibited list poisons standard directory",
+      "check if ingredient is banned directory",
+      "banned supplement ingredient database"
+    ]
+  },
+  {
+    "title": "Official Regulators Directory",
+    "type": "directory",
+    "block": "health-supplements",
+    "url": "/directory/health-supplements#official-regulators-directory",
+    "description": "Who regulates the supplement market itself — distinct from Section 1 (who certifies a specific product) and Section 5 (what's banned in it).",
+    "keywords": [
+      "official regulators directory supplements",
+      "who regulates the supplement market",
+      "fda mhra tga efsa regulator directory",
+      "supplement market regulator by country",
+      "official supplement regulator directory"
+    ]
+  },
+  {
+    "title": "Supplement Ingredients Auditor",
+    "type": "analyzer",
+    "block": "health-supplements",
+    "url": "/supplement-analyzer",
+    "description": "Paste any supplement label and get an evidence-based, ingredient-by-ingredient breakdown — scored green, yellow or red. Free tool by Kibbo. No marketing, just science.",
+    "keywords": [
+      "supplement ingredients auditor",
+      "paste supplement label evidence based breakdown",
+      "green yellow red ingredient score",
+      "free supplement label checker tool",
+      "supplement ingredient analyzer no marketing"
+    ]
+  },
+  {
+    "title": "Structure/Function Claims vs. Disease Claims: The FDA Line Every Supplement Label Walks",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/us-dshea-structure-function-disease-claims",
+    "description": "How to tell a legal structure/function claim from an illegal disease claim on a US supplement label, under DSHEA — and what it means when a product crosses the line.",
+    "keywords": [
+      "structure function claims vs disease claims",
+      "fda line supplement label dshea",
+      "legal structure function claim vs illegal",
+      "when supplement claim crosses the line",
+      "us dshea structure function disease claims"
+    ]
+  },
+  {
+    "title": "Protein Spiking: How to Tell If Your Whey Powder Is Padded With Cheap Amino Acids",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/uk-protein-spiking-whey-consumer-rights",
+    "description": "How protein spiking exploits the standard nitrogen test to inflate protein claims on the label, and what UK consumer law says about a whey product that isn't what it claims.",
+    "keywords": [
+      "protein spiking whey powder cheap amino acids",
+      "nitrogen test exploited protein claims",
+      "uk consumer law whey product not as claimed",
+      "is my whey protein spiked",
+      "uk protein spiking whey consumer rights"
+    ]
+  },
+  {
+    "title": "What Your Supplement Can Legally Say in the EU: The EFSA Health Claims Regulation",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/eu-efsa-health-claims-regulation-1924-2006",
+    "description": "How Regulation (EC) 1924/2006 separates authorised, on-hold and rejected health claims in the EU, and why some genuinely promising botanicals still can't make health claims.",
+    "keywords": [
+      "what supplement can legally say eu efsa",
+      "regulation ec 1924 2006 health claims",
+      "authorised on hold rejected health claims eu",
+      "botanicals cant make health claims eu",
+      "eu efsa health claims regulation 1924 2006"
+    ]
+  },
+  {
+    "title": "Ethylene Oxide in Your Supplements: How to Check the EU's RASFF Alert Portal",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/eu-rasff-ethylene-oxide-supplement-contamination",
+    "description": "How the EU's Rapid Alert System caught widespread ethylene oxide contamination in botanical supplements, and how to check if a product you own was affected.",
+    "keywords": [
+      "ethylene oxide supplements eu rasff",
+      "eu rapid alert system botanical contamination",
+      "check if supplement affected ethylene oxide",
+      "rasff alert portal how to check",
+      "eu rasff ethylene oxide supplement contamination"
+    ]
+  },
+  {
+    "title": "Titanium Dioxide (E171) in Supplement Capsules: Why the EU Banned It",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/eu-titanium-dioxide-e171-supplement-ban",
+    "description": "The EU banned titanium dioxide as a food additive in 2022 over unresolved genotoxicity concerns. How to spot it on an older or imported supplement label.",
+    "keywords": [
+      "titanium dioxide e171 supplement capsules",
+      "why eu banned titanium dioxide food additive",
+      "genotoxicity concerns e171 ban 2022",
+      "spot e171 older imported supplement label",
+      "eu titanium dioxide e171 supplement ban"
+    ]
+  },
+  {
+    "title": "Why a Multivitamin Legal in the Netherlands Can Be Illegal in France",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/eu-vitamin-mineral-dose-limits-member-states",
+    "description": "The EU still has no harmonised maximum doses for vitamins and minerals in supplements — but that's finally changing in 2026. What the patchwork means for you now.",
+    "keywords": [
+      "multivitamin legal netherlands illegal france",
+      "eu no harmonised vitamin mineral dose limits",
+      "eu vitamin dose limits changing 2026",
+      "why supplement dose legal in one eu country",
+      "eu vitamin mineral dose limits member states"
+    ]
+  },
+  {
+    "title": "Is Your Lion's Mane Supplement Legal in the EU? It Depends on the Form",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/eu-novel-food-catalogue-adaptogenic-mushrooms",
+    "description": "Adaptogenic mushrooms like lion's mane and reishi aren't banned in the EU — but the exact form (fruiting body vs. mycelium powder) decides whether it's legal.",
+    "keywords": [
+      "lions mane supplement legal eu form",
+      "adaptogenic mushrooms eu novel food catalogue",
+      "fruiting body vs mycelium powder legal eu",
+      "reishi lions mane eu legal status",
+      "eu novel food catalogue adaptogenic mushrooms"
+    ]
+  },
+  {
+    "title": "Is Your Supplement Actually Checked? What AUST L and AUST R Really Mean",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/au-tga-artg-aust-l-r-codes",
+    "description": "How to read the AUST L, AUST L(A) and AUST R codes on an Australian supplement label, what each one actually confirms, and how to check the ARTG yourself.",
+    "keywords": [
+      "aust l aust r codes what they mean",
+      "is my supplement actually checked australia",
+      "aust l(a) aust r label codes explained",
+      "check artg yourself australia supplement",
+      "au tga artg aust l r codes"
+    ]
+  },
+  {
+    "title": "Accidental Doping in Australia: How Contaminated Supplements End Athletes' Careers",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/au-accidental-doping-hasta-informed-sport",
+    "description": "Why one in three uncertified sports supplements sold online in Australia tested positive for a WADA-banned substance, and how HASTA and Informed Sport certification reduce that risk.",
+    "keywords": [
+      "accidental doping australia contaminated supplements",
+      "one in three uncertified supplements wada banned",
+      "hasta informed sport certification reduce risk",
+      "contaminated supplement athlete career australia",
+      "au accidental doping hasta informed sport"
+    ]
+  },
+  {
+    "title": "Banned Pre-Workout Stimulants in Australia: What the Poisons Standard Prohibits",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/au-poisons-standard-preworkout-stimulants",
+    "description": "Why DMAA, higenamine and other stimulants are scheduled as poisons in Australia, and how the ABF and TGA enforce this against imported pre-workout supplements.",
+    "keywords": [
+      "banned pre workout stimulants australia",
+      "dmaa higenamine scheduled poisons australia",
+      "abf tga enforce imported preworkout supplements",
+      "poisons standard prohibited stimulants",
+      "au poisons standard preworkout stimulants"
+    ]
+  },
+  {
+    "title": "\"TGA Approved\" Is Always a Lie: Here's What Regulators Actually Allow",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/au-tga-approved-claim-myth",
+    "description": "Why the TGA explicitly bans the claim 'TGA approved' in advertising, what listed medicines actually go through, and how to report misleading supplement marketing.",
+    "keywords": [
+      "tga approved is always a lie",
+      "tga bans claim tga approved advertising",
+      "what listed medicines actually go through",
+      "report misleading supplement marketing australia",
+      "au tga approved claim myth"
+    ]
+  },
+  {
+    "title": "What a Proposition 65 Warning on Your Protein Powder Actually Means",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/us-prop-65-heavy-metals-protein-powder",
+    "description": "Why plant-based protein powders often carry California's Prop 65 heavy metal warning, what the label does and doesn't tell you, and how to check a specific product.",
+    "keywords": [
+      "proposition 65 warning protein powder meaning",
+      "plant based protein powder heavy metal warning",
+      "california prop 65 label what it tells you",
+      "check specific protein powder product prop 65",
+      "us prop 65 heavy metals protein powder"
+    ]
+  },
+  {
+    "title": "Can You Get a Refund for a Supplement That Didn't Work? Your ACL Rights",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/au-acl-supplement-refund-rights",
+    "description": "How Australian Consumer Law consumer guarantees apply to supplements — unadvertised adverse reactions, unsubstantiated claims, and poor quality — and how to claim a refund.",
+    "keywords": [
+      "refund supplement that didnt work acl",
+      "australian consumer law supplement guarantees",
+      "unadvertised adverse reactions unsubstantiated claims",
+      "how to claim refund supplement australia",
+      "au acl supplement refund rights"
+    ]
+  },
+  {
+    "title": "DMAA, DMHA and the Pre-Workout Stimulants the FDA Says Shouldn't Be on Sale",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/us-dmaa-dmha-banned-preworkout-stimulants",
+    "description": "How to spot banned stimulants like DMAA and DMHA hiding under plant-extract names in pre-workout supplements, and what their FDA status actually is.",
+    "keywords": [
+      "dmaa dmha pre workout stimulants fda",
+      "banned stimulants hiding plant extract names",
+      "fda status dmaa dmha preworkout",
+      "spot banned preworkout stimulants us",
+      "us dmaa dmha banned preworkout stimulants"
+    ]
+  },
+  {
+    "title": "USP, NSF, and Informed Sport: What Each Supplement Certification Actually Verifies",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/us-usp-nsf-informed-sport-certifications-explained",
+    "description": "USP Verified, NSF Certified for Sport, and Informed Sport look interchangeable on a label but test for different things. What each one actually confirms.",
+    "keywords": [
+      "usp nsf informed sport certifications explained",
+      "supplement certifications look interchangeable but differ",
+      "what each certification mark actually confirms",
+      "usp verified vs nsf certified for sport",
+      "us usp nsf informed sport certifications"
+    ]
+  },
+  {
+    "title": "What \"Clinically Proven\" Is Actually Supposed to Mean, Per the FTC",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/us-ftc-clinically-proven-standard",
+    "description": "The FTC's 2022 Health Products Compliance Guidance sets a real evidence bar for supplement marketing claims. Most 'clinically proven' claims don't meet it.",
+    "keywords": [
+      "clinically proven actually supposed to mean ftc",
+      "ftc 2022 health products compliance guidance",
+      "real evidence bar supplement marketing claims",
+      "most clinically proven claims dont meet standard",
+      "us ftc clinically proven standard"
+    ]
+  },
+  {
+    "title": "Is Your Supplement Actually an Unlicensed Medicine? The MHRA's Borderline Products Rule",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/uk-mhra-borderline-products-melatonin",
+    "description": "Why melatonin and other substances sold freely as supplements in the US require a prescription in the UK, and how the MHRA decides where the line sits.",
+    "keywords": [
+      "supplement actually unlicensed medicine mhra",
+      "melatonin prescription uk supplement us",
+      "mhra borderline products rule explained",
+      "how mhra decides where line sits",
+      "uk mhra borderline products melatonin"
+    ]
+  },
+  {
+    "title": "Buying Legal CBD in the UK: How to Check the FSA's Novel Foods List",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/uk-cbd-fsa-novel-foods-public-list",
+    "description": "Most CBD oils and gummies on sale in the UK aren't fully authorised novel foods. How the FSA's public list works, and how to check a specific product.",
+    "keywords": [
+      "buying legal cbd uk fsa novel foods list",
+      "most cbd oils gummies not fully authorised uk",
+      "how fsa public list works cbd",
+      "check specific cbd product fsa list",
+      "uk cbd fsa novel foods public list"
+    ]
+  },
+  {
+    "title": "What the ASA Actually Bans in Supplement and Influencer Advertising",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/uk-asa-cap-code-supplement-advertising",
+    "description": "The CAP Code rules that govern UK supplement advertising — no disease claims, no specific weight-loss figures — and real cases where influencers and brands broke them.",
+    "keywords": [
+      "asa bans supplement influencer advertising",
+      "cap code rules uk supplement advertising",
+      "no disease claims no weight loss figures",
+      "influencer brand cases broke cap code",
+      "uk asa cap code supplement advertising"
+    ]
+  },
+  {
+    "title": "Why UK Customs Seizes Supplements Ordered From the US",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/uk-customs-seized-supplement-ingredients",
+    "description": "DHEA, yohimbine and other US supplement ingredients that get parcels seized at the UK border, what happens after a seizure, and one common myth worth correcting.",
+    "keywords": [
+      "why uk customs seizes supplements from us",
+      "dhea yohimbine parcels seized uk border",
+      "what happens after supplement seizure uk",
+      "common myth supplement seizure corrected",
+      "uk customs seized supplement ingredients"
+    ]
+  },
+  {
+    "title": "How to Report a Dangerous Product in Australia",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/report-dangerous-product-australia",
+    "description": "A product that endangers safety is a public safety matter, not just a refund. How to report to Product Safety Australia (ACCC), the business 2-day notification rule, and what triggers a national recall.",
+    "keywords": [
+      "how to report dangerous product australia",
+      "product safety australia accc report",
+      "business 2 day notification rule australia",
+      "what triggers national recall australia",
+      "report dangerous product australia guide"
+    ]
+  },
+  {
+    "title": "Report a Side Effect to the TGA: Medicine & Medical Device Safety",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/report-side-effect-tga-australia",
+    "description": "Had a reaction to a medicine, supplement, vaccine or medical device in Australia? How to report to the TGA, what the DAEN database does, and what to have ready before you file.",
+    "keywords": [
+      "report side effect tga medicine device",
+      "reaction medicine supplement vaccine device australia",
+      "what daen database does tga",
+      "what to have ready before file tga report",
+      "report side effect tga australia guide"
+    ]
+  },
+  {
+    "title": "Had a Bad Reaction to a Supplement? How to Report It to the FDA via MedWatch",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/fda-medwatch-supplement-report-us",
+    "description": "In the US, dietary supplements aren't pre-approved for safety — the FDA acts reactively on reports like yours. How to report a supplement reaction through MedWatch (Form 3500B), and what to have ready.",
+    "keywords": [
+      "bad reaction supplement report fda medwatch",
+      "dietary supplements not pre approved safety us",
+      "report supplement reaction form 3500b",
+      "what to have ready before medwatch report",
+      "fda medwatch supplement report us guide"
+    ]
+  },
+  {
+    "title": "Had a Reaction to a Supplement or Medicine in the UK? Here's Where to Actually Report It",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/mhra-yellow-card-uk",
+    "description": "The UK's Yellow Card scheme collects suspected side effects — but knowing which product types it covers matters, because a plain food supplement is regulated as food, not medicine. Where to actually report.",
+    "keywords": [
+      "reaction supplement medicine uk where to report",
+      "mhra yellow card scheme suspected side effects",
+      "plain food supplement regulated as food not medicine",
+      "which reporting route covers what uk",
+      "mhra yellow card uk supplement reaction"
+    ]
+  },
+  {
+    "title": "Before You Buy Any Supplement, Check What the Actual Research Says (Examine.com)",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/examine-com-supplement-research",
+    "description": "An influencer citing 'studies' isn't the same as evidence. Examine.com is an independent, ad-free database of clinical supplement research — how to read its Human Effect Matrix and catch pixie-dusted products.",
+    "keywords": [
+      "before buying supplement check actual research",
+      "examine.com independent ad free research database",
+      "human effect matrix how to read it",
+      "catch pixie dusted products examine.com",
+      "examine com supplement research guide"
+    ]
+  },
+  {
+    "title": "More Vitamins Isn't Automatically Better — What the NHS Actually Recommends",
+    "type": "blog",
+    "block": "health-supplements",
+    "url": "/blog/nhs-vitamins-supplements-guide-uk",
+    "description": "Your body doesn't just 'flush out' every excess vitamin — fat-soluble ones can build up to harmful levels. What the NHS actually recommends, the three cases where supplements are advised, and how to check a product.",
+    "keywords": [
+      "more vitamins isnt automatically better nhs",
+      "fat soluble vitamins build up harmful levels",
+      "what nhs actually recommends supplements",
+      "three cases supplements are advised nhs",
+      "nhs vitamins supplements guide uk"
+    ]
   }
 ]
