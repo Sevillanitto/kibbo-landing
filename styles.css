@@ -1113,6 +1113,7 @@ padding: 15px 20px; cursor: pointer; margin-top: 6px; transition: var(--transiti
 .calc-result-compare { font-family: var(--font-sans); font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
 .calc-result-figure { font-family: var(--font-serif); font-weight: 700; font-size: clamp(40px, 11vw, 56px); line-height: 1.1; color: var(--accent-green); }
 .calc-result-headline { font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 10px; }
+.calc-result-headline.is-overdue { color: var(--accent-terra); }
 .calc-result-context { font-family: var(--font-sans); font-size: 15px; line-height: 1.65; color: var(--text-secondary); margin-top: 14px; }
 .calc-result-context p { margin-top: 10px; }
 .calc-result-context p:first-child { margin-top: 0; }

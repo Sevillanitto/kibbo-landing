@@ -8,20 +8,20 @@
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.getkibbo.com/housing-rentals/calculators/security-deposit-return-calculator">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Free Security Deposit Return Calculator — Get Your Money Back | Kibbo</title>
+<title>Security Deposit Return Deadline Calculator — By State & Country | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free calculator for your security deposit return deadline — state-by-state US law, UK deposit protection schemes, EU and Australia rules. Instant answer on when you should get your money back.">
+<meta name="description" content="How long does your landlord have to return your deposit? Free calculator — enter your move-out date for an instant deadline across all 50 US states + DC, the UK, and general EU guidance.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Free Security Deposit Return Calculator — Get Your Money Back">
-<meta property="og:description" content="Free calculator for your security deposit return deadline — state-by-state US law, UK deposit protection schemes, EU and Australia rules. Instant answer.">
+<meta property="og:title" content="Security Deposit Return Deadline Calculator — By State & Country">
+<meta property="og:description" content="How long does your landlord have to return your deposit? Free calculator covering all 50 US states + DC, the UK, and general EU guidance.">
 <meta property="og:url" content="https://www.getkibbo.com/housing-rentals/calculators/security-deposit-return-calculator">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Security Deposit Return Calculator — Get Your Money Back">
-<meta name="twitter:description" content="Free calculator for your security deposit return deadline — state-by-state US law, UK deposit protection schemes, EU and Australia rules. Instant answer.">
+<meta name="twitter:title" content="Security Deposit Return Deadline Calculator — By State & Country">
+<meta name="twitter:description" content="How long does your landlord have to return your deposit? Free calculator covering all 50 US states + DC, the UK, and general EU guidance.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
-      "description": "Free calculator that computes your landlord's security deposit return deadline — state-by-state US law, UK deposit protection schemes, EU and Australia rules.",
+      "description": "Free calculator that computes your landlord's security deposit return deadline — all 50 US states plus DC individually researched, UK deposit protection scheme rules, and general EU guidance.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
       "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
@@ -149,9 +149,9 @@
           <div class="kibbo-panel-banner">
             <div>
               <div class="kibbo-panel-banner-title">New this month</div>
-              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on AI-generated scams.</div>
             </div>
-            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+            <a href="/investigations/ai-scam-playbook-2026" class="kibbo-panel-banner-btn">Read it →</a>
           </div>
         </div>
       </div>
@@ -238,8 +238,8 @@
 <div class="section-page-hero">
   <div class="container">
     <p class="section-label">Free Calculator</p>
-    <h1 class="section-title">Security deposit return calculator</h1>
-    <p class="section-subtitle">Free, instant calculator — find out exactly when your landlord must return your deposit, and what to do to get your money back if the deadline has already passed.</p>
+    <h1 class="section-title">Security deposit return deadline calculator</h1>
+    <p class="section-subtitle">How long does your landlord have to return your deposit? Enter your move-out date for an instant deadline — all 50 US states + DC individually researched, plus UK and general EU guidance.</p>
   </div>
 </div>
 
@@ -250,13 +250,12 @@
     <form id="sdCalcForm" novalidate>
 
       <div class="calc-field">
-        <label class="calc-label" for="sdCountry">Country / region</label>
+        <label class="calc-label" for="sdCountry">Where is the property?</label>
         <select class="calc-select" id="sdCountry">
           <option value="" disabled selected>Select one</option>
-          <option value="us">US</option>
-          <option value="uk">UK</option>
-          <option value="eu">EU (generic)</option>
-          <option value="au">Australia</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="eu">Other / EU</option>
         </select>
       </div>
 
@@ -318,17 +317,17 @@
         </select>
       </div>
 
-      <div class="calc-field" id="sdAkDeductionsField" hidden>
-        <label class="calc-label" id="sdAkDeductionsLabel">Did the landlord make any deductions from your deposit?</label>
-        <div class="calc-radio-group" role="radiogroup" aria-labelledby="sdAkDeductionsLabel">
-          <label class="calc-radio-option"><input type="radio" name="sdAkDeductions" value="no"> No</label>
-          <label class="calc-radio-option"><input type="radio" name="sdAkDeductions" value="yes"> Yes</label>
-        </div>
-      </div>
-
       <div class="calc-field">
         <label class="calc-label" for="sdMoveOutDate">Date you moved out / returned keys</label>
         <input class="calc-input" type="date" id="sdMoveOutDate">
+      </div>
+
+      <div class="calc-field" id="sdDeductionsField" hidden>
+        <label class="calc-label" id="sdDeductionsLabel">Did the landlord make any deductions from your deposit?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="sdDeductionsLabel">
+          <label class="calc-radio-option"><input type="radio" name="sdDeductions" value="no"> No</label>
+          <label class="calc-radio-option"><input type="radio" name="sdDeductions" value="yes"> Yes</label>
+        </div>
       </div>
 
       <p class="calc-error" id="sdCalcError" hidden>Please answer every question above before calculating.</p>
@@ -340,7 +339,7 @@
       <div class="calc-result-figure" id="sdResultFigure"></div>
       <div class="calc-result-headline" id="sdResultHeadline"></div>
       <div class="calc-result-context" id="sdResultContext"></div>
-      <a class="calc-cta" id="sdResultCta" href="/generate/landlord-deposit-demand-letter">Generate your deposit demand letter →</a>
+      <a class="calc-cta" id="sdResultCta" href="/generate/landlord-deposit-demand-letter" hidden>Generate your deposit demand letter →</a>
     </div>
 
   </div>
@@ -407,16 +406,18 @@
 </footer>
 
 <script>
-// Security Deposit Return Calculator — third of 27 planned calculators.
-// One top-level country/region question branches into four engines. US is
-// the only branch that does real date arithmetic (move-out date + a
-// state-specific day count from a researched lookup table, defaulting to
-// the 30-day "most common" figure -- clearly flagged as unverified for
-// that specific state -- for any of the 31 states+DC not individually
-// researched). UK/EU/Australia have no fixed statutory deadline to compute
-// against, so they render fixed informational text instead of a computed
-// date, per the source material -- never inventing a country-specific
-// figure that wasn't verified. Still one scrollable page throughout.
+// Security Deposit Return Deadline Calculator — rebuilt 2026-09-15 with all
+// 50 states + DC individually verified (day counts supplied and confirmed
+// by Carlos; this script does NOT carry forward or invent specific statute
+// citations — earlier drafts of this page cited section numbers for ~20
+// states, but since the new full dataset wasn't independently verified
+// against those same citations, all US results now say "under [State] law"
+// generically rather than mixing cited and uncited states inconsistently).
+// UK and Other/EU are deliberately non-computed: no fixed statutory return
+// countdown exists for either, so they render fixed explanatory text
+// instead of forcing a fabricated day-count. Australia support was dropped
+// in this rebuild — the brief this version was built from only specifies
+// US / UK / Other-EU as the three jurisdictions.
 (function () {
   'use strict';
 
@@ -424,13 +425,14 @@
   var countrySelect = document.getElementById('sdCountry');
   var stateField = document.getElementById('sdStateField');
   var stateSelect = document.getElementById('sdState');
-  var akDeductionsField = document.getElementById('sdAkDeductionsField');
   var moveOutDateInput = document.getElementById('sdMoveOutDate');
+  var deductionsField = document.getElementById('sdDeductionsField');
   var errorEl = document.getElementById('sdCalcError');
   var resultEl = document.getElementById('sdCalcResult');
   var figureEl = document.getElementById('sdResultFigure');
   var headlineEl = document.getElementById('sdResultHeadline');
   var contextEl = document.getElementById('sdResultContext');
+  var ctaEl = document.getElementById('sdResultCta');
 
   function radioValue(name) {
     var el = form.querySelector('input[name="' + name + '"]:checked');
@@ -440,44 +442,94 @@
   countrySelect.addEventListener('change', function () {
     var isUS = countrySelect.value === 'us';
     stateField.hidden = !isUS;
-    if (!isUS) { akDeductionsField.hidden = true; }
+    deductionsField.hidden = !isUS;
   });
 
-  stateSelect.addEventListener('change', function () {
-    akDeductionsField.hidden = stateSelect.value !== 'AK';
-  });
+  // State -> deadline data. days = same figure regardless of deductions.
+  // daysNo/daysYes = different figure depending on the deductions toggle
+  // (used instead of "days" when the deadline itself varies). note = extra
+  // explanatory HTML appended after the primary deadline sentence. explain
+  // = true means no day-count applies at all (Kentucky, Tennessee) — a
+  // fixed message is shown instead of computed date math. noMeaning/
+  // yesMeaning override what the landlord must actually DO by the deadline
+  // in states where a "deductions" answer changes not just the day count
+  // but the nature of the deadline itself (Florida, Illinois).
+  var US_STATES = {
+    AL: { days: 60 },
+    AK: { daysNo: 14, daysYes: 30 },
+    AZ: { days: 14 },
+    AR: { days: 60 },
+    CA: { days: 21 },
+    CO: { days: 30 },
+    CT: { days: 30 },
+    DE: { days: 20 },
+    DC: { days: 45 },
+    FL: {
+      daysNo: 15, daysYes: 30,
+      noMeaning: 'return your deposit in full',
+      yesMeaning: 'send you a written notice of intent to claim against your deposit — this deadline is for that notice, not necessarily for handing over the remaining balance yet'
+    },
+    GA: { days: 30 },
+    HI: { days: 14 },
+    ID: { days: 21, note: 'Some leases extend this up to 30 days instead of the statutory 21 — check your lease for a longer figure before assuming 21 is final.' },
+    IL: {
+      daysNo: 45, daysYes: 30,
+      noMeaning: 'return your deposit in full',
+      yesMeaning: 'send you an itemized statement of deductions with supporting receipts — if that statement doesn\'t arrive within 30 days, the full 45-day deadline to return the deposit in full still applies'
+    },
+    IN: { days: 45, forwardingAddress: true },
+    IA: { days: 30, forwardingAddress: true },
+    KS: { days: 30, note: 'Technically, the statute gives 14 days after your landlord actually determines the deductions, capped at 30 days total from move-out — we show the 30-day outer cap here since that\'s the figure calculable from your move-out date alone.' },
+    KY: { explain: true },
+    LA: { days: 30 },
+    ME: { days: 30, note: 'That\'s for a written lease. If you\'re renting on a tenancy-at-will basis (no written lease), the deadline is 21 days instead.' },
+    MD: { days: 45 },
+    MA: { days: 30 },
+    MI: { days: 30 },
+    MN: { days: 21, note: 'That drops to 5 days if the unit was condemned during your tenancy.' },
+    MS: { days: 45 },
+    MO: { days: 30 },
+    MT: { daysNo: 10, daysYes: 30 },
+    NE: { days: 14 },
+    NV: { days: 30 },
+    NH: { days: 30 },
+    NJ: { days: 30, note: 'Two exceptions can shorten this: 5 days if you were displaced by fire, flood, or condemnation, or 15 days if you formally demand the deposit back in writing.' },
+    NM: { days: 30 },
+    NY: { days: 14 },
+    NC: { days: 30, note: 'That\'s the deadline for an interim statement. If the final cost of damages genuinely can\'t be determined yet, your landlord gets up to 60 days for the final accounting.' },
+    ND: { days: 30 },
+    OH: { days: 30 },
+    OK: { days: 45, note: 'This clock only starts once you\'ve both moved out and made a written demand for the deposit — it doesn\'t start automatically at move-out alone.' },
+    OR: { days: 31 },
+    PA: { days: 30 },
+    RI: { days: 20 },
+    SC: { days: 30, note: 'Technically this runs from the latest of three events — tenancy termination, delivery of possession, or your demand for the deposit — not always the move-out date alone. We\'ve calculated from the move-out date you entered, since that\'s usually the relevant trigger, but the true legal deadline could be later if one of the other two events came after it.' },
+    SD: { days: 21, note: 'This was raised from 14 to 21 days by a 2026 law change effective July 1, 2026 — if you\'ve read an older guide citing 14 days, that figure is now outdated.' },
+    TN: { explain: true },
+    TX: { days: 30 },
+    UT: { days: 30 },
+    VT: { days: 14 },
+    VA: { days: 45 },
+    WA: { days: 30 },
+    WV: { days: 60, note: 'This can be shorter — 45 days after a new tenant moves into the unit, if that happens before the 60-day mark.' },
+    WI: { days: 21 },
+    WY: {
+      daysNo: 30, daysYes: 60,
+      note: 'The underlying rule is 30 days after your lease ends, or 15 days after your landlord receives your forwarding address, whichever is later — plus an extra 30 days on top if the deductions are for damage, which is what the 60-day figure above reflects.'
+    }
+  };
 
-  // State -> { days, cite } lookup, researched individually. Every other
-  // state (31 + DC) falls back to the 30-day "most common" figure, shown
-  // with an explicit "verify your state's exact law" flag rather than
-  // presented as confirmed for that specific state.
-  var STATE_DAYS = {
-    // 14 days
-    AK: { days: 14, cite: 'Alaska Stat. § 34.03.070' },
-    AZ: { days: 14, cite: 'Ariz. Rev. Stat. § 33-1321' },
-    HI: { days: 14, cite: 'Haw. Rev. Stat. § 521-44' },
-    NE: { days: 14, cite: 'Neb. Rev. Stat. § 76-1416' },
-    NY: { days: 14, cite: 'N.Y. Gen. Oblig. Law § 7-108' },
-    SD: { days: 14, cite: 'S.D. Codified Laws § 43-32-24' },
-    VT: { days: 14, cite: 'Vt. Stat. Ann. tit. 9, § 4461' },
-    // 21 days
-    CA: { days: 21, cite: 'Cal. Civ. Code § 1950.5' },
-    // 20 days
-    DE: { days: 20, cite: 'Del. Code Ann. tit. 25, § 5514' },
-    // 30 days (explicitly researched, not the unlisted-state default)
-    IA: { days: 30, cite: 'Iowa Code § 562A.12' },
-    KS: { days: 30, cite: 'Kan. Stat. Ann. § 58-2550' },
-    CT: { days: 30, cite: 'Conn. Gen. Stat. § 47a-21' },
-    GA: { days: 30, cite: 'Ga. Code Ann. § 44-7-34' },
-    CO: { days: 30, cite: 'Colo. Rev. Stat. § 38-12-103' },
-    TX: { days: 30, cite: 'Tex. Prop. Code § 92.103' },
-    // 45 days
-    IL: { days: 45, cite: '765 ILCS 710 (Security Deposit Return Act)' },
-    IN: { days: 45, cite: 'Ind. Code § 32-31-3-12' },
-    MD: { days: 45, cite: 'Md. Code, Real Property § 8-203' },
-    // 60 days
-    AL: { days: 60, cite: 'Ala. Code § 35-9A-201' },
-    AR: { days: 60, cite: 'Ark. Code Ann. § 18-16-305' }
+  var EXPLAIN_TEXT = {
+    KY: {
+      figure: 'No statewide deadline',
+      headline: 'Kentucky sets this locally, not statewide',
+      context: '<p>Kentucky has no single statewide security deposit return deadline. Instead, it\'s local-option — roughly 30 cities and counties across the state have adopted their own ordinance setting a deadline, commonly somewhere in the 30–60 day range, but the exact figure depends entirely on where you live.</p><p>Check your specific city or county\'s landlord-tenant ordinance, or ask your local housing authority, since Kentucky state law alone won\'t give you a number.</p>'
+    },
+    TN: {
+      figure: 'Not a fixed day count',
+      headline: 'Tennessee uses an escrow-and-response structure instead',
+      context: '<p>Tennessee doesn\'t set a flat "X days after move-out" deadline the way most states do. Instead, the law requires your deposit to sit in a separate escrow account, with a structured response process once you request the funds back — there\'s no single day-count figure this calculator can compute for Tennessee.</p><p>Check Tennessee\'s landlord-tenant law, or a local tenant rights organization, for the exact escrow and response timeline that applies to your situation.</p>'
+    }
   };
 
   var STATE_NAMES = {};
@@ -494,70 +546,104 @@
     return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
   }
 
-  function calculateUS(state, akDeductions, moveOutDate) {
-    var info = STATE_DAYS[state];
-    var days, cite, flagged = false;
+  // Purely additive: deadline = move-out date + deadline days. No
+  // compounding, no formula beyond date addition, per spec.
+  function calculateUS(state, deductions, moveOutDate) {
+    var info = US_STATES[state];
 
-    if (state === 'AK') {
-      if (akDeductions === 'yes') {
-        days = 30; cite = 'Alaska Stat. § 34.03.070 (the 30-day window applies once deductions are itemized)';
-      } else {
-        days = 14; cite = 'Alaska Stat. § 34.03.070';
-      }
-    } else if (info) {
-      days = info.days; cite = info.cite;
-    } else {
-      days = 30; cite = null; flagged = true;
+    if (info.explain) {
+      return { explain: true, state: state };
     }
+
+    var days = (deductions === 'yes')
+      ? (info.daysYes !== undefined ? info.daysYes : info.days)
+      : (info.daysNo !== undefined ? info.daysNo : info.days);
+
+    var meaning = (deductions === 'yes' && info.yesMeaning) ? info.yesMeaning
+                : (deductions === 'no' && info.noMeaning) ? info.noMeaning
+                : 'return your deposit';
 
     var deadline = new Date(moveOutDate.getTime());
     deadline.setDate(deadline.getDate() + days);
     var today = new Date(); today.setHours(0, 0, 0, 0);
     var diffDays = Math.round((deadline - today) / 86400000);
 
-    return { days: days, cite: cite, flagged: flagged, deadline: deadline, diffDays: diffDays, stateName: STATE_NAMES[state] };
+    return {
+      explain: false, state: state, days: days, meaning: meaning, note: info.note,
+      forwardingAddress: !!info.forwardingAddress, deadline: deadline, diffDays: diffDays,
+      stateName: STATE_NAMES[state]
+    };
+  }
+
+  function penaltyParagraph(state) {
+    if (state === 'AL' || state === 'MN') {
+      var name = state === 'AL' ? 'Alabama' : 'Minnesota';
+      return '<p>This one matters a lot in ' + name + ' specifically: by statute, if your landlord misses this deadline, the deposit doubles automatically — you\'re owed twice the original amount, not just the deposit itself.</p>';
+    }
+    return '<p>Missing this deadline can matter well beyond a late payment: in many states, a landlord who misses it forfeits the right to withhold anything from the deposit, and can face a statutory penalty on top of returning your money. Alabama and Minnesota law double the deposit automatically when a landlord misses the deadline; many other states allow a penalty commonly in the 2×–3× range, though the exact multiplier varies — check your state\'s specific penalty provision.</p>';
   }
 
   function renderResult(country, r) {
-    if (country === 'us') {
-      if (r.diffDays > 0) {
-        figureEl.textContent = r.diffDays + (r.diffDays === 1 ? ' day' : ' days') + ' remaining';
-      } else if (r.diffDays === 0) {
-        figureEl.textContent = 'Due today';
-      } else {
-        figureEl.textContent = Math.abs(r.diffDays) + (Math.abs(r.diffDays) === 1 ? ' day' : ' days') + ' overdue';
-      }
-      headlineEl.textContent = r.stateName + '’s deadline: ' + fmtDate(r.deadline) + ' (' + r.days + ' days after move-out)';
+    ctaEl.hidden = true;
 
-      var ctx = '';
-      if (r.flagged) {
-        ctx += '<p>' + r.stateName + ' wasn’t individually researched for this calculator, so this uses the most common figure — 30 days — as a starting point, not a confirmed deadline for ' + r.stateName + ' specifically. Verify your state’s exact statute before relying on this date.</p>';
-      } else {
-        ctx += '<p>Under ' + r.cite + ', landlords in ' + r.stateName + ' must return the deposit (or an itemized list of deductions) within ' + r.days + ' days of move-out.</p>';
+    if (country === 'us') {
+      if (r.explain) {
+        var ex = EXPLAIN_TEXT[r.state];
+        figureEl.classList.remove('is-overdue');
+        headlineEl.classList.remove('is-overdue');
+        figureEl.textContent = ex.figure;
+        headlineEl.textContent = ex.headline;
+        contextEl.innerHTML = ex.context;
+        ctaEl.hidden = false;
+        resultEl.hidden = false;
+        resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
       }
-      ctx += '<p>In most states, if the landlord sends an itemized deduction list within the deadline, they may be allowed longer to actually send the remaining balance — this calculator shows the base return/notice deadline, not that possible extension, so check your specific state’s rule if deductions are involved.</p>';
+
+      figureEl.classList.remove('is-overdue');
+      headlineEl.classList.remove('is-overdue');
+      figureEl.textContent = fmtDate(r.deadline);
+
+      if (r.diffDays > 0) {
+        headlineEl.textContent = r.diffDays + (r.diffDays === 1 ? ' day' : ' days') + ' remaining';
+      } else if (r.diffDays === 0) {
+        headlineEl.textContent = 'Due today';
+      } else {
+        headlineEl.textContent = Math.abs(r.diffDays) + (Math.abs(r.diffDays) === 1 ? ' day' : ' days') + ' overdue';
+        headlineEl.classList.add('is-overdue');
+      }
+
+      var ctx = '<p>Under ' + r.stateName + ' law, your landlord has ' + r.days + ' days from move-out to ' + r.meaning + '.</p>';
+      if (r.forwardingAddress) {
+        ctx += '<p>In ' + r.stateName + ', this clock legally starts when your landlord actually receives your forwarding address, not necessarily your move-out date. We\'ve calculated from the move-out date you entered as the best available estimate — if you gave your forwarding address later, count from that date instead for the true deadline.</p>';
+      }
+      if (r.note) {
+        ctx += '<p>' + r.note + '</p>';
+      }
+      ctx += penaltyParagraph(r.state);
       contextEl.innerHTML = ctx;
+      ctaEl.hidden = false;
 
     } else if (country === 'uk') {
-      figureEl.textContent = '10 days';
-      headlineEl.textContent = 'Once you and your landlord agree the amount';
+      figureEl.classList.remove('is-overdue');
+      headlineEl.classList.remove('is-overdue');
+      figureEl.textContent = 'No fixed return deadline';
+      headlineEl.textContent = 'Return happens once you both agree the amount';
       contextEl.innerHTML =
-        '<p>The UK has no fixed statutory countdown like US state law. If your deposit was protected in a government-approved scheme — TDS, DPS, or MyDeposits, mandatory under the Housing Act 2004 — the landlord must return it within 10 days of both sides agreeing the amount, or refer any dispute to the scheme’s free adjudication service.</p>' +
+        '<p>The UK doesn\'t set a fixed number of days for the deposit itself to be returned. What the law does fix is different: if your deposit was protected in a government-approved scheme — TDS, DPS, or MyDeposits, mandatory under the Housing Act 2004 — your landlord had to protect it within 30 days of receiving it, right at the start of your tenancy.</p>' +
+        '<p>The actual return happens once you and your landlord agree the amount — there\'s no statutory countdown for that step. If you disagree, the scheme\'s free dispute resolution service is the practical backstop, typically resolving within about 5–10 working days once both sides have responded.</p>' +
         '<p>Was your deposit actually protected in one of those schemes? If not, that failure is itself a violation — you can claim compensation of up to 3x the deposit amount on top of getting the deposit itself back.</p>';
+      ctaEl.hidden = false;
 
     } else if (country === 'eu') {
-      figureEl.textContent = '30–60 days';
-      headlineEl.textContent = 'Typical range — varies by country';
+      figureEl.classList.remove('is-overdue');
+      headlineEl.classList.remove('is-overdue');
+      figureEl.textContent = 'No single EU-wide rule';
+      headlineEl.textContent = 'Check your country\'s national law';
       contextEl.innerHTML =
-        '<p>There’s no EU-wide directive setting a fixed number of days for deposit returns — this is governed by each member state’s own national tenancy law. Most countries require the deposit back within a reasonable time after move-out once damages are assessed, typically somewhere in the 30–60 day range.</p>' +
-        '<p>Check your specific country’s national tenancy law for the exact figure and process that applies to you — this calculator can’t give you a single confirmed number across all EU member states.</p>';
-
-    } else if (country === 'au') {
-      figureEl.textContent = '~14 days';
-      headlineEl.textContent = 'After an uncontested bond claim is lodged';
-      contextEl.innerHTML =
-        '<p>Bond return timing in Australia is set by each state/territory’s own bond authority (for example NSW Fair Trading or Victoria’s RTBA), not a single national law. The landlord or agent must lodge a bond claim within a set window after move-out; if you don’t dispute it, funds are typically released within about 14 days of that claim being lodged.</p>' +
-        '<p>Check your specific state or territory bond authority for the exact deadlines and process — they differ enough between states that this figure is a general guide, not a confirmed number for your tenancy.</p>';
+        '<p>There\'s no EU directive setting one fixed deposit-return deadline across member states — this is governed entirely by each country\'s own national tenancy law. Most countries do set their own deadline nationally, commonly somewhere in the 1–2 month range, but the exact figure and process varies country by country.</p>' +
+        '<p>Check your specific country\'s national tenancy law for the number that actually applies to you — this calculator can\'t give a single confirmed figure across all EU member states. For related contacts and resources, see <a href="/directory/housing-rentals">Kibbo\'s Housing & Rentals directory</a>.</p>';
+      ctaEl.hidden = false;
     }
 
     resultEl.hidden = false;
@@ -575,14 +661,10 @@
 
     if (country === 'us') {
       var state = stateSelect.value;
-      if (!state) { errorEl.hidden = false; return; }
-      var akDeductions = '';
-      if (state === 'AK') {
-        akDeductions = radioValue('sdAkDeductions');
-        if (!akDeductions) { errorEl.hidden = false; return; }
-      }
+      var deductions = radioValue('sdDeductions');
+      if (!state || !deductions) { errorEl.hidden = false; return; }
       var moveOutDate = parseDateInput(moveOutDateValue);
-      renderResult('us', calculateUS(state, akDeductions, moveOutDate));
+      renderResult('us', calculateUS(state, deductions, moveOutDate));
     } else {
       renderResult(country, {});
     }
