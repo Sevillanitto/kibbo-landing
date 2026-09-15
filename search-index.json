@@ -7217,5 +7217,761 @@
       "bank final no not end of road uk",
       "fos government backed arbitrator uk"
     ]
+  },
+  {
+    "title": "Subscription Tracker & Ghost Spend Detector",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/subscription-tracker",
+    "description": "A 5-sheet Excel workbook that lists every subscription, rates how often you actually use each one, and automatically calculates the ghost spend you can cancel this month.",
+    "keywords": [
+      "subscription tracker ghost spend detector",
+      "list every subscription rate usage",
+      "find ghost spend to cancel template",
+      "subscription usage tracker excel",
+      "track all subscriptions in one place"
+    ]
+  },
+  {
+    "title": "Cancellation Letter Pack",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/cancellation-letter-pack",
+    "description": "Five ready-to-send cancellation letters — gym, streaming, insurance, membership and a formal demand — with citations to FTC Click-to-Cancel and the Consumer Rights Act.",
+    "keywords": [
+      "cancellation letter pack template",
+      "gym streaming insurance cancellation letters",
+      "five ready to send cancellation letters",
+      "formal cancellation demand letter template",
+      "cancellation letters with legal citations"
+    ]
+  },
+  {
+    "title": "Subscription Tracker & Renewal Log (EU)",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/eu-subscription-tracker-renewal-log",
+    "description": "A PDF + Excel tracker for every EU subscription — service name, sign-up date, the country whose renewal-notice law applies, the required notice period, next renewal date, price, and a log of the renewal notices you actually received.",
+    "keywords": [
+      "eu subscription tracker renewal log",
+      "renewal notice period tracker eu",
+      "track eu subscription renewal law by country",
+      "subscription renewal notices received log",
+      "eu subscription tracker pdf excel"
+    ]
+  },
+  {
+    "title": "Subscription Cancellation Email Pack",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/subscription-cancellation-email-pack",
+    "description": "Five cancellation email templates covering every scenario from a first request to a post-cancellation chargeback warning — structured to get a response instead of being ignored.",
+    "keywords": [
+      "subscription cancellation email pack",
+      "five cancellation email templates",
+      "post-cancellation chargeback warning email",
+      "cancellation email that gets a response",
+      "subscription cancellation email templates free"
+    ]
+  },
+  {
+    "title": "Service Cancellation & Refund Evidence Pack",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/service-cancellation-refund-evidence-pack",
+    "description": "Organize a subscription cancellation and refund claim in one place — service details, cancellation log, payments during the cancellation window, refund tracking, communications, and an evidence checklist. PDF + Word.",
+    "keywords": [
+      "service cancellation refund evidence pack",
+      "organize cancellation and refund claim",
+      "cancellation window payments tracker",
+      "refund tracking communications log template",
+      "service cancellation evidence checklist"
+    ]
+  },
+  {
+    "title": "Service Complaint & Escalation Evidence Log",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/service-complaint-escalation-evidence-log",
+    "description": "Document an ongoing dispute with any subscription or service provider — communications timeline, promises and deadlines, a multi-stage escalation tracker, and an evidence checklist. PDF + Word.",
+    "keywords": [
+      "service complaint escalation evidence log",
+      "document ongoing subscription dispute",
+      "multi stage escalation tracker service",
+      "communications timeline promises deadlines log",
+      "service complaint evidence checklist template"
+    ]
+  },
+  {
+    "title": "Subscription Billing & Payment Audit Workbook",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/subscription-billing-payment-audit-workbook",
+    "description": "Audit exactly what a single subscription has charged you over time — auto-calculating discrepancy column, a price-change notice log, and an auto-calculated summary of total discrepancies. Excel.",
+    "keywords": [
+      "subscription billing payment audit workbook",
+      "audit what subscription charged over time",
+      "auto calculating discrepancy subscription",
+      "price change notice log subscription",
+      "subscription billing audit excel"
+    ]
+  },
+  {
+    "title": "Subscription & Service Contract Comparison Workbook",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/subscription-service-contract-comparison-workbook",
+    "description": "Compare up to 4 services side by side before signing up — real effective price, renewal terms, cancellation method and notice period, exclusions, hidden fees, and a red-flags checklist. Excel.",
+    "keywords": [
+      "subscription service contract comparison workbook",
+      "compare services side by side before signing",
+      "real effective price renewal terms comparison",
+      "cancellation method notice period comparison",
+      "subscription contract red flags checklist"
+    ]
+  },
+  {
+    "title": "Recurring Payments & Ghost Subscription Tracker",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/recurring-payments-ghost-subscription-tracker",
+    "description": "Build a full inventory of every recurring payment leaving your account — auto-calculated annual cost per subscription, usage tracking, and a summary of total annual recurring spend and cancellation candidates. Excel.",
+    "keywords": [
+      "recurring payments ghost subscription tracker",
+      "inventory every recurring payment leaving account",
+      "auto calculated annual cost per subscription",
+      "cancellation candidates recurring spend summary",
+      "ghost subscription tracker excel"
+    ]
+  },
+  {
+    "title": "Free Trial & Introductory Offer Tracker",
+    "type": "template",
+    "block": "subscriptions-services",
+    "url": "/templates/free-trial-introductory-offer-tracker",
+    "description": "Track every free trial and introductory offer so none silently converts to a paid charge — start date, promo vs. conversion price, cancel-by date, reminder tracking, and a resolved-trials log. PDF.",
+    "keywords": [
+      "free trial introductory offer tracker",
+      "track free trial so it doesnt convert silently",
+      "cancel by date reminder tracking trial",
+      "promo vs conversion price tracker",
+      "free trial tracker template pdf"
+    ]
+  },
+  {
+    "title": "FCC Informal Complaint Letter",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/fcc-complaint",
+    "description": "Generate a clear, factual FCC informal complaint narrative to paste into the FCC Consumer Complaint Center — putting Comcast, AT&T, Verizon or any carrier on a 30-day clock to respond. Free.",
+    "keywords": [
+      "fcc informal complaint letter generator",
+      "fcc consumer complaint center letter",
+      "phone internet tv provider complaint letter",
+      "30 day clock fcc complaint generator",
+      "free fcc complaint letter generator"
+    ]
+  },
+  {
+    "title": "Telco Cancellation & TIO Complaint Letter (Australia)",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/au-tio-cancellation-demand",
+    "description": "Generate a formal letter to your Australian telco/ISP demanding contract cancellation without an early termination fee — citing provider breach and flagging a Telecommunications Industry Ombudsman (TIO) complaint. Free.",
+    "keywords": [
+      "telco cancellation tio complaint letter australia",
+      "cancel telco without early termination fee",
+      "telecommunications industry ombudsman complaint letter",
+      "provider breach cancellation demand au",
+      "tio complaint generator free"
+    ]
+  },
+  {
+    "title": "Subscription Cancellation & Refund Demand Letter (EU)",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/eu-subscription-cancellation-demand",
+    "description": "Generate a formal EU subscription cancellation or refund demand — the 14-day withdrawal right, a national cancellation-button law where one applies, or an unnotified renewal charge, with the right escalation path for each. Free.",
+    "keywords": [
+      "eu subscription cancellation refund demand letter",
+      "eu 14 day withdrawal right letter",
+      "cancellation button law germany france letter",
+      "unnotified renewal charge demand letter eu",
+      "revoke payment mandate letter eu"
+    ]
+  },
+  {
+    "title": "Subscription & Service Cancellation Generator",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/subscription-service-cancellation",
+    "description": "Generate a formal cancellation request for a subscription, free trial, or service contract, with a clear cancellation date on record. Free.",
+    "keywords": [
+      "subscription service cancellation generator",
+      "firm cancellation letter subscription free trial",
+      "fixed term service contract cancellation letter",
+      "cancellation date on record letter free",
+      "cancel subscription letter generator"
+    ]
+  },
+  {
+    "title": "Subscription & Service Billing Dispute Generator",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/subscription-service-billing-dispute",
+    "description": "Generate a formal dispute for an incorrect, duplicate, unauthorized, or unexpected subscription charge, or a refund request for an unwanted renewal. Free.",
+    "keywords": [
+      "subscription service billing dispute generator",
+      "post cancellation charge dispute letter",
+      "price increase without notice dispute letter",
+      "duplicate incorrect subscription charge dispute",
+      "unwanted renewal dispute letter free"
+    ]
+  },
+  {
+    "title": "Service Complaint & Escalation Generator",
+    "type": "generator",
+    "block": "subscriptions-services",
+    "url": "/generate/service-complaint-escalation",
+    "description": "Generate a formal complaint about a defective, incomplete, or misrepresented service — or escalate a complaint that hasn't been resolved. Free.",
+    "keywords": [
+      "service complaint escalation generator",
+      "defective incomplete service complaint letter",
+      "misrepresented service formal complaint letter",
+      "escalate service complaint that went nowhere",
+      "service complaint letter generator free"
+    ]
+  },
+  {
+    "title": "Subscription Before You Buy Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/subscription-before-you-buy-checklist",
+    "description": "A free, printable checklist to check the real price, auto-renewal terms, commitment, and what's actually included before you subscribe to anything.",
+    "keywords": [
+      "subscription before you buy checklist",
+      "check real price auto renewal before subscribing",
+      "commitment and whats included checklist",
+      "what to check before subscribing to anything",
+      "subscription pre purchase checklist"
+    ]
+  },
+  {
+    "title": "Free Trial Safety Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/free-trial-safety-checklist",
+    "description": "A free, printable checklist to track a free trial's conversion date, confirm the cancellation method in advance, and cancel with proof before you're charged.",
+    "keywords": [
+      "free trial safety checklist",
+      "track free trial conversion date",
+      "confirm cancellation method before trial ends",
+      "cancel free trial with proof checklist",
+      "free trial safety before you get charged"
+    ]
+  },
+  {
+    "title": "Subscription Cancellation Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/subscription-cancellation-checklist",
+    "description": "A free, printable checklist to cancel a subscription the right way — the correct method, written confirmation, and checking it actually took effect.",
+    "keywords": [
+      "subscription cancellation checklist",
+      "cancel subscription the right way checklist",
+      "written confirmation cancellation checklist",
+      "check cancellation actually took effect",
+      "how to properly cancel a subscription"
+    ]
+  },
+  {
+    "title": "Unexpected Subscription Charge Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/unexpected-subscription-charge-checklist",
+    "description": "A free, printable checklist to identify a charge you don't recognize, work out whether it's a forgotten trial, a family member's purchase, or genuine fraud, and what to do next.",
+    "keywords": [
+      "unexpected subscription charge checklist",
+      "charge i dont recognize checklist",
+      "forgotten trial vs fraud checklist",
+      "family member purchase or genuine fraud",
+      "identify unrecognized subscription charge"
+    ]
+  },
+  {
+    "title": "Post-Cancellation Charge Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/post-cancellation-charge-checklist",
+    "description": "A free, printable checklist for when you were charged after a confirmed cancellation — confirm your cancellation, document the charge, and get it refunded.",
+    "keywords": [
+      "post cancellation charge checklist",
+      "charged after confirmed cancellation checklist",
+      "document post cancellation charge for refund",
+      "get post cancellation charge refunded",
+      "charged after i cancelled checklist"
+    ]
+  },
+  {
+    "title": "Subscription Price Increase Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/subscription-price-increase-checklist",
+    "description": "A free, printable checklist to check the notice you received, confirm the numbers, and know your cancellation rights before a subscription price increase takes effect.",
+    "keywords": [
+      "subscription price increase checklist",
+      "check price increase notice checklist",
+      "confirm numbers before price increase takes effect",
+      "cancellation rights before price increase",
+      "subscription price hike checklist"
+    ]
+  },
+  {
+    "title": "Subscription Refund Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/subscription-refund-checklist",
+    "description": "A free, printable checklist to check your refund eligibility, gather your evidence, and make a specific, well-supported subscription refund request.",
+    "keywords": [
+      "subscription refund checklist",
+      "check refund eligibility subscription",
+      "gather evidence subscription refund request",
+      "well supported refund request checklist",
+      "subscription refund request checklist"
+    ]
+  },
+  {
+    "title": "Service Contract Before Signing Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/service-contract-before-signing-checklist",
+    "description": "A free, printable checklist to check the total cost, renewal terms, exit penalties, and what's actually included before you sign a service contract.",
+    "keywords": [
+      "service contract before signing checklist",
+      "check total cost renewal terms before signing",
+      "exit penalties service contract checklist",
+      "whats actually included before you sign",
+      "service contract pre signature checklist"
+    ]
+  },
+  {
+    "title": "Service Complaint Preparation Checklist",
+    "type": "checklist",
+    "block": "subscriptions-services",
+    "url": "/checklists/service-complaint-preparation-checklist",
+    "description": "A free, printable checklist to gather your evidence, document the impact, and define what you want before you send a service complaint.",
+    "keywords": [
+      "service complaint preparation checklist",
+      "gather evidence before service complaint",
+      "document impact before sending complaint",
+      "define what you want before complaining",
+      "service complaint prep checklist"
+    ]
+  },
+  {
+    "title": "Consumer Protection & Complaints",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#consumer-protection-complaints",
+    "description": "The general consumer protection authorities — not a subscription-specific regulator (Section 2) or a sector-specific body (Sections 5-7).",
+    "keywords": [
+      "consumer protection complaints directory",
+      "general consumer protection authority",
+      "ftc cma general complaints body",
+      "where to complain about a subscription",
+      "consumer protection authority by country"
+    ]
+  },
+  {
+    "title": "Subscription & Contract Regulators",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#subscription-contract-regulators",
+    "description": "Bodies and laws specifically focused on subscription, negative-option, and recurring-contract practices — distinct from the general consumer protection authorities above.",
+    "keywords": [
+      "subscription contract regulators directory",
+      "negative option rule regulator",
+      "ftc negative option rule tracking",
+      "subscription specific regulator directory",
+      "recurring contract law regulator"
+    ]
+  },
+  {
+    "title": "Subscription & Service Provider Verification",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#subscription-service-provider-verification",
+    "description": "Checking whether a subscription or service provider is a genuine, registered business — not a complaint route (Section 1) or a contract-specific regulator (Section 2).",
+    "keywords": [
+      "subscription service provider verification directory",
+      "verify subscription company is genuine business",
+      "check service provider registration",
+      "is this subscription company legitimate",
+      "provider verification directory"
+    ]
+  },
+  {
+    "title": "Payments & Recurring Billing",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#payments-recurring-billing",
+    "description": "The regulators and consumer protections specifically governing how a recurring payment is processed and disputed — distinct from the general consumer bodies in Section 1.",
+    "keywords": [
+      "payments recurring billing directory",
+      "recurring payment dispute regulator",
+      "how recurring charges are processed rules",
+      "dispute a recurring payment directory",
+      "recurring billing consumer protection"
+    ]
+  },
+  {
+    "title": "Telecom, Internet & Digital Services",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#telecom-internet-digital-services",
+    "description": "The sector-specific regulators for telecom, broadband, and mobile subscriptions.",
+    "keywords": [
+      "telecom internet digital services directory",
+      "broadband mobile subscription regulator",
+      "fcc ofcom acma telecom regulator",
+      "telecom sector specific regulator",
+      "internet service subscription regulator"
+    ]
+  },
+  {
+    "title": "Streaming, Software & Digital Subscriptions",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#streaming-software-digital-subscriptions",
+    "description": "Enforcement and platform-level dispute routes specific to digital/app-based subscriptions — distinct from the general regulators in Section 1.",
+    "keywords": [
+      "streaming software digital subscriptions directory",
+      "app store subscription dispute route",
+      "digital subscription enforcement body",
+      "platform level subscription dispute",
+      "streaming service complaint route"
+    ]
+  },
+  {
+    "title": "Fitness, Gyms & Membership Services",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#fitness-gyms-membership-services",
+    "description": "General bodies with a specific track record on gym/fitness membership disputes, plus the one dedicated UK ADR route found for this sector.",
+    "keywords": [
+      "fitness gyms membership services directory",
+      "gym membership dispute body",
+      "uk gym adr route directory",
+      "fitness membership complaint body",
+      "gym contract dispute resolution"
+    ]
+  },
+  {
+    "title": "Travel, Hospitality & Other Recurring Services",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#travel-hospitality-recurring-services",
+    "description": "General travel/hospitality regulator content (DOT, CAA, ABTA/ATOL) is already covered in the Flights & Travel and Food & Hospitality directories and is not repeated here. This section covers only recurring/membership-specific travel products — holiday clubs and long-term holiday products — which are genuinely distinct from a standard package holiday.",
+    "keywords": [
+      "travel hospitality recurring services directory",
+      "holiday club long term holiday product",
+      "timeshare holiday club regulator",
+      "recurring membership travel product directory",
+      "long term holiday product complaint"
+    ]
+  },
+  {
+    "title": "Laws & Official Consumer Guidance",
+    "type": "directory",
+    "block": "subscriptions-services",
+    "url": "/directory/subscriptions-services#laws-official-consumer-guidance",
+    "description": "The core legal text and official rulemaking status underlying the sections above — distinct from the regulators and bodies themselves.",
+    "keywords": [
+      "laws official consumer guidance directory",
+      "ftc click to cancel rulemaking status",
+      "negative option rule legal text",
+      "subscription law official guidance directory",
+      "consumer contract law reference directory"
+    ]
+  },
+  {
+    "title": "The Free Trial Trap: How a $0 Offer Turns Into a Recurring Bill",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/free-trial-trap-recurring-bill",
+    "description": "A practical guide to free trials, negative-option subscriptions, auto-renewal terms, cancellation deadlines, and recurring charges.",
+    "keywords": [
+      "free trial trap recurring bill",
+      "zero dollar offer turns into recurring charge",
+      "free trial charge i dont remember agreeing to",
+      "us law free trial recurring bill",
+      "fight back free trial recurring charge"
+    ]
+  },
+  {
+    "title": "Click to Subscribe, Call to Cancel: Are Companies Still Allowed to Make Cancellation This Difficult?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/click-to-subscribe-call-to-cancel",
+    "description": "An updated 2026 guide to subscription cancellation, the FTC's 2024 Click-to-Cancel rule, its later vacatur, and what consumers should document.",
+    "keywords": [
+      "click to subscribe call to cancel",
+      "ftc click to cancel rule vacatur 2026",
+      "is click to cancel currently active law",
+      "cancellation harder than signup us rules",
+      "ftc negative option rule current status"
+    ]
+  },
+  {
+    "title": "The Subscription Price Increase You Didn't Notice: What Happens When Your $9.99 Plan Becomes $19.99",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/subscription-price-increase-renewal-price",
+    "description": "A practical guide to promotional subscription pricing, renewal prices, notices, billing records, and disputing a charge that does not match your agreement.",
+    "keywords": [
+      "subscription price increase you didnt notice",
+      "plan doubled no clear warning",
+      "was price increase properly disclosed",
+      "what to do if price increase undisclosed",
+      "subscription renewal price jump us"
+    ]
+  },
+  {
+    "title": "The $35 Million Subscription Warning: What the Shutterstock Case Tells Consumers About Cancellation Traps",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/shutterstock-35-million-subscription-warning",
+    "description": "An evidence-based look at the FTC's May 2026 Shutterstock settlement allegations involving subscription disclosures, consent, recurring charges, and cancellation.",
+    "keywords": [
+      "shutterstock 35 million subscription warning",
+      "ftc shutterstock settlement cancellation",
+      "shutterstock case cancellation trap lesson",
+      "ftc subscription enforcement case 2026",
+      "shutterstock disclosure consent cancellation"
+    ]
+  },
+  {
+    "title": "The Subscription You Thought You Cancelled: What to Do When the Charges Keep Coming",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/subscription-cancelled-charges-keep-coming",
+    "description": "You cancelled a subscription, got confirmation, and were charged again. Learn how to document the cancellation, dispute recurring charges, and report subscription problems to the FTC.",
+    "keywords": [
+      "subscription thought cancelled charges keep coming",
+      "cancelled but charges didnt stop",
+      "evidence file post cancellation charge reversed",
+      "report subscription problem to ftc",
+      "disputed post cancellation charge"
+    ]
+  },
+  {
+    "title": "The UK Subscription Trap: What Happens When Your Free Trial Automatically Becomes Paid?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/uk-free-trial-auto-renewal",
+    "description": "How UK consumers should assess free trials, auto-renewal, pre-contract information and upcoming subscription-contract protections under the Digital Markets, Competition and Consumers Act 2024.",
+    "keywords": [
+      "uk subscription trap free trial paid",
+      "free trial automatically becomes paid uk",
+      "uk consumer contract rules free trial",
+      "digital markets competition consumers act 2024",
+      "uk free trial auto renewal rights"
+    ]
+  },
+  {
+    "title": "Can a UK Company Make You Give 3 Months' Notice to Cancel a Subscription?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/uk-three-month-notice-subscription",
+    "description": "When a UK subscription requires three months' notice after a minimum term, the clause is not automatically illegal — but it may be unfair depending on how the contract operates.",
+    "keywords": [
+      "uk company 3 months notice cancel subscription",
+      "long notice period small print enforceable",
+      "unfair term notice period uk subscription",
+      "three month cancellation notice uk",
+      "is my notice period clause fair uk"
+    ]
+  },
+  {
+    "title": "The Subscription Renewal Nobody Warned You About: What UK Consumers Should Check",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/uk-subscription-renewal-nobody-warned",
+    "description": "How UK consumers can check subscription renewals, promotional pricing, price changes, reminders and billing records before assuming a charge is unlawful.",
+    "keywords": [
+      "subscription renewal nobody warned you uk",
+      "renewed at higher price no warning uk",
+      "check contract notice history renewal",
+      "uk subscription renewal price change check",
+      "unwarned subscription renewal uk"
+    ]
+  },
+  {
+    "title": "Your Gym Says You Can't Cancel: When a Membership Contract Becomes a Consumer Rights Problem",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/uk-gym-membership-cannot-cancel",
+    "description": "How UK gym members can assess minimum terms, cancellation clauses, notice periods, unfair terms and evidence when a gym refuses to let them leave.",
+    "keywords": [
+      "gym says you cant cancel uk",
+      "gym membership contract consumer rights problem",
+      "stopped going gym keeps charging uk",
+      "is gym membership term fair uk",
+      "uk gym cancellation consumer rights"
+    ]
+  },
+  {
+    "title": "You Cancelled Your Broadband. Why Is the Provider Still Charging You?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/uk-broadband-cancelled-still-charging",
+    "description": "What UK broadband customers should check after cancellation: notice periods, final bills, early termination charges, equipment, Direct Debits and complaints.",
+    "keywords": [
+      "cancelled broadband still charging uk",
+      "internet ended direct debit didnt uk",
+      "valid final bill vs wrongful charge broadband",
+      "broadband cancellation still billed uk",
+      "uk broadband provider charging after cancel"
+    ]
+  },
+  {
+    "title": "The EU Subscription Trap: What Happens When a Free Trial Turns Into a Paid Contract?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/eu-free-trial-paid-contract",
+    "description": "What EU consumers should check before starting a free trial: pre-contract information, recurring payments, automatic renewal, withdrawal rights and country-specific rules.",
+    "keywords": [
+      "eu subscription trap free trial paid contract",
+      "try for free turned into months of payments eu",
+      "what trader had to tell you eu law",
+      "eu free trial paid contract rights",
+      "eu free trial disclosure requirement"
+    ]
+  },
+  {
+    "title": "Can an EU Company Hide Automatic Renewal in the Small Print?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/eu-automatic-renewal-small-print",
+    "description": "How EU consumers can assess automatic-renewal clauses, hidden terms, transparency and potentially unfair subscription provisions.",
+    "keywords": [
+      "eu company hide automatic renewal small print",
+      "contract renewed automatically eu terms",
+      "is automatic renewal clause fair eu",
+      "eu hidden auto renewal terms",
+      "automatic renewal small print eu law"
+    ]
+  },
+  {
+    "title": "The Digital Subscription You Can't Cancel: What EU Consumers Should Do",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/eu-digital-subscription-cannot-cancel",
+    "description": "What EU consumers should document when a digital subscription cancellation path disappears, including withdrawal rights, contract termination, recurring payments and escalation.",
+    "keywords": [
+      "digital subscription cant cancel eu",
+      "cancellation button disappeared eu",
+      "eu withdrawal function june 19 2026",
+      "eu digital subscription cancellation rights",
+      "cant find cancel button eu subscription"
+    ]
+  },
+  {
+    "title": "Your Streaming Service Raised the Price: What Should You Check Before Accepting It?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/eu-streaming-subscription-price-increase",
+    "description": "What EU consumers should check before accepting a streaming or digital subscription price increase, including contract terms, digital-content rights and unfair-terms rules.",
+    "keywords": [
+      "streaming service raised price eu",
+      "netflix music service price increase eu",
+      "eu digital content rules price increase",
+      "check before accepting streaming price hike",
+      "eu streaming subscription price increase rights"
+    ]
+  },
+  {
+    "title": "The EU Subscription Cancellation File: Everything to Save Before You Dispute a Recurring Charge",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/eu-subscription-cancellation-evidence-file",
+    "description": "What EU consumers should save before disputing a recurring subscription charge, including the contract, cancellation evidence, payment trail and escalation routes.",
+    "keywords": [
+      "eu subscription cancellation evidence file",
+      "company says never cancelled eu",
+      "save evidence before disputing recurring charge eu",
+      "eu subscription dispute evidence checklist",
+      "better evidence wins subscription dispute eu"
+    ]
+  },
+  {
+    "title": "The Free Trial That Wasn't Free: Automatic Renewals and Subscription Traps in Australia",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/au-free-trial-automatic-renewal-subscription-trap",
+    "description": "What Australian consumers should check before entering card details for a free trial, including ACL misleading-conduct rules and recent ACCC enforcement action.",
+    "keywords": [
+      "free trial that wasnt free australia",
+      "1 dollar trial 45 75 monthly charge",
+      "accc enforcement subscription trap australia",
+      "automatic renewal disclosure australia",
+      "australia free trial subscription trap"
+    ]
+  },
+  {
+    "title": "You Cancelled the Subscription. The Company Charged You Anyway. What Now?",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/au-cancelled-subscription-charged-anyway",
+    "description": "What Australian consumers should document and where to escalate when a business keeps charging a subscription after cancellation, including chargebacks and AFCA.",
+    "keywords": [
+      "cancelled subscription charged anyway australia",
+      "have cancellation email company has money",
+      "timeline disputed charge reversed australia",
+      "company charged after cancellation au",
+      "australia subscription charged after cancel"
+    ]
+  },
+  {
+    "title": "The Price Changed Without You Expecting It: What Australian Consumers Should Check",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/au-subscription-price-change",
+    "description": "What Australian consumers should check when a subscription price rises unexpectedly, including unfair contract terms and the Microsoft 365 ACCC proceedings.",
+    "keywords": [
+      "price changed without expecting australia",
+      "subscription 12.99 became 19.99 australia",
+      "what to check before accepting new charge au",
+      "unexpected subscription price change au",
+      "australia subscription price rise rights"
+    ]
+  },
+  {
+    "title": "The Gym Membership Trap: Minimum Terms, Cancellation Fees and Recurring Payments in Australia",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/au-gym-membership-trap",
+    "description": "What Australian gym members should check about minimum terms, cancellation fees, automatic renewal and unfair contract terms before disputing continued charges.",
+    "keywords": [
+      "gym membership trap australia",
+      "minimum terms cancellation fees gym au",
+      "stopped using gym bank account didnt au",
+      "australia gym membership recurring payments",
+      "gym contract minimum term australia"
+    ]
+  },
+  {
+    "title": "When a Service Provider Won't Cancel Your Contract: Building an Australian Consumer Complaint",
+    "type": "blog",
+    "block": "subscriptions-services",
+    "url": "/blog/au-service-provider-wont-cancel-consumer-complaint",
+    "description": "How to build an Australian consumer complaint when a service provider keeps billing you after repeated cancellation requests, and where to escalate.",
+    "keywords": [
+      "service provider wont cancel contract australia",
+      "asked three times to cancel still billing",
+      "turn the mess into evidence australia",
+      "building australian consumer complaint service",
+      "au service provider refuses cancellation"
+    ]
   }
 ]
