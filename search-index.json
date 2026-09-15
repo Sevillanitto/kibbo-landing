@@ -7973,5 +7973,1783 @@
       "building australian consumer complaint service",
       "au service provider refuses cancellation"
     ]
+  },
+  {
+    "title": "GDPR Request Evidence & Deadline Tracker",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/eu-gdpr-request-tracker",
+    "description": "A PDF + Excel tracker for GDPR access, erasure and rectification requests — request type, date sent, company/DPO contacted, the one-month deadline (extendable to three for complex requests), extension-notice flag, response received, and the next escalation step.",
+    "keywords": [
+      "gdpr request evidence deadline tracker",
+      "track gdpr access erasure request deadline",
+      "one month gdpr deadline extension tracker",
+      "dpa complaint evidence record gdpr",
+      "gdpr request tracker pdf excel"
+    ]
+  },
+  {
+    "title": "Data Broker Removal Tracker",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/data-broker-removal-tracker",
+    "description": "Direct opt-out links for 15+ data broker sites, plus a tracker to log every request until your data is actually removed. Excel and Google Sheets.",
+    "keywords": [
+      "data broker removal tracker",
+      "opt out links 15 data broker sites",
+      "track data broker removal requests",
+      "remove personal info data brokers tracker",
+      "data broker opt out tracker"
+    ]
+  },
+  {
+    "title": "Identity Theft Recovery Action Plan",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/identity-theft-recovery-plan",
+    "description": "A step-by-step recovery checklist and contact directory for identity theft victims in the US and UK. First-24-hours actions, week-one plan and a case tracking log.",
+    "keywords": [
+      "identity theft recovery action plan",
+      "identity theft victim contact directory",
+      "step by step identity theft recovery",
+      "identity theft checklist us uk",
+      "recover from identity theft plan"
+    ]
+  },
+  {
+    "title": "Digital Footprint Audit Checklist",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/digital-footprint-audit",
+    "description": "A 30-point annual checklist to clean up old accounts, app permissions, privacy settings, and passwords.",
+    "keywords": [
+      "digital footprint audit checklist",
+      "annual privacy cleanup checklist",
+      "clean up old accounts app permissions",
+      "digital footprint 30 point checklist",
+      "privacy settings passwords audit"
+    ]
+  },
+  {
+    "title": "Smart Home & IoT Privacy Setup Guide",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/smart-home-iot-privacy-guide",
+    "description": "A setup checklist to secure smart speakers, cameras, and TVs before connecting them to your home network.",
+    "keywords": [
+      "smart home iot privacy setup guide",
+      "secure smart speakers cameras tvs",
+      "iot privacy setup checklist",
+      "smart home network security guide",
+      "secure iot devices before connecting"
+    ]
+  },
+  {
+    "title": "Personal Data Rights Request Evidence Pack",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/personal-data-rights-request-evidence-pack",
+    "description": "Document any personal data rights request — access, deletion, correction, objection, or restriction — in one pack. Covers the right being exercised, identity verification, response tracking against your deadline, and an escalation-ready evidence checklist. PDF + Word.",
+    "keywords": [
+      "personal data rights request evidence pack",
+      "document access deletion correction request",
+      "privacy rights request identity verification",
+      "data rights request response tracker",
+      "personal data rights evidence checklist"
+    ]
+  },
+  {
+    "title": "Privacy Complaint & Escalation Evidence Pack",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/privacy-complaint-escalation-evidence-pack",
+    "description": "Build a complete file for a privacy dispute that goes beyond a single rights request — incident overview, communications timeline, deadlines the company made and missed, remedy requested, and a 3-stage escalation tracker up to your data protection authority. PDF + Word.",
+    "keywords": [
+      "privacy complaint escalation evidence pack",
+      "build privacy dispute file beyond rights request",
+      "privacy complaint communications timeline",
+      "3 stage escalation tracker privacy",
+      "privacy complaint dpa escalation pack"
+    ]
+  },
+  {
+    "title": "Personal Data Breach Incident Record",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/personal-data-breach-incident-record",
+    "description": "Document a security incident that may have exposed your personal data — what data was involved, what the company disclosed, actions you've taken (password changes, fraud alerts), and ongoing monitoring for misuse. PDF + Word.",
+    "keywords": [
+      "personal data breach incident record",
+      "document security incident personal data",
+      "data breach actions taken record",
+      "password change fraud alert tracker breach",
+      "personal data breach documentation"
+    ]
+  },
+  {
+    "title": "Data Sharing & Third-Party Disclosure Tracker",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/data-sharing-third-party-disclosure-tracker",
+    "description": "Log every time a company shares your personal data with a third party — recipient, purpose, legal basis claimed, and source — with an auto-calculated summary flagging disclosures with no stated purpose or basis. Excel.",
+    "keywords": [
+      "data sharing third party disclosure tracker",
+      "log company shares data with third party",
+      "legal basis claimed disclosure tracker",
+      "flag disclosures no stated purpose",
+      "third party data sharing log excel"
+    ]
+  },
+  {
+    "title": "Privacy Rights Request Tracker",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/privacy-rights-request-tracker",
+    "description": "Manage multiple privacy rights requests at once — access, deletion, correction, objection, restriction — with auto-calculated days remaining per deadline and a summary that flags overdue requests automatically. Excel.",
+    "keywords": [
+      "privacy rights request tracker",
+      "manage multiple privacy rights requests",
+      "days remaining per deadline privacy tracker",
+      "overdue privacy request flag tracker",
+      "privacy rights request tracker excel"
+    ]
+  },
+  {
+    "title": "Privacy Policy Change Comparison Workbook",
+    "type": "template",
+    "block": "privacy-data",
+    "url": "/templates/privacy-policy-change-comparison-workbook",
+    "description": "Compare two versions of a privacy policy side by side across 13 criteria — data collected, retention, third parties, rights listed — to spot exactly what changed between updates. Excel.",
+    "keywords": [
+      "privacy policy change comparison workbook",
+      "compare two privacy policy versions",
+      "what changed between privacy policy updates",
+      "privacy policy 13 criteria comparison",
+      "privacy policy diff workbook excel"
+    ]
+  },
+  {
+    "title": "Privacy Complaint Letter to a Company (Australia)",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/au-privacy-complaint-letter",
+    "description": "Generate a formal privacy complaint letter to an Australian company under the Privacy Act 1988 — the mandatory first step (≈30 days) before you can escalate to the OAIC. Free.",
+    "keywords": [
+      "privacy complaint letter company australia",
+      "privacy act 1988 complaint letter generator",
+      "australian privacy principle complaint letter",
+      "required first step before oaic escalation",
+      "free au privacy complaint letter generator"
+    ]
+  },
+  {
+    "title": "GDPR Rights Request Letter (Access / Erasure / Complaint)",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/eu-gdpr-rights-request",
+    "description": "Generate a formal GDPR rights request — a Subject Access Request (Article 15), a Right to Erasure demand (Article 17), a rectification request, or a pre-escalation DPO complaint — with the one-month deadline (extendable to three for complex requests) stated correctly. Free.",
+    "keywords": [
+      "gdpr rights request letter generator",
+      "article 15 access article 17 erasure letter",
+      "gdpr rectification request letter free",
+      "pre escalation dpo complaint letter",
+      "gdpr one month deadline letter generator"
+    ]
+  },
+  {
+    "title": "GDPR Violation Report / Whistleblower Notice",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/eu-gdpr-violation-report",
+    "description": "Generate a formal GDPR violation report for a national Data Protection Authority — the 72-hour breach-notification duty (Article 33), EU Whistleblower Directive protection for employees, and lawful-evidence guidance. Free.",
+    "keywords": [
+      "gdpr violation report whistleblower notice",
+      "formal violation report national dpa",
+      "72 hour breach duty article 33 report",
+      "eu whistleblower directive protection letter",
+      "gdpr whistleblower notice generator free"
+    ]
+  },
+  {
+    "title": "Privacy Rights Request Generator",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/privacy-rights-request",
+    "description": "Generate a formal request to exercise a privacy right — access, deletion, correction, objection to AI training use, or restriction of processing — addressed to any company. Free.",
+    "keywords": [
+      "privacy rights request generator",
+      "exercise privacy right access deletion correction",
+      "object to ai training use letter",
+      "restriction of processing request letter",
+      "privacy rights request letter free"
+    ]
+  },
+  {
+    "title": "Privacy Breach & Compliance Complaint Generator",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/privacy-breach-compliance-complaint",
+    "description": "Generate a formal complaint to a company about a data breach or a cookie/tracking consent violation — the required first step before escalating to a regulator. Free.",
+    "keywords": [
+      "privacy breach compliance complaint generator",
+      "formal complaint data breach company",
+      "cookie tracking consent violation complaint",
+      "first step before regulator escalation privacy",
+      "privacy breach complaint letter free"
+    ]
+  },
+  {
+    "title": "Privacy Regulator Complaint Generator",
+    "type": "generator",
+    "block": "privacy-data",
+    "url": "/generate/privacy-regulator-complaint",
+    "description": "Generate a formal complaint to the correct data protection authority for your country — FTC (US), ICO (UK), AEPD/CNIL/BfDI (EU), or OAIC (Australia) — after a company has failed to resolve the issue directly. Free.",
+    "keywords": [
+      "privacy regulator complaint generator",
+      "complaint to correct data protection authority",
+      "ftc ico aepd cnil oaic complaint letter",
+      "company failed to resolve privacy issue letter",
+      "privacy regulator complaint free generator"
+    ]
+  },
+  {
+    "title": "Privacy Breach? Which Path to Take (Australia)",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/au-privacy-path-check",
+    "description": "A free, printable checklist for Australians facing a privacy breach — work out the right path (OAIC complaint, Google removal, or the eSafety Commissioner), what each can and can't do, and the steps to take. No account required.",
+    "keywords": [
+      "privacy breach which path to take australia",
+      "oaic complaint vs google removal vs esafety",
+      "australian privacy breach right path checklist",
+      "which privacy body to contact australia",
+      "au privacy breach path checklist"
+    ]
+  },
+  {
+    "title": "Which DPA Do I Contact? + Is My Deadline Actually Overdue? (EU)",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/eu-dpa-deadline-check",
+    "description": "A free, printable checklist to work out which EU Data Protection Authority to contact — always your own country's, via the EDPB One-Stop-Shop — and whether a GDPR deadline is genuinely overdue once you check for a valid one-month extension notice. No account required.",
+    "keywords": [
+      "which dpa do i contact eu checklist",
+      "is my gdpr deadline actually overdue",
+      "edpb one stop shop dpa checklist",
+      "gdpr one month extension notice check",
+      "eu dpa contact deadline checklist"
+    ]
+  },
+  {
+    "title": "Privacy Audit Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/privacy-audit-checklist",
+    "description": "A free, printable checklist for what to check before you share your data, what to change at account creation, and the ongoing habits that keep your privacy settings from drifting back open. No account required.",
+    "keywords": [
+      "privacy audit checklist",
+      "what to share before signing up checklist",
+      "account creation privacy settings checklist",
+      "ongoing privacy habits checklist",
+      "personal privacy audit checklist"
+    ]
+  },
+  {
+    "title": "Data Broker Removal Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/data-broker-removal-checklist",
+    "description": "A free, printable checklist for finding where your personal information is listed on data broker sites, submitting removal requests, and tracking them until the listings actually come down. No account required.",
+    "keywords": [
+      "data broker removal checklist",
+      "find where personal info is listed checklist",
+      "submit data broker removal requests",
+      "track data broker listings removal",
+      "data broker opt out checklist"
+    ]
+  },
+  {
+    "title": "AI Privacy Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/ai-privacy-checklist",
+    "description": "A free, printable checklist for finding AI/ML training opt-out settings across the platforms you use, checking what's actually included, and submitting opt-out requests where no global setting exists. No account required.",
+    "keywords": [
+      "ai privacy checklist",
+      "ai ml training opt out settings checklist",
+      "find ai opt out across platforms",
+      "submit ai training opt out request",
+      "ai training data opt out checklist"
+    ]
+  },
+  {
+    "title": "Cookie Banner Compliance Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/cookie-banner-compliance-checklist",
+    "description": "A free, printable checklist for evaluating whether a website's cookie banner is actually compliant — reject-vs-accept parity, pre-checked boxes, and whether tracking starts regardless of your choice. For auditing a site, not your own settings.",
+    "keywords": [
+      "cookie banner compliance checklist for auditing a website",
+      "evaluate website cookie banner compliance",
+      "reject vs accept parity cookie banner",
+      "pre checked boxes cookie consent audit",
+      "cookie tracking compliance audit checklist"
+    ]
+  },
+  {
+    "title": "Data Breach Response Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/data-breach-response-checklist",
+    "description": "A free, printable checklist for the first 24 hours after a data breach notification, what to do if financial data or login credentials were involved, and what to document for follow-up. No account required.",
+    "keywords": [
+      "data breach response checklist",
+      "first 24 hours after breach notification",
+      "financial data login credentials breach checklist",
+      "document data breach for follow up",
+      "personal data breach response checklist"
+    ]
+  },
+  {
+    "title": "App Permissions Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/app-permissions-checklist",
+    "description": "A free, printable checklist for reviewing your phone's app permissions — location, microphone, camera, and the ongoing habits that keep unused access from piling up. No account required.",
+    "keywords": [
+      "app permissions checklist",
+      "review location microphone camera access",
+      "revoke unused app permissions checklist",
+      "app permission audit checklist",
+      "phone app permissions review"
+    ]
+  },
+  {
+    "title": "Public Profile Exposure Checklist",
+    "type": "checklist",
+    "block": "privacy-data",
+    "url": "/checklists/public-profile-exposure-checklist",
+    "description": "A free, printable checklist for searching yourself, checking what your social accounts expose publicly, and deciding what's worth acting on. No account required.",
+    "keywords": [
+      "public profile exposure checklist",
+      "search yourself online checklist",
+      "what social accounts expose publicly",
+      "public profile privacy exposure check",
+      "decide what to act on public exposure"
+    ]
+  },
+  {
+    "title": "Data Broker Directory",
+    "type": "directory",
+    "block": "privacy-data",
+    "url": "/directory/privacy-data#data-broker-directory",
+    "description": "Where your information is listed for sale, and how to get it taken down. Removal is not permanent — most listings can reappear within 3-6 months as brokers re-aggregate public records, so treat this as ongoing maintenance, not a one-time fix.",
+    "keywords": [
+      "data broker directory",
+      "where is my info listed for sale",
+      "data broker opt out links directory",
+      "people search site removal directory",
+      "data broker removal is not permanent"
+    ]
+  },
+  {
+    "title": "Privacy Regulators Directory",
+    "type": "directory",
+    "block": "privacy-data",
+    "url": "/directory/privacy-data#privacy-regulators-directory",
+    "description": "Who to complain to when a company has mishandled your data — mapped to the jurisdiction branches of our privacy generators below (US, UK, EU-by-country, Australia).",
+    "keywords": [
+      "privacy regulators directory",
+      "who to complain to data mishandled",
+      "ftc ico dpa oaic regulator directory",
+      "privacy regulator by country directory",
+      "data protection authority directory"
+    ]
+  },
+  {
+    "title": "Privacy Laws Directory",
+    "type": "directory",
+    "block": "privacy-data",
+    "url": "/directory/privacy-data#privacy-laws-directory",
+    "description": "Cross-cutting reference material for the whole block — the underlying legal text, kept brief and factual rather than tied to a specific tool.",
+    "keywords": [
+      "privacy laws directory",
+      "gdpr ccpa privacy act legal text directory",
+      "underlying privacy law reference directory",
+      "privacy legal text by country",
+      "privacy law official reference directory"
+    ]
+  },
+  {
+    "title": "Company Privacy Request Directory",
+    "type": "directory",
+    "block": "privacy-data",
+    "url": "/directory/privacy-data#company-privacy-request-directory",
+    "description": "The direct privacy-request portal for each company — not a generic help center — so you don't have to search for it. Verified as of 29 August 2026; a company is listed here only when its actual data-request page could be confirmed.",
+    "keywords": [
+      "company privacy request directory",
+      "direct privacy request portal by company",
+      "find company data request page",
+      "company privacy portal directory",
+      "verified privacy request links directory"
+    ]
+  },
+  {
+    "title": "Data Breach Directory",
+    "type": "directory",
+    "block": "privacy-data",
+    "url": "/directory/privacy-data#data-breach-directory",
+    "description": "Scope note: this section is not a complete historical record and covers only the most recent, significant breaches — roughly the last 6-12 months as of this page's last update (29 August 2026). It needs periodic review; a breach that happened after that date won't yet appear here.",
+    "keywords": [
+      "data breach directory",
+      "have i been pwned recent breaches",
+      "check if email was in a data breach",
+      "recent significant data breaches directory",
+      "data breach lookup directory"
+    ]
+  },
+  {
+    "title": "Practical CCPA/CPRA Guide: How to Make a Covered California Business Reveal, Delete and Limit Your Personal Information",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/ccpa-cpra-rights-california",
+    "description": "A practical 2026 guide to California privacy rights: requests to know and delete, opt-out of sale or sharing, sensitive personal information, timelines and authorized agents.",
+    "keywords": [
+      "ccpa cpra practical guide california",
+      "california privacy rights know delete opt out",
+      "covered business ccpa request guide",
+      "ccpa cpra request timelines authorized agent",
+      "california consumer privacy request how to"
+    ]
+  },
+  {
+    "title": "How to Stop the Sale of Your Geolocation Data: The FTC's Data-Broker Enforcement Precedents",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/stop-sale-geolocation-data-ftc",
+    "description": "How FTC enforcement against Kochava, Mobilewalla, Gravy Analytics and X-Mode changed the privacy landscape for sensitive location data, plus practical iOS and Android controls.",
+    "keywords": [
+      "stop sale of geolocation data ftc",
+      "ftc kochava mobilewalla gravy analytics x-mode",
+      "ftc data broker enforcement precedent",
+      "lock down location app permissions",
+      "stop location data sale ftc"
+    ]
+  },
+  {
+    "title": "Your Medical History in Danger: How the FTC Health Breach Notification Rule Protects Consumers",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/health-breach-notification-rule-health-apps-wearables",
+    "description": "How the FTC Health Breach Notification Rule applies to covered health apps and connected devices, including non-HIPAA services, and what consumers should do after an unauthorized disclosure or breach.",
+    "keywords": [
+      "ftc health breach notification rule consumers",
+      "health app not hipaa breach protection",
+      "wearable device breach notification rule",
+      "health app data breach rights",
+      "ftc health breach rule explained"
+    ]
+  },
+  {
+    "title": "How to Delete Your Information from People-Search and Data-Broker Services Under California's Delete Act",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/california-delete-act-data-brokers",
+    "description": "A 2026 guide to California's Delete Act, the DROP platform, data-broker deletion requests and what Californians should know about people-search sites.",
+    "keywords": [
+      "california delete act data brokers",
+      "drop platform california delete data",
+      "delete info people search sites california",
+      "california statewide deletion mechanism 2026",
+      "delete act operational california"
+    ]
+  },
+  {
+    "title": "Children's Online Privacy Rights: How to Address Tracking and Profiling of Kids Under COPPA",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/coppa-child-privacy-rights",
+    "description": "A practical COPPA guide for parents dealing with child-directed websites, apps and games that collect voice, geolocation or other personal information without proper parental consent.",
+    "keywords": [
+      "childrens online privacy rights coppa",
+      "coppa parental consent guide",
+      "child directed app data collection rights",
+      "coppa what it covers what it doesnt",
+      "kids online privacy coppa guide"
+    ]
+  },
+  {
+    "title": "Subject Access Request (SAR) Guide: How to Get a UK Organisation to Give You the Personal Data It Holds",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/uk-subject-access-request-sar-guide",
+    "description": "A practical 2026 guide to UK GDPR Article 15 subject access requests, the one-month deadline, extensions, manifestly unfounded or excessive requests, verification and ICO complaints.",
+    "keywords": [
+      "uk subject access request sar guide",
+      "uk gdpr article 15 sar guide",
+      "get personal data uk organisation holds",
+      "sar one month deadline extension uk",
+      "uk sar manifestly unfounded excessive"
+    ]
+  },
+  {
+    "title": "Are They Scanning Your Face? UK Rights Against Facial Recognition in Shops and Retail",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/uk-retail-facial-recognition-rights",
+    "description": "What UK consumers should know about live facial recognition in retail: biometric special-category data, lawful basis, necessity, proportionality, transparency and how to challenge a deployment.",
+    "keywords": [
+      "uk rights facial recognition shops retail",
+      "live facial recognition retail uk law",
+      "biometric special category data uk",
+      "challenge facial recognition deployment uk",
+      "uk retail facial recognition rights"
+    ]
+  },
+  {
+    "title": "The End of Spam Calls in the UK: How to Use PECR to Report Unwanted Marketing",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/uk-pecr-spam-calls-tps",
+    "description": "How UK consumers can use PECR and the Telephone Preference Service to document and report nuisance marketing calls, automated calls, pension and claims-management marketing.",
+    "keywords": [
+      "uk pecr spam calls tps report",
+      "report nuisance marketing calls uk",
+      "pecr telephone preference service guide",
+      "automated calls pension marketing complaint uk",
+      "uk pecr report unwanted marketing"
+    ]
+  },
+  {
+    "title": "Data-Breach Compensation in the UK: When Distress Can Support a Claim",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/uk-data-breach-distress-compensation",
+    "description": "How UK GDPR Article 82 and the Data Protection Act 2018 deal with material and non-material damage, including distress, after a personal-data breach or other unlawful processing.",
+    "keywords": [
+      "uk data breach compensation distress claim",
+      "uk gdpr article 82 non material damage",
+      "data protection act 2018 distress compensation",
+      "claim compensation data breach uk",
+      "uk breach distress claim guide"
+    ]
+  },
+  {
+    "title": "Illegal Cookie Walls? What UK Websites Must Do to Obtain Valid Consent",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/uk-cookie-consent-audit-reject-all",
+    "description": "A 2026 UK cookie-compliance guide covering PECR consent, reject-all prominence, affirmative action, scrolling, pre-set choices and ICO complaints.",
+    "keywords": [
+      "illegal cookie walls uk valid consent",
+      "uk pecr cookie consent reject all",
+      "uk cookie compliance guide 2026",
+      "affirmative action cookie consent uk",
+      "uk cookie wall ico complaint"
+    ]
+  },
+  {
+    "title": "Consent or Pay Cookies in the EU: What the EDPB Says About Fair Choice in 2026",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-consent-or-pay-cookies-edpb",
+    "description": "What EU consumers should know about consent-or-pay models, the EDPB's 2024 Opinion 08/2024, valid consent, fees, equivalent alternatives and national enforcement.",
+    "keywords": [
+      "consent or pay cookies eu edpb",
+      "edpb opinion 08 2024 consent or pay",
+      "eu pay or accept advertising model",
+      "valid consent equivalent alternative eu",
+      "eu consent or pay cookie rules"
+    ]
+  },
+  {
+    "title": "How to Object to AI Training With Your Personal Data: GDPR Rights and the EU AI Act",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-object-ai-training-personal-data-gdpr",
+    "description": "A practical EU guide to objecting to personal-data processing for AI development or deployment, distinguishing GDPR Article 21 rights from the AI Act's separate obligations.",
+    "keywords": [
+      "object to ai training personal data gdpr",
+      "gdpr article 21 ai training objection",
+      "eu ai act vs gdpr opt out",
+      "stop company using my data for ai",
+      "eu ai training data objection guide"
+    ]
+  },
+  {
+    "title": "How to Complain About a Multinational Tech Company Under the GDPR One-Stop-Shop",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-gdpr-one-stop-shop-cross-border-complaint",
+    "description": "How EU consumers can file a GDPR complaint against a multinational platform, how the One-Stop-Shop works, and what happens between the local and lead supervisory authorities.",
+    "keywords": [
+      "complain multinational tech company gdpr",
+      "gdpr one stop shop cross border complaint",
+      "lead supervisory authority gdpr explained",
+      "complain about tech company ireland gdpr",
+      "gdpr cross border complaint coordination"
+    ]
+  },
+  {
+    "title": "The EU Right to Be Forgotten: How to Request Delisting from Google, Bing and Other Search Engines",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-right-to-be-forgotten-search-engines",
+    "description": "A practical Article 17 GDPR guide to search-engine delisting, inaccurate or outdated personal information, public interest, evidence and the CJEU's leading cases.",
+    "keywords": [
+      "eu right to be forgotten search engines",
+      "request google delisting article 17",
+      "right to be forgotten delisting not erasure",
+      "cjeu right to be forgotten cases",
+      "eu search engine delisting guide"
+    ]
+  },
+  {
+    "title": "Where Does Your Data Go? How to Audit an EU–U.S. Data Privacy Framework Transfer",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-us-data-privacy-framework-audit",
+    "description": "How EU consumers can check whether a US service participates in the EU-US Data Privacy Framework and understand the alternatives under GDPR transfer rules.",
+    "keywords": [
+      "eu us data privacy framework audit",
+      "check if company certified under dpf",
+      "gdpr international data transfer rules",
+      "eu us data transfer alternatives gdpr",
+      "audit data privacy framework participation"
+    ]
+  },
+  {
+    "title": "Australia's Privacy Reform: What Consumers Actually Gain from the New Privacy Rules",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/au-privacy-act-reform-small-business-rights",
+    "description": "What changed in Australia's Privacy Act after the 2024 reforms, what has not changed for small businesses, and which new enforcement and civil-action rights exist in 2026.",
+    "keywords": [
+      "australia privacy reform consumer rights",
+      "privacy act 2024 reform what changed",
+      "small business exemption privacy act australia",
+      "australia privacy civil action rights 2026",
+      "australian privacy reform explained"
+    ]
+  },
+  {
+    "title": "Facial Recognition and ID Scanners in Australian Venues: What the APPs Actually Require",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/au-facial-recognition-id-scanners-venues",
+    "description": "What Australian privacy law says about biometric and ID scanning in pubs, clubs, retail and other venues, including consent, necessity, alternatives, transparency and security.",
+    "keywords": [
+      "facial recognition id scanners australian venues",
+      "biometric scanning pubs clubs retail australia",
+      "app privacy principles biometric data au",
+      "id scanner consent necessity australia",
+      "australia venue facial recognition rights"
+    ]
+  },
+  {
+    "title": "How the Australian Notifiable Data Breaches Scheme Works After a Cyberattack",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/au-notifiable-data-breaches-consumer-response",
+    "description": "What Australian consumers should expect after a data breach under the NDB scheme, including notification, mitigation, identity-support measures and what businesses are not automatically required to pay.",
+    "keywords": [
+      "australian notifiable data breaches scheme",
+      "ndb scheme consumer response guide",
+      "bank insurer telco data breach australia",
+      "what ndb scheme requires and doesnt",
+      "australia data breach notification rights"
+    ]
+  },
+  {
+    "title": "Coles, Flybuys and Woolworths Rewards: How Australian Consumers Can Challenge Loyalty-Data Profiling",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/au-loyalty-program-data-profiling",
+    "description": "How loyalty programs use purchase data, what Australian privacy law and ACCC findings say about profiling, and which privacy controls consumers should check.",
+    "keywords": [
+      "coles flybuys woolworths rewards data profiling",
+      "challenge loyalty program data profiling australia",
+      "supermarket loyalty card privacy australia",
+      "accc findings loyalty data profiling",
+      "australia loyalty program privacy rights"
+    ]
+  },
+  {
+    "title": "De-identification in Australia: How to Understand the Difference Between Deleting Data and Breaking the Identity Link",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/au-de-identification-personal-data",
+    "description": "A practical guide to Australian de-identification, APP 11 destruction obligations, re-identification risk and why consumers do not have a universal right to demand de-identification.",
+    "keywords": [
+      "de-identification australia deleting vs breaking link",
+      "app 11 destruction obligations australia",
+      "re-identification risk australia privacy",
+      "right to de-identification australia",
+      "australia de-identification explained"
+    ]
+  },
+  {
+    "title": "How to File a GDPR Complaint: A Step-by-Step Enforcement Guide",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-gdpr-complaint-guide",
+    "description": "A free, formal GDPR complaint can trigger a real government investigation — backed by fines up to €20 million or 4% of global turnover. The evidence that makes it credible, the DPO-first step, and filing with your national DPA.",
+    "keywords": [
+      "how to file gdpr complaint step by step",
+      "gdpr complaint fines 20 million 4 percent",
+      "gdpr dpo first step complaint guide",
+      "file gdpr complaint national dpa",
+      "gdpr enforcement complaint guide"
+    ]
+  },
+  {
+    "title": "Which Data Protection Authority Should I Contact? Navigating the EU DPA Grid",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-which-dpa-to-contact",
+    "description": "Under the GDPR One-Stop-Shop mechanism you always file with your own country's Data Protection Authority — never the company's. How the Lead Supervisory Authority is determined, and filing in your own language.",
+    "keywords": [
+      "which data protection authority to contact eu",
+      "gdpr one stop shop file own country dpa",
+      "lead supervisory authority determined how",
+      "file gdpr complaint own language",
+      "eu dpa grid navigation guide"
+    ]
+  },
+  {
+    "title": "How to Ask a Company to Delete Your Data: Master the Right to Erasure",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-right-to-erasure-gdpr",
+    "description": "Article 17 GDPR gives you the Right to Erasure. What it actually forces a company to delete, the one-month deadline (extendable to three for complex requests only if you're notified in time), when a company can lawfully refuse, and downstream deletion by third parties.",
+    "keywords": [
+      "how to ask company delete data gdpr",
+      "article 17 gdpr right to erasure guide",
+      "gdpr erasure one month deadline extension",
+      "lawful refusal gdpr erasure request",
+      "gdpr right to erasure downstream deletion"
+    ]
+  },
+  {
+    "title": "Right of Access Under GDPR: How to Find Out Exactly What Data a Company Has on You",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-right-of-access-sar-guide",
+    "description": "Article 15 GDPR gives you a Subject Access Request — a complete copy of the personal data a company holds on you, for free. What a full disclosure includes, the one-month deadline (extendable to three only with proper notice), and how to draft a request that gets a complete answer.",
+    "keywords": [
+      "right of access gdpr what data company has",
+      "article 15 gdpr subject access request",
+      "gdpr full disclosure what it includes",
+      "gdpr access request one month deadline",
+      "draft gdpr access request that works"
+    ]
+  },
+  {
+    "title": "How to Report a GDPR Violation: A Guide for Whistleblowers and Consumers",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/eu-report-gdpr-violation-whistleblower",
+    "description": "Reporting a serious GDPR violation is a protected public-interest act in the EU. The Whistleblower Directive protection, the 72-hour breach rule and why cover-ups are punished harshly, how to build a report without breaking other laws, and the anonymity trade-off.",
+    "keywords": [
+      "how to report gdpr violation whistleblower",
+      "gdpr whistleblower directive protection",
+      "gdpr 72 hour breach rule report",
+      "report gdpr violation without breaking law",
+      "gdpr whistleblower anonymity guide"
+    ]
+  },
+  {
+    "title": "How to Make a Privacy Complaint to the OAIC",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/oaic-privacy-complaint-australia",
+    "description": "The Privacy Act 1988 and its 13 Australian Privacy Principles give you a free, formal complaint pathway through the OAIC. Who's covered (the $3M threshold), the mandatory 30-day company step, and what the OAIC can actually do.",
+    "keywords": [
+      "how to make privacy complaint oaic",
+      "privacy act 1988 13 app complaint pathway",
+      "oaic 3 million threshold who is covered",
+      "oaic mandatory 30 day company step",
+      "oaic binding determination privacy"
+    ]
+  },
+  {
+    "title": "How to Remove Your Personal Information from Google Australia",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/remove-personal-info-google-australia",
+    "description": "Australia has no GDPR-style 'right to be forgotten'. Two pathways exist: Google's discretionary removal policy (a company policy, not a legal right) and the eSafety Commissioner's genuine statutory takedown power for image-based abuse.",
+    "keywords": [
+      "remove personal information google australia",
+      "australia no right to be forgotten gdpr style",
+      "google discretionary removal policy australia",
+      "esafety commissioner statutory takedown",
+      "remove info from google search australia"
+    ]
+  },
+  {
+    "title": "What to Do If You've Been Scammed in Australia: Immediate Action Steps",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/scammed-in-australia-immediate-steps",
+    "description": "Just sent money to a scammer or entered your details into a fake portal? The immediate steps that matter — call your bank the right way, IDCARE, ReportCyber, and a credit report ban across Equifax, Experian and illion.",
+    "keywords": [
+      "scammed in australia immediate action steps",
+      "sent money to scammer australia what to do",
+      "idcare reportcyber credit ban australia",
+      "fake portal entered details australia steps",
+      "australia scam immediate response guide"
+    ]
+  },
+  {
+    "title": "How to Report an Online Scam to Scamwatch Australia",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/report-scam-scamwatch-australia",
+    "description": "Scamwatch (the ACCC's National Anti-Scam Centre) is a national intelligence hub, not a personal recovery service. What it actually does with your report, and how to file one that's genuinely useful.",
+    "keywords": [
+      "how to report online scam scamwatch australia",
+      "accc national anti scam centre report",
+      "scamwatch not personal recovery service",
+      "what scamwatch does with your report",
+      "file useful scam report scamwatch"
+    ]
+  },
+  {
+    "title": "Your State Probably Has Its Own Privacy Law Now — Not Just California's CCPA",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/state-privacy-laws-beyond-ccpa-us",
+    "description": "As of 2026, roughly 20 US states have their own comprehensive privacy law granting rights beyond California's CCPA — access, deletion, correction, and a browser-level Universal Opt-Out. What your state gives you and how to use it.",
+    "keywords": [
+      "state privacy laws beyond ccpa us",
+      "20 us states comprehensive privacy law 2026",
+      "universal opt out browser level privacy",
+      "my state privacy law rights us",
+      "us state privacy law guide 2026"
+    ]
+  },
+  {
+    "title": "The AI Voice Clone Trap: How 3 Seconds of Audio Can Hold Your Family Hostage",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/ai-voice-clone-scam-family-passphrase",
+    "description": "As little as 3 seconds of audio can clone a voice at ~85% accuracy. How AI voice-clone family-emergency scams work, why data brokers feed them, and the one defense that works: a family passphrase.",
+    "keywords": [
+      "ai voice clone trap family hostage scam",
+      "3 seconds audio clone voice scam",
+      "ai voice clone family emergency scam",
+      "family passphrase scam defense",
+      "data brokers feed voice clone scams"
+    ]
+  },
+  {
+    "title": "Exposed on Google: How Data Brokers Sell Your Home Address (And How to Actually Purge It)",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/data-broker-removal-guide-us",
+    "description": "Keeping social media private doesn't hide your address. Data brokers compile it from public records and sell it for a few dollars. What they are, why it matters, and the realistic opt-out process.",
+    "keywords": [
+      "exposed on google data brokers sell address",
+      "data brokers compile home address public records",
+      "how to purge data broker address listing",
+      "data broker feeds scams removal guide",
+      "realistic data broker opt out process"
+    ]
+  },
+  {
+    "title": "How to Check If Your Email or Password Was Exposed in a Data Breach (Have I Been Pwned, Explained Properly)",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/have-i-been-pwned-data-breach-check",
+    "description": "A strong password doesn't protect you from a breach you had no part in. How Have I Been Pwned actually works — the two different checks, neither sending your password anywhere — and what to do if your email shows up.",
+    "keywords": [
+      "have i been pwned explained properly",
+      "check email password exposed data breach",
+      "how have i been pwned actually works",
+      "two different checks hibp password",
+      "what to do if email shows up hibp"
+    ]
+  },
+  {
+    "title": "How to Remove Your Phone Number and Address from Google Search (And What This Tool Doesn't Actually Delete)",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/google-remove-personal-info-search",
+    "description": "Google's Results About You cuts the visibility of your phone number and home address in search — but it removes the link, not the information itself. Exactly what it fixes, what it doesn't, and how to use it.",
+    "keywords": [
+      "remove phone number address google search",
+      "google results about you tool explained",
+      "what results about you doesnt delete",
+      "remove link not information google",
+      "google search personal info removal tool"
+    ]
+  },
+  {
+    "title": "How to Report a GDPR Violation to the ICO When a Company Ignores Your Right to Erasure",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/ico-gdpr-complaint-uk",
+    "description": "You asked a company to delete your data and a month went by. UK data protection law gives you a real regulator to escalate to — but there's a step most people skip, and a misunderstanding about how absolute the 'right to be forgotten' really is.",
+    "keywords": [
+      "report gdpr violation ico ignores erasure",
+      "company ignored right to erasure uk",
+      "ico complaint step most people skip",
+      "build ico complaint that gets acted on",
+      "uk gdpr erasure ico escalation"
+    ]
+  },
+  {
+    "title": "How to Report a US Company for Violating Its Own Privacy Policy (And Why the FTC Actually Takes This Seriously)",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/ftc-privacy-complaint-us",
+    "description": "A company's privacy policy says one thing and it does another. Section 5 of the FTC Act makes that mismatch a violation — the OkCupid case, what filing a complaint actually does, and what to gather first.",
+    "keywords": [
+      "report us company violating privacy policy",
+      "ftc act section 5 privacy policy mismatch",
+      "okcupid case ftc privacy enforcement",
+      "what ftc privacy complaint actually does",
+      "ftc privacy policy violation complaint"
+    ]
+  },
+  {
+    "title": "How to Request Any Company Delete Your Personal Data (GDPR Right to Erasure and CCPA, Explained Separately)",
+    "type": "blog",
+    "block": "privacy-data",
+    "url": "/blog/right-to-erasure-gdpr-ccpa",
+    "description": "You have a legal right to ask a company to delete what it holds about you — but GDPR and California's CCPA are two different laws with different deadlines and different rules about who they apply to. Explained separately, plus exactly what to write.",
+    "keywords": [
+      "request company delete personal data gdpr ccpa",
+      "gdpr vs ccpa erasure deadlines explained",
+      "right to erasure explained separately",
+      "what to write company delete my data",
+      "gdpr ccpa deletion request differences"
+    ]
+  },
+  {
+    "title": "Online Shopping Safety Checklist",
+    "type": "template",
+    "block": "shopping-ecommerce",
+    "url": "/templates/online-shopping-safety-checklist",
+    "description": "A one-page PDF with 20 fast checks — website, reviews, payment, and post-purchase — to run before you hand card details to an online store you've never used.",
+    "keywords": [
+      "online shopping safety checklist template",
+      "20 fast checks before online purchase",
+      "verify unfamiliar online store checklist",
+      "protect card details online shopping",
+      "online shopping safety pdf download"
+    ]
+  },
+  {
+    "title": "EU Purchase Evidence Log",
+    "type": "template",
+    "block": "shopping-ecommerce",
+    "url": "/templates/eu-purchase-evidence-log",
+    "description": "A PDF + Excel evidence log for EU online purchases — proof of purchase, seller communications, withdrawal/warranty request dates and screenshots, organised into the paper trail an ADR body, ECC or small-claims court expects.",
+    "keywords": [
+      "eu purchase evidence log template",
+      "proof of purchase seller communications log",
+      "eu adr ecc small claims evidence",
+      "withdrawal warranty request evidence log",
+      "eu purchase dispute paper trail template"
+    ]
+  },
+  {
+    "title": "Product Safety Report Evidence Pack (EU)",
+    "type": "template",
+    "block": "shopping-ecommerce",
+    "url": "/templates/eu-product-safety-evidence-pack",
+    "description": "A PDF + Excel evidence pack for reporting an unsafe product in the EU — brand, model, batch/lot number, barcode, where and when purchased, the hazard description, a photos checklist, and space to log the Safety Gate reference number once submitted.",
+    "keywords": [
+      "product safety report evidence pack eu",
+      "safety gate report evidence template",
+      "brand model batch lot number safety report",
+      "eu product hazard evidence pack",
+      "safety gate reference number log template"
+    ]
+  },
+  {
+    "title": "Platform Booking/Purchase Evidence Log (EU)",
+    "type": "template",
+    "block": "shopping-ecommerce",
+    "url": "/templates/eu-platform-dispute-evidence-log",
+    "description": "A PDF + Excel evidence log for Amazon, Booking.com, Airbnb and PayPal disputes in one place — platform, transaction/booking ID, date, seller/host name, issue description, photos/screenshots checklist, in-app messages sent, and the platform's own reporting deadline where one applies.",
+    "keywords": [
+      "platform booking purchase evidence log eu",
+      "amazon booking.com airbnb paypal dispute log",
+      "platform dispute transaction id evidence",
+      "in-app messages evidence log platform",
+      "eu platform dispute deadline tracker"
+    ]
+  },
+  {
+    "title": "State Attorney General Complaint Letter",
+    "type": "generator",
+    "block": "shopping-ecommerce",
+    "url": "/generate/state-ag-complaint",
+    "description": "Generate a formal complaint letter to your State Attorney General's Consumer Protection Division against a business for unfair or deceptive practices. Free.",
+    "keywords": [
+      "state attorney general complaint letter generator",
+      "state ag consumer protection division complaint",
+      "unfair deceptive practices complaint letter us",
+      "file complaint state attorney general free",
+      "state ag complaint letter generator"
+    ]
+  },
+  {
+    "title": "Major Failure Refund Demand Letter (Australia)",
+    "type": "generator",
+    "block": "shopping-ecommerce",
+    "url": "/generate/au-major-failure-refund-demand",
+    "description": "Generate a formal demand letter asserting a major failure under the Australian Consumer Law — where you (not the retailer) choose refund or replacement. A statutory-rights assertion, not a goodwill request. Free.",
+    "keywords": [
+      "major failure refund demand letter australia",
+      "acl major failure refund replacement demand",
+      "statutory rights assertion not goodwill request",
+      "choose refund or replacement australia letter",
+      "free au major failure demand letter"
+    ]
+  },
+  {
+    "title": "Withdrawal Right / Cancellation Letter (EU)",
+    "type": "generator",
+    "block": "shopping-ecommerce",
+    "url": "/generate/eu-withdrawal-right-letter",
+    "description": "Generate a formal EU right-of-withdrawal (cancellation) notice under Directive 2011/83/EU for a distance purchase — no reason required, no cancellation fee. Free.",
+    "keywords": [
+      "withdrawal right cancellation letter eu generator",
+      "14 day right of withdrawal letter eu",
+      "distance purchase cancellation notice eu",
+      "no reason required withdrawal letter eu",
+      "free eu withdrawal right letter"
+    ]
+  },
+  {
+    "title": "Legal Guarantee Repair/Replacement Demand (EU)",
+    "type": "generator",
+    "block": "shopping-ecommerce",
+    "url": "/generate/eu-legal-guarantee-demand",
+    "description": "Generate a formal EU legal-guarantee (conformity) demand under Directive (EU) 2019/771 — the seller, not the manufacturer, is responsible, with a 2-year EU minimum (longer in some member states). Free.",
+    "keywords": [
+      "legal guarantee repair replacement demand eu",
+      "eu conformity demand directive 2019/771 letter",
+      "seller responsible not manufacturer eu letter",
+      "repair first then refund demand eu",
+      "free eu legal guarantee demand letter"
+    ]
+  },
+  {
+    "title": "Before Buying a Used Car",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/used-car-buying",
+    "description": "A free, printable checklist for buying a used car: verify MOT history and recalls, check for outstanding finance, and protect yourself financially before handing over money.",
+    "keywords": [
+      "before buying a used car checklist",
+      "verify used car history before buying",
+      "check outstanding finance used car",
+      "protect yourself financially used car purchase",
+      "used car buying checklist mot recalls"
+    ]
+  },
+  {
+    "title": "Before Buying From an Unfamiliar Online Store",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/unfamiliar-online-store",
+    "description": "A free, printable checklist before buying from a store you don't know: verify the store is real and protect your payment against scams and chargeback traps.",
+    "keywords": [
+      "before buying unfamiliar online store checklist",
+      "verify online store is real checklist",
+      "protect payment unknown online store",
+      "chargeback trap unfamiliar store checklist",
+      "is this online store legit checklist"
+    ]
+  },
+  {
+    "title": "Before Filing an Amazon A-to-z Guarantee Claim",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/amazon-a-to-z-checklist",
+    "description": "A free, printable checklist before filing an Amazon A-to-z Guarantee claim: contact the seller, check your eligibility window, gather evidence, and file correctly.",
+    "keywords": [
+      "before filing amazon a to z guarantee claim",
+      "amazon a to z claim checklist",
+      "48 hour 90 day amazon claim window",
+      "contact seller before amazon a to z claim",
+      "amazon a to z eligibility checklist"
+    ]
+  },
+  {
+    "title": "Before Filing a USPS Lost/Damaged Package Claim",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/usps-claims-checklist",
+    "description": "A free, printable checklist before filing a USPS domestic lost or damaged package claim: check eligibility and waiting periods, gather evidence, and file within the deadline.",
+    "keywords": [
+      "before filing usps lost damaged package claim",
+      "usps 60 day deadline claim checklist",
+      "usps domestic claim proof of value",
+      "usps claim waiting period checklist",
+      "file usps claim correctly checklist"
+    ]
+  },
+  {
+    "title": "Is This a Major Failure? (Australia)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/au-major-failure-check",
+    "description": "A free, printable checklist to test whether a faulty product is a 'major failure' under the Australian Consumer Law — the 5 legal tests, the minor-fault-that-dragged-on rule, and how to assert your remedy.",
+    "keywords": [
+      "is this a major failure australia checklist",
+      "acl major failure 5 legal tests",
+      "test faulty product major failure australia",
+      "choose refund or replacement checklist au",
+      "australia major failure decision checklist"
+    ]
+  },
+  {
+    "title": "Flight Disrupted? Document Everything Right Now (Australia)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/au-flight-disruption-check",
+    "description": "A free, printable checklist for the moment an Australian flight is delayed, cancelled, or your bag goes missing — what to document at the airport, which receipts to keep, and what you can realistically claim (no EU-style automatic payout here).",
+    "keywords": [
+      "flight disrupted document everything australia",
+      "australian flight delay cancellation checklist",
+      "what receipts to keep flight disruption au",
+      "no eu style automatic payout australia",
+      "australia flight disruption checklist"
+    ]
+  },
+  {
+    "title": "Before You Complain — Is This Really Geo-blocking? (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-geoblocking-check",
+    "description": "A free, printable checklist to tell a real EU geo-blocking violation from a legitimate price/VAT difference or shipping refusal before you complain — plus what to document if it is a violation. No account required.",
+    "keywords": [
+      "is this really geo-blocking eu checklist",
+      "real geo-blocking vs legal price difference",
+      "eu geo-blocking violation checklist",
+      "document geo-blocking violation eu",
+      "before you complain geo-blocking eu"
+    ]
+  },
+  {
+    "title": "Digital Content Non-Conformity Documentation (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-digital-content-check",
+    "description": "A free, printable checklist for documenting a faulty app, game, software or streaming service in the EU — compatibility checks, evidence to capture, and the rights (2-year conformity guarantee, updates) that still apply after the withdrawal window closes. No account required.",
+    "keywords": [
+      "digital content non-conformity documentation eu",
+      "document faulty app game software eu",
+      "eu rights after withdrawal window closes",
+      "digital content conformity checklist eu",
+      "streaming service fault documentation eu"
+    ]
+  },
+  {
+    "title": "Flight Delayed or Cancelled? Know Your Tier (EU261)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-flight-disruption-tier-check",
+    "description": "A free, printable checklist to work out your EU261 flight compensation tier before you claim — delay vs cancellation, whether the cause exempts the airline, and what to document. No account required.",
+    "keywords": [
+      "flight delayed cancelled know your tier eu261",
+      "eu261 compensation tier checklist",
+      "delay vs cancellation eu261 checklist",
+      "extraordinary circumstances eu261 checklist",
+      "eu261 flight compensation tier guide"
+    ]
+  },
+  {
+    "title": "Package Holiday Gone Wrong — Document It Right (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-package-holiday-check",
+    "description": "A free, printable checklist for documenting a package holiday that went wrong under EU law — report on the spot, know the organiser is liable for the whole package, and understand your insolvency protection. No account required.",
+    "keywords": [
+      "package holiday gone wrong eu checklist",
+      "document package holiday problem eu",
+      "organiser liable whole package checklist",
+      "insolvency protection package holiday eu",
+      "eu package holiday documentation guide"
+    ]
+  },
+  {
+    "title": "Report or Check? Product Safety Decision Guide (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-product-safety-decision-check",
+    "description": "A free, printable decision guide for EU product safety — report a new hazard to the Safety Gate, check the database for an existing recall, or verify a CE mark by requesting the Declaration of Conformity (not the unreliable letter-spacing myth). No account required.",
+    "keywords": [
+      "report or check product safety eu guide",
+      "safety gate report vs recall check",
+      "verify ce mark declaration of conformity",
+      "eu product safety decision checklist",
+      "ce mark letter spacing myth checklist"
+    ]
+  },
+  {
+    "title": "Package or Standalone Booking? + Which Escalation Path (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-platform-escalation-check",
+    "description": "A free decision guide for EU marketplace/platform disputes — whether your Booking.com stay counts as a package (stronger relocation rights) or a standalone booking, which Airbnb/PayPal deadlines are platform policy vs EU law, and the right escalation path. No account required.",
+    "keywords": [
+      "package or standalone booking eu checklist",
+      "booking.com package vs standalone escalation",
+      "airbnb paypal deadline vs eu law checklist",
+      "eu platform dispute escalation path guide",
+      "marketplace platform dispute decision guide"
+    ]
+  },
+  {
+    "title": "Was This Renewal Properly Notified? (EU)",
+    "type": "checklist",
+    "block": "shopping-ecommerce",
+    "url": "/checklists/eu-renewal-notice-check",
+    "description": "A free checklist for an EU subscription renewal charge — whether you got proper written notice, your country's specific notice window, and what to do (including revoking your payment mandate) if the company won't stop billing. No account required.",
+    "keywords": [
+      "was this renewal properly notified eu checklist",
+      "eu subscription renewal notice window check",
+      "proper written notice renewal charge eu",
+      "revoke payment mandate renewal eu",
+      "eu renewal notice compliance checklist"
+    ]
+  },
+  {
+    "title": "Scam Checks & Fraud Reporting",
+    "type": "directory",
+    "block": "shopping-ecommerce",
+    "url": "/directory/shopping-ecommerce#scam-checks-fraud-reporting",
+    "description": "Verify a website's legitimacy before you buy, check a US company's complaint history, and report a scam that crossed international borders.",
+    "keywords": [
+      "scam checks fraud reporting directory",
+      "verify website legitimacy before buying",
+      "us company complaint history check",
+      "report cross border scam directory",
+      "online store scam check directory"
+    ]
+  },
+  {
+    "title": "UK Consumer Rights & Complaint Escalation",
+    "type": "directory",
+    "block": "shopping-ecommerce",
+    "url": "/directory/shopping-ecommerce#uk-consumer-rights-escalation",
+    "description": "Know exactly what UK law entitles you to, then use these tools to escalate a refund or repair dispute a retailer keeps refusing.",
+    "keywords": [
+      "uk consumer rights complaint escalation directory",
+      "what uk law entitles you to refund",
+      "escalate refund repair dispute uk",
+      "uk retailer refusing refund escalation",
+      "uk consumer rights escalation tools"
+    ]
+  },
+  {
+    "title": "US Regulators, Marketplace & Mail Claims",
+    "type": "directory",
+    "block": "shopping-ecommerce",
+    "url": "/directory/shopping-ecommerce#us-regulators-marketplace-mail-claims",
+    "description": "Where to escalate in the US once a seller won't cooperate — your State Attorney General, Amazon's own buyer protection program, or USPS/USPIS for a mail-related claim or fraud.",
+    "keywords": [
+      "us regulators marketplace mail claims directory",
+      "seller wont cooperate us escalation",
+      "state attorney general amazon usps directory",
+      "mail related claim fraud escalation us",
+      "us marketplace dispute escalation directory"
+    ]
+  },
+  {
+    "title": "Australia — Consumer Guarantees & Travel Disputes",
+    "type": "directory",
+    "block": "shopping-ecommerce",
+    "url": "/directory/shopping-ecommerce#au-consumer-guarantees-travel-disputes",
+    "description": "Official Australian Consumer Law guarantees and complaint pathways, plus the specific resources for a domestic flight or baggage dispute.",
+    "keywords": [
+      "australia consumer guarantees travel disputes directory",
+      "acl guarantees complaint pathways directory",
+      "domestic flight baggage dispute australia",
+      "australian consumer law official directory",
+      "au travel dispute resources directory"
+    ]
+  },
+  {
+    "title": "European Union — Shopping, Travel & Subscription Rights",
+    "type": "directory",
+    "block": "shopping-ecommerce",
+    "url": "/directory/shopping-ecommerce#eu-shopping-travel-subscription-rights",
+    "description": "EU-wide cross-border shopping and withdrawal rights, travel disruption resources, product safety recalls, marketplace/platform disputes, and subscription cancellation law — each card bundles the official pathways for that topic.",
+    "keywords": [
+      "eu shopping travel subscription rights directory",
+      "eu cross border shopping withdrawal rights",
+      "eu travel disruption product safety directory",
+      "eu marketplace platform dispute directory",
+      "eu subscription cancellation law directory"
+    ]
+  },
+  {
+    "title": "Automatic Renewals: Are They Legal in the EU? Your Protection Against Subscription Traps",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-automatic-renewal-subscription-traps",
+    "description": "Auto-renewal is legal in the EU, but the specific protections are fragmented by member state, not one uniform rule. Italy's 30-day notice, the indefinite-contract conversion lever, and how to challenge an unnotified renewal charge.",
+    "keywords": [
+      "automatic renewals legal eu subscription traps",
+      "eu auto renewal fragmented by member state",
+      "italy 30 day notice auto renewal",
+      "challenge unnotified renewal charge eu",
+      "eu automatic renewal protection guide"
+    ]
+  },
+  {
+    "title": "How to Cancel a Subscription Under EU Law: What \"Easy Exit\" Actually Covers Today",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-cancel-subscription-easy-exit",
+    "description": "Two different cancellation rules apply depending on your timing. The 14-day withdrawal button IS EU-wide law today; the ongoing-subscription cancellation button is NOT yet uniform EU law — only Germany and France currently require one.",
+    "keywords": [
+      "how to cancel subscription eu law easy exit",
+      "eu 14 day withdrawal button vs cancellation button",
+      "germany france cancellation button law",
+      "eu easy exit subscription rule today",
+      "cancel eu subscription what covers today"
+    ]
+  },
+  {
+    "title": "Amazon Refund Rights in Europe: Navigating the Return Policies Framework",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-amazon-refund-rights",
+    "description": "A restrictive third-party seller policy on Amazon doesn't override EU law. The 14-day withdrawal right, the 2-year legal guarantee, the A-to-z Guarantee, and why the discontinued EU ODR platform is the wrong place to escalate now.",
+    "keywords": [
+      "amazon refund rights europe navigating",
+      "amazon third party seller policy eu law",
+      "amazon eu 14 day withdrawal 2 year guarantee",
+      "amazon a to z guarantee eu",
+      "discontinued eu odr platform amazon escalation"
+    ]
+  },
+  {
+    "title": "Booking.com Consumer Rights in the EU: Cancellations, Hidden Fees, and Overbooking",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-booking-com-consumer-rights",
+    "description": "Whether a Booking.com stay was part of a package or a standalone hotel booking changes your legal position entirely. Package Travel Directive relocation rights vs. general breach-of-contract, price transparency, and how to escalate overbooking.",
+    "keywords": [
+      "booking.com consumer rights eu",
+      "booking.com package vs standalone legal position",
+      "package travel directive relocation rights",
+      "booking.com overbooking escalation eu",
+      "booking.com hidden fees price transparency eu"
+    ]
+  },
+  {
+    "title": "Airbnb Refund Rules in Europe: Cleaning Fees, Cancellations, and Host Disagreements",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-airbnb-refund-rules",
+    "description": "A listing that's genuinely not as described gives you real leverage beyond Airbnb's own Guest Refund Policy. The 72-hour reporting window is platform policy, not EU law — what's actually EU law, and how to escalate via chargeback if arbitration is unfair.",
+    "keywords": [
+      "airbnb refund rules europe",
+      "airbnb not as described leverage eu",
+      "airbnb 72 hour window platform policy not eu law",
+      "airbnb chargeback escalation eu",
+      "airbnb host disagreement eu rights"
+    ]
+  },
+  {
+    "title": "PayPal Buyer Protection in Europe: Statutory Limits and Enforcement",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-paypal-buyer-protection",
+    "description": "PayPal Buyer Protection is a commercial program with real limits, not an unlimited legal right. The 180-day dispute window, the 20-day negotiation period, and the CSSF Luxembourg escalation route if PayPal's own arbitration is unfair.",
+    "keywords": [
+      "paypal buyer protection europe statutory limits",
+      "paypal 180 day dispute window eu",
+      "paypal 20 day negotiation period",
+      "cssf luxembourg paypal escalation",
+      "paypal buyer protection not unlimited right"
+    ]
+  },
+  {
+    "title": "How to Report an Unsafe Product in the EU: Using the Safety Gate System",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-report-unsafe-product-safety-gate",
+    "description": "Any EU consumer can report a dangerous product straight into Safety Gate — a rapid-alert system that can force a withdrawal across all 27 member states. What to include, what happens next, and why it's separate from getting your own refund.",
+    "keywords": [
+      "how to report unsafe product eu safety gate",
+      "safety gate rapid alert system eu",
+      "report dangerous product 27 member states",
+      "safety gate what happens next report",
+      "eu unsafe product report guide"
+    ]
+  },
+  {
+    "title": "Check If a Product Has Been Recalled in Europe: The Consumer Audit Guide",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-check-product-recall-database",
+    "description": "Manufacturers rarely contact you about a recall unless you registered the product. The EU publishes every withdrawal order free on Safety Gate — how to audit what's in your home, and why a recall entitles you to a free remedy even after the warranty expires.",
+    "keywords": [
+      "check product recalled europe consumer audit",
+      "eu safety gate free recall database",
+      "audit home for recalled products eu",
+      "recall free remedy after warranty expires eu",
+      "eu product recall database guide"
+    ]
+  },
+  {
+    "title": "CE Mark Explained for Consumers: What Does It Actually Guarantee?",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-ce-mark-explained",
+    "description": "The CE mark is a legal safety passport, not a quality badge or a made-in-EU stamp. What it actually guarantees, why the 'China Export' letter-spacing test is a disputed, unreliable myth, and how to really verify conformity via the Declaration of Conformity.",
+    "keywords": [
+      "ce mark explained for consumers",
+      "ce mark legal safety passport not quality badge",
+      "china export letter spacing myth ce mark",
+      "verify ce mark declaration of conformity",
+      "what ce mark actually guarantees"
+    ]
+  },
+  {
+    "title": "Flight Delayed? EU261 Compensation Explained",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-flight-delay-eu261-compensation",
+    "description": "A 3+ hour arrival delay within the airline's control entitles you to fixed EU261 cash compensation — €250-600 by distance, separate from meals or hotels. The extraordinary-circumstances limits, and why to file directly, not via a claims agency.",
+    "keywords": [
+      "flight delayed eu261 compensation explained",
+      "eu261 3 hour delay fixed cash compensation",
+      "eu261 250 600 euro by distance",
+      "extraordinary circumstances eu261 limits",
+      "file eu261 directly not claims agency"
+    ]
+  },
+  {
+    "title": "Flight Cancelled in Europe: Rerouting, Refunds, and Statutory Claims",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-flight-cancellation-rights",
+    "description": "A flight cancelled with under 14 days' notice entitles you to a full refund or rerouting, up to €600 compensation if within the airline's control, and uncapped duty of care (hotel, meals, transport) regardless of fault.",
+    "keywords": [
+      "flight cancelled europe rerouting refunds",
+      "eu flight cancelled under 14 days notice",
+      "eu261 600 euro compensation cancellation",
+      "uncapped duty of care flight cancellation eu",
+      "eu flight cancellation statutory claims"
+    ]
+  },
+  {
+    "title": "Lost Luggage in Europe: The Montreal Convention Compensation Framework",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-lost-luggage-montreal-convention",
+    "description": "Lost, damaged or delayed baggage on EU flights is governed by the Montreal Convention — up to 1,519 SDR (approx €2,000) of demonstrated value, the 21-day lost threshold, the 7-day damage deadline, and why the PIR is essential.",
+    "keywords": [
+      "lost luggage europe montreal convention",
+      "montreal convention 1519 sdr baggage",
+      "eu lost baggage 21 day threshold",
+      "eu damaged baggage 7 day deadline",
+      "why pir essential lost luggage eu"
+    ]
+  },
+  {
+    "title": "Train Delayed in the EU: Passenger Rights under the New Rail Regulations",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-train-delay-rail-rights",
+    "description": "Regulation (EU) 2021/782 gives a tiered cash refund for train delays over 60 minutes — 25% (60-119 min), 50% (120+ min). The force-majeure exemption, the duty of care that always applies, and free rerouting for missed connections.",
+    "keywords": [
+      "train delayed eu passenger rights rail regulation",
+      "regulation eu 2021/782 train delay refund",
+      "eu train delay 25 50 percent refund tiers",
+      "eu rail force majeure exemption",
+      "eu train delay rerouting missed connections"
+    ]
+  },
+  {
+    "title": "Package Holiday Rights in Europe: Comprehensive Protections for Bundled Travel",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-package-holiday-rights",
+    "description": "Under the Package Travel Directive (EU) 2015/2302, the organiser is liable for the whole package. Reject significant pre-departure changes for a full refund in 14 days, and mandatory insolvency protection covers repatriation.",
+    "keywords": [
+      "package holiday rights europe bundled travel",
+      "package travel directive 2015/2302 organiser liable",
+      "eu package holiday 14 day refund pre departure",
+      "eu package holiday insolvency protection",
+      "eu package holiday comprehensive protections"
+    ]
+  },
+  {
+    "title": "The 14-Day Right of Withdrawal in the EU: Why \"No Refunds\" Signs Don't Apply to Online Purchases",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-14-day-withdrawal-right",
+    "description": "EU distance purchases come with a mandatory 14-day right of withdrawal — no reason required, no cancellation fee. Plus the new 2026 mandatory 'withdrawal button', the 12-month penalty for sellers who don't inform you, and who pays for shipping.",
+    "keywords": [
+      "14 day right of withdrawal eu online purchases",
+      "no refunds sign doesnt apply eu online",
+      "eu 2026 mandatory withdrawal button",
+      "eu withdrawal right 12 month penalty seller",
+      "who pays return shipping eu withdrawal"
+    ]
+  },
+  {
+    "title": "What If an EU Store Refuses My Refund? Dispute Resolution Pathways After the End of the ODR Platform",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-store-refuses-refund-dispute-resolution",
+    "description": "The EU's ODR platform was discontinued in July 2025. The routes that actually work now: the ECC-Net cross-border support network, the national ADR body directory, the DSA Article 21 bodies, and the European Small Claims Procedure up to €5,000.",
+    "keywords": [
+      "eu store refuses refund dispute resolution",
+      "eu odr platform discontinued july 2025",
+      "ecc-net national adr body directory eu",
+      "dsa article 21 out of court bodies eu",
+      "eu small claims procedure 5000 euro"
+    ]
+  },
+  {
+    "title": "Consumer Guarantees in the European Union: The 2-Year Minimum Rules",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-2-year-consumer-guarantee",
+    "description": "Every new consumer good in the EU carries a legal guarantee of at least 2 years under Directive (EU) 2019/771 — owed by the seller, not the manufacturer. The burden-of-proof reversal, what non-conformity covers, and the repair-first remedy hierarchy.",
+    "keywords": [
+      "consumer guarantees european union 2 year minimum",
+      "eu directive 2019/771 legal guarantee",
+      "eu guarantee seller not manufacturer",
+      "eu burden of proof reversal guarantee",
+      "eu repair first remedy hierarchy"
+    ]
+  },
+  {
+    "title": "Digital Products Refund Rules in the EU: Apps, Software, and Streaming Rights",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-digital-content-refund-rules",
+    "description": "Digital content is covered by EU consumer law under Directive (EU) 2019/770. The download/streaming trigger that ends your withdrawal right, the 2-year conformity guarantee that still applies, and the legal obligation to supply updates.",
+    "keywords": [
+      "digital products refund rules eu apps software",
+      "eu directive 2019/770 digital content",
+      "eu digital content withdrawal right ends when",
+      "eu digital content 2 year conformity guarantee",
+      "eu digital content update obligation"
+    ]
+  },
+  {
+    "title": "Buying from Another EU Country: Your Cross-Border Rights and Geo-Blocking Defenses",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/eu-cross-border-geoblocking",
+    "description": "Regulation (EU) 2018/302 bans unjustified geo-blocking — but it guarantees equal access, pricing and payment, not delivery. Where the line is, forced redirects, card rejections, and how to report a real violation.",
+    "keywords": [
+      "buying another eu country cross border rights",
+      "regulation eu 2018/302 geo-blocking ban",
+      "eu geo-blocking equal access pricing payment",
+      "eu geo-blocking forced redirect card rejection",
+      "report real geo-blocking violation eu"
+    ]
+  },
+  {
+    "title": "Flight Delayed in Australia: What Are Your Rights?",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/flight-delay-rights-australia",
+    "description": "Australia has no EU-style automatic flight-delay compensation. What you actually have instead: an unsettled ACL 'reasonable time' argument, a real right to a refund over a voucher on a major failure, and a realistic view of the Airline Customer Advocate.",
+    "keywords": [
+      "flight delayed australia what are your rights",
+      "australia no eu style flight compensation",
+      "acl reasonable time argument flight delay",
+      "australia refund over voucher major failure flight",
+      "airline customer advocate australia"
+    ]
+  },
+  {
+    "title": "Lost Luggage in Australia: How to Claim Compensation",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/lost-luggage-compensation-australia",
+    "description": "Airline liability for lost or damaged baggage in Australia is capped and the claim deadlines are genuinely short. The Carriers' Liability Act framework, why you must file a PIR before leaving the airport, and how to claim.",
+    "keywords": [
+      "lost luggage australia claim compensation",
+      "carriers liability act 1959 baggage cap",
+      "file pir before leaving airport australia",
+      "australia lost damaged baggage claim deadline",
+      "australia luggage compensation how to claim"
+    ]
+  },
+  {
+    "title": "The ACL Protocol: How Automatic Consumer Guarantees Override Store Policy in Australia",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/acl-protocol-australia",
+    "description": "Every product sold in Australia comes with automatic consumer guarantees under the ACL — no retailer can contract out of them, and there's no fixed 12-month cutoff. What they promise, why the retailer (not the manufacturer) is responsible, and what proof of purchase really means.",
+    "keywords": [
+      "acl protocol automatic consumer guarantees australia",
+      "acl guarantees override store policy",
+      "no fixed 12 month cutoff acl australia",
+      "retailer not manufacturer responsible acl",
+      "acl protocol what they promise"
+    ]
+  },
+  {
+    "title": "Can a Store Refuse a Refund in Australia? The Line Between \"Changed My Mind\" and a Real Fault",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/refund-boundary-australia",
+    "description": "Australian law gives you no unconditional right to a refund for change of mind — but the moment a product is genuinely faulty, a 'No Refunds' sign becomes the store's problem, not yours. Where the line sits, and exactly what to say at the counter.",
+    "keywords": [
+      "can store refuse refund australia",
+      "changed my mind vs real fault australia",
+      "no refunds sign genuinely faulty product",
+      "australia refund boundary what to say",
+      "store refund refusal line australia"
+    ]
+  },
+  {
+    "title": "What Is a \"Major Failure\" Under Australian Consumer Law — and Why It Decides Whether You Get a Refund",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/what-is-a-major-failure-australia",
+    "description": "If a fault is a 'major failure' under Australian Consumer Law, you choose the remedy — refund, replacement, or repair — from the start. The tests that tip a fault into major, who chooses, and exactly what to say to the retailer.",
+    "keywords": [
+      "what is a major failure australian consumer law",
+      "major failure you choose the remedy",
+      "acl major failure five tests",
+      "who chooses refund replacement repair acl",
+      "major failure decides refund australia"
+    ]
+  },
+  {
+    "title": "How to Report a Business to the ACCC (and Why It Won't Get You a Refund)",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/how-to-report-business-to-accc",
+    "description": "The ACCC doesn't resolve individual refund disputes — it targets systemic misconduct. What actually triggers ACCC action, how to file a useful report, and why your own refund runs through state Fair Trading instead.",
+    "keywords": [
+      "how to report business to accc",
+      "accc doesnt resolve individual refund disputes",
+      "what triggers accc action systemic misconduct",
+      "file useful accc report guide",
+      "refund runs through fair trading not accc"
+    ]
+  },
+  {
+    "title": "How to Make a Complaint to Fair Trading (and Get Your Individual Case Actually Resolved)",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/fair-trading-complaint-australia",
+    "description": "Every Australian state and territory runs a free consumer mediation agency — that, not the ACCC or a courtroom, is where individual disputes get resolved. Your state's agency, how to build your case file, and what happens after you lodge.",
+    "keywords": [
+      "how to make complaint fair trading australia",
+      "free consumer mediation agency australia state",
+      "fair trading resolves individual disputes",
+      "build case file fair trading complaint",
+      "australia fair trading complaint process"
+    ]
+  },
+  {
+    "title": "Skip the Federal Wait: How to File a Complaint With Your State Attorney General",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/state-ag-complaint-us",
+    "description": "The FTC builds large cases over time, not individual resolutions. Your State Attorney General's Consumer Protection Division is a faster, locally accountable option — how it works and how to file.",
+    "keywords": [
+      "skip federal wait state attorney general complaint",
+      "ftc builds cases not individual resolutions",
+      "state ag consumer protection division jurisdiction",
+      "file state attorney general complaint us",
+      "state ag faster than ftc complaint"
+    ]
+  },
+  {
+    "title": "Scammed by a Third-Party Amazon Seller? How the A-to-z Guarantee Actually Works",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/amazon-a-to-z-guarantee-us",
+    "description": "Amazon's A-to-z Guarantee protects third-party marketplace purchases, independent of the seller's return policy. What it covers, the 48-hour and 90-day timeline, and A-to-z vs. a bank chargeback.",
+    "keywords": [
+      "scammed third party amazon seller a to z",
+      "amazon a to z guarantee how it works",
+      "amazon a to z 48 hour 90 day timeline",
+      "a to z guarantee vs bank chargeback",
+      "amazon third party purchase protection"
+    ]
+  },
+  {
+    "title": "USPS Lost or Damaged Your Package? How to File a Domestic Claim and Actually Get Paid",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/usps-domestic-claims-us",
+    "description": "Priority Mail, Priority Mail Express and Ground Advantage include $100 automatic insurance with a tracking barcode. The filing windows for lost vs. damaged, who can file, and how to get paid.",
+    "keywords": [
+      "usps lost damaged package file domestic claim",
+      "usps priority mail 100 dollar insurance",
+      "usps filing windows lost vs damaged",
+      "usps ground advantage tracking barcode claim",
+      "usps domestic claim get paid guide"
+    ]
+  },
+  {
+    "title": "Scammed Through the Mail? Why That's a Federal Crime, Not Just a Bad Purchase",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/uspis-mail-fraud-us",
+    "description": "The moment a scam moves through the US Postal Service it becomes a federal crime (18 U.S.C. § 1341). Who investigates it (USPIS), what to preserve, how to report — and what a federal case number does for a chargeback.",
+    "keywords": [
+      "scammed through mail federal crime",
+      "uspis 18 usc 1341 mail fraud",
+      "who investigates mail fraud uspis",
+      "federal case number chargeback mail fraud",
+      "mail fraud not just bad purchase"
+    ]
+  },
+  {
+    "title": "How to Check If an Online Store Is a Scam Before You Buy: A Realistic Checklist (Beyond Just One Trust Score)",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/is-this-website-a-scam-checker",
+    "description": "HTTPS and a single trust score aren't proof a store is legit. A realistic checklist to verify an online store before you hand over your card details.",
+    "keywords": [
+      "how to check online store is a scam",
+      "https trust score not proof store legit",
+      "realistic checklist before online purchase",
+      "scammers use same signals real stores",
+      "is this website a scam checker guide"
+    ]
+  },
+  {
+    "title": "Scammed by an Overseas Online Store? How to File a Cross-Border Complaint at eConsumer.gov",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/econsumer-gov-international-scam",
+    "description": "Scammed by a seller in another country? eConsumer.gov coordinates cross-border complaints across 35+ agencies. What filing does — and why to open a chargeback in parallel.",
+    "keywords": [
+      "scammed overseas online store econsumer.gov",
+      "econsumer.gov cross border complaint 35 agencies",
+      "file international scam complaint how to",
+      "open chargeback parallel econsumer.gov",
+      "overseas scam seller cross border complaint"
+    ]
+  },
+  {
+    "title": "How to Check a US Company's Complaint History on the BBB (And Why the Letter Grade Alone Isn't Enough)",
+    "type": "blog",
+    "block": "shopping-ecommerce",
+    "url": "/blog/bbb-company-complaint-history-us",
+    "description": "The BBB letter grade has a documented history of being gameable. How to read a US company's actual complaint pattern before you buy or sign a contract.",
+    "keywords": [
+      "check us company complaint history bbb",
+      "bbb letter grade gameable history",
+      "bbb complaint pattern before you buy",
+      "read company complaint pattern bbb",
+      "bbb a plus f grade not enough"
+    ]
   }
 ]
