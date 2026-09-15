@@ -4403,5 +4403,957 @@
       "dpd parcel claim section 29",
       "dpd lost parcel who to contact"
     ]
+  },
+  {
+    "title": "Tenant Move-In & Move-Out Inspection Checklist",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/tenant-inspection-checklist",
+    "description": "A 10-sheet Excel workbook that gives UK tenants a structured, room-by-room record of a property's condition — with automatic change detection to protect your deposit in a dispute.",
+    "keywords": [
+      "tenant move-in move-out inspection checklist",
+      "room by room condition record rental",
+      "automatic move-in vs move-out change detection",
+      "protect deposit inspection template",
+      "excel move-out condition report"
+    ]
+  },
+  {
+    "title": "Moving Out Documentation Pack",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/moving-out-documentation-pack",
+    "description": "Three UK tenancy documents — a Notice to Vacate letter, a staged move-out checklist, and a deposit and communications tracker — that protect your deposit when you leave a rental.",
+    "keywords": [
+      "moving out documentation pack",
+      "notice to vacate letter template",
+      "staged move-out checklist rental",
+      "deposit and communications tracker",
+      "uk tenancy move-out documents"
+    ]
+  },
+  {
+    "title": "Security Deposit Dispute Tracker",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/security-deposit-dispute-tracker",
+    "description": "Document, track, and build your case for a withheld or disputed rental deposit — deduction log, communication log, evidence checklist, and escalation timeline. PDF + Excel.",
+    "keywords": [
+      "security deposit dispute tracker",
+      "deduction log rental deposit",
+      "communication log deposit dispute",
+      "evidence checklist withheld deposit",
+      "escalation timeline deposit dispute"
+    ]
+  },
+  {
+    "title": "Move-In / Move-Out Condition Report",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/move-in-move-out-condition-report",
+    "description": "A room-by-room record of your rental's condition, for both move-in and move-out, with a photo/video log and signature section. PDF.",
+    "keywords": [
+      "move-in move-out condition report",
+      "room by room rental condition record",
+      "photo video log rental condition",
+      "signature section condition report",
+      "rental condition report pdf"
+    ]
+  },
+  {
+    "title": "Repair Request & Habitability Log",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/repair-request-habitability-log",
+    "description": "Track every repair request, the landlord's response, and legal escalation deadlines. PDF + Excel.",
+    "keywords": [
+      "repair request habitability log",
+      "track repair requests landlord response",
+      "legal escalation deadlines repairs",
+      "habitability complaint tracker",
+      "repair request log pdf excel"
+    ]
+  },
+  {
+    "title": "Eviction Response Workbook",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/eviction-response-workbook",
+    "description": "Organize your timeline, defenses, and response if you've received an eviction notice or summons — critical deadline tracker, defenses checklist, guided response statement, evidence log. PDF + Word.",
+    "keywords": [
+      "eviction response workbook",
+      "eviction notice deadline tracker",
+      "eviction defenses checklist",
+      "guided eviction response statement",
+      "organize eviction summons response"
+    ]
+  },
+  {
+    "title": "Lease Violation Notice Log",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/lease-violation-notice-log",
+    "description": "For landlords and property managers — track lease violations, notices issued, and cure periods. PDF + Excel.",
+    "keywords": [
+      "lease violation notice log",
+      "track lease violations landlord",
+      "cure period tracker landlord",
+      "notices issued to tenant log",
+      "lease violation log pdf excel"
+    ]
+  },
+  {
+    "title": "Rent Increase Notice Tracker",
+    "type": "template",
+    "block": "housing-rentals",
+    "url": "/templates/rent-increase-notice-tracker",
+    "description": "For landlords and property managers — track rent increase notices across units, with automatic new-rent and notice-compliance calculations. Excel.",
+    "keywords": [
+      "rent increase notice tracker",
+      "landlord rent increase compliance tracker",
+      "unit by unit rent tracker",
+      "notice delivery log landlord",
+      "rent increase calculation excel"
+    ]
+  },
+  {
+    "title": "Notice to Remedy / Urgent Repairs Letter (Australia)",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/au-notice-to-remedy-repairs",
+    "description": "Generate a formal Notice to Remedy / Urgent Repairs letter to an Australian landlord or agent — sets a clear deadline, keeps rent paid in full, and flags escalation to your state tenancy tribunal (NCAT/VCAT/QCAT). Free.",
+    "keywords": [
+      "notice to remedy urgent repairs letter australia",
+      "formal repair notice landlord ncat vcat qcat",
+      "urgent repairs letter generator australia",
+      "australian tenancy tribunal escalation letter",
+      "free notice to remedy generator"
+    ]
+  },
+  {
+    "title": "Landlord Deposit Demand Letter",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/landlord-deposit-demand-letter",
+    "description": "Generate a firm deposit demand letter — whichever went wrong, deposit not returned at all or returned with deductions you dispute — for the US, UK, EU, or Australia. Free.",
+    "keywords": [
+      "landlord deposit demand letter generator",
+      "deposit not returned demand letter",
+      "dispute deposit deductions letter",
+      "firm deposit demand letter free",
+      "deposit demand letter us uk eu australia"
+    ]
+  },
+  {
+    "title": "Repair Request Formal Notice",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/repair-request-formal-notice",
+    "description": "Generate a formal written repair request / habitability notice to your landlord — the urgency you specify, prior notice referenced if you already raised it. Free.",
+    "keywords": [
+      "repair request formal notice generator",
+      "formal written repair request landlord",
+      "habitability notice generator free",
+      "urgent repair request letter template",
+      "repair request letter with prior notice"
+    ]
+  },
+  {
+    "title": "Illegal Eviction Warning Letter",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/illegal-eviction-warning-letter",
+    "description": "Generate a firm warning letter for a landlord who changed the locks, removed belongings, or cut utilities without a court order — self-help eviction is not lawful. Free.",
+    "keywords": [
+      "illegal eviction warning letter generator",
+      "landlord changed locks warning letter",
+      "self-help eviction warning letter",
+      "cut utilities illegal eviction letter",
+      "free illegal eviction letter generator"
+    ]
+  },
+  {
+    "title": "Rental Scam Refund Demand",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/rental-scam-refund-demand",
+    "description": "Generate a formal refund demand for a rental scam, plus a factual, payment-method-specific checklist of where to actually report it. Free.",
+    "keywords": [
+      "rental scam refund demand generator",
+      "formal refund demand rental scam",
+      "report rental scam payment method",
+      "fake landlord refund demand letter",
+      "rental scam demand letter free"
+    ]
+  },
+  {
+    "title": "Lease Clause Challenge Letter",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/lease-clause-challenge-letter",
+    "description": "Generate a letter challenging a lease clause before you sign, or a formal notice that a clause you already signed may be unenforceable. Free.",
+    "keywords": [
+      "lease clause challenge letter generator",
+      "challenge unenforceable lease clause",
+      "lease clause letter before signing",
+      "unenforceable clause notice letter",
+      "free lease clause challenge letter"
+    ]
+  },
+  {
+    "title": "Lease Violation Notice Generator",
+    "type": "generator",
+    "block": "housing-rentals",
+    "url": "/generate/lease-violation-notice-generator",
+    "description": "For landlords and property managers — generate a formal lease violation notice with a cure-period reminder, for nonpayment, unauthorized occupants/pets, damage, noise, or other lease breaches. Free.",
+    "keywords": [
+      "lease violation notice generator",
+      "landlord formal lease violation notice",
+      "cure period reminder lease violation",
+      "nonpayment unauthorized occupants notice",
+      "lease breach notice generator free"
+    ]
+  },
+  {
+    "title": "Locked Out? What to Do Right Now",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/illegal-lockout-emergency",
+    "description": "A free, printable emergency checklist for tenants illegally locked out or with utilities cut by a landlord — what to do right now, how to get emergency court relief, and how to document everything for a damages claim.",
+    "keywords": [
+      "locked out what to do right now",
+      "illegal lockout emergency checklist",
+      "landlord cut utilities emergency checklist",
+      "emergency court relief lockout",
+      "illegally locked out by landlord"
+    ]
+  },
+  {
+    "title": "Moving Out? Bond Return Evidence Checklist (Australia)",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/au-bond-return-check",
+    "description": "A free, printable checklist for Australian tenants moving out — the photos and evidence to gather, what a landlord legally can't deduct, how the bond process differs by state (NSW/VIC/QLD vs WA), and how to handle a dispute. No account required.",
+    "keywords": [
+      "bond return evidence checklist australia",
+      "moving out australia bond checklist",
+      "what landlord cant deduct from bond",
+      "nsw vic qld wa bond process",
+      "australian rental bond evidence checklist"
+    ]
+  },
+  {
+    "title": "Before Paying a Rental Deposit Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/before-paying-rental-deposit",
+    "description": "A free checklist to run before you pay any rental deposit — verify the listing is real, verify who you're dealing with, and never pay before you've seen the property. No account required.",
+    "keywords": [
+      "before paying rental deposit checklist",
+      "verify rental listing is real",
+      "never pay before seeing property",
+      "rental deposit scam prevention checklist",
+      "checklist before paying rental deposit"
+    ]
+  },
+  {
+    "title": "Move-In Inspection Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/move-in-inspection",
+    "description": "A free checklist for a thorough move-in inspection — room-by-room photo and video documentation, noting every mark however small, and getting it signed off. No account required.",
+    "keywords": [
+      "move-in inspection checklist",
+      "room by room photo video inspection",
+      "document rental condition move in",
+      "move-in inspection sign off",
+      "thorough move-in inspection checklist"
+    ]
+  },
+  {
+    "title": "Moving Out Deposit Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/moving-out-deposit",
+    "description": "A free checklist for moving out and protecting your deposit — cleaning, final photo documentation matched against your move-in report, and a proper handover. No account required.",
+    "keywords": [
+      "moving out deposit checklist",
+      "protect deposit when moving out",
+      "final photo documentation move out",
+      "cleaning checklist protect deposit",
+      "proper handover moving out"
+    ]
+  },
+  {
+    "title": "Habitability Issue Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/habitability-issue",
+    "description": "A free checklist for a habitability issue your landlord isn't fixing — document it, notify the landlord properly in writing, build your evidence file, and know your options. No account required.",
+    "keywords": [
+      "habitability issue checklist",
+      "landlord not fixing habitability issue",
+      "document habitability complaint",
+      "notify landlord in writing habitability",
+      "habitability evidence file checklist"
+    ]
+  },
+  {
+    "title": "Repair and Deduct Eligibility Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/repair-and-deduct-eligibility",
+    "description": "A free checklist to confirm you're actually eligible to use repair-and-deduct before you spend any money — jurisdiction rules, notice requirements, and what to keep afterward. No account required.",
+    "keywords": [
+      "repair and deduct eligibility checklist",
+      "am i eligible for repair and deduct",
+      "repair and deduct notice requirements",
+      "jurisdiction rules repair and deduct",
+      "repair and deduct before spending money"
+    ]
+  },
+  {
+    "title": "Rental Contract Red Flags Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/rental-contract-red-flags",
+    "description": "A free checklist to catch red flags in a rental contract before you sign — deposit and fee clauses, unenforceable clauses, and vague terms used against tenants. No account required.",
+    "keywords": [
+      "rental contract red flags checklist",
+      "red flags in a lease before signing",
+      "unenforceable lease clauses checklist",
+      "vague lease terms against tenants",
+      "catch red flags rental contract"
+    ]
+  },
+  {
+    "title": "Deposit Dispute Evidence Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/deposit-dispute-evidence",
+    "description": "A free checklist to build your evidence for a deposit dispute — compare move-in and move-out documentation, challenge each deduction, and prepare to escalate. No account required.",
+    "keywords": [
+      "deposit dispute evidence checklist",
+      "compare move-in move-out documentation",
+      "challenge each deposit deduction",
+      "prepare to escalate deposit dispute",
+      "build evidence deposit dispute"
+    ]
+  },
+  {
+    "title": "Airbnb / Booking Damage Claim Checklist",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/airbnb-booking-damage-claim",
+    "description": "A free checklist for responding to an Airbnb or Booking.com damage claim against you as a guest — pull your own evidence, evaluate the host's claim, and respond through the right channel. No account required.",
+    "keywords": [
+      "airbnb booking damage claim checklist",
+      "respond to airbnb damage claim guest",
+      "evaluate hosts damage claim evidence",
+      "airbnb aircover damage claim response",
+      "booking.com damage claim checklist"
+    ]
+  },
+  {
+    "title": "Before Booking an Airbnb or Vacation Rental",
+    "type": "checklist",
+    "block": "housing-rentals",
+    "url": "/checklists/before-booking-airbnb",
+    "description": "A free, printable checklist before booking a short-term rental: verify the listing is genuine and know the cancellation terms and fees before you pay.",
+    "keywords": [
+      "before booking airbnb checklist",
+      "verify short term rental listing genuine",
+      "cancellation terms and fees before booking",
+      "vacation rental scam prevention checklist",
+      "before booking a vacation rental"
+    ]
+  },
+  {
+    "title": "Deposit Protection Schemes",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#deposit-protection-schemes",
+    "description": "Where your deposit is legally required to be held — a scheme, not the landlord. England & Wales, the US (state-by-state, no national scheme), and three Australian states. Scotland and Northern Ireland run their own separate schemes not covered here.",
+    "keywords": [
+      "deposit protection schemes directory",
+      "where is my deposit legally held",
+      "tds dps mydeposits schemes uk",
+      "us state deposit escrow requirements",
+      "australian state deposit schemes"
+    ]
+  },
+  {
+    "title": "Housing Authorities & Tenancy Tribunals",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#housing-authorities-tribunals",
+    "description": "Where a tenancy dispute actually gets formally decided, once direct resolution with the landlord fails.",
+    "keywords": [
+      "housing authorities tenancy tribunals directory",
+      "where to formally decide tenancy dispute",
+      "ncat vcat qcat tribunal directory",
+      "housing tribunal by country",
+      "formal tenancy dispute resolution body"
+    ]
+  },
+  {
+    "title": "Environmental Health & Housing Inspectors",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#environmental-health-inspectors",
+    "description": "Who actually inspects a property for a health or safety hazard — a distinct, more local function than the authorities and tribunals above.",
+    "keywords": [
+      "environmental health housing inspectors directory",
+      "inspect property health safety hazard",
+      "local council housing inspector",
+      "report unsafe rental property inspector",
+      "environmental health department housing"
+    ]
+  },
+  {
+    "title": "Tenant Rights Organizations",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#tenant-rights-organizations",
+    "description": "Free advice and advocacy organizations — not government bodies, but often the fastest way to understand your actual rights before you act.",
+    "keywords": [
+      "tenant rights organizations directory",
+      "free tenant advice organization",
+      "shelter citizens advice tenant rights",
+      "tenant advocacy group directory",
+      "understand tenant rights before acting"
+    ]
+  },
+  {
+    "title": "Rental Scam Reporting",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#rental-scam-reporting",
+    "description": "Where to report a fraudulent listing or a scammer posing as a landlord or agent — separate from a dispute with a genuine landlord.",
+    "keywords": [
+      "rental scam reporting directory",
+      "report fake landlord scam",
+      "report fraudulent rental listing",
+      "where to report rental fraud",
+      "rental scam reporting agencies by country"
+    ]
+  },
+  {
+    "title": "Property Ombudsman & ADR Services",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#property-ombudsman-adr",
+    "description": "Independent redress schemes for a complaint against a letting agent or property manager — read the scope carefully, since coverage is narrower than it sounds.",
+    "keywords": [
+      "property ombudsman adr services directory",
+      "complaint against letting agent ombudsman",
+      "independent redress scheme property manager",
+      "property ombudsman scope coverage",
+      "letting agent complaint adr"
+    ]
+  },
+  {
+    "title": "Major Rental Platforms",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#major-rental-platforms",
+    "description": "The platforms' own trust & safety / help centers — for a listing, booking, or damage-claim dispute conducted through the platform, start here before escalating externally.",
+    "keywords": [
+      "major rental platforms directory",
+      "airbnb booking.com trust and safety help center",
+      "platform dispute before escalating externally",
+      "rental platform help center directory",
+      "damage claim dispute through platform"
+    ]
+  },
+  {
+    "title": "Small Claims Courts",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#small-claims-courts",
+    "description": "For a monetary dispute that other channels haven't resolved. Deliberately narrow for now — not a full jurisdiction-by-jurisdiction directory yet.",
+    "keywords": [
+      "small claims courts directory housing",
+      "monetary rental dispute small claims",
+      "sue landlord small claims court",
+      "small claims court deposit dispute",
+      "small claims court by country rental"
+    ]
+  },
+  {
+    "title": "Official Rental Bond Calculators & Deposit Tools",
+    "type": "directory",
+    "block": "housing-rentals",
+    "url": "/directory/housing-rentals#bond-calculators-deposit-tools",
+    "description": "Official calculation and lodgement tools — cross-referenced to Section 1 rather than listed again separately, since each is already built into that scheme or authority's own portal.",
+    "keywords": [
+      "official rental bond calculators directory",
+      "bond lodgement tool official",
+      "deposit calculation tool scheme portal",
+      "rental bond calculator by state",
+      "official deposit tools directory"
+    ]
+  },
+  {
+    "title": "Small Claims Court Evidence Guide for Deposit Disputes",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/small-claims-court-evidence-guide-deposit-disputes",
+    "description": "How to structure a security deposit small claims case: the evidence file, the formal demand letter, and how courts treat dated, geotagged photo evidence.",
+    "keywords": [
+      "small claims court evidence guide deposit disputes",
+      "how to structure deposit small claims case",
+      "evidence file demand letter deposit court",
+      "dated geotagged photo evidence court",
+      "deposit small claims court preparation"
+    ]
+  },
+  {
+    "title": "Documenting Structural and Health Risks: A Habitability Evidence Manual",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/documenting-structural-health-risks-habitability-evidence",
+    "description": "How to document pests, mold, and unsanitary conditions with evidence that holds up against a landlord's denial, including humidity readings and pest inspections.",
+    "keywords": [
+      "documenting structural health risks habitability",
+      "document pests mold unsanitary conditions",
+      "humidity readings pest inspection evidence",
+      "evidence landlord denial habitability",
+      "habitability evidence manual"
+    ]
+  },
+  {
+    "title": "Auditing a Lease Before You Sign: How to Spot Legal Red Flags",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/auditing-lease-red-flags-before-signing",
+    "description": "A practical guide to reviewing a draft lease for common abusive clauses: penalty fees outside legal limits, hidden renewal charges, and unjustified pet exclusions.",
+    "keywords": [
+      "auditing a lease before you sign",
+      "spot legal red flags in lease",
+      "penalty fees outside legal limits lease",
+      "hidden renewal charges lease",
+      "unjustified pet exclusions lease"
+    ]
+  },
+  {
+    "title": "How to Successfully Appeal a False Damage Claim on Airbnb or Booking",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/appeal-false-damage-claim-airbnb-booking",
+    "description": "A step-by-step protocol for disputing a host's damage claim through AirCover or a similar program, including how manipulated photo evidence is now treated.",
+    "keywords": [
+      "appeal false damage claim airbnb",
+      "dispute host damage claim aircover",
+      "manipulated photo evidence airbnb claim",
+      "airbnb damage claim denied appeal",
+      "booking.com false damage claim dispute"
+    ]
+  },
+  {
+    "title": "Hidden Fee Audit: How Airbnb and Booking.com Comply With Price Transparency Rules",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/hidden-fee-audit-airbnb-booking-price-transparency",
+    "description": "A comparison of how Airbnb and Booking.com handle mandatory upfront pricing under the FTC's Junk Fees Rule and EU consumer transparency requirements.",
+    "keywords": [
+      "hidden fee audit airbnb booking.com",
+      "ftc junk fees rule airbnb",
+      "eu consumer transparency requirements booking",
+      "mandatory upfront pricing rental platforms",
+      "hidden fees at checkout booking"
+    ]
+  },
+  {
+    "title": "Claiming Your Rental Bond in Australia: File Before Your Landlord Does",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/claiming-rental-bond-australia-vcat-ncat",
+    "description": "How Australia's state bond authorities and tribunals (VCAT, NCAT) work, and why lodging your bond refund claim the same day you hand back keys shifts the burden of proof.",
+    "keywords": [
+      "claiming rental bond australia vcat ncat",
+      "file bond refund claim first australia",
+      "bond authorities tribunals australia",
+      "lodge bond claim same day keys",
+      "shift burden of proof bond claim"
+    ]
+  },
+  {
+    "title": "Urgent vs. Non-Urgent Repairs in Australia: Timelines and Self-Repair Limits",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/urgent-repairs-australia-reimbursement-limits",
+    "description": "What counts as an urgent repair under Australian tenancy law, and the exact reimbursement limits tenants can spend out of pocket if a landlord doesn't respond.",
+    "keywords": [
+      "urgent vs non-urgent repairs australia",
+      "self repair reimbursement limits australia",
+      "what counts as urgent repair tenancy law",
+      "urgent repairs timeline australia",
+      "tenant reimbursement limit repairs"
+    ]
+  },
+  {
+    "title": "The Rent Bidding Ban in Australia: A State-by-State Reality Check",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/rent-bidding-ban-australia-state-by-state",
+    "description": "Which Australian states have actually banned rent bidding, which only restrict agents from soliciting it, and where the practice remains fully legal.",
+    "keywords": [
+      "rent bidding ban australia state by state",
+      "which states banned rent bidding",
+      "agents soliciting rent bids restriction",
+      "rent bidding still legal states",
+      "australia rent bidding law by state"
+    ]
+  },
+  {
+    "title": "Last-Minute Host Cancellations in Australia: Your Rights Under the ACL",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/last-minute-host-cancellations-australia-acl-rights",
+    "description": "What the Australian Consumer Law actually guarantees when a host cancels your booking at the last minute, and where platform policy goes beyond the legal minimum.",
+    "keywords": [
+      "last minute host cancellations australia acl",
+      "australian consumer law host cancels booking",
+      "host cancellation refund rights acl",
+      "platform policy vs legal minimum cancellation",
+      "acl rights host cancels last minute"
+    ]
+  },
+  {
+    "title": "Tenancy Blacklists in Australia: Your Rights Against TICA and Similar Databases",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/tenancy-databases-tica-privacy-act-australia",
+    "description": "How tenancy databases like TICA work, what the Privacy Act 1988 actually requires of them, and how to check and dispute a listing.",
+    "keywords": [
+      "tenancy blacklists australia tica",
+      "privacy act 1988 tenancy database",
+      "check and dispute tica listing",
+      "tenancy database rights australia",
+      "get tica listing deleted"
+    ]
+  },
+  {
+    "title": "Normal Wear vs. Damage in EU Rentals: Paint, Wall Holes, and Cleaning",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/normal-wear-vs-damage-eu-rentals",
+    "description": "What repairs count as ordinary wear and tear versus tenant negligence, according to France, Spain, and Germany's respective tenancy laws.",
+    "keywords": [
+      "normal wear vs damage eu rentals",
+      "ordinary wear and tear vs negligence",
+      "france spain germany tenancy wear and tear",
+      "paint wall holes cleaning deposit dispute",
+      "eu rental normal wear definition"
+    ]
+  },
+  {
+    "title": "Mietminderung: Proportional Rent Reduction for Housing Defects",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/mietminderung-rent-reduction-housing-defects",
+    "description": "How Germany's legal rent reduction for housing defects works under §536 BGB, and what equivalent remedies exist elsewhere in the EU.",
+    "keywords": [
+      "mietminderung rent reduction housing defects",
+      "germany 536 bgb rent reduction",
+      "proportional rent reduction defect germany",
+      "automatic rent reduction defect no court",
+      "mietminderung eviction risk"
+    ]
+  },
+  {
+    "title": "Unfair Clauses and Contract Nullity in EU Rentals",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/unfair-clauses-contract-nullity-eu-rentals",
+    "description": "Which rental contract clauses can be void in the EU, and the difference between EU-wide unfair terms protection and each country's own tenancy law.",
+    "keywords": [
+      "unfair clauses contract nullity eu rentals",
+      "void rental contract clauses eu",
+      "eu wide unfair terms protection tenancy",
+      "signed clause not always valid eu",
+      "eu rental contract nullity rules"
+    ]
+  },
+  {
+    "title": "Illegal Tourist Rentals in the EU: Landlord Penalties and Guest Refund Rights",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/illegal-tourist-rentals-eu-penalties-refunds",
+    "description": "How Barcelona, Paris, and Amsterdam regulate mandatory short-term rental registration, and what refund rights a guest has if a booking turns out to be unregistered.",
+    "keywords": [
+      "illegal tourist rentals eu penalties refunds",
+      "barcelona paris amsterdam tourist rental rules",
+      "unregistered short term rental refund",
+      "landlord fines illegal tourist rental",
+      "guest refund rights unregistered booking"
+    ]
+  },
+  {
+    "title": "The Digital Services Act and Real Estate Portals: Idealista, Fotocasa, and SeLoger",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/dsa-real-estate-portals-idealista-fotocasa-seloger",
+    "description": "How the Digital Services Act (DSA) requires major European real estate portals to remove illegal listings, and how to report one correctly.",
+    "keywords": [
+      "dsa real estate portals idealista fotocasa seloger",
+      "digital services act listing portal",
+      "report illegal listing real estate portal",
+      "dsa remove illegal content eu portal",
+      "how to report listing dsa"
+    ]
+  },
+  {
+    "title": "Security Deposit Audits in the US: Return Timelines, Escrow, and Bad-Faith Penalties",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/security-deposit-audits-us-return-timelines-escrow-bad-faith",
+    "description": "How security deposit return deadlines, escrow requirements, and bad-faith penalty frameworks actually work across California, New York, Florida, and Massachusetts.",
+    "keywords": [
+      "security deposit audits us return timelines",
+      "escrow requirements security deposit states",
+      "bad faith penalty framework deposit",
+      "california new york florida massachusetts deposit",
+      "security deposit return timeline by state"
+    ]
+  },
+  {
+    "title": "Implied Warranty of Habitability in the US: Legal Thresholds for \"Repair and Deduct\"",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/implied-warranty-habitability-us-repair-and-deduct",
+    "description": "How the implied warranty of habitability works in US rental law, and the exact procedural steps required before a tenant can legally use repair-and-deduct.",
+    "keywords": [
+      "implied warranty of habitability us thresholds",
+      "legal steps before repair and deduct",
+      "repair and deduct procedural requirements",
+      "implied warranty habitability us rental law",
+      "repair and deduct legal threshold"
+    ]
+  },
+  {
+    "title": "Rent Control Regimes and Retaliatory Eviction Defense in the US",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/rent-control-retaliatory-eviction-defense-us",
+    "description": "How statutory rent increase caps work in California and Oregon, and what protects tenants from retaliation after reporting a habitability issue.",
+    "keywords": [
+      "rent control regimes retaliatory eviction defense",
+      "california oregon rent increase caps",
+      "retaliatory eviction defense after complaint",
+      "statutory rent cap tenant protection",
+      "burden of proof retaliatory eviction"
+    ]
+  },
+  {
+    "title": "Anatomy of \"Fake Landlord\" Identity Scams and Advance Deposit Fraud",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/fake-landlord-identity-scams-advance-deposit-fraud",
+    "description": "How rental listing scams actually work on Craigslist, Facebook Marketplace, and Zillow — and the verification steps that catch them before you pay.",
+    "keywords": [
+      "fake landlord identity scams advance deposit fraud",
+      "rental listing scam craigslist facebook zillow",
+      "verification steps rental scam before paying",
+      "advance deposit fraud rental scam",
+      "fake landlord scam pattern"
+    ]
+  },
+  {
+    "title": "Civil Liability for Fraudulent Listings: Platform Immunity Under Section 230",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/civil-liability-fraudulent-listings-section-230",
+    "description": "Why real estate listing platforms are generally shielded from liability for fraudulent third-party listings under Section 230 — and where that shield has real limits.",
+    "keywords": [
+      "civil liability fraudulent listings section 230",
+      "platform immunity fraudulent rental listing",
+      "section 230 shield real estate platform",
+      "sue platform for fake listing limits",
+      "section 230 limits real estate"
+    ]
+  },
+  {
+    "title": "Rental Bond Not Returned in Australia? How to Dispute Deductions",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/rental-bond-dispute-australia",
+    "description": "In most Australian states you don't wait for the landlord — you lodge a bond claim yourself and put them on the clock. How the tenant-initiated claim works (NSW/VIC/QLD), why WA is different, what can't be deducted, and the evidence to keep.",
+    "keywords": [
+      "rental bond not returned australia dispute",
+      "lodge bond claim yourself australia",
+      "nsw vic qld tenant initiated bond claim",
+      "wa bond claim exception",
+      "what cant be deducted from bond australia"
+    ]
+  },
+  {
+    "title": "Landlord Won't Fix Repairs: Basic Renter Rights in Australia",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/landlord-wont-fix-repairs-australia",
+    "description": "Urgent repairs — no hot water, a gas leak, no electricity — don't require waiting on your landlord's timeline, and never require withholding rent. What counts as urgent, the right way to escalate, and how state tribunals (NCAT/VCAT/QCAT) can compel repairs.",
+    "keywords": [
+      "landlord won't fix repairs australia",
+      "urgent repairs no hot water gas leak",
+      "escalate repairs ncat vcat qcat",
+      "basic renter rights australia repairs",
+      "tribunal compel landlord repair"
+    ]
+  },
+  {
+    "title": "The Security Deposit Clock: How Long Your Landlord Actually Has to Return Your Money (By State)",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/security-deposit-state-laws-us",
+    "description": "There's no federal US law on security deposits — every state sets its own hard deadline (California 21 days, New York 14, Texas 30). Missing it can forfeit a landlord's right to withhold anything at all.",
+    "keywords": [
+      "security deposit clock by state",
+      "how long landlord return deposit us",
+      "california 21 days new york 14 texas 30",
+      "no federal law security deposits",
+      "landlord forfeits right to withhold deposit"
+    ]
+  },
+  {
+    "title": "No Heat, Mold, or Running Water? The Legal Right Your Lease Can't Override",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/implied-warranty-habitability-us",
+    "description": "Nearly every US residential lease carries an automatic implied warranty of habitability that requires a landlord to keep the unit fit to live in — regardless of what the lease says. What it covers and how to enforce it.",
+    "keywords": [
+      "no heat mold running water legal right",
+      "implied warranty of habitability us lease",
+      "landlord keep unit fit to live in",
+      "lease cant override habitability warranty",
+      "what habitability warranty covers"
+    ]
+  },
+  {
+    "title": "Locked Out or Had Your Utilities Cut? Your Landlord Broke the Law, Not You",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/illegal-self-help-eviction-us",
+    "description": "Falling behind on rent doesn't let a landlord change the locks, cut your utilities, or dump your belongings. Across the US there's one lawful way to remove a tenant — a court-ordered eviction. Anything else is an illegal self-help eviction.",
+    "keywords": [
+      "locked out utilities cut landlord broke law",
+      "illegal self-help eviction us",
+      "landlord changed locks illegal",
+      "court ordered eviction only lawful way",
+      "self help eviction penalties landlord"
+    ]
+  },
+  {
+    "title": "How to Check If Your Landlord Legally Protected Your Deposit (And Claim Up to 3x Back If They Didn't)",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/deposit-protection-checker-uk",
+    "description": "The law requires your deposit to sit in one of three government-approved schemes, independent of your landlord. How to check all three in minutes — and claim up to 3x back if they didn't protect it in time.",
+    "keywords": [
+      "check landlord protected deposit uk",
+      "claim 3x deposit back uk",
+      "three government approved deposit schemes uk",
+      "deposit protected late or not at all",
+      "uk deposit scheme checker"
+    ]
+  },
+  {
+    "title": "How to Dispute Unfair Deposit Deductions with TDS (No Solicitor Needed)",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/tds-deposit-dispute-uk",
+    "description": "If your deposit is protected with the Tenancy Deposit Scheme, there's a free, evidence-based process to challenge unfair deductions — and it starts from a position that favours you, the tenant.",
+    "keywords": [
+      "dispute unfair deposit deductions tds",
+      "tenancy deposit scheme free dispute process",
+      "challenge deposit deductions no solicitor",
+      "tds evidence based dispute uk",
+      "tds dispute favours tenant"
+    ]
+  },
+  {
+    "title": "Landlord Ignoring You About Your DPS Deposit? Here's How to Force a Resolution",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/dps-deposit-dispute-uk",
+    "description": "If your deposit is held by the Deposit Protection Service, it doesn't release automatically when a landlord goes silent. The Single Claim / Statutory Declaration process, explained through its 14-day windows.",
+    "keywords": [
+      "landlord ignoring dps deposit resolution",
+      "deposit protection service single claim",
+      "dps statutory declaration process",
+      "dps 14 day window deposit",
+      "force resolution dps deposit dispute"
+    ]
+  },
+  {
+    "title": "How to Dispute a Rental Deposit Held with MyDeposits",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/mydeposits-dispute-uk",
+    "description": "If your deposit certificate shows MyDeposits, the same neutral, evidence-based rules apply no matter who's on the other side. Custodial vs insured, the two principles that decide most disputes, and how to raise one.",
+    "keywords": [
+      "dispute rental deposit mydeposits",
+      "mydeposits custodial vs insured",
+      "mydeposits evidence based dispute rules",
+      "mydeposits certificate dispute process",
+      "how to raise mydeposits dispute"
+    ]
+  },
+  {
+    "title": "Facing an Illegal Eviction or Landlord Harassment? Call Shelter's Free Helpline First",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/shelter-emergency-housing-advice-uk",
+    "description": "A landlord changing the locks without a court order or ignoring a broken boiler isn't something you have to accept — or pay thousands in legal fees to fight. What Shelter's free helpline does, and what to do in the moment.",
+    "keywords": [
+      "illegal eviction landlord harassment shelter helpline",
+      "shelter free helpline uk housing",
+      "landlord changed locks no court order",
+      "free help illegal eviction uk",
+      "shelter emergency housing advice"
+    ]
+  },
+  {
+    "title": "Know Your Rights Before You Confront Your Landlord (Citizens Advice Housing Guide)",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/citizens-advice-housing-rights-uk",
+    "description": "A tenancy clause making you fix the boiler doesn't bind you just because you signed it. UK law overrides contract terms that strip statutory tenant rights — including the abolition of Section 21 on 1 May 2026.",
+    "keywords": [
+      "know your rights citizens advice housing guide",
+      "tenancy clause cant override statutory rights uk",
+      "section 21 abolition may 2026",
+      "citizens advice housing rights guide",
+      "uk law overrides unfair lease clause"
+    ]
+  },
+  {
+    "title": "A Landlord Kept £800 of a Deposit \"For Cleaning\" — Here's the Letter That Got It Back",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/case-landlord-deposit-withheld-uk",
+    "description": "A letting agency deducted £800 of a £1,200 deposit for 'cleaning'. Because the deposit was in a TDP scheme, free adjudication — with move-in/move-out photos — got £650 back in three weeks.",
+    "keywords": [
+      "landlord kept deposit for cleaning case study",
+      "letter got deposit back uk case",
+      "tdp scheme adjudication cleaning deduction",
+      "move out photos deposit dispute won",
+      "deposit withheld cleaning case study uk"
+    ]
+  },
+  {
+    "title": "The £1,000 Moving-Out Mistake: The Legal Loopholes UK Landlords Use to Keep Your Deposit",
+    "type": "blog",
+    "block": "housing-rentals",
+    "url": "/blog/uk-tenant-deposit-rights-moving-out",
+    "description": "Cleaning disputes account for 50% of UK tenancy deposit claims. Here's the legal framework landlords use against tenants — and the documentation that blocks it.",
+    "keywords": [
+      "moving out mistake uk landlords keep deposit",
+      "legal loopholes landlords deposit uk",
+      "cleaning disputes 50 percent deposit claims",
+      "documentation blocks deposit loophole",
+      "uk tenant deposit rights moving out"
+    ]
   }
 ]
