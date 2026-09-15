@@ -12243,5 +12243,2161 @@
       "spain rules administrative silence example",
       "eu administrative silence positive negative"
     ]
+  },
+  {
+    "title": "Small Claims Court Demand Letter Pack",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/small-claims-demand-letters",
+    "description": "Three ready-to-send Letter Before Action templates for UK and US small claims disputes — flights, deposits, and unpaid debts.",
+    "keywords": [
+      "small claims court demand letter pack",
+      "letter before action templates uk us",
+      "small claims disputes flights deposits debts",
+      "ready to send demand letters small claims",
+      "small claims demand letter pack free"
+    ]
+  },
+  {
+    "title": "Contract Review & Negotiation Workbook",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/contract-review-negotiation-workbook",
+    "description": "A clause-by-clause contract review covering risks, obligations, negotiable points, and open questions, before signing or negotiating.",
+    "keywords": [
+      "contract review negotiation workbook",
+      "clause by clause contract review",
+      "risks obligations negotiable points open questions",
+      "before signing or negotiating contract review",
+      "contract review workbook pdf word"
+    ]
+  },
+  {
+    "title": "Contract Comparison Workbook",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/contract-comparison-workbook",
+    "description": "Compare two or more contract versions clause by clause — price, duration, cancellation, liability, warranties — with a dedicated column flagging exactly what changed.",
+    "keywords": [
+      "contract comparison workbook",
+      "compare two contract versions clause by clause",
+      "price duration cancellation liability comparison",
+      "flag exactly what changed contract",
+      "contract comparison excel workbook"
+    ]
+  },
+  {
+    "title": "Contract Dispute Evidence Pack",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/contract-dispute-evidence-pack",
+    "description": "A complete record of a contract dispute: the problem clause, timeline, breach details, communications, documents, and requested resolution.",
+    "keywords": [
+      "contract dispute evidence pack",
+      "complete record contract dispute",
+      "problem clause timeline breach details",
+      "communications documents requested resolution contract",
+      "contract dispute evidence pdf word"
+    ]
+  },
+  {
+    "title": "Contract Negotiation & Amendment Tracker",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/contract-negotiation-amendment-tracker",
+    "description": "Track a negotiation's back-and-forth: original clause, proposed change, counter-proposal, who's responsible, status, and the final agreed wording.",
+    "keywords": [
+      "contract negotiation amendment tracker",
+      "track negotiation back and forth",
+      "original clause proposed change counter proposal",
+      "final agreed wording tracker",
+      "contract negotiation tracker excel"
+    ]
+  },
+  {
+    "title": "Legal Correspondence & Communication Log",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/legal-correspondence-communication-log",
+    "description": "A master chronological log of every call, email, and letter tied to a contract or legal conflict, across every party involved.",
+    "keywords": [
+      "legal correspondence communication log",
+      "master chronological log calls emails letters",
+      "contract legal conflict every party log",
+      "legal communication log excel",
+      "track legal correspondence template"
+    ]
+  },
+  {
+    "title": "Small Claims Evidence Pack",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/small-claims-evidence-pack",
+    "description": "Organize a small claims case: parties, timeline, contract/payment evidence, communications, itemized losses, and a pre-filing checklist.",
+    "keywords": [
+      "small claims evidence pack",
+      "organize small claims case parties timeline",
+      "contract payment evidence communications losses",
+      "pre filing checklist small claims",
+      "small claims evidence pdf word"
+    ]
+  },
+  {
+    "title": "Legal Case & Deadline Tracker",
+    "type": "template",
+    "block": "legal-contracts",
+    "url": "/templates/legal-case-deadline-tracker",
+    "description": "Track deadlines, documents, and pending actions for a legal matter, with automatic day-count calculation and a summary flagging anything due within 7 days.",
+    "keywords": [
+      "legal case deadline tracker",
+      "track deadlines documents pending actions legal",
+      "automatic day count calculation legal matter",
+      "flag anything due within 7 days legal",
+      "legal case tracker excel"
+    ]
+  },
+  {
+    "title": "Contract & Demand Letter Generator",
+    "type": "generator",
+    "block": "legal-contracts",
+    "url": "/generate/contract-demand-letter-generator",
+    "description": "Generate a formal demand or dispute letter for a breach of contract, payment owed, a refund owed, a general dispute, or a final notice before small claims. Free.",
+    "keywords": [
+      "contract demand letter generator",
+      "formal demand dispute letter breach of contract",
+      "payment owed refund owed general dispute letter",
+      "final notice before small claims letter",
+      "free contract demand letter generator"
+    ]
+  },
+  {
+    "title": "Contract Termination & Renewal Notice Generator",
+    "type": "generator",
+    "block": "legal-contracts",
+    "url": "/generate/contract-termination-renewal-notice-generator",
+    "description": "Generate a formal contract termination, non-renewal, or renewal confirmation notice, with a clear, unambiguous effective date. Free.",
+    "keywords": [
+      "contract termination renewal notice generator",
+      "formal contract termination notice free",
+      "non renewal renewal confirmation notice",
+      "unambiguous effective date contract notice",
+      "free contract termination generator"
+    ]
+  },
+  {
+    "title": "Contract Amendment & Counteroffer Generator",
+    "type": "generator",
+    "block": "legal-contracts",
+    "url": "/generate/contract-amendment-counteroffer-generator",
+    "description": "Generate a formal contract amendment or counteroffer document — propose a clause change, or document a change already agreed, with signature lines. Free.",
+    "keywords": [
+      "contract amendment counteroffer generator",
+      "propose change to contract clause",
+      "document change both parties agreed",
+      "signable amendment document not a letter",
+      "free contract amendment generator"
+    ]
+  },
+  {
+    "title": "Terms & Conditions Generator",
+    "type": "generator",
+    "block": "legal-contracts",
+    "url": "/generate/terms-conditions-generator",
+    "description": "Generate a basic Terms & Conditions document for a physical product, digital product, subscription, service, or marketplace business. Free.",
+    "keywords": [
+      "terms and conditions generator for businesses",
+      "basic terms conditions document generator",
+      "physical digital product subscription terms",
+      "marketplace business terms and conditions",
+      "free terms and conditions generator"
+    ]
+  },
+  {
+    "title": "Service Agreement Generator",
+    "type": "generator",
+    "block": "legal-contracts",
+    "url": "/generate/service-agreement-generator",
+    "description": "Generate a basic Service Agreement between a provider and a client — services, price, term, termination, confidentiality, and liability. Free.",
+    "keywords": [
+      "service agreement generator for businesses",
+      "basic service agreement provider client",
+      "services price term termination confidentiality",
+      "liability clause service agreement generator",
+      "free service agreement generator"
+    ]
+  },
+  {
+    "title": "Contract Before Signing Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-before-signing-checklist",
+    "description": "Check the parties, price, duration, cancellation terms, and liability before you sign any contract. No account required.",
+    "keywords": [
+      "contract before signing checklist",
+      "check parties price duration cancellation liability",
+      "before you sign anything binding checklist",
+      "contract review before signing checklist",
+      "what to check before signing a contract"
+    ]
+  },
+  {
+    "title": "Contract Red Flags Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-red-flags-checklist",
+    "description": "Spot unilateral control clauses, renewal lock-in traps, disproportionate penalties, and liability limitations before you sign. No account required.",
+    "keywords": [
+      "contract red flags checklist",
+      "unilateral control clauses renewal lock in traps",
+      "disproportionate penalties liability limitations checklist",
+      "spot contract red flags before you sign",
+      "contract red flags checklist free"
+    ]
+  },
+  {
+    "title": "Contract Negotiation Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-negotiation-checklist",
+    "description": "Prepare to negotiate a contract: identify what matters most, decide your walk-away point, and confirm every change gets put in writing. No account required.",
+    "keywords": [
+      "contract negotiation checklist",
+      "identify what matters most negotiation",
+      "decide your walk away point contract",
+      "confirm agreed change put in writing",
+      "contract negotiation preparation checklist"
+    ]
+  },
+  {
+    "title": "Contract Cancellation & Termination Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-cancellation-termination-checklist",
+    "description": "Cancel or terminate a contract correctly: the right method, the right notice period, and proof it was received. No account required.",
+    "keywords": [
+      "contract cancellation termination checklist",
+      "cancel terminate contract the right way",
+      "right method right notice period proof",
+      "contract termination checklist free",
+      "how to properly cancel a contract"
+    ]
+  },
+  {
+    "title": "Contract Breach Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-breach-checklist",
+    "description": "Identify a contract breach, gather evidence, document the harm, and check for a cure opportunity before you act. No account required.",
+    "keywords": [
+      "contract breach checklist",
+      "identify the breach gather evidence",
+      "document the harm cure opportunity",
+      "contract breach checklist before you act",
+      "is this a contract breach checklist"
+    ]
+  },
+  {
+    "title": "Contract Amendment Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/contract-amendment-checklist",
+    "description": "Review a contract amendment before you sign: what's changing, what stays the same, and whether the other party actually has authority to sign. No account required.",
+    "keywords": [
+      "contract amendment checklist",
+      "review contract amendment before you sign",
+      "what's changing what stays the same",
+      "who has authority to sign amendment",
+      "contract amendment review checklist"
+    ]
+  },
+  {
+    "title": "Small Claims Preparation Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/small-claims-preparation-checklist",
+    "description": "Confirm you're filing in the right court, gather your documentation, and prepare everything you need before filing a small claims case. No account required.",
+    "keywords": [
+      "small claims preparation checklist",
+      "confirm filing in the right court",
+      "gather documentation before filing small claims",
+      "prepare everything small claims case",
+      "small claims court preparation checklist"
+    ]
+  },
+  {
+    "title": "Legal Document Evidence Checklist",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/legal-document-evidence-checklist",
+    "description": "Build the habit of keeping the right contract, financial, communication, and physical evidence from day one. No account required.",
+    "keywords": [
+      "legal document evidence checklist",
+      "build habit keeping right evidence day one",
+      "contract financial communication physical evidence",
+      "legal evidence checklist ongoing habit",
+      "what legal evidence to keep checklist"
+    ]
+  },
+  {
+    "title": "Before Signing a Contract",
+    "type": "checklist",
+    "block": "legal-contracts",
+    "url": "/checklists/before-signing-a-contract",
+    "description": "A free, printable checklist to run before signing any contract: spot auto-renewal traps, cancellation terms, hidden fees and IP clauses — and protect yourself.",
+    "keywords": [
+      "before signing a contract checklist",
+      "spot auto renewal traps cancellation terms",
+      "hidden fees ip clauses before signing",
+      "protect yourself before signing contract",
+      "before signing a contract free checklist"
+    ]
+  },
+  {
+    "title": "Consumer Legal Rights",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#consumer-legal-rights-directory",
+    "description": "The national consumer protection authority in each region — the general starting point for a legal rights question, before it becomes a formal dispute.",
+    "keywords": [
+      "consumer legal rights directory",
+      "national consumer protection authority directory",
+      "general starting point legal rights question",
+      "consumer legal rights by country directory",
+      "before it becomes formal dispute directory"
+    ]
+  },
+  {
+    "title": "Contract Law & Unfair Terms",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#contract-law-unfair-terms-directory",
+    "description": "The legal framework that decides whether a specific contract clause is actually enforceable.",
+    "keywords": [
+      "contract law unfair terms directory",
+      "legal framework contract clause enforceable",
+      "unfair contract terms law by country",
+      "is this contract clause enforceable directory",
+      "contract law reference directory"
+    ]
+  },
+  {
+    "title": "Legal Complaint & Dispute Resolution",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#legal-complaint-dispute-resolution-directory",
+    "description": "This is not a duplicate of Section 1 — Section 1 is the general consumer-authority entry point; this section is specifically about escalating to alternative dispute resolution (ADR) or mediation once a direct complaint hasn't worked.",
+    "keywords": [
+      "legal complaint dispute resolution directory",
+      "escalate to adr mediation directory",
+      "alternative dispute resolution by country",
+      "legal complaint escalation directory",
+      "mediation once direct complaint failed"
+    ]
+  },
+  {
+    "title": "Legal Professional Verification",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#legal-professional-verification-directory",
+    "description": "Confirm someone claiming to be a lawyer or solicitor is actually regulated, before you pay for advice.",
+    "keywords": [
+      "legal professional verification directory",
+      "confirm lawyer solicitor actually regulated",
+      "verify attorney license before paying advice",
+      "is this lawyer regulated directory",
+      "legal professional verification by country"
+    ]
+  },
+  {
+    "title": "Small Claims & Civil Disputes",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#small-claims-civil-disputes-directory",
+    "description": "Where to actually file a smaller monetary claim without hiring a lawyer.",
+    "keywords": [
+      "small claims civil disputes directory",
+      "file smaller monetary claim without lawyer",
+      "small claims court by country directory",
+      "where to file small claims directory",
+      "civil dispute filing directory"
+    ]
+  },
+  {
+    "title": "Contract Evidence & Documentation",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#contract-evidence-documentation-directory",
+    "description": "Whether an electronically signed contract or record actually holds up legally.",
+    "keywords": [
+      "contract evidence documentation directory",
+      "electronically signed contract holds up legally",
+      "e-signature validity by country directory",
+      "is my e-signed contract valid directory",
+      "contract documentation legal validity"
+    ]
+  },
+  {
+    "title": "Payments, Debts & Contractual Disputes",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#payments-debts-contractual-disputes-directory",
+    "description": "Regulation of debt collection practices and late payment under a contract.",
+    "keywords": [
+      "payments debts contractual disputes directory",
+      "debt collection practices regulation directory",
+      "late payment under a contract directory",
+      "contractual payment dispute regulator",
+      "debt collection regulation by country"
+    ]
+  },
+  {
+    "title": "Employment & Service Contracts",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#employment-service-contracts-directory",
+    "description": "Cross-links only — this angle is already covered in depth by other Kibbo directories, so it isn't duplicated here.",
+    "keywords": [
+      "employment service contracts directory",
+      "cross link employment contracts directory",
+      "employment contract resources elsewhere directory",
+      "service contract employment cross reference",
+      "employment contracts covered elsewhere"
+    ]
+  },
+  {
+    "title": "Housing, Rental & Property Contracts",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#housing-rental-property-contracts-directory",
+    "description": "Cross-link only — this angle is already covered by the Housing & Rentals block's own directory.",
+    "keywords": [
+      "housing rental property contracts directory",
+      "cross link housing rentals directory",
+      "rental contract resources elsewhere directory",
+      "property contract cross reference directory",
+      "housing contracts covered elsewhere"
+    ]
+  },
+  {
+    "title": "Legal Research & Official Legislation",
+    "type": "directory",
+    "block": "legal-contracts",
+    "url": "/directory/legal-contracts#legal-research-legislation-directory",
+    "description": "Primary sources — the actual text of the law, and case law, rather than a summary of it.",
+    "keywords": [
+      "legal research official legislation directory",
+      "primary sources actual text of the law",
+      "case law legislation database directory",
+      "official legislation by country directory",
+      "legal research primary sources directory"
+    ]
+  },
+  {
+    "title": "Legal Contract Auditor",
+    "type": "analyzer",
+    "block": "legal-contracts",
+    "url": "/legal-contract-auditor",
+    "description": "Paste any contract or Terms & Conditions and get a plain-English breakdown of unfair clauses, auto-renewal traps and cancellation dark patterns. Free tool by Kibbo.",
+    "keywords": [
+      "legal contract auditor",
+      "spot unfair clauses in any contract",
+      "paste contract terms conditions free analyzer",
+      "auto renewal traps cancellation dark patterns",
+      "plain english contract clause breakdown"
+    ]
+  },
+  {
+    "title": "Can a Company Change Your Contract Without Your Consent?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/us-unilateral-contract-modification-rights",
+    "description": "When a unilateral change-of-terms clause is actually enforceable, what counts as adequate notice, and what to do when a company changes your contract mid-term.",
+    "keywords": [
+      "can company change contract without consent",
+      "unilateral change of terms clause enforceable",
+      "what counts as adequate notice contract change",
+      "company changed contract mid term what to do",
+      "us unilateral contract modification rights"
+    ]
+  },
+  {
+    "title": "The Contract Promised One Thing, They Delivered Another: Is That a Breach?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/us-what-counts-as-contract-breach",
+    "description": "The legal difference between a contract breach and simply unsatisfactory service, how to identify the specific obligation that was broken, and how to document it.",
+    "keywords": [
+      "contract promised one thing delivered another breach",
+      "legal difference breach vs unsatisfactory service",
+      "identify specific obligation that was broken",
+      "how to document a contract breach",
+      "us what counts as contract breach"
+    ]
+  },
+  {
+    "title": "The Clause You Didn't Read: How Arbitration Can Change Your Legal Options",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/us-arbitration-clauses-class-action-waivers",
+    "description": "Why arbitration clauses and class-action waivers are enforceable in most US consumer contracts, where they hide, and the small claims carve-out most people miss.",
+    "keywords": [
+      "clause you didnt read arbitration legal options",
+      "arbitration clauses class action waivers enforceable",
+      "where arbitration clauses hide in contracts",
+      "small claims carve out arbitration",
+      "us arbitration clauses class action waivers"
+    ]
+  },
+  {
+    "title": "Small Claims Court in the US: What You Actually Need Before You File",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/us-small-claims-court-preparation",
+    "description": "Having a legitimate complaint isn't enough for small claims court — what evidence, documentation, and preparation actually determines whether you win.",
+    "keywords": [
+      "small claims court us what you need before file",
+      "legitimate complaint not enough small claims",
+      "evidence documentation preparation small claims win",
+      "us small claims court preparation guide",
+      "what determines winning small claims"
+    ]
+  },
+  {
+    "title": "\"You Agreed to the Terms\": When Online Contracts Become Binding",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/us-clickwrap-browsewrap-online-contracts",
+    "description": "Why clicking 'I agree' creates a binding contract far more reliably than a footer link ever does, and what courts actually look for when deciding if you consented.",
+    "keywords": [
+      "you agreed to the terms online contracts binding",
+      "clickwrap vs browsewrap binding contract",
+      "clicking i agree binding contract reliably",
+      "what courts look for consent online",
+      "us clickwrap browsewrap online contracts"
+    ]
+  },
+  {
+    "title": "Unfair Contract Terms in the UK: 7 Clauses Consumers Should Stop Ignoring",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/uk-unfair-contract-terms-cra-2015",
+    "description": "A clause being in a contract doesn't make it enforceable. How the Consumer Rights Act 2015's fairness and transparency tests work, and 7 clause types worth checking.",
+    "keywords": [
+      "unfair contract terms uk 7 clauses",
+      "consumer rights act 2015 fairness transparency test",
+      "clause in contract doesnt make it enforceable uk",
+      "7 clause types worth checking uk",
+      "uk unfair contract terms cra 2015"
+    ]
+  },
+  {
+    "title": "Can a UK Business Change Your Contract After You Sign It?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/uk-contract-variation-clause-rights",
+    "description": "Your contract said £50, now it's £65. When a UK business's variation clause is actually enforceable under the Consumer Rights Act 2015, and when it isn't.",
+    "keywords": [
+      "uk business change contract after you sign",
+      "variation clause enforceable consumer rights act",
+      "contract said 50 now its 65 uk",
+      "when variation clause isnt enforceable uk",
+      "uk contract variation clause rights"
+    ]
+  },
+  {
+    "title": "The UK Small Claims Court Guide: How to Build Your Evidence Before Filing",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/uk-small-claims-court-evidence-guide",
+    "description": "The strongest small claims case isn't the best story — it's the best evidence. What the letter before claim requires, and what to gather before you file.",
+    "keywords": [
+      "uk small claims court guide evidence",
+      "strongest small claims case is the evidence",
+      "letter before claim requirements uk",
+      "what to gather before you file uk",
+      "uk small claims court evidence guide"
+    ]
+  },
+  {
+    "title": "Can You Cancel a Contract in the UK? Cancellation vs. Termination vs. Cooling-Off",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/uk-cancellation-termination-cooling-off-difference",
+    "description": "'I changed my mind' and 'they breached the contract' are legally different situations in the UK. How statutory cooling-off, termination, and cancellation clauses actually differ.",
+    "keywords": [
+      "cancel contract uk cancellation vs termination",
+      "changed my mind vs they breached contract uk",
+      "statutory cooling off termination cancellation clauses",
+      "difference cancellation termination cooling off uk",
+      "uk cancellation termination cooling off difference"
+    ]
+  },
+  {
+    "title": "The Fine Print Problem: When Important Contract Terms Are Hidden From Consumers",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/uk-hidden-contract-terms-transparency",
+    "description": "The most important condition might be the one you never realistically saw. How UK law's transparency and prominence tests treat hidden fees and buried renewal clauses.",
+    "keywords": [
+      "fine print problem hidden contract terms uk",
+      "important condition never realistically saw",
+      "uk law transparency prominence tests hidden fees",
+      "buried renewal clauses uk law",
+      "uk hidden contract terms transparency"
+    ]
+  },
+  {
+    "title": "Unfair Contract Terms in the EU: What Consumers Don't Have to Accept",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/eu-unfair-contract-terms-directive",
+    "description": "A business can put anything in its contract. That doesn't mean it's fair. How the EU's Unfair Contract Terms Directive tests terms for significant imbalance and good faith.",
+    "keywords": [
+      "unfair contract terms eu what dont have to accept",
+      "eu unfair contract terms directive test",
+      "significant imbalance good faith eu contract",
+      "business can put anything in contract eu",
+      "eu unfair contract terms directive"
+    ]
+  },
+  {
+    "title": "The EU 14-Day Cooling-Off Period: When Can You Cancel an Online Contract?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/eu-14-day-cooling-off-withdrawal-button",
+    "description": "How the EU's 14-day right of withdrawal actually works for goods, services and digital content, its exceptions, and the new mandatory withdrawal button online traders must provide.",
+    "keywords": [
+      "eu 14 day cooling off period cancel online",
+      "eu right of withdrawal goods services digital",
+      "mandatory withdrawal button online traders eu",
+      "when can you cancel eu online contract",
+      "eu 14 day cooling off withdrawal button"
+    ]
+  },
+  {
+    "title": "Online Contracts in Europe: What Happens When You Click \"I Agree\"?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/eu-online-contracts-click-acceptance",
+    "description": "No signature, no paper, just one click — how EU e-commerce rules require order confirmation, information disclosure, and evidence of what you actually accepted.",
+    "keywords": [
+      "online contracts europe click i agree",
+      "eu e-commerce rules order confirmation",
+      "evidence of what you actually accepted eu",
+      "no signature no paper one click eu",
+      "eu online contracts click acceptance"
+    ]
+  },
+  {
+    "title": "A Company Didn't Deliver What the Contract Promised: Your EU Consumer Options",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/eu-non-conformity-remedies-consumer-rights",
+    "description": "How the EU's remedy hierarchy for non-conforming goods actually works — repair, replacement, price reduction or refund — and the 2-year guarantee behind it.",
+    "keywords": [
+      "company didnt deliver contract promised eu options",
+      "eu remedy hierarchy non conforming goods",
+      "repair replacement price reduction refund eu",
+      "2 year guarantee eu non conformity",
+      "eu non conformity remedies consumer rights"
+    ]
+  },
+  {
+    "title": "Before You Sign a Contract in Another EU Country: 10 Things to Check",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/eu-cross-border-contract-checklist",
+    "description": "The contract is in another language, governed by another country's law, and worth thousands of euros. What to check before signing a cross-border EU contract.",
+    "keywords": [
+      "before sign contract another eu country",
+      "10 things to check cross border eu contract",
+      "contract another language another countrys law",
+      "worth thousands of euros what to check",
+      "eu cross border contract checklist"
+    ]
+  },
+  {
+    "title": "Unfair Contract Terms in Australia: What Consumers Should Look For",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/au-unfair-contract-terms-acl",
+    "description": "The business wrote the contract — that doesn't make every term fair. How Australia's unfair contract terms law works, and the massive penalties now attached to it.",
+    "keywords": [
+      "unfair contract terms australia what to look for",
+      "business wrote contract doesnt make it fair",
+      "australia unfair contract terms law penalties",
+      "massive penalties unfair contract terms au",
+      "au unfair contract terms acl"
+    ]
+  },
+  {
+    "title": "A Business Didn't Do What the Contract Promised: What Can You Do in Australia?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/au-business-breach-contract-options",
+    "description": "You paid for one thing, the business delivered another. How ACL consumer guarantees and ordinary breach of contract claims work together, and how to escalate.",
+    "keywords": [
+      "business didnt do what contract promised australia",
+      "paid for one thing delivered another au",
+      "acl consumer guarantees breach contract together",
+      "how to escalate business breach australia",
+      "au business breach contract options"
+    ]
+  },
+  {
+    "title": "Can an Australian Business Change the Terms After You Sign?",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/au-contract-variation-after-signing",
+    "description": "You agreed to the original deal. Then the company changed the rules. How Australia's unfair contract terms law treats unilateral variation clauses.",
+    "keywords": [
+      "australian business change terms after you sign",
+      "agreed to original deal company changed rules",
+      "unfair contract terms law unilateral variation",
+      "can business change contract terms au",
+      "au contract variation after signing"
+    ]
+  },
+  {
+    "title": "Small Claims in Australia: How to Build a Strong Consumer Case Before You File",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/au-small-claims-tribunal-preparation",
+    "description": "Before you think about a tribunal, build the file. How Australia's state-based civil tribunals actually work, and what evidence to prepare before filing.",
+    "keywords": [
+      "small claims australia build strong case",
+      "before tribunal build the file australia",
+      "state based civil tribunals how they work",
+      "evidence to prepare before filing australia",
+      "au small claims tribunal preparation"
+    ]
+  },
+  {
+    "title": "The Contract Fine Print Trap: 8 Clauses Australian Consumers Should Check",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/au-contract-fine-print-clauses-check",
+    "description": "The expensive part of a contract might be hiding in the smallest print. 8 specific clause types worth checking before you sign anything in Australia.",
+    "keywords": [
+      "contract fine print trap australia 8 clauses",
+      "expensive part of contract hiding smallest print",
+      "8 clause types worth checking australia",
+      "before you sign anything australia contract",
+      "au contract fine print clauses check"
+    ]
+  },
+  {
+    "title": "Is Your Non-Compete Actually Enforceable? It Depends Entirely on Your State Now",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/non-compete-agreements-by-state-us",
+    "description": "The FTC's nationwide non-compete ban was formally withdrawn in February 2026, so enforceability now depends entirely on your state. The three-tier state landscape, what to check on your own agreement, and when a clause is likely void.",
+    "keywords": [
+      "is my non compete actually enforceable",
+      "ftc nationwide non compete ban withdrawn 2026",
+      "non compete enforceability depends on state",
+      "three tier state landscape non compete",
+      "non compete agreements by state us"
+    ]
+  },
+  {
+    "title": "Working Off the Clock or Missing Overtime? How to Report Wage Theft to the Federal Department of Labor",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/wage-theft-dol-complaint-us",
+    "description": "Unpaid overtime, off-the-clock work, deducted tips — the DOL's Wage and Hour Division investigates FLSA violations for free. The 2-year/3-year recovery window, anti-retaliation protection, and how to file a confidential complaint.",
+    "keywords": [
+      "working off the clock missing overtime wage theft",
+      "report wage theft department of labor",
+      "dol wage and hour division flsa violations",
+      "2 year 3 year recovery window wage theft",
+      "wage theft dol complaint us"
+    ]
+  },
+  {
+    "title": "Small Claims Court Limits by State: What You Can Actually Sue For Without a Lawyer",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/small-claims-court-by-state-us",
+    "description": "Every US state has a small claims court — no attorney required, low fees, a hearing within weeks. But the dollar limit and rules are entirely state-specific. The 2026 limits, the filing process, and how to actually collect.",
+    "keywords": [
+      "small claims court limits by state us",
+      "sue without a lawyer state limits",
+      "every us state small claims court no attorney",
+      "2026 small claims limits by state",
+      "small claims court by state us"
+    ]
+  },
+  {
+    "title": "How to Find a Verified Attorney (Not Just a Flashy Ad) Through Your State Bar",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/state-bar-lawyer-referral-us",
+    "description": "A billboard or five-star review tells you nothing about whether a lawyer is licensed, in good standing, or facing discipline. Every state bar has a free public attorney search and a Lawyer Referral Service — often with a low-cost first consultation.",
+    "keywords": [
+      "find verified attorney state bar",
+      "billboard tells you nothing lawyer licensed",
+      "free public attorney search lawyer referral service",
+      "low cost first consultation state bar",
+      "state bar lawyer referral us"
+    ]
+  },
+  {
+    "title": "How to Take a Company to Small Claims Court in England and Wales — No Solicitor Needed",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/small-claims-court-uk-guide",
+    "description": "For claims up to £10,000, taking a company to court in England and Wales doesn't need a solicitor — the system is built for individuals. The real fee scale, the pre-action step you shouldn't skip, and how to file.",
+    "keywords": [
+      "take company to small claims court england wales",
+      "no solicitor needed small claims uk",
+      "claims up to 10000 pounds no solicitor",
+      "pre action step you shouldnt skip uk",
+      "small claims court uk guide"
+    ]
+  },
+  {
+    "title": "Check Your Case Before You Go to Court: How to Use Citizens Advice's Legal Help",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/citizens-advice-legal-help-uk",
+    "description": "Filing a claim without checking whether your case holds up can get it struck out — or land you with the other side's costs. How to use Citizens Advice's free legal guidance to check your position first.",
+    "keywords": [
+      "check your case before court citizens advice",
+      "filing claim without checking case struck out",
+      "citizens advice free legal guidance uk",
+      "check your position first citizens advice",
+      "citizens advice legal help uk"
+    ]
+  },
+  {
+    "title": "How to Find a Genuinely Regulated Solicitor in England and Wales (Not Just Anyone Calling Themselves a \"Legal Advisor\")",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/law-society-find-solicitor-uk",
+    "description": "Not everyone offering 'legal advice' is qualified to give it. How to use the Law Society's directory to confirm a solicitor is SRA-regulated — with real recourse if they get it wrong — and how to check fees.",
+    "keywords": [
+      "find genuinely regulated solicitor england wales",
+      "law society directory sra regulated solicitor",
+      "not everyone offering legal advice qualified",
+      "real recourse if solicitor gets it wrong",
+      "law society find solicitor uk"
+    ]
+  },
+  {
+    "title": "Get a Free, Legally-Reviewed Freelance Contract Before Your Next Project (US)",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/freelancers-union-contract-generator-us",
+    "description": "Only about a quarter of freelancers use a written contract — and it shows up as unpaid invoices with no documentation. The Freelancers Union's free Contract Creator, what it covers, and the NYC rule worth knowing.",
+    "keywords": [
+      "free legally reviewed freelance contract us",
+      "freelancers union free contract creator",
+      "quarter of freelancers use written contract",
+      "nyc rule worth knowing freelance contract",
+      "freelancers union contract generator us"
+    ]
+  },
+  {
+    "title": "The 30-Day Right to Reject: What UK Law Actually Says When an Online Retailer Refuses a Refund",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/30-day-right-to-reject-uk",
+    "description": "A retailer's returns page isn't the law. The Consumer Rights Act 2015 gives you a 30-day right to reject faulty goods for a full refund. What to say when they refuse.",
+    "keywords": [
+      "30 day right to reject uk online retailer",
+      "consumer rights act 2015 30 day refund",
+      "retailers returns page isnt the law",
+      "what to say when retailer refuses refund uk",
+      "30 day right to reject uk"
+    ]
+  },
+  {
+    "title": "How to Use Resolver to Escalate a UK Consumer Complaint (And What It Actually Does vs. What It Doesn't)",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/resolver-complaint-escalation-uk",
+    "description": "Resolver gives your complaint structure, a paper trail, and a route to the right ombudsman. What it can and can't guarantee — and when to skip straight to the ombudsman.",
+    "keywords": [
+      "how to use resolver escalate uk complaint",
+      "resolver complaint structure paper trail ombudsman",
+      "what resolver can and cant guarantee",
+      "when to skip straight to ombudsman uk",
+      "resolver complaint escalation uk"
+    ]
+  },
+  {
+    "title": "Citizens Advice Consumer Helpline: Free Legal Advice Before You Escalate a UK Consumer Dispute",
+    "type": "blog",
+    "block": "legal-contracts",
+    "url": "/blog/citizens-advice-consumer-helpline-uk",
+    "description": "The Citizens Advice consumer helpline is a free route to the legal grounding you'd otherwise pay a solicitor for. What it does, what Trading Standards realistically does, and when to call.",
+    "keywords": [
+      "citizens advice consumer helpline free legal advice",
+      "free route legal grounding otherwise pay solicitor",
+      "what trading standards realistically does uk",
+      "when to call citizens advice helpline",
+      "citizens advice consumer helpline uk"
+    ]
+  },
+  {
+    "title": "Used Car Buying \"Anti-Scam\" Inspection Checklist",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/used-car-anti-scam-checklist",
+    "description": "A mechanical inspection and financial safety checklist to avoid scams when buying a used car online.",
+    "keywords": [
+      "used car buying anti scam inspection checklist",
+      "mechanical inspection financial safety checklist",
+      "avoid scams buying used car online",
+      "anti scam checklist used car template",
+      "used car anti scam checklist free"
+    ]
+  },
+  {
+    "title": "Used Car Purchase Inspection Pack",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/used-car-purchase-inspection-pack",
+    "description": "A complete pre-purchase evaluation: seller and vehicle details, documentation check, physical inspection by area, defects found, photo evidence, and a final buy/negotiate/walk-away decision.",
+    "keywords": [
+      "used car purchase inspection pack",
+      "complete pre purchase evaluation used car",
+      "documentation check physical inspection by area",
+      "buy negotiate walk away decision template",
+      "used car inspection pack pdf word"
+    ]
+  },
+  {
+    "title": "Vehicle History & Maintenance Record",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/vehicle-history-maintenance-record",
+    "description": "An ongoing record of a vehicle's ownership history, mileage log, and every service or repair, built to support resale value with organized proof of care.",
+    "keywords": [
+      "vehicle history maintenance record template",
+      "ongoing record ownership history mileage log",
+      "every service repair organized proof of care",
+      "support resale value vehicle record",
+      "vehicle history maintenance record excel"
+    ]
+  },
+  {
+    "title": "Used Car Seller & Listing Evidence Pack",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/used-car-seller-listing-evidence-pack",
+    "description": "Preserves the original listing, seller claims, photos, and messages, so you can prove exactly what was promised if the vehicle doesn't match.",
+    "keywords": [
+      "used car seller listing evidence pack",
+      "preserve original listing seller claims photos",
+      "prove what was promised vehicle doesnt match",
+      "used car seller evidence template",
+      "used car listing evidence pdf word"
+    ]
+  },
+  {
+    "title": "Vehicle Purchase Cost & Ownership Workbook",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/vehicle-purchase-cost-ownership-workbook",
+    "description": "Calculates the real cost of buying and owning a vehicle — purchase costs plus ongoing insurance, fuel, maintenance and repairs — with an automatically calculated total cost of ownership.",
+    "keywords": [
+      "vehicle purchase cost ownership workbook",
+      "real cost buying owning a vehicle",
+      "purchase costs insurance fuel maintenance repairs",
+      "total cost of ownership calculator vehicle",
+      "vehicle ownership cost workbook excel"
+    ]
+  },
+  {
+    "title": "Car Dealer Dispute & Evidence Pack",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/car-dealer-dispute-evidence-pack",
+    "description": "A complete file for a dispute with a dealership: contract, defect, warranty coverage, repair attempts, costs, communications, and requested resolution.",
+    "keywords": [
+      "car dealer dispute evidence pack",
+      "complete file dispute with dealership",
+      "contract defect warranty coverage repair attempts",
+      "car dealer dispute template pdf word",
+      "dealership dispute evidence pack"
+    ]
+  },
+  {
+    "title": "Vehicle Repair & Service Evidence Pack",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/vehicle-repair-service-evidence-pack",
+    "description": "A complete record of a repair from initial problem through diagnosis, authorization, parts and labor, to the final outcome.",
+    "keywords": [
+      "vehicle repair service evidence pack",
+      "complete record repair initial problem diagnosis",
+      "authorization parts labor final outcome",
+      "vehicle repair evidence template pdf word",
+      "car repair evidence pack"
+    ]
+  },
+  {
+    "title": "Vehicle Accident & Damage Documentation Pack",
+    "type": "template",
+    "block": "cars-vehicles",
+    "url": "/templates/vehicle-accident-damage-documentation-pack",
+    "description": "Everything to record after an accident: vehicles and parties involved, scene evidence, witnesses, insurance details, and repair costs.",
+    "keywords": [
+      "vehicle accident damage documentation pack",
+      "record after accident vehicles parties involved",
+      "scene evidence witnesses insurance details repair costs",
+      "vehicle accident documentation template",
+      "accident damage pack pdf word"
+    ]
+  },
+  {
+    "title": "Vehicle Purchase & Warranty Complaint Generator",
+    "type": "generator",
+    "block": "cars-vehicles",
+    "url": "/generate/vehicle-purchase-warranty-complaint-generator",
+    "description": "Generate a formal complaint letter for a vehicle listing mismatch, a defect discovered after purchase, a warranty claim, or an escalation of an unresolved complaint. Free.",
+    "keywords": [
+      "vehicle purchase warranty complaint generator",
+      "formal complaint vehicle listing mismatch",
+      "defect discovered after purchase warranty claim",
+      "escalation unresolved vehicle complaint letter",
+      "free vehicle purchase complaint generator"
+    ]
+  },
+  {
+    "title": "Vehicle Repair Dispute Generator",
+    "type": "generator",
+    "block": "cars-vehicles",
+    "url": "/generate/vehicle-repair-dispute-generator",
+    "description": "Generate a formal complaint letter for a vehicle repair dispute — unfixed problem, incomplete work, unauthorized charges, new damage, or an overcharge. Free.",
+    "keywords": [
+      "vehicle repair dispute generator",
+      "formal complaint letter repair shop mechanic",
+      "unfixed problem incomplete work unauthorized charges",
+      "new damage overcharge repair dispute letter",
+      "free vehicle repair dispute generator"
+    ]
+  },
+  {
+    "title": "Used Car Buying Inspection Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/used-car-buying-inspection-checklist",
+    "description": "Check documentation, history, mileage, mechanical condition, and take a proper test drive before you buy a used car. No account required.",
+    "keywords": [
+      "used car buying inspection checklist",
+      "check documentation history mileage mechanical condition",
+      "proper test drive before you buy",
+      "used car inspection checklist free",
+      "what to check buying used car"
+    ]
+  },
+  {
+    "title": "Used Car Seller Red Flags Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/used-car-seller-red-flags-checklist",
+    "description": "Spot pressure tactics, history and documentation gaps, payment red flags, and inspection resistance before you buy from a private seller. No account required.",
+    "keywords": [
+      "used car seller red flags checklist",
+      "spot pressure tactics history documentation gaps",
+      "payment red flags inspection resistance",
+      "private seller red flags checklist",
+      "used car seller warning signs checklist"
+    ]
+  },
+  {
+    "title": "Vehicle History Verification Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/vehicle-history-verification-checklist",
+    "description": "Verify a vehicle's VIN, ownership, mileage, accident and salvage history, recalls, and financial status before you buy. No account required.",
+    "keywords": [
+      "vehicle history verification checklist",
+      "verify vin ownership mileage accident salvage",
+      "recalls financial status before you buy",
+      "vehicle history check checklist free",
+      "verify vehicle history before buying"
+    ]
+  },
+  {
+    "title": "Car Dealer Purchase Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/car-dealer-purchase-checklist",
+    "description": "Check the total price, financing terms, warranty, and add-ons before you sign a dealership purchase agreement. No account required.",
+    "keywords": [
+      "car dealer purchase checklist",
+      "check total price financing terms warranty",
+      "add ons before dealership purchase agreement",
+      "car dealer purchase checklist free",
+      "before signing dealership agreement checklist"
+    ]
+  },
+  {
+    "title": "Vehicle Repair & Garage Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/vehicle-repair-garage-checklist",
+    "description": "Get a written quote and authorization before a repair, track scope changes during the work, and verify the invoice and warranty afterward. No account required.",
+    "keywords": [
+      "vehicle repair garage checklist",
+      "written quote authorization before a repair",
+      "track scope changes verify invoice warranty",
+      "vehicle repair garage checklist free",
+      "before authorizing car repair checklist"
+    ]
+  },
+  {
+    "title": "Car Warranty Claim Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/car-warranty-claim-checklist",
+    "description": "Confirm coverage, maintenance compliance, and document the defect properly before submitting a vehicle warranty claim. No account required.",
+    "keywords": [
+      "car warranty claim checklist",
+      "confirm coverage maintenance compliance",
+      "document defect properly before submitting claim",
+      "car warranty claim checklist free",
+      "submitting vehicle warranty claim checklist"
+    ]
+  },
+  {
+    "title": "Vehicle Accident Evidence Checklist",
+    "type": "checklist",
+    "block": "cars-vehicles",
+    "url": "/checklists/vehicle-accident-evidence-checklist",
+    "description": "Document a vehicle accident properly: scene photos, driver and vehicle details, witnesses, and insurance information. No account required.",
+    "keywords": [
+      "vehicle accident evidence checklist",
+      "document vehicle accident properly scene photos",
+      "driver vehicle details witnesses insurance information",
+      "vehicle accident evidence checklist free",
+      "what to document after car accident"
+    ]
+  },
+  {
+    "title": "Vehicle & Driver Authorities",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#vehicle-driver-authorities-directory",
+    "description": "Register a vehicle or hold a driver's licence — the base-level authority in each region, referenced again later in this directory for title transfer, import, and roadworthiness.",
+    "keywords": [
+      "vehicle driver authorities directory",
+      "register vehicle drivers licence authority",
+      "base level vehicle authority by country",
+      "dmv dvla vehicle registration directory",
+      "vehicle and driver authority directory"
+    ]
+  },
+  {
+    "title": "Vehicle Consumer Protection",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#vehicle-consumer-protection-directory",
+    "description": "General consumer protection guidance specifically for vehicle purchases.",
+    "keywords": [
+      "vehicle consumer protection directory",
+      "consumer protection guidance vehicle purchases",
+      "vehicle purchase consumer rights directory",
+      "general vehicle consumer authority directory",
+      "car buyer consumer protection directory"
+    ]
+  },
+  {
+    "title": "Vehicle History & VIN Checks",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#vehicle-history-vin-checks-directory",
+    "description": "Official, typically free or low-cost government-backed checks for finance, theft, and salvage status — not a full history report substitute (see note below).",
+    "keywords": [
+      "vehicle history vin checks directory",
+      "official government backed vin check",
+      "finance theft salvage status check directory",
+      "free low cost vin check directory",
+      "vin check not full history report"
+    ]
+  },
+  {
+    "title": "Recalls & Vehicle Safety",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#recalls-vehicle-safety-directory",
+    "description": "Check whether a specific vehicle has an open safety recall.",
+    "keywords": [
+      "recalls vehicle safety directory",
+      "check vehicle open safety recall",
+      "vehicle recall lookup by country directory",
+      "is my car recalled directory",
+      "vehicle safety recall check directory"
+    ]
+  },
+  {
+    "title": "Dealers, Garages & Repair Disputes",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#dealers-garages-repair-disputes-directory",
+    "description": "Escalate a dispute with a dealership or repair shop once direct contact hasn't resolved it.",
+    "keywords": [
+      "dealers garages repair disputes directory",
+      "escalate dispute dealership repair shop",
+      "direct contact hasnt resolved vehicle dispute",
+      "car dealer repair dispute escalation directory",
+      "garage dispute escalation directory"
+    ]
+  },
+  {
+    "title": "Insurance & Accident Claims",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#insurance-accident-claims-directory",
+    "description": "Escalate a motor insurance dispute, or claim when the at-fault driver is uninsured or untraced.",
+    "keywords": [
+      "insurance accident claims directory vehicles",
+      "escalate motor insurance dispute directory",
+      "at fault driver uninsured untraced claim",
+      "vehicle accident insurance escalation directory",
+      "motor insurance dispute directory"
+    ]
+  },
+  {
+    "title": "Financing, Loans & Vehicle Ownership",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#financing-loans-vehicle-ownership-directory",
+    "description": "Vehicle finance guidance, and checking for outstanding finance before you buy.",
+    "keywords": [
+      "financing loans vehicle ownership directory",
+      "vehicle finance guidance directory",
+      "check outstanding finance before you buy",
+      "car loan finance resources directory",
+      "vehicle ownership financing directory"
+    ]
+  },
+  {
+    "title": "Vehicle Legal & Administrative Resources",
+    "type": "directory",
+    "block": "cars-vehicles",
+    "url": "/directory/cars-vehicles#vehicle-legal-administrative-resources-directory",
+    "description": "Roadworthiness, emissions, and traffic/parking penalty disputes. Registration/title transfer and import/export requirements are handled by the Section 1 authorities above, not duplicated here.",
+    "keywords": [
+      "vehicle legal administrative resources directory",
+      "roadworthiness emissions traffic parking disputes",
+      "mot roadworthiness test directory",
+      "parking penalty dispute vehicle directory",
+      "vehicle legal administrative directory"
+    ]
+  },
+  {
+    "title": "The Used Car Price Trap: How Dealers Make a \"Cheap\" Car Expensive",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/us-used-car-dealer-fees-price-trap",
+    "description": "The advertised price and the out-the-door price are rarely the same number. How dealer fees and add-ons inflate a used car deal, and what's still illegal even after the CARS Rule was struck down.",
+    "keywords": [
+      "used car price trap dealers cheap car expensive",
+      "advertised price vs out the door price",
+      "dealer fees add-ons inflate used car deal",
+      "cars rule struck down still illegal",
+      "us used car dealer fees price trap"
+    ]
+  },
+  {
+    "title": "Buying a Used Car With a Clean Title: What That Actually Tells You",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/us-clean-title-what-it-actually-means",
+    "description": "A clean title doesn't mean a car was never damaged. What NMVTIS, VIN checks, recalls, mileage, and maintenance records actually reveal that a title alone won't.",
+    "keywords": [
+      "buying used car clean title what it means",
+      "clean title doesnt mean never damaged",
+      "nmvtis vin checks recalls mileage records",
+      "what title alone wont reveal",
+      "us clean title what it actually means"
+    ]
+  },
+  {
+    "title": "The Dealer Says \"As Is\": What Used-Car Buyers in the US Need to Check",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/us-as-is-used-car-sale-buyers-guide",
+    "description": "What an 'As Is' sale actually means under the FTC's Used Car Rule, why some states don't allow it at all, and what to check before signing.",
+    "keywords": [
+      "dealer says as is used car buyers check",
+      "as is sale ftc used car rule",
+      "states dont allow as is sale",
+      "what to check before signing as is",
+      "us as is used car sale buyers guide"
+    ]
+  },
+  {
+    "title": "Your Used Car Has Problems After You Buy It: What Should You Do First?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/us-used-car-problems-after-purchase-steps",
+    "description": "A practical, step-by-step procedure for a used car problem discovered after purchase — documentation, warranty check, independent diagnosis, and how to approach the dealer.",
+    "keywords": [
+      "used car problems after you buy what to do",
+      "step by step used car problem after purchase",
+      "documentation warranty check independent diagnosis",
+      "how to approach the dealer used car problem",
+      "us used car problems after purchase steps"
+    ]
+  },
+  {
+    "title": "How to Spot a Stolen, Flood-Damaged or Odometer-Tampered Car Before You Buy",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/us-stolen-flood-odometer-tampered-car-signs",
+    "description": "Real warning signs of a stolen, flooded, or odometer-tampered used car, and the free checks that catch what a visual inspection alone can miss.",
+    "keywords": [
+      "spot stolen flood damaged odometer tampered car",
+      "warning signs stolen flooded tampered used car",
+      "free checks catch visual inspection misses",
+      "before you buy used car warning signs",
+      "us stolen flood odometer tampered car signs"
+    ]
+  },
+  {
+    "title": "Buying a Used Car From a Dealer in the UK: What Should You Check Before Paying?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/uk-used-car-dealer-checks-before-paying",
+    "description": "Price, vehicle history, MOT history, mileage, outstanding finance, warranty, dealer details and the contract — the full checklist before you hand over money for a used car in the UK.",
+    "keywords": [
+      "buying used car dealer uk check before paying",
+      "price vehicle history mot mileage outstanding finance",
+      "full checklist before hand over money uk",
+      "dealer details contract used car uk",
+      "uk used car dealer checks before paying"
+    ]
+  },
+  {
+    "title": "The Used Car Has a Problem After Purchase: What Are Your Rights in the UK?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/uk-used-car-problem-after-purchase-rights",
+    "description": "Your rights after a used car develops a fault depend entirely on whether you bought from a dealer or a private seller. Here's how the Consumer Rights Act 2015 applies to each.",
+    "keywords": [
+      "used car problem after purchase rights uk",
+      "rights depend dealer or private seller uk",
+      "consumer rights act 2015 used car fault",
+      "used car fault develops rights uk",
+      "uk used car problem after purchase rights"
+    ]
+  },
+  {
+    "title": "MOT History Isn't a Full Vehicle History: What It Can and Can't Tell You",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/uk-mot-history-not-full-vehicle-history",
+    "description": "The free MOT history check is a genuinely useful tool, but it only tells part of the story. Here's what it actually covers and what you still need to check separately.",
+    "keywords": [
+      "mot history not full vehicle history",
+      "free mot history check genuinely useful tool",
+      "what mot history actually covers",
+      "what to check separately mot history",
+      "uk mot history not full vehicle history"
+    ]
+  },
+  {
+    "title": "Buying a Car Privately in the UK: The Risks Dealers Don't Have",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/uk-buying-car-privately-risks",
+    "description": "Private used-car sales in the UK carry risks a dealer purchase doesn't: outstanding finance, stolen vehicles, and a seller who may not be who they claim. Here's what to check and what evidence to keep.",
+    "keywords": [
+      "buying car privately uk risks dealers dont have",
+      "private used car sales uk risks",
+      "outstanding finance stolen vehicles private seller",
+      "what to check evidence to keep private sale",
+      "uk buying car privately risks"
+    ]
+  },
+  {
+    "title": "Your Car Needs an Expensive Repair: How to Build a Strong Complaint Against a Garage",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/uk-garage-repair-complaint-evidence",
+    "description": "A convincing complaint against a garage is built on documentation, not frustration. Here's exactly what to capture from diagnosis through to the finished repair.",
+    "keywords": [
+      "car needs expensive repair strong complaint garage",
+      "convincing complaint garage built on documentation",
+      "what to capture diagnosis through finished repair",
+      "garage complaint evidence uk",
+      "uk garage repair complaint evidence"
+    ]
+  },
+  {
+    "title": "Buying a Used Car in the EU: Which Documents Should You Check Before Paying?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/eu-used-car-documents-checklist",
+    "description": "Registration certificate, proof of ownership, mileage, roadworthiness inspection records, maintenance history, VIN and the purchase contract — the documents to verify before buying a used car in the EU.",
+    "keywords": [
+      "buying used car eu which documents check",
+      "registration certificate proof of ownership mileage",
+      "roadworthiness inspection maintenance history vin eu",
+      "documents verify before buying used car eu",
+      "eu used car documents checklist"
+    ]
+  },
+  {
+    "title": "Buying a Used Car From Another EU Country: The Documents You Need to Verify",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/eu-cross-border-used-car-documents",
+    "description": "A cross-border used car purchase within the EU adds seller verification, import paperwork, VAT questions, transport and registration steps most domestic purchases don't need.",
+    "keywords": [
+      "buying used car another eu country documents",
+      "cross border used car purchase eu adds",
+      "seller verification import paperwork vat questions",
+      "transport registration steps cross border eu",
+      "eu cross border used car documents"
+    ]
+  },
+  {
+    "title": "A Used Car Doesn't Match the Advertisement: What Evidence Should You Keep?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/eu-used-car-not-as-advertised-evidence",
+    "description": "When a used car turns out different from how it was listed, the strength of your claim under EU conformity rules depends entirely on what you can prove was promised.",
+    "keywords": [
+      "used car doesnt match advertisement evidence eu",
+      "used car different from how it was listed",
+      "eu conformity rules claim strength",
+      "what you can prove was promised eu",
+      "eu used car not as advertised evidence"
+    ]
+  },
+  {
+    "title": "Buying a Used Car With Outstanding Finance: Why You Need to Check Before Paying",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/eu-used-car-outstanding-finance-check",
+    "description": "A used car with unpaid finance or a third-party claim against it can put your ownership at risk even when you bought in good faith. Here's why title and history checks matter.",
+    "keywords": [
+      "buying used car outstanding finance eu check",
+      "used car unpaid finance third party claim",
+      "ownership at risk bought in good faith",
+      "title history checks matter eu used car",
+      "eu used car outstanding finance check"
+    ]
+  },
+  {
+    "title": "Buying a Used Car From a Dealer vs a Private Seller in Europe",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/eu-dealer-vs-private-seller",
+    "description": "The same used car, the same fault, but very different rights depending on who sold it to you. Here's how dealer and private purchases compare across the EU.",
+    "keywords": [
+      "buying used car dealer vs private seller europe",
+      "same used car same fault different rights",
+      "dealer private purchases compare eu",
+      "who sold it to you matters eu",
+      "eu dealer vs private seller"
+    ]
+  },
+  {
+    "title": "Buying a Used Car in Australia: What Should You Check Before You Hand Over the Money?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/au-used-car-buying-checklist",
+    "description": "VIN, PPSR, registration, roadworthiness, odometer, service history, finance and accident history — the full check sequence before buying a used car in Australia.",
+    "keywords": [
+      "buying used car australia check before hand over money",
+      "vin ppsr registration roadworthiness odometer",
+      "service history finance accident history australia",
+      "full check sequence used car australia",
+      "au used car buying checklist"
+    ]
+  },
+  {
+    "title": "The PPSR Check: Why Australian Used-Car Buyers Shouldn't Skip It",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/au-ppsr-check-explained",
+    "description": "A PPSR search costs a small fee and takes minutes. Skipping it can mean buying a car that's stolen, written off, or still owed on by someone else.",
+    "keywords": [
+      "ppsr check australian used car buyers",
+      "ppsr search small fee takes minutes",
+      "skipping ppsr stolen written off owed",
+      "why not skip ppsr check australia",
+      "au ppsr check explained"
+    ]
+  },
+  {
+    "title": "Your Used Car Has a Major Fault: What Should You Document Before Complaining?",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/au-used-car-major-fault-documentation",
+    "description": "A consumer guarantee claim in Australia is only as strong as the timeline and evidence behind it. Here's what to capture before you contact the dealer.",
+    "keywords": [
+      "used car major fault document before complaining",
+      "consumer guarantee claim australia timeline evidence",
+      "what to capture before contact dealer australia",
+      "used car major fault australia rights",
+      "au used car major fault documentation"
+    ]
+  },
+  {
+    "title": "Dealer vs Private Seller in Australia: Why the Difference Matters",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/au-dealer-vs-private-seller",
+    "description": "A licensed dealer sale and a private sale in Australia carry very different consumer guarantees. Here's what changes and how to document each properly.",
+    "keywords": [
+      "dealer vs private seller australia difference matters",
+      "licensed dealer sale private sale consumer guarantees",
+      "what changes how to document each australia",
+      "dealer private seller rights australia",
+      "au dealer vs private seller"
+    ]
+  },
+  {
+    "title": "Buying a Used Car Across Australian States: Registration, Inspections and Hidden Costs",
+    "type": "blog",
+    "block": "cars-vehicles",
+    "url": "/blog/au-interstate-used-car-purchase",
+    "description": "A cheaper car in another state can end up costing more once transfer fees, inspections, transport and insurance are added. Here's what to budget for before you commit.",
+    "keywords": [
+      "buying used car across australian states",
+      "cheaper car another state costing more",
+      "transfer fees inspections transport insurance added",
+      "what to budget interstate used car purchase",
+      "au interstate used car purchase"
+    ]
+  },
+  {
+    "title": "Insurance Claim Evidence Pack",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/insurance-claim-evidence-pack",
+    "description": "The complete case file for an active insurance claim: policy details, incident description, a damage/evidence log, a detailed communication and timeline log, an expenses summary, and a claim status tracker.",
+    "keywords": [
+      "insurance claim evidence pack",
+      "complete case file active insurance claim",
+      "policy details incident description damage log",
+      "communication timeline expenses claim status tracker",
+      "insurance claim evidence pdf word"
+    ]
+  },
+  {
+    "title": "Insurance Damage & Loss Inventory Workbook",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/insurance-damage-loss-inventory-workbook",
+    "description": "An itemized inventory of every damaged or lost item, with purchase value, proof of ownership, and repair/replacement cost, totalled automatically.",
+    "keywords": [
+      "insurance damage loss inventory workbook",
+      "itemized inventory damaged lost items",
+      "purchase value proof of ownership repair cost",
+      "insurance inventory totalled automatically excel",
+      "damage loss inventory workbook"
+    ]
+  },
+  {
+    "title": "Insurance Claim Expense & Reimbursement Tracker",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/insurance-claim-expense-reimbursement-tracker",
+    "description": "Tracks every out-of-pocket cost caused by the incident, with running totals of what's been claimed, reimbursed, and still outstanding.",
+    "keywords": [
+      "insurance claim expense reimbursement tracker",
+      "track out of pocket cost incident",
+      "running totals claimed reimbursed outstanding",
+      "insurance expense tracker excel",
+      "claim reimbursement tracking template"
+    ]
+  },
+  {
+    "title": "Insurance Denial & Dispute Evidence Pack",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/insurance-denial-dispute-evidence-pack",
+    "description": "A complete file for a rejected or underpaid claim: the insurer's stated reasons, the exact policy clauses cited, your counter-evidence, and the remedy you're requesting.",
+    "keywords": [
+      "insurance denial dispute evidence pack",
+      "complete file rejected underpaid claim",
+      "insurers stated reasons policy clauses cited",
+      "counter evidence remedy requesting insurance",
+      "insurance denial evidence pdf word"
+    ]
+  },
+  {
+    "title": "Insurance Policy & Coverage Comparison Workbook",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/insurance-policy-coverage-comparison-workbook",
+    "description": "Compares up to five policies side by side on premium, deductible, limits, exclusions, waiting periods and renewal terms — not just the headline price.",
+    "keywords": [
+      "insurance policy coverage comparison workbook",
+      "compare five policies premium deductible limits",
+      "exclusions waiting periods renewal terms",
+      "not just headline price insurance comparison",
+      "insurance policy comparison excel"
+    ]
+  },
+  {
+    "title": "Third-Party Liability Claim Pack",
+    "type": "template",
+    "block": "insurance-claims",
+    "url": "/templates/third-party-liability-claim-pack",
+    "description": "A complete file for a claim against another party's insurance: the incident, all parties involved, damages, evidence, communications, and the compensation sought.",
+    "keywords": [
+      "third party liability claim pack",
+      "complete file claim against another partys insurance",
+      "incident all parties damages evidence communications",
+      "compensation sought third party claim",
+      "third party liability claim pdf word"
+    ]
+  },
+  {
+    "title": "Insurance Claim Letter Generator",
+    "type": "generator",
+    "block": "insurance-claims",
+    "url": "/generate/insurance-claim-letter-generator",
+    "description": "Generate a formal insurance claim letter with policy details, incident description, damages, supporting documentation, and the amount you're claiming. Free.",
+    "keywords": [
+      "insurance claim letter generator",
+      "formal claim letter policy details incident",
+      "damages supporting documentation amount claiming",
+      "first submission not a dispute insurance",
+      "free insurance claim letter generator"
+    ]
+  },
+  {
+    "title": "Insurance Claim Follow-Up & Escalation Generator",
+    "type": "generator",
+    "block": "insurance-claims",
+    "url": "/generate/insurance-claim-followup-escalation-generator",
+    "description": "Generate a formal follow-up or escalation letter for a delayed or unresolved insurance claim. Free.",
+    "keywords": [
+      "insurance claim follow up escalation generator",
+      "routine follow up delayed claim letter",
+      "formal escalation prior response unsatisfactory",
+      "free insurance escalation letter generator",
+      "insurance claim escalation letter"
+    ]
+  },
+  {
+    "title": "Insurance Denial & Coverage Dispute Generator",
+    "type": "generator",
+    "block": "insurance-claims",
+    "url": "/generate/insurance-denial-coverage-dispute-generator",
+    "description": "Generate a formal dispute letter for a denied claim, or a disputed coverage amount, addressed directly to the insurer's stated reasons. Free.",
+    "keywords": [
+      "insurance denial coverage dispute generator",
+      "formal dispute letter claim denied outright",
+      "disputed coverage amount insurer stated reasons",
+      "free insurance denial dispute letter",
+      "dispute denied insurance claim letter"
+    ]
+  },
+  {
+    "title": "Third-Party Liability Claim Letter Generator",
+    "type": "generator",
+    "block": "insurance-claims",
+    "url": "/generate/third-party-liability-claim-letter-generator",
+    "description": "Generate a formal liability claim letter against another party's insurance, with the incident, damages, evidence, and the compensation you're seeking. Free.",
+    "keywords": [
+      "third party liability claim letter generator",
+      "formal liability claim against another partys insurance",
+      "incident damages evidence compensation sought",
+      "free third party liability claim letter",
+      "claim against other partys insurer letter"
+    ]
+  },
+  {
+    "title": "Insurance Claim Preparation Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-claim-preparation-checklist",
+    "description": "Gather policy details, the incident timeline, and the documentation you need before filing an insurance claim. No account required.",
+    "keywords": [
+      "insurance claim preparation checklist",
+      "gather policy details incident timeline documentation",
+      "before filing an insurance claim checklist",
+      "insurance claim prep checklist free",
+      "what to gather before filing claim"
+    ]
+  },
+  {
+    "title": "Insurance Policy Coverage Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-policy-coverage-checklist",
+    "description": "Check your coverage limits, deductible, exclusions, and waiting periods before assuming a loss is actually covered. No account required.",
+    "keywords": [
+      "insurance policy coverage checklist",
+      "check coverage limits deductible exclusions",
+      "waiting periods before assuming loss covered",
+      "insurance coverage checklist free",
+      "is my loss actually covered checklist"
+    ]
+  },
+  {
+    "title": "Insurance Claim Evidence Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-claim-evidence-checklist",
+    "description": "Build the visual, financial, and communications evidence behind an insurance claim before the insurer asks for it. No account required.",
+    "keywords": [
+      "insurance claim evidence checklist",
+      "build visual financial communications evidence",
+      "before the insurer asks for it checklist",
+      "insurance claim evidence checklist free",
+      "what evidence for insurance claim"
+    ]
+  },
+  {
+    "title": "Insurance Claim Denial Review Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-claim-denial-review-checklist",
+    "description": "Check the insurer's stated reasons, the policy clauses cited, and your counter-evidence before deciding whether to dispute a denial. No account required.",
+    "keywords": [
+      "insurance claim denial review checklist",
+      "check insurer's stated reasons cited clauses",
+      "decide whether to appeal or escalate denial",
+      "insurance denial review checklist free",
+      "reviewing a denied insurance claim"
+    ]
+  },
+  {
+    "title": "Insurance Claim Follow-Up & Escalation Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-claim-followup-escalation-checklist",
+    "description": "Track every contact with your insurer, monitor response deadlines, and confirm the right escalation target before a claim stalls. No account required.",
+    "keywords": [
+      "insurance claim follow up escalation checklist",
+      "track every contact monitor deadlines",
+      "confirm right escalation target insurance",
+      "insurance follow up checklist free",
+      "when to escalate insurance claim checklist"
+    ]
+  },
+  {
+    "title": "Insurance Damage & Loss Documentation Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/insurance-damage-loss-documentation-checklist",
+    "description": "Document every damaged or lost item's value, ownership, and current condition before submitting an insurance claim. No account required.",
+    "keywords": [
+      "insurance damage loss documentation checklist",
+      "document every damaged lost items value",
+      "ownership current condition for your claim",
+      "insurance damage documentation checklist free",
+      "documenting loss before insurance claim"
+    ]
+  },
+  {
+    "title": "Third-Party Insurance Claim Checklist",
+    "type": "checklist",
+    "block": "insurance-claims",
+    "url": "/checklists/third-party-insurance-claim-checklist",
+    "description": "Identify the at-fault party, document the incident, and build your evidence before claiming against another party's insurance. No account required.",
+    "keywords": [
+      "third party insurance claim checklist",
+      "identify at fault party document incident",
+      "build evidence claiming against their insurer",
+      "third party claim checklist free",
+      "claiming against another partys insurer checklist"
+    ]
+  },
+  {
+    "title": "Insurance Regulators & Consumer Protection",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#insurance-regulators-consumer-protection-directory",
+    "description": "Who actually regulates insurers in each region — the starting point before filing a complaint (see Section 2 for that).",
+    "keywords": [
+      "insurance regulators consumer protection directory",
+      "who regulates insurers by country",
+      "starting point before filing insurance complaint",
+      "insurance regulator directory by region",
+      "general insurance oversight body directory"
+    ]
+  },
+  {
+    "title": "Insurance Complaints & Ombudsman Services",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#insurance-complaints-ombudsman-directory",
+    "description": "Escalate a complaint once your insurer's own internal process hasn't resolved it.",
+    "keywords": [
+      "insurance complaints ombudsman services directory",
+      "escalate complaint insurer internal process failed",
+      "fos afca fin-net insurance ombudsman directory",
+      "insurance ombudsman by country directory",
+      "insurance complaint escalation directory"
+    ]
+  },
+  {
+    "title": "Insurance Claims & Dispute Resolution",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#insurance-claims-dispute-resolution-directory",
+    "description": "Practical guidance on the claims process itself. For independent dispute-resolution bodies, see Section 2 (FOS/AFCA/FIN-NET) — not duplicated here.",
+    "keywords": [
+      "insurance claims dispute resolution directory",
+      "practical guidance claims process itself",
+      "insurance claims process directory",
+      "how insurance claims process works directory",
+      "insurance dispute resolution guidance directory"
+    ]
+  },
+  {
+    "title": "Insurance Policy & Coverage Resources",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#insurance-policy-coverage-resources-directory",
+    "description": "Understand how policies, coverage, and exclusions actually work before you buy, renew, or rely on one.",
+    "keywords": [
+      "insurance policy coverage resources directory",
+      "understand policies coverage exclusions work",
+      "before you buy renew rely on policy",
+      "insurance policy resources directory",
+      "how insurance coverage works directory"
+    ]
+  },
+  {
+    "title": "Motor Insurance",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#motor-insurance-directory",
+    "description": "Insurance and uninsured/untraced-driver resources specific to vehicles. For buying, registering, or disputing a vehicle itself, see the Cars & Vehicles directory.",
+    "keywords": [
+      "motor insurance directory",
+      "uninsured untraced driver resources vehicles",
+      "motor insurance specific to vehicles directory",
+      "cross reference cars vehicles directory",
+      "vehicle insurance resources directory"
+    ]
+  },
+  {
+    "title": "Home & Property Insurance",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#home-property-insurance-directory",
+    "description": "Home, contents, and natural-disaster insurance guidance. For the repair or renovation process itself, see the Home Renovations & Services directory.",
+    "keywords": [
+      "home property insurance directory",
+      "home contents natural disaster insurance guidance",
+      "cross reference home renovations services directory",
+      "home insurance resources directory",
+      "property insurance guidance directory"
+    ]
+  },
+  {
+    "title": "Travel Insurance",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#travel-insurance-directory",
+    "description": "Travel insurance guidance. For flight delays, cancellations, and airline complaints themselves, see the Flights & Travel directory.",
+    "keywords": [
+      "travel insurance directory",
+      "travel insurance guidance directory",
+      "cross reference flights travel directory",
+      "travel insurance resources directory",
+      "travel insurance claim guidance directory"
+    ]
+  },
+  {
+    "title": "Health & Other Insurance",
+    "type": "directory",
+    "block": "insurance-claims",
+    "url": "/directory/insurance-claims#health-other-insurance-directory",
+    "description": "Health, life, and pet insurance — kept separate from Sections 1–2 since health insurance often has its own dedicated regulator or complaint body.",
+    "keywords": [
+      "health other insurance directory",
+      "health life pet insurance directory",
+      "health insurance separate dedicated regulator",
+      "health insurance complaint body directory",
+      "life pet insurance resources directory"
+    ]
+  },
+  {
+    "title": "Your Insurance Claim Was Denied: What Should You Do Before Accepting the Decision?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/us-insurance-claim-denied-next-steps",
+    "description": "A denial letter isn't necessarily the end of the road. Here's how to read it properly, check the cited exclusion, and use the appeal process before accepting the decision.",
+    "keywords": [
+      "insurance claim denied what to do before accepting",
+      "denial letter not necessarily end of road",
+      "read denial properly check cited exclusion",
+      "use appeal process before accepting decision",
+      "us insurance claim denied next steps"
+    ]
+  },
+  {
+    "title": "What Does \"Deductible\" Actually Mean? Why Your Insurance Payout Is Smaller Than Expected",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/us-insurance-deductible-explained",
+    "description": "Deductible, coverage limits, and exclusions all shrink a payout below the amount of the loss. Here's how each one works, and how to estimate what you'll actually receive.",
+    "keywords": [
+      "what does deductible actually mean insurance",
+      "insurance payout smaller than expected why",
+      "deductible coverage limits exclusions shrink payout",
+      "estimate what youll actually receive insurance",
+      "us insurance deductible explained"
+    ]
+  },
+  {
+    "title": "The Insurance Adjuster Asked for More Evidence: What Should You Send?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/us-insurance-adjuster-evidence-request",
+    "description": "A request for more evidence isn't a bad sign by itself. Here's what adjusters typically need, and how to organize it so it doesn't slow your claim down further.",
+    "keywords": [
+      "insurance adjuster asked for more evidence",
+      "request for more evidence not a bad sign",
+      "what adjusters typically need organize it",
+      "dont slow claim down further evidence",
+      "us insurance adjuster evidence request"
+    ]
+  },
+  {
+    "title": "Your Insurance Company Is Taking Too Long: When Should You Escalate a Claim?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/us-insurance-claim-delay-escalation",
+    "description": "Every delay isn't worth escalating, but some are. Here's how to document a slow claim properly and know when it's time to push it up the chain.",
+    "keywords": [
+      "insurance company taking too long escalate claim",
+      "every delay isnt worth escalating some are",
+      "document a slow claim properly",
+      "know when to push it up the chain",
+      "us insurance claim delay escalation"
+    ]
+  },
+  {
+    "title": "The \"Fine Print\" Behind Insurance Exclusions: What Consumers Often Miss",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/us-insurance-exclusions-fine-print",
+    "description": "A policy can sound comprehensive in its summary and still exclude the exact situation you're facing. Here's how to actually read exclusions before you need them.",
+    "keywords": [
+      "fine print behind insurance exclusions consumers miss",
+      "policy sounds comprehensive still excludes situation",
+      "how to actually read exclusions before you need them",
+      "insurance exclusion fine print us",
+      "us insurance exclusions fine print"
+    ]
+  },
+  {
+    "title": "Your UK Insurance Claim Was Rejected: How to Challenge the Decision",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/uk-insurance-claim-rejected-challenge",
+    "description": "A rejected claim in the UK isn't the final word. Here's how to review the decision, gather additional evidence, and use the complaints process before the Financial Ombudsman Service.",
+    "keywords": [
+      "uk insurance claim rejected challenge decision",
+      "rejected claim uk not the final word",
+      "review decision gather additional evidence uk",
+      "complaints process before financial ombudsman uk",
+      "uk insurance claim rejected challenge"
+    ]
+  },
+  {
+    "title": "Insurance Excess Explained: Why You Don't Get the Full Cost of Your Claim Back",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/uk-insurance-excess-explained",
+    "description": "Compulsory and voluntary excess combine to reduce every payout, whether or not you caused the incident. Here's how the two work together and how to calculate what you'd actually receive.",
+    "keywords": [
+      "insurance excess explained uk full cost claim",
+      "compulsory voluntary excess reduce every payout",
+      "how the two work together calculate payout",
+      "uk insurance excess explained",
+      "why dont i get full claim back uk"
+    ]
+  },
+  {
+    "title": "How to Complain About an Insurance Company in the UK",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/uk-how-to-complain-insurance-company",
+    "description": "A well-structured complaint gets taken more seriously and moves faster. Here's how to write one, what to keep track of, and when escalation makes sense.",
+    "keywords": [
+      "how to complain insurance company uk",
+      "well structured complaint taken more seriously",
+      "how to write one what to keep track of",
+      "when escalation makes sense insurance uk",
+      "uk how to complain insurance company"
+    ]
+  },
+  {
+    "title": "\"Not Covered\": How to Read an Insurance Exclusion Before Giving Up",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/uk-reading-insurance-exclusion",
+    "description": "Not every 'not covered' is a genuine exclusion. Here's how to tell a real exclusion apart from a policy condition or a debatable interpretation by the insurer.",
+    "keywords": [
+      "not covered how to read insurance exclusion",
+      "not every not covered genuine exclusion",
+      "real exclusion vs policy condition uk",
+      "debatable interpretation insurer uk",
+      "uk reading insurance exclusion"
+    ]
+  },
+  {
+    "title": "What Evidence Makes an Insurance Claim Stronger?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/uk-insurance-claim-strong-evidence",
+    "description": "Photographs, receipts, valuations, reports, ownership records, timelines and communications — what to keep for an insurance claim, and how to organize it properly.",
+    "keywords": [
+      "what evidence makes insurance claim stronger",
+      "photographs receipts valuations reports ownership records",
+      "timelines communications insurance claim uk",
+      "what to keep organize properly claim",
+      "uk insurance claim strong evidence"
+    ]
+  },
+  {
+    "title": "Your Insurance Claim Was Denied in Australia: What Should You Do Next?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/au-insurance-claim-denied-next-steps",
+    "description": "A denied claim in Australia has a clear two-step path forward: internal dispute resolution with your insurer, then AFCA if that doesn't resolve it. Here's how to work through both properly.",
+    "keywords": [
+      "insurance claim denied australia what to do next",
+      "clear two step path internal dispute resolution afca",
+      "denied claim australia work through both properly",
+      "au insurance claim denied next steps",
+      "insurance claim denied afca australia"
+    ]
+  },
+  {
+    "title": "Insurance Excess in Australia: What It Means and How It Affects Your Claim",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/au-insurance-excess-explained",
+    "description": "Excess, policy limits and exclusions all shrink an Australian insurance payout below the actual cost of the loss. Here's how each works and how to estimate what you'd receive.",
+    "keywords": [
+      "insurance excess australia what it means",
+      "excess policy limits exclusions shrink payout",
+      "how to estimate what youd receive australia",
+      "au insurance excess explained",
+      "australian insurance excess affects claim"
+    ]
+  },
+  {
+    "title": "How to Make an Insurance Complaint in Australia",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/au-how-to-make-insurance-complaint",
+    "description": "A well-structured complaint moves faster through internal dispute resolution and holds up better if it reaches AFCA. Here's how to lodge one properly.",
+    "keywords": [
+      "how to make insurance complaint australia",
+      "well structured complaint moves faster idr afca",
+      "holds up better if reaches afca",
+      "how to lodge insurance complaint properly au",
+      "au how to make insurance complaint"
+    ]
+  },
+  {
+    "title": "Storm, Flood or Fire Damage: How to Document an Insurance Claim Properly",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/au-storm-flood-fire-damage-documentation",
+    "description": "What to do before repairing or throwing anything away after storm, flood or fire damage — photographs, inventories, receipts, emergency expenses and repair estimates.",
+    "keywords": [
+      "storm flood fire damage document insurance claim",
+      "before repairing throwing anything away damage",
+      "photographs inventories receipts emergency expenses",
+      "repair estimates storm flood fire australia",
+      "au storm flood fire damage documentation"
+    ]
+  },
+  {
+    "title": "The Insurance Policy Fine Print: Exclusions, Conditions and Limits Explained",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/au-insurance-policy-fine-print",
+    "description": "The parts of an Australian insurance policy that most affect a claim are rarely the headline coverage summary. Here's what to actually check, and what to ask before assuming you're covered.",
+    "keywords": [
+      "insurance policy fine print exclusions conditions limits",
+      "parts of policy that most affect claim australia",
+      "what to actually check what to ask",
+      "assuming youre covered australia insurance",
+      "au insurance policy fine print"
+    ]
+  },
+  {
+    "title": "Your Insurance Claim Was Rejected: What Can You Do in the EU?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/eu-insurance-claim-rejected-next-steps",
+    "description": "EU insurance complaints follow a common two-step logic even though the specific bodies differ by country. Here's how to review the decision, gather evidence, and find the right complaints route.",
+    "keywords": [
+      "insurance claim rejected what can you do eu",
+      "eu insurance complaints common two step logic",
+      "review decision gather evidence complaints route eu",
+      "specific bodies differ by country eu",
+      "eu insurance claim rejected next steps"
+    ]
+  },
+  {
+    "title": "Insurance Exclusions Explained: The Clauses That Can Decide Your Claim",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/eu-insurance-exclusions-explained",
+    "description": "Exclusions, definitions, conditions and limits are the parts of a policy that actually decide most claim outcomes. Here's how to check exactly what a policy covers.",
+    "keywords": [
+      "insurance exclusions explained clauses decide claim",
+      "exclusions definitions conditions limits decide outcomes",
+      "how to check exactly what policy covers eu",
+      "eu insurance exclusions explained",
+      "clauses that decide insurance claim eu"
+    ]
+  },
+  {
+    "title": "How to Document Damage Before Making an Insurance Claim",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/eu-document-damage-before-claim",
+    "description": "Home, vehicle, or personal belongings — the same core documentation logic applies before you file: photographs, invoices, ownership evidence, repair estimates and a clear timeline.",
+    "keywords": [
+      "how to document damage before insurance claim",
+      "home vehicle personal belongings documentation logic",
+      "photographs invoices ownership evidence repair estimates",
+      "clear timeline before you file eu",
+      "eu document damage before claim"
+    ]
+  },
+  {
+    "title": "Insurance Complaints in Europe: Where Do You Go When the Insurer Says No?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/eu-insurance-complaints-where-to-go",
+    "description": "EU rules guarantee the same underlying complaints logic in every member state — internal complaint, then independent redress — even though the specific bodies differ by country.",
+    "keywords": [
+      "insurance complaints europe insurer says no",
+      "eu rules same underlying complaints logic",
+      "internal complaint then independent redress eu",
+      "specific bodies differ by country eu",
+      "eu insurance complaints where to go"
+    ]
+  },
+  {
+    "title": "Buying Insurance in Another EU Country: What Should You Check?",
+    "type": "blog",
+    "block": "insurance-claims",
+    "url": "/blog/eu-buying-insurance-another-country",
+    "description": "An EU insurer can sell across borders, but that doesn't mean every policy travels the same way. Here's what to check on coverage, territory, and claims before signing.",
+    "keywords": [
+      "buying insurance another eu country check",
+      "eu insurer sell across borders policy",
+      "doesnt mean every policy travels same way",
+      "coverage territory claims before signing eu",
+      "eu buying insurance another country"
+    ]
   }
 ]
