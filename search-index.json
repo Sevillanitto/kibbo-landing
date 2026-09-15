@@ -15069,5 +15069,19 @@
       "ai generated fraud statistics 2026",
       "ai romance investment scam data"
     ]
+  },
+  {
+    "title": "Rent Increase Calculator",
+    "type": "calculator",
+    "block": "housing-rentals",
+    "url": "/housing-rentals/calculators/rent-increase-calculator",
+    "description": "Calculate your rent increase in dollars, percent, and per year — plus check whether your US state has a legal cap on how much your landlord can raise the rent. Free calculator.",
+    "keywords": [
+      "rent increase calculator",
+      "how much can my landlord raise my rent",
+      "rent increase percentage calculator",
+      "is there a cap on rent increases",
+      "rent increase legal limit by state"
+    ]
   }
 ]
