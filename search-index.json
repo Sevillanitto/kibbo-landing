@@ -11109,5 +11109,1139 @@
       "three cases supplements are advised nhs",
       "nhs vitamins supplements guide uk"
     ]
+  },
+  {
+    "title": "Contractor Quote Comparison Workbook",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/contractor-quote-comparison-workbook",
+    "description": "Compare quotes from multiple contractors side by side: labor, materials, permits, timeline, warranty, and hidden costs, with an automatic lowest-cost and lowest-cost-per-day summary. Excel.",
+    "keywords": [
+      "contractor quote comparison workbook",
+      "compare quotes multiple contractors side by side",
+      "labor materials permits timeline warranty comparison",
+      "lowest cost per day summary contractor",
+      "contractor quote comparison excel"
+    ]
+  },
+  {
+    "title": "Renovation Payment & Cost Tracker",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/renovation-payment-cost-tracker",
+    "description": "Track every payment against your renovation budget with an automatic running balance and budget-vs-actual summary by payment type. Excel.",
+    "keywords": [
+      "renovation payment cost tracker",
+      "track payment against renovation budget",
+      "automatic running balance renovation",
+      "budget vs actual summary payment type",
+      "renovation cost tracker excel"
+    ]
+  },
+  {
+    "title": "Home Renovation Timeline & Milestone Tracker",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/home-renovation-timeline-milestone-tracker",
+    "description": "Track planned vs. actual dates for every phase of a renovation, with automatic delay calculation and a summary flagging the phase with the worst slippage. Excel.",
+    "keywords": [
+      "home renovation timeline milestone tracker",
+      "planned vs actual dates renovation phase",
+      "automatic delay calculation renovation",
+      "worst slippage phase summary",
+      "renovation timeline tracker excel"
+    ]
+  },
+  {
+    "title": "Home Renovation Project Evidence Pack",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/home-renovation-project-evidence-pack",
+    "description": "A complete project record: contractor and contract details, change orders, payment summary, photo log, and communications log in one file. PDF + Word.",
+    "keywords": [
+      "home renovation project evidence pack",
+      "complete project record contractor contract",
+      "change orders payment summary photo log",
+      "communications log renovation project",
+      "renovation project evidence pdf word"
+    ]
+  },
+  {
+    "title": "Defective Work & Contractor Dispute Evidence Pack",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/defective-work-contractor-dispute-evidence-pack",
+    "description": "Document defective or incomplete work with the specific evidence needed to request a repair, refund, or resolution from a contractor. PDF + Word.",
+    "keywords": [
+      "defective work contractor dispute evidence pack",
+      "document defective incomplete work contractor",
+      "evidence request repair refund resolution",
+      "contractor dispute evidence template",
+      "defective work evidence pdf word"
+    ]
+  },
+  {
+    "title": "Home Repair/Service Completion & Handover Pack",
+    "type": "template",
+    "block": "home-renovations-services",
+    "url": "/templates/home-repair-service-completion-handover-pack",
+    "description": "A final sign-off record of completed work, warranties, outstanding items, and documentation received, before final payment. PDF + Word.",
+    "keywords": [
+      "home repair service completion handover pack",
+      "final sign off record completed work",
+      "warranties outstanding items documentation",
+      "before final payment handover record",
+      "home repair completion pack pdf word"
+    ]
+  },
+  {
+    "title": "Scope of Work Generator",
+    "type": "generator",
+    "block": "home-renovations-services",
+    "url": "/generate/scope-of-work-generator",
+    "description": "Generate a formal, numbered Scope of Work document to attach to a renovation or repair contract — the exact tasks, materials, permits, cleanup, exclusions, and payment terms, in writing. Free.",
+    "keywords": [
+      "scope of work generator",
+      "formal numbered scope of work document",
+      "renovation repair contract attachment",
+      "tasks materials permits cleanup exclusions",
+      "free scope of work generator"
+    ]
+  },
+  {
+    "title": "Contractor Dispute & Demand Letter Generator",
+    "type": "generator",
+    "block": "home-renovations-services",
+    "url": "/generate/contractor-dispute-demand-letter-generator",
+    "description": "Generate a formal demand letter to a contractor for incomplete work, defective work, an unauthorized overcharge, or a project delay — with a clear outcome and a 14-day deadline. Free.",
+    "keywords": [
+      "contractor dispute demand letter generator",
+      "demand letter incomplete defective work",
+      "unauthorized overcharge project delay letter",
+      "contractor response deadline demand letter",
+      "free contractor dispute letter generator"
+    ]
+  },
+  {
+    "title": "Contractor Verification Checklist",
+    "type": "checklist",
+    "block": "home-renovations-services",
+    "url": "/checklists/contractor-verification-checklist",
+    "description": "A free checklist: verify a contractor's license, insurance, track record, and legal standing before you hire them. No account required.",
+    "keywords": [
+      "contractor verification checklist",
+      "verify contractor license insurance track record",
+      "legal standing before you hire contractor",
+      "check contractor before hiring checklist",
+      "contractor background verification checklist"
+    ]
+  },
+  {
+    "title": "Home Renovation Contract Checklist",
+    "type": "checklist",
+    "block": "home-renovations-services",
+    "url": "/checklists/home-renovation-contract-checklist",
+    "description": "A free checklist: check the timeline, payment terms, materials, warranties, and change-order process in a renovation contract before you sign. No account required.",
+    "keywords": [
+      "home renovation contract checklist",
+      "check timeline payment terms materials warranties",
+      "change order process before you sign",
+      "renovation contract review checklist",
+      "what to check renovation contract"
+    ]
+  },
+  {
+    "title": "Final Inspection Checklist",
+    "type": "checklist",
+    "block": "home-renovations-services",
+    "url": "/checklists/final-inspection-checklist",
+    "description": "A free checklist: walk through a finished renovation room by room — kitchen, bathroom, electrical, flooring, doors and windows — before you sign off. No account required.",
+    "keywords": [
+      "final inspection checklist renovation",
+      "walk through finished renovation room by room",
+      "kitchen bathroom electrical flooring checklist",
+      "before you sign off renovation checklist",
+      "final renovation inspection checklist"
+    ]
+  },
+  {
+    "title": "Building Permit Checklist",
+    "type": "checklist",
+    "block": "home-renovations-services",
+    "url": "/checklists/building-permit-checklist",
+    "description": "A free checklist: check which permits your kitchen, bathroom, roofing, window, addition, electrical, or gas project actually needs before work starts. No account required.",
+    "keywords": [
+      "building permit checklist",
+      "which permits does my project need",
+      "kitchen bathroom roofing addition permit checklist",
+      "permits before work starts checklist",
+      "building permit requirements checklist"
+    ]
+  },
+  {
+    "title": "Progress Payment Checklist",
+    "type": "checklist",
+    "block": "home-renovations-services",
+    "url": "/checklists/progress-payment-checklist",
+    "description": "A free checklist: verify the work is actually done, get an itemized invoice, and check final payment conditions before you pay a contractor. No account required.",
+    "keywords": [
+      "progress payment checklist",
+      "verify work actually done before paying",
+      "itemized invoice final payment conditions",
+      "progress payment contractor checklist",
+      "check before paying contractor checklist"
+    ]
+  },
+  {
+    "title": "Contractor License Lookup",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#contractor-license-lookup-directory",
+    "description": "Check a contractor's license or vetting status before you hire — the mechanism differs sharply by country.",
+    "keywords": [
+      "contractor license lookup directory",
+      "check contractor license before hire",
+      "verify contractor vetting status by country",
+      "contractor license lookup by country",
+      "is this contractor licensed directory"
+    ]
+  },
+  {
+    "title": "Building Permit Offices",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#building-permit-offices-directory",
+    "description": "There is no single national permit office in any of these countries — always start with your local municipal, county, or council authority.",
+    "keywords": [
+      "building permit offices directory",
+      "local municipal county council permit office",
+      "no single national permit office",
+      "find local building permit authority",
+      "building permit office directory"
+    ]
+  },
+  {
+    "title": "Building Inspectors",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#building-inspectors-directory",
+    "description": "Find an independent, certified inspector to check work before you buy, before final payment, or if you suspect a problem.",
+    "keywords": [
+      "building inspectors directory",
+      "independent certified inspector directory",
+      "inspect work before final payment",
+      "find building inspector before you buy",
+      "certified home inspector directory"
+    ]
+  },
+  {
+    "title": "Mediation & Construction Dispute Boards",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#mediation-construction-dispute-boards-directory",
+    "description": "This section is formal, often binding dispute resolution — distinct from Section 7's general consumer complaint agencies. A board here resolves your specific case with real authority; a Section 7 agency is a first-contact complaint channel.",
+    "keywords": [
+      "mediation construction dispute boards directory",
+      "formal binding construction dispute resolution",
+      "construction dispute board directory",
+      "resolve specific case real authority construction",
+      "binding construction dispute resolution directory"
+    ]
+  },
+  {
+    "title": "Gas / Electrical Certified Registers",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#gas-electrical-certified-registers-directory",
+    "description": "Confirm the specific trade certification for gas, electrical, or window/door installation work — separate from general contractor licensing above.",
+    "keywords": [
+      "gas electrical certified registers directory",
+      "confirm gas electrical trade certification",
+      "window door installer certification register",
+      "gas safe electrical register directory",
+      "trade certification lookup directory"
+    ]
+  },
+  {
+    "title": "Home Warranty Providers",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#home-warranty-providers-directory",
+    "description": "Coverage for defects and incomplete work after a project finishes — some mandatory, some private and optional.",
+    "keywords": [
+      "home warranty providers directory",
+      "coverage defects incomplete work after project",
+      "mandatory vs optional home warranty",
+      "home warranty provider directory",
+      "renovation defect coverage directory"
+    ]
+  },
+  {
+    "title": "Consumer Authorities for Home Renovation",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#consumer-authorities-home-renovation-directory",
+    "description": "General, first-contact consumer complaint agencies — distinct from Section 4's formal, binding dispute resolution boards.",
+    "keywords": [
+      "consumer authorities home renovation directory",
+      "general first contact renovation complaint agency",
+      "where to complain about renovation first",
+      "home renovation consumer authority directory",
+      "first contact complaint channel renovation"
+    ]
+  },
+  {
+    "title": "Material Certification Databases",
+    "type": "directory",
+    "block": "home-renovations-services",
+    "url": "/directory/home-renovations-services#material-certification-databases-directory",
+    "description": "Check that a building material or product actually carries the compliance mark it claims to.",
+    "keywords": [
+      "material certification databases directory",
+      "check building material compliance mark",
+      "verify material certification genuine",
+      "building material certification lookup",
+      "material compliance database directory"
+    ]
+  },
+  {
+    "title": "The Lien Waiver Guide: How to Stop Subcontractors From Placing a Lien on Your Home",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/us-mechanics-lien-waivers-guide",
+    "description": "How mechanic's liens work, why paying your general contractor in full doesn't protect you, and how preliminary notices and lien waivers actually prevent a lien.",
+    "keywords": [
+      "lien waiver guide stop subcontractors",
+      "mechanics liens how they work",
+      "paying general contractor doesnt protect you",
+      "preliminary notices lien waivers prevent lien",
+      "us mechanics lien waivers guide"
+    ]
+  },
+  {
+    "title": "How to Legalise an Extension Built Without Building Control Approval",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/uk-regularisation-certificate-unapproved-extension",
+    "description": "The regularisation process for a UK home extension or renovation carried out without Building Regulations approval — cost, process, and why it matters before you sell.",
+    "keywords": [
+      "legalise extension without building control approval",
+      "uk regularisation certificate process",
+      "building regulations approval missing uk",
+      "why it matters before you sell uk",
+      "uk regularisation certificate unapproved extension"
+    ]
+  },
+  {
+    "title": "Lost Your EU Energy Efficiency Grant Because of a Renovation Delay? Here's Your Legal Position",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/eu-nextgen-grant-loss-contractor-delay",
+    "description": "How to protect an EU energy efficiency grant deadline with penalty clauses in your renovation contract, and what to do if a contractor's delay costs you the funding.",
+    "keywords": [
+      "lost eu energy efficiency grant renovation delay",
+      "protect eu grant deadline penalty clauses",
+      "contractor delay costs funding eu grant",
+      "eu nextgen grant loss contractor delay",
+      "renovation contract penalty clause eu grant"
+    ]
+  },
+  {
+    "title": "Signed a Renovation Contract at Home? Your 14-Day EU Withdrawal Right",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/eu-14-day-withdrawal-right-renovation-contract",
+    "description": "How the EU's 14-day right of withdrawal applies to renovation contracts signed at home or door-to-door, what happens if the trader doesn't disclose it, and how to cancel.",
+    "keywords": [
+      "signed renovation contract at home eu withdrawal",
+      "14 day eu withdrawal right renovation",
+      "door to door renovation contract eu cancel",
+      "trader didnt disclose withdrawal right eu",
+      "eu 14 day withdrawal right renovation contract"
+    ]
+  },
+  {
+    "title": "Ask for the CE Mark: Why Your Renovation Materials Need a Declaration of Performance",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/eu-ce-marking-declaration-of-performance-materials",
+    "description": "How the EU Construction Products Regulation and its Declaration of Performance protect against unsafe insulation, plasterboard and piping in your renovation.",
+    "keywords": [
+      "ask for ce mark renovation materials",
+      "eu construction products regulation declaration performance",
+      "unsafe insulation plasterboard piping eu",
+      "declaration of performance renovation materials",
+      "eu ce marking declaration of performance materials"
+    ]
+  },
+  {
+    "title": "Cracks or Damp After a Renovation? How Long Your Legal Warranty Actually Lasts",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/eu-decennial-liability-structural-defects-comparison",
+    "description": "How structural defect warranties work across the EU — Spain's LOE 10-3-1 system, France's décennale and dommage-ouvrage — and how to make a claim.",
+    "keywords": [
+      "cracks damp after renovation legal warranty",
+      "structural defect warranties eu comparison",
+      "spain loe decennale dommage ouvrage",
+      "how to make structural defect claim eu",
+      "eu decennial liability structural defects comparison"
+    ]
+  },
+  {
+    "title": "Why You Can't Legally Install Your Own Air Conditioning Split System in the EU",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/eu-fgas-regulation-certified-ac-installer",
+    "description": "The EU's F-Gas Regulation requires certified installers for pre-charged air conditioning units, and retailers must verify certification before selling. What this means for you.",
+    "keywords": [
+      "cant legally install own ac split system eu",
+      "eu f-gas regulation certified installer",
+      "pre charged air conditioning certification eu",
+      "retailers verify certification before selling ac",
+      "eu fgas regulation certified ac installer"
+    ]
+  },
+  {
+    "title": "Don't Pay a Deposit Without Checking This: HBCF and DBI Insurance Verification",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/au-hbcf-vmia-insurance-verification",
+    "description": "How to verify a builder's HBCF (NSW) or DBI/VMIA (Victoria) home building insurance certificate is genuine before paying any deposit or starting work.",
+    "keywords": [
+      "don't pay deposit without checking hbcf dbi",
+      "verify builder hbcf nsw dbi vmia victoria",
+      "home building insurance certificate genuine check",
+      "before paying deposit starting work australia",
+      "au hbcf vmia insurance verification"
+    ]
+  },
+  {
+    "title": "The Bathroom Waterproofing Standard That Prevents a Full Rebuild: AS 3740",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/au-as3740-bathroom-waterproofing-standard",
+    "description": "What Australia's AS 3740 waterproofing standard actually requires for bathrooms, how to check it before tiling covers the evidence, and what to do about a failed membrane.",
+    "keywords": [
+      "bathroom waterproofing standard as 3740 australia",
+      "what as 3740 requires for bathrooms",
+      "check waterproofing before tiling covers evidence",
+      "failed membrane bathroom what to do",
+      "au as3740 bathroom waterproofing standard"
+    ]
+  },
+  {
+    "title": "Surprise Charges on Your Final Bill? Why Unwritten Variations May Not Be Enforceable",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/au-contract-variations-home-building-act",
+    "description": "Why the NSW Home Building Act requires renovation contract variations to be in writing, and how to challenge a surprise charge that was never properly approved.",
+    "keywords": [
+      "surprise charges final bill unwritten variations",
+      "nsw home building act variations writing",
+      "challenge surprise charge never approved",
+      "renovation contract variation enforceability australia",
+      "au contract variations home building act"
+    ]
+  },
+  {
+    "title": "The Progress Payment Guide: How to Avoid Paying Ahead of Completed Work",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/au-progress-payments-deposit-limits-guide",
+    "description": "How progress payment schedules and deposit limits work under Australian residential building contracts, and how to check you're not overpaying for incomplete work.",
+    "keywords": [
+      "progress payment guide avoid paying ahead",
+      "deposit limits australian building contracts",
+      "progress payment schedule how it works au",
+      "check not overpaying incomplete work australia",
+      "au progress payments deposit limits guide"
+    ]
+  },
+  {
+    "title": "Renovating a Pre-1978 Home? What the EPA's Lead RRP Rule Actually Requires",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/us-epa-lead-rrp-rule-pre-1978-homes",
+    "description": "The EPA's Renovation, Repair, and Painting Rule requires certified contractors and lead-safe practices in pre-1978 homes. What to check before work starts.",
+    "keywords": [
+      "renovating pre 1978 home epa lead rrp rule",
+      "epa renovation repair painting rule requirements",
+      "certified contractors lead safe practices pre 1978",
+      "what to check before work starts lead rule",
+      "us epa lead rrp rule pre 1978 homes"
+    ]
+  },
+  {
+    "title": "Structural Defect Your Builder Won't Fix? The DBDRV and NSW Fair Trading Process",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/au-dbdrv-nsw-fair-trading-dispute-process",
+    "description": "How government-run building dispute resolution works in Victoria (DBDRV) and NSW (Fair Trading) before you can escalate to VCAT or NCAT.",
+    "keywords": [
+      "structural defect builder won't fix dbdrv",
+      "government run building dispute resolution victoria nsw",
+      "dbdrv nsw fair trading before vcat ncat",
+      "builder wont fix structural defect australia",
+      "au dbdrv nsw fair trading dispute process"
+    ]
+  },
+  {
+    "title": "How to Audit Your Contractor's License Before You Sign Anything",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/us-audit-contractor-license-cslb",
+    "description": "How to check a contractor's license status, bond, and complaint history before hiring, and what happens legally when a contractor works without a license.",
+    "keywords": [
+      "audit contractor license before you sign",
+      "check contractor license status bond complaint history",
+      "what happens contractor works without license",
+      "contractor license audit guide us",
+      "us audit contractor license cslb"
+    ]
+  },
+  {
+    "title": "The PACE Loan Trap: What to Know Before Financing Solar or Insulation Through Your Property Taxes",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/us-pace-loan-trap-property-tax-financing",
+    "description": "How PACE loans attach to your property tax bill, why they can complicate selling your home, and new federal protections taking effect in 2026.",
+    "keywords": [
+      "pace loan trap property tax financing",
+      "pace loans attach property tax bill",
+      "pace loan complicate selling home",
+      "new federal pace protections 2026",
+      "us pace loan trap property tax financing"
+    ]
+  },
+  {
+    "title": "Why an Uninsured Contractor's Injury Could Become Your Legal Problem",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/us-homeowner-liability-uninsured-contractor-injury",
+    "description": "How a lack of workers' compensation insurance on your contractor can shift liability for a worksite injury onto you as the homeowner, and how to protect yourself.",
+    "keywords": [
+      "uninsured contractor injury your legal problem",
+      "workers compensation insurance contractor liability shift",
+      "worksite injury liability homeowner",
+      "protect yourself uninsured contractor injury",
+      "us homeowner liability uninsured contractor injury"
+    ]
+  },
+  {
+    "title": "No FENSA or Gas Safe Certificate? Why It Could Delay Selling Your Home",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/uk-fensa-gas-safe-regularisation-certificate",
+    "description": "Why UK homes need FENSA certificates for windows and Gas Safe registration for boiler work, and how to get a retrospective compliance certificate if you're missing one.",
+    "keywords": [
+      "no fensa gas safe certificate delay selling",
+      "uk homes fensa windows gas safe boiler",
+      "retrospective compliance certificate missing uk",
+      "fensa gas safe certificate selling home uk",
+      "uk fensa gas safe regularisation certificate"
+    ]
+  },
+  {
+    "title": "How to Build an Extension Without Ending Up in Court With Your Neighbour",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/uk-party-wall-act-1996-guide",
+    "description": "A practical guide to the Party Wall Act 1996 — when you need to serve notice, the 3m and 6m excavation rules, notice periods, and what happens if your neighbour objects.",
+    "keywords": [
+      "build extension without court neighbour uk",
+      "party wall act 1996 practical guide",
+      "when to serve notice party wall",
+      "3m 6m excavation rules party wall",
+      "uk party wall act 1996 guide"
+    ]
+  },
+  {
+    "title": "Dealing With a Cowboy Builder: Your Rights Under the Consumer Rights Act 2015",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/uk-cowboy-builders-consumer-rights-act",
+    "description": "How to legally challenge substandard or abandoned building work in the UK, the tiered remedy system under the Consumer Rights Act 2015, and when to use the small claims track.",
+    "keywords": [
+      "dealing with cowboy builder uk rights",
+      "consumer rights act 2015 substandard building work",
+      "challenge abandoned building work uk",
+      "tiered remedy system cowboy builder",
+      "uk cowboy builders consumer rights act"
+    ]
+  },
+  {
+    "title": "CDM 2015 and Your Home Renovation: Who's Actually Responsible for Site Safety",
+    "type": "blog",
+    "block": "home-renovations-services",
+    "url": "/blog/uk-cdm-2015-domestic-client-duties",
+    "description": "Homeowners have legal duties under the CDM 2015 construction safety regulations — but they transfer automatically to your contractor in almost every case. Here's how.",
+    "keywords": [
+      "cdm 2015 home renovation site safety",
+      "homeowner legal duties construction safety regulations",
+      "duties transfer automatically to contractor",
+      "who is responsible site safety renovation uk",
+      "uk cdm 2015 domestic client duties"
+    ]
+  },
+  {
+    "title": "Government Complaint & Evidence Pack",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/government-complaint-evidence-pack",
+    "description": "A complete file for a complaint against a government agency: issue details, timeline, communications log, documents checklist, and requested resolution. PDF + Word.",
+    "keywords": [
+      "government complaint evidence pack",
+      "complete file complaint government agency",
+      "issue details timeline communications log template",
+      "documents checklist requested resolution government",
+      "government complaint evidence pdf word"
+    ]
+  },
+  {
+    "title": "Administrative Application Tracker",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/administrative-application-tracker",
+    "description": "Track any administrative application (permits, licences, visas, filings) with automatic day-count calculations for time since submission and days until deadline, plus a status summary dashboard. Excel.",
+    "keywords": [
+      "administrative application tracker",
+      "track permits licences visas filings",
+      "day count calculation submission deadline",
+      "status summary dashboard applications",
+      "administrative application tracker excel"
+    ]
+  },
+  {
+    "title": "Government Correspondence & Communication Log",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/government-correspondence-communication-log",
+    "description": "A master chronological log of every call, email, letter, and meeting with any government agency, across every issue at once. Excel.",
+    "keywords": [
+      "government correspondence communication log",
+      "master chronological log calls emails letters",
+      "every meeting government agency log",
+      "across every issue at once tracker",
+      "government correspondence log excel"
+    ]
+  },
+  {
+    "title": "Public Benefits/Assistance Application Pack",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/public-benefits-assistance-application-pack",
+    "description": "Organize a benefits or assistance application: eligibility checklist, required documentation, income/data summary, submission log, and status tracking. PDF + Word.",
+    "keywords": [
+      "public benefits assistance application pack",
+      "organize benefits assistance application",
+      "eligibility checklist required documentation benefits",
+      "income data summary submission log",
+      "benefits application pack pdf word"
+    ]
+  },
+  {
+    "title": "Administrative Decision Review & Appeal Evidence Pack",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/administrative-decision-review-appeal-evidence-pack",
+    "description": "For challenging a government decision already received in writing: grounds for appeal, evidence log, appeal steps and deadlines, and outcome tracking. PDF + Word.",
+    "keywords": [
+      "administrative decision review appeal evidence pack",
+      "challenge government decision received writing",
+      "grounds for appeal evidence log template",
+      "appeal steps deadlines outcome tracking",
+      "administrative appeal evidence pdf word"
+    ]
+  },
+  {
+    "title": "Public Service Billing & Payment Dispute Pack",
+    "type": "template",
+    "block": "public-services-administration",
+    "url": "/templates/public-service-billing-payment-dispute-pack",
+    "description": "Dispute a government fee, fine, or charge: payment proof log, dispute reasoning, communications, and resolution tracking. PDF + Word.",
+    "keywords": [
+      "public service billing payment dispute pack",
+      "dispute government fee fine charge",
+      "payment proof log dispute reasoning template",
+      "communications resolution tracking government dispute",
+      "public service billing dispute pdf word"
+    ]
+  },
+  {
+    "title": "Government Complaint Letter Generator",
+    "type": "generator",
+    "block": "public-services-administration",
+    "url": "/generate/government-complaint-letter-generator",
+    "description": "Generate a formal complaint letter to a government agency — an initial complaint, or an escalation of one that went unanswered. Free.",
+    "keywords": [
+      "government complaint letter generator",
+      "formal complaint letter government agency",
+      "initial complaint escalation unanswered letter",
+      "free government complaint letter generator",
+      "complain to government agency letter"
+    ]
+  },
+  {
+    "title": "Administrative Appeal, Review & Decision Response Generator",
+    "type": "generator",
+    "block": "public-services-administration",
+    "url": "/generate/administrative-appeal-review-decision-response-generator",
+    "description": "Generate a formal response to a government decision — appeal it, request an extension or payment plan, ask for clarification, or provide requested information. Free.",
+    "keywords": [
+      "administrative appeal review decision response generator",
+      "formal response government decision appeal",
+      "request extension payment plan clarification letter",
+      "provide requested information government letter",
+      "free administrative appeal generator"
+    ]
+  },
+  {
+    "title": "Administrative Information Request Generator",
+    "type": "generator",
+    "block": "public-services-administration",
+    "url": "/generate/administrative-information-request-generator",
+    "description": "Generate a formal information or records request to a government agency — a routine request, a Freedom of Information request, or a data/privacy access request. Free.",
+    "keywords": [
+      "administrative information request generator",
+      "formal information records request government agency",
+      "freedom of information request generator free",
+      "data privacy access request government letter",
+      "foi request letter generator"
+    ]
+  },
+  {
+    "title": "FOIA / Public Records Request Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/foia-public-records-request-checklist",
+    "description": "A free checklist: request the right agency, describe records specifically, and track a public records or FOIA request through to a response. No account required.",
+    "keywords": [
+      "foia public records request checklist",
+      "request right agency describe records specifically",
+      "track public records request to response",
+      "foia request checklist free",
+      "public records request checklist"
+    ]
+  },
+  {
+    "title": "Administrative Appeal Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/administrative-appeal-checklist",
+    "description": "A free checklist: confirm the deadline, gather your evidence, and check the process before you file an appeal against a government decision. No account required.",
+    "keywords": [
+      "administrative appeal checklist",
+      "confirm deadline gather evidence appeal process",
+      "file appeal government decision checklist",
+      "administrative appeal preparation checklist",
+      "appeal government decision checklist"
+    ]
+  },
+  {
+    "title": "Government Benefits Denial Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/government-benefits-denial-checklist",
+    "description": "A free checklist: understand exactly why your benefits claim was denied, verify the evidence, and check your appeal rights before you respond. No account required.",
+    "keywords": [
+      "government benefits denial checklist",
+      "understand why benefits claim denied",
+      "verify evidence check appeal rights benefits",
+      "benefits denial response checklist",
+      "benefits claim denied checklist"
+    ]
+  },
+  {
+    "title": "Government Website Accessibility Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/government-website-accessibility-checklist",
+    "description": "A free checklist: check a government website's visual display, navigation, forms, and alternative access before you rely on it. No account required.",
+    "keywords": [
+      "government website accessibility checklist",
+      "check government website visual display navigation",
+      "forms alternative access government site",
+      "government site accessibility before you rely",
+      "accessibility checklist government website"
+    ]
+  },
+  {
+    "title": "Government Digital Identity Recovery Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/government-digital-identity-recovery-checklist",
+    "description": "A free checklist: document the failure, try the official recovery process, and know what to do next if you're locked out of a government digital ID account. No account required.",
+    "keywords": [
+      "government digital identity recovery checklist",
+      "document failure official recovery process id",
+      "locked out government id account checklist",
+      "digital identity recovery steps government",
+      "government id account recovery checklist"
+    ]
+  },
+  {
+    "title": "Public Procurement Bid Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/public-procurement-bid-checklist",
+    "description": "A free checklist for businesses: confirm registration, certifications, financial documentation, and submission requirements before you bid on a public contract. No account required.",
+    "keywords": [
+      "public procurement bid checklist for businesses",
+      "confirm registration certifications before bidding",
+      "financial documentation submission requirements procurement",
+      "bid on public contract checklist",
+      "public procurement bid preparation checklist"
+    ]
+  },
+  {
+    "title": "Public Administration Delay Checklist",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/public-administration-delay-checklist",
+    "description": "A free checklist: establish the timeline, check the legal deadline, and know your options when a government agency is taking too long to respond. No account required.",
+    "keywords": [
+      "public administration delay checklist",
+      "establish timeline check legal deadline agency",
+      "government agency taking too long checklist",
+      "options when agency delays response",
+      "public administration delay response checklist"
+    ]
+  },
+  {
+    "title": "Evidence Collection Checklist for Government Complaints",
+    "type": "checklist",
+    "block": "public-services-administration",
+    "url": "/checklists/evidence-collection-government-complaints-checklist",
+    "description": "A free checklist: build the habit of saving documents, digital records, and communications from day one, before you know if you'll need to complain. No account required.",
+    "keywords": [
+      "evidence collection checklist government complaints",
+      "build habit saving documents digital records",
+      "communications from day one complaint prep",
+      "evidence collection before you complain government",
+      "government complaint evidence collection checklist"
+    ]
+  },
+  {
+    "title": "Freedom of Information Authorities",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#freedom-of-information-authorities-directory",
+    "description": "The body that oversees public records law — not always the one you actually send a request to.",
+    "keywords": [
+      "freedom of information authorities directory",
+      "body oversees public records law",
+      "foi oversight authority by country",
+      "who oversees foia public records law",
+      "freedom of information authority directory"
+    ]
+  },
+  {
+    "title": "Administrative Ombudsman Directory",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#administrative-ombudsman-directory",
+    "description": "Independent review of a complaint that hasn't been resolved directly with the agency — distinct from Section 3's first-line agency complaint channels.",
+    "keywords": [
+      "administrative ombudsman directory",
+      "independent review unresolved agency complaint",
+      "ombudsman vs first line agency complaint",
+      "administrative ombudsman by country directory",
+      "independent government complaint review directory"
+    ]
+  },
+  {
+    "title": "Government Complaint Offices",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#government-complaint-offices-directory",
+    "description": "Direct complaint intake at the agency level — this is the first-line channel, distinct from Section 2's independent ombudsman review, which typically comes after a direct complaint hasn't resolved things. These are not duplicates of the Section 2 entries.",
+    "keywords": [
+      "government complaint offices directory",
+      "direct complaint intake agency level",
+      "first line government complaint channel",
+      "where to file first government complaint",
+      "government complaint office by country"
+    ]
+  },
+  {
+    "title": "Public Procurement Portals",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#public-procurement-portals-directory",
+    "description": "Find government contract opportunities and published tender notices.",
+    "keywords": [
+      "public procurement portals directory",
+      "government contract opportunities tender notices",
+      "find public tender directory by country",
+      "government procurement portal directory",
+      "published tender notices government"
+    ]
+  },
+  {
+    "title": "Government Accessibility Complaint Authorities",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#government-accessibility-complaint-authorities-directory",
+    "description": "Report a government website or digital service that isn't accessible.",
+    "keywords": [
+      "government accessibility complaint authorities directory",
+      "report inaccessible government website",
+      "digital service accessibility complaint body",
+      "government accessibility authority by country",
+      "report government site accessibility issue"
+    ]
+  },
+  {
+    "title": "Administrative Appeals Tribunals",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#administrative-appeals-tribunals-directory",
+    "description": "Formally appeal a government decision to an independent tribunal.",
+    "keywords": [
+      "administrative appeals tribunals directory",
+      "formally appeal government decision tribunal",
+      "independent tribunal government decision appeal",
+      "administrative appeals tribunal by country",
+      "appeal government decision independent body"
+    ]
+  },
+  {
+    "title": "Open Data & Transparency Portals",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#open-data-transparency-portals-directory",
+    "description": "Search official government datasets and public spending records.",
+    "keywords": [
+      "open data transparency portals directory",
+      "official government datasets public spending",
+      "search government open data by country",
+      "public spending records transparency portal",
+      "government transparency portal directory"
+    ]
+  },
+  {
+    "title": "Digital Identity Services Directory",
+    "type": "directory",
+    "block": "public-services-administration",
+    "url": "/directory/public-services-administration#digital-identity-services-directory",
+    "description": "The official digital identity system for accessing government services online.",
+    "keywords": [
+      "digital identity services directory",
+      "official digital identity system government",
+      "access government services online id",
+      "government digital id system by country",
+      "digital identity service directory"
+    ]
+  },
+  {
+    "title": "ADA Title II Web Accessibility: What Cities and States Actually Need to Comply With",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/us-ada-title-ii-wcag-web-accessibility",
+    "description": "The DOJ's Title II web accessibility rule requires WCAG 2.1 AA, not 2.2 — and just extended its deadlines by a year. What local governments and residents need to know.",
+    "keywords": [
+      "ada title ii web accessibility cities states",
+      "doj title ii rule wcag 2.1 aa",
+      "web accessibility deadline extended year",
+      "local government resident accessibility requirements",
+      "us ada title ii wcag web accessibility"
+    ]
+  },
+  {
+    "title": "How to Appeal Excessive FOIA Redactions Under Exemptions 5 and 7",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/us-foia-appeal-exemption-5-7-redactions",
+    "description": "How to challenge an agency's overuse of the deliberative process privilege and law enforcement exemptions in a FOIA response, step by step.",
+    "keywords": [
+      "appeal excessive foia redactions exemptions 5 7",
+      "challenge deliberative process privilege foia",
+      "law enforcement exemption foia response",
+      "foia redaction appeal step by step",
+      "us foia appeal exemption 5 7 redactions"
+    ]
+  },
+  {
+    "title": "When an Algorithm Cuts Your Medicaid: Your Due Process Rights",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/us-algorithm-medicaid-benefits-due-process",
+    "description": "Real court cases where state benefits algorithms were found to violate due process rights, and how to demand a specific, human-reviewable explanation for a benefits cut.",
+    "keywords": [
+      "algorithm cuts medicaid due process rights",
+      "state benefits algorithm violate due process",
+      "demand human reviewable benefits explanation",
+      "court cases benefits algorithm due process",
+      "us algorithm medicaid benefits due process"
+    ]
+  },
+  {
+    "title": "Federal Contracting for Small Businesses: What SAM.gov Set-Asides Actually Require",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/us-sam-gov-small-business-set-asides",
+    "description": "Why self-certifying as a small business on SAM.gov is no longer enough for set-aside contracts, and what real SBA certification now requires.",
+    "keywords": [
+      "federal contracting small businesses sam.gov set asides",
+      "self certifying small business no longer enough",
+      "sba certification set aside contracts requirements",
+      "sam.gov set aside contract requirements",
+      "us sam gov small business set asides"
+    ]
+  },
+  {
+    "title": "The Hatch Act: What Public Employees Can and Can't Do Politically",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/us-hatch-act-political-activity-limits",
+    "description": "Who the Hatch Act actually covers, what counts as a violation, and the current inflation-adjusted penalty — which is higher than the figure most training materials still cite.",
+    "keywords": [
+      "hatch act public employees political activity",
+      "who hatch act actually covers violation",
+      "inflation adjusted hatch act penalty",
+      "hatch act political activity limits",
+      "us hatch act political activity limits"
+    ]
+  },
+  {
+    "title": "The Procurement Act 2023: What Suppliers Actually Need to Do Differently",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/uk-procurement-act-2023-transition-guide",
+    "description": "How the UK's Procurement Act 2023 changed public tendering since February 2025 — the Central Digital Platform, pipeline notices, and social value scoring.",
+    "keywords": [
+      "procurement act 2023 suppliers need to do",
+      "uk public tendering changed february 2025",
+      "central digital platform pipeline notices",
+      "social value scoring procurement act",
+      "uk procurement act 2023 transition guide"
+    ]
+  },
+  {
+    "title": "What a Section 114 Notice Actually Means for Your Local Services",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/uk-section-114-notice-council-services",
+    "description": "Councils can't legally go bankrupt, but a Section 114 notice still triggers real spending controls. What's protected, what isn't, and what it means for unpaid suppliers.",
+    "keywords": [
+      "section 114 notice local services meaning",
+      "councils cant legally go bankrupt uk",
+      "section 114 spending controls triggered",
+      "what it means unpaid suppliers council",
+      "uk section 114 notice council services"
+    ]
+  },
+  {
+    "title": "IR35 and Public Sector Contracts: Why There's No Small-Client Exemption",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/uk-ir35-public-sector-cest-tool",
+    "description": "Why every public sector body must determine your IR35 status regardless of its size, how the CEST tool actually works, and what evidence supports an outside-IR35 case.",
+    "keywords": [
+      "ir35 public sector contracts small client exemption",
+      "public sector body determine ir35 status",
+      "cest tool how it actually works",
+      "evidence supports outside ir35 case",
+      "uk ir35 public sector cest tool"
+    ]
+  },
+  {
+    "title": "NHS or Government Complaint Stuck at the Ombudsman? Here's the Real Process",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/uk-ombudsman-mp-filter-nhs-complaints",
+    "description": "NHS complaints to the Ombudsman never needed an MP referral — that requirement only ever applied to government department complaints, and it's now being phased out.",
+    "keywords": [
+      "nhs government complaint stuck ombudsman",
+      "nhs complaints never needed mp referral",
+      "mp filter government department complaints",
+      "phased out mp referral requirement uk",
+      "uk ombudsman mp filter nhs complaints"
+    ]
+  },
+  {
+    "title": "Facial Recognition Cameras in Public: Your Rights Under UK GDPR",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/uk-facial-recognition-cctv-dpia-gdpr",
+    "description": "What the Bridges case established about police facial recognition, why a DPIA is legally required before deployment, and how to challenge a council or police use of it.",
+    "keywords": [
+      "facial recognition cameras public uk gdpr rights",
+      "bridges case police facial recognition",
+      "dpia legally required before deployment",
+      "challenge council police facial recognition use",
+      "uk facial recognition cctv dpia gdpr"
+    ]
+  },
+  {
+    "title": "Public Algorithms Under the EU AI Act: The Deadline Just Moved to 2027",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/eu-ai-act-public-administration-high-risk",
+    "description": "High-risk AI obligations for public administration systems — benefits, employment, border control — were delayed from August 2026 to December 2027. What this means right now.",
+    "keywords": [
+      "public algorithms eu ai act deadline 2027",
+      "high risk ai obligations public administration",
+      "benefits employment border control ai delayed",
+      "eu ai act public administration deadline moved",
+      "eu ai act public administration high risk"
+    ]
+  },
+  {
+    "title": "The \"Once-Only\" Principle: What EU Rules Actually Require Governments to Reuse",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/eu-once-only-principle-single-digital-gateway",
+    "description": "The EU's once-only principle for citizen data is narrower than most people assume — it's a cross-border rule for 21 procedures, not a blanket domestic right.",
+    "keywords": [
+      "once only principle eu rules governments reuse",
+      "eu once only principle citizen data narrower",
+      "cross border rule 21 procedures not domestic",
+      "single digital gateway once only eu",
+      "eu once only principle single digital gateway"
+    ]
+  },
+  {
+    "title": "The Pay Transparency Deadline Passed — And Your Country Probably Missed It",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/eu-pay-transparency-directive-public-sector",
+    "description": "Only 4 of 27 EU states transposed the Pay Transparency Directive by the June 2026 deadline. If you work in the public sector, you may still be able to invoke it directly.",
+    "keywords": [
+      "pay transparency deadline passed country missed it",
+      "only 4 of 27 eu states transposed directive",
+      "pay transparency directive public sector invoke",
+      "june 2026 pay transparency deadline eu",
+      "eu pay transparency directive public sector"
+    ]
+  },
+  {
+    "title": "The Contract-Splitting Trap: How EU Law Stops Authorities Gaming Procurement Thresholds",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/eu-contract-splitting-procurement-thresholds",
+    "description": "Splitting a large public contract into smaller pieces to avoid EU tendering rules is explicitly illegal under Directive 2014/24/EU — with a real, costly Spanish case to prove it.",
+    "keywords": [
+      "contract splitting trap eu procurement thresholds",
+      "splitting public contract avoid eu tendering rules",
+      "directive 2014/24/eu contract splitting illegal",
+      "spanish case contract splitting procurement",
+      "eu contract splitting procurement thresholds"
+    ]
+  },
+  {
+    "title": "Administrative Silence: When No Response Actually Means Yes",
+    "type": "blog",
+    "block": "public-services-administration",
+    "url": "/blog/eu-administrative-silence-positive-negative",
+    "description": "How positive and negative administrative silence work when a government agency doesn't respond in time — using Spain's rules as a detailed example, since this varies by EU country.",
+    "keywords": [
+      "administrative silence no response means yes",
+      "positive negative administrative silence eu",
+      "government agency doesnt respond in time",
+      "spain rules administrative silence example",
+      "eu administrative silence positive negative"
+    ]
   }
 ]
