@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/employment/calculators/notice-period-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Notice Period Calculator — How Much Notice Am I Entitled To? | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator for your statutory minimum notice period — UK Employment Rights Act 1996 by length of service, US WARN Act for mass layoffs, and general guidance for the rest of the EU.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Notice Period Calculator — How Much Notice Am I Entitled To?">
+<meta property="og:description" content="Free calculator for your statutory minimum notice period — UK statutory notice by length of service, US WARN Act, and general EU guidance.">
+<meta property="og:url" content="https://www.getkibbo.com/employment/calculators/notice-period-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notice Period Calculator — How Much Notice Am I Entitled To?">
+<meta name="twitter:description" content="Free calculator for your statutory minimum notice period — UK statutory notice by length of service, US WARN Act, and general EU guidance.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Notice Period Calculator", "item": "https://www.getkibbo.com/employment/calculators/notice-period-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Notice Period Calculator",
+      "url": "https://www.getkibbo.com/employment/calculators/notice-period-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator for statutory minimum notice period — UK Employment Rights Act 1996 by length of service, US WARN Act for qualifying mass layoffs, and general guidance for other EU countries.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<style>
+  .calc-section-sub { font-family: var(--font-sans); font-size: 14px; color: var(--text-muted); margin-bottom: 4px; }
+  .calc-two-col { display: flex; gap: 12px; }
+  .calc-two-col > div { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on AI-generated scams.</div>
+            </div>
+            <a href="/investigations/ai-scam-playbook-2026" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Notice period calculator</h1>
+    <p class="section-subtitle">How much notice am I entitled to? Check your statutory minimum — UK service-based notice, US WARN Act, or general guidance for the rest of the EU.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="npCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="npCountry">Where do you work?</label>
+        <select class="calc-select" id="npCountry">
+          <option value="" disabled selected>Select one</option>
+          <option value="uk">United Kingdom</option>
+          <option value="us">United States</option>
+          <option value="eu">Other / EU</option>
+        </select>
+      </div>
+
+      <!-- UK FIELDS -->
+      <div class="calc-field" id="npUkDirectionField" hidden>
+        <label class="calc-label" id="npUkDirectionLabel">Who's giving notice?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="npUkDirectionLabel">
+          <label class="calc-radio-option"><input type="radio" name="npUkDirection" value="employer" checked> My employer is giving me notice</label>
+          <label class="calc-radio-option"><input type="radio" name="npUkDirection" value="resign"> I'm resigning</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="npUkServiceModeField" hidden>
+        <label class="calc-label" id="npUkServiceModeLabel">Length of service</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="npUkServiceModeLabel">
+          <label class="calc-radio-option"><input type="radio" name="npUkServiceMode" value="duration" checked> I know my length of service</label>
+          <label class="calc-radio-option"><input type="radio" name="npUkServiceMode" value="startdate"> I have my start date</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="npUkDurationField" hidden>
+        <label class="calc-label">Length of service</label>
+        <div class="calc-two-col">
+          <div>
+            <input class="calc-input" type="number" inputmode="numeric" min="0" step="1" id="npUkYears" placeholder="Years">
+          </div>
+          <div>
+            <input class="calc-input" type="number" inputmode="numeric" min="0" max="11" step="1" id="npUkMonths" placeholder="Months">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-field" id="npUkStartDateField" hidden>
+        <label class="calc-label" for="npUkStartDate">Employment start date</label>
+        <input class="calc-input" type="date" id="npUkStartDate">
+      </div>
+
+      <div class="calc-field" id="npUkNoticeStartField" hidden>
+        <label class="calc-label" for="npUkNoticeStart">Date notice was (or would be) given — optional, for your last working day</label>
+        <input class="calc-input" type="date" id="npUkNoticeStart">
+      </div>
+
+      <!-- US FIELDS -->
+      <div class="calc-field" id="npUsSizeField" hidden>
+        <label class="calc-label" for="npUsSize">Employer size</label>
+        <select class="calc-select" id="npUsSize">
+          <option value="" disabled selected>Select one</option>
+          <option value="small">Fewer than 100 employees</option>
+          <option value="large">100 or more employees</option>
+        </select>
+      </div>
+
+      <div class="calc-field" id="npUsLayoffField" hidden>
+        <label class="calc-label" for="npUsLayoff">Is this part of a mass layoff or plant closing affecting 50+ people at one site?</label>
+        <select class="calc-select" id="npUsLayoff">
+          <option value="notsure" selected>Not sure</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <p class="calc-error" id="npCalcError" hidden>Please fill in the required fields above before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my notice period</button>
+    </form>
+
+    <div class="calc-result" id="npCalcResult" hidden>
+      <div class="calc-result-figure" id="npResultFigure"></div>
+      <div class="calc-result-headline" id="npResultHeadline"></div>
+      <div class="calc-result-context" id="npResultContext"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Notice Period Calculator.
+// Three jurisdiction paths, structurally independent:
+//   UK  -- Employment Rights Act 1996 s.86, fully computed from length of
+//          service + direction (employer-notice scales with complete years,
+//          capped at 12 weeks; resignation is a flat 1 week regardless of
+//          service length once past the 1-month threshold -- NOT the same
+//          scale as employer-notice, a common point of confusion).
+//   US  -- no general federal notice requirement for ordinary at-will
+//          termination. WARN Act (60 days) only when employer size AND
+//          layoff-scale inputs both qualify; otherwise 0 days federal
+//          minimum, explained via the at-will default rather than left
+//          looking like an error state.
+//   EU  -- informational only, no computed number. National law varies, and
+//          within a country it can vary again by collective bargaining
+//          agreement -- deliberately not inventing a per-country figure.
+(function () {
+  'use strict';
+
+  var form = document.getElementById('npCalcForm');
+  var countrySelect = document.getElementById('npCountry');
+
+  var ukDirectionField = document.getElementById('npUkDirectionField');
+  var ukServiceModeField = document.getElementById('npUkServiceModeField');
+  var ukDurationField = document.getElementById('npUkDurationField');
+  var ukStartDateField = document.getElementById('npUkStartDateField');
+  var ukNoticeStartField = document.getElementById('npUkNoticeStartField');
+  var ukYearsInput = document.getElementById('npUkYears');
+  var ukMonthsInput = document.getElementById('npUkMonths');
+  var ukStartDateInput = document.getElementById('npUkStartDate');
+  var ukNoticeStartInput = document.getElementById('npUkNoticeStart');
+
+  var usSizeField = document.getElementById('npUsSizeField');
+  var usLayoffField = document.getElementById('npUsLayoffField');
+  var usSizeSelect = document.getElementById('npUsSize');
+  var usLayoffSelect = document.getElementById('npUsLayoff');
+
+  var errorEl = document.getElementById('npCalcError');
+  var resultEl = document.getElementById('npCalcResult');
+  var figureEl = document.getElementById('npResultFigure');
+  var headlineEl = document.getElementById('npResultHeadline');
+  var contextEl = document.getElementById('npResultContext');
+
+  function radioValue(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  function setHidden(country) {
+    var isUK = country === 'uk', isUS = country === 'us';
+    ukDirectionField.hidden = !isUK;
+    ukServiceModeField.hidden = !isUK;
+    ukNoticeStartField.hidden = !isUK;
+    if (isUK) {
+      var isDuration = radioValue('npUkServiceMode') === 'duration';
+      ukDurationField.hidden = !isDuration;
+      ukStartDateField.hidden = isDuration;
+    } else {
+      ukDurationField.hidden = true;
+      ukStartDateField.hidden = true;
+    }
+    usSizeField.hidden = !isUS;
+    usLayoffField.hidden = !isUS;
+  }
+
+  countrySelect.addEventListener('change', function () { setHidden(countrySelect.value); });
+  form.querySelectorAll('input[name="npUkServiceMode"]').forEach(function (r) {
+    r.addEventListener('change', function () { setHidden(countrySelect.value); });
+  });
+
+  function parseDateInput(value) {
+    var parts = value.split('-');
+    return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+  }
+
+  // Whole completed months between two dates (never negative).
+  function monthsBetween(start, end) {
+    var months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+    if (end.getDate() < start.getDate()) months--;
+    return Math.max(0, months);
+  }
+
+  function fmtDate(d) {
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function calculateUK(direction, serviceMonths) {
+    var completeYears = Math.floor(serviceMonths / 12);
+    var weeks;
+    if (direction === 'employer') {
+      if (serviceMonths < 1) weeks = 0;
+      else if (serviceMonths < 24) weeks = 1;
+      else weeks = Math.min(completeYears, 12);
+    } else {
+      weeks = serviceMonths < 1 ? 0 : 1;
+    }
+    return { weeks: weeks, completeYears: completeYears, serviceMonths: serviceMonths };
+  }
+
+  function renderUK(direction, r) {
+    figureEl.textContent = r.weeks + (r.weeks === 1 ? ' week' : ' weeks');
+
+    var noticeStartVal = ukNoticeStartInput.value;
+    if (noticeStartVal && r.weeks > 0) {
+      var start = parseDateInput(noticeStartVal);
+      var lastDay = new Date(start.getTime());
+      lastDay.setDate(lastDay.getDate() + r.weeks * 7);
+      headlineEl.textContent = 'Last working day: ' + fmtDate(lastDay);
+    } else if (direction === 'employer' && r.serviceMonths >= 24) {
+      headlineEl.textContent = 'Based on ' + r.completeYears + ' complete ' + (r.completeYears === 1 ? 'year' : 'years') + ' of service';
+    } else {
+      headlineEl.textContent = '';
+    }
+
+    var ctx = '';
+    if (r.serviceMonths < 1) {
+      ctx += '<p>With under 1 month of service, there\'s no statutory minimum notice under UK law yet — though your contract may still promise something even at this stage; check its wording.</p>';
+    } else if (direction === 'employer') {
+      if (r.serviceMonths >= 24 && r.completeYears >= 12) {
+        ctx += '<p>Once you reach 12 years of service, statutory notice from your employer is capped at 12 weeks — it doesn\'t keep increasing beyond that, even with more years of service.</p>';
+      } else if (r.serviceMonths >= 24) {
+        ctx += '<p>Under the Employment Rights Act 1996, s.86, you\'re entitled to 1 week\'s notice per complete year of service once you pass 2 years — partial years don\'t count, which is why this rounds down.</p>';
+      } else {
+        ctx += '<p>Under the Employment Rights Act 1996, s.86, anyone with 1 month to under 2 years of service is entitled to a flat 1 week\'s notice from their employer.</p>';
+      }
+    } else {
+      ctx += '<p>When you resign, UK statutory notice is a flat 1 week once you\'ve passed 1 month of service — this does <strong>not</strong> scale with years of service the way employer-given notice does. Someone with 2 months and someone with 10 years both owe the same 1 week statutory minimum when resigning.</p>';
+    }
+    ctx += '<p>This is the <strong>legal minimum only</strong> — your actual contract may specify longer notice, and if it does, the longer figure applies. A contract can never lawfully give you less than this statutory minimum.</p>';
+    contextEl.innerHTML = ctx;
+  }
+
+  function renderUS(size, layoff) {
+    var warnApplies = size === 'large' && layoff === 'yes';
+
+    if (warnApplies) {
+      figureEl.textContent = '60 days';
+      headlineEl.textContent = 'The federal WARN Act applies';
+      contextEl.innerHTML =
+        '<p>Based on your answers, this looks like a WARN Act-covered plant closing or mass layoff: an employer with 100+ employees affecting 50+ people at one site. Federal law requires at least 60 calendar days\' advance written notice in this situation.</p>' +
+        '<p>Some states have their own "mini-WARN" laws that can require more than 60 days, or apply to smaller employers than the federal threshold — California, Illinois, New Jersey, and New York are known to have their own stricter mini-WARN laws. We\'re not stating each state\'s exact figure here since that needs its own dedicated verification pass; check your specific state\'s law if you\'re in one of these (or any other state).</p>';
+    } else {
+      figureEl.textContent = '0 days required by federal law';
+      headlineEl.textContent = 'At-will employment — notice is the exception, not the rule';
+      contextEl.innerHTML =
+        '<p>Most US employment is "at-will," meaning in the ordinary case — a single employee let go, not a mass layoff — there is no federal law requiring any advance notice before termination. Zero days is legally sufficient in most cases, which often surprises people used to UK- or EU-style notice rights.</p>' +
+        '<p>The exception is the federal WARN Act, which only applies to larger employers (100+ employees) conducting a qualifying plant closing or mass layoff — based on your answers, that doesn\'t appear to be your situation. Some states or specific employment contracts may still require notice or provide severance even where WARN doesn\'t apply, so check both.</p>';
+    }
+  }
+
+  function renderEU() {
+    figureEl.textContent = 'No single EU-wide rule';
+    headlineEl.textContent = 'Check your country\'s national law and sector agreement';
+    contextEl.innerHTML =
+      '<p>Most EU countries set their own statutory notice period in national labor law — and many also depend on the applicable sector\'s collective bargaining agreement, not just national law alone. That means two workers in the same country can have different legal minimums depending on their industry, so there\'s no single number this calculator can give you across the EU.</p>' +
+      '<p>The <a href="/directory/employment#ela-rights" style="color: var(--accent-green); font-weight: 600; text-decoration: none;">European Labour Authority</a> coordinates enforcement of EU labour rights rules and is a reasonable starting point — but the specific number depends on your country and sector, not EU law directly.</p>';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var country = countrySelect.value;
+    if (!country) { errorEl.hidden = false; return; }
+
+    if (country === 'uk') {
+      var direction = radioValue('npUkDirection');
+      var serviceMode = radioValue('npUkServiceMode');
+      var serviceMonths;
+
+      if (serviceMode === 'duration') {
+        var years = parseInt(ukYearsInput.value, 10);
+        var months = parseInt(ukMonthsInput.value, 10);
+        if (isNaN(years)) years = 0;
+        if (isNaN(months)) months = 0;
+        if (ukYearsInput.value === '' && ukMonthsInput.value === '') { errorEl.hidden = false; return; }
+        serviceMonths = years * 12 + months;
+      } else {
+        if (!ukStartDateInput.value) { errorEl.hidden = false; return; }
+        var today = new Date(); today.setHours(0, 0, 0, 0);
+        serviceMonths = monthsBetween(parseDateInput(ukStartDateInput.value), today);
+      }
+
+      renderUK(direction, calculateUK(direction, serviceMonths));
+
+    } else if (country === 'us') {
+      var size = usSizeSelect.value;
+      var layoff = usLayoffSelect.value;
+      if (!size) { errorEl.hidden = false; return; }
+      renderUS(size, layoff);
+
+    } else {
+      renderEU();
+    }
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>

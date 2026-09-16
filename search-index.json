@@ -15097,5 +15097,19 @@
       "lease break fee calculator",
       "scra lease termination military"
     ]
+  },
+  {
+    "title": "Notice Period Calculator",
+    "type": "calculator",
+    "block": "employment",
+    "url": "/employment/calculators/notice-period-calculator",
+    "description": "Free calculator for your statutory minimum notice period — UK Employment Rights Act 1996 by length of service, US WARN Act for mass layoffs, and general guidance for the rest of the EU.",
+    "keywords": [
+      "notice period calculator",
+      "how much notice am i entitled to",
+      "statutory notice period uk",
+      "warn act notice period",
+      "how much notice does my employer have to give me"
+    ]
   }
 ]
