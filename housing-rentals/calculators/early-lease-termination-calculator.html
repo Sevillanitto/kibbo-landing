@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/housing-rentals/calculators/early-lease-termination-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Early Lease Termination Calculator — How Much Will Breaking My Lease Cost? | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free calculator for the worst-case cost of breaking your lease early — plus the flat termination fee alternative if your lease has one, and when the SCRA or your landlord's duty to re-rent could lower what you actually owe.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Early Lease Termination Calculator — How Much Will Breaking My Lease Cost?">
+<meta property="og:description" content="Free calculator for the worst-case cost of breaking your lease early, plus the legal exceptions that could lower what you actually owe.">
+<meta property="og:url" content="https://www.getkibbo.com/housing-rentals/calculators/early-lease-termination-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Early Lease Termination Calculator — How Much Will Breaking My Lease Cost?">
+<meta name="twitter:description" content="Free calculator for the worst-case cost of breaking your lease early, plus the legal exceptions that could lower what you actually owe.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Early Lease Termination Calculator", "item": "https://www.getkibbo.com/housing-rentals/calculators/early-lease-termination-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Early Lease Termination Calculator",
+      "url": "https://www.getkibbo.com/housing-rentals/calculators/early-lease-termination-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator for the worst-case cost of breaking a residential lease early, plus the flat-fee alternative and the legal exceptions (SCRA, landlord's duty to re-rent) that could lower actual liability.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<style>
+  .calc-section-divider { margin: 44px 0 28px; padding-top: 28px; border-top: 1px solid var(--border); }
+  .calc-section-heading { font-family: var(--font-sans); font-size: 19px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+  .calc-section-sub { font-family: var(--font-sans); font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+  .calc-currency-group { display: flex; gap: 10px; }
+  .calc-currency-group select { max-width: 90px; flex-shrink: 0; }
+
+  /* SCRA callout — deliberately NOT styled like a regular paragraph or the
+     .cap-note pattern used elsewhere: this needs to read as "stop, this
+     overrides everything above" at a glance, not as one more line of body
+     copy. Dark bg + amber accent, matching the site's .cta-block treatment
+     for "this changes the whole picture" moments. */
+  .scra-callout { background: var(--bg-dark, #141210); color: #fff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .scra-callout .scra-kicker { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-amber); margin-bottom: 8px; }
+  .scra-callout h3 { font-family: var(--font-sans); font-size: 17px; font-weight: 700; margin: 0 0 8px; color: #fff; }
+  .scra-callout p { font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.75); margin: 0; }
+
+  .legal-block { margin: 0 0 28px; }
+  .legal-block:last-child { margin-bottom: 0; }
+  .legal-block h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 700; color: var(--text-primary); margin: 0 0 8px; }
+  .legal-block p { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); margin: 0 0 8px; }
+  .legal-block p:last-child { margin-bottom: 0; }
+  .legal-block a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+  .legal-block a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on AI-generated scams.</div>
+            </div>
+            <a href="/investigations/ai-scam-playbook-2026" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Early lease termination calculator</h1>
+    <p class="section-subtitle">How much will it cost to break your lease? Get the worst-case number — then check the legal exceptions that could bring it down.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <!-- PART 1: CORE CALCULATION -->
+    <form id="ltCalcForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="ltMonthlyRent">Monthly rent</label>
+        <div class="calc-currency-group">
+          <select class="calc-select" id="ltCurrency" aria-label="Currency">
+            <option value="$">$</option>
+            <option value="£">£</option>
+            <option value="€">€</option>
+          </select>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="ltMonthlyRent" placeholder="e.g. 1500">
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" id="ltModeLabel">Months remaining on your lease</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="ltModeLabel">
+          <label class="calc-radio-option"><input type="radio" name="ltMode" value="months" checked> I know the number of months</label>
+          <label class="calc-radio-option"><input type="radio" name="ltMode" value="date"> I have my lease-end date</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="ltMonthsField">
+        <label class="calc-label" for="ltMonths">Months remaining</label>
+        <input class="calc-input" type="number" inputmode="numeric" min="0" step="1" id="ltMonths" placeholder="e.g. 6">
+      </div>
+
+      <div class="calc-field" id="ltDateField" hidden>
+        <label class="calc-label" for="ltEndDate">Lease end date</label>
+        <input class="calc-input" type="date" id="ltEndDate">
+        <span class="calc-help" id="ltDateHelp"></span>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" id="ltFlatFeeLabel">Does your lease specify a flat early termination fee?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="ltFlatFeeLabel">
+          <label class="calc-radio-option"><input type="radio" name="ltFlatFee" value="no" checked> No</label>
+          <label class="calc-radio-option"><input type="radio" name="ltFlatFee" value="yes"> Yes</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="ltFlatFeeAmountField" hidden>
+        <label class="calc-label" for="ltFlatFeeAmount">Flat termination fee amount</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="ltFlatFeeAmount" placeholder="e.g. 800">
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="ltNewTenant">Has your landlord already found (or is expected to find) a new tenant?</label>
+        <select class="calc-select" id="ltNewTenant">
+          <option value="notsure" selected>Not sure</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <p class="calc-error" id="ltCalcError" hidden>Please fill in your monthly rent and the months remaining (or a valid future lease-end date) before calculating.</p>
+
+      <button class="calc-btn" type="submit">Calculate my cost</button>
+    </form>
+
+    <div class="calc-result" id="ltCalcResult" hidden>
+      <div class="calc-result-figure" id="ltResultFigure"></div>
+      <div class="calc-result-headline" id="ltResultHeadline"></div>
+      <div class="calc-result-context" id="ltResultContext"></div>
+    </div>
+
+    <!-- PART 2: LEGAL CONTEXT -->
+    <div class="calc-section-divider">
+      <p class="calc-section-heading">Legal exceptions that could lower what you actually owe</p>
+      <p class="calc-section-sub">Three fixed situations, not jurisdiction-specific — the underlying law here is either federal (same everywhere) or too inconsistently sourced state-by-state to present as a clean table.</p>
+
+      <div class="scra-callout">
+        <span class="scra-kicker">Active-duty military?</span>
+        <h3>The calculation above may not apply to you at all</h3>
+        <p>Under the federal Servicemembers Civil Relief Act (SCRA), an active-duty service member — or an activated Reserve/National Guard member on orders over 30 days — who receives permanent-change-of-station or deployment orders of 90+ days can terminate a residential lease with <strong>no early termination fee or penalty</strong>, regardless of what the lease says. This overrides everything calculated above. You'll need to give written notice plus a copy of your military orders to your landlord; the lease then ends 30 days after the next rent payment is due following that notice.</p>
+      </div>
+
+      <div class="legal-block">
+        <h3>Your landlord's duty to re-rent ("duty to mitigate")</h3>
+        <p>Most US states legally require a landlord to make a reasonable effort to re-rent the unit once you leave early. Once a replacement tenant's rent starts, your obligation to keep paying generally stops — which is why the number above is a worst case, not necessarily what you'll actually owe.</p>
+        <p>Two independent legal sources agree that landlords in <strong>Arkansas, Florida, Mississippi, Pennsylvania, and Vermont are not required to do this by law</strong> (though a lease or local practice may still lead them to). For every other state, this is most likely required — but sources materially disagree on the specifics in a handful of states (Georgia, New Hampshire, South Dakota, Wyoming, and Minnesota among them), so we're not stating a confirmed answer for those five, or for any state not named above. Ask your landlord directly, or check your specific state's tenant rights resources.</p>
+      </div>
+
+      <div class="legal-block">
+        <h3>Other common exceptions</h3>
+        <p>Many states also allow early termination without penalty for documented domestic violence situations, or if the unit becomes legally uninhabitable — no heat, no running water, and similar — and the landlord fails to fix it within a reasonable time after notice. These exceptions vary significantly by state, so we're not listing which ones apply where.</p>
+        <p>If the uninhabitable-unit exception might apply to you, Kibbo's <a href="/checklists/habitability-issue">Habitability Issue Checklist</a> walks through documenting the problem and notifying your landlord properly before you rely on it.</p>
+      </div>
+    </div>
+
+    <a class="calc-cta" href="/generate/contract-termination-renewal-notice-generator">Ready to give notice? Generate your termination letter →</a>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Early Lease Termination Cost Calculator.
+// Part 1 is pure arithmetic (worst_case = monthly_rent x months_remaining),
+// universal to any currency/jurisdiction. Part 2 is three FIXED legal
+// blocks, not jurisdiction-selected -- SCRA is federal (same everywhere);
+// the duty-to-mitigate list is deliberately incomplete by design (only the
+// 5 states two independent sources agree are exceptions are named; every
+// other state, including the 5 where sources disagree -- GA, NH, SD, WY,
+// MN -- gets the same general "ask your landlord" framing, never a
+// confirmed per-state answer).
+(function () {
+  'use strict';
+
+  var form = document.getElementById('ltCalcForm');
+  var currencySelect = document.getElementById('ltCurrency');
+  var monthlyRentInput = document.getElementById('ltMonthlyRent');
+  var monthsField = document.getElementById('ltMonthsField');
+  var monthsInput = document.getElementById('ltMonths');
+  var dateField = document.getElementById('ltDateField');
+  var endDateInput = document.getElementById('ltEndDate');
+  var dateHelp = document.getElementById('ltDateHelp');
+  var flatFeeAmountField = document.getElementById('ltFlatFeeAmountField');
+  var flatFeeAmountInput = document.getElementById('ltFlatFeeAmount');
+  var newTenantSelect = document.getElementById('ltNewTenant');
+  var errorEl = document.getElementById('ltCalcError');
+  var resultEl = document.getElementById('ltCalcResult');
+  var figureEl = document.getElementById('ltResultFigure');
+  var headlineEl = document.getElementById('ltResultHeadline');
+  var contextEl = document.getElementById('ltResultContext');
+
+  function radioValue(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  form.querySelectorAll('input[name="ltMode"]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      var isMonths = radioValue('ltMode') === 'months';
+      monthsField.hidden = !isMonths;
+      dateField.hidden = isMonths;
+    });
+  });
+
+  form.querySelectorAll('input[name="ltFlatFee"]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      flatFeeAmountField.hidden = radioValue('ltFlatFee') !== 'yes';
+    });
+  });
+
+  function parseDateInput(value) {
+    var parts = value.split('-');
+    return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+  }
+
+  // Months remaining from a lease-end date: average month length (30.4368
+  // days), rounded UP (a partial month still counts as liability in
+  // practice), floored at a minimum of 1 so a lease ending today or very
+  // soon never shows 0 or a negative number.
+  var AVG_DAYS_PER_MONTH = 30.4368;
+
+  endDateInput.addEventListener('change', function () {
+    if (!endDateInput.value) { dateHelp.textContent = ''; return; }
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var end = parseDateInput(endDateInput.value);
+    var diffDays = Math.round((end - today) / 86400000);
+    if (diffDays <= 0) {
+      dateHelp.textContent = 'That date is today or in the past — there’s no remaining term to calculate a cost for.';
+    } else {
+      var months = Math.max(1, Math.ceil(diffDays / AVG_DAYS_PER_MONTH));
+      dateHelp.textContent = '≈ ' + months + (months === 1 ? ' month' : ' months') + ' remaining.';
+    }
+  });
+
+  function fmtMoney(n, currency) {
+    var rounded = Math.round(n * 100) / 100;
+    return currency + rounded.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  var NEW_TENANT_NOTE = {
+    yes: 'Since your landlord already has — or expects to have — a replacement tenant, your actual liability is very likely lower than the worst-case figure above: once that new tenant’s rent starts, your obligation to keep paying generally stops.',
+    no: 'Ask your landlord directly whether they plan to re-rent the unit. In most states they’re legally required to make a reasonable effort to (see below) — which would reduce your actual liability below the worst-case figure above once a new tenant is in place.',
+    notsure: 'Whether a new tenant has been found changes this a lot: once a replacement tenant’s rent starts, your obligation to keep paying generally stops in most states. Ask your landlord directly where things stand.'
+  };
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var currency = currencySelect.value;
+    var monthlyRent = parseFloat(monthlyRentInput.value);
+    var mode = radioValue('ltMode');
+    var flatFee = radioValue('ltFlatFee');
+    var newTenant = newTenantSelect.value;
+
+    if (!monthlyRent || monthlyRent <= 0) { errorEl.hidden = false; return; }
+
+    var monthsRemaining;
+    if (mode === 'months') {
+      monthsRemaining = parseInt(monthsInput.value, 10);
+      if (!monthsRemaining || monthsRemaining <= 0) { errorEl.hidden = false; return; }
+    } else {
+      if (!endDateInput.value) { errorEl.hidden = false; return; }
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      var end = parseDateInput(endDateInput.value);
+      var diffDays = Math.round((end - today) / 86400000);
+      if (diffDays <= 0) { errorEl.hidden = false; return; }
+      monthsRemaining = Math.max(1, Math.ceil(diffDays / AVG_DAYS_PER_MONTH));
+    }
+
+    var flatFeeAmount = null;
+    if (flatFee === 'yes') {
+      flatFeeAmount = parseFloat(flatFeeAmountInput.value);
+      if (isNaN(flatFeeAmount) || flatFeeAmount < 0) { errorEl.hidden = false; return; }
+    }
+
+    var worstCase = monthlyRent * monthsRemaining;
+
+    figureEl.textContent = fmtMoney(worstCase, currency);
+
+    if (flatFeeAmount !== null) {
+      headlineEl.textContent = 'If your lease has a flat fee clause: ' + fmtMoney(flatFeeAmount, currency);
+    } else {
+      headlineEl.textContent = monthsRemaining + (monthsRemaining === 1 ? ' month' : ' months') + ' remaining × ' + fmtMoney(monthlyRent, currency) + '/month';
+    }
+
+    var ctx = '<p>This is what you could owe in the worst case — in practice, your actual liability depends on whether your landlord is legally required to look for a new tenant, and whether they find one.</p>';
+    if (flatFeeAmount !== null) {
+      ctx += '<p>If your lease has this clause, it typically caps your liability at ' + fmtMoney(flatFeeAmount, currency) + ' instead of the worst-case total above — check your lease’s exact wording, since some flat fees only apply under specific conditions.</p>';
+    }
+    ctx += '<p>' + NEW_TENANT_NOTE[newTenant] + '</p>';
+    contextEl.innerHTML = ctx;
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>

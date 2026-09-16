@@ -15083,5 +15083,19 @@
       "is there a cap on rent increases",
       "rent increase legal limit by state"
     ]
+  },
+  {
+    "title": "Early Lease Termination Calculator",
+    "type": "calculator",
+    "block": "housing-rentals",
+    "url": "/housing-rentals/calculators/early-lease-termination-calculator",
+    "description": "Free calculator for the worst-case cost of breaking your lease early — plus the flat termination fee alternative if your lease has one, and when the SCRA or your landlord's duty to re-rent could lower what you actually owe.",
+    "keywords": [
+      "early lease termination calculator",
+      "cost of breaking my lease",
+      "how much will it cost to break my lease",
+      "lease break fee calculator",
+      "scra lease termination military"
+    ]
   }
 ]
