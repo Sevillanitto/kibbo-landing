@@ -72,10 +72,209 @@
 //   - GENERATOR_DAILY_CALL_CAP (optional env var / wrangler.toml [vars]):
 //     the global kill-switch cap; defaults to 500 if unset or invalid.
 
-const DAILY_GENERATION_LIMIT = 10; // shared across ALL generators, per IP per day (was 3)
-const DEFAULT_DAILY_CALL_CAP = 500; // global kill-switch default if GENERATOR_DAILY_CALL_CAP is unset
+const DAILY_GENERATION_LIMIT = 10; // shared across ALL generators, per IP per day (was 3) -- AI-cost guardrail, static generators don't use this
+const DEFAULT_DAILY_CALL_CAP = 500; // global kill-switch default if GENERATOR_DAILY_CALL_CAP is unset -- AI-cost guardrail, static generators don't use this
 const MAX_TOKENS = 1200; // one-page letter — Haiku, template filling not reasoning
 const KV_TTL = 86400; // 24h for previews and the rate-limit counters
+
+// ---- Static-mode generators (2026-09-16 migration) ----
+// A generator with `static: true` in its GENERATORS entry below renders its
+// letter directly from `render(answers)` -- pure template substitution +
+// branch logic, no Anthropic call, no ANTHROPIC_API_KEY dependency, not
+// affected by isGeneratorsPaused() or checkGenerationLimits() (both of
+// those exist purely to protect Anthropic spend, which a static generator
+// doesn't have). The generator's original `prompt_template` field is left
+// in place, unused, exactly like verifyGumroadLicense() below -- in case a
+// generator ever needs to be reverted to AI mode.
+//
+// Abuse prevention for static generators is intentionally separate from
+// the AI-cost guardrails above: STATIC_DAILY_LIMIT is a much more generous
+// per-IP cap (rendering a template costs ~nothing, so this exists only to
+// blunt obvious scripted abuse of the endpoint, not to protect spend) and
+// has no global cross-IP cap, since there's no aggregate spend to protect
+// against.
+const STATIC_DAILY_LIMIT = 100; // per IP per day -- abuse prevention only, not cost-related
+
+function staticRateKey(ip) {
+  const day = new Date().toISOString().slice(0, 10);
+  return `ip:${ip}:${day}:static-generators`;
+}
+
+// Same fail-open-on-KV-error stance as checkGenerationLimits() below.
+async function checkStaticAbuseLimit(env, ip) {
+  const kv = env.GENERATORS_KV;
+  if (!kv) return { blocked: false, kv: null };
+  const key = staticRateKey(ip);
+  let used = 0;
+  try {
+    const stored = await kv.get(key);
+    used = stored ? parseInt(stored, 10) || 0 : 0;
+  } catch (err) {
+    used = 0; // fail open
+  }
+  if (used >= STATIC_DAILY_LIMIT) {
+    return {
+      blocked: true,
+      response: jsonResponse(
+        { error: 'limit_reached', message: "You've reached today's limit for generating documents. Please try again tomorrow." },
+        429
+      ),
+    };
+  }
+  return { blocked: false, kv, key, used };
+}
+
+async function recordStaticUsage(limits) {
+  if (!limits || !limits.kv) return;
+  try {
+    await limits.kv.put(limits.key, String(limits.used + 1), { expirationTtl: KV_TTL });
+  } catch (err) {
+    /* best-effort */
+  }
+}
+
+function todayDate() {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const d = new Date();
+  return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+}
+
+// N/A-convention helper: matches this codebase's established pattern of
+// asking users to type the literal string "N/A" for a conditionally
+// irrelevant field, rather than allowing a truly blank submission (the
+// frontend engine requires every visible field to be non-empty).
+function hasValue(v) {
+  return !!(v && String(v).trim() && String(v).trim().toUpperCase() !== 'N/A');
+}
+
+// ---- Static render functions (pilot batch, 2026-09-16) ----
+// Each takes the `answers` object exactly as submitted by the frontend
+// form and returns the finished letter as a plain string. Ported 1:1 from
+// the approved literal templates in
+// _drafts-pending/generators-static-migration/ -- see those files for the
+// annotated per-branch source and the fully-resolved examples used to
+// verify this matches before wiring.
+
+function renderLostParcel(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.retailer);
+  lines.push('Re: Formal Demand for Refund — Order dated ' + a.order_date);
+  lines.push('');
+  lines.push('I am writing to formally demand a full refund of ' + a.amount + ' for my order placed with you on ' + a.order_date + '.');
+  lines.push('');
+  if (a.issue === 'Never arrived') {
+    lines.push('This parcel has never arrived.');
+  } else if (a.issue === 'Arrived damaged') {
+    lines.push('This parcel arrived damaged, and its contents are not usable as delivered.');
+  }
+  lines.push('');
+  if (a.country === 'UK') {
+    lines.push("Under the Consumer Rights Act 2015, you as the retailer remain legally responsible for these goods until they reach me, regardless of which courier you used to deliver them. This responsibility is yours, not the courier's, and does not depend on any dispute you may have with your delivery provider.");
+  } else if (a.country === 'US') {
+    lines.push('Under consumer protection law, a retailer is generally responsible for ensuring goods are delivered as ordered, and remains liable to the customer when a shipment is lost or arrives damaged — this responsibility does not transfer to the courier simply because a third party handled delivery.');
+  }
+  lines.push('');
+  lines.push('I am requesting a full refund of ' + a.amount + ' within 48 hours of this letter. If I do not receive confirmation of a refund within that time, I will pursue this through a card chargeback, my bank, or the relevant consumer protection authority, and will reference this letter as evidence that you were given fair notice and an opportunity to resolve this directly.');
+  lines.push('');
+  lines.push('Please confirm receipt of this letter and the refund timeline in writing.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderFdcpaCeaseDesist(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.collector_name);
+  lines.push('Re: Account Reference ' + a.account_reference + ' — Cease and Desist Communication');
+  lines.push('');
+  lines.push('This letter is a formal cease-and-desist notice under Section 805(c) of the Fair Debt Collection Practices Act (FDCPA), 15 U.S.C. § 1692c(c).');
+  lines.push('');
+  lines.push('I am writing regarding the following issue with your communications: ' + a.issue + '.');
+  lines.push('');
+  lines.push('Pursuant to Section 805(c) of the FDCPA, I am formally requesting that you cease all further communication with me regarding this account, except to confirm that you are ceasing collection efforts, or to notify me that you intend to invoke a specific legal remedy, such as filing a lawsuit.');
+  lines.push('');
+  lines.push('Any further contact with me outside of these two narrow exceptions will be treated as a violation of the FDCPA.');
+  lines.push('');
+  lines.push('Please direct any necessary correspondence to the address below.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  lines.push('[Your address]');
+  lines.push('');
+  lines.push('---');
+  lines.push('Sending instructions: Send this letter via certified mail with return receipt requested, and keep a copy along with the mailing receipt for your records.');
+  if (a.is_third_party === 'No / Not sure') {
+    lines.push('');
+    lines.push('Note: The FDCPA generally applies only to third-party debt collectors — not to an original creditor (like your own bank or lender) collecting its own debt directly. Before sending this letter, confirm whether ' + a.collector_name + ' is a third-party collection agency or your original creditor, since this affects whether the FDCPA applies to your situation.');
+  }
+  return lines.join('\n');
+}
+
+function renderHealthcareComplaintLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Formal Complaint — Incident on ' + a.incident_date);
+  lines.push('');
+  lines.push('I am writing to formally complain about an incident that occurred on ' + a.incident_date + ': ' + a.incident_description + '.');
+  lines.push('');
+  if (hasValue(a.prior_contact_details)) {
+    lines.push('I previously raised this informally: ' + a.prior_contact_details + '. This was not adequately resolved, which is why I am now submitting this as a formal written complaint.');
+    lines.push('');
+  }
+  lines.push('The outcome I am seeking is: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('If this complaint is not addressed satisfactorily, I may escalate this matter to the applicable healthcare complaints body for my jurisdiction.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Please acknowledge receipt of this letter and provide a substantive response within a reasonable timeframe.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.patient_full_name);
+  return lines.join('\n');
+}
+
+function renderEuGdprRightsRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.company_name);
+  lines.push('Re: GDPR Rights Request');
+  lines.push('');
+  if (a.request_type === 'Subject Access Request (Article 15)') {
+    lines.push('I am writing to exercise my right of access under Article 15 of the GDPR. Please provide me with confirmation of whether you are processing my personal data, and if so, a copy of that data along with the purposes of processing, the categories of data involved, the recipients it has been or will be disclosed to, and the period for which it will be stored.');
+  } else if (a.request_type === 'Erasure / Right to be Forgotten (Article 17)') {
+    lines.push('I hereby exercise my Right to Erasure under Article 17 of the GDPR. Please delete all personal data you hold about me and confirm in writing once this has been completed, including confirmation that any data shared with third parties has also been deleted or that those parties have been informed of my request.');
+  } else if (a.request_type === 'Rectification of incorrect data') {
+    lines.push('I am writing to request rectification of incorrect personal data you hold about me, under Article 16 of the GDPR.');
+  } else if (a.request_type === "Formal complaint to the company's DPO (before escalating to a DPA)") {
+    lines.push('I am writing a formal complaint to your Data Protection Officer regarding the handling of my personal data. This letter is being sent as the required step before I escalate this matter to my national Data Protection Authority if it is not resolved.');
+  }
+  lines.push('');
+  lines.push('Additional context: ' + a.details);
+  lines.push('');
+  if (a.prior_contact === "Yes, and they didn't respond within the deadline") {
+    lines.push("I note that I have already raised this with you previously and did not receive a response within the required deadline.");
+    lines.push('');
+  } else if (a.prior_contact === 'Yes, and their response was unsatisfactory') {
+    lines.push('I note that I have already raised this with you previously, and your response was not satisfactory.');
+    lines.push('');
+  }
+  lines.push('Please note that under the GDPR, you are required to respond within one month of receiving this request. This may be extended by up to two further months for complex requests, provided you notify me of the extension and the reasons for it within the first month.');
+  lines.push('');
+  lines.push('If this matter is not resolved to my satisfaction, I intend to lodge a complaint with my national Data Protection Authority.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
 
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
@@ -96,6 +295,11 @@ const GENERATORS = {
   'lost-parcel': {
     title: 'Lost Parcel Legal Demand',
     gumroad_product_id: 'lcbzyb',
+    // STATIC as of 2026-09-16 (pilot batch) -- prompt_template below is now
+    // DEAD CODE, kept unused in case this ever needs reverting to AI mode
+    // (same convention as verifyGumroadLicense()). render() is the real path.
+    static: true,
+    render: renderLostParcel,
     prompt_template:
       'Write a formal demand letter addressed to the RETAILER (not the courier/shipping company) demanding a full refund within 48 hours for a lost or damaged parcel. If country is UK, cite the Consumer Rights Act 2015 (the retailer remains liable for goods until they reach the consumer, regardless of courier used). If country is US, cite general state consumer protection law language without inventing a specific statute number. Retailer: {retailer}. Order date: {order_date}. Amount paid: {amount}. Issue: {issue}. Tone: professional, firm, cites the relevant legal basis, gives a specific 48-hour deadline.',
   },
@@ -956,6 +1160,43 @@ async function handlePreview(request, env) {
   const gen = GENERATORS[body && body.generatorId];
   if (!gen) return jsonResponse({ error: 'Unknown generator' }, 400);
 
+  // ---- Static-mode generators (see the top-of-file static-mode comment)
+  // -- zero Anthropic dependency: not gated by isGeneratorsPaused(), doesn't
+  // require ANTHROPIC_API_KEY, doesn't touch checkGenerationLimits() (that
+  // exists purely to protect Anthropic spend, which doesn't apply here).
+  // Abuse prevention is a separate, much more generous per-IP-only limit --
+  // see checkStaticAbuseLimit().
+  if (gen.static) {
+    const answers = (body && body.answers) || {};
+    if (typeof answers !== 'object' || !Object.keys(answers).length) {
+      return jsonResponse({ error: 'Missing answers' }, 400);
+    }
+    const ip = clientIp(request);
+    const abuseLimit = await checkStaticAbuseLimit(env, ip);
+    if (abuseLimit.blocked) return abuseLimit.response;
+
+    const letter = gen.render(answers);
+    if (!letter) return jsonResponse({ error: 'Could not generate a letter, please try again.' }, 502);
+
+    const { visible, blurLines } = splitPreview(letter);
+    const previewId = randomId();
+    if (abuseLimit.kv) {
+      try {
+        await abuseLimit.kv.put(`preview:${previewId}`, letter, { expirationTtl: KV_TTL });
+      } catch (err) {
+        /* preview just won't survive a refresh; unlock will re-render from answers */
+      }
+    }
+    await recordStaticUsage(abuseLimit);
+
+    return jsonResponse({
+      previewId,
+      preview: visible,
+      blurLines,
+      remaining: Math.max(0, STATIC_DAILY_LIMIT - (abuseLimit.kv ? abuseLimit.used + 1 : 0)),
+    });
+  }
+
   // Billing pause (see the top-of-file comment) -- checked before anything
   // else touches Anthropic, the KV rate limiter, or requires answers to be
   // present at all. Zero Anthropic calls while this is set, full stop.
@@ -1030,6 +1271,33 @@ async function handleUnlock(request, env) {
   }
   const gen = GENERATORS[body && body.generatorId];
   if (!gen) return jsonResponse({ error: 'Unknown generator' }, 400);
+
+  // ---- Static-mode generators -- no Anthropic dependency, so no billing
+  // pause, no rate limit on the re-render-from-answers fallback (it costs
+  // nothing to protect against; the /preview call already counted once
+  // against the abuse limit).
+  if (gen.static) {
+    const kv = env.GENERATORS_KV;
+    let letter = null;
+    const previewId = (body && body.previewId) || '';
+    if (kv && previewId) {
+      try {
+        letter = await kv.get(`preview:${previewId}`);
+      } catch (err) {
+        letter = null;
+      }
+    }
+    if (!letter) {
+      const answers = (body && body.answers) || {};
+      if (Object.keys(answers).length) {
+        letter = gen.render(answers);
+      }
+    }
+    if (!letter) {
+      return jsonResponse({ error: 'Your preview expired — please generate it again.' }, 410);
+    }
+    return jsonResponse({ letter });
+  }
 
   // Billing pause -- defense in depth. The front-end never calls /unlock at
   // all while paused (it already knows from /preview's { paused: true }
