@@ -15111,5 +15111,19 @@
       "warn act notice period",
       "how much notice does my employer have to give me"
     ]
+  },
+  {
+    "title": "Cancellation Cost Calculator",
+    "type": "calculator",
+    "block": "subscriptions-services",
+    "url": "/subscriptions-services/calculators/cancellation-cost-calculator",
+    "description": "Free calculator for what it actually costs to cancel a gym membership, phone contract, or subscription right now — remaining-term liability or flat exit fee — plus whether cancellation itself is legally supposed to be this hard.",
+    "keywords": [
+      "cancellation cost calculator",
+      "how much will it cost to cancel my gym membership",
+      "how much will it cost to cancel my phone contract",
+      "early termination fee calculator",
+      "cost to cancel subscription"
+    ]
   }
 ]
