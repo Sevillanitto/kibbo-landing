@@ -723,6 +723,20 @@
     ]
   },
   {
+    "title": "Total Purchase Cost Calculator",
+    "type": "calculator",
+    "block": "shopping-ecommerce",
+    "url": "/shopping-ecommerce/calculators/total-purchase-cost-calculator",
+    "description": "Add up item price, shipping, sales tax or customs duty, and any other checkout fee to find the real total cost of an online purchase before you pay.",
+    "keywords": [
+      "total purchase cost calculator",
+      "hidden fees calculator",
+      "real cost of online shopping calculator",
+      "why did I get a customs bill",
+      "de minimis exemption gone customs duty calculator"
+    ]
+  },
+  {
     "title": "Unused Subscription Cost Calculator",
     "type": "calculator",
     "block": "subscriptions-services",
