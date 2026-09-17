@@ -321,6 +321,10 @@ const GENERATORS = {
   'fdcpa-cease-desist': {
     title: 'Debt Collector Cease & Desist Letter (FDCPA)',
     gumroad_product_id: 'ualrk',
+    // STATIC as of 2026-09-17 (pilot batch 2/4) -- prompt_template below is
+    // now DEAD CODE, kept unused per the same convention as lost-parcel.
+    static: true,
+    render: renderFdcpaCeaseDesist,
     prompt_template:
       'Write a formal cease-and-desist letter to a debt collection agency, explicitly invoking Section 805(c) of the Fair Debt Collection Practices Act (FDCPA), demanding they stop all further communication except as permitted by law (confirming cessation or notifying of specific legal action). Reference the specific issue described. Note this letter should be sent via certified mail with return receipt requested — mention this in the letter\'s closing instructions to the sender, not as part of the letter\'s own body text to the collector. Collector: {collector_name}. Account reference: {account_reference}. Issue: {issue}. If is_third_party is \'No / Not sure\', add a brief note in the generated output (outside the letter itself) reminding the user that the FDCPA generally applies only to third-party collectors, not original creditors collecting their own debt, and to verify which applies to their situation. Tone: firm, professional, cites the correct legal section.',
   },
