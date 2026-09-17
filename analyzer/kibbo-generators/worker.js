@@ -494,9 +494,10 @@ const GENERATORS = {
     title: 'GDPR Rights Request Letter (Access / Erasure / Complaint)',
     // Real Gumroad product_id for the "eu-gdpr-rights-request" product.
     gumroad_product_id: 'pnpwzz',
-    // STATIC as of 2026-09-17 (pilot batch 4/4 -- final pilot generator)
-    // -- prompt_template below is now DEAD CODE, kept unused per the same
-    // convention as the other 3 pilot generators.
+    // STATIC as of 2026-09-17 (pilot batch 3/4) -- prompt_template below is
+    // now DEAD CODE, kept unused per the same convention as the other pilot
+    // generators. (Originally logged as "4/4" -- corrected: healthcare-
+    // complaint-letter was skipped by mistake and is the true 4th.)
     static: true,
     render: renderEuGdprRightsRequest,
     prompt_template:
@@ -671,6 +672,14 @@ const GENERATORS = {
     // Real Gumroad product_id for the "healthcare-complaint-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/rivhvf -> .../l/healthcare-complaint-letter).
     gumroad_product_id: 'rivhvf',
+    // STATIC as of 2026-09-17 (pilot batch 4/4 -- true final pilot generator;
+    // this one was skipped by mistake in the earlier pass, added now to
+    // complete the originally-approved 4-generator pilot list). render()
+    // function pre-existed and already passed the Node harness before this
+    // commit. prompt_template below is now DEAD CODE, kept unused per the
+    // same convention as the other 3 pilot generators.
+    static: true,
+    render: renderHealthcareComplaintLetter,
     prompt_template:
       "Draft a formal, professional complaint letter from {patient_full_name} to {provider_name} regarding an incident on {incident_date}: {incident_description}. If prior informal contact was already made about this, reference it here without adequate resolution: {prior_contact_details} — otherwise ignore this field entirely and do not mention it in the letter. State the desired outcome clearly: {desired_outcome}. For jurisdiction={jurisdiction}, note that if the provider does not respond adequately, the patient may escalate to the appropriate healthcare complaints or regulatory body in their area — keep this reference generic ('the applicable healthcare complaints body in your area') unless a specific verified body applies; never invent a specific agency name. Firm but professional tone, factual, non-accusatory framing of events.",
   },
