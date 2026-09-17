@@ -925,13 +925,23 @@ function renderPrivacyRightsRequest(a) {
   lines.push('To: ' + a.company_name);
   lines.push('Re: Privacy Rights Request');
   lines.push('');
-  if (hasValue(a.your_relationship)) {
+  // your_relationship and account_identifier share one paragraph (no blank
+  // between them when both are present, matching the template) followed by
+  // a single trailing blank -- only if at least one of them actually
+  // produced a line. Folding the blank into each `if` independently would
+  // insert a stray blank *between* the two lines whenever both are
+  // provided, which the template doesn't call for.
+  const hasRelationship = hasValue(a.your_relationship);
+  const hasAccountId = hasValue(a.account_identifier);
+  if (hasRelationship) {
     lines.push('My relationship to you: ' + a.your_relationship + '.');
   }
-  if (hasValue(a.account_identifier)) {
+  if (hasAccountId) {
     lines.push('Account/reference: ' + a.account_identifier + '.');
   }
-  lines.push('');
+  if (hasRelationship || hasAccountId) {
+    lines.push('');
+  }
   lines.push('This is a request described as: ' + a.right_type + '.');
   lines.push('');
   if (a.right_type === 'Access — I want to see what data they hold about me') {
