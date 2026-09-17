@@ -1082,6 +1082,452 @@ function renderGovernmentComplaintLetter(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 3 rollout: Shipping & E-commerce,
+// Shopping & E-Commerce, Subscriptions & Services, Training & Education,
+// 2026-09-17 -- final batch, completes all 88 generators) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-6.md.
+
+function renderChargebackLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.card_issuer_name);
+  lines.push('Re: Formal Chargeback Request — ' + a.transaction_amount + ' on ' + a.transaction_date);
+  lines.push('');
+  lines.push('I am requesting a formal chargeback/dispute investigation for a transaction of ' + a.transaction_amount + ' on ' + a.transaction_date + ' with ' + a.seller_name + '.');
+  lines.push('');
+  if (hasValue(a.order_number)) {
+    lines.push('Order reference: ' + a.order_number + '.');
+    lines.push('');
+  }
+  lines.push('Reason for dispute: ' + a.dispute_reason);
+  lines.push('');
+  if (a.prior_contact_attempted === 'Yes') {
+    lines.push('I already attempted to resolve this directly with the seller. What happened: ' + a.prior_contact_outcome);
+  } else if (a.prior_contact_attempted === 'No') {
+    lines.push('I have not yet attempted to resolve this directly with the seller.');
+  }
+  lines.push('');
+  lines.push('Please open a formal dispute investigation for this transaction and confirm the dispute reference number and expected timeline.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderMarketplaceComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  const to = a.platform === "Another marketplace — I'll name it below" ? a.platform_name : a.platform + ' — Buyer Protection / Resolution Center';
+  lines.push('To: ' + to);
+  lines.push('Re: Complaint Regarding Seller ' + a.seller_name + ', Order ' + a.order_number);
+  lines.push('');
+  lines.push('I am submitting a complaint regarding seller ' + a.seller_name + ', order ' + a.order_number + '.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_description);
+  lines.push('');
+  if (a.seller_contacted === 'Yes') {
+    lines.push('I have already contacted the seller directly. Their response: ' + a.seller_response);
+  } else if (a.seller_contacted === 'No') {
+    lines.push('I have not yet contacted the seller directly.');
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('---');
+  lines.push("Note: confirm the exact policy details and deadlines on this platform's own resolution center page before submitting — they vary by platform and aren't restated here.");
+  return lines.join('\n');
+}
+
+function renderEuPlatformDisputeLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.platform);
+  lines.push('Re: Dispute — ' + a.transaction_details);
+  lines.push('');
+  lines.push('What happened: ' + a.issue);
+  // The platform-specific paragraph is optional in one edge case (Booking.com
+  // with booking_type left at 'Not applicable' -- the engine can't express
+  // a showWhen dependent on platform, so booking_type is always visible).
+  // Track whether anything was actually added so we emit exactly one blank
+  // line either way, instead of an unconditional blank that would double up
+  // when nothing fires.
+  let extra = null;
+  if (a.platform === 'Amazon (marketplace seller)') {
+    extra = "I am invoking my 14-day withdrawal right and/or the 2-year legal guarantee, as applicable, and escalating via Amazon's A-to-z Guarantee. If escalation beyond Amazon is needed, I understand I can reference ECC-Net or my national ADR body — not the discontinued EU ODR platform.";
+  } else if (a.platform === 'Booking.com') {
+    if (a.booking_type === 'Package/linked booking') {
+      extra = "As this is a package/linked booking, I am invoking Directive (EU) 2015/2302's alternative accommodation mandate.";
+    } else if (a.booking_type === 'Standalone hotel booking') {
+      extra = 'As this is a standalone hotel booking, this is a general breach-of-contract claim against the hotel, not a codified package travel relocation right.';
+    }
+  } else if (a.platform === 'Airbnb') {
+    extra = "I am referencing the Guest Refund Policy. I understand the 72-hour reporting window is Airbnb's own policy, not EU statute, while price/description accuracy is grounded in EU unfair commercial practices law.";
+  } else if (a.platform === 'PayPal') {
+    extra = "I am referencing Buyer Protection's 180-day dispute window and 20-day negotiation period as PayPal's own program rules, and the CSSF Luxembourg escalation path if internal arbitration is unfair.";
+  }
+  if (extra) {
+    lines.push('');
+    lines.push(extra);
+  }
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderRefundWarrantyClaim(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.seller_name);
+  lines.push('Re: Order ' + a.order_number + ' — ' + a.item_name);
+  lines.push('');
+  lines.push('I am writing regarding ' + a.item_name + ', order ' + a.order_number + ', purchased on ' + a.purchase_date + '.');
+  lines.push('');
+  lines.push('Claim: ' + a.claim_reason + '.');
+  lines.push('');
+  if (a.claim_reason === "The item isn't as described, doesn't work as expected, or I'm not satisfied with it") {
+    lines.push(a.issue_description);
+  } else if (a.claim_reason === 'The item is defective, broke, or stopped working') {
+    lines.push(a.defect_description);
+    if (hasValue(a.warranty_period_stated)) {
+      lines.push('Warranty period stated at purchase: ' + a.warranty_period_stated + '.');
+    }
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('I am requesting a response within 10 business days. If unresolved, I will pursue a card issuer dispute or the relevant consumer protection avenue.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuLegalGuaranteeDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.seller_name);
+  lines.push('Re: Legal Guarantee Claim — ' + a.product);
+  lines.push('');
+  lines.push('I am submitting a formal legal guarantee (conformity) demand under Directive (EU) 2019/771 regarding ' + a.product + ', purchased on ' + a.purchase_date + '.');
+  lines.push('');
+  lines.push('Defect/non-conformity: ' + a.defect);
+  lines.push('');
+  lines.push('As the seller, you — not the manufacturer — are responsible for this guarantee. If this is within the first year, the burden-of-proof presumption favors me as the consumer.');
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  if (a.remedy === 'Full refund (contract termination)') {
+    lines.push('I am aware full refund/termination is only available if repair/replacement has first failed or was refused — please note if this applies to my situation as you understand it.');
+  }
+  lines.push('');
+  lines.push('This guarantee is a minimum of 2 years under EU law, though some member states extend it further.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderAuMajorFailureRefundDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.retailer_name);
+  lines.push('Re: Major Failure Refund Demand — ' + a.product);
+  lines.push('');
+  lines.push('I am asserting that ' + a.product + ', purchased on ' + a.purchase_date + ' for ' + a.price_paid + ', has a fault constituting a major failure under the Australian Consumer Law (ACL) consumer guarantees.');
+  lines.push('');
+  lines.push('Fault: ' + a.fault);
+  lines.push('');
+  lines.push('This qualifies as a major failure because: ' + a.failure_test + '.');
+  lines.push('');
+  lines.push("The ACL does not set a fixed 12-month guarantee period — protection lasts as long as reasonable given the product's price and type. As this is a major failure, I — not you — choose between refund and replacement. This is not a request for goodwill, but an assertion of a statutory right, and you as the retailer (not the manufacturer) are legally responsible.");
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('I am requesting a response within a reasonable window (commonly 7-14 days).');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderStateAgComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push("To: [Your State] Attorney General's Consumer Protection Division");
+  lines.push('Re: Complaint Against ' + a.business_name);
+  lines.push('');
+  lines.push('I am filing a complaint against ' + a.business_name + ' for unfair or deceptive business practices.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  lines.push('This complaint references general consumer protection principles — misleading advertising, breach of implied warranty, or unconscionable business practices as applicable — without asserting a specific state statute.');
+  lines.push('');
+  lines.push('State: ' + a.state + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuWithdrawalRightLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.seller_name);
+  lines.push('Re: Withdrawal Notice — Order ' + a.order_details);
+  lines.push('');
+  let intro = 'I am exercising my right of withdrawal under Directive 2011/83/EU regarding ' + a.order_details;
+  if (hasValue(a.delivery_date)) {
+    intro += ', delivered ' + a.delivery_date;
+  }
+  intro += '.';
+  lines.push(intro);
+  lines.push('');
+  lines.push('No reason is required for this withdrawal.');
+  if (hasValue(a.reason)) {
+    lines.push('For context: ' + a.reason);
+  }
+  lines.push('');
+  if (a.was_informed === 'No / Not sure') {
+    lines.push('I was not clearly informed of my withdrawal right before purchase, or am not sure I was — if confirmed, this extends my withdrawal window by 12 months. Please confirm whether this applies.');
+    lines.push('');
+  }
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderFccComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('[FCC Informal Complaint — Consumer Complaint Center]');
+  lines.push('Provider: ' + a.provider_name);
+  lines.push('Category: ' + a.category);
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  lines.push('Prior attempts to resolve directly with the provider: ' + a.prior_attempts + '.');
+  lines.push('');
+  lines.push('Resolution requested:');
+  let resolution = '';
+  if (a.category === 'Billing dispute/unauthorized charge') {
+    resolution = 'a credit or rate correction';
+  } else if (a.category === 'Service quality (outages, slow speeds)') {
+    resolution = 'a technician visit or service credit';
+  } else if (a.category === 'Availability (promised infrastructure not delivered)') {
+    resolution = 'delivery of the promised service or release from any related contract';
+  } else if (a.category === 'Contract/cancellation dispute') {
+    resolution = 'contract release or resolution of the cancellation dispute';
+  }
+  lines.push(resolution);
+  return lines.join('\n');
+}
+
+function renderServiceComplaintEscalation(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  const re = a.complaint_stage === 'This is my first formal complaint about this issue' ? 'Formal Complaint' : 'Escalation of Unresolved Complaint';
+  lines.push('Re: ' + re);
+  lines.push('');
+  if (hasValue(a.account_id)) {
+    lines.push('Account/reference: ' + a.account_id + '.');
+    lines.push('');
+  }
+  lines.push('Issue: ' + a.issue_description);
+  if (a.complaint_stage === 'This is my first formal complaint about this issue') {
+    const extraLines = [];
+    if (hasValue(a.issue_date)) {
+      extraLines.push('This arose on: ' + a.issue_date + '.');
+    }
+    if (hasValue(a.promised_vs_delivered)) {
+      extraLines.push('Promised vs. delivered: ' + a.promised_vs_delivered);
+    }
+    if (extraLines.length) {
+      lines.push('');
+      extraLines.forEach(function (l) { lines.push(l); });
+    }
+  } else if (a.complaint_stage === "I already complained and it wasn't resolved") {
+    lines.push('');
+    if (hasValue(a.original_complaint_date)) {
+      let l = 'I first raised this on ' + a.original_complaint_date;
+      if (hasValue(a.original_reference)) {
+        l += ', reference ' + a.original_reference;
+      }
+      l += '.';
+      lines.push(l);
+    }
+    if (hasValue(a.response_received)) {
+      lines.push('Response received: ' + a.response_received);
+    }
+    if (hasValue(a.deadline_given)) {
+      lines.push('Deadline previously committed to: ' + a.deadline_given);
+    }
+    lines.push('This is an escalation of an unresolved complaint — please handle by a manager or complaints team, not front-line support.');
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('Please respond within 10 business days. If unresolved, I will escalate to an ombudsman, regulator, or small claims court as appropriate.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderSubscriptionServiceBillingDispute(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Billing Dispute — ' + a.charge_amount + ' on ' + a.charge_date);
+  lines.push('');
+  if (hasValue(a.account_id)) {
+    lines.push('Account/reference: ' + a.account_id + '.');
+    lines.push('');
+  }
+  lines.push('I am disputing a charge of ' + a.charge_amount + ' on ' + a.charge_date + '.');
+  lines.push('');
+  lines.push('Dispute: ' + a.dispute_type + '.');
+  lines.push('');
+  if (a.dispute_type === 'Charged after I had already cancelled') {
+    let l = 'I cancelled on ' + a.cancellation_date;
+    if (hasValue(a.cancellation_confirmation)) {
+      l += ', confirmation ' + a.cancellation_confirmation;
+    }
+    l += '. This charge should not have occurred.';
+    lines.push(l);
+  } else if (a.dispute_type === 'Price increased without proper notice') {
+    lines.push('The price was previously ' + a.previous_price + ', increased to ' + a.new_price + '.');
+    lines.push('Advance notice received: ' + a.notice_received + '.');
+  } else if (a.dispute_type === 'Duplicate, incorrect, or unauthorized charge') {
+    lines.push('Expected amount: ' + a.expected_amount + '. ' + a.issue_description);
+  } else if (a.dispute_type === "Charged for a renewal I didn't want or wasn't clearly warned about") {
+    lines.push('Renewal notice received: ' + a.renewal_notice_received + '.');
+    if (hasValue(a.signup_date)) {
+      lines.push('Original signup date: ' + a.signup_date + '.');
+    }
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('I am requesting a response within 10 business days. If unresolved, I will dispute this charge directly with my card issuer or the relevant regulator.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuSubscriptionCancellationDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.company_name);
+  lines.push('Re: Subscription Cancellation/Refund');
+  lines.push('');
+  lines.push('Situation: ' + a.scenario + '.');
+  lines.push('');
+  lines.push('Sign-up date: ' + a.signup_date + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.scenario === 'Still within my 14-day withdrawal window') {
+    lines.push("I am invoking Directive (EU) 2023/2673's withdrawal right and requesting a pro-rata refund.");
+  } else if (a.scenario === 'Trying to cancel an ongoing subscription (past 14 days)') {
+    lines.push('I am requesting cancellation citing your own terms. If a national cancellation-button law applies in my country (' + a.country + ') — such as in Germany or France — I am also citing that.');
+  } else if (a.scenario === "Charged for a renewal I wasn't properly notified about") {
+    lines.push("I am invoking my national consumer protection law's requirement for pre-contractual transparency regarding renewal notice, which is not yet uniform EU-wide law but commonly requires 15-30 days' notice where a national law exists.");
+  }
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  if (a.remedy === "Revoke my payment mandate if the company won't stop billing") {
+    lines.push('If billing continues, I am exercising my right under PSD2 to revoke this payment mandate via my own bank.');
+  }
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderAuTioCancellationDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Contract Cancellation Request');
+  lines.push('');
+  lines.push('Issue: ' + a.issue + '.');
+  lines.push('');
+  if (hasValue(a.cancellation_request_date)) {
+    lines.push('I first requested cancellation on ' + a.cancellation_request_date + '.');
+    lines.push('');
+  }
+  lines.push(a.details);
+  lines.push('');
+  lines.push("I am requesting contract cancellation without an early termination fee. A provider failing to deliver promised service quality, or unilaterally changing contract terms, is generally considered a breach on the provider's side.");
+  lines.push('');
+  lines.push('If this isn\'t resolved directly, I intend to lodge a complaint with the Telecommunications Industry Ombudsman (TIO), which gives providers a short window (commonly around 10 business days) to resolve complaints once referred, along with costs associated with TIO involvement.');
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderFormalComplaintGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Formal Complaint — ' + a.course_name);
+  lines.push('');
+  lines.push('I am writing regarding ' + a.course_name + ', enrolled/purchased on ' + a.enrollment_date + ' for ' + a.amount_paid + '.');
+  lines.push('');
+  lines.push('Problem: ' + a.problem_type + '.');
+  lines.push('');
+  lines.push(a.problem_details);
+  lines.push('');
+  if (a.problem_type === 'Institution/academy closed (school or academy shut down mid-course)') {
+    lines.push('I am focusing this complaint on the closure date and any alternative arrangement offered.');
+  } else if (a.problem_type === "Provider won't refund (refund requested and refused or ignored)") {
+    lines.push('I am focusing this complaint on the original refund policy and your stated reason for refusing.');
+  } else if (a.problem_type === 'Misleading advertising (course/outcomes misrepresented before purchase)') {
+    lines.push('I am focusing this complaint on the specific claims made versus what was actually delivered.');
+  } else if (a.problem_type === 'Fake or invalid certificate (certificate not recognized, accredited, or as described)') {
+    lines.push('I am focusing this complaint on what was promised about accreditation/recognition versus what was actually true.');
+  } else if (a.problem_type === 'Bootcamp-specific issues (job guarantee not honored, curriculum materially different, cohort cancelled/merged without consent)') {
+    lines.push('I am focusing this complaint on the specific broken promise — job guarantee, curriculum, or cohort change.');
+  } else if (a.problem_type === 'Online platform issues (course removed/inaccessible, promised lifetime access revoked, technical failure preventing completion)') {
+    lines.push('I am focusing this complaint on the access that was promised versus what actually happened.');
+  } else if (a.problem_type === 'Linked credit/financing issues (course was sold bundled with a loan or installment credit product)') {
+    lines.push('I am noting that a linked or connected credit agreement can, in many jurisdictions, be legally challenged if the underlying course was cancelled, misrepresented, or not delivered — worth raising with the credit provider and checking against local consumer credit law, though this varies significantly by country and credit type.');
+  }
+  lines.push('');
+  lines.push('I am referencing general consumer protection principles without claiming jurisdiction-specific legal advice, and may escalate to a relevant regulator or ombudsman if this is not resolved within a reasonable timeframe.');
+  lines.push('');
+  const outcome = a.desired_outcome === 'Other (describe it in the details field above)' ? 'see details above' : a.desired_outcome;
+  lines.push('Desired outcome: ' + outcome + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -1141,12 +1587,20 @@ const GENERATORS = {
   'state-ag-complaint': {
     title: 'State Attorney General Complaint Letter',
     gumroad_product_id: 'wrbdyq',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderStateAgComplaint,
     prompt_template:
       'Write a formal complaint letter to the addressee\'s State Attorney General\'s Consumer Protection Division. State clearly that the consumer is filing a complaint against the named business for unfair or deceptive business practices, describe the issue using the details provided, reference general consumer protection principles (misleading advertising, breach of implied warranty, or unconscionable business practices as applicable) WITHOUT inventing or citing a specific state statute name or number — state protection laws vary and the letter should stay accurate by not naming a specific act unless the user already did. Business: {business_name}. State: {state}. Issue: {issue_type}. Details: {details}. Tone: professional, factual, no emotional language.',
   },
   'fcc-complaint': {
     title: 'FCC Informal Complaint Letter',
     gumroad_product_id: 'eyssdz',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderFccComplaint,
     prompt_template:
       'Write a formal FCC informal complaint narrative suitable for submission through the FCC Consumer Complaint Center. State the category of the complaint (billing, service quality, availability, or contract dispute), describe the issue factually using the details provided, reference any prior attempts to resolve it directly with the provider, and state the specific resolution requested (credit, rate correction, technician visit, or contract release, as applicable based on the issue). Provider: {provider_name}. Category: {category}. Prior attempts: {prior_attempts}. Details: {details}. Tone: factual, clear, no emotional language — written to be pasted into the FCC\'s own complaint form fields, not as a mailed letter.',
   },
@@ -1159,6 +1613,10 @@ const GENERATORS = {
   'au-major-failure-refund-demand': {
     title: 'Major Failure Refund Demand Letter (Australia)',
     gumroad_product_id: 'ikchrx',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderAuMajorFailureRefundDemand,
     prompt_template:
       'Write a formal demand letter to an Australian retailer asserting that a product fault constitutes a major failure under the Australian Consumer Law (ACL) consumer guarantees. Reference that the ACL does not set a fixed 12-month guarantee period — protection lasts as long as reasonable given the product\'s price and type — and that for a major failure the consumer, not the retailer, chooses between refund and replacement. State plainly that the letter is not a request for goodwill but an assertion of a statutory right, and that the retailer (not the manufacturer) is legally responsible. Do not cite a specific ACL section number unless already well-established; do not invent a compensation figure or fixed response deadline beyond a reasonable window (commonly 7-14 days). Retailer: {retailer_name}. Product: {product}. Purchase date: {purchase_date}. Price paid: {price_paid}. Fault: {fault}. Basis: {failure_test}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
   },
@@ -1177,6 +1635,10 @@ const GENERATORS = {
     title: 'Telco Cancellation & TIO Complaint Letter (Australia)',
     // Real Gumroad product_id for the "au-tio-cancellation-demand" product.
     gumroad_product_id: 'doeik',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderAuTioCancellationDemand,
     prompt_template:
       'Write a formal letter to an Australian telco/ISP requesting contract cancellation without an early termination fee, referencing that a provider failing to deliver promised service quality or unilaterally changing contract terms is generally considered a breach on the provider\'s side. State that if this isn\'t resolved directly, the customer intends to lodge a complaint with the Telecommunications Industry Ombudsman (TIO), which gives providers a short window (commonly around 10 business days) to resolve complaints once referred. Do not invent a specific TIO fee amount charged to the provider — keep this general (e.g. \'costs associated with TIO involvement\'). Provider: {provider_name}. Issue: {issue}. Cancellation first requested: {cancellation_request_date}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.',
   },
@@ -1249,6 +1711,10 @@ const GENERATORS = {
     title: 'Withdrawal Right / Cancellation Letter (EU)',
     // Real Gumroad product_id for the "eu-withdrawal-right-letter" product.
     gumroad_product_id: 'onxtxv',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEuWithdrawalRightLetter,
     prompt_template:
       "Write a formal EU right-of-withdrawal notice per Directive 2011/83/EU. State clearly no reason is required. If was_informed is 'No / Not sure', note that failing to properly inform the consumer extends the withdrawal window by 12 months, without asserting this applies with certainty — phrase as something to verify. Do not reference the discontinued ODR platform. Seller: {seller_name}. Order: {order_details}. Delivery date: {delivery_date}. Reason (if given): {reason}. Tone: professional, factual.",
   },
@@ -1256,6 +1722,10 @@ const GENERATORS = {
     title: 'Legal Guarantee Repair/Replacement Demand (EU)',
     // Real Gumroad product_id for the "eu-legal-guarantee-demand" product.
     gumroad_product_id: 'ypqab',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEuLegalGuaranteeDemand,
     prompt_template:
       "Write a formal legal guarantee (conformity) demand per Directive (EU) 2019/771. State the seller (not manufacturer) is responsible. If within the first year, note the burden-of-proof presumption favors the consumer. State full refund/termination is only available if repair/replacement first failed or was refused, unless remedy is already 'Full refund'. Do not assert a fixed 2-year or 3-year figure as universal — note it varies by member state (2-year EU minimum, some countries extend further). Seller: {seller_name}. Product: {product}. Purchase date: {purchase_date}. Defect: {defect}. Remedy: {remedy}. Tone: professional, factual.",
   },
@@ -1348,6 +1818,10 @@ const GENERATORS = {
     title: 'Marketplace/Platform Dispute Letter (Amazon/Booking/Airbnb/PayPal)',
     // Real Gumroad product_id for the "eu-platform-dispute-letter" product.
     gumroad_product_id: 'echmjl',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEuPlatformDisputeLetter,
     prompt_template:
       "Write a formal dispute letter tailored to the selected platform. For Amazon: invoke the 14-day withdrawal right or 2-year legal guarantee as applicable, and the A-to-z Guarantee as Amazon's own escalation layer — do NOT reference the discontinued EU ODR platform; if escalation beyond Amazon is needed, reference ECC-Net or national ADR bodies instead. For Booking.com: if booking_type is 'Package/linked booking', invoke Directive (EU) 2015/2302's alternative accommodation mandate; if 'Standalone hotel booking', frame this as a general breach-of-contract claim against the hotel, NOT the codified package travel relocation right. For Airbnb: reference the Guest Refund Policy and note the 72-hour reporting window is Airbnb's own policy, not EU statute, while price/description accuracy is grounded in EU unfair commercial practices law. For PayPal: reference Buyer Protection's 180-day dispute window and 20-day negotiation period as PayPal's own program rules, and note the CSSF Luxembourg escalation path if internal arbitration is unfair. Platform: {platform}. Booking type: {booking_type}. Issue: {issue}. Transaction: {transaction_details}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
@@ -1355,6 +1829,10 @@ const GENERATORS = {
     title: 'Subscription Cancellation & Refund Demand Letter (EU)',
     // Real Gumroad product_id for the "eu-subscription-cancellation-demand" product.
     gumroad_product_id: 'zyuop',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEuSubscriptionCancellationDemand,
     prompt_template:
       "Write a formal EU subscription cancellation/refund letter. If scenario is 'Still within my 14-day withdrawal window', invoke Directive (EU) 2023/2673's withdrawal right and request a pro-rata refund. If scenario is 'Trying to cancel an ongoing subscription (past 14 days)', note that a cancellation-button law applies in some member states (e.g. Germany, France) but is NOT yet uniform EU law — request cancellation citing the company's own terms and, if the country field matches Germany or France, their specific national cancellation-button law. If scenario is 'Charged for a renewal I wasn't properly notified about', invoke national consumer protection law citing lack of pre-contractual transparency, without asserting a single EU-wide notice period (varies by member state, commonly 15-30 days where a national law exists). If remedy involves revoking a payment mandate, reference the right under PSD2 to do so via the consumer's own bank. Do not present the cancellation button as EU-wide law outside the 14-day withdrawal context. Company: {company_name}. Country: {country}. Scenario: {scenario}. Sign-up date: {signup_date}. Details: {details}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
@@ -1464,6 +1942,10 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "formal-complaint-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/tedlq -> .../l/formal-complaint-generator).
     gumroad_product_id: 'tedlq',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderFormalComplaintGenerator,
     prompt_template:
       "Generate a clear, formal complaint letter from {your_name} to {provider_name} regarding {course_name}, purchased/enrolled on {enrollment_date} for {amount_paid}. The problem type selected by the user is: {problem_type}. Specific details of what happened: {problem_details}. State clearly what resolution is being requested: {desired_outcome}. Tailor the letter's focus to the selected problem type — for example, an institution closure complaint should center on the closure date and any alternative offered; a refund-refusal complaint should center on the original refund policy and the provider's stated reason for refusing; a misleading-advertising complaint should center on the specific claims made versus what was actually delivered; a fake/invalid certificate complaint should center on what was promised about accreditation/recognition versus what was actually true; a bootcamp complaint should center on the specific broken promise (job guarantee, curriculum, or cohort change); an online platform complaint should center on the access that was promised versus what actually happened. If the problem type is 'Linked credit/financing issues', additionally note that in many jurisdictions a linked or connected credit agreement can be legally challenged if the underlying course was cancelled, misrepresented, or not delivered — phrase this as worth raising with the credit provider and worth checking against local consumer credit law, not as a guaranteed right, since this varies significantly by country and credit type. Reference relevant consumer protection principles in general terms (without claiming to give jurisdiction-specific legal advice), and note that this letter may be escalated to a relevant regulator or ombudsman if not resolved within a reasonable timeframe. Write in a firm, professional, non-aggressive tone. Format as a proper letter with date, recipient, subject line, and closing.",
   },
@@ -1660,12 +2142,20 @@ const GENERATORS = {
   'subscription-service-billing-dispute': {
     title: 'Subscription & Service Billing Dispute Generator',
     gumroad_product_id: 'PLACEHOLDER_subscription-service-billing-dispute',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderSubscriptionServiceBillingDispute,
     prompt_template:
       "Write a formal billing dispute letter from a consumer to {provider_name} regarding a charge of {charge_amount} on {charge_date}. Account/reference: {account_id} — ignore this entirely if not provided or marked N/A. This dispute concerns: {dispute_type}. If the charge occurred after cancellation, state the consumer cancelled on {cancellation_date}, referencing confirmation details if given: {cancellation_confirmation}, so this charge should not have occurred — otherwise ignore these two fields entirely. If this concerns a price increase, state the price was previously {previous_price} and increased to {new_price}, and reference whether advance notice was received: {notice_received} — otherwise ignore these three fields entirely. If this concerns a duplicate, incorrect, or unauthorized charge, state the expected amount was {expected_amount} and describe the issue: {issue_description} — otherwise ignore these two fields entirely. If this concerns an unwanted renewal, state whether the consumer recalls receiving a renewal notice: {renewal_notice_received}, and reference the original signup date if given: {signup_date} — otherwise ignore these two fields entirely. Only use the fields belonging to the selected dispute type; never write 'N/A' or reference an inapplicable field in the letter itself. State the consumer's desired outcome clearly: {desired_outcome}. Request a response within a reasonable timeframe (10 business days), and note that if unresolved, the consumer will dispute the charge directly with their card issuer or relevant regulator. Keep the tone factual and firm, not aggressive. Do not invent any facts, dates, or figures beyond what was provided.",
   },
   'service-complaint-escalation': {
     title: 'Service Complaint & Escalation Generator',
     gumroad_product_id: 'PLACEHOLDER_service-complaint-escalation',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderServiceComplaintEscalation,
     prompt_template:
       "Write a formal complaint letter from a consumer to {provider_name}, matching the stage described: {complaint_stage}. Account/reference: {account_id} — ignore this entirely if not provided or marked N/A. Issue: {issue_description}. If this is a first formal complaint, state the issue arose on {issue_date}, and if given, describe what was promised versus what was actually delivered: {promised_vs_delivered} — otherwise ignore these two fields entirely. If this is an escalation of an unresolved complaint, state the consumer first raised it on {original_complaint_date}, referencing the reference number if given: {original_reference}, the response received if given: {response_received}, and any deadline the provider previously committed to if given: {deadline_given} — otherwise ignore these four fields entirely; also state explicitly that this is an escalation of an unresolved complaint and request it be handled by a manager or complaints team, not front-line support. Only use the fields belonging to the selected stage; never write 'N/A' or reference an inapplicable field in the letter itself. State the consumer's desired outcome: {desired_outcome}. Request a substantive response within 10 business days, and note that if unresolved, the consumer will escalate to an ombudsman, regulator, or small claims court as appropriate. Keep the tone factual and professional. Do not invent any facts, dates, or figures beyond what was provided.",
   },
@@ -1705,6 +2195,10 @@ const GENERATORS = {
     // "refund-warranty-claim-generator" verified live (HTTP 200, matching title) on
     // carlosdevlop.gumroad.com before wiring.
     gumroad_product_id: 'lidrwt',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderRefundWarrantyClaim,
     prompt_template:
       "Write a formal, courteous but firm letter from a consumer to {seller_name} regarding order {order_number} for {item_name}, purchased on {purchase_date}. This claim is described as: {claim_reason}. If this is described as the item not being as described, not working as expected, or not being satisfactory, state the following issue: {issue_description} — otherwise ignore this field entirely. If this is described as the item being defective, broken, or having stopped working, state the following defect: {defect_description}, referencing a stated warranty period if given: {warranty_period_stated} — otherwise ignore these two fields entirely. Only use the fields belonging to the selected claim type; never write 'N/A' or reference an inapplicable field in the letter itself. State the consumer's desired outcome clearly: {desired_outcome}. Request a response within a reasonable timeframe (10 business days), and note that if unresolved, the consumer will pursue a card issuer dispute or the relevant consumer protection avenue. Keep the tone professional, courteous but firm, not aggressive. Do not invent any facts, warranty terms, laws, or figures beyond what was provided.",
   },
@@ -1714,6 +2208,13 @@ const GENERATORS = {
     // "chargeback-letter-generator" verified live (HTTP 200, matching title) on
     // carlosdevlop.gumroad.com before wiring.
     gumroad_product_id: 'frpxfr',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    // Per the 2026-09-16 Option 1 decision: no AI-guessed card-network
+    // dispute-reason category anywhere in the output -- render() presents
+    // the dispute facts and lets the bank do its own categorization.
+    static: true,
+    render: renderChargebackLetter,
     prompt_template:
       "Write a formal chargeback request from a cardholder to {card_issuer_name} regarding a transaction of {transaction_amount} on {transaction_date} with {seller_name}. Order reference: {order_number} — ignore this entirely if not provided or marked N/A. Reason for dispute: {dispute_reason}. Whether the cardholder already attempted to resolve this directly with the seller: {prior_contact_attempted}. If yes, state what happened: {prior_contact_outcome} — otherwise ignore this field entirely. Request that the bank open a formal chargeback/dispute investigation for this transaction, referencing the card network dispute reason category that the facts given most plausibly fall under, without inventing a specific reason code number. Ask for confirmation of the dispute reference number and expected timeline. Keep the tone factual and direct. Do not invent any facts, dates, figures, or specific card network rules beyond what was provided.",
   },
@@ -1723,6 +2224,10 @@ const GENERATORS = {
     // "marketplace-complaint-generator" verified live (HTTP 200, matching title)
     // on carlosdevlop.gumroad.com before wiring.
     gumroad_product_id: 'ppxiud',
+    // STATIC as of 2026-09-17 (Batch 3: Shipping/Shopping/Subscriptions/
+    // Training -- final batch) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderMarketplaceComplaint,
     prompt_template:
       "Write a formal complaint regarding seller {seller_name}, order {order_number}, to the marketplace platform. The platform is: {platform}. If the platform is 'Another marketplace — I'll name it below', use the specific name given here instead: {platform_name} — otherwise ignore this field entirely. Issue: {issue_description}. Whether the buyer already contacted the seller directly: {seller_contacted}. If yes, state what response was received: {seller_response} — otherwise ignore this field entirely. The buyer is requesting: {desired_outcome}. Format this as an appropriate complaint to submit through that platform's buyer protection or resolution center, using a factual, evidence-oriented tone consistent with what that type of platform process expects. Do not invent specific platform policy names, deadlines, or guarantee terms beyond general, appropriately hedged language — instead, outside the letter itself, add a note reminding the buyer to confirm the exact policy details and deadline on the platform's own resolution center page before submitting. Do not invent any facts beyond what was provided.",
   },
