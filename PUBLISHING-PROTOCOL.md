@@ -207,6 +207,63 @@ planned) — reuse this shape for every one that follows.
 
 ---
 
+## New QUESTION
+
+No section existed here before 2026-09-17 — Questions were being
+published without a documented checklist. This section starts minimal:
+only the two requirements below are new/mandatory as of 2026-09-17.
+For everything else (FAQPage JSON-LD shape, breadcrumb, `.q-*` CSS
+classes, nav/footer), adapt to the standard template the same way Blog
+does: reference an existing recent article under `questions/<block>/`.
+
+1. **Cover/hero image, required.** Add near the top of the article —
+   below the `.q-category` label, above (or right after) the `<h1>`.
+   Title text must stay OUTSIDE the image itself (Carlos's explicit
+   requirement — Discover penalizes text-in-image). Minimum 1200px
+   wide, matching Google Discover's image requirements. Source images
+   already exist per-article under `images/questions/<block>/<slug>.png`
+   (1200×2133) plus pre-generated responsive webp variants
+   (`<slug>.webp` 540w, `<slug>-410w.webp`, `<slug>-320w.webp`) — do
+   not regenerate these, just wire them in. Do NOT reuse the sitewide
+   `.hero-image` class (investigations/homepage) — it's `display: none`
+   on mobile, which would hide the image from Discover's primary
+   surface. Use a dedicated class instead:
+   ```html
+   <span class="q-category">{category label}</span>
+   <picture>
+     <source type="image/webp" srcset="/images/questions/{block}/{slug}-320w.webp 320w, /images/questions/{block}/{slug}-410w.webp 410w, /images/questions/{block}/{slug}.webp 540w" sizes="(max-width: 480px) 320px, 380px">
+     <img class="q-hero-image" src="/images/questions/{block}/{slug}.png" width="1200" height="2133" alt="{exact H1 text}" loading="eager" fetchpriority="high">
+   </picture>
+   <h1>{H1 text}</h1>
+   ```
+   CSS — the `.q-*` rules live in each article's own inline `<style>`
+   block, not in the shared `styles.css` (confirmed: all 45 existing
+   Question articles duplicate their own `.q-header`/`.q-category`/etc.
+   rules — same copy-per-file pattern as the nav, not a real shared
+   stylesheet). Add this rule alongside the other `.q-*` rules in the
+   new article's own `<style>` block:
+   ```css
+   .q-hero-image { display: block; width: 100%; max-width: 380px; height: auto; border-radius: 12px; margin: 0 0 20px; }
+   ```
+2. **`<meta name="robots" content="max-image-preview:large">` in
+   `<head>`, required.** Already present on all 45 existing Question
+   articles as of 2026-09-17 (verified) — this is a confirm-and-keep
+   requirement, not a gap to fix. Carried over from the investigation
+   article pattern.
+3. Mandatory verification: reload the file, confirm the exact `<picture>`/
+   `<img>` block and the meta tag are both present, confirm the image
+   actually renders (not a 404/broken src) at the real URL, confirm it
+   is NOT hidden at a mobile viewport width.
+
+**Existing backlog (audited 2026-09-17, not yet fixed):** all 45
+published Question articles are missing the hero image (0/45 have any
+`<img>` tag in the body). All 45 already have the meta robots tag —
+zero backlog there. Retrofitting the 45 existing articles' body
+content is a separate, explicitly-scoped decision — see chat history
+2026-09-17, not yet approved.
+
+---
+
 ## Cross-cutting rules — apply to every content type above
 
 - Never link to a resource, tool, or page that doesn't actually exist
