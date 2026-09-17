@@ -494,6 +494,11 @@ const GENERATORS = {
     title: 'GDPR Rights Request Letter (Access / Erasure / Complaint)',
     // Real Gumroad product_id for the "eu-gdpr-rights-request" product.
     gumroad_product_id: 'pnpwzz',
+    // STATIC as of 2026-09-17 (pilot batch 4/4 -- final pilot generator)
+    // -- prompt_template below is now DEAD CODE, kept unused per the same
+    // convention as the other 3 pilot generators.
+    static: true,
+    render: renderEuGdprRightsRequest,
     prompt_template:
       "Write a formal GDPR rights request letter matching request_type. For Access requests, cite Article 15 and request purposes of processing, categories of data, recipients, and retention period. For Erasure requests, cite Article 17, using the phrase 'I hereby exercise my Right to Erasure under Article 17 of the GDPR'. For both Access and Erasure, note the response deadline is one month, extendable by up to two further months for complex requests provided the company notifies the requester within the first month — do NOT describe this deadline as non-extendable or absolute. For a DPO complaint, frame it as the required pre-escalation step before a formal DPA complaint, referencing a 30-day response expectation before escalating. Company: {company_name}. Request type: {request_type}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
