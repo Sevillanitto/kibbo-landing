@@ -276,6 +276,327 @@ function renderEuGdprRightsRequest(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 1 rollout: Financial & Banking,
+// 2026-09-17) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-2.md. fdcpa-cease-desist
+// (the 13th Financial & Banking generator) was already ported during the
+// pilot batch above.
+
+function renderFcraCreditDispute(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bureau);
+  lines.push('Re: Formal Credit Report Dispute');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '.');
+  lines.push('Account/reference: ' + a.account_reference + '.');
+  lines.push('');
+  lines.push('Details of the error: ' + a.details);
+  lines.push('');
+  if (a.jurisdiction === 'US') {
+    lines.push('I am disputing this as an FCRA Section 611 dispute under the Fair Credit Reporting Act. I am requesting that you conduct a reasonable reinvestigation and delete or correct this item if it cannot be verified within the 30-day statutory window (45 days if applicable).');
+  } else if (a.jurisdiction === 'UK' || a.jurisdiction === 'EU' || a.jurisdiction === 'Australia') {
+    lines.push('I am exercising my general right to dispute inaccurate information on my credit file and have it investigated within the timeframe that applies in my area.');
+  }
+  lines.push('');
+  lines.push('I am requesting correction or removal of this item, and a copy of the updated report once your investigation concludes.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderAuUnauthorisedTransactionDispute(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: Unauthorised Transaction Dispute — ' + a.amount + ' on ' + a.transaction_date);
+  lines.push('');
+  lines.push('I am formally disputing a transaction of ' + a.amount + ' on ' + a.transaction_date + ' as unauthorised.');
+  lines.push('');
+  lines.push('What happened: ' + a.scenario);
+  lines.push('');
+  lines.push('Evidence: ' + a.evidence);
+  lines.push('');
+  lines.push('I reported this to you on ' + a.reported_date + '. Under the ePayments Code, I am not liable for this loss unless you can demonstrate I contributed through serious carelessness — the burden of proof sits with you, not me.');
+  lines.push('');
+  lines.push('I am requesting a formal investigation and a dispute reference number.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuBankComplaintFinnet(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: Formal Complaint');
+  lines.push('');
+  lines.push('Issue: ' + a.issue + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.escalation_stage === 'Filing the first complaint to the bank') {
+    lines.push('This is my first complaint on this matter.');
+    if (a.issue === 'Payment service issue (transfer, card, unauthorised charge)') {
+      lines.push('As this concerns a payment service, I understand you have 15 business days to respond under the Payment Services Directive (extendable to 35 in exceptional cases).');
+    }
+  } else if (a.escalation_stage === "Bank didn't respond within 15 business days") {
+    lines.push('I raised this complaint previously and did not receive a response within 15 business days.');
+  } else if (a.escalation_stage === 'Bank responded but unsatisfactorily — ready to escalate to FIN-NET') {
+    lines.push('I raised this complaint previously and your response was unsatisfactory. If this is not resolved, I intend to escalate it to FIN-NET, my national financial ombudsman.');
+  }
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuSepaRecallRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: SEPA Recall Request');
+  lines.push('');
+  lines.push('I am requesting a SEPA recall for the following transfer: ' + a.transfer_details + '.');
+  lines.push('');
+  lines.push('Basis for recall: ' + a.basis + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.vop_shown === 'Yes, but I proceeded anyway') {
+    lines.push('Verification of Payee showed a mismatch warning before I sent this transfer, and I proceeded anyway.');
+  } else if (a.vop_shown === 'Yes, and my bank should have blocked/warned more clearly') {
+    lines.push('Verification of Payee showed a mismatch warning, but I believe it should have been presented more clearly, or the transfer should have been blocked pending my confirmation.');
+  } else if (a.vop_shown === 'No mismatch was shown') {
+    lines.push('No Verification of Payee mismatch was shown before I sent this transfer.');
+  } else if (a.vop_shown === "VoP wasn't offered at all") {
+    lines.push("Verification of Payee was not offered at all for this transfer. I believe this may support a separate compensation claim against you under the Instant Payments Regulation, distinct from this recall request.");
+  }
+  lines.push('');
+  lines.push("Under the standard SEPA recall framework, I understand this request should be initiated within a reasonable window (commonly around 10 business days), and the receiving bank typically has around 15 business days to respond. I understand funds cannot be withdrawn from the recipient's account without their consent unless fraud or a technical error is shown.");
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuUnauthorisedTransactionPsd2(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: PSD2 Unauthorised Transaction Refund Demand');
+  lines.push('');
+  lines.push('I am disputing the following transaction as unauthorised: ' + a.transaction_details + '. I reported this to you on ' + a.reported_date + '.');
+  lines.push('');
+  lines.push('Strong Customer Authentication used: ' + a.sca_used + '.');
+  lines.push('');
+  if (a.sca_used === 'No, not requested at all' || a.sca_used === 'Not sure') {
+    lines.push('As Strong Customer Authentication does not appear to have been properly required for this transaction, I believe liability shifts to you/the merchant under PSD2 for failing to require SCA.');
+  } else if (a.sca_used === "Yes, but I didn't authorise it") {
+    lines.push('Although Strong Customer Authentication was completed for this transaction, I did not personally authorise it — I believe this points to a compromise of my authentication method or device, which is a separate basis for disputing this transaction as unauthorised.');
+  }
+  lines.push('');
+  lines.push('Loss before I reported it: ' + a.loss_before_report);
+  lines.push('');
+  lines.push('Under PSD2, my maximum liability for losses before reporting is capped at €50, and I have zero liability for anything after I reported it. I am requesting restitution by no later than the end of the business day following this notification.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderBankComplaintLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: Formal Complaint — Account ' + a.account_reference);
+  lines.push('');
+  lines.push('Issue type: ' + a.issue_category + '.');
+  lines.push('');
+  lines.push(a.issue_description);
+  lines.push('');
+  if (a.prior_contact === 'Yes, verbally, no resolution') {
+    lines.push('I previously raised this verbally and it was not resolved.');
+    lines.push('');
+  } else if (a.prior_contact === 'Yes, in writing, no resolution') {
+    lines.push('I previously raised this in writing and it was not resolved.');
+    lines.push('');
+  }
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('If this is not resolved within a reasonable period, I may escalate this matter to the applicable financial complaints body for my jurisdiction.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderUnauthorizedTransactionDisputeLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: Unauthorized Transaction Dispute');
+  lines.push('');
+  lines.push('I do not recognize or authorize the transaction on ' + a.transaction_date + ' for ' + a.transaction_amount + ' at ' + a.merchant_name + ', first noticed on ' + a.detected_date + '.');
+  lines.push('');
+  lines.push('Card/access device status: ' + a.card_or_account_status + '.');
+  lines.push('');
+  lines.push('My liability protections generally depend on how promptly I report this. Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('I am requesting this transaction be investigated and reversed, and ask for written confirmation of the case reference number.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderCardTransactionBillingDispute(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.card_issuer);
+  lines.push('Re: Card Transaction Dispute');
+  lines.push('');
+  lines.push('I am disputing a transaction of ' + a.transaction_amount + ' on ' + a.transaction_date + ' from ' + a.merchant_name + '.');
+  lines.push('');
+  lines.push('Reason for dispute: ' + a.dispute_reason + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.merchant_contact_attempted === 'Yes, no response') {
+    lines.push('I contacted the merchant directly and received no response.');
+  } else if (a.merchant_contact_attempted === 'Yes, refused') {
+    lines.push('I contacted the merchant directly and they refused to resolve this.');
+  } else if (a.merchant_contact_attempted === 'No') {
+    lines.push('I have not yet contacted the merchant directly about this.');
+  }
+  lines.push('');
+  lines.push("This dispute is being filed within my card network's standard filing window. I am requesting a formal chargeback/dispute investigation and a written case reference.");
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderBankFeeRefundRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.bank_name);
+  lines.push('Re: Fee Refund Request');
+  lines.push('');
+  lines.push('I am requesting a refund of a ' + a.fee_type + ' of ' + a.fee_amount + ' charged on ' + a.fee_date + '.');
+  lines.push('');
+  lines.push('Basis for dispute: ' + a.dispute_basis);
+  lines.push('');
+  lines.push('Banks are generally required to disclose fees and any changes to them clearly before charging. Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('I am requesting a full refund and written confirmation.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderLoanCreditAgreementCancellationWithdrawal(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.lender_name);
+  lines.push('Re: Notice of Cancellation/Withdrawal — Agreement ' + a.agreement_reference);
+  lines.push('');
+  lines.push('I am formally cancelling/withdrawing from the credit agreement referenced ' + a.agreement_reference + ', signed on ' + a.signing_date + '.');
+  lines.push('');
+  if (hasValue(a.cancellation_reason)) {
+    lines.push('Reason: ' + a.cancellation_reason);
+  } else {
+    lines.push('I am exercising this as a right, and no reason is required.');
+  }
+  lines.push('');
+  lines.push('Many jurisdictions provide a statutory cooling-off/right-of-withdrawal period for certain consumer credit agreements. Jurisdiction: ' + a.jurisdiction + '. I am confirming this period applies to my specific agreement before relying on it.');
+  lines.push('');
+  lines.push('I am requesting written confirmation that this agreement is cancelled, and confirmation of any amount owed or refundable.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderFinancialOmbudsmanRegulatorComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  let to = '';
+  if (a.jurisdiction === 'US') {
+    to = 'the Consumer Financial Protection Bureau (CFPB)';
+  } else if (a.jurisdiction === 'UK') {
+    to = 'the Financial Ombudsman Service (FOS)';
+  } else if (a.jurisdiction === 'EU') {
+    to = 'FIN-NET / my national competent authority';
+  } else if (a.jurisdiction === 'Australia') {
+    to = 'the Australian Financial Complaints Authority (AFCA)';
+  }
+  lines.push('To: ' + to);
+  lines.push('Re: Complaint Escalation — ' + a.institution_name);
+  lines.push('');
+  lines.push('I am escalating a complaint regarding ' + a.institution_name + '.');
+  lines.push('');
+  lines.push('Summary of the issue: ' + a.issue_summary);
+  lines.push('');
+  lines.push('I first contacted ' + a.institution_name + ' about this on ' + a.prior_complaint_date + '. Their response: ' + a.institution_response);
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome);
+  lines.push('');
+  lines.push("I am filing this escalation because " + a.institution_name + "'s own complaints process has been exhausted or a reasonable response period has passed.");
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
+function renderDebtCollectionDisputeLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.collector_name);
+  lines.push('Re: Formal Debt Validation/Dispute — ' + a.claimed_amount);
+  lines.push('');
+  let debtLine = 'I am disputing the claimed debt of ' + a.claimed_amount;
+  if (hasValue(a.original_creditor)) {
+    debtLine += ', originally from ' + a.original_creditor;
+  }
+  debtLine += '.';
+  lines.push(debtLine);
+  lines.push('');
+  lines.push('Basis for dispute: ' + a.dispute_basis + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  lines.push('I am exercising my right to request written validation of this debt before you continue any collection activity. Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('I am explicitly requesting: written proof of the debt, verification that you are legally entitled to collect it, and confirmation of the exact amount owed with an itemized breakdown.');
+  lines.push('');
+  lines.push('This letter is not an admission of the debt.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.customer_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -315,6 +636,10 @@ const GENERATORS = {
     // than inventing new claims for jurisdictions not yet legally verified.
     title: 'Credit Report Dispute Letter Generator',
     gumroad_product_id: 'vytma',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderFcraCreditDispute,
     prompt_template:
       "Write a formal credit report dispute letter from {customer_name} to {bureau} regarding {issue_type} on the account/reference {account_reference}, if provided, describing the specific error: {details}. Jurisdiction: {jurisdiction}. If jurisdiction is 'US': explicitly identify this as an FCRA Section 611 dispute, state clearly that the consumer is disputing the specific account/item as inaccurate, incomplete, or unverifiable under the Fair Credit Reporting Act, and formally request that the bureau conduct a reasonable reinvestigation and delete or correct the item if it cannot be verified within the 30-day statutory window (45 days if applicable). If jurisdiction is 'UK', 'EU', or 'Australia': reference the consumer's general right to dispute inaccurate information on their credit file and have it investigated within a defined period — keep any specific deadline generic ('within the investigation period required in your area') unless independently verified; never invent a specific day count, and do not cite a specific statute name. Request correction or removal of the disputed item and a copy of the updated report once the investigation concludes. Tone: professional, factual, formal, no emotional language.",
   },
@@ -356,6 +681,10 @@ const GENERATORS = {
     title: 'Bank Dispute Letter — Unauthorised Transaction (Australia)',
     // Real Gumroad product_id for the "au-unauthorised-transaction-dispute" product.
     gumroad_product_id: 'wnqma',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderAuUnauthorisedTransactionDispute,
     prompt_template:
       'Write a formal dispute letter to an Australian bank regarding a genuinely unauthorised transaction, invoking the ePayments Code. IMPORTANT: only use this template for transactions the customer did NOT knowingly authorise (stolen card, hacked account, etc.) — do not use scam-related language implying authorised transfers are covered, since the ePayments Code does not currently cover scams where the customer was deceived into authorising a payment themselves. State that under the Code, the customer is not liable for the loss unless the bank can demonstrate the customer contributed through serious carelessness, and that the burden of proof sits with the bank, not the customer. Request a formal investigation and a dispute reference number. Do not invent a specific compensation figure or a fixed response deadline — request a response within a reasonable time (commonly 15-45 days, per standard IDR timeframes) instead. Bank: {bank_name}. Transaction date: {transaction_date}. Amount: {amount}. Scenario: {scenario}. Reported to bank on: {reported_date}. Evidence: {evidence}. Tone: professional, firm, factual.',
   },
@@ -473,6 +802,10 @@ const GENERATORS = {
     title: 'Bank Complaint Letter (EU / PSD2 / FIN-NET)',
     // Real Gumroad product_id for the "eu-bank-complaint-finnet" product.
     gumroad_product_id: 'jceka',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderEuBankComplaintFinnet,
     prompt_template:
       "Write a formal complaint letter to a European bank. If escalation_stage is 'Filing the first complaint', title it explicitly 'Formal Complaint under the Payment Services Directive' if issue is payment-service related, and note the bank has 15 business days (extendable to 35 in exceptional cases) to respond if this applies. If escalation_stage is 'didn't respond' or 'unsatisfactory', state the complainant intends to escalate via FIN-NET to their national financial ombudsman. Do not claim FIN-NET decisions are universally binding — phrase as a strong, free escalation path rather than a guaranteed legal outcome. Bank: {bank_name}. Issue: {issue}. Details: {details}. Stage: {escalation_stage}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
@@ -480,6 +813,10 @@ const GENERATORS = {
     title: 'SEPA Recall Request Letter',
     // Real Gumroad product_id for the "eu-sepa-recall-request" product.
     gumroad_product_id: 'qawzs',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderEuSepaRecallRequest,
     prompt_template:
       "Write a formal SEPA Recall request to a bank. Reference the standard SEPA scheme rulebook recall framework — request initiated within a reasonable window (commonly cited as around 10 business days), noting the receiving bank typically has around 15 business days to respond. State clearly the receiving bank cannot withdraw funds from the recipient's account without their consent unless fraud or a technical error is shown. If vop_shown indicates VoP wasn't offered or failed, separately note this may support a compensation claim against the sending bank under the Instant Payments Regulation, distinct from the recall itself. Bank: {bank_name}. Transfer: {transfer_details}. Basis: {basis}. VoP: {vop_shown}. Details: {details}. Tone: professional, factual, urgent but not alarmist.",
   },
@@ -487,6 +824,10 @@ const GENERATORS = {
     title: 'Unauthorised Transaction Refund Demand (PSD2)',
     // Real Gumroad product_id for the "eu-unauthorised-transaction-psd2" product.
     gumroad_product_id: 'zdjykv',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderEuUnauthorisedTransactionPsd2,
     prompt_template:
       "Write a formal PSD2 unauthorised transaction refund demand. If sca_used is 'No' or 'Not sure', assert liability shifts to the bank/merchant for failing to require SCA. Cite the €50 maximum liability cap for losses before the transaction was reported, and zero liability for anything after reporting. Demand restitution 'by no later than the end of the following business day' after notification, per PSD2. Do NOT reference PSD3 as if it's already in force — PSD2 is the current governing law. Bank: {bank_name}. Transaction: {transaction_details}. SCA used: {sca_used}. Reported: {reported_date}. Loss before report: {loss_before_report}. Tone: professional, firm, factual.",
   },
@@ -737,12 +1078,20 @@ const GENERATORS = {
   'bank-complaint-letter': {
     title: 'Bank Complaint Letter Generator',
     gumroad_product_id: 'PLACEHOLDER_BANK_COMPLAINT',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderBankComplaintLetter,
     prompt_template:
       "Write a formal complaint letter from {customer_name} to {bank_name} regarding {issue_category}, described as: {issue_description}. If prior_contact indicates a prior unresolved attempt was already made, reference that this issue was already raised without resolution: {prior_contact} — otherwise do not mention any prior contact at all. State the desired outcome clearly: {desired_outcome}. For jurisdiction={jurisdiction}, note that if unresolved within a reasonable period, the customer may escalate to the appropriate financial ombudsman/regulator — keep this generic ('the applicable financial complaints body in your area') unless independently verified; never invent a specific agency name. Account/reference: {account_reference}. Tone: professional, firm, factual.",
   },
   'unauthorized-transaction-dispute-letter': {
     title: 'Unauthorized Transaction Dispute Letter Generator',
     gumroad_product_id: 'PLACEHOLDER_UNAUTHORIZED_TXN_DISPUTE',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderUnauthorizedTransactionDisputeLetter,
     prompt_template:
       "Write a formal unauthorized transaction dispute letter from {customer_name} to {bank_name}. State the customer does not recognize or authorize the transaction on {transaction_date} for {transaction_amount} at {merchant_name}, first noticed on {detected_date}. Reference the status of the card/access device: {card_or_account_status}. For jurisdiction={jurisdiction}, note the customer's liability protections generally depend on prompt reporting (e.g. Regulation E in the US) — keep specific liability figures and deadlines generic ('the liability limit that applies based on how quickly you report this') unless independently verified for the jurisdiction; never invent a specific dollar cap or day count. Request the transaction be investigated and reversed, and ask for written confirmation of the case reference number. Tone: firm, factual, urgent but professional.",
   },
@@ -755,30 +1104,50 @@ const GENERATORS = {
     // Never split this back into separate generators per dispute reason, and
     // never let fraud language leak into this one's output.
     gumroad_product_id: 'PLACEHOLDER_CARD_BILLING_DISPUTE',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderCardTransactionBillingDispute,
     prompt_template:
       "Write a formal card transaction dispute letter from {customer_name} to {card_issuer}, matching the selected reason: {dispute_reason}. This is a billing/service dispute, NOT a fraud or unauthorized-transaction claim — never use fraud-related language ('unauthorized', 'I did not make this transaction', 'stolen card', 'someone else used my card') anywhere in the letter, regardless of dispute_reason. The disputed transaction was on {transaction_date} for {transaction_amount} from {merchant_name}. If merchant_contact_attempted indicates an attempt was already made, reference that attempt and its outcome: {merchant_contact_attempted} — otherwise state the merchant has not yet been contacted directly. Additional details: {details}. Note the dispute is being filed within the cardholder's standard filing window — keep the specific number of days generic ('within the filing window that applies to your card network') rather than inventing a figure, since this varies by network and dispute reason. Request a formal chargeback/dispute be opened and a written case reference provided. Tone: firm, factual, professional.",
   },
   'bank-fee-refund-request': {
     title: 'Bank Fee Refund Request Generator',
     gumroad_product_id: 'PLACEHOLDER_BANK_FEE_REFUND',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderBankFeeRefundRequest,
     prompt_template:
       "Write a formal fee refund request letter from {customer_name} to {bank_name} for a {fee_type} of {fee_amount} charged on {fee_date}. Present the customer's basis for disputing it: {dispute_basis}. For jurisdiction={jurisdiction}, reference the bank's general obligation to disclose fees and any changes clearly before charging them — keep this generic ('applicable fee transparency requirements in your area') unless independently verified; never invent a specific regulation name or number. Request a full refund and written confirmation. Tone: firm, factual, professional.",
   },
   'loan-credit-agreement-cancellation-withdrawal': {
     title: 'Loan / Credit Agreement Cancellation & Withdrawal Generator',
     gumroad_product_id: 'PLACEHOLDER_LOAN_CANCELLATION',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderLoanCreditAgreementCancellationWithdrawal,
     prompt_template:
       "Write a formal notice of cancellation/withdrawal from {customer_name} to {lender_name}, for the credit agreement referenced {agreement_reference}, signed on {signing_date}. If cancellation_reason was provided, include it briefly to add clarity: {cancellation_reason} — otherwise state the cancellation is being exercised as a right and no reason is required. For jurisdiction={jurisdiction}, reference that many jurisdictions provide a statutory cooling-off/right-of-withdrawal period for certain consumer credit agreements — keep the specific number of days generic ('within the withdrawal period that applies to your agreement and location') rather than inventing a figure, and note the customer should confirm this period applies to their specific product before relying on it. Request written confirmation the agreement is cancelled and confirmation of any amount owed or refundable. Tone: formal, clear, professional.",
   },
   'financial-ombudsman-regulator-complaint': {
     title: 'Financial Ombudsman / Regulator Complaint Generator',
     gumroad_product_id: 'PLACEHOLDER_OMBUDSMAN_COMPLAINT',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderFinancialOmbudsmanRegulatorComplaint,
     prompt_template:
       "Write a formal escalation complaint from {customer_name} to the appropriate financial ombudsman/regulator for jurisdiction={jurisdiction} (e.g. the CFPB in the US, the Financial Ombudsman Service in the UK, FIN-NET / the national competent authority in the EU, or AFCA in Australia — reference the general type of body appropriate for the jurisdiction given without asserting a specific one if the jurisdiction is ambiguous). Regarding {institution_name}, summarize the issue: {issue_summary}. State the institution was first contacted on {prior_complaint_date}, and describe its response so far: {institution_response}. State the desired outcome clearly: {desired_outcome}. Structure the letter with a clear chronology. Note this escalation should generally only be filed after the institution's own complaints process has been exhausted or a reasonable response period has passed — keep any specific deadline generic. Tone: formal, clear, factual — this is a regulatory submission, not an emotional appeal.",
   },
   'debt-collection-dispute-letter': {
     title: 'Debt Collection Dispute Letter Generator',
     gumroad_product_id: 'PLACEHOLDER_DEBT_COLLECTION_DISPUTE',
+    // STATIC as of 2026-09-17 (Batch 1: Financial & Banking) -- prompt_template
+    // below is now DEAD CODE, kept unused per the established convention.
+    static: true,
+    render: renderDebtCollectionDisputeLetter,
     prompt_template:
       "Write a formal debt validation/dispute letter from {customer_name} to {collector_name} regarding a claimed debt of {claimed_amount}, originally from {original_creditor} if known. State the basis for the dispute: {dispute_basis}, and the following details: {details}. For jurisdiction={jurisdiction}, reference the consumer's general right to request written validation of a disputed debt before the collector continues collection activity — keep any specific statutory deadline generic ('within the validation period that applies in your area') unless independently verified; never invent a specific day count. Explicitly request: written proof of the debt, verification the collector is legally entitled to collect it, and confirmation of the exact amount owed with an itemized breakdown. Tone: firm, factual, formal — this is a legal validation request, not an admission of the debt.",
   },
