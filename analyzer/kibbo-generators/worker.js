@@ -597,6 +597,481 @@ function renderDebtCollectionDisputeLetter(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 2 rollout: Legal & Contracts,
+// Privacy & Data, Public Services & Administration, 2026-09-17) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-5.md.
+
+function renderContractDemandLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.other_party_name);
+  lines.push('Re: Formal Demand — Contract ' + a.contract_reference);
+  lines.push('');
+  lines.push('I am writing regarding our contract, ' + a.contract_reference + '.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '.');
+  lines.push('');
+  if (a.issue_type === 'Breach of contract') {
+    lines.push('Obligation breached: ' + a.breach_obligation + '. This breach occurred or was discovered on ' + a.breach_date + '. Evidence available: ' + a.breach_evidence + '.');
+  } else if (a.issue_type === 'Payment owed to you') {
+    lines.push('Amount owed: ' + a.payment_amount + ', for ' + a.payment_for + ', originally due ' + a.payment_due_date + '.');
+    if (a.payment_partial_received === 'Yes — specify amount') {
+      lines.push('A partial payment of ' + a.payment_partial_amount + ' has already been received.');
+    }
+  } else if (a.issue_type === 'Refund owed to you') {
+    lines.push('I originally paid ' + a.refund_amount + ' for ' + a.refund_item + ' on ' + a.refund_payment_date + '. I am owed a refund because: ' + a.refund_reason);
+  } else if (a.issue_type === 'General dispute over obligations or interpretation') {
+    lines.push('Clause/obligation in dispute: ' + a.dispute_clause + '. My interpretation versus yours: ' + a.dispute_interpretation + '. Impact of this disagreement: ' + a.dispute_impact);
+  } else if (a.issue_type === 'Final notice before small claims') {
+    if (a.finalnotice_prior_demand === 'Yes — specify date') {
+      lines.push('I previously sent a demand on ' + a.finalnotice_prior_demand_date + '.');
+    } else {
+      lines.push('No prior demand has been sent before this one.');
+    }
+    lines.push('Response received, if any: ' + a.finalnotice_response_received);
+    lines.push('Amount being claimed: ' + a.finalnotice_amount_claimed);
+    if (hasValue(a.finalnotice_jurisdiction)) {
+      lines.push('Court/jurisdiction I intend to file in, if known: ' + a.finalnotice_jurisdiction);
+    }
+    lines.push('This is a final opportunity to resolve this matter before a small claims filing is made.');
+  }
+  lines.push('');
+  lines.push('Supporting evidence is attached separately where applicable.');
+  lines.push('');
+  let outcome;
+  if (a.desired_outcome === 'Partial payment — specify amount') {
+    outcome = 'a partial payment of ' + a.desired_outcome_amount;
+  } else if (a.desired_outcome === 'Other — free text') {
+    outcome = a.desired_outcome_other;
+  } else {
+    outcome = a.desired_outcome;
+  }
+  lines.push('Desired outcome: ' + outcome + '.');
+  lines.push('');
+  const responseWindow = a.issue_type === 'Final notice before small claims' ? '7 days' : '14 days';
+  lines.push('Please respond within ' + responseWindow + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderContractAmendmentCounteroffer(a) {
+  const lines = [];
+  lines.push('CONTRACT AMENDMENT / COUNTEROFFER');
+  lines.push('');
+  lines.push('Contract: ' + a.contract_reference);
+  lines.push('Between: ' + a.your_name + ' and ' + a.other_party_name);
+  lines.push('Clause(s) addressed: ' + a.clause_reference);
+  lines.push('');
+  if (a.amendment_type === 'Propose a change — counteroffer') {
+    lines.push('Current wording: ' + a.current_wording);
+    lines.push('Proposed new wording: ' + a.proposed_wording);
+    lines.push('Reason for the change: ' + a.change_reason);
+    if (hasValue(a.response_deadline)) {
+      lines.push('Response requested by: ' + a.response_deadline);
+    }
+  } else if (a.amendment_type === 'Document a change already agreed') {
+    lines.push('The original wording — ' + a.original_wording + ' — is replaced with the following agreed wording as of ' + a.agreement_date + ': ' + a.new_agreed_wording);
+    lines.push('All other terms and conditions of the original contract remain unchanged and in full force.');
+  }
+  lines.push('');
+  lines.push('Signatures:');
+  lines.push('');
+  lines.push(a.your_name + ': _______________________  Date: __________');
+  lines.push('');
+  lines.push(a.other_party_name + ': _______________________  Date: __________');
+  return lines.join('\n');
+}
+
+function renderContractTerminationRenewalNotice(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.other_party_name);
+  lines.push('Re: Notice Regarding Contract ' + a.contract_reference + ' — Effective ' + a.effective_date);
+  lines.push('');
+  if (a.notice_type === 'Terminating the contract now') {
+    lines.push('This is formal notice that I am terminating this contract, effective ' + a.effective_date + '.');
+    const reason = a.termination_reason === 'Other — free text' ? a.termination_reason_other : a.termination_reason;
+    lines.push('Reason: ' + reason + '.');
+    if (hasValue(a.termination_clause)) {
+      lines.push('Termination clause relied on: ' + a.termination_clause + '.');
+    }
+    if (hasValue(a.outstanding_obligations)) {
+      lines.push('Outstanding obligations to settle: ' + a.outstanding_obligations);
+    }
+  } else if (a.notice_type === 'Declining to renew at term end') {
+    lines.push('This is formal notice that I will not be renewing this contract. The contract will end on ' + a.contract_end_date + ', per the required notice period of ' + a.required_notice_period + '.');
+    if (hasValue(a.nonrenewal_reason)) {
+      lines.push('Reason: ' + a.nonrenewal_reason);
+    }
+  } else if (a.notice_type === 'Confirming renewal') {
+    lines.push('This confirms renewal of this contract for a new term of ' + a.new_term_length + '.');
+    if (hasValue(a.renewal_changes)) {
+      lines.push('Changes to terms being confirmed alongside this renewal: ' + a.renewal_changes);
+    }
+  }
+  lines.push('');
+  lines.push('Please contact me with any questions.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderServiceAgreement(a) {
+  const lines = [];
+  lines.push('SERVICE AGREEMENT');
+  lines.push('');
+  lines.push('Between ' + a.provider_name + ' (Provider) and ' + a.client_name + ' (Client)');
+  lines.push('');
+  lines.push('1. Services');
+  lines.push(a.service_description);
+  lines.push('');
+  lines.push('2. Price & Payment');
+  lines.push(a.price_and_payment);
+  lines.push('');
+  lines.push('3. Term');
+  lines.push('Starting ' + a.start_date + ' for ' + a.duration + '.');
+  lines.push('');
+  lines.push('4. Termination');
+  lines.push(a.termination_terms + '.');
+  if (a.termination_terms === 'Either party with notice — specify days') {
+    lines.push('Notice period: ' + a.termination_notice_days + ' days.');
+  }
+  lines.push('');
+  lines.push('5. Confidentiality');
+  if (a.confidentiality_needed === 'Yes') {
+    lines.push('Both parties agree to keep confidential information disclosed under this agreement confidential.');
+  } else if (a.confidentiality_needed === 'No') {
+    lines.push('No confidentiality clause applies to this agreement.');
+  }
+  lines.push('');
+  lines.push('6. Liability');
+  if (a.liability_needed === 'Yes') {
+    const cap = hasValue(a.liability_cap) ? a.liability_cap : 'a reasonable limitation to be agreed by both parties';
+    lines.push("Provider's liability under this agreement is limited to " + cap + '.');
+  } else if (a.liability_needed === 'No') {
+    lines.push('No liability limitation clause applies to this agreement.');
+  }
+  lines.push('');
+  lines.push('7. Independent Contractor Status');
+  lines.push('Provider is an independent contractor and not an employee of Client.');
+  lines.push('');
+  lines.push('8. Governing Law');
+  lines.push('This agreement is governed by the laws of ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('9. Signatures');
+  lines.push('');
+  lines.push(a.provider_name + ': _______________________  Date: __________');
+  lines.push('');
+  lines.push(a.client_name + ': _______________________  Date: __________');
+  lines.push('');
+  lines.push('---');
+  lines.push('This is a starting template and should be reviewed by a qualified attorney before use, particularly for higher-value or more complex engagements.');
+  return lines.join('\n');
+}
+
+function renderEuGdprViolationReport(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: [National Data Protection Authority]');
+  lines.push('Re: GDPR Violation Report — ' + a.organisation_name);
+  lines.push('');
+  lines.push('I am submitting this report regarding ' + a.organisation_name + '.');
+  lines.push('');
+  lines.push('Reporting as: ' + a.reporter_role + '.');
+  if (a.reporter_role === 'Employee/contractor (internal whistleblower)') {
+    lines.push('As an employee/contractor reporting this, I understand I am protected against retaliation under the EU Whistleblower Directive (2019/1937).');
+  }
+  lines.push('');
+  lines.push('What I observed: ' + a.violation_type + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.violation_type === 'Data breach not reported to the DPA within 72 hours') {
+    lines.push('I understand organisations have a 72-hour breach notification duty under Article 33 of the GDPR.');
+    lines.push('');
+  }
+  lines.push('Anonymity preference: ' + a.anonymity_preference + '.');
+  if (a.anonymity_preference === 'Anonymous') {
+    lines.push('I understand that submitting this anonymously may limit your ability to follow up with clarifying questions.');
+  }
+  lines.push('');
+  lines.push('I am gathering evidence within lawful means only.');
+  return lines.join('\n');
+}
+
+function renderPrivacyBreachComplianceComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.company_name);
+  lines.push('Re: Complaint — ' + a.complaint_type);
+  lines.push('');
+  if (hasValue(a.account_identifier)) {
+    lines.push('Account/reference: ' + a.account_identifier + '.');
+    lines.push('');
+  }
+  lines.push('Complaint type: ' + a.complaint_type + '.');
+  lines.push('');
+  if (a.complaint_type === 'Data breach — my personal data was exposed in a security incident') {
+    if (hasValue(a.breach_notification_date)) {
+      lines.push('I was notified of this breach on ' + a.breach_notification_date + '.');
+    } else {
+      lines.push('I became aware of this breach independently.');
+    }
+    lines.push('Data affected, as far as I know: ' + a.data_affected);
+    lines.push('I am requesting a clear explanation of what happened, what data was affected, and what steps are being taken to prevent recurrence.');
+  } else if (a.complaint_type === 'Cookies/tracking used without valid consent') {
+    lines.push('On ' + a.website_or_app + ', I experienced the following issue with cookie/tracking consent: ' + a.consent_issue);
+    lines.push('This appears inconsistent with applicable data protection and e-privacy requirements for valid consent.');
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('I am requesting a substantive written response within 20 business days. This letter is being sent as the required first step before escalating to the relevant data protection authority, which I will do if the response is inadequate or absent.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderAuPrivacyComplaintLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.company_name);
+  lines.push('Re: Privacy Complaint');
+  lines.push('');
+  lines.push('This letter is being sent before lodging a complaint with the OAIC, as required by law, giving you approximately 30 days to respond.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue + '.');
+  lines.push('');
+  const app = a.app_breached === 'Not sure - describe the issue instead' ? 'not sure which APP applies' : a.app_breached;
+  lines.push('Relevant Australian Privacy Principle: ' + app + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  lines.push("If this is not resolved satisfactorily within 30 days, I intend to escalate to the Office of the Australian Information Commissioner (OAIC). Please note I am not asserting the OAIC's $3 million turnover jurisdiction threshold applies to your company — please confirm this independently if relevant.");
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderPrivacyRegulatorComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  let to = '';
+  let note = '';
+  if (a.jurisdiction === 'United States') {
+    to = 'Federal Trade Commission (FTC)';
+  } else if (a.jurisdiction === 'United Kingdom') {
+    to = "Information Commissioner's Office (ICO)";
+  } else if (a.jurisdiction === 'Australia') {
+    to = 'Office of the Australian Information Commissioner (OAIC)';
+  } else if (a.jurisdiction === 'European Union') {
+    if (a.eu_country === 'Spain') {
+      to = 'Agencia Española de Protección de Datos (AEPD)';
+    } else if (a.eu_country === 'France') {
+      to = "Commission Nationale de l'Informatique et des Libertés (CNIL)";
+    } else if (a.eu_country === 'Germany') {
+      to = 'Bundesbeauftragte für den Datenschutz (BfDI)';
+      note = 'Note: Germany also has state-level (Länder) data protection authorities — confirm the correct one for your region before sending.';
+    } else {
+      // 'Other EU country', or the 'Not applicable' placeholder left selected
+      // by mistake alongside jurisdiction == 'European Union' -- same
+      // generic fallback either way, since neither case has a determinate
+      // single authority.
+      to = 'your national data protection authority';
+      note = 'Note: confirm the correct data protection authority for your specific EU member state before sending.';
+    }
+  }
+  lines.push('To: ' + to);
+  lines.push('Re: Data Protection Complaint — ' + a.company_name);
+  lines.push('');
+  if (hasValue(a.prior_contact_date)) {
+    lines.push('I first raised this directly with ' + a.company_name + ' on ' + a.prior_contact_date + '. Response received: ' + a.prior_contact_outcome);
+  } else {
+    lines.push('I have not yet contacted ' + a.company_name + ' directly about this.');
+  }
+  lines.push('');
+  lines.push('Issue: ' + a.issue_summary);
+  lines.push('');
+  lines.push('I am requesting: ' + a.desired_outcome);
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  if (note) {
+    lines.push('');
+    lines.push('---');
+    lines.push(note);
+  }
+  return lines.join('\n');
+}
+
+function renderPrivacyRightsRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.company_name);
+  lines.push('Re: Privacy Rights Request');
+  lines.push('');
+  if (hasValue(a.your_relationship)) {
+    lines.push('My relationship to you: ' + a.your_relationship + '.');
+  }
+  if (hasValue(a.account_identifier)) {
+    lines.push('Account/reference: ' + a.account_identifier + '.');
+  }
+  lines.push('');
+  lines.push('This is a request described as: ' + a.right_type + '.');
+  lines.push('');
+  if (a.right_type === 'Access — I want to see what data they hold about me') {
+    lines.push('I want to see what personal data you hold about me.');
+    if (hasValue(a.specific_data_scope)) {
+      lines.push('Narrowed to: ' + a.specific_data_scope);
+    }
+  } else if (a.right_type === 'Deletion/Erasure — I want my data removed') {
+    lines.push('I want my personal data deleted/erased.');
+    if (hasValue(a.deletion_reason)) {
+      lines.push('Reason: ' + a.deletion_reason);
+    }
+  } else if (a.right_type === 'Correction/Rectification — I want inaccurate data fixed') {
+    lines.push('The following data is incorrect: ' + a.incorrect_data + '. It should instead read: ' + a.correct_data);
+  } else if (a.right_type === "Objection to AI/ML training use — I don't want my data used to train AI models") {
+    lines.push('I object to my personal data being used to train AI or machine learning models.');
+    if (hasValue(a.data_type_for_ai)) {
+      lines.push('Narrowed to: ' + a.data_type_for_ai);
+    }
+    lines.push('I am requesting this use stop and any existing training use be remediated where possible.');
+  } else if (a.right_type === 'Restriction of processing — I want processing limited while a dispute is resolved') {
+    lines.push('I am requesting processing of my data be restricted while the following is resolved: ' + a.restriction_reason);
+  }
+  lines.push('');
+  lines.push('I am requesting written confirmation of the action taken and the date it was completed. I expect a response within the timeframe required by applicable data protection law, and will escalate to the relevant data protection authority if no adequate response is received.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderAdministrativeAppealReviewDecisionResponse(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.agency_name);
+  lines.push('Re: Response to Decision ' + a.reference_number + ', dated ' + a.decision_date);
+  lines.push('');
+  lines.push(a.decision_description);
+  lines.push('');
+  if (a.response_type === 'Formally appeal the decision') {
+    lines.push('I am formally appealing this decision.');
+    const grounds = a.appeal_grounds === 'Other — free text' ? a.appeal_grounds_other : a.appeal_grounds;
+    lines.push('Grounds: ' + grounds + '.');
+    lines.push(a.appeal_explanation);
+    lines.push('Outcome sought: ' + a.appeal_outcome);
+  } else if (a.response_type === 'Request an extension or payment plan') {
+    lines.push('I am requesting an extension/payment plan for: ' + a.extension_subject + '.');
+    lines.push('Proposed new terms: ' + a.proposed_terms);
+    lines.push('Reason: ' + a.extension_reason);
+  } else if (a.response_type === 'Accept the decision but request clarification') {
+    lines.push('I accept this decision, but request clarification on: ' + a.clarification_needed);
+    lines.push('Reason clarification is needed: ' + a.clarification_reason);
+  } else if (a.response_type === 'Provide additional information that was requested') {
+    lines.push('In response to your request for ' + a.info_requested + ', I am providing the following: ' + a.info_summary);
+    lines.push('Attachments are included separately.');
+  }
+  lines.push('');
+  lines.push('Please confirm receipt and respond within a reasonable timeframe. Please confirm the specific appeal process and deadline stated in your own decision letter — this does not invent agency-specific procedures.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.full_name);
+  return lines.join('\n');
+}
+
+function renderAdministrativeInformationRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.agency_name);
+  let re = 'Re: Information Request';
+  if (hasValue(a.reference_number)) {
+    re += ' — Reference ' + a.reference_number;
+  }
+  lines.push(re);
+  lines.push('');
+  lines.push('I am requesting the following: ' + a.information_requested);
+  lines.push('');
+  if (a.reason === 'Yes — free text') {
+    lines.push('Reason (offered voluntarily, not a precondition for this request): ' + a.reason_detail);
+    lines.push('');
+  }
+  if (a.legal_basis === 'Freedom of Information request') {
+    lines.push('This is a Freedom of Information request.');
+  } else if (a.legal_basis === 'Data/privacy access request') {
+    lines.push('This is a data/privacy access request.');
+  } else if (a.legal_basis === 'Other') {
+    lines.push('Legal basis: ' + a.legal_basis_other);
+  } else if (a.legal_basis === 'Not sure' || a.legal_basis === 'General inquiry, no specific legal basis') {
+    lines.push('(no specific legal basis stated)');
+  }
+  lines.push('');
+  lines.push('Preferred format/delivery: ' + a.delivery_preference + '.');
+  lines.push('');
+  lines.push('Please provide a specific response timeframe.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.full_name);
+  return lines.join('\n');
+}
+
+function renderGovernmentComplaintLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.agency_name);
+  let re = 'Re: ' + a.subject;
+  if (hasValue(a.reference_number)) {
+    re += ' — Reference ' + a.reference_number;
+  }
+  lines.push(re);
+  lines.push('');
+  if (a.complaint_stage === 'Initial complaint') {
+    lines.push('This issue occurred/was first noticed on ' + a.date_occurred + ': ' + a.issue_description);
+    if (a.prior_contact === 'Yes — free text describing what happened') {
+      lines.push('Prior contact: ' + a.prior_contact_detail);
+    } else {
+      lines.push('I have not yet contacted you about this.');
+    }
+  } else if (a.complaint_stage === 'Escalation of an unresolved complaint') {
+    lines.push('I originally complained on ' + a.original_complaint_date + ', reference ' + a.original_reference + '.');
+    lines.push('Response received: ' + a.response_summary);
+    lines.push('This was unsatisfactory because: ' + a.unsatisfactory_reason);
+    if (a.escalation_body === 'Ombudsman' || a.escalation_body === 'Inspector General') {
+      lines.push('I am copying/referencing the ' + a.escalation_body + ' on this escalation.');
+    } else if (a.escalation_body === 'Other — free text') {
+      lines.push('I am copying/referencing ' + a.escalation_body_other + ' on this escalation.');
+    }
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  const respondWindow = a.complaint_stage === 'Escalation of an unresolved complaint' ? '10 days' : '14 days';
+  lines.push('Please respond within ' + respondWindow + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.full_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -753,6 +1228,10 @@ const GENERATORS = {
     title: 'Privacy Complaint Letter to a Company (Australia)',
     // Real Gumroad product_id for the "au-privacy-complaint-letter" product.
     gumroad_product_id: 'ymuznm',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderAuPrivacyComplaintLetter,
     prompt_template:
       "Write a formal privacy complaint letter to an Australian company, to be sent BEFORE lodging an OAIC complaint (as required by law, giving the company approximately 30 days to respond). Reference the Privacy Act 1988 and the relevant Australian Privacy Principle if provided. State clearly that if the company does not respond satisfactorily within 30 days, the complainant intends to escalate to the Office of the Australian Information Commissioner (OAIC). Do not claim the OAIC's $3 million turnover jurisdiction threshold applies to this specific company unless the person confirms it — phrase this as a general note the reader should check, not an assumption about the company being complained about. Company: {company_name}. Issue: {issue}. APP: {app_breached}. Details: {details}. Remedy sought: {remedy}. Tone: professional, firm, factual.",
   },
@@ -848,6 +1327,10 @@ const GENERATORS = {
     title: 'GDPR Violation Report / Whistleblower Notice',
     // Real Gumroad product_id for the "eu-gdpr-violation-report" product.
     gumroad_product_id: 'covqc',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEuGdprViolationReport,
     prompt_template:
       "Write a formal GDPR violation report suitable for submission to a national Data Protection Authority. If reporter_role is 'Employee/contractor', reference protections under the EU Whistleblower Directive (2019/1937) against retaliation. Reference the 72-hour breach notification duty under Article 33 where relevant. Do not encourage the reporter to unlawfully exfiltrate bulk data belonging to others as evidence — advise gathering evidence within lawful means. If anonymity_preference is 'Anonymous', note that fully anonymous reports may limit the regulator's ability to follow up with clarifying questions. Organisation: {organisation_name}. Role: {reporter_role}. Violation type: {violation_type}. Details: {details}. Anonymity: {anonymity_preference}. Tone: professional, factual, serious.",
   },
@@ -1179,18 +1662,30 @@ const GENERATORS = {
   'privacy-rights-request': {
     title: 'Privacy Rights Request Generator',
     gumroad_product_id: 'hplixy',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderPrivacyRightsRequest,
     prompt_template:
       "Write a formal, courteous but firm privacy rights request letter from a consumer to {company_name}. The consumer's relationship to the company: {your_relationship} — ignore this entirely if not provided or marked N/A. Account/reference: {account_identifier} — ignore this entirely if not provided or marked N/A. This is a request described as: {right_type}. If this is an access request, state the consumer wants to see what personal data is held about them, narrowed to the following scope if given: {specific_data_scope} — otherwise ignore this field entirely. If this is a deletion/erasure request, state the consumer wants their personal data deleted/erased, referencing the following reason if given: {deletion_reason} — otherwise ignore this field entirely. If this is a correction/rectification request, state the following data is incorrect: {incorrect_data}, and that it should instead read: {correct_data} — otherwise ignore these two fields entirely. If this is an objection to AI/ML training use, state the consumer objects to their personal data being used to train AI or machine learning models, narrowed to the following content type if given: {data_type_for_ai}, and requests this use stop and any existing training use be remediated where possible — otherwise ignore this field entirely. If this is a restriction of processing request, state the consumer requests processing of their data be restricted while the following is resolved: {restriction_reason} — otherwise ignore this field entirely. Only use the fields belonging to the selected right; never write 'N/A' or reference an inapplicable field in the letter itself. Request written confirmation of the action taken and the date it was completed. State that a response is expected within the timeframe required by applicable data protection law, and that if no adequate response is received, the consumer will escalate to the relevant data protection authority. Keep the tone professional, not aggressive. Do not invent any facts, dates, regulations, or figures beyond what was provided.",
   },
   'privacy-breach-compliance-complaint': {
     title: 'Privacy Breach & Compliance Complaint Generator',
     gumroad_product_id: 'udtiy',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderPrivacyBreachComplianceComplaint,
     prompt_template:
       "Write a formal complaint letter from a consumer to {company_name} regarding a complaint described as: {complaint_type}. Account/reference: {account_identifier} — ignore this entirely if not provided or marked N/A. If this is a data breach complaint, state the consumer was notified of a data breach on {breach_notification_date} (or ignore this field if it is N/A and instead state the consumer became aware of it independently), and that the data affected, as far as the consumer knows, is: {data_affected}. Request a clear explanation of what happened, what data was affected, and what steps are being taken to prevent recurrence — otherwise, if this is not a data breach complaint, ignore these two fields entirely. If this is a cookies/tracking consent complaint, state that on {website_or_app}, the consumer experienced the following issue with cookie/tracking consent: {consent_issue}, and that this appears inconsistent with applicable data protection and e-privacy requirements for valid consent — otherwise ignore these two fields entirely. Only use the fields belonging to the selected complaint type; never write 'N/A' or reference an inapplicable field in the letter itself. State the consumer's desired outcome: {desired_outcome}. Request a substantive written response within a reasonable timeframe (state 20 business days), and note explicitly that this letter is being sent as the required first step before escalating to the relevant data protection authority, and that the consumer will do so if the response is inadequate or absent. Keep the tone factual and firm, not aggressive. Do not invent any facts, dates, or figures beyond what was provided.",
   },
   'privacy-regulator-complaint': {
     title: 'Privacy Regulator Complaint Generator',
     gumroad_product_id: 'gwhjwt',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderPrivacyRegulatorComplaint,
     prompt_template:
       "Write a formal complaint to the correct data protection regulator regarding {company_name}. Determine the regulator strictly from the jurisdiction (and, only if jurisdiction is European Union, the EU country) provided, using these rules and no others: if jurisdiction is 'United States', address the complaint to the Federal Trade Commission (FTC); if jurisdiction is 'United Kingdom', address it to the Information Commissioner's Office (ICO); if jurisdiction is 'Australia', address it to the Office of the Australian Information Commissioner (OAIC); if jurisdiction is 'European Union' and eu_country is 'Spain', address it to the Agencia Espanola de Proteccion de Datos (AEPD); if eu_country is 'France', address it to the Commission Nationale de l'Informatique et des Libertes (CNIL); if eu_country is 'Germany', address it to the Bundesbeauftragte fur den Datenschutz (BfDI) and add a brief note that Germany also has state-level (Lander) data protection authorities and the consumer should confirm the correct one for their region; if eu_country is 'Other EU country' or 'Not applicable — I selected a different jurisdiction' while jurisdiction is still 'European Union', do not name any specific regulator — instead address the letter generically to 'your national data protection authority' and add a note advising the consumer to confirm the correct authority for their specific EU member state before sending. Ignore the eu_country field entirely if jurisdiction is not 'European Union'. If prior_contact_date is provided and not N/A, state the consumer first raised this issue directly with the company on {prior_contact_date}, referencing the following response if given: {prior_contact_outcome} — otherwise ignore these two fields entirely. Issue: {issue_summary}. The consumer is requesting: {desired_outcome}. Format this as an appropriate formal complaint to a data protection regulator, including a clear factual summary, relevant dates, and a specific request for investigation or action. Do not invent any facts, regulations, case numbers, or figures beyond what was provided. Do not name any regulator other than the single one determined by the rules above.",
   },
@@ -1243,6 +1738,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_government-complaint-letter',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderGovernmentComplaintLetter,
     prompt_template:
       "Write a formal complaint letter addressed to {agency_name} regarding {subject}, referencing case/reference number {reference_number} if provided. Based on the branch selected: for an initial complaint, describe the issue factually using {issue_description} and {date_occurred}, noting any prior contact attempts ({prior_contact} — if 'Yes — free text describing what happened', use {prior_contact_detail}) — otherwise ignore these fields entirely. For an escalation, reference the original complaint dated {original_complaint_date} with reference {original_reference}, summarize the response received ({response_summary}) or its absence, explain why it was unsatisfactory ({unsatisfactory_reason}), and note the letter is being escalated, referencing the escalation body if known ({escalation_body} — if 'Other — free text', use {escalation_body_other}) — otherwise ignore these fields entirely. State the desired outcome ({desired_outcome}) clearly in both branches. Keep tone factual and professional — firmer in tone for the escalation branch, since this reflects an unresolved prior attempt, but never hostile or threatening. Close with a reasonable response deadline (14 days for initial, 10 days for escalation) and contact details for reply. Do not invent regulatory citations or agency-specific procedures. Sender: {full_name}.",
   },
@@ -1251,6 +1750,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_administrative-appeal-response',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderAdministrativeAppealReviewDecisionResponse,
     prompt_template:
       "Write a formal written response addressed to {agency_name} regarding the decision/notification dated {decision_date}, reference {reference_number}, described as: {decision_description}. Based on the branch selected: for an appeal, state the grounds ({appeal_grounds} — if 'Other — free text', use {appeal_grounds_other}) and detailed explanation ({appeal_explanation}), and the outcome sought ({appeal_outcome}) — otherwise ignore these fields entirely. For an extension/payment plan request, state what's being requested an extension for ({extension_subject}), the proposed new terms ({proposed_terms}), and the reason ({extension_reason}) — otherwise ignore these fields entirely. For a clarification request, state what needs clarifying ({clarification_needed}) and why ({clarification_reason}) — otherwise ignore these fields entirely. For providing additional information, reference what was requested ({info_requested}) and summarize what's being provided ({info_summary}), noting attachments are included separately — otherwise ignore these fields entirely. Keep tone factual and professional throughout — an appeal should be firm but not adversarial; a clarification or extension request should be courteous. Close with a reasonable response deadline and contact details for reply. Do not invent regulatory citations or agency-specific appeal procedures — note that the user should confirm the specific appeal process and deadline stated in their own decision letter. Sender: {full_name}.",
   },
@@ -1259,6 +1762,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_administrative-information-request',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderAdministrativeInformationRequest,
     prompt_template:
       "Write a formal information request addressed to {agency_name}, referencing case/reference number {reference_number} if provided. Clearly and specifically state what is being requested: {information_requested}. If a reason is provided ({reason} — if 'Yes — free text', use {reason_detail}), include it briefly, noting that a reason is being offered voluntarily and is not a precondition for the request — otherwise omit any reason. If a legal basis is specified ({legal_basis} — if 'Other', use {legal_basis_other}), reference it appropriately — for example, framing the request explicitly as a Freedom of Information request or a data/privacy access request if selected, without inventing specific statutory citations the user didn't provide. State the preferred format/delivery method ({delivery_preference}). Keep tone neutral and straightforward — this is a routine administrative request, not a complaint. Close with a request for a specific response timeframe and contact details for reply. Sender: {full_name}.",
   },
@@ -1267,6 +1774,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_contract-demand-letter',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderContractDemandLetter,
     prompt_template:
       "Write a formal demand/dispute letter from {your_name} to {other_party_name} regarding the contract {contract_reference}. Based on the branch selected ({issue_type}): for 'Breach of contract', describe the specific obligation breached ({breach_obligation}), the date the breach occurred or was discovered ({breach_date}), and the evidence available ({breach_evidence}) — otherwise ignore these fields entirely. For 'Payment owed to you', state the amount owed ({payment_amount}), what the payment is for ({payment_for}), the original due date ({payment_due_date}), and note any partial payment already received ({payment_partial_received} — if 'Yes — specify amount', the amount is {payment_partial_amount}) — otherwise ignore these fields entirely. For 'Refund owed to you', state the amount paid originally ({refund_amount}) for {refund_item}, why a refund is owed ({refund_reason}), and the date of original payment ({refund_payment_date}) — otherwise ignore these fields entirely. For 'General dispute over obligations or interpretation', state the specific clause or obligation in dispute ({dispute_clause}), the sender's interpretation versus the other party's ({dispute_interpretation}), and the impact of the disagreement ({dispute_impact}) — otherwise ignore these fields entirely. For 'Final notice before small claims', note whether a prior demand was sent ({finalnotice_prior_demand} — if 'Yes — specify date', the date was {finalnotice_prior_demand_date}), any response received ({finalnotice_response_received}), the amount being claimed ({finalnotice_amount_claimed}), and the court/jurisdiction intended if known ({finalnotice_jurisdiction}) — otherwise ignore these fields entirely, and state explicitly that this is a final opportunity to resolve the matter before a small claims filing is made, without naming a specific court procedure beyond what the user provided. Reference that supporting evidence is attached separately where applicable. State the desired outcome clearly: {desired_outcome} (if 'Partial payment — specify amount', the amount is {desired_outcome_amount}; if 'Other — free text', use {desired_outcome_other}). Keep tone firm, factual, and professional — escalate firmness only for the final-notice branch. Close with a reasonable response deadline (14 days, or 7 days for the final-notice branch) and contact details for reply. Do not invent legal citations, statutes, or threaten specific legal action beyond stating that further steps will be considered.",
   },
@@ -1275,6 +1786,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_termination-renewal-notice',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderContractTerminationRenewalNotice,
     prompt_template:
       "Write a formal notice from {your_name} to {other_party_name} regarding the contract {contract_reference}, effective {effective_date}. Based on the branch selected ({notice_type}): for 'Terminating the contract now', state the reason ({termination_reason} — if 'Other — free text', use {termination_reason_other}), reference the relevant termination clause if provided ({termination_clause}), and note any outstanding obligations to settle ({outstanding_obligations}) — otherwise ignore these fields entirely. For 'Declining to renew at term end', confirm the contract will end on {contract_end_date} per the required notice period ({required_notice_period}), including the optional reason ({nonrenewal_reason}) only if provided — otherwise ignore these fields entirely. For 'Confirming renewal', confirm the new term ({new_term_length}) and any changes to terms being confirmed alongside the renewal ({renewal_changes}) — otherwise ignore these fields entirely. Keep tone clear, factual, and unambiguous about the exact effective date — this is the most common source of disputes after a termination or non-renewal notice. Close with contact details for any questions. Do not invent legal citations or contract terms beyond what the user provided.",
   },
@@ -1283,6 +1798,11 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_amendment-counteroffer',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- output_rules and prompt_template below are now
+    // DEAD CODE.
+    static: true,
+    render: renderContractAmendmentCounteroffer,
     output_rules: DOCUMENT_OUTPUT_RULES,
     prompt_template:
       "Draft a formal contract amendment or counteroffer document — not a conversational letter — from {your_name} to {other_party_name} regarding the contract {contract_reference}, addressing the clause(s): {clause_reference}. Based on the branch selected ({amendment_type}): for 'Propose a change — counteroffer', present the current wording ({current_wording}), the proposed new wording ({proposed_wording}), and the reason for the change ({change_reason}), and request a response by {response_deadline} if provided — otherwise ignore these fields entirely. For 'Document a change already agreed', state that the original wording ({original_wording}) is replaced with the new agreed wording ({new_agreed_wording}) as of {agreement_date}, and explicitly confirm that all other terms and conditions of the original contract remain unchanged and in full force — otherwise ignore these fields entirely. Keep tone professional and precise — this is a document meant to prevent future ambiguity about what was actually agreed, not a persuasive letter. Include signature lines for both parties with date lines, especially in the amendment-documentation branch.",
@@ -1301,6 +1821,11 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_service-agreement',
+    // STATIC as of 2026-09-17 (Batch 2: Legal & Contracts / Privacy & Data /
+    // Public Services) -- output_rules and prompt_template below are now
+    // DEAD CODE.
+    static: true,
+    render: renderServiceAgreement,
     output_rules: DOCUMENT_OUTPUT_RULES,
     prompt_template:
       "Draft a basic Service Agreement between {provider_name} (Provider) and {client_name} (Client), governed by the laws of {jurisdiction}. Include numbered sections: 1) Services — describe {service_description} clearly as the scope of work, 2) Price & Payment — {price_and_payment}, 3) Term — starting {start_date} for {duration}, 4) Termination — {termination_terms} (if 'Either party with notice — specify days', the notice period is {termination_notice_days} days), 5) Confidentiality clause if {confidentiality_needed} is 'Yes', 6) Liability limitation if {liability_needed} is 'Yes' (cap: {liability_cap}, or a reasonable limitation if not specified), 7) Independent contractor status (Provider is not an employee of Client), 8) Governing law, 9) Signature blocks for both parties with date lines. Use clear, factual, contract-appropriate language. Do not invent specific clauses beyond what the user provided. Include a prominent disclaimer that this is a starting template and should be reviewed by a qualified attorney before use, particularly for higher-value or more complex engagements.",
