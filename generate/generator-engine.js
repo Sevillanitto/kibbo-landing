@@ -431,6 +431,12 @@
       });
   }
 
+  // Shared result-page actions (2026-09-17): Copy, Download as PDF (native
+  // print dialog + a print-only stylesheet in styles.css that hides
+  // everything except the letter -- no PDF library, no backend cost), and
+  // Download as .txt (a plain client-side Blob, no library). Lives here in
+  // the shared engine, not per-generator, so it applies to every generator
+  // automatically -- current ones and any migrated later.
   function revealLetter(letter) {
     result.innerHTML = '';
     result.style.display = 'block';
@@ -438,12 +444,30 @@
     var box = el('div', 'gen-letter');
     box.appendChild(el('div', 'gen-visible', letter));
     result.appendChild(box);
+
+    var actions = el('div', 'gen-print-actions');
+
     var copy = el('button', 'gen-copy', 'Copy letter');
     copy.id = 'copyBtn';
     copy.type = 'button';
-    copy.style.display = 'inline-block';
     copy.addEventListener('click', copyLetter);
-    result.appendChild(copy);
+    actions.appendChild(copy);
+
+    var pdfBtn = el('button', 'gen-copy', 'Download as PDF');
+    pdfBtn.type = 'button';
+    pdfBtn.addEventListener('click', function () {
+      window.print();
+    });
+    actions.appendChild(pdfBtn);
+
+    var txtBtn = el('button', 'gen-copy', 'Download as .txt');
+    txtBtn.type = 'button';
+    txtBtn.addEventListener('click', function () {
+      downloadTxt(letter);
+    });
+    actions.appendChild(txtBtn);
+
+    result.appendChild(actions);
   }
 
   function copyLetter() {
@@ -458,6 +482,21 @@
         }, 2000);
       }
     });
+  }
+
+  // Plain-text Blob download -- the exact letter text, no HTML/markup.
+  function downloadTxt(letter) {
+    var blob = new Blob([letter], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = (cfg.id || 'letter') + '.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1000);
   }
 
   function setMsg(node, text, kind) {
