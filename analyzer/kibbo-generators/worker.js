@@ -1862,6 +1862,366 @@ function renderSubscriptionServiceCancellation(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 5 rollout: Housing & Rentals + Home
+// Renovations & Services + Legal & Contracts, 2026-09-18) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-4.md (Housing/Home
+// Renovations) and static-generators-phase1-sample.md (landlord-deposit-
+// demand-letter, scope-of-work-generator, terms-conditions-generator).
+
+function renderContractorDisputeDemandLetterGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.contractor_name);
+  lines.push('Re: Formal Demand — Contract dated ' + a.contract_date + ', ' + a.property_address);
+  lines.push('');
+  lines.push('I am writing regarding our contract dated ' + a.contract_date + ' for work at ' + a.property_address + ', total contract price ' + a.contract_price + '.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '.');
+  lines.push('');
+  if (a.issue_type === 'Incomplete work') {
+    lines.push('Approximately ' + a.incomplete_pct_complete + '% of the contracted work is complete. Work not yet done: ' + a.incomplete_work_remaining + '. You stopped or left the site on ' + a.incomplete_stop_date + '.');
+  } else if (a.issue_type === 'Defective work') {
+    lines.push('Defect: ' + a.defect_description + ', located at ' + a.defect_location + ', first noticed on ' + a.defect_noticed_date + '.');
+    if (hasValue(a.defect_repair_cost)) {
+      lines.push('Estimated repair cost: ' + a.defect_repair_cost + '.');
+    }
+  } else if (a.issue_type === 'Unauthorized overcharge') {
+    const reason = a.overcharge_reason === 'Other' ? a.overcharge_reason_other : a.overcharge_reason;
+    lines.push('Disputed amount: ' + a.overcharge_amount + '. Reason this is unauthorized: ' + reason + '.');
+  } else if (a.issue_type === 'Project delay') {
+    lines.push('Original agreed completion date: ' + a.delay_original_date + '. Current status: ' + a.delay_current_status + '.');
+    if (hasValue(a.delay_reason_given)) {
+      lines.push('Reason given for the delay: ' + a.delay_reason_given);
+    }
+  }
+  lines.push('');
+  let outcome;
+  if (a.desired_outcome === 'Partial refund — specify amount') {
+    outcome = 'a partial refund of ' + a.desired_outcome_amount;
+  } else if (a.desired_outcome === 'Completion by a specific date — specify date') {
+    outcome = 'completion by ' + a.desired_outcome_date;
+  } else {
+    outcome = a.desired_outcome;
+  }
+  lines.push('Desired outcome: ' + outcome + '.');
+  lines.push('');
+  lines.push('Supporting evidence (photos, communications log) is attached separately. Please respond within 14 days.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.homeowner_name);
+  return lines.join('\n');
+}
+
+function renderIllegalEvictionWarningLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.landlord_full_name);
+  lines.push('Re: ' + a.property_address + ' — Formal Notice Regarding Unlawful Self-Help Eviction');
+  lines.push('');
+  lines.push('On ' + a.incident_date + ', the following occurred: ' + a.incident_description + '.');
+  lines.push('');
+  lines.push('Self-help eviction — changing locks, removing belongings, shutting off utilities, or otherwise forcing a tenant out without a court-ordered legal process — is not a lawful method of eviction in most jurisdictions. Only a court-ordered, legally compliant process may remove a tenant.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('I am demanding immediate restoration of access, utilities, and/or belongings as applicable. I am documenting this incident and will pursue all available legal remedies, including contacting local housing authorities or law enforcement, if this is not immediately resolved.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.tenant_full_name);
+  lines.push('');
+  lines.push('---');
+  lines.push('Keep a copy of this letter, and consider contacting local police or your housing authority if access is actively being denied.');
+  return lines.join('\n');
+}
+
+function renderLeaseClauseChallengeLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.landlord_full_name);
+  lines.push('Re: ' + a.property_address + ' — Lease Clause Concern');
+  lines.push('');
+  lines.push('I am writing regarding the following clause: ' + a.clause_text_or_summary + '.');
+  lines.push('');
+  lines.push('Concern: ' + a.clause_concern_type + '.');
+  lines.push('');
+  if (a.already_signed === 'No') {
+    lines.push('I have not yet signed the lease. I am requesting this clause be amended before I do.');
+  } else if (a.already_signed === 'Yes') {
+    lines.push('I have already signed the lease. I am formally noting that this clause may not be enforceable under applicable tenant protection law in my area, and requesting written confirmation that you will not attempt to enforce it.');
+  }
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.tenant_full_name);
+  return lines.join('\n');
+}
+
+function renderLeaseViolationNoticeGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.tenant_full_name);
+  lines.push('Re: ' + a.property_address_unit + ' — Formal Lease Violation Notice');
+  lines.push('');
+  lines.push('This is formal notice of a lease violation: ' + a.violation_type + ', identified on ' + a.violation_date_identified + '.');
+  lines.push('');
+  lines.push(a.violation_description);
+  lines.push('');
+  lines.push('Under applicable landlord-tenant law, you are given formal notice and an opportunity to cure within the notice/cure period that applies locally — confirm this period before relying on it, as it is not stated here. Failure to cure within that period may result in further legal action, including eviction proceedings, in accordance with local law.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('This is not legal advice — confirm the exact cure period and notice requirements for your jurisdiction before sending.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.landlord_full_name);
+  return lines.join('\n');
+}
+
+function renderAuNoticeToRemedyRepairs(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.landlord_name);
+  lines.push('Re: Notice to Remedy — ' + a.issue);
+  lines.push('');
+  lines.push('I am writing regarding the following issue: ' + a.issue + '. ' + a.details);
+  lines.push('');
+  if (a.is_urgent === 'Yes') {
+    lines.push("This is urgent, affecting safety/habitability. I may arrange a qualified tradesperson directly and seek reimbursement if you don't act immediately. Please make contact within 24 hours.");
+  } else if (a.is_urgent === 'No') {
+    lines.push('I am requesting repair within a reasonable window (commonly 7-14 days, though this varies by state — please confirm the exact period for ' + a.state + ').');
+  }
+  lines.push('');
+  lines.push('I will continue to pay rent in full throughout this process.');
+  lines.push('');
+  if (a.prior_contact === 'Yes, verbally only') {
+    lines.push('I have already raised this verbally.');
+  } else if (a.prior_contact === 'Yes, in writing') {
+    lines.push('I have already raised this in writing.');
+  } else if (a.prior_contact === 'No, this is the first notice') {
+    lines.push('This is the first formal notice of this issue.');
+  }
+  lines.push('');
+  lines.push('If this deadline passes, I may apply to my state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderRentalScamRefundDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.recipient_name_or_alias);
+  lines.push('Re: Formal Demand for Refund');
+  lines.push('');
+  lines.push('I am demanding the return of ' + a.amount_paid + ', paid via ' + a.payment_method + ' on ' + a.payment_date + ', for a rental that ' + a.scam_description + '.');
+  lines.push('');
+  lines.push('This was based on false pretenses. I am demanding a full refund within a short, specific period. Failure to respond will result in this matter being reported to ' + a.listing_platform + ', my payment provider, and local law enforcement/consumer protection authorities.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('---');
+  lines.push('Where to report this, based on how you paid:');
+  let reportLine = '';
+  if (a.payment_method === 'Bank transfer') {
+    reportLine = 'Contact your bank about a chargeback/recall.';
+  } else if (a.payment_method === 'Payment app') {
+    reportLine = 'File a fraud report with the payment app provider.';
+  } else if (a.payment_method === 'Gift card') {
+    reportLine = "Contact the gift card issuer's fraud line.";
+  } else if (a.payment_method === 'Cryptocurrency') {
+    reportLine = 'Cryptocurrency payments are generally non-reversible — report to the platform used and local authorities, but recovery is unlikely.';
+  } else if (a.payment_method === 'Other') {
+    reportLine = 'Contact your payment provider directly to ask about dispute options.';
+  }
+  lines.push(reportLine);
+  lines.push('');
+  lines.push('This is factual information, not a guarantee of recovery.');
+  return lines.join('\n');
+}
+
+function renderRepairRequestFormalNotice(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.landlord_full_name);
+  lines.push('Re: ' + a.property_address + ' — Repair Request');
+  lines.push('');
+  lines.push('I am writing to formally request repair of the following issue, first reported/noticed on ' + a.issue_first_reported_date + ': ' + a.issue_description);
+  lines.push('');
+  lines.push('Urgency: ' + a.urgency_level + '.');
+  if (a.prior_notice_given === 'Yes') {
+    lines.push('');
+    lines.push('I previously raised this on ' + a.prior_notice_date + ' without adequate resolution.');
+  }
+  lines.push('');
+  lines.push('Landlords are generally expected to address urgent issues promptly — please confirm the specific timeframe that applies in your area.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Please provide a specific, reasonable repair date. I am documenting this request in case further action becomes necessary.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.tenant_full_name);
+  return lines.join('\n');
+}
+
+function renderLandlordDepositDemandLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.landlord_full_name);
+  lines.push('Re: ' + a.property_address + ' — Formal Demand Regarding Security Deposit');
+  lines.push('');
+  lines.push('I am writing regarding the security deposit of ' + a.deposit_amount_paid + ' I paid for the property at ' + a.property_address + ', which I vacated on ' + a.move_out_date + '.');
+  lines.push('');
+  if (a.scenario === 'Deposit not returned at all') {
+    lines.push('As of today, ' + a.days_since_moveout + ' days have passed since I moved out, and I have not received any refund of my deposit, nor any itemized explanation for withholding it.');
+    if (hasValue(a.deposit_protection_scheme_name)) {
+      lines.push('I understand this deposit was to be protected under ' + a.deposit_protection_scheme_name + ', and I am requesting confirmation of its protection status alongside its return.');
+    }
+    lines.push('I am formally demanding the full return of my deposit, ' + a.deposit_amount_paid + ', within a reasonable period from the date of this letter.');
+  } else if (a.scenario === 'Deposit returned with deductions I dispute') {
+    lines.push('I received my deposit back with ' + a.amount_withheld + ' withheld. Your stated reason for this deduction was: ' + a.landlord_stated_reason + '.');
+    lines.push('I dispute this deduction. ' + a.tenant_counter_evidence);
+    lines.push('I am formally requesting an itemized justification for this deduction, along with the full or partial refund of the disputed amount, within a reasonable period from the date of this letter.');
+  }
+  lines.push('');
+  lines.push('If this is not resolved, I intend to escalate this matter to the deposit protection/tenancy authority or small claims court with jurisdiction where I rented.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Please send any refund or written response to my forwarding address below.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.tenant_full_name);
+  lines.push(a.tenant_forwarding_address);
+  return lines.join('\n');
+}
+
+function renderScopeOfWorkGenerator(a) {
+  const lines = [];
+  lines.push('SCOPE OF WORK');
+  lines.push('');
+  lines.push('Property: ' + a.project_address);
+  lines.push('Homeowner: ' + a.homeowner_name);
+  lines.push('Contractor: ' + a.contractor_name);
+  lines.push('');
+  lines.push('1. Project Overview');
+  const projectType = a.project_type === 'Other' ? a.project_type_other : a.project_type;
+  lines.push('Project type: ' + projectType);
+  lines.push('Start date: ' + a.start_date);
+  lines.push('Target completion date: ' + a.completion_date);
+  lines.push('');
+  lines.push('2. Detailed Scope of Work');
+  lines.push(a.work_description);
+  lines.push('');
+  lines.push('3. Materials & Supplies');
+  lines.push(a.materials);
+  if (a.materials_responsibility === 'Mixed — specify which items below') {
+    lines.push('Responsibility split: ' + a.materials_responsibility_detail);
+  } else {
+    lines.push('Materials will be supplied by: ' + a.materials_responsibility + '.');
+  }
+  lines.push('');
+  lines.push('4. Permits & Compliance');
+  if (a.permit_status === 'Yes') {
+    lines.push('This project requires permits. Responsibility for obtaining permits: ' + a.permit_responsibility + '.');
+  } else if (a.permit_status === 'No') {
+    lines.push('This project does not require permits.');
+  } else if (a.permit_status === 'Unsure') {
+    lines.push('Permit requirements for this project have not yet been confirmed and should be verified with the local building authority before work begins.');
+  }
+  lines.push('');
+  lines.push('5. Cleanup & Site Responsibility');
+  lines.push('Cleanup and debris removal is the responsibility of: ' + a.cleanup_responsibility + '.');
+  lines.push('');
+  lines.push('6. Exclusions');
+  lines.push('The following are explicitly NOT included in this scope of work: ' + a.exclusions);
+  lines.push('');
+  lines.push('7. Price & Payment Terms');
+  lines.push(a.price_and_payment);
+  lines.push('');
+  lines.push('8. Signatures');
+  lines.push('');
+  lines.push('Homeowner: _______________________  Date: __________');
+  lines.push(a.homeowner_name);
+  lines.push('');
+  lines.push('Contractor: _______________________  Date: __________');
+  lines.push(a.contractor_name);
+  return lines.join('\n');
+}
+
+function renderTermsConditionsGenerator(a) {
+  const lines = [];
+  lines.push('TERMS & CONDITIONS — ' + a.business_name);
+  lines.push('');
+  lines.push('1. Acceptance of Terms');
+  lines.push('By using ' + a.business_name + ', you agree to these Terms & Conditions.');
+  lines.push('');
+  lines.push('2. Description of Service');
+  const offeringType = a.offering_type === 'Other — free text' ? a.offering_type_other : a.offering_type;
+  lines.push('Type of business: ' + offeringType + '.');
+  lines.push('');
+  lines.push('3. Accounts');
+  if (a.has_accounts === 'Yes') {
+    lines.push('Use of this service may require creating a user account. You are responsible for maintaining the confidentiality of your login credentials.');
+  } else if (a.has_accounts === 'No') {
+    lines.push('This service does not require a user account.');
+  }
+  lines.push('');
+  lines.push('4. Payments');
+  if (a.processes_payments === 'Yes') {
+    lines.push('Payments are processed directly through ' + a.business_name + '. By making a purchase, you agree to provide accurate payment information.');
+  } else if (a.processes_payments === 'No') {
+    lines.push(a.business_name + ' does not process payments directly.');
+  }
+  lines.push('');
+  lines.push('5. Returns & Refunds');
+  lines.push(a.refund_policy);
+  lines.push('');
+  lines.push('6. User-Generated Content');
+  if (a.has_ugc === 'Yes') {
+    lines.push(a.business_name + ' allows user-generated content: ' + a.ugc_description + '. You retain ownership of content you submit, but grant ' + a.business_name + ' a license to display and use it in connection with the service. You are responsible for ensuring your content does not violate applicable law or third-party rights.');
+  } else if (a.has_ugc === 'No') {
+    lines.push('This service does not involve user-generated content.');
+  }
+  lines.push('');
+  lines.push('7. Age Restrictions');
+  if (a.age_restriction === 'None') {
+    lines.push('There is no minimum age restriction for using this service beyond what is required by law.');
+  } else {
+    lines.push('Minimum age to use this service: ' + a.age_restriction + '.');
+  }
+  lines.push('');
+  lines.push('8. Limitation of Liability');
+  lines.push(a.business_name + "'s liability arising from your use of the service is limited to the maximum extent permitted under the laws of " + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('9. Termination of Access');
+  lines.push(a.business_name + ' may suspend or terminate your access to the service for violation of these terms.');
+  lines.push('');
+  lines.push('10. Governing Law');
+  lines.push('These terms are governed by the laws of ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('11. Changes to These Terms');
+  lines.push(a.business_name + ' may update these terms from time to time. Continued use of the service after changes take effect constitutes acceptance of the revised terms.');
+  lines.push('');
+  lines.push('12. Contact');
+  lines.push('Questions about these terms can be directed to ' + a.contact_email + '.');
+  lines.push('');
+  lines.push('---');
+  lines.push('This is a starting template only and should be reviewed by a qualified attorney before publication, particularly if ' + a.business_name + ' handles sensitive data, regulated products, or operates across multiple jurisdictions.');
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -1991,6 +2351,11 @@ const GENERATORS = {
     title: 'Notice to Remedy / Urgent Repairs Letter (Australia)',
     // Real Gumroad product_id for the "au-notice-to-remedy-repairs" product.
     gumroad_product_id: 'rdytkn',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderAuNoticeToRemedyRepairs,
     prompt_template:
       "Write a formal Notice to Remedy Breach / Urgent Repairs letter to a landlord or agent in Australia. If is_urgent is 'Yes', state that the tenant may arrange a qualified tradesperson directly and seek reimbursement if the landlord doesn't act immediately, and request contact within 24 hours. If 'No', request repair within a reasonable window (commonly 7-14 days, noting this varies by state — do not assert one fixed number as universal law). Do NOT suggest withholding rent under any circumstance — explicitly state that rent will continue to be paid in full. Mention that if the deadline passes, the tenant may apply to their state tenancy tribunal (NCAT/VCAT/QCAT or equivalent) for a repair order and/or compensation. Landlord/agent: {landlord_name}. State: {state}. Issue: {issue}. Urgent: {is_urgent}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
@@ -2000,6 +2365,11 @@ const GENERATORS = {
     // generators (consolidated into one scenario-branched tool covering both
     // "not returned" and "deductions disputed", across US/UK/EU/Australia).
     gumroad_product_id: 'gdyor',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderLandlordDepositDemandLetter,
     prompt_template:
       "Write a formal, firm but professional deposit demand letter matching the scenario selected. If scenario is 'Deposit not returned at all', demand full return within a reasonable stated period, referencing deposit_protection_scheme_name if provided, and the tenant's right to escalate to a jurisdiction-appropriate small claims/tenancy tribunal if unresolved. If scenario is 'Deposit returned with deductions I dispute', state amount_withheld and landlord_stated_reason, present tenant_counter_evidence, and request an itemized justification plus full or partial refund within a reasonable period. For jurisdiction={jurisdiction}, keep any cited deadlines or legal thresholds generic ('the deadline that applies in your area') — never invent a specific number. Tenant: {tenant_full_name}, forwarding address {tenant_forwarding_address}. Landlord: {landlord_full_name}. Property: {property_address}. Move-out: {move_out_date}. Deposit: {deposit_amount_paid}. Scenario: {scenario}. Days since move-out: {days_since_moveout}. Protection scheme: {deposit_protection_scheme_name}. Amount withheld: {amount_withheld}. Landlord's stated reason: {landlord_stated_reason}. Counter-evidence: {tenant_counter_evidence}. Tone: professional, firm, factual.",
   },
@@ -2007,30 +2377,55 @@ const GENERATORS = {
     title: 'Repair Request Formal Notice',
     // Replaces the retired 'notice-to-repair' generator.
     gumroad_product_id: 'ofxzc',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderRepairRequestFormalNotice,
     prompt_template:
       "Write a formal written repair request / habitability notice. Describe issue_description, first reported issue_first_reported_date, urgency urgency_level. If prior_notice_given is 'Yes', reference the prior request made on prior_notice_date without adequate resolution. For jurisdiction={jurisdiction}, state that landlords are generally expected to address urgent issues promptly, keeping any specific deadline generic ('within the timeframe required in your area') rather than inventing a number. Request a specific, reasonable repair date and note the tenant is documenting this request in case further action becomes necessary. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Issue: {issue_description}. First reported: {issue_first_reported_date}. Urgency: {urgency_level}. Prior notice given: {prior_notice_given}. Prior notice date: {prior_notice_date}. Tone: professional, non-confrontational.",
   },
   'illegal-eviction-warning-letter': {
     title: 'Illegal Eviction Warning Letter',
     gumroad_product_id: 'iavmyw',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderIllegalEvictionWarningLetter,
     prompt_template:
       "Write a firm formal letter addressing incident_description on incident_date. State clearly that self-help eviction (changing locks, removing belongings, shutting off utilities, forcing a tenant out without a court-ordered legal process) is not a lawful method of eviction in most {jurisdiction} jurisdictions, and only a court-ordered/legally compliant process may remove a tenant. Demand immediate restoration of access/utilities/belongings as applicable. State the tenant is documenting this incident and will pursue all available legal remedies, including contacting local housing authorities or law enforcement, if not immediately resolved. Keep legal citations generic ('applicable landlord-tenant law in your area') rather than inventing statute numbers. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Incident: {incident_description}. Incident date: {incident_date}. Tone: firm, unambiguous — this is not a negotiation letter. Also suggest the tenant keep a copy and consider contacting local police/housing authority if access is actively being denied.",
   },
   'rental-scam-refund-demand': {
     title: 'Rental Scam Refund Demand',
     gumroad_product_id: 'esyrb',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderRentalScamRefundDemand,
     prompt_template:
       "Write two things: (1) a formal refund demand letter/message demanding return of amount_paid, paid via payment_method on payment_date, for a rental that scam_description. State this was based on false pretenses, demand a full refund within a short specific period, and note failure to respond will result in the matter being reported to listing_platform, the payment provider, and local law enforcement/consumer protection authorities in {jurisdiction}. (2) A short, separate, factual, non-alarmist checklist of where to report this scam based on payment_method (bank/card chargeback, payment app fraud report, gift card issuer fraud line, or noting cryptocurrency is generally non-reversible) — don't guess at recovery odds. Victim: {victim_full_name}. Amount paid: {amount_paid}. Payment method: {payment_method}. Payment date: {payment_date}. Recipient: {recipient_name_or_alias}. Listing platform: {listing_platform}. Scam description: {scam_description}. Tone: firm, factual.",
   },
   'lease-clause-challenge-letter': {
     title: 'Lease Clause Challenge Letter',
     gumroad_product_id: 'cajgj',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderLeaseClauseChallengeLetter,
     prompt_template:
       "Write a professional letter challenging or requesting removal of clause_text_or_summary, concern category clause_concern_type. If already_signed is 'No', frame as a request to amend the clause before signing, politely explaining the concern. If already_signed is 'Yes', frame as a formal notice the clause may be unenforceable under {jurisdiction} tenant protection law (generic — 'may not be enforceable under applicable law in your area', never cite a specific statute unless independently verified) and request written confirmation the landlord will not attempt to enforce it. Tenant: {tenant_full_name}. Landlord: {landlord_full_name}. Property: {property_address}. Clause: {clause_text_or_summary}. Concern type: {clause_concern_type}. Already signed: {already_signed}. Tone: professional, factual — negotiation/notice letter, not a threat.",
   },
   'lease-violation-notice-generator': {
     title: 'Lease Violation Notice Generator',
     gumroad_product_id: 'yxkdiw',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderLeaseViolationNoticeGenerator,
     prompt_template:
       "Write a formal lease violation notice for violation_type, identified violation_date_identified, described as violation_description. State that under {jurisdiction} landlord-tenant law, the tenant is given formal notice and an opportunity to cure within the notice/cure period that applies locally — keep the specific number of days generic ('within the cure period required in your jurisdiction — confirm this before sending') rather than inventing a figure. State failure to cure within that period may result in further legal action, including eviction proceedings, in accordance with local law. Landlord: {landlord_full_name}. Tenant: {tenant_full_name}. Property: {property_address_unit}. Violation type: {violation_type}. Description: {violation_description}. Date identified: {violation_date_identified}. Tone: professional, formal — legal notice. Include a clear disclaimer the landlord must confirm the exact cure period and notice requirements for their jurisdiction before sending, as this is not legal advice.",
   },
@@ -2606,6 +3001,11 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_scope-of-work',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- output_rules and prompt_template
+    // below are now DEAD CODE.
+    static: true,
+    render: renderScopeOfWorkGenerator,
     output_rules: DOCUMENT_OUTPUT_RULES,
     prompt_template:
       "Draft a professional, formal Scope of Work document — not a letter — intended for attachment to a renovation/repair contract between {homeowner_name} and {contractor_name} for the property at {project_address}. Structure it as a numbered document with these sections: 1) Project Overview (project type {project_type} — if 'Other', use {project_type_other} — start date {start_date}, target completion {completion_date}), 2) Detailed Scope of Work (the specific tasks from {work_description}, in the order provided), 3) Materials & Supplies ({materials} and who supplies them: {materials_responsibility} — if 'Mixed — specify which items below', use this breakdown: {materials_responsibility_detail}), 4) Permits & Compliance ({permit_status} — if 'Yes', responsibility sits with {permit_responsibility}), 5) Cleanup & Site Responsibility ({cleanup_responsibility}), 6) Exclusions (explicitly list {exclusions} as NOT included in this scope), 7) Price & Payment Terms ({price_and_payment}), 8) Signature blocks for both homeowner and contractor with date lines. Use factual, contract-appropriate language throughout — this is a legal-adjacent document meant to prevent scope disputes, not a narrative description. Do not invent contract clauses or legal terms beyond what the user provided.",
@@ -2615,6 +3015,11 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_contractor-dispute-letter',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderContractorDisputeDemandLetterGenerator,
     prompt_template:
       "Write a formal demand letter addressed to {contractor_name} regarding the contract dated {contract_date} for work at {property_address}, with a total contract price of {contract_price}. The specific issue is: {issue_type}. If issue_type is 'Incomplete work', state that approximately {incomplete_pct_complete}% of the contracted work is complete, describe the work not yet done: {incomplete_work_remaining}, and note the contractor stopped or left the site on {incomplete_stop_date} — otherwise ignore these three fields entirely. If issue_type is 'Defective work', describe the defect: {defect_description}, located at {defect_location}, first noticed on {defect_noticed_date}, with an estimated repair cost of {defect_repair_cost} if known — otherwise ignore these four fields entirely. If issue_type is 'Unauthorized overcharge', state the disputed amount of {overcharge_amount} and the reason it is unauthorized: {overcharge_reason} (if 'Other', use {overcharge_reason_other} instead) — otherwise ignore these fields entirely. If issue_type is 'Project delay', state the original agreed completion date of {delay_original_date}, the current status of the work: {delay_current_status}, and the reason given by the contractor for the delay, if any: {delay_reason_given} — otherwise ignore these three fields entirely. Clearly state the desired outcome: {desired_outcome} (if 'Partial refund — specify amount', the amount requested is {desired_outcome_amount}; if 'Completion by a specific date — specify date', the requested date is {desired_outcome_date}). Reference that supporting evidence (photos, communications log) is attached separately. Keep tone firm, factual, and professional — this is a demand letter, not an emotional complaint. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent legal citations or threaten specific legal action beyond stating that further steps will be considered if unresolved.",
   },
@@ -2697,6 +3102,11 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_terms-conditions',
+    // STATIC as of 2026-09-18 (Batch 5: Housing & Rentals / Home
+    // Renovations / Legal & Contracts) -- output_rules and prompt_template
+    // below are now DEAD CODE.
+    static: true,
+    render: renderTermsConditionsGenerator,
     output_rules: DOCUMENT_OUTPUT_RULES,
     prompt_template:
       "Draft a basic Terms & Conditions document for {business_name}, a {offering_type} business (if 'Other — free text', use {offering_type_other}) operating under the laws of {jurisdiction}. Include standard numbered sections: acceptance of terms, description of service, account terms if applicable ({has_accounts}), payment terms if applicable ({processes_payments}), the provided return/refund policy summary ({refund_policy}), user-generated content terms if applicable ({has_ugc} — if 'Yes', describe: {ugc_description}), age restrictions ({age_restriction}), limitation of liability, termination of access, governing law, changes to terms, and contact information ({contact_email}). Use clear, plain-language legal drafting appropriate for a basic T&C document. Do not invent specific statutory citations. Include a prominent disclaimer that this is a starting template and should be reviewed by a qualified attorney before publication, especially for businesses handling sensitive data, regulated products, or operating across multiple jurisdictions.",
