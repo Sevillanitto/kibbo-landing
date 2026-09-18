@@ -1528,6 +1528,340 @@ function renderFormalComplaintGenerator(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 4 rollout: Employment + Subscriptions
+// & Services, 2026-09-18) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-1.md (Employment) and
+// static-generators-phase1-sample.md (subscription-service-cancellation).
+
+function renderConstructiveDismissalComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.employer_name);
+  const re = a.country === 'United States' ? 'Constructive Discharge' : 'Constructive Dismissal — Formal Notice';
+  lines.push('Re: ' + re);
+  lines.push('');
+  const ground = a.country === 'United States' ? 'constructive discharge' : 'constructive dismissal';
+  lines.push('I am writing to formally document my resignation from ' + a.employer_name + ', effective ' + a.resignation_date + ', on the grounds of ' + ground + '.');
+  lines.push('');
+  lines.push(a.conduct_description);
+  lines.push('');
+  if (a.pattern_or_incident === 'Pattern of incidents over time') {
+    lines.push('This reflects a pattern of conduct over time, not a single isolated incident, as set out above in chronological order.');
+  } else if (a.pattern_or_incident === 'Single serious incident') {
+    lines.push('This reflects a single, sufficiently serious incident that left me with no reasonable alternative but to resign.');
+  }
+  lines.push('');
+  if (a.prior_complaints === 'Yes, formally in writing') {
+    lines.push('I raised these concerns with ' + a.employer_name + ' formally, in writing, before resigning.');
+  } else if (a.prior_complaints === 'Yes, verbally only') {
+    lines.push('I raised these concerns with ' + a.employer_name + ' verbally before resigning.');
+  } else if (a.prior_complaints === 'No, I resigned without raising it first') {
+    lines.push('I did not raise these concerns with ' + a.employer_name + ' before resigning.');
+  }
+  lines.push('');
+  lines.push('I consider this resignation to have been caused directly by the conduct described above, leaving me no reasonable alternative but to resign.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  const notes = [];
+  if (a.country === 'United Kingdom') {
+    notes.push('Note: UK unfair dismissal claims generally require at least two years of continuous employment — confirm this applies to your situation before proceeding.');
+  }
+  if (a.prior_complaints === 'No, I resigned without raising it first') {
+    notes.push('Note: Not having raised this before resigning may weaken a constructive dismissal claim in many jurisdictions, since employers are typically expected to have had a chance to address the conduct, or you should be able to show why doing so was clearly futile. Consider getting this reviewed before relying on it.');
+  }
+  if (notes.length) {
+    lines.push('');
+    lines.push('---');
+    notes.forEach(function (n) { lines.push(n); });
+  }
+  return lines.join('\n');
+}
+
+function renderDolWageComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('Re: Wage Complaint — ' + a.employer_name);
+  lines.push("[For submission to the US Department of Labor's Wage and Hour Division (WHD)]");
+  lines.push('');
+  lines.push('I am filing this wage complaint against ' + a.employer_name + ' under the Fair Labor Standards Act (FLSA).');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '. ' + a.discrepancy);
+  lines.push('');
+  lines.push('FLSA claims generally have a 2-year recovery window (3 years if the violation is willful).');
+  lines.push('');
+  if (a.retaliation === 'Yes') {
+    lines.push('My employer has retaliated against me for raising this issue. Retaliation for raising a wage complaint is independently illegal under FLSA Section 15(a)(3), and I am reporting this as well.');
+    lines.push('');
+  }
+  lines.push('I am requesting this matter be investigated.');
+  lines.push('');
+  lines.push('[Your name]');
+  lines.push('[Your contact information]');
+  return lines.join('\n');
+}
+
+function renderEmploymentDataAccessRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.organisation_name);
+  let re = '';
+  if (a.request_type === 'Access to all personal data held (Subject Access Request)') {
+    re = 'Subject Access Request';
+  } else if (a.request_type === 'Deletion of my CV/application data' || a.request_type === 'Deletion of my full employee record after leaving') {
+    re = 'Data Deletion Request';
+  } else if (a.request_type === 'Complaint: my CV/data was shared without authorization') {
+    re = 'Data Sharing Complaint';
+  }
+  lines.push('Re: ' + re);
+  lines.push('');
+  lines.push('Relationship to organisation: ' + a.relationship + '.');
+  lines.push('');
+  lines.push('I am writing regarding ' + a.organisation_name + ' about the following: ' + a.request_type + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.country === 'European Union' || a.country === 'United Kingdom') {
+    lines.push('This request is made under GDPR/UK GDPR — Article 15 for access, Article 17 for erasure. I expect a response within one month, extendable to three months for complex requests with proper notice.');
+  } else if (a.country === 'United States') {
+    lines.push('I am making this as a general privacy request under any applicable state privacy law.');
+  } else if (a.country === 'Australia') {
+    lines.push('This request is made with reference to the Privacy Act 1988 and the Australian Privacy Principles.');
+  } else if (a.country === 'Other/not sure') {
+    lines.push('I am making this as a general data privacy request and ask you to apply whatever data protection law governs your handling of my information.');
+  }
+  if (a.request_type === 'Complaint: my CV/data was shared without authorization') {
+    lines.push('');
+    lines.push('I am requesting confirmation of who my data was shared with and why.');
+  }
+  if (a.relationship === 'Former employee' && (a.request_type === 'Deletion of my CV/application data' || a.request_type === 'Deletion of my full employee record after leaving')) {
+    lines.push('');
+    lines.push('I understand you may have independent legal retention obligations (e.g. tax, employment records) that could limit full deletion — please confirm what, if anything, can and cannot be deleted.');
+  }
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEmploymentReferenceRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.former_employer);
+  lines.push('Re: Request for Employment Reference — ' + a.job_title);
+  lines.push('');
+  lines.push('I am writing to request an employment reference regarding my time in the role of ' + a.job_title + '.');
+  lines.push('');
+  if (a.refusal_context === 'Employer has ignored requests entirely') {
+    lines.push('I have reached out previously about this and have not received a response.');
+  } else if (a.refusal_context === 'Employer explicitly refused to provide a reference') {
+    lines.push('I understand a reference was previously declined. I would appreciate reconsidering this, or clarifying what, if anything, you are able to provide.');
+  } else if (a.refusal_context === 'Employer only offers to confirm dates of employment, nothing more') {
+    lines.push("I understand you are able to confirm my dates of employment. I would be grateful if you're able to provide anything further, but a confirmation of dates and job title would still be helpful in the meantime.");
+  }
+  if (hasValue(a.urgency)) {
+    lines.push('');
+    lines.push(a.urgency);
+  }
+  lines.push('');
+  lines.push('I understand that in most jurisdictions, employers are not legally required to provide anything beyond confirming dates of employment and job title, unless a specific contractual obligation applies, and I appreciate this is a request rather than a legal entitlement.');
+  lines.push('');
+  lines.push('Thank you for your time.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderFlexibleWorkingRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.employer_name);
+  lines.push('Re: Flexible Working Request');
+  lines.push('');
+  lines.push('I am writing to formally request: ' + a.request_type + '.');
+  lines.push('');
+  if (hasValue(a.reason)) {
+    lines.push('Reason for this request: ' + a.reason);
+    lines.push('');
+  }
+  lines.push('My specific proposed arrangement: ' + a.proposed_arrangement + '. I would welcome the opportunity to discuss a trial period.');
+  lines.push('');
+  if (a.country === 'United Kingdom') {
+    lines.push('I understand UK employees generally have a statutory right to REQUEST flexible working from day one of employment, though you may still decline for specified business reasons — this is a right to make the request and receive a considered response, not an automatic entitlement to the arrangement itself.');
+  } else if (a.country === 'Australia') {
+    lines.push('I understand certain eligible employees have a right under the National Employment Standards to request flexible working arrangements, with similar limits.');
+  } else if (a.country === 'United States') {
+    lines.push('I understand there is no general federal right to request flexible working — I am making this as a workplace request, not asserting a legal entitlement.');
+  } else if (a.country === 'European Union country' || a.country === 'Other/not sure') {
+    lines.push('I ask that you consider this request in line with whatever employment law applies in our jurisdiction.');
+  }
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderUnpaidWageCompensationDemand(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.employer_name);
+  lines.push('Re: Formal Demand for Unpaid Wages');
+  lines.push('');
+  lines.push('I am writing to formally demand payment of ' + a.amount_owed + ' in unpaid wages, covering ' + a.period_covered + '.');
+  lines.push('');
+  lines.push('Reason: ' + a.reason + '. ' + a.details);
+  let reasonNote = null;
+  if (a.reason === 'Unpaid trial shift') {
+    reasonNote = 'In most jurisdictions, if productive work was performed rather than pure observation/shadowing, wage laws generally require payment regardless of the word "trial" or "unpaid" used in the arrangement.';
+  } else if (a.reason === 'Mandatory training time') {
+    reasonNote = 'Time an employer requires an employee to spend in training is generally compensable work time under most wage laws, distinct from truly voluntary, non-required training.';
+  } else if (a.reason === 'Overtime hours') {
+    reasonNote = 'I am requesting the specific overtime premium owed for these hours.';
+  }
+  if (reasonNote) {
+    lines.push('');
+    lines.push(reasonNote);
+  }
+  let priorNote = null;
+  if (a.prior_contact === 'Yes, verbally, no response') {
+    priorNote = 'I previously raised this verbally and received no response.';
+  } else if (a.prior_contact === 'Yes, in writing, no response or refused') {
+    priorNote = 'I previously raised this in writing and received no response, or it was refused.';
+  }
+  if (priorNote) {
+    lines.push('');
+    lines.push(priorNote);
+  }
+  lines.push('');
+  lines.push('I am requesting payment within a reasonable timeframe from the date of this letter.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderWorkplaceHarassmentComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: HR, ' + a.company_name);
+  lines.push('Re: Formal Harassment Complaint');
+  lines.push('');
+  lines.push('I am filing a formal complaint.');
+  lines.push('');
+  lines.push('Person involved: ' + a.harasser_role + '.');
+  lines.push('Nature of the conduct: ' + a.harassment_type + '.');
+  lines.push('');
+  lines.push(a.incident_details);
+  if (hasValue(a.witnesses)) {
+    lines.push('');
+    lines.push('Witnesses: ' + a.witnesses + '.');
+  }
+  let typeNote = null;
+  if (a.harassment_type === 'Discriminatory harassment (based on a protected characteristic)') {
+    typeNote = 'I am framing this complaint around the relevant protected characteristic to preserve any applicable anti-discrimination legal protections.';
+  } else if (a.harassment_type === 'Retaliation after a prior complaint') {
+    typeNote = 'I consider this retaliation to be a distinct and serious issue in its own right, separate from my original complaint, since retaliation protections generally exist independently.';
+  }
+  if (typeNote) {
+    lines.push('');
+    lines.push(typeNote);
+  }
+  let reportNote = null;
+  if (a.prior_reports === 'Yes, informally, nothing happened') {
+    reportNote = 'I previously reported this informally and nothing was done.';
+  } else if (a.prior_reports === 'Yes, formally, nothing happened') {
+    reportNote = 'I previously reported this formally and nothing was done. Continued inaction may itself be a separate issue.';
+  }
+  if (reportNote) {
+    lines.push('');
+    lines.push(reportNote);
+  }
+  lines.push('');
+  lines.push('I am requesting a specific, timely response — within 5-10 business days — and a description of the investigation process. I am keeping a copy of this letter and any response.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderWrongfulWageDeductionLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.employer_name);
+  lines.push('Re: Disputed Wage Deduction');
+  lines.push('');
+  lines.push('I am writing to dispute a wage deduction of ' + a.amount_deducted + ' for: ' + a.deduction_reason + '. ' + a.details);
+  lines.push('');
+  lines.push('In most jurisdictions, deductions from wages generally require the employee\'s prior written consent and/or specific legal authorization, and blanket "shortage" or "damage" deductions taken without due process are frequently unlawful.');
+  lines.push('');
+  if (a.consent_given === 'No') {
+    lines.push('I did not authorize this deduction.');
+  } else if (a.consent_given === "Yes, but I didn't understand what I was signing") {
+    lines.push('I do not believe I gave valid, informed authorization for this deduction.');
+  } else if (a.consent_given === 'Not sure') {
+    lines.push('I am not aware of having authorized this deduction.');
+  }
+  lines.push('');
+  lines.push('I am requesting full repayment of the deducted amount within 14 days, and reserve the right to escalate this to the relevant labor authority if unresolved.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderSubscriptionServiceCancellation(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  let re = 'Re: Cancellation Notice';
+  if (hasValue(a.account_id)) {
+    re += ' — Account ' + a.account_id;
+  }
+  lines.push(re);
+  lines.push('');
+  lines.push('I am writing to formally cancel:');
+  lines.push('');
+  if (a.cancellation_type === 'Cancelling an ongoing subscription or recurring service') {
+    lines.push('my ongoing subscription, which began on ' + a.signup_date + ' and bills ' + a.billing_frequency + '.');
+  } else if (a.cancellation_type === 'Cancelling a free trial before it converts to paid') {
+    let l = 'my free trial before it converts to a paid subscription. I understand the trial is set to convert on ' + a.trial_end_date;
+    if (hasValue(a.promo_price_seen)) {
+      l += ', at the price advertised to me of ' + a.promo_price_seen;
+    }
+    l += '.';
+    lines.push(l);
+  } else if (a.cancellation_type === 'Terminating a fixed-term service contract') {
+    lines.push('my fixed-term contract, which runs through ' + a.contract_end_date + '.');
+    if (hasValue(a.early_termination_reason)) {
+      lines.push('My reason for terminating early: ' + a.early_termination_reason + '.');
+    }
+  }
+  lines.push('');
+  lines.push('Please treat ' + a.cancellation_date_requested + ' as the effective cancellation date, and confirm this date in writing.');
+  if (a.also_request_refund === 'Yes') {
+    lines.push('');
+    lines.push('I am also formally requesting a refund of ' + a.refund_amount + '.');
+    lines.push(a.refund_reason);
+  }
+  lines.push('');
+  lines.push('Please ensure no further charges are made to this account after the effective cancellation date above. Any charge made after that date will be disputed directly with my payment provider.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -1607,6 +1941,10 @@ const GENERATORS = {
   'dol-wage-complaint': {
     title: 'DOL Wage Theft Complaint (FLSA)',
     gumroad_product_id: 'cygypm',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderDolWageComplaint,
     prompt_template:
       'Write a formal wage complaint narrative suitable for submission to the US Department of Labor\'s Wage and Hour Division (WHD), referencing the Fair Labor Standards Act (FLSA). State the employer name, describe the specific wage issue and the discrepancy between hours worked and hours paid using the details provided, and note that FLSA claims generally have a 2-year recovery window (3 years if the violation is willful) without inventing case-specific willfulness language unless clearly supported. If retaliation is \'Yes\', add a separate paragraph noting that retaliation for raising a wage complaint is independently illegal under FLSA Section 15(a)(3), and that this should be reported as well. Employer: {employer_name}. Issue: {issue_type}. Discrepancy: {discrepancy}. Tone: factual, clear, no emotional language — written to be submitted via WHD\'s online complaint form or read over the phone.',
   },
@@ -1847,6 +2185,10 @@ const GENERATORS = {
     title: 'Unpaid Wage & Compensation Demand Letter',
     // Real Gumroad product_id for the "unpaid-wage-compensation-demand" product.
     gumroad_product_id: 'sbadbs',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderUnpaidWageCompensationDemand,
     prompt_template:
       "Write a formal unpaid wage/compensation demand letter matching the reason selected. For 'Unpaid trial shift': note that in most jurisdictions, if the worker performed productive work rather than pure observation/shadowing, wage laws generally require payment regardless of the word 'trial' or 'unpaid' in the arrangement — phrase this as a general principle, not a jurisdiction-specific citation, since trial shift rules vary by location. For 'Mandatory training time': note that time an employer requires an employee to spend in training is generally compensable work time under most wage laws, distinct from truly voluntary, non-required training. For 'Overtime hours': request the specific overtime premium calculation without asserting a specific jurisdiction's overtime rate or threshold unless the person's location is known. Do not state a specific legal citation or statute for any reason unless jurisdiction is clear from context — keep legal framing general ('wage protection laws in most jurisdictions require...') rather than citing a specific act. Employer: {employer_name}. Reason: {reason}. Amount: {amount_owed}. Period: {period_covered}. Details: {details}. Prior contact: {prior_contact}. Tone: professional, firm, factual.",
   },
@@ -1854,6 +2196,10 @@ const GENERATORS = {
     title: 'Wrongful/Unlawful Wage Deduction Letter',
     // Real Gumroad product_id for the "wrongful-wage-deduction-letter" product.
     gumroad_product_id: 'ozzcfn',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderWrongfulWageDeductionLetter,
     prompt_template:
       "Write a formal letter disputing a wage deduction. Note that in most jurisdictions, deductions from wages generally require the employee's prior written consent and/or specific legal authorization, and blanket 'shortage' or 'damage' deductions taken without due process are frequently unlawful — phrase this as a general principle across jurisdictions, not a specific statute citation, since wage deduction law varies significantly by location. If consent_given is 'No' or 'Not sure', emphasize the lack of valid authorization as the central issue. Request full repayment of the deducted amount within a reasonable timeframe (e.g. 14 days) and reference the employee's right to escalate to a labor authority if unresolved. Employer: {employer_name}. Deduction reason: {deduction_reason}. Amount: {amount_deducted}. Consent given: {consent_given}. Details: {details}. Tone: professional, firm, factual.",
   },
@@ -1861,6 +2207,10 @@ const GENERATORS = {
     title: 'Employment Reference Request',
     // Real Gumroad product_id for the "employment-reference-request" product.
     gumroad_product_id: 'ehhenj',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEmploymentReferenceRequest,
     prompt_template:
       "Write a formal, polite but firm request for an employment reference from a former employer. Note that in most jurisdictions employers are NOT legally required to provide anything beyond confirming dates of employment and job title, unless a specific contractual or jurisdiction-specific obligation applies — do not assert a legal entitlement to a full reference. Frame the letter as a professional request rather than a demand, since there is generally no enforceable right being invoked here, with an exception noted only if the refusal_context suggests retaliation for a protected complaint (e.g. discrimination, whistleblowing), in which case add a cautious note that retaliatory reference refusal may raise separate legal issues worth discussing with an employment lawyer. Former employer: {former_employer}. Role: {job_title}. Context: {refusal_context}. Urgency: {urgency}. Tone: professional, courteous, direct.",
   },
@@ -1868,6 +2218,10 @@ const GENERATORS = {
     title: 'Constructive Dismissal Complaint Letter',
     // Real Gumroad product_id for the "constructive-dismissal-complaint" product.
     gumroad_product_id: 'hfiygj',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderConstructiveDismissalComplaint,
     prompt_template:
       "Write a formal letter documenting the case for constructive dismissal (or, if country is 'United States', use the term 'constructive discharge' instead throughout, and note this is a doctrine applied case-by-case rather than a codified statute, distinct from the UK/Australia/EU concept of constructive dismissal). Emphasize that the employer's conduct must be objectively serious enough that a reasonable person in the employee's position would have no reasonable alternative but to resign — mere unhappiness or a single minor grievance does not qualify. If country is 'United Kingdom', note that UK unfair dismissal claims generally require at least two years of continuous employment, and flag this as something to verify before proceeding. If prior_complaints indicates the employee never raised the issue before resigning, note this may weaken the claim, since most jurisdictions expect the employee to have given the employer a chance to address the conduct, or to show why doing so was clearly futile. If pattern_or_incident is 'Pattern of incidents', instruct the letter to lay out a clear chronological timeline of the pattern rather than treating it as one event. Advise the employee to resign promptly after the triggering conduct or shortly after raising it without resolution, since delay can be read as acceptance of the conditions. Do not guarantee a specific legal outcome or cite a specific statute number. Employer: {employer_name}. Country: {country}. Conduct: {conduct_description}. Pattern: {pattern_or_incident}. Prior complaints: {prior_complaints}. Resignation date: {resignation_date}. Tone: professional, serious, factual — this is a formal legal document, not an emotional appeal.",
   },
@@ -1875,6 +2229,10 @@ const GENERATORS = {
     title: 'Workplace Harassment Complaint Letter',
     // Real Gumroad product_id for the "workplace-harassment-complaint" product.
     gumroad_product_id: 'kjxsaj',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderWorkplaceHarassmentComplaint,
     prompt_template:
       "Write a formal harassment complaint letter addressed to HR. If harassment_type is 'Discriminatory harassment', explicitly frame the complaint around the relevant protected characteristic to preserve any anti-discrimination legal protections, without naming a specific statute unless jurisdiction is known. If harassment_type is 'Retaliation after a prior complaint', frame retaliation as a distinct and often more serious issue than the original complaint, since retaliation protections exist independently in most jurisdictions. Request a specific, timely response (e.g. within 5-10 business days) and a description of the investigation process. If prior_reports indicates this was already reported without action, state this clearly and note that continued inaction may itself be a separate issue. Advise the employee to keep a copy of this letter and any response. Company: {company_name}. Person involved: {harasser_role}. Nature: {harassment_type}. Details: {incident_details}. Witnesses: {witnesses}. Prior reports: {prior_reports}. Tone: professional, serious, factual.",
   },
@@ -1882,6 +2240,10 @@ const GENERATORS = {
     title: 'Flexible Working Request',
     // Real Gumroad product_id for the "flexible-working-request" product.
     gumroad_product_id: 'jmyyim',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderFlexibleWorkingRequest,
     prompt_template:
       "Write a formal flexible working request letter. If country is 'United Kingdom', note that UK employees generally have a statutory right to REQUEST flexible working from day one of employment, though the employer can still refuse for specified business reasons — the right is to make the request and receive a considered response, not an automatic entitlement to the arrangement itself. If country is 'Australia', note the National Employment Standards give certain eligible employees (e.g. parents, carers, employees with disability, older workers) a right to request flexible working arrangements, with similar limits. If country is 'United States', note there is no general federal right to request flexible working — this is a workplace request, not a legal entitlement, though it may still be reasonable to request in writing, and add that this differs for accommodation requests tied to disability (ADA) which follow a separate legal process not covered by this general letter. If country is 'Other/not sure', keep the framing general and advise the employee to check local law. Present the specific proposed arrangement clearly and offer to discuss a trial period. Employer: {employer_name}. Request type: {request_type}. Reason: {reason}. Proposed arrangement: {proposed_arrangement}. Country: {country}. Tone: professional, collaborative, clear.",
   },
@@ -1889,6 +2251,10 @@ const GENERATORS = {
     title: 'Employment Data Access Request (GDPR/Privacy)',
     // Real Gumroad product_id for the "employment-data-access-request" product.
     gumroad_product_id: 'vsnrks',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderEmploymentDataAccessRequest,
     prompt_template:
       "Write a formal data access/deletion/complaint letter matching request_type. If country is 'European Union' or 'United Kingdom', cite GDPR/UK GDPR Article 15 (access) or Article 17 (erasure) as applicable, and note the standard one-month response deadline, extendable to three months for complex requests with proper notice. If request_type is 'Complaint: CV shared without authorization', frame this as a potential violation of data minimization/purpose limitation principles under GDPR (if EU/UK) or as a general privacy complaint otherwise, and request confirmation of who the data was shared with and why. If country is 'United States', note there is no single federal equivalent to GDPR — reference relevant state privacy laws only in general terms (e.g. 'your state's privacy law, if applicable') without citing a specific act unless the person's state is known, and frame the request as a general privacy request rather than a GDPR-based legal right. If country is 'Australia', reference the Privacy Act 1988 and Australian Privacy Principles in general terms. If relationship is 'Former employee' and request_type involves deletion, note that employers may have independent legal retention obligations (tax, employment records) that can limit full deletion even where a privacy law otherwise permits it — do not promise complete erasure will necessarily be granted. Organisation: {organisation_name}. Relationship: {relationship}. Request type: {request_type}. Details: {details}. Country: {country}. Tone: professional, firm, factual.",
   },
@@ -2136,6 +2502,10 @@ const GENERATORS = {
   'subscription-service-cancellation': {
     title: 'Subscription & Service Cancellation Generator',
     gumroad_product_id: 'PLACEHOLDER_subscription-service-cancellation',
+    // STATIC as of 2026-09-18 (Batch 4: Employment + Subscriptions &
+    // Services) -- prompt_template below is now DEAD CODE.
+    static: true,
+    render: renderSubscriptionServiceCancellation,
     prompt_template:
       "Write a formal, courteous but firm cancellation letter from a consumer to {provider_name}. The consumer's account/reference is {account_id} — ignore this entirely if not provided or marked N/A. This is a cancellation described as: {cancellation_type}. If this is an ongoing subscription or recurring service, reference that the subscription began on {signup_date} and bills {billing_frequency} — otherwise ignore these two fields entirely. If this is a free trial before conversion, reference that the trial is set to end/convert on {trial_end_date}, and if a promotional price was shown, mention it was advertised at {promo_price_seen} — otherwise ignore these two fields entirely. If this is a fixed-term contract, reference that the contract runs through {contract_end_date}, and if a reason for early termination was given, include it: {early_termination_reason} — otherwise ignore these two fields entirely. Only use the fields belonging to the selected cancellation type; never write 'N/A' or reference an inapplicable field in the letter itself. State clearly that cancellation should take effect on {cancellation_date_requested}, and request written confirmation of the cancellation date. If also_request_refund is 'Yes', formally request a refund of {refund_amount}, explaining: {refund_reason} — otherwise do not mention a refund at all. Close by requesting that no further charges be made to the account after the stated cancellation date, and that any charge after that date will be disputed with the payment provider. Keep the tone professional, not aggressive. Do not invent any facts, dates, or figures beyond what was provided.",
   },
