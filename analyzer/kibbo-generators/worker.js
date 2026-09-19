@@ -147,6 +147,28 @@ function hasValue(v) {
   return !!(v && String(v).trim() && String(v).trim().toUpperCase() !== 'N/A');
 }
 
+// ---- Numeric-tier parsing (approved Option A, see
+// _drafts-pending/generators-static-migration/numeric-parsing-plan.md) --
+// used only by eu261-flight-compensation-claim (distance_km) and
+// eu-train-delay-claim (delay_minutes), the only 2 of 88 generators that
+// branch on a numeric threshold rather than a closed select. Validation
+// lives here, worker.js-side, where the tier decision actually happens --
+// not as a frontend regex that could drift out of sync with this logic.
+function parsePlainNumber(raw) {
+  if (typeof raw !== 'string') return null;
+  const digits = raw.replace(/[^\d]/g, ''); // strip everything but 0-9
+  if (!digits) return null;
+  return parseInt(digits, 10);
+}
+
+// Sentinel object a render() function returns instead of a letter string
+// when a required numeric field couldn't be parsed. handlePreview/
+// handleUnlock recognize this shape and return an explicit refusal to the
+// client instead of ever guessing a tier or silently falling through.
+function staticValidationError(message) {
+  return { staticValidationError: message };
+}
+
 // ---- Static render functions (pilot batch, 2026-09-16) ----
 // Each takes the `answers` object exactly as submitted by the frontend
 // form and returns the finished letter as a plain string. Ported 1:1 from
@@ -2222,6 +2244,471 @@ function renderTermsConditionsGenerator(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions (Batch 6 rollout: Flights & Travel +
+// Delivery & Parcels + Healthcare & Medical, 2026-09-19) ----
+// Ported 1:1 from the approved literal templates in
+// _drafts-pending/generators-static-migration/batch-3.md (Flights &
+// Travel / Healthcare & Medical), batch-1.md (courier-complaint-generator,
+// customs-fee-dispute-generator), and static-generators-phase1-sample.md
+// (eu261-flight-compensation-claim, vendor-compensation-demand-letter).
+
+function renderAuAirlineComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.airline_name);
+  lines.push('Re: Formal Complaint — Flight ' + a.flight_details);
+  lines.push('');
+  lines.push('I am writing regarding ' + a.flight_details + '.');
+  lines.push('');
+  lines.push('Issue: ' + a.issue_type + '.');
+  lines.push('');
+  if (a.issue_type === 'Flight delayed' || a.issue_type === 'Flight cancelled') {
+    lines.push('Cause given: ' + a.cause + '.');
+    if (a.cause === 'Airline-controlled (crew, maintenance, technical)') {
+      lines.push('As this was airline-controlled, I am raising a claim under the Australian Consumer Law for the reasonable expenses caused by this disruption — this is a claim I am making, not a guaranteed automatic entitlement, as Australia has no EU261-style automatic delay compensation scheme.');
+    } else if (a.cause === 'Weather/air traffic control') {
+      lines.push('I understand the cause given was weather or air traffic control, which may limit any claim under the Australian Consumer Law, but I am still raising the following.');
+    } else if (a.cause === 'Not stated by airline') {
+      lines.push('No cause was stated for this disruption. I am asking you to confirm the cause and my options under the Australian Consumer Law.');
+    }
+    lines.push('Expenses: ' + a.expenses);
+  } else if (a.issue_type === 'Baggage damaged' || a.issue_type === 'Baggage lost/delayed') {
+    lines.push('Property Irregularity Report (PIR) filed: ' + a.pir_filed + '.');
+    lines.push("This claim is made with reference to the Civil Aviation (Carriers' Liability) Act 1959's liability framework, which caps liability at a level periodically adjusted — please refer to your own Conditions of Carriage for the exact current cap and claim deadline.");
+  }
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuBaggageClaimMontreal(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.airline_name);
+  lines.push('Re: Baggage Claim — Flight ' + a.flight_details + ' (Montreal Convention)');
+  lines.push('');
+  lines.push('I am submitting a formal baggage claim under the Montreal Convention for ' + a.flight_details + '.');
+  lines.push('');
+  lines.push('What happened: ' + a.issue + '.');
+  lines.push('');
+  lines.push('PIR (Property Irregularity Report) filed: ' + a.pir_filed + '.');
+  lines.push('');
+  lines.push('Itemized value: ' + a.itemized_value);
+  lines.push('');
+  if (a.issue === 'Baggage damaged') {
+    lines.push('I am filing this claim within 7 days of delivery, as required for damage claims.');
+  } else if (a.issue === 'Baggage lost (21+ days missing)') {
+    lines.push('This baggage has now been missing for 21 days or more, at which point it is legally considered lost rather than delayed.');
+  } else if (a.issue === 'Baggage delayed (under 21 days) — essential items purchased') {
+    lines.push('This baggage remains delayed. I purchased essential items in the meantime, itemized above.');
+  }
+  lines.push('');
+  lines.push('The Montreal Convention caps liability at 1,519 SDR per passenger (approximately €2,000, though the exact euro value fluctuates with the SDR exchange rate). This is reimbursement of demonstrated value, not a flat payout.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuTrainDelayClaim(a) {
+  const delayNum = parsePlainNumber(a.delay_minutes);
+  if (delayNum === null) {
+    return staticValidationError('Please enter the delay in minutes as a number so we can calculate the correct compensation tier.');
+  }
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.operator_name);
+  lines.push('Re: EU Rail Delay Compensation Claim — ' + a.journey_details);
+  lines.push('');
+  lines.push('I am submitting a formal delay compensation claim under Regulation (EU) 2021/782 for ' + a.journey_details + ', delayed ' + a.delay_minutes + ' minutes on arrival.');
+  lines.push('');
+  lines.push('Compensation due:');
+  if (delayNum >= 60 && delayNum < 120) {
+    lines.push('25% refund.');
+  } else if (delayNum >= 120) {
+    lines.push('50% refund.');
+  }
+  lines.push('');
+  lines.push('Cause: ' + a.cause + '.');
+  if (a.cause === 'Force majeure (extreme weather, person on tracks, etc.)') {
+    lines.push('I understand cash compensation may not apply if this qualifies as force majeure, but your duty-of-care obligation (food, accommodation) still applies regardless of cause.');
+  }
+  lines.push('');
+  if (a.missed_connection === 'Yes') {
+    lines.push('I missed a connecting train because of this delay. I am asserting my right to free rerouting on the next available train, including via a partner operator, or alternative transport.');
+    lines.push('');
+  }
+  if (a.duty_of_care_provided === 'No') {
+    lines.push('I was not provided with food or accommodation as required. My expenses were: ' + a.duty_of_care_expenses + '. I am requesting reimbursement of these.');
+    lines.push('');
+  }
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEuPackageHolidayComplaint(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.agency_name);
+  lines.push('Re: Package Holiday Complaint — ' + a.trip_details);
+  lines.push('');
+  lines.push('I am submitting a formal complaint under Directive (EU) 2015/2302 regarding ' + a.trip_details + '.');
+  lines.push('');
+  lines.push('What happened: ' + a.issue + '.');
+  lines.push('');
+  lines.push(a.details);
+  lines.push('');
+  if (a.issue === 'Significant change made before departure (hotel downgrade, date shift, etc.)') {
+    lines.push('As the organiser, you are liable for every service in this package, not individual suppliers. I am asserting my right to reject this change and receive a full refund within 14 days.');
+  } else if (a.issue === 'Non-conformity at destination (hotel/excursions not as described)') {
+    lines.push('As the organiser, you are liable for every service in this package, not individual suppliers. I am requesting equivalent alternative arrangements or a proportionate price reduction.');
+  } else if (a.issue === 'Agency insolvency during or before trip') {
+    lines.push('I am referencing the mandatory insolvency protection insurance required under the Directive, and my right to free repatriation.');
+  }
+  lines.push('');
+  lines.push('Note: this claim applies if this booking qualifies as a "package" under the Directive (two or more linked travel services sold together) — please confirm this applies if it\'s not already clear.');
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderEu261FlightCompensationClaim(a) {
+  const distanceNum = parsePlainNumber(a.distance_km);
+  if (distanceNum === null) {
+    return staticValidationError('Please enter the flight distance in km as a number so we can calculate the correct compensation tier.');
+  }
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.airline_name);
+  lines.push('Re: EU261 Compensation Claim — Flight ' + a.flight_details);
+  lines.push('');
+  lines.push('I am writing to formally claim compensation under Regulation (EC) No 261/2004 for ' + a.flight_details + '.');
+  lines.push('');
+  if (a.scenario === 'Delayed 3+ hours on arrival') {
+    lines.push('This flight arrived more than three hours after its scheduled arrival time.');
+  } else if (a.scenario === "Cancelled with less than 14 days' notice") {
+    lines.push('This flight was cancelled, and I was notified less than 14 days before the scheduled departure.');
+  }
+  lines.push('');
+  lines.push('Based on a flight distance of approximately ' + a.distance_km + ' km, the compensation due is:');
+  if (distanceNum <= 1500) {
+    lines.push('€250 per passenger.');
+  } else if (distanceNum <= 3500) {
+    lines.push('€400 per passenger.');
+  } else {
+    lines.push('€600 per passenger.');
+  }
+  lines.push('');
+  if (a.cause === 'Technical/crew issue (airline-controlled)') {
+    lines.push('The cause given for this disruption was a technical or crew issue. Under established case law, technical and crew-related issues are within the airline\'s control and do NOT qualify as "extraordinary circumstances" under Regulation (EC) No 261/2004. I am therefore asserting this claim in full.');
+  } else if (a.cause === 'Weather/ATC/airspace closure') {
+    lines.push('I understand the stated cause was weather or air traffic control related. If you are able to demonstrate that this genuinely qualifies as an "extraordinary circumstance," compensation may not be owed — however, I am submitting this claim and ask you to confirm your position and the evidence for it in writing.');
+  } else if (a.cause === 'Not stated by airline') {
+    lines.push('No cause was provided to me for this disruption. I am submitting this claim on the basis that, absent evidence of a genuine extraordinary circumstance, compensation is owed.');
+  }
+  lines.push('');
+  if (a.duty_of_care_provided === 'No') {
+    lines.push("In addition, I was not provided with the meals, refreshments, or accommodation required under Regulation (EC) No 261/2004's duty-of-care obligations. My out-of-pocket expenses as a result were: " + a.duty_of_care_expenses + '. I am requesting reimbursement of these in addition to the statutory compensation above.');
+    lines.push('');
+  }
+  if (a.remedy === 'Full refund instead of rerouting/voucher') {
+    lines.push('I am requesting a full refund of my ticket rather than rerouting or a voucher.');
+    lines.push('');
+  } else if (a.remedy === 'All of the above') {
+    lines.push('I am requesting the full statutory compensation, a full refund of my ticket, and reimbursement of my duty-of-care expenses as set out above.');
+    lines.push('');
+  }
+  lines.push('Please confirm receipt of this claim and provide a substantive response, including your position on liability, within a reasonable timeframe.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderFlightDisruptionCompensationReimbursement(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.airline_name);
+  lines.push('Re: Flight Disruption Claim — ' + a.flight_details + ' (Booking ' + a.booking_reference + ')');
+  lines.push('');
+  if (a.scenario === 'Baggage lost, damaged, or delayed — no other disruption') {
+    lines.push('I am submitting a baggage claim under the Montreal Convention for ' + a.flight_details + ' (booking ' + a.booking_reference + ').');
+    lines.push('Baggage issue: ' + a.baggage_issue + '. ' + a.baggage_details);
+    lines.push('The Montreal Convention caps liability at 1,519 SDR per passenger — this is a cap, not a guaranteed payout, and does not apply if a special value declaration was made and a higher fee paid at check-in.');
+  } else {
+    lines.push('I am submitting a compensation/reimbursement claim for ' + a.flight_details + ' (booking ' + a.booking_reference + ').');
+    lines.push('');
+    lines.push('Disruption: ' + a.scenario + '. Reason given by the airline: ' + a.reason_given + '.');
+    lines.push('');
+    if (a.jurisdiction === 'EU (EU261)') {
+      lines.push('Under Regulation (EC) 261/2004, compensation of €250/€400/€600 applies depending on distance — please confirm the correct tier for this flight. Compensation does not apply if you can prove "extraordinary circumstances."');
+    } else if (a.jurisdiction === 'UK (UK261)') {
+      lines.push('Under UK261, the same tiered compensation applies in GBP equivalents (£220/£350/£520) — please confirm the correct tier for this flight. The claim deadline is 6 years (5 years in Scotland).');
+    } else if (a.jurisdiction === 'US (DOT rules)') {
+      lines.push('The US has no fixed cash compensation scheme equivalent to EU261/UK261. I am asserting my automatic cash refund entitlement under 14 CFR 259.5 for a cancelled or significantly changed flight.');
+    } else if (a.jurisdiction === 'Australia (ACL)') {
+      lines.push('Australia has no dedicated flight compensation regulation equivalent to EU261. I am raising this claim under the Australian Consumer Law — was the service provided with due care, was the delay reasonably avoidable.');
+    } else if (a.jurisdiction === 'Not sure') {
+      lines.push('I am not certain which regulatory framework applies to this flight — I would appreciate you confirming this, and I am reserving my rights under whichever framework does apply.');
+    }
+    if (a.baggage_issue !== 'No') {
+      lines.push('');
+      lines.push('In addition, my baggage was affected: ' + a.baggage_issue + '.');
+      lines.push(a.baggage_details);
+      lines.push('This is a separate claim under the Montreal Convention, distinct from the flight disruption claim above.');
+    }
+    if (a.duty_of_care_provided === 'No — I had to pay myself' || a.duty_of_care_provided === 'Partially — I paid for some of it myself') {
+      lines.push('');
+      lines.push('I was not adequately provided with meals, refreshments, or accommodation during this disruption. My out-of-pocket expenses were: ' + a.out_of_pocket_expenses + '. I am requesting reimbursement of these, separate from and additional to any statutory compensation.');
+    }
+  }
+  lines.push('');
+  lines.push('Remedy sought: ' + a.remedy_sought + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderCourierComplaintGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.carrier);
+  lines.push('Re: Tracking Number ' + a.tracking_number + ' — Formal Complaint');
+  lines.push('');
+  lines.push('I am writing to formally complain about the handling of my parcel, tracking number ' + a.tracking_number + '.');
+  lines.push('');
+  if (a.issue_type === 'Lost') {
+    lines.push('This parcel is lost. The last tracking update was: ' + a.last_tracking_update + '.');
+  } else if (a.issue_type === 'Damaged') {
+    lines.push('This parcel arrived damaged. ' + a.damage_description);
+  } else if (a.issue_type === 'Delayed') {
+    let l = 'This parcel was delayed. The promised/estimated delivery date was ' + a.promised_delivery_date + ', but ';
+    l += a.actual_delivery_date === 'Not yet delivered' ? 'it has still not arrived' : 'it did not arrive until ' + a.actual_delivery_date;
+    lines.push(l + '.');
+  } else if (a.issue_type === 'Delivered to wrong address') {
+    lines.push('This parcel was delivered to the wrong address. Please confirm the correct delivery location and the next steps to recover or resolve this.');
+  }
+  lines.push('');
+  lines.push('Country: ' + a.country + '.');
+  lines.push('');
+  lines.push('Please refer to your own standard complaints/compensation process for this country in resolving this. I am seeking compensation of ' + a.compensation_amount + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderCustomsFeeDisputeGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.carrier_customs_agent);
+  lines.push('Re: Customs Charge Dispute — Tracking Number ' + a.tracking_number);
+  lines.push('');
+  lines.push('I am writing to dispute a customs/import charge on tracking number ' + a.tracking_number + ', imported into ' + a.country_of_import + '.');
+  lines.push('');
+  lines.push('The charge was ' + a.amount_charged + '. I believe the correct amount is ' + a.amount_correct + '.');
+  lines.push('');
+  const reason = a.dispute_reason === 'Other' ? a.dispute_reason_other : a.dispute_reason;
+  lines.push('Reason for dispute: ' + reason + '.');
+  lines.push('');
+  lines.push('I am requesting a recalculation and refund of the difference, and a clear breakdown of how the original charge was calculated if one was not already provided.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderVendorCompensationDemandLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.vendor_name);
+  lines.push('Re: Formal Demand — Order ' + a.order_reference);
+  lines.push('');
+  lines.push('I am writing regarding order ' + a.order_reference + ', placed on ' + a.order_date + ' for ' + a.amount_paid + '.');
+  lines.push('');
+  if (a.scenario === 'Lost parcel (never arrived, or tracking shows no movement)') {
+    lines.push('This parcel has not arrived. The last tracking update was ' + a.last_tracking_update + ', and there has been no tracking movement for ' + a.days_since_movement + ' days, via ' + a.carrier_used + '.');
+    if (a.carrier_confirmed_lost === 'Yes') {
+      lines.push('The carrier has confirmed this parcel is lost.');
+    } else if (a.carrier_confirmed_lost === 'No') {
+      lines.push('The carrier has not yet confirmed the parcel is lost, but given the lack of movement, I am not willing to wait indefinitely.');
+    }
+  } else if (a.scenario === 'Damaged parcel (arrived damaged, or contents damaged)') {
+    lines.push('This parcel arrived damaged on ' + a.damage_discovered_date + '.');
+    lines.push(a.damage_description);
+    if (a.photos_available === 'Yes') {
+      lines.push('I have photos documenting the damage, available on request.');
+    }
+    if (a.packaging_kept === 'Yes') {
+      lines.push('I have kept the original packaging.');
+    }
+  } else if (a.scenario === 'Late delivery (arrived significantly after promised date)') {
+    let l = 'This order was promised for delivery by ' + a.promised_delivery_date + ', but ';
+    l += a.actual_delivery_date === 'Not yet delivered' ? 'has still not arrived' : 'did not actually arrive until ' + a.actual_delivery_date;
+    lines.push(l + '.');
+    lines.push(a.delay_harm);
+  }
+  lines.push('');
+  lines.push('As the seller, you remain responsible for successful delivery of the goods I ordered from you. I am requesting the following: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('If this is not resolved, I will pursue a chargeback with my card issuer or escalate to the relevant consumer protection authority.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderMedicalRecordsRequestLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Request for Medical Records');
+  lines.push('');
+  lines.push('I am requesting access to the following medical records: ' + a.records_requested + '.');
+  lines.push('');
+  if (hasValue(a.date_range)) {
+    lines.push('Date range: ' + a.date_range + '.');
+    lines.push('');
+  }
+  lines.push('Preferred delivery format: ' + a.delivery_preference + '.');
+  lines.push('');
+  if (a.reason_for_request !== 'Prefer not to say') {
+    lines.push('Reason for this request: ' + a.reason_for_request + '.');
+    lines.push('');
+  }
+  lines.push('I am making this request under my general right to access my own medical records under applicable law.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Please respond within a reasonable, stated timeframe.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.patient_full_name);
+  return lines.join('\n');
+}
+
+function renderHealthcareBillingDisputeRefundLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Billing Dispute — ' + a.service_description);
+  lines.push('');
+  lines.push('I am writing regarding ' + a.service_description + ', amount in question ' + a.amount_in_question + '.');
+  lines.push('');
+  if (a.scenario === 'Incorrect or unexpected charge on a bill') {
+    lines.push('The bill shows ' + a.billed_amount + ', but I expected ' + a.expected_amount + '.');
+    lines.push('Reason for the discrepancy: ' + a.discrepancy_reason);
+    lines.push('I am requesting an itemized explanation and correction of this amount within a reasonable period.');
+  } else if (a.scenario === 'Refund after cancelling a service') {
+    lines.push('I cancelled this service on ' + a.service_cancellation_date + ' and have already paid ' + a.amount_already_paid + '.');
+    if (hasValue(a.cancellation_policy_reference)) {
+      lines.push('I was told the following about cancellation/refund terms: ' + a.cancellation_policy_reference);
+    }
+    lines.push('I am requesting a full or appropriate partial refund within a reasonable period.');
+  }
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.patient_full_name);
+  return lines.join('\n');
+}
+
+function renderHealthcareInsuranceAppealLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.insurer_name);
+  lines.push('Re: Formal Appeal — Claim ' + a.claim_reference_number);
+  lines.push('');
+  lines.push('I am formally appealing the denial of coverage for ' + a.denied_service_description + ', claim reference ' + a.claim_reference_number + '.');
+  lines.push('');
+  lines.push('Your stated reason for denial: ' + a.denial_reason_given);
+  lines.push('');
+  lines.push('My grounds for appeal: ' + a.patient_counter_argument);
+  lines.push('');
+  if (hasValue(a.appeal_deadline)) {
+    lines.push('This appeal is submitted ahead of the stated deadline: ' + a.appeal_deadline + '.');
+    lines.push('');
+  }
+  lines.push('I am requesting a formal reconsideration of this claim, directly addressing the reason for denial above.');
+  lines.push('');
+  lines.push('If this internal appeal is unsuccessful, I understand I may escalate to the applicable external/independent review process for my jurisdiction and plan type.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.policyholder_full_name);
+  return lines.join('\n');
+}
+
+function renderMedicalProductComplaintLetter(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.seller_or_manufacturer_name);
+  lines.push('Re: Complaint — ' + a.product_name);
+  lines.push('');
+  lines.push('I am writing regarding ' + a.product_name + ', purchased on ' + a.purchase_date + '.');
+  lines.push('');
+  lines.push('Issue type: ' + a.issue_type + '.');
+  lines.push('');
+  lines.push(a.issue_description);
+  lines.push('');
+  if (a.issue_type === 'Safety concern') {
+    lines.push('I may also report this issue to the relevant product safety/regulatory authority in my area.');
+    lines.push('');
+  }
+  lines.push('I am requesting the following resolution: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('I am asserting my general warranty and consumer protection rights for a defective or misdescribed product.');
+  lines.push('');
+  lines.push('Jurisdiction: ' + a.jurisdiction + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.consumer_full_name);
+  return lines.join('\n');
+}
+
+function renderHealthcareProviderInformationRequest(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name);
+  lines.push('Re: Information Request — ' + a.service_of_interest);
+  lines.push('');
+  lines.push('Before making a decision about ' + a.service_of_interest + ', I would like to request the following information: ' + a.information_requested);
+  lines.push('');
+  if (hasValue(a.response_deadline_requested)) {
+    lines.push('I would appreciate a response by: ' + a.response_deadline_requested + '.');
+    lines.push('');
+  }
+  lines.push('Thank you for your time.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.requester_full_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -2344,6 +2831,11 @@ const GENERATORS = {
     title: 'Airline Complaint Letter (Australia)',
     // Real Gumroad product_id for the "au-airline-complaint" product.
     gumroad_product_id: 'ymfpyv',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderAuAirlineComplaint,
     prompt_template:
       'Write a formal complaint letter to an Australian domestic airline. Do NOT claim a guaranteed automatic cash compensation right — Australia has no EU261-style automatic delay compensation scheme. Frame any expense/reasonable-time argument under the Australian Consumer Law as a claim being made, not a guaranteed entitlement, especially where the cause was airline-controlled (technical/crew/maintenance) rather than weather or air traffic control. For baggage claims, reference the Civil Aviation (Carriers\' Liability) Act 1959 liability framework without inventing a specific dollar cap — note that liability limits are capped and periodically adjusted, and reference the airline\'s own Conditions of Carriage for exact claim deadlines rather than asserting one universal number. If a refund is sought instead of a travel voucher, state that clearly. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue_type}. Cause: {cause}. Expenses: {expenses}. PIR filed: {pir_filed}. Remedy sought: {remedy}. Tone: professional, firm, factual, realistic about what is guaranteed versus what is being requested.',
   },
@@ -2466,6 +2958,13 @@ const GENERATORS = {
     title: 'EU261 Flight Delay/Cancellation Compensation Claim',
     // Real Gumroad product_id for the "eu261-flight-compensation-claim" product.
     gumroad_product_id: 'uhpyudt',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE. Numeric-tier parsing (distance_km) implemented via
+    // parsePlainNumber()/staticValidationError() per the approved Option A
+    // plan -- see numeric-parsing-plan.md.
+    static: true,
+    render: renderEu261FlightCompensationClaim,
     prompt_template:
       "Write a formal EU261 compensation claim per Regulation (EC) No 261/2004. Use the correct distance-based compensation tier: €250 (up to 1,500km), €400 (1,500-3,500km or long intra-EU flights), €600 (over 3,500km) based on distance_km. If cause is airline-controlled, assert the claim firmly; if weather/ATC, note the airline may invoke extraordinary circumstances and frame the claim accordingly without guaranteeing the outcome. State clearly that technical/crew issues are NOT extraordinary circumstances per established case law. Do not recommend using a third-party claims agency. Airline: {airline_name}. Flight: {flight_details}. Scenario: {scenario}. Distance: {distance_km}km. Cause: {cause}. Duty of care: {duty_of_care}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
@@ -2473,6 +2972,11 @@ const GENERATORS = {
     title: 'EU Baggage Claim Letter (Montreal Convention)',
     // Real Gumroad product_id for the "eu-baggage-claim-montreal" product.
     gumroad_product_id: 'dkgscf',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderEuBaggageClaimMontreal,
     prompt_template:
       "Write a formal baggage claim under the Montreal Convention. Reference the current liability cap of 1,519 SDR per passenger (approx €2,000, noting the exact euro value fluctuates with the SDR exchange rate — do not assert one fixed euro figure). For damaged baggage, note the 7-day filing deadline from delivery. For lost baggage, note the 21-day threshold at which it's legally considered lost rather than delayed. State clearly this is reimbursement of demonstrated value, not a flat payout. Airline: {airline_name}. Flight: {flight_details}. Issue: {issue}. PIR filed: {pir_filed}. Itemized value: {itemized_value}. Tone: professional, factual.",
   },
@@ -2480,6 +2984,13 @@ const GENERATORS = {
     title: 'EU Train Delay Compensation Claim',
     // Real Gumroad product_id for the "eu-train-delay-claim" product.
     gumroad_product_id: 'preig',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE. Numeric-tier parsing (delay_minutes) implemented via
+    // parsePlainNumber()/staticValidationError() per the approved Option A
+    // plan -- see numeric-parsing-plan.md.
+    static: true,
+    render: renderEuTrainDelayClaim,
     prompt_template:
       "Write a formal EU rail delay compensation claim per Regulation (EU) 2021/782. Use the correct tier: 25% refund (60-119 min delay) or 50% refund (120+ min delay) based on delay_minutes. Note that if cause is force majeure, cash compensation may not apply, but the duty-of-care obligation (food, accommodation) still applies regardless of cause — frame accordingly. If missed_connection is Yes, assert the right to free rerouting on the next available train, including a partner operator, or alternative transport. Operator: {operator_name}. Journey: {journey_details}. Delay: {delay_minutes} min. Cause: {cause}. Missed connection: {missed_connection}. Duty of care: {duty_of_care}. Tone: professional, factual.",
   },
@@ -2487,6 +2998,11 @@ const GENERATORS = {
     title: 'EU Package Holiday Complaint & Compensation Claim',
     // Real Gumroad product_id for the "eu-package-holiday-complaint" product.
     gumroad_product_id: 'ubqkuu',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderEuPackageHolidayComplaint,
     prompt_template:
       "Write a formal complaint to a package travel organiser per Directive (EU) 2015/2302. State the organiser is fully liable for every service in the package, not individual suppliers. If issue is a significant pre-departure change, assert the right to reject it and receive a full refund within 14 days. If non-conformity at destination, request equivalent alternative arrangements or a proportionate price reduction. If insolvency, reference the mandatory insolvency protection insurance and the right to free repatriation. Note this only applies if the booking qualifies as a 'package' under the directive (two or more linked travel services sold together) — flag this as worth confirming if unclear. Agency: {agency_name}. Trip: {trip_details}. Issue: {issue}. Details: {details}. Remedy: {remedy}. Tone: professional, firm, factual.",
   },
@@ -2573,6 +3089,11 @@ const GENERATORS = {
     title: 'Flight Disruption Compensation & Reimbursement Letter',
     // Real Gumroad product_id for the "flight-disruption-compensation-reimbursement" product.
     gumroad_product_id: 'tnyor',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderFlightDisruptionCompensationReimbursement,
     prompt_template:
       "Write a formal flight disruption letter combining a statutory compensation claim and/or an expense reimbursement demand, based on jurisdiction and scenario. If jurisdiction is 'EU (EU261)': cite Regulation (EC) 261/2004, state compensation of €250/€400/€600 depending on distance (do not calculate the exact distance-based figure yourself — instruct the reader to confirm the correct tier), and note compensation does not apply if the airline proves 'extraordinary circumstances'. If jurisdiction is 'UK (UK261)': cite UK261, use the same tiered logic in GBP equivalents (£220/£350/£520), and note the 6-year claim deadline (5 years in Scotland). If jurisdiction is 'US (DOT rules)': note the US has no fixed cash compensation scheme equivalent to EU261/UK261, and instead reference the automatic cash refund entitlement under 14 CFR 259.5 for a cancelled or significantly changed flight, phrased cautiously as an area with less standardised compensation than EU/UK. If jurisdiction is 'Australia (ACL)': note that Australia has no dedicated flight compensation regulation equivalent to EU261, and any claim rests on general Australian Consumer Law grounds (was the service provided with due care, was the delay reasonably avoidable) — phrase this cautiously and do not invent a specific compensation figure. If jurisdiction is 'Not sure': ask the reader to confirm before the letter is finalized, and default to the most cautious general framing. If scenario is 'Baggage lost, damaged, or delayed — no other disruption', do not reference flight delay/cancellation compensation at all — write purely a baggage claim letter referencing the Montreal Convention's 1,519 SDR per-passenger liability cap (noting this is a cap, not a guaranteed payout, and does not apply if a special value declaration was made and a higher fee paid). If baggage_issue is anything other than 'No' AND scenario is a flight disruption scenario, add a distinct paragraph covering the baggage claim on top of the disruption claim, keeping the two legally separate. If duty_of_care_provided indicates the airline did not provide adequate care, add a paragraph demanding reimbursement of the specific out-of-pocket expenses described, framed as separate from and additional to any statutory compensation. Never state a specific compensation figure with false confidence when jurisdiction is US, Australia, or Not sure. Airline: {airline_name}. Booking: {booking_reference}. Flight: {flight_details}. Scenario: {scenario}. Reason given: {reason_given}. Baggage: {baggage_issue} — {baggage_details}. Duty of care: {duty_of_care_provided} — {out_of_pocket_expenses}. Remedy sought: {remedy_sought}. Tone: professional, firm, factual.",
   },
@@ -2723,6 +3244,11 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "vendor-compensation-demand-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/fvqvcv -> .../l/vendor-compensation-demand-letter).
     gumroad_product_id: 'fvqvcv',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderVendorCompensationDemandLetter,
     prompt_template:
       "Generate a clear, formal demand letter from {your_name} to {vendor_name} — the SELLER/VENDOR, not the carrier — regarding order {order_reference}, placed on {order_date} for {amount_paid}. The specific issue is: {scenario}. If scenario is 'Lost parcel (never arrived, or tracking shows no movement)': the last tracking update was {last_tracking_update}, with {days_since_movement} days since any tracking movement, carried by {carrier_used}; carrier confirmed the parcel lost: {carrier_confirmed_lost}. If scenario is 'Damaged parcel (arrived damaged, or contents damaged)': damage was discovered on {damage_discovered_date}, described as: {damage_description}; photos available: {photos_available}; original packaging kept: {packaging_kept}. If scenario is 'Late delivery (arrived significantly after promised date)': the promised/estimated delivery date was {promised_delivery_date}, actual delivery was {actual_delivery_date} (or the parcel has not yet arrived), and the specific harm caused by the delay was: {delay_harm}. Only reference the fields belonging to the selected scenario — ignore the fields for the other two scenarios entirely, and never write 'Not applicable' or 'N/A' into the letter itself. State clearly what resolution is being requested: {desired_outcome}. Reference the general principle that a seller remains responsible for successful delivery of goods to the consumer, without asserting jurisdiction-specific legal citations unless explicitly confident they apply. Note that this letter may be escalated to a card chargeback or relevant consumer authority if not resolved within a reasonable timeframe. Write in a firm, professional, non-aggressive tone. Format as a proper letter with date, recipient, subject line, and closing.",
   },
@@ -2731,6 +3257,11 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "courier-complaint-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/tepzr -> .../l/courier-complaint-generator).
     gumroad_product_id: 'tepzr',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderCourierComplaintGenerator,
     prompt_template:
       "Generate a formal complaint letter from {your_name} to {carrier} — the CARRIER/COURIER, not the seller — regarding tracking number {tracking_number}, addressing a {issue_type} issue. If issue_type is 'Lost': the last tracking update was {last_tracking_update}. If issue_type is 'Damaged': the damage is described as: {damage_description}. If issue_type is 'Delayed': the promised/estimated delivery date was {promised_delivery_date} and the actual delivery date was {actual_delivery_date} (or the parcel has not yet arrived). If issue_type is 'Delivered to wrong address', state this plainly and request confirmation of the correct delivery location and next steps. Only reference the field(s) belonging to the selected issue type — ignore the others entirely, and never write 'Not applicable' or 'N/A' into the letter itself. This complaint is being made in {country}. Reference the carrier's own standard complaints/compensation process in general terms appropriate to {country} (e.g. UK carriers' standard claims processes, USPS/UPS/FedEx claims procedures, Australia Post's claims process) without inventing specific compensation figures unless you are confident they are current and accurate for {carrier} specifically — if uncertain, instruct the reader to check the carrier's current published limits rather than stating a figure. State the compensation being sought: {compensation_amount}. Write in a firm, professional tone. Format as a proper letter with date, recipient, subject line, and closing.",
   },
@@ -2739,6 +3270,11 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "customs-fee-dispute-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/sukbsc -> .../l/customs-fee-dispute-generator).
     gumroad_product_id: 'sukbsc',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderCustomsFeeDisputeGenerator,
     prompt_template:
       "Generate a formal dispute letter from {your_name} to {carrier_customs_agent} regarding a customs/import charge on tracking number {tracking_number}, imported into {country_of_import}. The charge was {amount_charged}, and the sender believes the correct amount is {amount_correct}. The reason for dispute is: {dispute_reason}. If the reason is 'Other', use this additional detail: {dispute_reason_other} — otherwise ignore that field entirely and do not mention it in the letter. Request a recalculation and refund of the difference, and ask for a clear breakdown of how the original charge was calculated if one wasn't already provided. Write in a firm, professional tone. Format as a proper letter with date, recipient, subject line, and closing.",
   },
@@ -2765,6 +3301,11 @@ const GENERATORS = {
     // Real Gumroad product_id for the "medical-records-request-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/cofgyu -> .../l/medical-records-request-letter).
     gumroad_product_id: 'cofgyu',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderMedicalRecordsRequestLetter,
     prompt_template:
       "Draft a formal written request from {patient_full_name} to {provider_name} for access to the following medical records: {records_requested}. If a specific date range applies, it covers: {date_range} — otherwise ignore this detail entirely. Preferred delivery format: {delivery_preference}. If a reason for the request was given and it is not 'Prefer not to say', state it as: {reason_for_request} — otherwise omit any stated reason from the letter. For jurisdiction={jurisdiction}, reference the patient's general right to access their own medical records under applicable law, without citing a specific statute unless independently verified — keep this generic ('as provided under applicable patient records access law in your area'). Request a response within a reasonable, stated timeframe. Polite, formal tone.",
   },
@@ -2777,6 +3318,11 @@ const GENERATORS = {
     // Real Gumroad product_id for the "healthcare-billing-dispute-refund-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/pzetved -> .../l/healthcare-billing-dispute-refund-letter).
     gumroad_product_id: 'pzetved',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderHealthcareBillingDisputeRefundLetter,
     prompt_template:
       "Draft a formal, firm but professional letter from {patient_full_name} to {provider_name} regarding {service_description}, amount in question {amount_in_question}. If scenario is 'Incorrect or unexpected charge on a bill': the bill shows {billed_amount} but the patient expected {expected_amount}, because: {discrepancy_reason}. Request an itemized explanation and correction of the amount within a reasonable stated period. If scenario is 'Refund after cancelling a service': the patient cancelled the service on {service_cancellation_date} and has already paid {amount_already_paid}. If cancellation/refund terms were stated to the patient, reference them: {cancellation_policy_reference} — otherwise omit any reference to stated terms. Request a full or appropriate partial refund within a reasonable stated period. Only address the field(s) belonging to the selected scenario — ignore the other scenario's fields entirely and never write 'N/A' into the letter itself. For jurisdiction={jurisdiction}, keep any reference to consumer protection or billing regulations generic unless independently verified — never invent a specific statute or deadline. Professional, factual tone throughout.",
   },
@@ -2785,6 +3331,11 @@ const GENERATORS = {
     // Real Gumroad product_id for the "healthcare-insurance-appeal-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/ssjfcu -> .../l/healthcare-insurance-appeal-letter).
     gumroad_product_id: 'ssjfcu',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderHealthcareInsuranceAppealLetter,
     prompt_template:
       "Draft a formal insurance appeal letter from {policyholder_full_name} to {insurer_name} regarding claim reference {claim_reference_number}, for {denied_service_description}. The insurer's stated reason for denial was: {denial_reason_given}. The policyholder's grounds for appeal: {patient_counter_argument}. If an appeal deadline was given, note the appeal is being submitted ahead of it: {appeal_deadline} — otherwise omit any reference to a deadline. Request a formal reconsideration of the claim, referencing the specific reason for denial and directly countering it point by point. For jurisdiction={jurisdiction}, note the policyholder's right to escalate to an external/independent review if the internal appeal is unsuccessful — keep this reference generic ('the applicable external review process for your jurisdiction and plan type') unless a specific verified process applies; never invent a specific agency name. Firm, factual, well-organized tone — this is a formal reconsideration request, not an emotional appeal.",
   },
@@ -2793,6 +3344,11 @@ const GENERATORS = {
     // Real Gumroad product_id for the "medical-product-complaint-letter" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/yoqtwi -> .../l/medical-product-complaint-letter).
     gumroad_product_id: 'yoqtwi',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderMedicalProductComplaintLetter,
     prompt_template:
       "Draft a formal complaint letter from {consumer_full_name} to {seller_or_manufacturer_name} regarding the medical product/device '{product_name}', purchased on {purchase_date}. Issue type: {issue_type}. Description: {issue_description}. Requested resolution: {desired_outcome}. For jurisdiction={jurisdiction}, reference the consumer's general warranty and consumer protection rights for defective or misdescribed products, without citing a specific statute unless independently verified — keep this generic. If issue_type is 'Safety concern', add a brief closing note that the consumer may also consider reporting the issue to the relevant product safety/regulatory authority in their area — for any other issue_type, omit this note entirely. Professional, firm tone.",
   },
@@ -2801,6 +3357,11 @@ const GENERATORS = {
     // Real Gumroad product_id for the "healthcare-provider-information-request" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/rcyqeq -> .../l/healthcare-provider-information-request).
     gumroad_product_id: 'rcyqeq',
+    // STATIC as of 2026-09-19 (Batch 6: Flights & Travel / Delivery &
+    // Parcels / Healthcare & Medical) -- prompt_template below is now
+    // DEAD CODE.
+    static: true,
+    render: renderHealthcareProviderInformationRequest,
     prompt_template:
       "Draft a polite, clear written request from {requester_full_name} to {provider_name} asking for information about {service_of_interest} before making a decision. Specifically request the following: {information_requested}. If a response deadline was requested, politely include it: {response_deadline_requested} — otherwise omit any deadline reference. Professional, straightforward tone — this is a pre-decision information request, not a complaint.",
   },
@@ -3383,6 +3944,9 @@ async function handlePreview(request, env) {
     if (abuseLimit.blocked) return abuseLimit.response;
 
     const letter = gen.render(answers);
+    if (letter && typeof letter === 'object' && letter.staticValidationError) {
+      return jsonResponse({ error: letter.staticValidationError }, 400);
+    }
     if (!letter) return jsonResponse({ error: 'Could not generate a letter, please try again.' }, 502);
 
     const { visible, blurLines } = splitPreview(letter);
@@ -3499,6 +4063,9 @@ async function handleUnlock(request, env) {
       if (Object.keys(answers).length) {
         letter = gen.render(answers);
       }
+    }
+    if (letter && typeof letter === 'object' && letter.staticValidationError) {
+      return jsonResponse({ error: letter.staticValidationError }, 400);
     }
     if (!letter) {
       return jsonResponse({ error: 'Your preview expired — please generate it again.' }, 410);
