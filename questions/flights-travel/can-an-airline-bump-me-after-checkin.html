@@ -137,6 +137,17 @@
     color: var(--accent-terra);
     margin-bottom: 18px;
   }
+  /* Visible at ALL breakpoints, unlike the sitewide .hero-image class
+     (investigations/homepage), which is display:none on mobile — this
+     hero must stay visible for Discover's primary surface. */
+  .q-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 0 24px;
+  }
   .q-header h1 {
     font-family: var(--font-serif);
     font-size: 38px;
@@ -479,6 +490,7 @@
   <!-- ============ HEADER ============ -->
   <header class="q-header">
     <span class="q-category">Flights &amp; Travel · US &amp; UK</span>
+    <img class="q-hero-image" src="/images/questions/flights-travel/can-an-airline-bump-me-after-checkin-hero.png" width="1600" height="900" alt="Can an airline bump me from a flight even after I've checked in?" loading="eager" fetchpriority="high">
     <h1>Can an airline bump me from a flight even after I've checked in?</h1>
     <p class="q-dek">Checking in doesn't protect you from an oversold flight — but if you're bumped involuntarily, the airline owes you real cash, not just an apology and a later flight.</p>
     <div class="q-meta">
