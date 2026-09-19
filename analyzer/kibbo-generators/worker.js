@@ -2709,6 +2709,773 @@ function renderHealthcareProviderInformationRequest(a) {
   return lines.join('\n');
 }
 
+// ---- Batch 7 (FINAL): Cars & Vehicles, Crypto & Fintech, Food &
+// Hospitality, Insurance & Claims, Training & Education ----
+
+function renderVehiclePurchaseWarrantyComplaintGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.seller_dealer_name);
+  lines.push('Re: ' + a.vehicle_details + ' (VIN: ' + a.vin + ') — Formal Complaint');
+  lines.push('');
+  lines.push('I am writing regarding the vehicle ' + a.vehicle_details + ' (VIN: ' + a.vin + '), purchased on ' + a.purchase_date + ' for ' + a.purchase_price + '.');
+  lines.push('');
+  if (a.situation_type === "Vehicle doesn't match the listing/description") {
+    lines.push('The listing/seller claimed: ' + a.listing_claim + '. What I actually found: ' + a.actual_finding + '. I have the following evidence: ' + a.mismatch_evidence + '.');
+  } else if (a.situation_type === 'Defect discovered after purchase') {
+    lines.push('I discovered the following defect on ' + a.defect_discovery_date + ': ' + a.defect_description + '.');
+    if (a.defect_disclosure_status === 'No') {
+      lines.push('This was not disclosed to me before purchase.');
+    } else if (a.defect_disclosure_status === 'Yes but described differently') {
+      lines.push('This was described to me differently before purchase than what I have found.');
+    } else if (a.defect_disclosure_status === 'Unsure') {
+      lines.push('I am not sure whether this was disclosed to me before purchase.');
+    }
+  } else if (a.situation_type === 'Warranty claim') {
+    lines.push('Under the warranty terms provided — ' + a.warranty_terms + ' — I am submitting a claim for the following defect, discovered on ' + a.warranty_discovery_date + ': ' + a.warranty_defect_description + '.');
+    if (a.warranty_repair_estimate === 'Yes — specify amount') {
+      lines.push('A repair estimate of ' + a.warranty_repair_estimate_amount + ' has been obtained.');
+    }
+  } else if (a.situation_type === 'Escalation of an unresolved complaint') {
+    lines.push('I first submitted this complaint on ' + a.original_complaint_date + '. The response I received: ' + a.response_summary + '. This response was not satisfactory because: ' + a.unsatisfactory_reason + '. I am escalating this matter as it remains unresolved.');
+  }
+  lines.push('');
+  const vpwOutcome = a.desired_outcome === 'Partial refund — specify amount' ? 'a partial refund of ' + a.desired_outcome_amount : a.desired_outcome;
+  lines.push('The outcome I am requesting is: ' + vpwOutcome + '.');
+  lines.push('');
+  const vpwDeadline = a.situation_type === 'Escalation of an unresolved complaint' ? '7-10 days' : '14 days';
+  lines.push('Please respond within ' + vpwDeadline + ' of this letter.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderVehicleRepairDisputeGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.shop_name);
+  lines.push('Re: Repair Dispute — ' + a.vehicle_details);
+  lines.push('');
+  lines.push('I am writing regarding the repair performed on ' + a.vehicle_details + ', dropped off on ' + a.dropoff_date + ' (' + a.completion_status + '), for a total cost of ' + a.amount_paid + '.');
+  lines.push('');
+  lines.push('The specific issue is: ' + a.issue_type + '. ' + a.issue_description);
+  lines.push('');
+  if (a.prior_contact === 'Yes — free text describing their response') {
+    lines.push('I have already raised this with you, and your response was: ' + a.prior_contact_response + '.');
+  } else if (a.prior_contact === 'No, this is the first contact') {
+    lines.push('This is the first time I am raising this issue with you formally.');
+  }
+  lines.push('');
+  lines.push('The outcome I am requesting is: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('Please respond within 14 days of this letter.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+// Routing table for crypto-complaint-generator — resolved in code, 1:1 port
+// of the original AI prompt's routing instructions (see
+// _drafts-pending/generators-static-migration/static-generators-phase1-sample.md).
+function cryptoComplaintRouting(a) {
+  const country = a.country;
+  const pt = a.problem_type;
+  if (country === 'United States') {
+    if (pt === 'Suspected fraud or scam (fake platform, rug pull, etc.)' || pt === 'Misleading marketing or advertised returns') {
+      return {
+        to: 'the Federal Trade Commission (ReportFraud.ftc.gov)',
+        note: "If this could involve an unregistered securities offering, you may also wish to consider the SEC's complaint portal.",
+      };
+    }
+    if (pt === "Exchange won't release my funds / account frozen" || pt === 'Unauthorized transaction / account compromise') {
+      return {
+        to: "FinCEN's complaint channel",
+        note: 'If this involves a bank-related crypto dispute, you may also wish to consider the CFPB.',
+      };
+    }
+    if (pt === 'Bank refused/closed my account for crypto-related activity') {
+      return {
+        to: 'the Consumer Financial Protection Bureau (CFPB)',
+        note: 'If a national bank is involved, you may also wish to consider the OCC.',
+      };
+    }
+    // 'Other regulatory concern'
+    return {
+      to: 'the appropriate US financial regulator for your specific issue — the US has no single crypto complaint regulator',
+      note: null,
+    };
+  }
+  if (country === 'United Kingdom') {
+    return {
+      to: 'the Financial Conduct Authority (FCA)',
+      note: 'If the FCA-regulated firm does not resolve this directly, the Financial Ombudsman Service (FOS) is the individual dispute resolution path.',
+    };
+  }
+  if (country === 'European Union') {
+    return {
+      to: 'your national competent authority responsible for MiCA enforcement in your EU member state',
+      note: 'For individual dispute resolution, contact the relevant national financial ombudsman.',
+    };
+  }
+  if (country === 'Australia') {
+    return {
+      to: 'the Australian Securities and Investments Commission (ASIC)',
+      note: 'For individual dispute resolution, contact AFCA (Australian Financial Complaints Authority). For suspected scams specifically, also consider reporting to Scamwatch/ACCC.',
+    };
+  }
+  // 'Other/not sure'
+  return {
+    to: 'your national financial regulator — please identify the correct one before submitting this complaint',
+    note: null,
+  };
+}
+
+function renderCryptoComplaintGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('Re: Formal Complaint Regarding ' + a.entity_name);
+  lines.push('');
+  const routing = cryptoComplaintRouting(a);
+  lines.push('To: ' + routing.to);
+  if (routing.note) {
+    lines.push(routing.note);
+  }
+  lines.push('');
+  lines.push('I am submitting this complaint regarding ' + a.entity_name + ' in relation to the following issue: ' + a.problem_type + '.');
+  lines.push('');
+  lines.push('Details: ' + a.details);
+  lines.push('Amount involved: approximately ' + a.amount_involved + '.');
+  lines.push('');
+  const isFraud = a.problem_type === 'Suspected fraud or scam (fake platform, rug pull, etc.)';
+  if (a.prior_contact === 'No, not yet' && isFraud) {
+    lines.push('Given this involves suspected fraud, I am reporting this directly to the appropriate authority rather than attempting to resolve it with the company first.');
+  } else if (a.prior_contact === 'No, not yet') {
+    lines.push('I have not yet contacted ' + a.entity_name + ' directly about this issue, and intend to do so before escalating further, but am filing this complaint to formally register the issue in the meantime.');
+  } else if (a.prior_contact === 'Yes, no response') {
+    lines.push('I have already contacted ' + a.entity_name + ' directly about this issue and received no response.');
+  } else if (a.prior_contact === 'Yes, unsatisfactory response') {
+    lines.push('I have already contacted ' + a.entity_name + ' directly about this issue and their response was unsatisfactory.');
+  }
+  lines.push('');
+  lines.push('I am requesting that this complaint be formally investigated.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+function renderExchangeAccountFreezeResponse(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.exchange_name);
+  lines.push('Re: Account Restriction Since ' + a.freeze_date);
+  lines.push('');
+  lines.push("My account with you has been frozen/restricted since " + a.freeze_date + ", affecting approximately " + a.amount_affected + " in funds. What I've been told since the freeze: " + a.communication_so_far + '.');
+  lines.push('');
+  if (a.freeze_reason_given === 'No reason given at all' || a.freeze_reason_given === "Generic 'compliance review' with no specifics") {
+    lines.push("No specific reason has been given for this restriction. I am requesting the specific reason for this hold — your own terms of service generally require disclosure of the general nature of a hold, even if full compliance details cannot be shared.");
+  } else if (a.freeze_reason_given === 'Source of funds/AML review requested') {
+    lines.push('I understand this relates to a source of funds/AML review. I am preparing supporting documentation and am requesting the specific list of documents your compliance team requires, and the expected review timeframe.');
+  } else if (a.freeze_reason_given === 'Suspected account compromise/security hold') {
+    lines.push('I am requesting confirmation of what security concern triggered this hold and what specific verification is needed to lift it.');
+  } else if (a.freeze_reason_given === 'Other reason stated') {
+    lines.push('I am requesting further written clarification of the specific reason for this restriction and what is needed to resolve it.');
+  }
+  lines.push('');
+  if (hasValue(a.urgency_factors)) {
+    lines.push(a.urgency_factors);
+    lines.push('');
+  }
+  lines.push('I am requesting a clear timeline for resolution. If this remains unresolved within a reasonable period, I will consider escalating this to the relevant national regulator.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+// source-of-funds-package-generator — per-scenario labeled fact list.
+// Field names inheritance_date_received / gift_date_received (NOT a shared
+// date_received) match the live frontend, which renamed them to avoid a
+// duplicate-DOM-id collision — see generators-static-migration-inventory.md.
+function sourceOfFundsScenarioLines(a) {
+  const lines = [];
+  if (a.scenario === 'Payroll/employment income') {
+    lines.push('- Employer: ' + a.employer_name);
+    lines.push('- Employment start date: ' + a.employment_start_date);
+    lines.push('- Approximate income: ' + a.approx_income_amount + ' (' + a.income_frequency + ')');
+    lines.push('- Funds accumulated: ' + a.accumulation_period);
+  } else if (a.scenario === 'Inheritance') {
+    lines.push('- Relationship to deceased: ' + a.deceased_relationship);
+    lines.push('- Date received: ' + a.inheritance_date_received);
+    if (hasValue(a.probate_reference)) {
+      lines.push('- Probate/estate reference: ' + a.probate_reference);
+    }
+  } else if (a.scenario === 'Sale of property or assets') {
+    lines.push('- Asset sold: ' + a.asset_type);
+    lines.push('- Sale date: ' + a.sale_date);
+    lines.push('- Sale price: ' + a.sale_price);
+  } else if (a.scenario === 'Gift or donation') {
+    lines.push('- From: ' + a.donor_name + ' (' + a.donor_relationship + ')');
+    lines.push('- Date received: ' + a.gift_date_received);
+  } else if (a.scenario === 'Business income') {
+    lines.push('- Business: ' + a.business_name + ' (' + a.business_type + ')');
+    lines.push('- Income period: ' + a.income_period);
+    lines.push('- Approximate revenue: ' + a.approx_revenue);
+  } else if (a.scenario === 'Investment proceeds') {
+    lines.push('- Investment type: ' + a.investment_type);
+    lines.push('- Holding period: ' + a.holding_period);
+    lines.push('- Proceeds realized: ' + a.proceeds_date);
+  }
+  return lines;
+}
+
+function renderSourceOfFundsPackageGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.institution_name + ' Compliance Team');
+  lines.push('Re: Source of Funds — ' + a.amount_in_question);
+  lines.push('');
+  lines.push('This letter and the attached documentation are submitted in support of your source-of-funds/AML review regarding ' + a.amount_in_question + '.');
+  lines.push('');
+  if (a.prior_contact === 'Yes, account is currently frozen/restricted') {
+    lines.push('I understand my account is currently frozen/restricted pending this review, and I would appreciate a response timeline.');
+    lines.push('');
+  } else if (a.prior_contact === 'Yes, but account access was already fully restored') {
+    lines.push('I understand access to my account has already been restored; I am submitting this documentation to formally close out the review.');
+    lines.push('');
+  }
+  lines.push('Source of Funds — ' + a.scenario + ':');
+  for (const line of sourceOfFundsScenarioLines(a)) {
+    lines.push(line);
+  }
+  lines.push('');
+  lines.push('Supporting documents available: ' + a.documents_available);
+  lines.push('');
+  lines.push('This package is submitted to support your review — please let me know if any additional documentation is required.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push('[Your name]');
+  return lines.join('\n');
+}
+
+// restaurant-policies-generator — 7 structured policy_type branches, each
+// sourced from its own dedicated field set (policy_details free-text was
+// removed from the frontend precisely so this could be static — see
+// generators-static-migration-inventory.md).
+function renderRestaurantPoliciesGenerator(a) {
+  const lines = [];
+  if (a.policy_type === 'Reservation Policy') {
+    lines.push('RESERVATION POLICY — ' + a.restaurant_name);
+    lines.push('');
+    lines.push('Booking method: ' + a.booking_method + '.');
+    lines.push('');
+    lines.push('Parties of up to ' + a.max_group_no_deposit + ' do not require a deposit to book. Larger parties may be asked for a deposit — contact us directly for group bookings.');
+    lines.push('');
+    lines.push('We hold reservations for ' + a.grace_period_minutes + ' minutes past the booked time. After this, the table may be released to walk-in guests.');
+    lines.push('');
+    const hasBookingPlatform = hasValue(a.booking_platform) && a.booking_platform.trim().toLowerCase() !== 'none';
+    lines.push('Questions about reservations: ' + a.contact_email + (hasBookingPlatform ? ', or via ' + a.booking_platform + '.' : '.'));
+    lines.push('');
+    lines.push('Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'Cancellation Policy') {
+    lines.push('CANCELLATION POLICY — ' + a.restaurant_name);
+    lines.push('');
+    lines.push('Cancellations made at least ' + a.min_notice_hours + ' hours before your reservation are free of charge.');
+    lines.push('');
+    if (a.penalty_type === 'No penalty') {
+      lines.push('Cancellations made after this window do not incur a penalty, but we ask for as much notice as possible.');
+    } else if (a.penalty_type === 'Percentage of the bill') {
+      lines.push('Cancellations made after this window may incur a charge of ' + a.penalty_value + '% of the expected bill.');
+    } else if (a.penalty_type === 'Fixed amount') {
+      lines.push('Cancellations made after this window may incur a charge of ' + a.penalty_value + '.');
+    }
+    if (hasValue(a.cancellation_exceptions)) {
+      lines.push('');
+      lines.push('Exceptions: ' + a.cancellation_exceptions);
+    }
+    lines.push('');
+    lines.push('Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'No-Show Policy') {
+    lines.push('NO-SHOW POLICY — ' + a.restaurant_name);
+    lines.push('');
+    if (a.deposit_required === 'Yes') {
+      lines.push('A deposit is required for this booking.');
+      if (a.noshow_deposit_outcome === 'Deposit is forfeited') {
+        lines.push('If you do not show up without cancelling, your deposit will be forfeited.');
+      } else if (a.noshow_deposit_outcome === 'Partial deposit forfeited') {
+        lines.push('If you do not show up without cancelling, part of your deposit will be forfeited.');
+      } else if (a.noshow_deposit_outcome === 'Other') {
+        lines.push('Our no-show deposit terms will be explained at the time of booking.');
+      }
+    } else if (a.deposit_required === 'No') {
+      lines.push('A deposit is not currently required for bookings.');
+    }
+    lines.push('');
+    lines.push('After ' + a.noshows_before_deposit_required + ' no-shows, we may require a deposit for future bookings.');
+    lines.push('');
+    lines.push('Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'Refund Policy') {
+    lines.push('REFUND POLICY — ' + a.restaurant_name);
+    lines.push('');
+    lines.push('Refund method: ' + a.refund_method + '. Processing time: ' + a.refund_processing_time + '.');
+    lines.push('');
+    lines.push('Refunds may apply in the following cases: ' + a.refund_qualifying_cases);
+    lines.push('');
+    lines.push('Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'Allergen Policy') {
+    lines.push('ALLERGEN POLICY — ' + a.restaurant_name);
+    lines.push('');
+    if (a.cross_contact_risk === 'Yes') {
+      lines.push('Our kitchen prepares multiple dishes in a shared space, and we cannot guarantee any dish is completely free of cross-contact with common allergens.');
+    } else if (a.cross_contact_risk === 'No') {
+      lines.push('We take steps to avoid allergen cross-contact between dishes.');
+    }
+    lines.push('');
+    lines.push('If you have a food allergy, please inform your server before ordering. ' + a.allergy_disclosure_procedure);
+    lines.push('');
+    lines.push('This policy is a starting point and does not replace professional allergen verification. Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'Delivery Policy') {
+    lines.push('DELIVERY POLICY — ' + a.restaurant_name);
+    lines.push('');
+    const showPlatformName = a.delivery_method !== 'Our own delivery staff' && hasValue(a.delivery_platform_name);
+    lines.push('Delivery method: ' + a.delivery_method + (showPlatformName ? ' (' + a.delivery_platform_name + ').' : '.'));
+    lines.push('Estimated delivery time: ' + a.estimated_delivery_time + '.');
+    lines.push('');
+    lines.push('If your order arrives incorrect or cold, we offer: ' + a.incorrect_cold_order_policy + '. Contact us at ' + a.contact_email + ' to report an issue.');
+    lines.push('');
+    lines.push('Local consumer protection laws may impose additional requirements — please verify independently.');
+  } else if (a.policy_type === 'Privacy Policy') {
+    lines.push('PRIVACY POLICY — ' + a.restaurant_name);
+    lines.push('');
+    lines.push('We collect your name, email, and phone number when you make a reservation or place an order.');
+    lines.push('');
+    if (a.email_marketing_use === 'Yes') {
+      lines.push('We may use your email to send you marketing communications. You can opt out at any time.');
+    } else if (a.email_marketing_use === 'No') {
+      lines.push('We do not use your email for marketing communications.');
+    }
+    lines.push('');
+    if (a.third_party_data_sharing === 'Not shared with third parties') {
+      lines.push('We do not share your data with third parties.');
+    } else if (a.third_party_data_sharing === 'Shared with our booking platform only') {
+      lines.push('Your data may be shared with ' + a.booking_platform + ', our booking platform, to process your reservation.');
+    } else if (a.third_party_data_sharing === 'Shared with booking and delivery platforms') {
+      lines.push('Your data may be shared with our booking and delivery platforms to process your reservation or order.');
+    }
+    lines.push('');
+    lines.push('Contact ' + a.contact_email + ' with any privacy questions. Local consumer protection laws may impose additional requirements — please verify independently.');
+  }
+  return lines.join('\n');
+}
+
+function renderFoodRecallActionPlanGenerator(a) {
+  const lines = [];
+  lines.push('FOOD SAFETY INCIDENT ACTION PLAN — ' + a.restaurant_name);
+  lines.push('');
+  lines.push('Product/ingredient affected: ' + a.product_affected);
+  lines.push('Source of concern: ' + a.source + ' (' + a.supplier_or_internal + ')');
+  lines.push('Incident manager: ' + a.contact_person);
+  lines.push('Already served to customers: ' + a.served);
+  if (a.served === 'Yes') {
+    lines.push('Date range / covers affected: ' + a.served_details);
+  }
+  lines.push('');
+  lines.push('1. Internal Protocol');
+  lines.push('- Immediately remove ' + a.product_affected + ' from all kitchen, storage, and menu locations.');
+  lines.push('- Notify all kitchen and front-of-house staff of the affected product.');
+  lines.push('- ' + a.contact_person + ' is designated incident manager and single point of contact for this recall.');
+  if (a.served === 'Yes') {
+    lines.push('- Because this product has already been served, assess whether affected customers need to be proactively notified (see Communication Templates below).');
+  }
+  lines.push('');
+  lines.push('2. Withdrawal Checklist');
+  lines.push('[ ] Remove ' + a.product_affected + ' from kitchen prep areas');
+  lines.push('[ ] Remove from cold/dry storage');
+  lines.push('[ ] Remove from printed and digital menus');
+  lines.push('[ ] Remove from delivery platform listings');
+  lines.push('[ ] Confirm no remaining stock in any location');
+  lines.push('[ ] Log the withdrawal in the Incident Log below');
+  lines.push('');
+  lines.push('3. Communication Templates');
+  lines.push('');
+  lines.push('Customer-facing template:');
+  lines.push('"We are writing to inform you that [product] served [date range] has been affected by a ' + a.source + ' concern. As a precaution, we recommend seeking medical advice if symptoms occur, or contacting us directly. We take food safety seriously and have removed this product immediately. Please contact ' + a.contact_person + ' with any questions."');
+  if (a.supplier_or_internal === 'Supplier-issued recall') {
+    lines.push('');
+    lines.push('Local food safety authority notification template:');
+    lines.push('"We are notifying you of a supplier-issued recall affecting ' + a.product_affected + ', received via ' + a.source + '. We have removed the affected product from service as of [date/time] and are following our internal recall protocol. Contact: ' + a.contact_person + '."');
+  }
+  lines.push('');
+  lines.push('4. Incident Log');
+  lines.push('| Date/Time | Action Taken | Staff Member | Notes |');
+  lines.push('|---|---|---|---|');
+  lines.push('| | | | |');
+  lines.push('| | | | |');
+  lines.push('| | | | |');
+  return lines.join('\n');
+}
+
+// allergen-menu-labeling-generator — static keyword-match engine, one
+// jurisdiction-specific lookup table per option on the `jurisdiction` select.
+// Tables and matching logic are the exact approved design from
+// _drafts-pending/generators-static-migration/batch-1.md (US) and
+// batch-1-addendum.md (EU/UK/Australia) — Carlos-approved 2026-09-16.
+// This is deliberately a closed keyword lookup, never an AI call: matching
+// is case-insensitive substring search against a fixed table, not judgment.
+const ALLERGEN_TABLE_EU_UK = [
+  ['Cereals containing gluten', ['wheat', 'rye', 'barley', 'oats', 'spelt', 'kamut', 'flour', 'bread', 'breadcrumb', 'pasta', 'couscous', 'semolina', 'bulgur', 'malt', 'beer', 'noodle']],
+  ['Crustaceans', ['shrimp', 'prawn', 'crab', 'lobster', 'crawfish', 'crayfish', 'langoustine']],
+  ['Eggs', ['egg', 'eggs', 'mayonnaise', 'mayo', 'meringue', 'aioli']],
+  ['Fish', ['fish', 'salmon', 'tuna', 'cod', 'anchovy', 'anchovies', 'bass', 'trout', 'halibut', 'sardine', 'fish sauce', 'worcestershire']],
+  ['Peanuts', ['peanut', 'peanuts', 'groundnut']],
+  ['Soybeans', ['soy', 'soya', 'tofu', 'edamame', 'tempeh', 'miso', 'soy sauce', 'soybean']],
+  ['Milk', ['milk', 'butter', 'cream', 'cheese', 'yogurt', 'yoghurt', 'ghee', 'whey', 'casein', 'buttermilk', 'custard']],
+  ['Nuts (tree nuts)', ['almond', 'hazelnut', 'walnut', 'cashew', 'pecan', 'brazil nut', 'pistachio', 'macadamia', 'queensland nut', 'nutella']],
+  ['Celery', ['celery', 'celeriac']],
+  ['Mustard', ['mustard']],
+  ['Sesame seeds', ['sesame', 'tahini', 'hummus']],
+  ['Sulphur dioxide/sulphites', ['sulphite', 'sulfite', 'sulphur dioxide', 'e220', 'e221', 'e222', 'e223', 'e224', 'e226', 'e227', 'e228', 'dried fruit', 'wine vinegar']],
+  ['Lupin', ['lupin', 'lupine', 'lupin flour']],
+  ['Molluscs', ['mussel', 'oyster', 'clam', 'scallop', 'squid', 'octopus', 'snail', 'escargot']],
+];
+const ALLERGEN_TABLE_US = [
+  ['Milk', ['milk', 'butter', 'cream', 'cheese', 'yogurt', 'yoghurt', 'ghee', 'whey', 'casein', 'buttermilk', 'custard']],
+  ['Egg', ['egg', 'eggs', 'mayonnaise', 'mayo', 'meringue', 'aioli']],
+  ['Fish', ['fish', 'salmon', 'tuna', 'cod', 'anchovy', 'anchovies', 'bass', 'trout', 'halibut', 'sardine', 'fish sauce', 'worcestershire']],
+  ['Shellfish (crustacean/mollusk)', ['shrimp', 'prawn', 'crab', 'lobster', 'scallop', 'clam', 'mussel', 'oyster', 'crawfish', 'crayfish']],
+  ['Tree nuts', ['almond', 'walnut', 'cashew', 'pistachio', 'pecan', 'hazelnut', 'macadamia', 'brazil nut', 'pine nut', 'nutella']],
+  ['Peanuts', ['peanut', 'peanuts', 'groundnut']],
+  ['Wheat', ['wheat', 'flour', 'bread', 'breadcrumb', 'breadcrumbs', 'pasta', 'couscous', 'semolina', 'bulgur', 'noodle']],
+  ['Soy', ['soy', 'soya', 'tofu', 'edamame', 'tempeh', 'miso', 'soy sauce', 'soybean']],
+  ['Sesame', ['sesame', 'tahini', 'hummus']],
+];
+const ALLERGEN_TABLE_AU = [
+  ['Peanut', ['peanut', 'peanuts', 'groundnut']],
+  ['Almond', ['almond']],
+  ['Brazil nut', ['brazil nut']],
+  ['Cashew', ['cashew']],
+  ['Hazelnut', ['hazelnut']],
+  ['Macadamia', ['macadamia', 'queensland nut']],
+  ['Pecan', ['pecan']],
+  ['Pine nut', ['pine nut']],
+  ['Pistachio', ['pistachio']],
+  ['Walnut', ['walnut']],
+  ['Milk', ['milk', 'butter', 'cream', 'cheese', 'yogurt', 'yoghurt', 'ghee', 'whey', 'casein', 'buttermilk', 'custard']],
+  ['Egg', ['egg', 'eggs', 'mayonnaise', 'mayo', 'meringue', 'aioli']],
+  ['Fish', ['fish', 'salmon', 'tuna', 'cod', 'anchovy', 'anchovies', 'bass', 'trout', 'halibut', 'sardine', 'fish sauce', 'worcestershire']],
+  ['Crustacean', ['shrimp', 'prawn', 'crab', 'lobster', 'crawfish', 'crayfish']],
+  ['Mollusc', ['mussel', 'oyster', 'clam', 'scallop', 'squid', 'octopus', 'snail', 'escargot']],
+  ['Soy / soya / soybean', ['soy', 'soya', 'tofu', 'edamame', 'tempeh', 'miso', 'soy sauce', 'soybean']],
+  ['Sesame', ['sesame', 'tahini', 'hummus']],
+  ['Lupin', ['lupin', 'lupine', 'lupin flour']],
+  ['Wheat (+ gluten)', ['wheat', 'flour', 'bread', 'breadcrumb', 'pasta', 'couscous', 'semolina', 'bulgur', 'noodle']],
+  ['Barley (+ gluten, if present)', ['barley', 'malt', 'beer']],
+  ['Oats (+ gluten, if present)', ['oats']],
+  ['Rye (+ gluten, if present)', ['rye']],
+  ['Sulphites (≥10mg/kg)', ['sulphite', 'sulfite', 'sulphur dioxide', 'dried fruit', 'wine vinegar']],
+];
+
+function matchAllergens(text, table) {
+  const lower = String(text || '').toLowerCase();
+  const matched = [];
+  for (const [name, keywords] of table) {
+    if (keywords.some((kw) => lower.includes(kw))) {
+      matched.push(name);
+    }
+  }
+  return matched;
+}
+
+function parseMenuInput(menuInput) {
+  const dishes = [];
+  const rawLines = String(menuInput || '').split(/\r?\n/);
+  for (const rawLine of rawLines) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const colonIdx = line.indexOf(':');
+    if (colonIdx === -1) {
+      dishes.push({ name: line, text: line });
+    } else {
+      const name = line.slice(0, colonIdx).trim();
+      const ingredients = line.slice(colonIdx + 1).trim();
+      dishes.push({ name: name, text: name + ' ' + ingredients });
+    }
+  }
+  return dishes;
+}
+
+function renderAllergenMenuLabelingGenerator(a) {
+  let table;
+  let disclaimer;
+  if (a.jurisdiction === 'EU — 14 allergens') {
+    table = ALLERGEN_TABLE_EU_UK;
+    disclaimer = "Generated using a static keyword match against the EU's 14 allergens under Regulation (EU) No 1169/2011, Annex II — this is a starting point, not a substitute for professional allergen verification. Always confirm with your supplier's ingredient documentation, especially for processed ingredients, sauces, and cross-contact risk that a keyword match cannot catch.";
+  } else if (a.jurisdiction === "UK — 14 allergens (Natasha's Law)") {
+    table = ALLERGEN_TABLE_EU_UK;
+    disclaimer = "Generated using a static keyword match against the UK's 14 allergens (the same list retained from EU FIC Regulation 1169/2011, enforced for prepacked-for-direct-sale food under Natasha's Law) — this is a starting point, not a substitute for professional allergen verification. Always confirm with your supplier's ingredient documentation, especially for processed ingredients, sauces, and cross-contact risk that a keyword match cannot catch.";
+  } else if (a.jurisdiction === 'US — Big 9 (FDA FASTER Act)') {
+    table = ALLERGEN_TABLE_US;
+    disclaimer = 'Generated using a static keyword match against the US FDA "Big 9" allergen list — this is a starting point, not a substitute for professional allergen verification. Always confirm with your supplier\'s ingredient documentation, especially for processed ingredients, sauces, and cross-contact risk that a keyword match cannot catch.';
+  } else if (a.jurisdiction === 'Australia — ANZ Food Standards Code allergens') {
+    table = ALLERGEN_TABLE_AU;
+    disclaimer = "Generated using a static keyword match against the individual allergen names required under Standard 1.2.3, Schedule 9 of the Food Standards Code (Australia/NZ) — this is a starting point, not a substitute for professional allergen verification. Always confirm with your supplier's ingredient documentation, especially for processed ingredients, sauces, and cross-contact risk that a keyword match cannot catch.";
+  }
+
+  const dishes = parseMenuInput(a.menu_input);
+  const lines = [];
+  lines.push('ALLERGEN LABELING — ' + a.restaurant_name);
+  lines.push('');
+  lines.push('| Dish Name | Allergens Present | Notes |');
+  lines.push('|---|---|---|');
+  for (const dish of dishes) {
+    const matched = matchAllergens(dish.text, table);
+    lines.push('| ' + dish.name + ' | ' + (matched.length ? matched.join(', ') : 'None matched') + ' | |');
+  }
+  if (a.cross_contamination === 'Yes') {
+    lines.push('');
+    lines.push('Note: This kitchen prepares multiple dishes in a shared space and cannot guarantee any dish is completely free of cross-contact with other allergens.');
+  }
+  lines.push('');
+  lines.push(disclaimer);
+  return lines.join('\n');
+}
+
+// course-provider-terms-refund-policy-generator — guarantee-phrase table is
+// the same closed keyword list built and approved in Batch 1, now applied
+// to the dedicated outcome_stat_description field instead of an open
+// document_details textarea (per the frontend field redesign).
+const GUARANTEE_PHRASES = [
+  'guaranteed job placement',
+  '100% job guarantee',
+  "promise you'll get hired",
+  'guaranteed to get a job',
+  'we guarantee employment',
+  '100% placement rate',
+  'guaranteed to land a job',
+  'job guarantee',
+];
+
+function containsGuaranteePhrase(text) {
+  const lower = String(text || '').toLowerCase();
+  return GUARANTEE_PHRASES.some((p) => lower.includes(p));
+}
+
+function renderCourseProviderTermsRefundPolicyGenerator(a) {
+  const lines = [];
+  if (a.document_type === 'Enrollment & Cancellation Policy') {
+    lines.push('ENROLLMENT & CANCELLATION POLICY — ' + a.provider_name);
+    lines.push('');
+    lines.push('Program type: ' + a.provider_type);
+    lines.push('Duration: ' + a.program_duration);
+    lines.push('Payment model: ' + a.price_model);
+    lines.push('');
+    lines.push('You may cancel your enrollment without penalty within ' + a.cancellation_window + ' of enrolling.');
+    lines.push('');
+    if (a.penalty_after_window === 'No penalty') {
+      lines.push('Cancellations made after this window do not incur a penalty.');
+    } else if (a.penalty_after_window === 'Percentage of price') {
+      lines.push('Cancellations made after this window may incur a charge of ' + a.penalty_value + '% of the program price.');
+    } else if (a.penalty_after_window === 'Fixed fee') {
+      lines.push('Cancellations made after this window may incur a fee of ' + a.penalty_value + '.');
+    }
+    lines.push('');
+    lines.push('If ' + a.provider_name + ' cancels or postpones a cohort: ' + a.cohort_cancel_postpone_policy);
+    lines.push('');
+    lines.push('This is a starting template and should be reviewed by a qualified attorney before publication.');
+  } else if (a.document_type === 'Refund Policy') {
+    lines.push('REFUND POLICY — ' + a.provider_name);
+    lines.push('');
+    lines.push('Refund method: ' + a.refund_method + '. Processing time: ' + a.refund_processing_time + '.');
+    lines.push('');
+    if (a.refund_proration === 'Full refund only') {
+      lines.push('Refunds, where eligible, are issued in full.');
+    } else if (a.refund_proration === 'Prorated based on usage') {
+      lines.push('Refunds are prorated based on how much of the program you have accessed or completed.');
+    } else if (a.refund_proration === 'Prorated based on time elapsed') {
+      lines.push('Refunds are prorated based on how much time has elapsed since enrollment.');
+    }
+    if (hasValue(a.non_refundable_components)) {
+      lines.push('');
+      lines.push('The following are non-refundable: ' + a.non_refundable_components);
+    }
+    lines.push('');
+    lines.push('This is a starting template and should be reviewed by a qualified attorney before publication.');
+  } else if (a.document_type === 'Certificate/Completion Policy') {
+    lines.push('CERTIFICATE/COMPLETION POLICY — ' + a.provider_name);
+    lines.push('');
+    lines.push('To be considered as having completed this program, the following criteria apply: ' + a.completion_criteria);
+    lines.push('');
+    if (a.certificate_accredited === 'Yes, accredited by a named third-party body') {
+      lines.push('Upon completion, you will receive a certificate accredited by ' + a.accrediting_body_name + '.');
+    } else if (a.certificate_accredited === 'No, internal completion certificate only') {
+      lines.push('Upon completion, you will receive an internal completion certificate issued by ' + a.provider_name + '. This certificate is not accredited by an external body.');
+    }
+    lines.push('');
+    lines.push('This is a starting template and should be reviewed by a qualified attorney before publication.');
+  } else if (a.document_type === 'Marketing Claims Disclaimer') {
+    lines.push('MARKETING CLAIMS DISCLAIMER — ' + a.provider_name);
+    lines.push('');
+    if (a.outcome_stat_used === "No, I don't reference any outcome statistics") {
+      lines.push(a.provider_name + ' does not reference employment or outcome statistics in its marketing.');
+    } else if (a.outcome_stat_used === 'Yes, I reference an employment/outcome statistic') {
+      lines.push(a.provider_name + ' references the following statistic in its marketing: ' + a.outcome_stat_description + '.');
+      if (a.stat_verification === 'Independently verified') {
+        lines.push('This statistic has been independently verified.');
+      } else if (a.stat_verification === 'Self-reported by graduates') {
+        lines.push('This statistic is self-reported by graduates and has not been independently verified — this should be disclosed alongside the statistic wherever it is used.');
+      }
+      if (containsGuaranteePhrase(a.outcome_stat_description)) {
+        lines.push('This phrasing may constitute an absolute employment guarantee. Absolute guarantees are a legal and reputational risk unless you can substantiate an actual guarantee with a real refund or remedy attached to it — consider rephrasing or confirming you can back this claim.');
+      }
+    }
+    lines.push('');
+    lines.push('This is a starting template and should be reviewed by a qualified attorney before publication.');
+  }
+  return lines.join('\n');
+}
+
+function renderInsuranceClaimLetterGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.insurance_company);
+  lines.push('Re: Insurance Claim — Policy ' + a.policy_number);
+  if (hasValue(a.claim_number_if_any)) {
+    lines.push('(Claim ' + a.claim_number_if_any + ')');
+  }
+  lines.push('');
+  lines.push('I am submitting a claim regarding an incident on ' + a.incident_date + ': ' + a.incident_description);
+  lines.push('');
+  lines.push('Damages/losses: ' + a.damages_description);
+  lines.push('');
+  lines.push('Coverage believed to apply: ' + a.relevant_coverage);
+  lines.push('');
+  lines.push('Documentation enclosed: ' + a.documentation_list);
+  lines.push('');
+  lines.push('Amount claimed: ' + a.amount_claimed + '.');
+  lines.push('');
+  const iclOutcome = a.desired_outcome === 'Other — specify' ? a.desired_outcome_other : a.desired_outcome;
+  lines.push('Desired outcome: ' + iclOutcome + '.');
+  lines.push('');
+  lines.push('Please acknowledge receipt and advise on next steps.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+// insurance-claim-followup-escalation-generator — escalation_target's 4th
+// option label was corrected 2026-09-16 from a phrase referencing a
+// nonexistent jurisdiction field to "Unsure — ask them to direct this to
+// the correct contact"; the branch condition below matches the corrected,
+// live frontend text exactly.
+function renderInsuranceClaimFollowupEscalationGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.insurance_company);
+  const isFollowup = a.situation_type === 'No response or unexplained delay — routine follow-up';
+  lines.push('Re: Claim ' + a.claim_number + ' (Policy ' + a.policy_number + ') — ' + (isFollowup ? 'Follow-Up' : 'Formal Escalation'));
+  lines.push('');
+  lines.push('This claim was originally submitted on ' + a.claim_submission_date + '.');
+  lines.push('');
+  if (isFollowup) {
+    if (hasValue(a.last_contact_date)) {
+      lines.push('Date of last contact: ' + a.last_contact_date + '.');
+    }
+    lines.push('Missed deadline, if any: ' + a.missed_deadline + '.');
+    lines.push('I am requesting an update.');
+  } else {
+    lines.push('Prior contact and responses so far: ' + a.prior_contact_summary);
+    lines.push('This is unsatisfactory because: ' + a.unsatisfactory_reason);
+    if (a.escalation_target === 'Internal complaints department') {
+      lines.push('I am requesting this be handled by your internal complaints department.');
+    } else if (a.escalation_target === 'Named supervisor or manager') {
+      lines.push('I am requesting this be handled by a named supervisor or manager, not front-line support.');
+    } else if (a.escalation_target === 'Insurance ombudsman or equivalent regulator') {
+      lines.push('If this is not resolved, I will escalate to the applicable insurance ombudsman or regulator.');
+    } else if (a.escalation_target === 'Unsure — ask them to direct this to the correct contact') {
+      lines.push('I am requesting you direct this to whichever internal escalation contact is correct for a claim at this stage.');
+    }
+    lines.push('This letter is being sent as a formal escalation of an unresolved complaint.');
+  }
+  lines.push('');
+  lines.push('Desired outcome: ' + a.desired_outcome + '.');
+  lines.push('');
+  lines.push('Please respond within ' + (isFollowup ? '14 days' : '7 days') + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderInsuranceDenialCoverageDisputeGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.insurance_company);
+  lines.push('Re: Formal Dispute — Claim ' + a.claim_number + ' (Policy ' + a.policy_number + ')');
+  lines.push('');
+  lines.push('I am disputing your decision dated ' + a.decision_date + ' regarding this claim.');
+  lines.push('');
+  lines.push('Your stated reason(s): ' + a.insurer_reasons);
+  lines.push('');
+  if (a.situation_type === 'The claim was denied outright') {
+    lines.push('Policy clause(s) cited: ' + a.cited_clauses);
+    lines.push('Why this reasoning is disputed: ' + a.dispute_reasoning);
+    lines.push('Counter-evidence available: ' + a.counter_evidence);
+  } else if (a.situation_type === 'The claim was accepted but the amount or scope of coverage is disputed') {
+    lines.push('Amount/scope offered: ' + a.amount_offered);
+    lines.push('Amount/scope believed correct, and why: ' + a.amount_believed_correct);
+    lines.push('Supporting evidence: ' + a.supporting_evidence);
+  }
+  lines.push('');
+  lines.push('Amount in dispute: ' + a.amount_in_dispute + '.');
+  lines.push('');
+  const idcOutcome = a.desired_outcome === 'Partial payment reflecting a specific disputed portion — specify' ? 'a partial payment of ' + a.desired_outcome_partial_amount : a.desired_outcome;
+  lines.push('Desired outcome: ' + idcOutcome + '.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderThirdPartyLiabilityClaimLetterGenerator(a) {
+  const lines = [];
+  lines.push(todayDate());
+  lines.push('');
+  let toLine = 'To: ' + a.at_fault_party_name;
+  if (hasValue(a.insurer_if_known)) {
+    toLine += ' (c/o ' + a.insurer_if_known + ')';
+  }
+  lines.push(toLine);
+  lines.push('Re: Liability Claim — Incident on ' + a.incident_date);
+  lines.push('');
+  lines.push('I am writing regarding an incident on ' + a.incident_date + ' at ' + a.incident_location + ': ' + a.incident_description);
+  lines.push('');
+  lines.push('Damages/losses suffered: ' + a.damages_description);
+  lines.push('');
+  lines.push('Supporting evidence available: ' + a.evidence_list);
+  lines.push('');
+  lines.push('Amount claimed: ' + a.amount_claimed + ', based on: ' + a.amount_basis);
+  lines.push('');
+  const tplOutcome = a.desired_outcome === 'Other — specify' ? a.desired_outcome_other : a.desired_outcome;
+  lines.push('Desired outcome: ' + tplOutcome + '.');
+  lines.push('');
+  lines.push('Please respond within 14 days.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -3178,6 +3945,14 @@ const GENERATORS = {
     title: 'Source of Funds Package Generator',
     // Real Gumroad product_id for the "source-of-funds-package-generator" product.
     gumroad_product_id: 'bvltq',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch -- Cars & Vehicles /
+    // Crypto & Fintech / Food & Hospitality / Insurance & Claims / Training
+    // & Education) -- prompt_template below is now DEAD CODE. Redesigned
+    // frontend field set (scenario selector + structured per-scenario
+    // fields, replacing the old primary_category/secondary_categories/
+    // timeline_details) -- see generators-static-migration-inventory.md.
+    static: true,
+    render: renderSourceOfFundsPackageGenerator,
     prompt_template:
       "Generate a complete Source of Funds compliance package, not just a single letter. Structure the output in these sections: (1) A cover letter addressed to {institution_name}'s compliance team, professional and cooperative in tone, stating the total amount under review and referencing that this package is submitted to support their AML/KYC review. (2) A chronological timeline of the funds' origin and movement, built from {timeline_details}, presented as a dated list. (3) An income/source breakdown table listing each source category that applies (from primary_category and secondary_categories) with approximate amounts. (4) A plain-language explanation of the origin of the capital, written in first person as if from the account holder, tying the categories and timeline together into one coherent narrative rather than disconnected facts. (5) A final checklist of exactly which supporting documents should be attached for each category claimed, cross-referencing {documents_available} and flagging anything commonly requested that the person hasn't mentioned having. If prior_contact indicates the account is currently frozen, adjust the cover letter's tone to note the account restriction and request a response timeline, without being confrontational. Never claim this package guarantees the review will be resolved favorably — frame it as organizing the strongest possible case, not a guaranteed outcome. Institution: {institution_name}. Amount: {amount_in_question}. Primary category: {primary_category}. Additional sources: {secondary_categories}. Timeline: {timeline_details}. Documents available: {documents_available}. Status: {prior_contact}. Tone: professional, thorough, cooperative.",
   },
@@ -3185,6 +3960,10 @@ const GENERATORS = {
     title: 'Exchange Account Freeze/Lockout Response Letter',
     // Real Gumroad product_id for the "exchange-account-freeze-response" product.
     gumroad_product_id: 'inkhin',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderExchangeAccountFreezeResponse,
     prompt_template:
       "Write a formal response letter to a cryptocurrency exchange regarding a frozen or restricted account. If freeze_reason_given is 'No reason given at all' or 'Generic compliance review', explicitly request the specific reason for the restriction and cite the exchange's own terms of service obligation to provide this (most exchange terms require disclosure of the general nature of a hold, even if full compliance details can't be shared). If freeze_reason_given is 'Source of funds/AML review requested', reference that supporting documentation is being prepared and ask for the specific list of documents the compliance team requires, and the expected review timeframe. If freeze_reason_given is 'Suspected account compromise', request confirmation of what security concern triggered the hold and what specific verification is needed to lift it. Request a clear timeline for resolution, and note that prolonged, unexplained freezes may warrant escalation to the exchange's relevant national regulator if unresolved within a reasonable period (do not name a specific regulator unless jurisdiction is known — keep this general). Do not encourage aggressive or threatening language; keep the letter firm but constructive, since cooperative tone tends to move compliance reviews faster than confrontational ones. Exchange: {exchange_name}. Reason given: {freeze_reason_given}. Freeze date: {freeze_date}. Amount affected: {amount_affected}. Communication so far: {communication_so_far}. Urgency: {urgency_factors}. Tone: firm, professional, cooperative.",
   },
@@ -3192,6 +3971,12 @@ const GENERATORS = {
     title: 'Crypto Complaint Generator',
     // Real Gumroad product_id for the "crypto-complaint-generator" product.
     gumroad_product_id: 'hbmkox',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE. Country x problem_type routing resolved as a
+    // closed lookup table in cryptoComplaintRouting() -- see
+    // static-generators-phase1-sample.md for the 1:1 routing-table source.
+    static: true,
+    render: renderCryptoComplaintGenerator,
     prompt_template:
       "Generate a formal complaint letter, routed to the correct regulator(s) based on country AND problem_type — do not assume a single regulator per country, since especially in the US multiple agencies have narrow, non-overlapping jurisdiction. Routing logic: UNITED STATES — for 'Suspected fraud or scam' or 'Misleading marketing', direct the complaint to the FTC (ReportFraud.ftc.gov) and note the SEC's complaint portal as an additional option if the problem involves what could be an unregistered securities offering; for 'Exchange won't release my funds' or 'Unauthorized transaction', direct to FinCEN's complaint channel if it's a suspected AML/registration issue, and separately note the CFPB for bank-related crypto disputes; for 'Bank refused/closed my account', direct to the CFPB and the OCC if a national bank is involved; explicitly state that the US has no single crypto complaint regulator and the right agency depends on the specific issue. UNITED KINGDOM — direct to the FCA for most complaints, noting the Financial Ombudsman Service (FOS) as the individual dispute resolution path if the FCA-regulated firm doesn't resolve it directly. EUROPEAN UNION — direct to the national competent authority in the person's own member state responsible for MiCA enforcement (do not name a specific single EU-wide crypto regulator, since MiCA enforcement is delegated to national authorities), and note the relevant national financial ombudsman for individual disputes. AUSTRALIA — direct to ASIC for most complaints, noting AFCA (Australian Financial Complaints Authority) as the individual dispute resolution path, and Scamwatch/ACCC specifically for suspected scams rather than regulatory/licensing complaints. If country is 'Other/not sure', keep the letter general and advise the person to identify their national financial regulator before submitting. If prior_contact indicates no direct contact yet, recommend contacting the company directly first before regulatory escalation, unless problem_type is 'Suspected fraud or scam', where direct regulatory/law enforcement reporting takes priority over trying to resolve it with a likely-fraudulent entity. Company/entity: {entity_name}. Problem: {problem_type}. Amount: {amount_involved}. Details: {details}. Prior contact: {prior_contact}. Country: {country}. Tone: professional, factual, firm.",
   },
@@ -3200,6 +3985,12 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "restaurant-policies-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/oblszp -> .../l/restaurant-policies-generator).
     gumroad_product_id: 'oblszp',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE. Redesigned frontend field set (7 structured
+    // per-policy_type field groups, replacing the old open policy_details
+    // textarea) -- see generators-static-migration-inventory.md.
+    static: true,
+    render: renderRestaurantPoliciesGenerator,
     prompt_template:
       "Generate a clear, professional {policy_type} for a restaurant called {restaurant_name} ({restaurant_type}). Use these specifics the restaurant provided: {policy_details}. Write in plain, customer-facing language suitable to post on the restaurant's own website or print for guests. This is a policy document meant to carry the restaurant's own name, not Kibbo's — do not add any Kibbo branding, letterhead, date, recipient address block, or signature line. Include a brief closing note that local consumer protection laws may impose additional requirements the restaurant should verify independently. Format with clear headers, no legal jargon.",
   },
@@ -3208,6 +3999,10 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "food-recall-action-plan-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/heasbt -> .../l/food-recall-action-plan-generator).
     gumroad_product_id: 'heasbt',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderFoodRecallActionPlanGenerator,
     prompt_template:
       "Generate a food safety incident action plan for {restaurant_name} regarding {product_affected}, discovered via {source} ({supplier_or_internal}). Already served to customers: {served}. If served, approximate date range and covers affected: {served_details}. Incident manager: {contact_person}. Produce four clearly headed sections: (1) Internal Protocol — immediate containment steps; (2) Withdrawal Checklist — physical removal from kitchen, storage, menu, and delivery platforms, formatted as a checklist suitable to print and post in a kitchen; (3) Communication Templates — a short template for affected customers and, if applicable, a short template for the local food safety authority; (4) Incident Log — a dated table template (columns: Date/Time, Action Taken, Staff Member, Notes) for recording actions as they happen. Keep language calm, procedural, and non-alarmist but clear about urgency. This is an internal operational document, not a letter to a third party — do not add a date, address block, or signature line for the document as a whole.",
   },
@@ -3216,6 +4011,12 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "allergen-menu-labeling-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/votobg -> .../l/allergen-menu-labeling-generator).
     gumroad_product_id: 'votobg',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE. Uses a static, jurisdiction-specific
+    // keyword-match table (built + Carlos-approved 2026-09-16) instead of
+    // AI classification -- see batch-1.md / batch-1-addendum.md.
+    static: true,
+    render: renderAllergenMenuLabelingGenerator,
     prompt_template:
       "You are labeling a restaurant menu for {restaurant_name} for allergen disclosure under {jurisdiction} requirements. For each dish below, identify which allergens from that jurisdiction's official allergen list are present based on the ingredients given, and err on the side of flagging a possible allergen if an ingredient is ambiguous. Dishes and ingredients: {menu_input}. Output a table with these exact columns: Dish Name | Allergens Present | Notes. Cross-contamination risk in the kitchen: {cross_contamination} — if Yes, add a short general cross-contact warning notice after the table; if No, omit it. Always end with this exact disclaimer on its own line: \"Generated based on ingredients provided by the restaurant — always verify with your supplier's ingredient documentation. This does not replace professional regulatory review.\" This is a printable menu insert, not a letter — do not add a date, address block, or signature line.",
   },
@@ -3236,6 +4037,12 @@ const GENERATORS = {
     // Gumroad short-code product_id for the "course-provider-terms-refund-policy-generator" product
     // (confirmed via redirect: carlosdevlop.gumroad.com/l/pvhywh -> .../l/course-provider-terms-refund-policy-generator).
     gumroad_product_id: 'pvhywh',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE. Redesigned frontend field set (4 structured
+    // per-document_type field groups, replacing the old open
+    // document_details textarea) -- see generators-static-migration-inventory.md.
+    static: true,
+    render: renderCourseProviderTermsRefundPolicyGenerator,
     prompt_template:
       "Generate a clear, professional {document_type} for an education provider called {provider_name} ({provider_type}), a {program_duration} program priced via {price_model}. Use these specifics the provider gave: {document_details}. Write in plain, learner-facing language, addressed to the provider's own students/customers — this document carries the provider's own name, not Kibbo's, so do not add any Kibbo branding, letterhead, or signature line. For the Marketing Claims Disclaimer specifically: help the provider state any outcome or employment statistics accurately and avoid absolute guarantees — flag language like 'guaranteed job placement' as a legal and reputational risk unless the provider can substantiate an actual guarantee with a real refund or remedy attached to it. Include a brief closing note that local consumer protection laws may impose additional requirements the provider should verify independently. Format with clear headers, no legal jargon.",
   },
@@ -3691,6 +4498,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_vehicle-purchase-warranty-complaint',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderVehiclePurchaseWarrantyComplaintGenerator,
     prompt_template:
       "Write a formal complaint letter addressed to {seller_dealer_name} regarding the vehicle {vehicle_details} (VIN: {vin}), purchased on {purchase_date} for {purchase_price}. Based on the branch selected ({situation_type}): for a listing mismatch, describe the discrepancy between what was claimed ({listing_claim}) and what was found ({actual_finding}), referencing available evidence ({mismatch_evidence}) — otherwise ignore these fields entirely. For a defect discovered after purchase, describe the defect ({defect_description}), when it was discovered ({defect_discovery_date}), and whether it was previously disclosed by the seller ({defect_disclosure_status}) — otherwise ignore these fields entirely. For a warranty claim, reference the specific warranty terms ({warranty_terms}), the defect ({warranty_defect_description}), when it was discovered ({warranty_discovery_date}), and any repair estimate obtained ({warranty_repair_estimate} — if 'Yes — specify amount', the estimate is {warranty_repair_estimate_amount}) — otherwise ignore these fields entirely. For an escalation, reference the original complaint dated {original_complaint_date}, summarize the response received ({response_summary}) or its absence, and explain why it was unsatisfactory ({unsatisfactory_reason}) — otherwise ignore these fields entirely. State the desired outcome clearly: {desired_outcome} (if 'Partial refund — specify amount', the amount requested is {desired_outcome_amount}). Keep tone factual and professional — firmer for the escalation branch, since it reflects an unresolved prior attempt. Close with a reasonable response deadline (14 days for initial complaints, 7-10 days for escalations) and contact details for reply. Do not invent regulatory citations, warranty law specifics, or threaten specific legal action beyond stating that further steps will be considered.",
   },
@@ -3699,6 +4510,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_vehicle-repair-dispute',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderVehicleRepairDisputeGenerator,
     prompt_template:
       "Write a formal complaint letter addressed to {shop_name} regarding a repair performed on {vehicle_details}, dropped off on {dropoff_date} and {completion_status}, for a total cost of {amount_paid}. Describe the specific issue based on the type selected ({issue_type}): {issue_description}. If the matter was previously raised with the shop ({prior_contact} — if 'Yes — free text describing their response', reference that prior contact and the shop's response: {prior_contact_response}) — otherwise state this is the first formal contact. State the desired outcome clearly: {desired_outcome}. Keep tone factual and professional. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent regulatory citations or threaten specific legal action beyond stating that further steps will be considered.",
   },
@@ -3707,6 +4522,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_insurance-claim-letter',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderInsuranceClaimLetterGenerator,
     prompt_template:
       "Write a formal insurance claim letter addressed to {insurance_company} regarding policy number {policy_number} ({claim_number_if_any}). Describe the incident that occurred on {incident_date}: {incident_description}. Describe the resulting damages or losses: {damages_description}. State the coverage believed to apply: {relevant_coverage}. List the supporting documentation enclosed: {documentation_list}. State the amount being claimed ({amount_claimed}) and the desired outcome ({desired_outcome}) clearly. Keep tone factual, organized, and professional — this is a first submission, not a dispute. Close with a request for acknowledgement and next steps, and contact details for reply. Do not invent policy clause numbers, regulatory citations, or specific coverage guarantees not stated by the user.",
   },
@@ -3715,6 +4534,12 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_claim-followup-escalation',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE. escalation_target's 4th option was corrected
+    // 2026-09-16 (no longer references a nonexistent jurisdiction field) --
+    // render function's branch condition matches the corrected live text.
+    static: true,
+    render: renderInsuranceClaimFollowupEscalationGenerator,
     prompt_template:
       "Write a formal letter addressed to {insurance_company} regarding claim number {claim_number} under policy {policy_number}, originally submitted on {claim_submission_date}. Based on the branch selected: for a routine follow-up, reference the date of last contact ({last_contact_date}) and any missed deadline ({missed_deadline}), and request an update. For a formal escalation, summarize the prior contact and responses received ({prior_contact_summary}), explain why they were unsatisfactory ({unsatisfactory_reason}), and address the letter to the appropriate escalation target ({escalation_target}) — if the target is unsure, phrase the letter to request the correct internal escalation contact. State the desired outcome ({desired_outcome}) clearly in either branch. Keep tone firmer and more formal for the escalation branch than for the routine follow-up branch, reflecting the unresolved prior attempt. Close with a reasonable response deadline (7 days for escalations, 14 days for routine follow-ups) and contact details for reply. Do not invent regulatory citations, ombudsman procedures, or specific compensation entitlements not stated by the user.",
   },
@@ -3723,6 +4548,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_denial-coverage-dispute',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderInsuranceDenialCoverageDisputeGenerator,
     prompt_template:
       "Write a formal dispute letter addressed to {insurance_company} regarding claim number {claim_number} under policy {policy_number}, in response to the decision dated {decision_date}. Quote or summarize the insurer's stated reason(s): {insurer_reasons}. Based on the branch selected: for an outright denial, reference the policy clause(s) cited ({cited_clauses}), explain why this reasoning is disputed ({dispute_reasoning}), and reference the counter-evidence available ({counter_evidence}). For a coverage/amount dispute, state the amount or scope offered ({amount_offered}) versus what is believed correct ({amount_believed_correct}) and why, referencing supporting valuation or evidence ({supporting_evidence}). State the amount in dispute ({amount_in_dispute}) and desired outcome ({desired_outcome}) clearly. Keep tone factual, firm, and professional — this is a formal dispute, not a first-time complaint. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent policy clause numbers, regulatory citations, or ombudsman procedures not stated by the user.",
   },
@@ -3731,6 +4560,10 @@ const GENERATORS = {
     // Gumroad product not yet created — Carlos uploads the file directly and
     // will provide the real product id in a follow-up prompt. PLACEHOLDER.
     gumroad_product_id: 'PLACEHOLDER_third-party-liability-letter',
+    // STATIC as of 2026-09-19 (Batch 7: FINAL batch) -- prompt_template
+    // below is now DEAD CODE.
+    static: true,
+    render: renderThirdPartyLiabilityClaimLetterGenerator,
     prompt_template:
       "Write a formal liability claim letter addressed to {at_fault_party_name} ({insurer_if_known}) regarding an incident that occurred on {incident_date} at {incident_location}. Describe what happened: {incident_description}. Describe the damages or losses suffered: {damages_description}. Reference the supporting evidence available: {evidence_list}. State the amount being claimed ({amount_claimed}) and the basis for that amount ({amount_basis}). State the desired outcome ({desired_outcome}) clearly. Keep tone factual, professional, and non-accusatory in describing fault — state what happened and let the facts establish liability, rather than using inflammatory language. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent legal citations, liability percentages, or threaten specific legal action beyond stating that further steps will be considered.",
   },
