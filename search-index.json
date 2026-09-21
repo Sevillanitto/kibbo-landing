@@ -12360,6 +12360,22 @@
     ]
   },
   {
+    "title": "Claim Excess Calculator",
+    "type": "calculator",
+    "block": "insurance-claims",
+    "url": "/insurance-claims/calculators/claim-excess-calculator",
+    "description": "Add your compulsory and voluntary insurance excess together to see what you'll pay on a claim and what your insurer covers — for UK and Australian car and home insurance.",
+    "keywords": [
+      "car insurance excess calculator",
+      "claim excess calculator",
+      "compulsory and voluntary excess",
+      "do compulsory and voluntary excess add together",
+      "how much is my insurance excess",
+      "voluntary excess calculator",
+      "insurance excess uk australia"
+    ]
+  },
+  {
     "title": "Small Claims Court Demand Letter Pack",
     "type": "template",
     "block": "legal-contracts",

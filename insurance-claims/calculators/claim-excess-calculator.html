@@ -6,22 +6,22 @@
 <script src="/kibbo-navbar.js" defer></script>
 
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator">
+<link rel="canonical" href="https://www.getkibbo.com/insurance-claims/calculators/claim-excess-calculator">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles | Kibbo</title>
+<title>Free Claim Excess Calculator — Compulsory + Voluntary Excess | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free insurance deductible calculator: see how much you'll pay out of pocket and how much your insurer covers on a claim. Includes a hurricane deductible calculator for percentage deductibles based on your home's insured value.">
+<meta name="description" content="Free car insurance excess calculator: see how much you'll pay on a claim once your compulsory and voluntary excess are added together, and what your insurer covers. For UK and Australian insurance.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles">
-<meta property="og:description" content="How much will I pay on an insurance claim? Works for flat deductibles and percentage (hurricane / named-storm) deductibles. Free, instant result.">
-<meta property="og:url" content="https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator">
+<meta property="og:title" content="Free Claim Excess Calculator — Compulsory + Voluntary Excess">
+<meta property="og:description" content="Compulsory and voluntary excess add together — they don't replace each other. See what you'll pay on a claim and what your insurer covers. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/insurance-claims/calculators/claim-excess-calculator">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles">
-<meta name="twitter:description" content="How much will I pay on an insurance claim? Works for flat deductibles and percentage (hurricane / named-storm) deductibles. Free, instant result.">
+<meta name="twitter:title" content="Free Claim Excess Calculator — Compulsory + Voluntary Excess">
+<meta name="twitter:description" content="Compulsory and voluntary excess add together — they don't replace each other. See what you'll pay on a claim and what your insurer covers. Free, instant result.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,18 +37,18 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
         { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Insurance Deductible Calculator", "item": "https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator" }
+        { "@type": "ListItem", "position": 3, "name": "Claim Excess Calculator", "item": "https://www.getkibbo.com/insurance-claims/calculators/claim-excess-calculator" }
       ]
     },
     {
       "@type": "WebApplication",
-      "name": "Insurance Deductible Calculator",
-      "url": "https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator",
+      "name": "Claim Excess Calculator",
+      "url": "https://www.getkibbo.com/insurance-claims/calculators/claim-excess-calculator",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
-      "description": "Free calculator that shows how much you pay out of pocket and how much your insurer pays on a claim, for both flat-dollar deductibles and percentage-of-insured-value (hurricane / named-storm) deductibles.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free calculator that adds your compulsory and voluntary insurance excess together and shows how much you pay and how much your insurer pays on a claim (UK and Australian terminology).",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
       "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
       "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
       "inLanguage": "en"
@@ -246,8 +246,8 @@
 <div class="section-page-hero">
   <div class="container">
     <p class="section-label">Free Calculator</p>
-    <h1 class="section-title">Insurance deductible calculator: how much will I pay?</h1>
-    <p class="section-subtitle">Enter your deductible and your claim to see what you'll pay out of pocket and what your insurer covers. Works for a standard flat deductible and as a hurricane deductible calculator — for the percentage deductibles that can turn a storm claim into a five-figure bill.</p>
+    <h1 class="section-title">Claim excess calculator: how much will I pay?</h1>
+    <p class="section-subtitle">A car insurance excess calculator for the UK and Australia. Your compulsory and voluntary excess add together into one total — enter both, plus your claim, to see exactly what you'll pay and what your insurer covers.</p>
   </div>
 </div>
 
@@ -255,67 +255,59 @@
 <main class="section-main">
   <div class="calc-wrap">
 
-    <form id="idForm" novalidate>
+    <form id="ceForm" novalidate>
 
       <div class="calc-field">
         <label class="calc-label" for="currency">Currency</label>
         <select class="calc-select" id="currency" name="currency" required>
-          <option value="$" selected>$ (USD)</option>
-          <option value="£">£ (GBP)</option>
+          <option value="£" selected>£ (GBP)</option>
+          <option value="$">$ (AUD/USD)</option>
           <option value="€">€ (EUR)</option>
         </select>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" id="dedTypeLabel">What kind of deductible is it?</label>
-        <div class="calc-radio-group" role="radiogroup" aria-labelledby="dedTypeLabel">
-          <label class="calc-radio-option"><input type="radio" name="dedType" value="flat" checked> Flat dollar amount</label>
-          <label class="calc-radio-option"><input type="radio" name="dedType" value="percent"> Percentage of insured value</label>
-        </div>
-        <span class="calc-help">Percentage deductibles are common for hurricane, named-storm and wind damage on home insurance. Not sure which you have? Check your policy's declarations page.</span>
-      </div>
-
-      <div id="flatFields">
-        <div class="calc-field">
-          <label class="calc-label" for="flatAmount">Deductible amount</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="flatAmount" name="flatAmount" placeholder="e.g. 1000">
-        </div>
-      </div>
-
-      <div id="percentFields" hidden>
-        <div class="calc-field">
-          <label class="calc-label" for="ratePct">Deductible percentage (%)</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0.01" max="100" step="any" id="ratePct" name="ratePct" placeholder="e.g. 2">
-        </div>
-
-        <div class="calc-field">
-          <label class="calc-label" for="insuredValue">Insured dwelling value (Coverage A amount)</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="insuredValue" name="insuredValue" placeholder="e.g. 350000">
-          <span class="calc-help">This is your home's <strong>insured</strong> value as stated on your policy declarations page — not its market value or what you paid for it. These are often different numbers.</span>
-        </div>
+        <label class="calc-label" for="compulsory">Compulsory excess</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="compulsory" name="compulsory" placeholder="e.g. 300" required>
+        <span class="calc-help">Shown on your policy schedule or statement of fact — you can't change this. It's the fixed amount set by the insurer.</span>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="claimAmount">Total claim / damage amount</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="claimAmount" name="claimAmount" placeholder="e.g. 45000" required>
+        <label class="calc-label" for="voluntary">Voluntary excess</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="voluntary" name="voluntary" value="0">
+        <span class="calc-help">The extra amount <strong>you</strong> chose when you took out the policy, usually in exchange for a lower premium. Leave at 0 if you didn't choose one.</span>
       </div>
 
-      <p class="calc-error" id="idError" hidden>Please enter the claim amount and your deductible — and for a percentage deductible, a percentage between 0 and 100 plus your insured dwelling value.</p>
+      <div class="calc-field">
+        <label class="calc-label" for="claimAmount">Total claim amount</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="claimAmount" name="claimAmount" placeholder="e.g. 2400" required>
+      </div>
+
+      <p class="calc-error" id="ceError" hidden>Please enter your compulsory excess (0 or more), your voluntary excess (0 or more) and the total claim amount.</p>
 
       <button class="calc-btn" type="submit">Calculate what I'll pay</button>
     </form>
 
-    <div class="calc-result" id="idResult" hidden>
-      <div class="calc-result-compare">You pay out of pocket</div>
-      <div class="calc-result-figure" id="idFigure"></div>
-      <div class="calc-result-headline" id="idInsurer"></div>
-      <div class="calc-result-headline" id="idDeductibleLine" hidden style="margin-top:6px"></div>
-      <div class="calc-result-context" id="idContext"></div>
-      <div class="calc-cta-group">
-        <a class="calc-cta" href="/insurance-claims/calculators/claim-excess-calculator">In the UK or Australia? Use the Claim Excess Calculator instead — there, compulsory and voluntary excess add together →</a>
-        <a class="calc-cta" href="/checklists/insurance-policy-coverage-checklist">Check your deductible, limits and exclusions with the Insurance Policy Coverage Checklist →</a>
-        <a class="calc-cta" href="/templates/insurance-damage-loss-inventory-workbook">Total up your damage with the Insurance Damage &amp; Loss Inventory Workbook →</a>
-      </div>
+    <div class="calc-result" id="ceResult" hidden>
+      <div class="calc-result-compare">You pay</div>
+      <div class="calc-result-figure" id="ceFigure"></div>
+      <div class="calc-result-headline" id="ceInsurer"></div>
+      <div class="calc-result-headline" id="ceBreakdown" style="margin-top:6px"></div>
+      <div class="calc-result-context" id="ceSmallClaim" hidden></div>
+    </div>
+
+    <!-- Standing explanatory copy — always shown, not tied to any input -->
+    <div class="calc-result-context" style="margin-top:36px;padding-top:28px;border-top:1px solid var(--border)">
+      <h2 class="calc-label" style="font-family:var(--font-serif);font-size:19px;margin:0 0 12px">Compulsory and voluntary excess add together</h2>
+      <p>Your total excess is the compulsory excess <strong>plus</strong> the voluntary excess — these add together, they don't replace each other. This is one of the most common points of confusion when making a claim: someone who chose a £250 voluntary excess to lower their premium is often surprised to also owe the separate compulsory excess set by the insurer on top of it. For example, a £250 voluntary excess plus a £300 compulsory excess means you pay £550 in total before your insurer covers the rest — not £250 or £300 alone. If a claim is smaller than your total excess, you pay the whole claim yourself and the insurer pays nothing.</p>
+      <p>Some policies also add other excesses in particular situations — for example for younger or less experienced drivers, or for certain types of claim. If one applies to your claim, check your policy schedule and include it in the compulsory figure.</p>
+      <p>Raising your voluntary excess can lower your premium, but it only makes financial sense if you're confident you could actually afford the higher total excess if you ever need to claim. This calculator shows the claim-time cost, not whether a given trade-off is right for your budget.</p>
+    </div>
+
+    <div class="calc-cta-group">
+      <a class="calc-cta" href="/insurance-claims/calculators/insurance-deductible-calculator">In the US? Use the Insurance Deductible Calculator instead — US deductibles are usually one flat figure (or a percentage) rather than compulsory plus voluntary →</a>
+      <a class="calc-cta" href="/checklists/insurance-policy-coverage-checklist">Check your excess, limits and exclusions with the Insurance Policy Coverage Checklist →</a>
+      <a class="calc-cta" href="/templates/insurance-damage-loss-inventory-workbook">Total up your damage with the Insurance Damage &amp; Loss Inventory Workbook →</a>
     </div>
 
   </div>
@@ -382,37 +374,31 @@
 </footer>
 
 <script>
-// Insurance Deductible Calculator (US / general terminology) — purely
-// arithmetic, no jurisdiction branching, so no country selector: just a
-// currency symbol picker ($ default), same pattern as the other calculators.
+// Claim Excess Calculator (UK / Australia terminology) — purely arithmetic.
 //
-// Flat:       deductible = the amount entered.
-// Percentage: deductible = insured dwelling value (Coverage A) x rate / 100.
-// Either way: you pay = min(claim, deductible); insurer pays =
-//             max(0, claim - deductible) — so a claim smaller than the
-// deductible costs the insurer $0 (never a negative number).
-// <ID-CORE>
-function computeDeductible(inp) {
-  var deductible = inp.type === 'percent'
-    ? inp.insuredValue * (inp.ratePct / 100)
-    : inp.flatAmount;
+// Excess is an ADDITIVE two-part system: the total excess is the
+// compulsory excess PLUS the voluntary excess (they combine, neither
+// replaces the other). Then:
+//   you pay      = min(claim, total excess)   (never more than the claim)
+//   insurer pays = max(0, claim - total excess)
+// <CE-CORE>
+function computeExcess(inp) {
+  var totalExcess = inp.compulsory + inp.voluntary;
   return {
-    deductible: deductible,
-    youPay: Math.min(inp.claim, deductible),
-    insurerPays: Math.max(0, inp.claim - deductible),
-    claimWithinDeductible: inp.claim <= deductible
+    totalExcess: totalExcess,
+    youPay: Math.min(inp.claim, totalExcess),
+    insurerPays: Math.max(0, inp.claim - totalExcess),
+    claimWithinExcess: inp.claim <= totalExcess
   };
 }
-// </ID-CORE>
+// </CE-CORE>
 
 (function () {
   'use strict';
 
-  var form = document.getElementById('idForm');
-  var flatFields = document.getElementById('flatFields');
-  var percentFields = document.getElementById('percentFields');
-  var errorEl = document.getElementById('idError');
-  var resultEl = document.getElementById('idResult');
+  var form = document.getElementById('ceForm');
+  var errorEl = document.getElementById('ceError');
+  var resultEl = document.getElementById('ceResult');
 
   function fmt(symbol, n) {
     return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
@@ -421,23 +407,6 @@ function computeDeductible(inp) {
     var raw = document.getElementById(id).value;
     return raw === '' ? NaN : parseFloat(raw);
   }
-  function dedType() {
-    return form.querySelector('input[name="dedType"]:checked').value;
-  }
-
-  Array.prototype.forEach.call(form.querySelectorAll('input[name="dedType"]'), function (r) {
-    r.addEventListener('change', function () {
-      var pct = dedType() === 'percent';
-      percentFields.hidden = !pct;
-      flatFields.hidden = pct;
-      errorEl.hidden = true;
-      resultEl.hidden = true;
-    });
-  });
-
-  var PERCENT_BLOCK =
-    '<p><strong>About percentage deductibles.</strong> They\'re most common for hurricane, named-storm or windstorm damage on homeowners policies in coastal and storm-prone states — currently used in at least 19 states (Alabama, Connecticut, Delaware, Florida, Georgia, Hawaii, Louisiana, Maine, Maryland, Massachusetts, Mississippi, New Jersey, New York, North Carolina, Pennsylvania, Rhode Island, South Carolina, Texas, and Virginia). Other states may also permit them, so this isn\'t necessarily an exhaustive list. Typical rates run 1%–10% of the home\'s insured value, most commonly 2%–5%.</p>' +
-    '<p>This deductible is <strong>separate from</strong> — and usually much larger than — the standard flat deductible that applies to other damage like fire or theft. A policy can have both, with the percentage one only triggering under specific conditions, such as an official hurricane or named-storm declaration, sometimes within a defined time window around the storm. Read your policy\'s own trigger definition, not just the number on the declarations page: the label used (hurricane, named storm, wind/hail) determines when the higher deductible actually applies. Kibbo can\'t tell you which type of deductible your specific policy uses — check your declarations page.</p>';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -445,39 +414,31 @@ function computeDeductible(inp) {
     resultEl.hidden = true;
 
     var symbol = document.getElementById('currency').value;
-    var type = dedType();
+    var compulsory = num('compulsory');
+    var voluntary = num('voluntary');
+    if (isNaN(voluntary)) voluntary = 0; // blank voluntary = none chosen
     var claim = num('claimAmount');
-    var flatAmount = num('flatAmount');
-    var ratePct = num('ratePct');
-    var insuredValue = num('insuredValue');
 
-    var valid = !!symbol && claim > 0 &&
-      (type === 'flat' ? flatAmount >= 0 : (ratePct > 0 && ratePct <= 100 && insuredValue > 0));
-    if (!valid) { errorEl.hidden = false; return; }
+    if (!symbol || !(compulsory >= 0) || !(voluntary >= 0) || !(claim > 0)) {
+      errorEl.hidden = false;
+      return;
+    }
 
-    var r = computeDeductible({
-      type: type, claim: claim, flatAmount: flatAmount, ratePct: ratePct, insuredValue: insuredValue
-    });
+    var r = computeExcess({ compulsory: compulsory, voluntary: voluntary, claim: claim });
 
-    document.getElementById('idFigure').textContent = fmt(symbol, r.youPay);
-    document.getElementById('idInsurer').textContent = 'Your insurer pays ' + fmt(symbol, r.insurerPays);
+    document.getElementById('ceFigure').textContent = fmt(symbol, r.youPay);
+    document.getElementById('ceInsurer').textContent = 'Your insurer pays ' + fmt(symbol, r.insurerPays);
+    document.getElementById('ceBreakdown').textContent =
+      'Total excess ' + fmt(symbol, r.totalExcess) + ' = ' + fmt(symbol, compulsory) + ' compulsory + ' + fmt(symbol, voluntary) + ' voluntary';
 
-    var dedLine = document.getElementById('idDeductibleLine');
-    if (type === 'percent') {
-      dedLine.textContent = 'Your ' + ratePct.toLocaleString('en-US', { maximumFractionDigits: 4 }) + '% deductible on a ' + fmt(symbol, insuredValue) + ' insured home = ' + fmt(symbol, r.deductible);
-      dedLine.hidden = false;
+    var small = document.getElementById('ceSmallClaim');
+    if (r.claimWithinExcess) {
+      small.innerHTML = '<p>Your claim (' + fmt(symbol, claim) + ') is ' + (claim === r.totalExcess ? 'the same as' : 'smaller than') + ' your total excess (' + fmt(symbol, r.totalExcess) + '), so you pay the whole claim yourself — ' + fmt(symbol, r.youPay) + (claim < r.totalExcess ? ', not the full excess' : '') + ' — and your insurer pays nothing.</p>';
+      small.hidden = false;
     } else {
-      dedLine.hidden = true;
-      dedLine.textContent = '';
+      small.innerHTML = '';
+      small.hidden = true;
     }
-
-    var html = '';
-    if (r.claimWithinDeductible) {
-      html += '<p>Your claim (' + fmt(symbol, claim) + ') is ' + (claim === r.deductible ? 'the same as' : 'smaller than') + ' your deductible (' + fmt(symbol, r.deductible) + '), so you\'d cover all of it yourself and the insurer would pay nothing. It\'s worth weighing whether filing such a claim makes sense.</p>';
-    }
-    if (type === 'percent') html += PERCENT_BLOCK;
-    html += '<p>A lower deductible generally means a higher premium, and vice versa. This calculator shows what a given deductible costs <em>you</em> per claim — not which overall deductible level makes financial sense for your situation.</p>';
-    document.getElementById('idContext').innerHTML = html;
 
     resultEl.hidden = false;
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
