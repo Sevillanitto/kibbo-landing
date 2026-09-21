@@ -13279,6 +13279,20 @@
     ]
   },
   {
+    "title": "Lease vs Buy Calculator",
+    "type": "calculator",
+    "block": "cars-vehicles",
+    "url": "/cars-vehicles/calculators/lease-vs-buy-calculator",
+    "description": "Compare the net cost of leasing a car against buying it over the same period — including the loan balance you would still owe and what the car is worth at the end.",
+    "keywords": [
+      "lease vs buy calculator",
+      "should i lease or buy a car",
+      "is it cheaper to lease or buy a car",
+      "car lease or finance comparison calculator",
+      "compare car lease cost to buying with a loan"
+    ]
+  },
+  {
     "title": "Vehicle Purchase Cost & Ownership Workbook",
     "type": "template",
     "block": "cars-vehicles",

@@ -6,22 +6,22 @@
 <script src="/kibbo-navbar.js" defer></script>
 
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.getkibbo.com/cars-vehicles/calculators/total-cost-of-ownership-calculator">
+<link rel="canonical" href="https://www.getkibbo.com/cars-vehicles/calculators/lease-vs-buy-calculator">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Free Total Cost of Ownership Calculator — Real Cost of Owning a Car | Kibbo</title>
+<title>Free Lease vs Buy Calculator — Should I Lease or Buy a Car? | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free total cost of ownership calculator: find the real cost of owning a car. Enter your price, financing, insurance, fuel, maintenance and fees to see your all-in cost, cost per month, and what's really driving it — including depreciation.">
+<meta name="description" content="Free lease vs buy calculator: should I lease or buy a car? Enter your loan and lease details to compare what each option really costs over the same period, net of what the car is still worth at the end.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Free Total Cost of Ownership Calculator — Real Cost of Owning a Car">
-<meta property="og:description" content="See the real all-in cost of owning a car — depreciation, financing interest, insurance, fuel, maintenance and fees — and your true cost per month. Free, instant result.">
-<meta property="og:url" content="https://www.getkibbo.com/cars-vehicles/calculators/total-cost-of-ownership-calculator">
+<meta property="og:title" content="Free Lease vs Buy Calculator — Should I Lease or Buy a Car?">
+<meta property="og:description" content="Should you lease or buy a car? Compare the real net cost of each over the same period, including the loan balance and resale value. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/cars-vehicles/calculators/lease-vs-buy-calculator">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Total Cost of Ownership Calculator — Real Cost of Owning a Car">
-<meta name="twitter:description" content="See the real all-in cost of owning a car — depreciation, financing interest, insurance, fuel, maintenance and fees — and your true cost per month. Free, instant result.">
+<meta name="twitter:title" content="Free Lease vs Buy Calculator — Should I Lease or Buy a Car?">
+<meta name="twitter:description" content="Should you lease or buy a car? Compare the real net cost of each over the same period, including the loan balance and resale value. Free, instant result.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,17 +37,17 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
         { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Total Cost of Ownership Calculator", "item": "https://www.getkibbo.com/cars-vehicles/calculators/total-cost-of-ownership-calculator" }
+        { "@type": "ListItem", "position": 3, "name": "Lease vs Buy Calculator", "item": "https://www.getkibbo.com/cars-vehicles/calculators/lease-vs-buy-calculator" }
       ]
     },
     {
       "@type": "WebApplication",
-      "name": "Total Cost of Ownership Calculator",
-      "url": "https://www.getkibbo.com/cars-vehicles/calculators/total-cost-of-ownership-calculator",
+      "name": "Lease vs Buy Calculator",
+      "url": "https://www.getkibbo.com/cars-vehicles/calculators/lease-vs-buy-calculator",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
-      "description": "Free calculator that adds up depreciation, financing interest, insurance, fuel, maintenance and registration fees to show the real all-in cost of owning a car, and what that costs per month.",
+      "description": "Free calculator that compares the net cost of leasing a car against buying it over the same period, accounting for the loan balance and resale value.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
       "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
@@ -246,8 +246,8 @@
 <div class="section-page-hero">
   <div class="container">
     <p class="section-label">Free Calculator</p>
-    <h1 class="section-title">Total cost of ownership calculator: the real cost of owning a car</h1>
-    <p class="section-subtitle">The price on the windscreen is only the start. Add in depreciation, financing interest, insurance, fuel, maintenance and yearly fees to see what owning this car will really cost you — in total, and per month.</p>
+    <h1 class="section-title">Lease vs buy calculator: should I lease or buy a car?</h1>
+    <p class="section-subtitle">Put a purchase and a lease side by side over the same stretch of time. See what each one actually costs you out of pocket, net of what the car is still worth — then decide with real numbers, not a sales pitch.</p>
   </div>
 </div>
 
@@ -255,7 +255,7 @@
 <main class="section-main">
   <div class="calc-wrap">
 
-    <form id="tcoForm" novalidate>
+    <form id="lvbForm" novalidate>
 
       <div class="calc-field">
         <label class="calc-label" for="currency">Currency</label>
@@ -268,90 +268,93 @@
       </div>
 
       <div class="calc-field">
+        <label class="calc-label" for="periodMonths">Comparison period (months)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="1" max="120" step="1" id="periodMonths" name="periodMonths" value="36" required>
+        <span class="calc-help">How long you'd have the car either way — usually the length of the lease (36 or 48 months is typical). Both options are measured over this same period.</span>
+      </div>
+
+      <h2 class="calc-label" style="font-family:var(--font-serif);font-size:19px;margin:34px 0 18px">If you buy</h2>
+
+      <div class="calc-field">
         <label class="calc-label" for="price">Purchase price</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="price" name="price" placeholder="e.g. 28000" required>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="price" name="price" placeholder="e.g. 30000" required>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="years">Ownership period (years)</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0.25" max="50" step="any" id="years" name="years" value="5" required>
-        <span class="calc-help">How long you expect to keep the car before selling or trading it in.</span>
+        <label class="calc-label" for="downPayment">Down payment</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="downPayment" name="downPayment" value="0">
+        <span class="calc-help">The loan is the purchase price minus this down payment.</span>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" id="financingLabel">How are you paying for it?</label>
-        <div class="calc-radio-group" role="radiogroup" aria-labelledby="financingLabel">
-          <label class="calc-radio-option"><input type="radio" name="financing" value="cash" checked> Paying cash</label>
-          <label class="calc-radio-option"><input type="radio" name="financing" value="finance"> Financing</label>
-        </div>
-      </div>
-
-      <div id="financeFields" hidden>
-        <div class="calc-field">
-          <label class="calc-label" for="downPayment">Down payment</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="downPayment" name="downPayment" value="0">
-        </div>
-
-        <div class="calc-field">
-          <label class="calc-label" for="loanAmount">Loan amount</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="loanAmount" name="loanAmount" placeholder="Purchase price minus down payment">
-          <span class="calc-help">Leave blank to use the purchase price minus your down payment. Change it if your loan also rolls in taxes or fees.</span>
-        </div>
-
-        <div class="calc-field">
-          <label class="calc-label" for="apr">APR (%)</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="0" max="100" step="any" id="apr" name="apr" placeholder="e.g. 6.9">
-        </div>
-
-        <div class="calc-field">
-          <label class="calc-label" for="termMonths">Loan term (months)</label>
-          <input class="calc-input" type="number" inputmode="decimal" min="1" max="120" step="1" id="termMonths" name="termMonths" placeholder="e.g. 60">
-        </div>
+        <label class="calc-label" for="apr">Loan APR (%)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" max="100" step="any" id="apr" name="apr" placeholder="e.g. 6.9">
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="insurance">Annual insurance cost</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="insurance" name="insurance" placeholder="e.g. 1400" required>
+        <label class="calc-label" for="termMonths">Loan term (months)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="1" max="120" step="1" id="termMonths" name="termMonths" placeholder="e.g. 60">
+        <span class="calc-help">If the loan is longer than the comparison period, the balance you'd still owe at the end is counted as a cost. (APR and term aren't needed if your down payment covers the whole price.)</span>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="fuel">Annual fuel / energy cost</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="fuel" name="fuel" placeholder="e.g. 1800" required>
-        <span class="calc-help">Estimate from your annual mileage × your vehicle's mpg or kWh/100mi × current fuel/electricity price — Kibbo can't look this up for your specific vehicle.</span>
+        <label class="calc-label" for="resale">Estimated resale value at the end of the period — optional</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="resale" name="resale" placeholder="Leave blank to use the typical curve">
+        <span class="calc-help">Enter your own estimate if you have one. If you leave it blank, we use the same typical new car, industry-average depreciation curve as our Total Cost of Ownership Calculator — your specific model may hold value better or worse.</span>
+      </div>
+
+      <h2 class="calc-label" style="font-family:var(--font-serif);font-size:19px;margin:34px 0 18px">If you lease</h2>
+
+      <div class="calc-field">
+        <label class="calc-label" for="leasePayment">Monthly lease payment</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="leasePayment" name="leasePayment" placeholder="e.g. 420" required>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="maintenance">Annual maintenance / repairs budget</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="maintenance" name="maintenance" placeholder="e.g. 800" required>
-        <span class="calc-help">Typically $500–$1,200 a year (or the local-currency equivalent) for a newer car, and more for an older one. That's a rough industry rule of thumb, not a guarantee.</span>
+        <label class="calc-label" for="leaseUpfront">Upfront lease costs</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="leaseUpfront" name="leaseUpfront" placeholder="e.g. 2500" required>
+        <span class="calc-help">Add together everything you pay at signing: the acquisition fee, the first month's payment, any down payment (also called a "cap cost reduction"), registration and documentation fees, and any security deposit you won't get back. Enter 0 if none.</span>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="registration">Annual registration / tax / inspection fees</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="registration" name="registration" placeholder="e.g. 250" required>
-        <span class="calc-help">These vary by state and country, so enter the figure you know applies to you (0 if none).</span>
+        <label class="calc-label" for="leaseTerm">Lease term (months)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="1" max="120" step="1" id="leaseTerm" name="leaseTerm" value="36" required>
+        <span class="calc-help">This should match the comparison period above — if it doesn't, the comparison isn't apples-to-apples and we'll flag it.</span>
       </div>
 
       <div class="calc-field">
-        <label class="calc-label" for="ownDepreciation">Your own depreciation estimate (% per year) — optional</label>
-        <input class="calc-input" type="number" inputmode="decimal" min="0" max="99" step="any" id="ownDepreciation" name="ownDepreciation" placeholder="Leave blank to use the typical curve">
-        <span class="calc-help">By default we use a typical new car, industry-average curve — your specific model may hold value better or worse. That curve is −16% in year 1, −12% in year 2, −11% in year 3, −9% in year 4 and −7% in year 5, each applied to the value left at the start of that year. From year 6 we assume −5% a year, which is our own estimate rather than part of that data. Enter a single yearly percentage here if you have a better figure for your model.</span>
+        <label class="calc-label" for="dispositionFee">End-of-lease disposition fee — optional</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="dispositionFee" name="dispositionFee" value="0">
+        <span class="calc-help">The fee some leases charge when you hand the car back, if you know it. Leave at 0 if not.</span>
       </div>
 
-      <p class="calc-error" id="tcoError" hidden>Please check your entries: currency, purchase price, ownership period, and every cost field are required (use 0 where nothing applies)<span id="tcoErrorExtra"></span>.</p>
+      <p class="calc-error" id="lvbError" hidden>Please check your entries: currency, comparison period, purchase price, down payment (no more than the price), lease payment, upfront costs and lease term are all required<span id="lvbErrorExtra"></span>.</p>
 
-      <button class="calc-btn" type="submit">Calculate my total cost</button>
+      <button class="calc-btn" type="submit">Compare lease vs buy</button>
     </form>
 
-    <div class="calc-result" id="tcoResult" hidden>
-      <div class="calc-result-compare" id="tcoCompare"></div>
-      <div class="calc-result-figure" id="tcoFigure"></div>
-      <div class="calc-result-headline" id="tcoMonthly"></div>
-      <ul class="calc-result-list" id="tcoBreakdown" style="margin-top:18px"></ul>
-      <div class="calc-result-context" id="tcoContext"></div>
+    <div class="calc-result" id="lvbResult" hidden>
+      <div class="calc-result-compare" id="lvbCompare"></div>
+      <div class="calc-result-pair">
+        <div id="lvbBuyBox">
+          <div class="calc-result-headline">Buying</div>
+          <div class="calc-result-figure" id="lvbBuyFigure"></div>
+          <div class="calc-result-flag" id="lvbBuyFlag"></div>
+          <div class="calc-result-context" id="lvbBuyMonthly"></div>
+          <ul class="calc-result-list" id="lvbBuyList" style="margin-top:14px"></ul>
+        </div>
+        <div id="lvbLeaseBox">
+          <div class="calc-result-headline">Leasing</div>
+          <div class="calc-result-figure" id="lvbLeaseFigure"></div>
+          <div class="calc-result-flag" id="lvbLeaseFlag"></div>
+          <div class="calc-result-context" id="lvbLeaseMonthly"></div>
+          <ul class="calc-result-list" id="lvbLeaseList" style="margin-top:14px"></ul>
+        </div>
+      </div>
+      <div class="calc-result-context" id="lvbContext"></div>
       <div class="calc-cta-group">
-        <a class="calc-cta" href="/cars-vehicles/calculators/lease-vs-buy-calculator">Thinking about leasing instead? Compare lease vs buy →</a>
-        <a class="calc-cta" id="tcoCta" href="/templates/vehicle-purchase-cost-ownership-workbook">Comparing more than one car? Get the free Vehicle Purchase Cost &amp; Ownership Workbook →</a>
+        <a class="calc-cta" href="/cars-vehicles/calculators/total-cost-of-ownership-calculator">Want the full picture of owning a car — insurance, fuel, repairs and depreciation? Try the Total Cost of Ownership Calculator →</a>
+        <a class="calc-cta" href="/templates/vehicle-purchase-cost-ownership-workbook">Comparing specific cars? Get the free Vehicle Purchase Cost &amp; Ownership Workbook →</a>
       </div>
     </div>
 
@@ -420,102 +423,83 @@
 
 <script src="/car-finance-shared.js"></script>
 <script>
-// Total Cost of Ownership Calculator — purely arithmetic, user supplies
-// every cost assumption, so no jurisdiction data and no country selector.
-//
-// Grand total = depreciation + financing interest + insurance + fuel +
-// maintenance + registration/fees, over the ownership period entered.
-//
+// Lease vs Buy Calculator — purely arithmetic, user supplies every number.
 // Depreciation curve and loan amortization live in /car-finance-shared.js
-// (shared with the Lease vs Buy calculator).
+// (shared with the Total Cost of Ownership calculator).
 //
-// Financing: only INTEREST is a cost (the principal is the car's price,
-// already counted through depreciation), so this sums the interest portion
-// of each payment for the months the car is actually owned (capped at the
-// loan term). Any balance still outstanding at sale is assumed cleared
-// from the sale proceeds, so it is not double-counted as an extra cost.
-// <TCO-CORE>
-function financingInterest(loanAmount, aprPct, termMonths, ownershipYears) {
-  var ownedMonths = Math.max(1, Math.round(ownershipYears * 12));
-  return KibboCarFinance.amortize(loanAmount, aprPct, termMonths, ownedMonths).interestPaid;
-}
+// Buying, net cost over the comparison period:
+//   down payment + loan payments made in the period
+//   + loan balance still owed at the end of the period
+//   - resale value at the end of the period
+// The remaining balance is ADDED, not subtracted: it is money still owed
+// against the car. Together with the resale value it forms the equity
+// (resale - balance) the buyer walks away with, so a shorter period than
+// the loan term is charged the balance rather than ignoring it.
+//
+// Leasing over the period:
+//   upfront costs + monthly payment x lease term + disposition fee
+// The car goes back, so there is nothing to net out.
+// <LVB-CORE>
+function computeLeaseVsBuy(inp) {
+  var loanAmount = inp.price - inp.down;
+  var loan = loanAmount > 0
+    ? KibboCarFinance.amortize(loanAmount, inp.aprPct, inp.termMonths, inp.periodMonths)
+    : { payment: 0, paymentsMade: 0, interestPaid: 0, balance: 0 };
+  var loanPayments = loan.payment * loan.paymentsMade;
+  var resaleFromCurve = inp.resaleInput === null;
+  var resale = resaleFromCurve
+    ? inp.price * KibboCarFinance.residualFraction(inp.periodMonths / 12, null)
+    : inp.resaleInput;
+  var buyTotal = inp.down + loanPayments + loan.balance - resale;
 
-// Percentages to 1 decimal that always sum to exactly 100.0 (largest-
-// remainder rounding), so the displayed breakdown never reads 99.9/100.1.
-function percentagesSummingTo100(amounts) {
-  var total = amounts.reduce(function (a, b) { return a + b; }, 0);
-  if (!(total > 0)) return amounts.map(function () { return 0; });
-  var exact = amounts.map(function (a) { return a / total * 1000; });
-  var floors = exact.map(Math.floor);
-  var remaining = 1000 - floors.reduce(function (a, b) { return a + b; }, 0);
-  exact.map(function (v, i) { return { i: i, r: v - Math.floor(v) }; })
-    .sort(function (a, b) { return b.r - a.r; })
-    .slice(0, remaining)
-    .forEach(function (o) { floors[o.i] += 1; });
-  return floors.map(function (t) { return t / 10; });
-}
+  var leasePayments = inp.leasePayment * inp.leaseTerm;
+  var leaseTotal = inp.leaseUpfront + leasePayments + inp.dispositionFee;
 
-function computeTCO(inp) {
-  var years = inp.years;
-  var resale = inp.price * KibboCarFinance.residualFraction(years, inp.ownDepreciationPct);
-  var depreciation = inp.price - resale;
-  var interest = inp.financing
-    ? financingInterest(inp.loanAmount, inp.aprPct, inp.termMonths, years)
-    : 0;
-  var insurance = inp.insurance * years;
-  var fuel = inp.fuel * years;
-  var maintenance = inp.maintenance * years;
-  var registration = inp.registration * years;
-  var grandTotal = interest + insurance + fuel + maintenance + registration + depreciation;
+  // Compare the whole-currency-unit figures that are actually displayed, so
+  // two cards that both read the same number are never flagged as different.
+  var diff = Math.round(leaseTotal) - Math.round(buyTotal); // > 0 means buying costs less
+  var lower = diff === 0 ? 'same' : (diff > 0 ? 'buy' : 'lease');
   return {
+    loanAmount: loanAmount,
+    loanPayment: loan.payment,
+    paymentsMade: loan.paymentsMade,
+    loanPayments: loanPayments,
+    balanceOwed: loan.balance,
     resale: resale,
-    depreciation: depreciation,
-    interest: interest,
-    insurance: insurance,
-    fuel: fuel,
-    maintenance: maintenance,
-    registration: registration,
-    grandTotal: grandTotal,
-    perMonth: grandTotal / years / 12
+    resaleFromCurve: resaleFromCurve,
+    buyTotal: buyTotal,
+    leasePayments: leasePayments,
+    leaseTotal: leaseTotal,
+    lower: lower,
+    difference: Math.abs(diff),
+    leaseTermMismatch: inp.leaseTerm !== inp.periodMonths
   };
 }
-// </TCO-CORE>
+// </LVB-CORE>
 
 (function () {
   'use strict';
 
-  var form = document.getElementById('tcoForm');
-  var errorEl = document.getElementById('tcoError');
-  var errorExtraEl = document.getElementById('tcoErrorExtra');
-  var resultEl = document.getElementById('tcoResult');
-  var financeFields = document.getElementById('financeFields');
-  var loanAmountEl = document.getElementById('loanAmount');
+  var form = document.getElementById('lvbForm');
+  var errorEl = document.getElementById('lvbError');
+  var errorExtraEl = document.getElementById('lvbErrorExtra');
+  var resultEl = document.getElementById('lvbResult');
 
   function fmt(symbol, n) {
-    return symbol + Math.round(n).toLocaleString('en-US');
+    var rounded = Math.round(n);
+    return (rounded < 0 ? '−' : '') + symbol + Math.abs(rounded).toLocaleString('en-US');
   }
   function num(id) {
     var raw = document.getElementById(id).value;
     return raw === '' ? NaN : parseFloat(raw);
   }
-  function isFinancing() {
-    return form.querySelector('input[name="financing"]:checked').value === 'finance';
-  }
+  function isWhole(n) { return !isNaN(n) && Math.floor(n) === n; }
 
-  function refreshLoanPlaceholder() {
-    var price = num('price');
-    var down = num('downPayment');
-    if (isNaN(down)) down = 0;
-    loanAmountEl.placeholder = (!isNaN(price) && price > down)
-      ? 'Defaults to ' + Math.round(price - down).toLocaleString('en-US')
-      : 'Purchase price minus down payment';
+  function rowsHtml(rows) {
+    return rows.map(function (r) {
+      return '<li><span class="crl-name">' + r[0] + '</span><span class="crl-amount">' + r[1] + '</span></li>';
+    }).join('');
   }
-
-  Array.prototype.forEach.call(form.querySelectorAll('input[name="financing"]'), function (r) {
-    r.addEventListener('change', function () { financeFields.hidden = !isFinancing(); });
-  });
-  document.getElementById('price').addEventListener('input', refreshLoanPlaceholder);
-  document.getElementById('downPayment').addEventListener('input', refreshLoanPlaceholder);
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -524,93 +508,78 @@ function computeTCO(inp) {
     errorExtraEl.textContent = '';
 
     var symbol = document.getElementById('currency').value;
+    var periodMonths = num('periodMonths');
     var price = num('price');
-    var years = num('years');
-    var insurance = num('insurance');
-    var fuel = num('fuel');
-    var maintenance = num('maintenance');
-    var registration = num('registration');
-    var ownRaw = num('ownDepreciation');
-    var financing = isFinancing();
+    var down = num('downPayment');
+    if (isNaN(down)) down = 0;
+    var apr = num('apr');
+    var termMonths = num('termMonths');
+    var resaleRaw = num('resale');
+    var leasePayment = num('leasePayment');
+    var leaseUpfront = num('leaseUpfront');
+    var leaseTerm = num('leaseTerm');
+    var dispositionFee = num('dispositionFee');
+    if (isNaN(dispositionFee)) dispositionFee = 0;
 
-    var valid = !!symbol && price > 0 && years >= 0.25 && years <= 50 &&
-      insurance >= 0 && fuel >= 0 && maintenance >= 0 && registration >= 0 &&
-      (isNaN(ownRaw) || (ownRaw >= 0 && ownRaw < 100));
+    var valid = !!symbol && isWhole(periodMonths) && periodMonths >= 1 && periodMonths <= 120 &&
+      price > 0 && down >= 0 && down <= price &&
+      leasePayment > 0 && leaseUpfront >= 0 && isWhole(leaseTerm) && leaseTerm >= 1 && leaseTerm <= 120 &&
+      dispositionFee >= 0 && (isNaN(resaleRaw) || resaleRaw >= 0);
 
-    var down = 0, loanAmount = 0, apr = 0, termMonths = 0;
-    if (financing) {
-      down = num('downPayment');
-      if (isNaN(down)) down = 0;
-      var loanRaw = num('loanAmount');
-      loanAmount = isNaN(loanRaw) ? price - down : loanRaw;
-      apr = num('apr');
-      termMonths = num('termMonths');
-      var financeOk = down >= 0 && down < price && loanAmount > 0 &&
-        apr >= 0 && apr <= 100 && termMonths >= 1 && termMonths <= 120 &&
-        Math.floor(termMonths) === termMonths;
-      if (!financeOk) {
-        valid = false;
-        errorExtraEl.textContent = ', plus a down payment below the price, a loan amount, an APR and a whole-number loan term of up to 120 months when financing';
-      }
+    if (valid && down < price && !(apr >= 0 && apr <= 100 && isWhole(termMonths) && termMonths >= 1 && termMonths <= 120)) {
+      valid = false;
+      errorExtraEl.textContent = ', plus a loan APR and a whole-number loan term of up to 120 months when the down payment doesn\'t cover the whole price';
     }
-
     if (!valid) { errorEl.hidden = false; return; }
 
-    var r = computeTCO({
-      price: price, years: years, financing: financing,
-      loanAmount: loanAmount, aprPct: apr, termMonths: termMonths,
-      insurance: insurance, fuel: fuel, maintenance: maintenance, registration: registration,
-      ownDepreciationPct: isNaN(ownRaw) ? null : ownRaw
+    var r = computeLeaseVsBuy({
+      price: price, down: down, aprPct: isNaN(apr) ? 0 : apr, termMonths: isNaN(termMonths) ? 1 : termMonths,
+      periodMonths: periodMonths, resaleInput: isNaN(resaleRaw) ? null : resaleRaw,
+      leasePayment: leasePayment, leaseUpfront: leaseUpfront, leaseTerm: leaseTerm, dispositionFee: dispositionFee
     });
 
-    var yearsLabel = years.toLocaleString('en-US', { maximumFractionDigits: 2 }) + (years === 1 ? ' year' : ' years');
-    document.getElementById('tcoCompare').textContent = 'Real all-in cost of owning this car for ' + yearsLabel;
-    document.getElementById('tcoFigure').textContent = fmt(symbol, r.grandTotal);
-    document.getElementById('tcoMonthly').textContent = 'That works out to ' + fmt(symbol, r.perMonth) + ' per month';
+    document.getElementById('lvbCompare').textContent = 'Net cost over ' + periodMonths + ' months';
+    document.getElementById('lvbBuyFigure').textContent = fmt(symbol, r.buyTotal);
+    document.getElementById('lvbLeaseFigure').textContent = fmt(symbol, r.leaseTotal);
+    document.getElementById('lvbBuyBox').classList.toggle('is-lower', r.lower === 'buy');
+    document.getElementById('lvbLeaseBox').classList.toggle('is-lower', r.lower === 'lease');
+    document.getElementById('lvbBuyFlag').textContent = r.lower === 'buy' ? 'Lower total cost' : (r.lower === 'same' ? 'About the same' : '');
+    document.getElementById('lvbLeaseFlag').textContent = r.lower === 'lease' ? 'Lower total cost' : (r.lower === 'same' ? 'About the same' : '');
+    document.getElementById('lvbBuyMonthly').textContent = 'About ' + fmt(symbol, r.buyTotal / periodMonths) + ' a month, net of resale value';
+    document.getElementById('lvbLeaseMonthly').textContent = 'About ' + fmt(symbol, r.leaseTotal / leaseTerm) + ' a month over the ' + leaseTerm + '-month lease';
 
-    var rows = [
-      { name: 'Depreciation', amount: r.depreciation },
-      { name: 'Financing interest', amount: r.interest },
-      { name: 'Insurance', amount: r.insurance },
-      { name: 'Fuel / energy', amount: r.fuel },
-      { name: 'Maintenance & repairs', amount: r.maintenance },
-      { name: 'Registration, tax & fees', amount: r.registration }
+    var buyRows = [['Down payment', fmt(symbol, down)]];
+    if (r.paymentsMade > 0) buyRows.push(['Loan payments (' + r.paymentsMade + ' × ' + fmt(symbol, r.loanPayment) + ')', fmt(symbol, r.loanPayments)]);
+    if (r.balanceOwed > 0) buyRows.push(['Still owed on the loan at the end', fmt(symbol, r.balanceOwed)]);
+    buyRows.push(['Minus estimated resale value', fmt(symbol, -r.resale)]);
+    document.getElementById('lvbBuyList').innerHTML = rowsHtml(buyRows);
+
+    var leaseRows = [
+      ['Upfront costs', fmt(symbol, leaseUpfront)],
+      ['Lease payments (' + leaseTerm + ' × ' + fmt(symbol, leasePayment) + ')', fmt(symbol, r.leasePayments)]
     ];
-    var pcts = percentagesSummingTo100(rows.map(function (x) { return x.amount; }));
-    rows.forEach(function (x, i) { x.pct = pcts[i]; });
-    rows.sort(function (a, b) { return b.amount - a.amount; });
-
-    var list = document.getElementById('tcoBreakdown');
-    list.innerHTML = '';
-    rows.forEach(function (x) {
-      var li = document.createElement('li');
-      var name = document.createElement('span');
-      name.className = 'crl-name';
-      name.textContent = x.name;
-      var amt = document.createElement('span');
-      amt.className = 'crl-amount';
-      amt.textContent = fmt(symbol, x.amount) + ' ';
-      var meta = document.createElement('span');
-      meta.className = 'crl-meta';
-      meta.textContent = '(' + x.pct.toFixed(1) + '%)';
-      amt.appendChild(meta);
-      li.appendChild(name);
-      li.appendChild(amt);
-      list.appendChild(li);
-    });
+    if (dispositionFee > 0) leaseRows.push(['Disposition fee', fmt(symbol, dispositionFee)]);
+    document.getElementById('lvbLeaseList').innerHTML = rowsHtml(leaseRows);
 
     var html = '';
-    html += '<p>Depreciation is usually the single biggest cost of owning a car, and the one drivers notice least — it\'s never billed to you. It just shows up later as a lower resale or trade-in value. Based on ' +
-      (isNaN(ownRaw) ? 'the typical new-car curve' : 'your ' + ownRaw.toLocaleString('en-US', { maximumFractionDigits: 2 }) + '% a year estimate') +
-      ', this car would be worth about <strong>' + fmt(symbol, r.resale) + '</strong> after ' + yearsLabel + ', so roughly <strong>' + fmt(symbol, r.depreciation) + '</strong> of its price disappears without a single invoice.</p>';
-    if (financing) {
-      var ownedMonths = Math.max(1, Math.round(years * 12));
-      html += '<p>Only the interest on your loan is counted as a cost, so the principal you repay isn\'t counted twice.' +
-        (termMonths > ownedMonths ? ' Your loan runs ' + termMonths + ' months but you\'d own the car for about ' + ownedMonths + ', so interest is counted only up to the sale, and any balance left is assumed to be cleared from the sale proceeds.' : '') +
-        '</p>';
+    if (r.lower === 'same') {
+      html += '<p>On these numbers the two options cost about the same over ' + periodMonths + ' months.</p>';
+    } else {
+      html += '<p>On these numbers, ' + (r.lower === 'buy' ? 'buying' : 'leasing') + ' comes out ' + fmt(symbol, r.difference) + ' lower over ' + periodMonths + ' months — but that\'s one input to your decision, not a verdict, because the two options don\'t end in the same place.</p>';
     }
-    html += '<p>This is an estimate built entirely from the figures you entered, plus a typical depreciation curve if you didn\'t supply your own — your actual costs, and your car\'s actual resale value, will differ.</p>';
-    document.getElementById('tcoContext').innerHTML = html;
+    // Always shown, whichever total is lower: the options are not equivalent.
+    html += '<p><strong>Buying leaves you owning a ' + fmt(symbol, r.resale) + '-value asset at the end' +
+      (r.balanceOwed > 0 ? ' (with ' + fmt(symbol, r.balanceOwed) + ' still owed on the loan, which is already counted in the buying total)' : '') +
+      '; leasing leaves you with nothing to sell, but usually lower monthly costs and no repair-cost risk once the warranty covers the lease term.</strong> The buying figure assumes you sell or trade the car in at the end for the resale value ' +
+      (r.resaleFromCurve ? 'estimated from a typical new-car depreciation curve (industry average — your specific model may hold value better or worse)' : 'you entered') + '.</p>';
+    if (r.leaseTermMismatch) {
+      html += '<p>Your lease term (' + leaseTerm + ' months) doesn\'t match the comparison period (' + periodMonths + ' months), so this comparison isn\'t apples-to-apples. The lease total covers ' + leaseTerm + ' months while the buying total covers ' + periodMonths + '.</p>';
+    }
+    if (r.balanceOwed > 0) {
+      html += '<p>Your loan runs longer than the comparison period, so the ' + fmt(symbol, r.balanceOwed) + ' you\'d still owe at the end is counted as a cost of buying. If you keep the car, you still own something worth about ' + fmt(symbol, r.resale) + ' against that debt.</p>';
+    }
+    html += '<p>In many US states, sales tax is charged differently on a purchase than on a lease — some states tax the full purchase price up front when you buy, but only the monthly payment stream when you lease, which can make leasing cheaper on tax even before you compare anything else. This varies significantly by state, so check your own state\'s rule rather than assuming. This calculator adds no sales tax to either side unless you\'ve included it in the price or upfront costs you entered. It also leaves out excess-mileage and wear-and-tear charges on a lease, and running costs like insurance, fuel and repairs.</p>';
+    document.getElementById('lvbContext').innerHTML = html;
 
     resultEl.hidden = false;
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });

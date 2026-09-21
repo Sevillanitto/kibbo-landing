@@ -1173,6 +1173,13 @@ color: var(--text-primary); cursor: pointer; transition: var(--transition); marg
 .calc-result-list .crl-name { color: var(--text-primary); font-weight: 600; }
 .calc-result-list .crl-meta { color: var(--text-muted); font-weight: 400; }
 .calc-result-list .crl-amount { color: var(--text-primary); white-space: nowrap; }
+/* Two-option result (Lease vs Buy): stacked on mobile, side by side from 560px.
+   The lower total keeps the brand-green figure; the other one is muted. */
+.calc-result-pair { display: grid; grid-template-columns: 1fr; gap: 28px; }
+@media (min-width: 560px) { .calc-result-pair { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.calc-result-pair .calc-result-figure { color: var(--text-secondary); }
+.calc-result-pair .is-lower .calc-result-figure { color: var(--accent-green); }
+.calc-result-pair .calc-result-flag { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--accent-green); min-height: 20px; margin-top: 6px; }
 .q-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 @media (min-width: 640px) { .q-card-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 960px) { .q-card-grid { grid-template-columns: repeat(4, 1fr); } }
