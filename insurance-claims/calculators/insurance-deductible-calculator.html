@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free insurance deductible calculator: see how much you'll pay out of pocket and how much your insurer covers on a claim. Includes a hurricane deductible calculator for percentage deductibles based on your home's insured value.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles">
+<meta property="og:description" content="How much will I pay on an insurance claim? Works for flat deductibles and percentage (hurricane / named-storm) deductibles. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Insurance Deductible Calculator — Hurricane &amp; Flat Deductibles">
+<meta name="twitter:description" content="How much will I pay on an insurance claim? Works for flat deductibles and percentage (hurricane / named-storm) deductibles. Free, instant result.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Insurance Deductible Calculator", "item": "https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Insurance Deductible Calculator",
+      "url": "https://www.getkibbo.com/insurance-claims/calculators/insurance-deductible-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that shows how much you pay out of pocket and how much your insurer pays on a claim, for both flat-dollar deductibles and percentage-of-insured-value (hurricane / named-storm) deductibles.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Insurance deductible calculator: how much will I pay?</h1>
+    <p class="section-subtitle">Enter your deductible and your claim to see what you'll pay out of pocket and what your insurer covers. Works for a standard flat deductible and as a hurricane deductible calculator — for the percentage deductibles that can turn a storm claim into a five-figure bill.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="idForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="currency">Currency</label>
+        <select class="calc-select" id="currency" name="currency" required>
+          <option value="$" selected>$ (USD)</option>
+          <option value="£">£ (GBP)</option>
+          <option value="€">€ (EUR)</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" id="dedTypeLabel">What kind of deductible is it?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="dedTypeLabel">
+          <label class="calc-radio-option"><input type="radio" name="dedType" value="flat" checked> Flat dollar amount</label>
+          <label class="calc-radio-option"><input type="radio" name="dedType" value="percent"> Percentage of insured value</label>
+        </div>
+        <span class="calc-help">Percentage deductibles are common for hurricane, named-storm and wind damage on home insurance. Not sure which you have? Check your policy's declarations page.</span>
+      </div>
+
+      <div id="flatFields">
+        <div class="calc-field">
+          <label class="calc-label" for="flatAmount">Deductible amount</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="flatAmount" name="flatAmount" placeholder="e.g. 1000">
+        </div>
+      </div>
+
+      <div id="percentFields" hidden>
+        <div class="calc-field">
+          <label class="calc-label" for="ratePct">Deductible percentage (%)</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0.01" max="100" step="any" id="ratePct" name="ratePct" placeholder="e.g. 2">
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="insuredValue">Insured dwelling value (Coverage A amount)</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="insuredValue" name="insuredValue" placeholder="e.g. 350000">
+          <span class="calc-help">This is your home's <strong>insured</strong> value as stated on your policy declarations page — not its market value or what you paid for it. These are often different numbers.</span>
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="claimAmount">Total claim / damage amount</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="claimAmount" name="claimAmount" placeholder="e.g. 45000" required>
+      </div>
+
+      <p class="calc-error" id="idError" hidden>Please enter the claim amount and your deductible — and for a percentage deductible, a percentage between 0 and 100 plus your insured dwelling value.</p>
+
+      <button class="calc-btn" type="submit">Calculate what I'll pay</button>
+    </form>
+
+    <div class="calc-result" id="idResult" hidden>
+      <div class="calc-result-compare">You pay out of pocket</div>
+      <div class="calc-result-figure" id="idFigure"></div>
+      <div class="calc-result-headline" id="idInsurer"></div>
+      <div class="calc-result-headline" id="idDeductibleLine" hidden style="margin-top:6px"></div>
+      <div class="calc-result-context" id="idContext"></div>
+      <div class="calc-cta-group">
+        <a class="calc-cta" href="/checklists/insurance-policy-coverage-checklist">Check your deductible, limits and exclusions with the Insurance Policy Coverage Checklist →</a>
+        <a class="calc-cta" href="/templates/insurance-damage-loss-inventory-workbook">Total up your damage with the Insurance Damage &amp; Loss Inventory Workbook →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Insurance Deductible Calculator (US / general terminology) — purely
+// arithmetic, no jurisdiction branching, so no country selector: just a
+// currency symbol picker ($ default), same pattern as the other calculators.
+//
+// Flat:       deductible = the amount entered.
+// Percentage: deductible = insured dwelling value (Coverage A) x rate / 100.
+// Either way: you pay = min(claim, deductible); insurer pays =
+//             max(0, claim - deductible) — so a claim smaller than the
+// deductible costs the insurer $0 (never a negative number).
+// <ID-CORE>
+function computeDeductible(inp) {
+  var deductible = inp.type === 'percent'
+    ? inp.insuredValue * (inp.ratePct / 100)
+    : inp.flatAmount;
+  return {
+    deductible: deductible,
+    youPay: Math.min(inp.claim, deductible),
+    insurerPays: Math.max(0, inp.claim - deductible),
+    claimWithinDeductible: inp.claim <= deductible
+  };
+}
+// </ID-CORE>
+
+(function () {
+  'use strict';
+
+  var form = document.getElementById('idForm');
+  var flatFields = document.getElementById('flatFields');
+  var percentFields = document.getElementById('percentFields');
+  var errorEl = document.getElementById('idError');
+  var resultEl = document.getElementById('idResult');
+
+  function fmt(symbol, n) {
+    return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+  function num(id) {
+    var raw = document.getElementById(id).value;
+    return raw === '' ? NaN : parseFloat(raw);
+  }
+  function dedType() {
+    return form.querySelector('input[name="dedType"]:checked').value;
+  }
+
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="dedType"]'), function (r) {
+    r.addEventListener('change', function () {
+      var pct = dedType() === 'percent';
+      percentFields.hidden = !pct;
+      flatFields.hidden = pct;
+      errorEl.hidden = true;
+      resultEl.hidden = true;
+    });
+  });
+
+  var PERCENT_BLOCK =
+    '<p><strong>About percentage deductibles.</strong> They\'re most common for hurricane, named-storm or windstorm damage on homeowners policies in coastal and storm-prone states — currently used in at least 19 states (Alabama, Connecticut, Delaware, Florida, Georgia, Hawaii, Louisiana, Maine, Maryland, Massachusetts, Mississippi, New Jersey, New York, North Carolina, Pennsylvania, Rhode Island, South Carolina, Texas, and Virginia). Other states may also permit them, so this isn\'t necessarily an exhaustive list. Typical rates run 1%–10% of the home\'s insured value, most commonly 2%–5%.</p>' +
+    '<p>This deductible is <strong>separate from</strong> — and usually much larger than — the standard flat deductible that applies to other damage like fire or theft. A policy can have both, with the percentage one only triggering under specific conditions, such as an official hurricane or named-storm declaration, sometimes within a defined time window around the storm. Read your policy\'s own trigger definition, not just the number on the declarations page: the label used (hurricane, named storm, wind/hail) determines when the higher deductible actually applies. Kibbo can\'t tell you which type of deductible your specific policy uses — check your declarations page.</p>';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    resultEl.hidden = true;
+
+    var symbol = document.getElementById('currency').value;
+    var type = dedType();
+    var claim = num('claimAmount');
+    var flatAmount = num('flatAmount');
+    var ratePct = num('ratePct');
+    var insuredValue = num('insuredValue');
+
+    var valid = !!symbol && claim > 0 &&
+      (type === 'flat' ? flatAmount >= 0 : (ratePct > 0 && ratePct <= 100 && insuredValue > 0));
+    if (!valid) { errorEl.hidden = false; return; }
+
+    var r = computeDeductible({
+      type: type, claim: claim, flatAmount: flatAmount, ratePct: ratePct, insuredValue: insuredValue
+    });
+
+    document.getElementById('idFigure').textContent = fmt(symbol, r.youPay);
+    document.getElementById('idInsurer').textContent = 'Your insurer pays ' + fmt(symbol, r.insurerPays);
+
+    var dedLine = document.getElementById('idDeductibleLine');
+    if (type === 'percent') {
+      dedLine.textContent = 'Your ' + ratePct.toLocaleString('en-US', { maximumFractionDigits: 4 }) + '% deductible on a ' + fmt(symbol, insuredValue) + ' insured home = ' + fmt(symbol, r.deductible);
+      dedLine.hidden = false;
+    } else {
+      dedLine.hidden = true;
+      dedLine.textContent = '';
+    }
+
+    var html = '';
+    if (r.claimWithinDeductible) {
+      html += '<p>Your claim (' + fmt(symbol, claim) + ') is ' + (claim === r.deductible ? 'the same as' : 'smaller than') + ' your deductible (' + fmt(symbol, r.deductible) + '), so you\'d cover all of it yourself and the insurer would pay nothing. It\'s worth weighing whether filing such a claim makes sense.</p>';
+    }
+    if (type === 'percent') html += PERCENT_BLOCK;
+    html += '<p>A lower deductible generally means a higher premium, and vice versa. This calculator shows what a given deductible costs <em>you</em> per claim — not which overall deductible level makes financial sense for your situation.</p>';
+    document.getElementById('idContext').innerHTML = html;
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>

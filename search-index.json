@@ -12344,6 +12344,22 @@
     ]
   },
   {
+    "title": "Insurance Deductible Calculator",
+    "type": "calculator",
+    "block": "insurance-claims",
+    "url": "/insurance-claims/calculators/insurance-deductible-calculator",
+    "description": "See what you'll pay out of pocket and what your insurer covers on a claim — for a flat deductible or a percentage (hurricane / named-storm) deductible based on your home's insured value.",
+    "keywords": [
+      "insurance deductible calculator",
+      "hurricane deductible calculator",
+      "how much will i pay on an insurance claim",
+      "percentage deductible calculator",
+      "named storm deductible 2% of home value",
+      "wind hail deductible calculator",
+      "how much is my homeowners insurance deductible"
+    ]
+  },
+  {
     "title": "Small Claims Court Demand Letter Pack",
     "type": "template",
     "block": "legal-contracts",
