@@ -13265,6 +13265,20 @@
     ]
   },
   {
+    "title": "Total Cost of Ownership Calculator",
+    "type": "calculator",
+    "block": "cars-vehicles",
+    "url": "/cars-vehicles/calculators/total-cost-of-ownership-calculator",
+    "description": "Add up depreciation, financing interest, insurance, fuel, maintenance and yearly fees to see the real all-in cost of owning a car — in total and per month.",
+    "keywords": [
+      "total cost of ownership calculator",
+      "real cost of owning a car",
+      "how much does it really cost to own a car",
+      "car depreciation and running cost calculator",
+      "car cost per month including depreciation and insurance"
+    ]
+  },
+  {
     "title": "Vehicle Purchase Cost & Ownership Workbook",
     "type": "template",
     "block": "cars-vehicles",
