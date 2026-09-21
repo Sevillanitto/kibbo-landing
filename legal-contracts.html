@@ -837,7 +837,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // later: populate the matching array with { title, desc, url } objects; the
 // section, heading and cards will appear automatically on next page load.
 (function () {
-  var CALCULATORS = [];
+  var CALCULATORS = [
+    { title: "Cooling-Off Period Calculator", desc: "Find your last day to cancel a purchase — the US 3-business-day Cooling-Off Rule for door-to-door and off-premises sales, or the UK/EU 14-day right — and see when neither applies.", url: "/legal-contracts/calculators/cooling-off-period-calculator.html" }
+  ];
   var CASES = [];
   var INVESTIGATIONS = [];
 
