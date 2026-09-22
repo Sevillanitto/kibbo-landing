@@ -102,6 +102,8 @@
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
   .q-header { padding: 56px 0 32px; }
   .q-category { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
+  /* Visible at ALL breakpoints, unlike the sitewide .hero-image class (display:none on mobile). */
+  .q-hero-image { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin: 0 0 24px; }
   .q-header h1 { font-family: var(--font-serif); font-size: 38px; font-weight: 800; line-height: 1.2; margin-bottom: 18px; }
   .q-dek { font-size: 18px; color: var(--text-secondary); max-width: 620px; }
   .q-meta { display: flex; gap: 18px; margin-top: 22px; font-size: 13px; color: var(--text-secondary); }
@@ -339,6 +341,7 @@
 
   <header class="q-header">
     <span class="q-category">Training &amp; Education · US &amp; UK</span>
+    <img class="q-hero-image" src="/images/questions/training-education/can-online-course-refuse-refund-hero.png" width="1600" height="900" alt="Can an online course refuse to give me a refund?" loading="eager" fetchpriority="high">
     <h1>Can an online course refuse to give me a refund?</h1>
     <p class="q-dek">A "no refunds" banner on the checkout page is a business preference, not a law — and in one of these two countries, it genuinely doesn't have the final say.</p>
     <div class="q-meta">
