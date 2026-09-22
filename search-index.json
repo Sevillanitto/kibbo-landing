@@ -12392,6 +12392,22 @@
     ]
   },
   {
+    "title": "Lost Parcel Claim Calculator",
+    "type": "calculator",
+    "block": "delivery-parcels",
+    "url": "/delivery-parcels/calculators/lost-parcel-claim-calculator",
+    "description": "USPS, UPS and FedEx cap default liability at just $100 per package (or $0 for a UPS letter/envelope) regardless of what it was worth. See your real maximum claim for a lost parcel.",
+    "keywords": [
+      "lost parcel claim calculator",
+      "how much can i claim for a lost package",
+      "usps ups fedex 100 dollar liability limit",
+      "declared value shipping insurance",
+      "lost package claim amount calculator",
+      "ups letter envelope zero liability",
+      "carrier default liability coverage"
+    ]
+  },
+  {
     "title": "Small Claims Court Demand Letter Pack",
     "type": "template",
     "block": "legal-contracts",
