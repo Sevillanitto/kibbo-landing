@@ -143,6 +143,15 @@
     color: var(--accent-terra);
     margin-bottom: 18px;
   }
+  /* Visible at ALL breakpoints, unlike the sitewide .hero-image class (display:none on mobile). */
+  .q-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 0 24px;
+  }
   .q-header h1 {
     font-family: var(--font-serif);
     font-size: 38px;
@@ -478,6 +487,7 @@
 
   <header class="q-header">
     <span class="q-category">Finance &amp; Banking · US &amp; UK</span>
+    <img class="q-hero-image" src="/images/questions/financial-banking/can-bank-refuse-give-me-cash-from-own-account-hero.png" width="1600" height="900" alt="Can a bank refuse to give me cash from my own account?" loading="eager" fetchpriority="high">
     <h1>Can a bank refuse to give me cash from my own account?</h1>
     <p class="q-dek">It's your money — but "your money" and "instant, no-questions-asked access to it" turn out to be two different legal ideas.</p>
     <div class="q-meta">
