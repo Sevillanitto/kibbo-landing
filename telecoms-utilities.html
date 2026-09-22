@@ -820,7 +820,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // later: populate the matching array with { title, desc, url } objects; the
 // section, heading and cards will appear automatically on next page load.
 (function () {
-  var CALCULATORS = [];
+  var CALCULATORS = [
+    { title: "Hidden Telecom Fees Calculator", desc: "Add every line item from your actual cable, internet or phone bill and see how much is a legitimate government pass-through versus a fee the provider invented itself.", url: "/telecoms-utilities/calculators/hidden-telecom-fees-calculator.html" }
+  ];
   var CASES = [];
   var INVESTIGATIONS = [];
 
