@@ -632,6 +632,71 @@
     ]
   },
   {
+    "title": "Can a Company Keep My Personal Data After I Delete My Account?",
+    "type": "question",
+    "block": "privacy-data",
+    "url": "/questions/privacy-data/can-company-keep-personal-data-after-delete-account",
+    "description": "Sometimes, legally — deletion rights under GDPR and CCPA both have real exceptions. Here's exactly when a company can keep your data anyway, and when it can't.",
+    "keywords": [
+      "can a company keep my data after i delete my account",
+      "gdpr right to erasure exceptions",
+      "ccpa deletion request exceptions",
+      "company kept my data after deletion request"
+    ]
+  },
+  {
+    "title": "Can a Company Refuse to Tell Me Why It Is Using My Data?",
+    "type": "question",
+    "block": "privacy-data",
+    "url": "/questions/privacy-data/can-company-refuse-tell-me-why-using-data",
+    "description": "No, not under GDPR — you have a specific legal right to know the purpose and legal basis for processing your data. Here's exactly what a company has to disclose.",
+    "keywords": [
+      "can a company refuse to tell me why it uses my data",
+      "gdpr right to be informed",
+      "legal basis for processing my data",
+      "company wont explain why they have my data"
+    ]
+  },
+  {
+    "title": "Can a Company Sell My Email Address to Another Company?",
+    "type": "question",
+    "block": "privacy-data",
+    "url": "/questions/privacy-data/can-company-sell-my-email-address-another-company",
+    "description": "Only with a lawful basis, and increasingly, only if you let them opt out first. Here's what GDPR and CCPA actually require before your data can be sold or shared.",
+    "keywords": [
+      "can a company sell my email address",
+      "company sold my data to another company",
+      "ccpa right to opt out of sale",
+      "gdpr consent to share personal data"
+    ]
+  },
+  {
+    "title": "Can My Employer Read My Private Emails on a Work Computer?",
+    "type": "question",
+    "block": "privacy-data",
+    "url": "/questions/privacy-data/can-employer-read-private-emails-work-computer",
+    "description": "Generally yes for work email — but personal accounts checked on a work device are legally different, and several states require advance notice either way.",
+    "keywords": [
+      "can my employer read my emails on a work computer",
+      "employer monitoring work email legal",
+      "personal email on work computer privacy",
+      "workplace email monitoring notice laws"
+    ]
+  },
+  {
+    "title": "Can My Neighbour Record Me With a Security Camera?",
+    "type": "question",
+    "block": "privacy-data",
+    "url": "/questions/privacy-data/can-neighbour-record-me-security-camera",
+    "description": "Usually yes for public-facing video, but it depends on where the camera points and whether it also records audio. Here's how courts actually draw the line.",
+    "keywords": [
+      "can my neighbour record me with a security camera",
+      "neighbour camera pointed at my yard",
+      "reasonable expectation of privacy security camera",
+      "two party consent state audio recording"
+    ]
+  },
+  {
     "title": "EU261 Compensation Calculator",
     "type": "calculator",
     "block": "flights-travel",
