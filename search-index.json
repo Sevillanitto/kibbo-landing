@@ -827,6 +827,71 @@
     ]
   },
   {
+    "title": "Can My Internet Company Increase My Price During My Contract?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/telecoms-utilities/can-internet-company-increase-price-during-contract",
+    "description": "In the UK, only if it's disclosed in pounds and pence at signup — Ofcom banned inflation-linked rises in 2025. In the US, it depends entirely on your specific contract terms.",
+    "keywords": [
+      "can my internet company increase price during contract",
+      "ofcom inflation linked price rise ban",
+      "internet price increase mid contract uk",
+      "broadband contract price rise rights"
+    ]
+  },
+  {
+    "title": "Can an Internet Company Slow Down My Connection Because I Use Too Much Data?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/telecoms-utilities/can-internet-company-slow-connection-too-much-data",
+    "description": "In most US states, yes — there's no federal rule against it anymore. Five states ban it outright. Here's exactly where you're protected and where you're not.",
+    "keywords": [
+      "can my internet be throttled for using too much data",
+      "internet throttling data cap legal",
+      "states that ban internet throttling",
+      "net neutrality data throttling rules"
+    ]
+  },
+  {
+    "title": "Can My Internet Provider Charge Me When My Internet Doesn't Work?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/telecoms-utilities/can-internet-provider-charge-when-not-working",
+    "description": "Usually yes, unless your contract or state specifically requires a service credit — most providers aren't legally obligated to reduce your bill for an outage. Here's what actually entitles you to one.",
+    "keywords": [
+      "can internet provider charge me during an outage",
+      "internet not working still charged",
+      "service credit internet outage",
+      "right to refund for internet downtime"
+    ]
+  },
+  {
+    "title": "Can My Mobile Provider Refuse to Unlock My Phone?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/telecoms-utilities/can-mobile-provider-refuse-unlock-phone",
+    "description": "It depends on your specific carrier's own policy — a proposed federal 60-day unlocking rule was never confirmed finalized. Here's what each major US carrier actually requires right now.",
+    "keywords": [
+      "can my mobile provider refuse to unlock my phone",
+      "phone unlock policy by carrier",
+      "fcc 60 day unlocking rule status",
+      "how to unlock a carrier locked phone"
+    ]
+  },
+  {
+    "title": "Can My Provider Charge Me After I Cancel My Contract?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/telecoms-utilities/can-provider-charge-after-cancel-contract",
+    "description": "No — once cancellation is processed, further charges are a billing error, not a grey area. Here's how to prove when you actually cancelled and get your money back.",
+    "keywords": [
+      "can my provider charge me after i cancelled",
+      "charged after cancelling phone or internet contract",
+      "proof of cancellation date dispute",
+      "billing error after contract cancellation"
+    ]
+  },
+  {
     "title": "EU261 Compensation Calculator",
     "type": "calculator",
     "block": "flights-travel",
