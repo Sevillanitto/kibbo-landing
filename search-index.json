@@ -12376,6 +12376,22 @@
     ]
   },
   {
+    "title": "Late Delivery Compensation Calculator",
+    "type": "calculator",
+    "block": "delivery-parcels",
+    "url": "/delivery-parcels/calculators/late-delivery-compensation-calculator",
+    "description": "Can I get a refund for a late package? Check whether your USPS, FedEx or UPS service has a money-back guarantee for lateness, and see the shipping-cost refund you may be owed.",
+    "keywords": [
+      "late delivery compensation calculator",
+      "can i get a refund for a late package",
+      "usps priority mail express money back guarantee",
+      "fedex money back guarantee late delivery",
+      "ups service guarantee refund",
+      "does usps refund for late delivery",
+      "late package no compensation"
+    ]
+  },
+  {
     "title": "Small Claims Court Demand Letter Pack",
     "type": "template",
     "block": "legal-contracts",
