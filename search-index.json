@@ -697,6 +697,71 @@
     ]
   },
   {
+    "title": "Can an Online Shop Refuse a Return Because I Opened the Packaging?",
+    "type": "question",
+    "block": "shopping-ecommerce",
+    "url": "/questions/shopping-ecommerce/can-online-shop-refuse-return-opened-packaging",
+    "description": "Not just for opening it to look — but handling it beyond what's reasonably necessary to check it can cost you a deduction. Here's exactly where UK/EU law draws the line.",
+    "keywords": [
+      "can an online shop refuse a return for opened packaging",
+      "opened packaging return refused",
+      "uk eu distance selling return rights",
+      "deduction for handling beyond necessary to check"
+    ]
+  },
+  {
+    "title": "Can an Online Store Charge Me More Than the Price I Saw at Checkout?",
+    "type": "question",
+    "block": "shopping-ecommerce",
+    "url": "/questions/shopping-ecommerce/can-online-store-charge-more-than-checkout-price",
+    "description": "No — the price shown when you complete your order is generally what you're bound to pay. Here's what protects you, and the important gap in US federal law you should know about.",
+    "keywords": [
+      "can an online store charge more than checkout price",
+      "store charged more than price shown at checkout",
+      "price displayed at checkout binding",
+      "us federal law online pricing gap"
+    ]
+  },
+  {
+    "title": "Can a Seller Cancel My Order After I Have Paid?",
+    "type": "question",
+    "block": "shopping-ecommerce",
+    "url": "/questions/shopping-ecommerce/can-seller-cancel-order-after-paid",
+    "description": "Sometimes legally, depending on exactly when a contract was formed — many retailers write their terms so acceptance happens at dispatch, not at payment. Here's how to tell.",
+    "keywords": [
+      "can a seller cancel my order after i paid",
+      "order cancelled after payment taken",
+      "when is a contract formed online purchase",
+      "retailer terms acceptance at dispatch"
+    ]
+  },
+  {
+    "title": "Can a Shop Refuse to Refund Something That Isn't Faulty?",
+    "type": "question",
+    "block": "shopping-ecommerce",
+    "url": "/questions/shopping-ecommerce/can-shop-refuse-refund-something-not-faulty",
+    "description": "Usually yes for in-store purchases — returns for a change of mind are a store policy, not a legal right. Online purchases are different. Here's the exact distinction.",
+    "keywords": [
+      "can a shop refuse a refund if not faulty",
+      "change of mind return in store",
+      "store return policy vs legal right",
+      "online purchase return rights vs in store"
+    ]
+  },
+  {
+    "title": "Can a Website Charge Me for an Extra Service I Didn't Select?",
+    "type": "question",
+    "block": "shopping-ecommerce",
+    "url": "/questions/shopping-ecommerce/can-website-charge-extra-service-not-selected",
+    "description": "Not in the EU/UK if it was added via a pre-ticked box — you're entitled to a full reimbursement. Here's the exact law, word for word, and how to claim it back.",
+    "keywords": [
+      "can a website charge me for a service i did not select",
+      "pre ticked box extra charge illegal",
+      "eu consumer rights directive pre ticked boxes",
+      "claim back unwanted extra charge online"
+    ]
+  },
+  {
     "title": "EU261 Compensation Calculator",
     "type": "calculator",
     "block": "flights-travel",
