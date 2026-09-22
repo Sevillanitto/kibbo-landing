@@ -762,6 +762,71 @@
     ]
   },
   {
+    "title": "Can a Company Increase My Subscription Price Without My Consent?",
+    "type": "question",
+    "block": "subscriptions-services",
+    "url": "/questions/subscriptions-services/can-company-increase-subscription-price-without-consent",
+    "description": "Usually not without advance notice, and in some states not at all without your consent. Here's what a price increase legally requires, and what to do if you weren't warned.",
+    "keywords": [
+      "can a company raise my subscription price without consent",
+      "subscription price increase no notice",
+      "company raised price without telling me",
+      "right to cancel after price increase"
+    ]
+  },
+  {
+    "title": "Can a Company Keep Charging Me After I Cancelled?",
+    "type": "question",
+    "block": "subscriptions-services",
+    "url": "/questions/subscriptions-services/can-company-keep-charging-me-after-cancelled",
+    "description": "No — and if it happens, you have a documented billing error, not just a customer-service problem. Here's the exact recovery path.",
+    "keywords": [
+      "company keeps charging me after i cancelled",
+      "subscription charged after cancellation",
+      "billing error after cancelling subscription",
+      "how to get refund after wrongful charge"
+    ]
+  },
+  {
+    "title": "Can a Company Make Cancellation Harder Than Signing Up?",
+    "type": "question",
+    "block": "subscriptions-services",
+    "url": "/questions/subscriptions-services/can-company-make-cancellation-harder-than-signing-up",
+    "description": "Increasingly, no — several states now legally require cancellation to be at least as easy as signing up. Here's where that right exists, and where it doesn't yet.",
+    "keywords": [
+      "can a company make cancellation harder than signing up",
+      "click to cancel rule states",
+      "cancellation as easy as signup law",
+      "subscription cancellation friction legal"
+    ]
+  },
+  {
+    "title": "Can a Free Trial Charge Me if I Forgot to Cancel It?",
+    "type": "question",
+    "block": "subscriptions-services",
+    "url": "/questions/subscriptions-services/can-free-trial-charge-me-if-forgot-cancel",
+    "description": "Yes, legally — but only if the terms were disclosed clearly and you gave real consent to the charge. Here's when a free-trial charge is legitimate, and when it isn't.",
+    "keywords": [
+      "can a free trial charge me if i forgot to cancel",
+      "forgot to cancel free trial charged",
+      "free trial auto charge legal requirements",
+      "clear and conspicuous disclosure free trial"
+    ]
+  },
+  {
+    "title": "Can a Subscription Renew Without Reminding Me First?",
+    "type": "question",
+    "block": "subscriptions-services",
+    "url": "/questions/subscriptions-services/can-subscription-renew-without-reminding-me-first",
+    "description": "Often yes, but a growing number of states now require a reminder before certain renewals — California requires one every year, for every auto-renewing plan.",
+    "keywords": [
+      "can a subscription renew without reminding me",
+      "auto renewal reminder requirement state law",
+      "california annual renewal reminder law",
+      "subscription renewed without notice"
+    ]
+  },
+  {
     "title": "EU261 Compensation Calculator",
     "type": "calculator",
     "block": "flights-travel",
