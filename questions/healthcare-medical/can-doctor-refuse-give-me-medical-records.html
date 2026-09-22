@@ -117,6 +117,8 @@
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
   .q-header { padding: 56px 0 28px; }
   .q-category { display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
+  /* Visible at ALL breakpoints, unlike the sitewide .hero-image class (display:none on mobile). */
+  .q-hero-image { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin: 0 0 24px; }
   .q-header h1 { font-family: var(--font-serif); font-size: 36px; font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
   .q-dek { font-size: 18px; color: var(--text-secondary); max-width: 620px; }
   .q-meta { display: flex; gap: 18px; margin-top: 20px; font-size: 13px; color: var(--text-secondary); }
@@ -342,6 +344,7 @@
 
   <header class="q-header">
     <span class="q-category">Healthcare &amp; Medical · US &amp; UK</span>
+    <img class="q-hero-image" src="/images/questions/healthcare-medical/can-doctor-refuse-give-me-medical-records-hero.png" width="1600" height="900" alt="Can a doctor refuse to give me my medical records?" loading="eager" fetchpriority="high">
     <h1>Can a doctor refuse to give me my medical records?</h1>
     <p class="q-dek">Your medical file belongs to you in every meaningful legal sense — providers just hold onto the physical or digital copy.</p>
     <div class="q-meta">
