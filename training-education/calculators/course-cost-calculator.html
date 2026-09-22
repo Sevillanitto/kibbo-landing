@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/training-education/calculators/course-cost-calculator">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Course Cost Calculator — Real Cost of a Bootcamp &amp; ISA Calculator | Kibbo</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free course cost calculator: find the real cost of a bootcamp or training program, including opportunity cost if you can't work while studying. Works as an income share agreement (ISA) calculator too — estimate your real ISA cost based on your expected salary.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="Free Course Cost Calculator — Real Cost of a Bootcamp & ISA Calculator">
+<meta property="og:description" content="Tuition is only part of the real cost — add other fees and lost income while you study, or estimate your real Income Share Agreement cost based on your expected salary. Free, instant result.">
+<meta property="og:url" content="https://www.getkibbo.com/training-education/calculators/course-cost-calculator">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Course Cost Calculator — Real Cost of a Bootcamp & ISA Calculator">
+<meta name="twitter:description" content="Tuition is only part of the real cost — add other fees and lost income while you study, or estimate your real Income Share Agreement cost based on your expected salary. Free, instant result.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://www.getkibbo.com/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Course Cost Calculator", "item": "https://www.getkibbo.com/training-education/calculators/course-cost-calculator" }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Course Cost Calculator",
+      "url": "https://www.getkibbo.com/training-education/calculators/course-cost-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Free calculator that adds tuition, other known costs and lost income while studying full-time to show the real cost of a course or bootcamp, and estimates the real cost of an Income Share Agreement (ISA) based on your expected post-program salary.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "isPartOf": { "@id": "https://www.getkibbo.com/#website" },
+      "publisher": { "@type": "Organization", "name": "Kibbo", "url": "https://www.getkibbo.com/" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<div class="section-page-hero">
+  <div class="container">
+    <p class="section-label">Free Calculator</p>
+    <h1 class="section-title">Course cost calculator: the real cost of a bootcamp or training program</h1>
+    <p class="section-subtitle">Tuition is only part of the bill. If you can't work while studying full-time, the income you give up is often the single biggest — and least visible — cost. This also works as an income share agreement (ISA) calculator: estimate what an ISA would really cost you, based on your own expected salary.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<main class="section-main">
+  <div class="calc-wrap">
+
+    <form id="ccForm" novalidate>
+
+      <div class="calc-field">
+        <label class="calc-label" for="currency">Currency</label>
+        <select class="calc-select" id="currency" name="currency" required>
+          <option value="$" selected>$ (USD)</option>
+          <option value="£">£ (GBP)</option>
+          <option value="€">€ (EUR)</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="tuition">Sticker tuition / program cost</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="tuition" name="tuition" placeholder="e.g. 15000" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="otherCosts">Additional known costs — optional</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="otherCosts" name="otherCosts" value="0">
+        <span class="calc-help">Materials or equipment, exam or certification fees, relocation or housing if applicable — one combined total. Leave at 0 if none.</span>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" for="programWeeks">Program length (weeks)</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0.1" step="any" id="programWeeks" name="programWeeks" placeholder="e.g. 12" required>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" id="scheduleLabel">Was this full-time, or part-time/evenings?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="scheduleLabel">
+          <label class="calc-radio-option"><input type="radio" name="schedule" value="fulltime"> Full-time (couldn't work during the program)</label>
+          <label class="calc-radio-option"><input type="radio" name="schedule" value="parttime"> Part-time / evenings (still working)</label>
+        </div>
+      </div>
+
+      <div class="calc-field" id="weeklyIncomeField" hidden>
+        <label class="calc-label" for="weeklyIncome">Your typical weekly income before starting — optional</label>
+        <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="weeklyIncome" name="weeklyIncome" placeholder="Leave blank to skip opportunity cost">
+        <span class="calc-help">Used to work out the income you'd give up by not working during the program. Leave blank to skip this part of the calculation.</span>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label" id="paymentLabel">How are you paying?</label>
+        <div class="calc-radio-group" role="radiogroup" aria-labelledby="paymentLabel">
+          <label class="calc-radio-option"><input type="radio" name="paymentMethod" value="upfront" checked> Paying upfront / loan</label>
+          <label class="calc-radio-option"><input type="radio" name="paymentMethod" value="isa"> Income Share Agreement (ISA)</label>
+        </div>
+      </div>
+
+      <div id="isaFields" hidden>
+        <div class="calc-field">
+          <label class="calc-label" for="incomeSharePct">Income share percentage (%)</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0.01" max="100" step="any" id="incomeSharePct" name="incomeSharePct" placeholder="e.g. 12">
+          <span class="calc-help">Typically 8%–25% of gross monthly income, most commonly 9%–17%.</span>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="minThreshold">Minimum salary threshold before payments start</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="minThreshold" name="minThreshold" placeholder="e.g. 40000">
+          <span class="calc-help">Commonly $35,000–$50,000/year (or the equivalent in your currency).</span>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="termMonths">Payment term (months)</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="1" step="any" id="termMonths" name="termMonths" placeholder="e.g. 24">
+          <span class="calc-help">Commonly 12–48 months.</span>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="capMultiple">Repayment cap, as a multiple of tuition — if known, optional</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0.01" step="any" id="capMultiple" name="capMultiple" placeholder="e.g. 2 for a 2x cap">
+          <span class="calc-help">Many ISAs cap total repayment at 1.5x–2x the sticker tuition. Be cautious of any ISA with no cap at all, or a cap above 2x. Leave blank if there's no cap or you don't know it.</span>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label" for="expectedSalary">Your expected post-program annual salary — optional</label>
+          <input class="calc-input" type="number" inputmode="decimal" min="0" step="any" id="expectedSalary" name="expectedSalary" placeholder="Leave blank to skip the ISA cost estimate">
+          <span class="calc-help">Used to estimate your actual ISA cost below. Run this twice — once with a conservative (lower) salary and once with an optimistic (higher) one — to see the real range, not just one number.</span>
+        </div>
+      </div>
+
+      <p class="calc-error" id="ccError" hidden>Please fill in the currency, tuition, program length and schedule, and — for an ISA — the income share percentage, threshold and payment term.</p>
+
+      <button class="calc-btn" type="submit">Calculate my real cost</button>
+    </form>
+
+    <div class="calc-result" id="ccResult" hidden>
+      <div class="calc-result-compare" id="ccCompare"></div>
+      <div class="calc-result-figure" id="ccFigure"></div>
+      <div class="calc-result-headline" id="ccHeadline"></div>
+      <ul class="calc-result-list" id="ccBreakdown" style="margin-top:18px"></ul>
+      <div class="calc-result-context" id="ccContext"></div>
+      <div class="calc-cta-group">
+        <a class="calc-cta" href="/checklists/before-paying-any-course-checklist">Before you pay anything, run the Before Paying Any Course Checklist →</a>
+        <a class="calc-cta" href="/checklists/education-loan-safety-checklist">Financing with a loan or ISA? Check the Education Loan Safety Checklist first →</a>
+        <a class="calc-cta" href="/checklists/bootcamp-job-guarantee-verification-checklist">Bootcamp promising a "job guarantee"? Verify what it actually means →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Course Cost Calculator — purely arithmetic, no jurisdiction branching,
+// so just a currency symbol picker, same pattern as every other .calc-*
+// calculator on the site.
+//
+// Opportunity cost is shared between both payment-method paths: only
+// counted when full-time AND a weekly income was entered (weekly_income
+// x program_length_weeks); otherwise 0, and flagged as skipped so the
+// result doesn't silently look like there's no opportunity cost at all.
+//
+// Upfront/loan path: total = tuition + other costs + opportunity cost.
+//
+// ISA path: no expected salary entered -> the ISA payment itself can't be
+// estimated (informational only, no guessed number for that part).
+// Expected salary BELOW the threshold -> $0 in ISA payments (payments
+// only start once you cross the threshold). At or above the threshold:
+// monthly payment = (salary/12) x (income share % /100), x term months,
+// capped at tuition x cap multiple if a cap was given.
+// <CC2-CORE>
+function computeCourseCost(inp) {
+  var opportunityCost = 0, opportunityCostSkipped = false;
+  if (inp.fullTime) {
+    if (inp.weeklyIncome !== null) opportunityCost = inp.weeklyIncome * inp.programWeeks;
+    else opportunityCostSkipped = true;
+  }
+
+  if (inp.paymentMethod === 'upfront') {
+    var directCost = inp.tuition + inp.otherCosts;
+    return {
+      mode: 'upfront', known: true,
+      directCost: directCost, opportunityCost: opportunityCost, opportunityCostSkipped: opportunityCostSkipped,
+      totalRealCost: directCost + opportunityCost
+    };
+  }
+
+  var isa = inp.isa;
+  if (isa.expectedSalary === null) {
+    return {
+      mode: 'isa', known: false, belowThreshold: false,
+      otherCosts: inp.otherCosts, opportunityCost: opportunityCost, opportunityCostSkipped: opportunityCostSkipped,
+      totalRealCost: null
+    };
+  }
+
+  var belowThreshold = isa.expectedSalary < isa.minThreshold;
+  var monthlyPayment = 0, totalPotentialPayments = 0, cappedTotal = 0, capApplied = false;
+  if (!belowThreshold) {
+    monthlyPayment = (isa.expectedSalary / 12) * (isa.incomeSharePct / 100);
+    totalPotentialPayments = monthlyPayment * isa.termMonths;
+    if (isa.capMultiple !== null) {
+      cappedTotal = Math.min(totalPotentialPayments, inp.tuition * isa.capMultiple);
+      capApplied = cappedTotal < totalPotentialPayments;
+    } else {
+      cappedTotal = totalPotentialPayments;
+    }
+  }
+
+  return {
+    mode: 'isa', known: true, belowThreshold: belowThreshold,
+    monthlyPayment: monthlyPayment, totalPotentialPayments: totalPotentialPayments,
+    cappedTotal: cappedTotal, capApplied: capApplied,
+    otherCosts: inp.otherCosts, opportunityCost: opportunityCost, opportunityCostSkipped: opportunityCostSkipped,
+    totalRealCost: cappedTotal + inp.otherCosts + opportunityCost
+  };
+}
+// </CC2-CORE>
+
+(function () {
+  'use strict';
+
+  var form = document.getElementById('ccForm');
+  var weeklyIncomeField = document.getElementById('weeklyIncomeField');
+  var isaFields = document.getElementById('isaFields');
+  var errorEl = document.getElementById('ccError');
+  var resultEl = document.getElementById('ccResult');
+
+  function fmt(symbol, n) {
+    return symbol + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+  function num(id) {
+    var raw = document.getElementById(id).value;
+    return raw === '' ? NaN : parseFloat(raw);
+  }
+  function radioVal(name) {
+    var c = form.querySelector('input[name="' + name + '"]:checked');
+    return c ? c.value : '';
+  }
+  function hide() { errorEl.hidden = true; resultEl.hidden = true; }
+
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="schedule"]'), function (r) {
+    r.addEventListener('change', function () { weeklyIncomeField.hidden = radioVal('schedule') !== 'fulltime'; hide(); });
+  });
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="paymentMethod"]'), function (r) {
+    r.addEventListener('change', function () { isaFields.hidden = radioVal('paymentMethod') !== 'isa'; hide(); });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    hide();
+
+    var symbol = document.getElementById('currency').value;
+    var tuition = num('tuition');
+    var otherCostsRaw = num('otherCosts');
+    var otherCosts = isNaN(otherCostsRaw) ? 0 : otherCostsRaw;
+    var programWeeks = num('programWeeks');
+    var schedule = radioVal('schedule');
+    var fullTime = schedule === 'fulltime';
+    var weeklyIncomeRaw = num('weeklyIncome');
+    var weeklyIncome = isNaN(weeklyIncomeRaw) ? null : weeklyIncomeRaw;
+    var paymentMethod = radioVal('paymentMethod');
+
+    var valid = !!symbol && tuition > 0 && otherCosts >= 0 && programWeeks > 0 && (schedule === 'fulltime' || schedule === 'parttime') &&
+      (fullTime ? (weeklyIncome === null || weeklyIncome >= 0) : true);
+
+    var isaInput = null;
+    if (paymentMethod === 'isa') {
+      var incomeSharePct = num('incomeSharePct');
+      var minThreshold = num('minThreshold');
+      var termMonths = num('termMonths');
+      var capMultipleRaw = num('capMultiple');
+      var capMultiple = isNaN(capMultipleRaw) ? null : capMultipleRaw;
+      var expectedSalaryRaw = num('expectedSalary');
+      var expectedSalary = isNaN(expectedSalaryRaw) ? null : expectedSalaryRaw;
+
+      var isaValid = incomeSharePct > 0 && incomeSharePct <= 100 && minThreshold >= 0 && termMonths > 0 &&
+        (capMultiple === null || capMultiple > 0) && (expectedSalary === null || expectedSalary >= 0);
+      valid = valid && isaValid;
+      isaInput = { incomeSharePct: incomeSharePct, minThreshold: minThreshold, termMonths: termMonths, capMultiple: capMultiple, expectedSalary: expectedSalary };
+    }
+
+    if (!valid) { errorEl.hidden = false; return; }
+
+    var r = computeCourseCost({
+      tuition: tuition, otherCosts: otherCosts, programWeeks: programWeeks,
+      fullTime: fullTime, weeklyIncome: weeklyIncome,
+      paymentMethod: paymentMethod, isa: isaInput
+    });
+
+    var rows = [];
+    if (r.mode === 'upfront') {
+      rows.push(['Tuition + other known costs', r.directCost]);
+    } else {
+      if (r.known && !r.belowThreshold) rows.push(['ISA payments' + (r.capApplied ? ' (capped)' : ''), r.cappedTotal]);
+      if (r.known && r.belowThreshold) rows.push(['ISA payments (below your threshold)', 0]);
+      rows.push(['Other known costs', r.otherCosts]);
+    }
+    if (fullTime) rows.push(['Opportunity cost (income given up)', r.opportunityCostSkipped ? null : r.opportunityCost]);
+
+    document.getElementById('ccCompare').textContent = r.mode === 'upfront' ? 'Real cost of this program' : 'Estimated real cost of this program';
+
+    var list = document.getElementById('ccBreakdown');
+    list.innerHTML = '';
+    rows.forEach(function (row) {
+      var li = document.createElement('li');
+      var amountText = row[1] === null ? 'not included — no income entered' : fmt(symbol, row[1]);
+      li.innerHTML = '<span class="crl-name">' + row[0] + '</span><span class="crl-amount">' + amountText + '</span>';
+      list.appendChild(li);
+    });
+
+    var html = '';
+    if (r.mode === 'isa' && !r.known) {
+      document.getElementById('ccFigure').textContent = fmt(symbol, r.otherCosts + r.opportunityCost) + '+';
+      document.getElementById('ccHeadline').textContent = 'Plus an unknown ISA payment — enter your expected salary above to estimate it';
+      html += '<p>This is only your other known costs' + (fullTime && !r.opportunityCostSkipped ? ' and opportunity cost' : '') + ' — it doesn\'t include what you\'d actually pay under the ISA, because that depends entirely on your expected salary, which you haven\'t entered yet.</p>';
+    } else {
+      document.getElementById('ccFigure').textContent = fmt(symbol, r.totalRealCost);
+      if (r.mode === 'isa' && r.belowThreshold) {
+        document.getElementById('ccHeadline').textContent = 'At this expected salary, you may not owe anything under this ISA';
+        html += '<p>Payments only start once you cross the minimum salary threshold you entered — though check your specific contract for what happens if you never do. The total above assumes $0 in ISA payments; it still includes your other known costs' + (fullTime ? ' and opportunity cost' : '') + '.</p>';
+      } else {
+        document.getElementById('ccHeadline').textContent = r.mode === 'upfront' ? 'Total direct cost, including any lost income' : 'Estimated total cost of this ISA, at the salary you entered';
+        if (r.mode === 'isa' && r.capApplied) {
+          html += '<p>Without the repayment cap, this ISA would have cost ' + fmt(symbol, r.totalPotentialPayments) + ' at your expected salary — the cap brought that down to ' + fmt(symbol, r.cappedTotal) + '.</p>';
+        }
+      }
+    }
+
+    if (r.opportunityCostSkipped) {
+      html += '<p>You said this was full-time but didn\'t enter a weekly income, so opportunity cost isn\'t included above — for a full-time program, lost income while you study is often the single largest, least visible cost, so it\'s worth adding a rough figure if you can.</p>';
+    }
+
+    if (r.mode === 'isa') {
+      html += '<p>An ISA isn\'t a loan, and isn\'t required to disclose an APR the way a loan must — which makes it genuinely hard to compare against a traditional loan on cost alone. This is an estimate based on the salary you entered; your actual cost depends entirely on what you end up earning, which is the whole point (and risk) of how ISAs are structured. Run this calculator again with a conservative (lower) expected salary and an optimistic (higher) one to see the real range, not just one number.</p>';
+    }
+    document.getElementById('ccContext').innerHTML = html;
+
+    resultEl.hidden = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>
