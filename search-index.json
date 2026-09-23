@@ -15911,5 +15911,70 @@
       "elements of a valid contract",
       "proving a verbal agreement"
     ]
+  },
+  {
+    "title": "Can My Insurance Company Increase My Premium After I Make a Claim?",
+    "type": "question",
+    "block": "insurance-claims",
+    "url": "/questions/insurance-claims/can-insurance-company-increase-premium-after-claim",
+    "description": "Yes, this is legal — but since 2017, FCA rules require your insurer to clearly show last year's premium next to the renewal price, specifically so a claim-driven increase can't be hidden.",
+    "keywords": [
+      "can my insurance company increase my premium after i make a claim",
+      "fca renewal transparency rules insurance",
+      "insurance premium rise after claim",
+      "shop around insurance renewal notice"
+    ]
+  },
+  {
+    "title": "Can an Insurance Company Take Months to Decide My Claim?",
+    "type": "question",
+    "block": "insurance-claims",
+    "url": "/questions/insurance-claims/can-insurance-company-take-months-to-decide-claim",
+    "description": "No, not without justification — insurers have a statutory duty to pay valid claims within a reasonable time, and FCA rules require claims to be handled promptly and fairly.",
+    "keywords": [
+      "can an insurance company take months to decide my claim",
+      "insurance act 2015 section 13a reasonable time",
+      "icobs 8 claims handling rules",
+      "insurance claim delay complaint"
+    ]
+  },
+  {
+    "title": "Can My Insurer Refuse a Claim Because I Made a Mistake on the Application?",
+    "type": "question",
+    "block": "insurance-claims",
+    "url": "/questions/insurance-claims/can-insurer-refuse-claim-mistake-on-application",
+    "description": "Depends whether the mistake was careless or deliberate. Under CIDRA, a genuinely careless error gets a proportionate settlement, not a flat refusal — only deliberate or reckless dishonesty lets an insurer avoid the claim entirely.",
+    "keywords": [
+      "can my insurer refuse a claim because i made a mistake on the application",
+      "cidra careless vs deliberate misrepresentation",
+      "proportionate settlement insurance claim",
+      "insurance application error claim refused"
+    ]
+  },
+  {
+    "title": "What Happens If My Insurer's Valuation Is Lower Than the Actual Damage?",
+    "type": "question",
+    "block": "insurance-claims",
+    "url": "/questions/insurance-claims/what-happens-if-insurers-valuation-lower-than-actual-damage",
+    "description": "You can dispute it. Insurers must reach their valuation reasonably using recognised trade guides — and the Financial Ombudsman routinely increases settlements when the evidence supports a higher figure.",
+    "keywords": [
+      "what happens if my insurers valuation is lower than the actual damage",
+      "car total loss valuation dispute",
+      "insurance trade guides cap glass autotrader",
+      "financial ombudsman valuation complaint"
+    ]
+  },
+  {
+    "title": "Who Pays If an Uninsured Person Damages My Property or Car?",
+    "type": "question",
+    "block": "insurance-claims",
+    "url": "/questions/insurance-claims/who-pays-if-uninsured-person-damages-my-property-or-car",
+    "description": "The Motor Insurers' Bureau steps in as a safety net, funded by a levy on every UK motor insurer. Time limits are strict, though — as short as months for property-only damage.",
+    "keywords": [
+      "who pays if an uninsured person damages my property or car",
+      "motor insurers bureau uninsured drivers agreement",
+      "untraced drivers agreement claim",
+      "mib property damage time limit"
+    ]
   }
 ]
