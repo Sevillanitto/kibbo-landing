@@ -142,6 +142,13 @@
               <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
             </span>
           </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
           <a href="/calculators" class="kibbo-panel-row">
             <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
             <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
@@ -246,6 +253,7 @@
       <a href="/templates">Templates</a>
       <a href="/checklists">Checklists</a>
       <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
       <a href="/calculators">Calculators</a>
       <a href="/wizard">Start the Wizard →</a>
     </details>
@@ -383,7 +391,34 @@ window.KIBBO_GENERATOR = {
     { id: 'booking_platform', label: "Website or booking platform used (write \"None\" if you don't use one)", type: 'text' },
     { id: 'contact_email', label: "Contact email for policy inquiries", type: 'text' },
     { id: 'policy_type', label: "Which policy document do you need?", type: 'select', options: ["Reservation Policy","Cancellation Policy","No-Show Policy","Refund Policy","Allergen Policy","Delivery Policy","Privacy Policy"] },
-    { id: 'policy_details', label: "Details for your selected policy (see the guide above)", type: 'textarea' }
+
+    { id: 'booking_method', label: 'How can reservations be made?', type: 'select', options: ['Online only', 'Phone only', 'Both'], showWhen: { field: 'policy_type', equals: 'Reservation Policy' } },
+    { id: 'max_group_no_deposit', label: 'Maximum party size that does not require a deposit', type: 'text', showWhen: { field: 'policy_type', equals: 'Reservation Policy' } },
+    { id: 'grace_period_minutes', label: 'Minutes you hold a reservation before releasing the table', type: 'text', showWhen: { field: 'policy_type', equals: 'Reservation Policy' } },
+
+    { id: 'min_notice_hours', label: 'Minimum notice (hours) for a free cancellation', type: 'text', showWhen: { field: 'policy_type', equals: 'Cancellation Policy' } },
+    { id: 'penalty_type', label: 'Penalty for cancelling after that window', type: 'select', options: ['No penalty', 'Percentage of the bill', 'Fixed amount'], showWhen: { field: 'policy_type', equals: 'Cancellation Policy' } },
+    { id: 'penalty_value', label: "Penalty amount (% or fixed amount, matching your answer above) — write N/A if you chose \"No penalty\"", type: 'text', showWhen: { field: 'policy_type', equals: 'Cancellation Policy' } },
+    { id: 'cancellation_exceptions', label: 'Exceptions, e.g. medical emergencies (write N/A if none)', type: 'textarea', showWhen: { field: 'policy_type', equals: 'Cancellation Policy' } },
+
+    { id: 'deposit_required', label: 'Is a deposit required for bookings?', type: 'select', options: ['Yes', 'No'], showWhen: { field: 'policy_type', equals: 'No-Show Policy' } },
+    { id: 'noshow_deposit_outcome', label: 'What happens to the deposit on a no-show?', type: 'select', options: ['Deposit is forfeited', 'Partial deposit forfeited', 'Other'], showWhen: { field: 'deposit_required', equals: 'Yes' } },
+    { id: 'noshows_before_deposit_required', label: 'Number of no-shows before you require a deposit for future bookings', type: 'text', showWhen: { field: 'policy_type', equals: 'No-Show Policy' } },
+
+    { id: 'refund_method', label: 'Refund method', type: 'select', options: ['Cash', 'Original payment method', 'Store credit'], showWhen: { field: 'policy_type', equals: 'Refund Policy' } },
+    { id: 'refund_processing_time', label: 'Typical refund processing time', type: 'text', showWhen: { field: 'policy_type', equals: 'Refund Policy' } },
+    { id: 'refund_qualifying_cases', label: 'Cases that qualify for a refund (e.g. undeclared allergen, poor service, billing error)', type: 'textarea', showWhen: { field: 'policy_type', equals: 'Refund Policy' } },
+
+    { id: 'cross_contact_risk', label: 'Is there cross-contact risk in a shared kitchen?', type: 'select', options: ['Yes', 'No'], showWhen: { field: 'policy_type', equals: 'Allergen Policy' } },
+    { id: 'allergy_disclosure_procedure', label: 'Procedure when a customer discloses an allergy', type: 'textarea', showWhen: { field: 'policy_type', equals: 'Allergen Policy' } },
+
+    { id: 'delivery_method', label: 'How is delivery provided?', type: 'select', options: ['Our own delivery staff', 'Third-party delivery platform', 'Both'], showWhen: { field: 'policy_type', equals: 'Delivery Policy' } },
+    { id: 'delivery_platform_name', label: 'Delivery platform name, if using one (e.g. Uber Eats, Deliveroo) — write N/A if using only your own delivery staff', type: 'text', showWhen: { field: 'policy_type', equals: 'Delivery Policy' } },
+    { id: 'estimated_delivery_time', label: 'Estimated delivery time', type: 'text', showWhen: { field: 'policy_type', equals: 'Delivery Policy' } },
+    { id: 'incorrect_cold_order_policy', label: 'Policy for incorrect or cold orders', type: 'select', options: ['Free replacement', 'Refund', 'Store credit', 'Case-by-case review'], showWhen: { field: 'policy_type', equals: 'Delivery Policy' } },
+
+    { id: 'email_marketing_use', label: 'Do you use customer email for marketing?', type: 'select', options: ['Yes', 'No'], showWhen: { field: 'policy_type', equals: 'Privacy Policy' } },
+    { id: 'third_party_data_sharing', label: 'Is customer data shared with third parties?', type: 'select', options: ['Not shared with third parties', 'Shared with our booking platform only', 'Shared with booking and delivery platforms'], showWhen: { field: 'policy_type', equals: 'Privacy Policy' } }
   ]
 };
 </script>

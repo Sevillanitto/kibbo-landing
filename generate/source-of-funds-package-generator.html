@@ -139,6 +139,13 @@
               <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
             </span>
           </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
           <a href="/calculators" class="kibbo-panel-row">
             <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
             <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
@@ -243,6 +250,7 @@
       <a href="/templates">Templates</a>
       <a href="/checklists">Checklists</a>
       <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
       <a href="/calculators">Calculators</a>
       <a href="/wizard">Start the Wizard →</a>
     </details>
@@ -377,9 +385,35 @@ window.KIBBO_GENERATOR = {
   questions: [
     { id: 'institution_name', label: 'Exchange/bank requesting this', type: 'text' },
     { id: 'amount_in_question', label: 'Approximate total amount being reviewed', type: 'text' },
-    { id: 'primary_category', label: 'Primary source of funds', type: 'select', options: ['Salary/employment income', 'Investments', 'Mining', 'Staking', 'Sale of property/assets', 'Inheritance', 'Savings/accumulated funds', 'Multiple sources'] },
-    { id: 'secondary_categories', label: 'If multiple sources apply, describe each briefly', type: 'textarea' },
-    { id: 'timeline_details', label: 'Rough timeline: when did the funds originate, and when did they move into the account being reviewed?', type: 'textarea' },
+    { id: 'scenario', label: 'Source of funds', type: 'select', options: ['Payroll/employment income', 'Inheritance', 'Sale of property or assets', 'Gift or donation', 'Business income', 'Investment proceeds'] },
+
+    { id: 'employer_name', label: 'Employer name', type: 'text', showWhen: { field: 'scenario', equals: 'Payroll/employment income' } },
+    { id: 'employment_start_date', label: 'Employment start date', type: 'date', showWhen: { field: 'scenario', equals: 'Payroll/employment income' } },
+    { id: 'approx_income_amount', label: 'Approximate income amount', type: 'text', showWhen: { field: 'scenario', equals: 'Payroll/employment income' } },
+    { id: 'income_frequency', label: 'Income frequency', type: 'select', options: ['Monthly', 'Annual', 'Other'], showWhen: { field: 'scenario', equals: 'Payroll/employment income' } },
+    { id: 'accumulation_period', label: 'Over what period were these funds accumulated?', type: 'text', showWhen: { field: 'scenario', equals: 'Payroll/employment income' } },
+
+    { id: 'deceased_relationship', label: 'Your relationship to the deceased', type: 'select', options: ['Parent', 'Spouse', 'Other relative', 'Non-relative'], showWhen: { field: 'scenario', equals: 'Inheritance' } },
+    { id: 'inheritance_date_received', label: 'Date received', type: 'date', showWhen: { field: 'scenario', equals: 'Inheritance' } },
+    { id: 'probate_reference', label: 'Probate/estate reference, if known (write N/A if none)', type: 'text', showWhen: { field: 'scenario', equals: 'Inheritance' } },
+
+    { id: 'asset_type', label: 'Asset sold', type: 'text', showWhen: { field: 'scenario', equals: 'Sale of property or assets' } },
+    { id: 'sale_date', label: 'Sale date', type: 'date', showWhen: { field: 'scenario', equals: 'Sale of property or assets' } },
+    { id: 'sale_price', label: 'Sale price', type: 'text', showWhen: { field: 'scenario', equals: 'Sale of property or assets' } },
+
+    { id: 'donor_name', label: 'Donor name', type: 'text', showWhen: { field: 'scenario', equals: 'Gift or donation' } },
+    { id: 'donor_relationship', label: 'Donor relationship to you', type: 'text', showWhen: { field: 'scenario', equals: 'Gift or donation' } },
+    { id: 'gift_date_received', label: 'Date received', type: 'date', showWhen: { field: 'scenario', equals: 'Gift or donation' } },
+
+    { id: 'business_name', label: 'Business name', type: 'text', showWhen: { field: 'scenario', equals: 'Business income' } },
+    { id: 'business_type', label: 'Business type', type: 'text', showWhen: { field: 'scenario', equals: 'Business income' } },
+    { id: 'income_period', label: 'Income period', type: 'text', showWhen: { field: 'scenario', equals: 'Business income' } },
+    { id: 'approx_revenue', label: 'Approximate revenue', type: 'text', showWhen: { field: 'scenario', equals: 'Business income' } },
+
+    { id: 'investment_type', label: 'Investment type', type: 'select', options: ['Stocks', 'Crypto', 'Real estate', 'Other'], showWhen: { field: 'scenario', equals: 'Investment proceeds' } },
+    { id: 'holding_period', label: 'Holding period', type: 'text', showWhen: { field: 'scenario', equals: 'Investment proceeds' } },
+    { id: 'proceeds_date', label: 'Date proceeds were realized', type: 'date', showWhen: { field: 'scenario', equals: 'Investment proceeds' } },
+
     { id: 'documents_available', label: 'Which supporting documents do you already have?', type: 'textarea' },
     { id: 'prior_contact', label: 'Has the institution already frozen or restricted the account?', type: 'select', options: ['No, this is a proactive/routine request', 'Yes, account is currently frozen/restricted', 'Yes, but account access was already fully restored'] }
   ]
