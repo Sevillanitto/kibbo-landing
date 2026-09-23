@@ -15716,5 +15716,70 @@
       "click to cancel rule vacated",
       "supplement subscription charged after cancellation"
     ]
+  },
+  {
+    "title": "Can an Electricity Company Disconnect Me Over a Disputed Bill?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/energy-supplies/can-electricity-company-disconnect-over-disputed-bill",
+    "description": "No — UK law says gas and electricity supplies shouldn't be disconnected while there's a genuine dispute about the amount owed, as long as you register it properly.",
+    "keywords": [
+      "can an electricity company disconnect me over a disputed bill",
+      "energy supplier disconnection dispute uk",
+      "register energy bill dispute",
+      "vulnerable customer disconnection protection"
+    ]
+  },
+  {
+    "title": "Can My Energy Company Estimate My Bill Instead of Reading the Meter?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/energy-supplies/can-energy-company-estimate-bill-instead-of-reading-meter",
+    "description": "Yes, temporarily — but if estimates run on too long and a real reading reveals you owe much more, Ofgem's back-billing rule caps how far your supplier can chase you.",
+    "keywords": [
+      "can my energy company estimate my bill instead of reading the meter",
+      "ofgem back billing rule 12 months",
+      "estimated energy bill catch up charge",
+      "submit own meter reading"
+    ]
+  },
+  {
+    "title": "Can an Energy Company Refuse to Let Me Switch Provider?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/energy-supplies/can-energy-company-refuse-let-me-switch-provider",
+    "description": "Only in limited cases — usually debt over 28 days old. Small or recent debt, disputed bills, and supplier errors don't give a company grounds to block your switch.",
+    "keywords": [
+      "can an energy company refuse to let me switch provider",
+      "energy switch objection 28 days debt",
+      "debt assignment protocol prepayment meter",
+      "switch energy supplier blocked"
+    ]
+  },
+  {
+    "title": "Can My Energy Provider Change My Tariff Without Asking Me?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/energy-supplies/can-energy-provider-change-tariff-without-asking",
+    "description": "Not on a fixed deal — your rate is locked until it ends. On a variable tariff, they can change prices, but only with at least 30 days' notice and your right to switch away penalty-free.",
+    "keywords": [
+      "can my energy provider change my tariff without asking me",
+      "energy price rise 30 days notice",
+      "standard variable tariff price cap",
+      "fixed tariff ends rolled onto svt"
+    ]
+  },
+  {
+    "title": "Can My Water Company Charge Me for a Leak I Didn't Cause?",
+    "type": "question",
+    "block": "telecoms-utilities",
+    "url": "/questions/energy-supplies/can-water-company-charge-for-leak-i-didnt-cause",
+    "description": "Usually, yes — supply pipe leaks are the customer's responsibility even if you didn't cause them. But most water companies offer a one-off leak allowance that can reduce the bill.",
+    "keywords": [
+      "can my water company charge me for a leak i didnt cause",
+      "supply pipe leak responsibility uk",
+      "water company leak allowance",
+      "high water bill from leak"
+    ]
   }
 ]
