@@ -15976,5 +15976,70 @@
       "untraced drivers agreement claim",
       "mib property damage time limit"
     ]
+  },
+  {
+    "title": "Can a Dealership Sell Me a Car Without Telling Me It Was Previously Damaged?",
+    "type": "question",
+    "block": "cars-vehicles",
+    "url": "/questions/cars-vehicles/can-dealership-sell-car-without-telling-me-previously-damaged",
+    "description": "No — dealers must not misrepresent a car's history. Failing to disclose known previous damage can breach consumer protection law and give you grounds to reject the car or claim compensation.",
+    "keywords": [
+      "can a dealership sell me a car without telling me it was previously damaged",
+      "undisclosed accident damage used car",
+      "consumer protection from unfair trading regulations car",
+      "misrepresentation used car dealer"
+    ]
+  },
+  {
+    "title": "Can I Reject a Used Car If I Discover a Serious Hidden Fault?",
+    "type": "question",
+    "block": "cars-vehicles",
+    "url": "/questions/cars-vehicles/can-i-reject-used-car-if-i-discover-serious-hidden-fault",
+    "description": "Yes, within limits — the Consumer Rights Act gives you a short-term right to reject a faulty car, with different rules depending on how long you've owned it.",
+    "keywords": [
+      "can i reject a used car if i discover a serious hidden fault",
+      "consumer rights act 2015 car reject",
+      "30 day right to reject vehicle",
+      "used car hidden fault refund"
+    ]
+  },
+  {
+    "title": "Can a Mechanic Keep My Car Until I Pay a Disputed Bill?",
+    "type": "question",
+    "block": "cars-vehicles",
+    "url": "/questions/cars-vehicles/can-mechanic-keep-car-until-i-pay-disputed-bill",
+    "description": "Generally yes — garages hold a common law repairer's lien over your car until the bill for that work is paid, even if you're disputing it. Paying under protest is often the fastest way out.",
+    "keywords": [
+      "can a mechanic keep my car until i pay a disputed bill",
+      "garage repairer's lien uk",
+      "paying under protest disputed garage bill",
+      "mechanic wont release car unpaid bill"
+    ]
+  },
+  {
+    "title": "Can a Parking Company Charge Me If the Signs Weren't Visible?",
+    "type": "question",
+    "block": "cars-vehicles",
+    "url": "/questions/cars-vehicles/can-parking-company-charge-me-if-signs-werent-visible",
+    "description": "If parking terms weren't clearly signposted, a parking charge notice may not be enforceable — signage is central to whether you ever 'agreed' to the terms in the first place.",
+    "keywords": [
+      "can a parking company charge me if the signs werent visible",
+      "private parking charge notice signage appeal",
+      "popla appeal poor signage",
+      "parking ticket unclear signs uk"
+    ]
+  },
+  {
+    "title": "Who Pays If a Repair Fails and Damages Another Part of the Car?",
+    "type": "question",
+    "block": "cars-vehicles",
+    "url": "/questions/cars-vehicles/who-pays-if-repair-fails-damages-another-part-of-car",
+    "description": "If a garage's repair fails and causes damage elsewhere in the car, the garage is normally liable — under UK law, repairs must be carried out with reasonable care and skill.",
+    "keywords": [
+      "who pays if a repair fails and damages another part of the car",
+      "garage liable for consequential damage",
+      "reasonable care and skill repair uk law",
+      "botched car repair caused further damage claim"
+    ]
   }
 ]
