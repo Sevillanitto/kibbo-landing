@@ -16092,5 +16092,18 @@
       "damaged baggage claim letter",
       "how to claim for lost luggage"
     ]
+  },
+  {
+    "title": "Unauthorized Transaction / Card Fraud Kit",
+    "type": "kit",
+    "block": "financial-banking",
+    "url": "/kits/unauthorized-transaction-card-fraud",
+    "description": "A transaction you never made, or a specific charge you don't recognize? Report it, dispute it, and escalate if the bank refuses — the real sequence, with the exact free tool for each step.",
+    "keywords": [
+      "unauthorized transaction card fraud kit",
+      "dispute unauthorized bank transaction",
+      "card fraud dispute letter",
+      "chargeback dispute sequence"
+    ]
   }
 ]
