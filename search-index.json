@@ -16131,5 +16131,18 @@
       "illegal wage deduction dispute",
       "employer withheld pay letter"
     ]
+  },
+  {
+    "title": "Workplace Harassment Kit",
+    "type": "kit",
+    "block": "employment",
+    "url": "/kits/workplace-harassment",
+    "description": "Document what happened and file a formal complaint to HR — the exact free tool for each step of a workplace harassment situation.",
+    "keywords": [
+      "workplace harassment kit",
+      "workplace harassment complaint letter",
+      "document workplace harassment incident",
+      "hr harassment complaint how to file"
+    ]
   }
 ]
