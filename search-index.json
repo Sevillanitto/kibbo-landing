@@ -16041,5 +16041,30 @@
       "reasonable care and skill repair uk law",
       "botched car repair caused further damage claim"
     ]
+  },
+  {
+    "title": "Action Kits",
+    "type": "kit",
+    "url": "/kits",
+    "description": "Action Kits bundle Kibbo's generators, templates and checklists into the exact sequence a real problem needs — not just a list of links. Browse by category.",
+    "keywords": [
+      "action kits",
+      "subscription cancellation kit",
+      "kibbo tool sequence",
+      "step by step consumer complaint tools"
+    ]
+  },
+  {
+    "title": "Subscription & Gym Cancellation Kit",
+    "type": "kit",
+    "block": "subscriptions-services",
+    "url": "/kits/subscription-gym-cancellation",
+    "description": "Cancel a subscription or gym membership, dispute a charge that shouldn't have happened, and escalate if nobody responds — the real sequence, with the exact free tool for each step.",
+    "keywords": [
+      "subscription cancellation kit",
+      "gym membership cancellation kit",
+      "how to cancel subscription and dispute charge",
+      "cancel gym membership still being charged"
+    ]
   }
 ]
