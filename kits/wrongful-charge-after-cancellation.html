@@ -6,22 +6,22 @@
 <script src="/kibbo-navbar.js" defer></script>
 
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.getkibbo.com/kits">
+<link rel="canonical" href="https://www.getkibbo.com/kits/wrongful-charge-after-cancellation">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Action Kits — The Right Tools, in the Right Order | Kibbo</title>
+<title>Wrongful Charge After Cancellation Kit | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Action Kits bundle Kibbo's generators, templates and checklists into the exact sequence a real problem needs — not just a list of links. Browse by category.">
+<meta name="description" content="Already cancelled but got charged anyway? Dispute the charge, escalate if it's ignored, and claim your refund — the real sequence, with the exact free tool for each step.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Action Kits — The Right Tools, in the Right Order">
-<meta property="og:description" content="Action Kits bundle Kibbo's generators, templates and checklists into the exact sequence a real problem needs — not just a list of links. Browse by category.">
-<meta property="og:url" content="https://www.getkibbo.com/kits">
+<meta property="og:title" content="Wrongful Charge After Cancellation Kit">
+<meta property="og:description" content="Already cancelled but got charged anyway? Dispute the charge, escalate if it's ignored, and claim your refund — the real sequence, with the exact free tool for each step.">
+<meta property="og:url" content="https://www.getkibbo.com/kits/wrongful-charge-after-cancellation">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Action Kits — The Right Tools, in the Right Order">
-<meta name="twitter:description" content="Action Kits bundle Kibbo's generators, templates and checklists into the exact sequence a real problem needs — not just a list of links. Browse by category.">
+<meta name="twitter:title" content="Wrongful Charge After Cancellation Kit">
+<meta name="twitter:description" content="Already cancelled but got charged anyway? Dispute the charge, escalate if it's ignored, and claim your refund — the real sequence, with the exact free tool for each step.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,26 +33,42 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Action Kits",
-  "url": "https://www.getkibbo.com/kits",
-  "description": "Action Kits bundle Kibbo's generators, templates and checklists into the exact sequence a real problem needs, grouped by category.",
+  "name": "Wrongful Charge After Cancellation Kit",
+  "url": "https://www.getkibbo.com/kits/wrongful-charge-after-cancellation",
+  "description": "Already cancelled but got charged anyway? Dispute the charge, escalate if it's ignored, and claim your refund — the real sequence, with the exact free tool for each step.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Action Kits", "item": "https://www.getkibbo.com/kits" }
-    ]
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 2,
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Subscription & Gym Cancellation Kit", "url": "https://www.getkibbo.com/kits/subscription-gym-cancellation" },
-      { "@type": "ListItem", "position": 2, "name": "Wrongful Charge After Cancellation Kit", "url": "https://www.getkibbo.com/kits/wrongful-charge-after-cancellation" }
+      { "@type": "ListItem", "position": 2, "name": "Action Kits", "item": "https://www.getkibbo.com/kits" },
+      { "@type": "ListItem", "position": 3, "name": "Wrongful Charge After Cancellation", "item": "https://www.getkibbo.com/kits/wrongful-charge-after-cancellation" }
     ]
   }
 }
 </script>
+
+<style>
+  /* Page-specific layout only — every color/type/radius value below is a design-token
+     variable already defined in /styles.css. No new palette, no new fonts. Reuses the
+     same .ch-start-card / .ch-start-steps sequence pattern used on pillar pages'
+     "Start Here" sections and the first Action Kit, since a kit is exactly that
+     pattern made into its own page. */
+  .ch-start-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 22px; }
+  .ch-start-card { background: var(--bg-card); border: 2px solid var(--accent-terra); border-radius: var(--radius-lg); padding: 28px 26px; box-shadow: var(--shadow-sm); }
+  .ch-start-kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 8px; }
+  .ch-start-card h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .ch-start-card .kit-step-desc { font-size: 14px; color: var(--text-secondary); margin-bottom: 18px; line-height: 1.5; }
+  .ch-start-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .ch-start-steps li { display: flex; align-items: baseline; gap: 12px; }
+  .ch-start-steps .ch-step-num { flex: 0 0 24px; font-family: var(--font-sans); font-size: 12px; font-weight: 700; color: #fff; background: var(--accent-terra); width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+  .ch-start-steps a { font-size: 15px; font-weight: 600; color: var(--text-primary); transition: var(--transition); }
+  .ch-start-steps a:hover { color: var(--accent-terra); }
+
+  .kit-intro { font-size: 16px; color: var(--text-secondary); max-width: 720px; line-height: 1.65; margin-bottom: 8px; }
+  .kit-support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 22px; }
+  .kit-cross-link { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-top: 20px; font-size: 14px; color: var(--text-secondary); }
+  .kit-cross-link a { color: var(--accent-green); font-weight: 600; }
+</style>
 </head>
 <body>
 
@@ -250,35 +266,94 @@
 <!-- PAGE HERO -->
 <div class="section-page-hero">
   <div class="container">
-    <p class="section-label">Action Kits</p>
-    <h1 class="section-title">The right tools, <em>in the right order</em></h1>
-    <p class="section-subtitle">Every Action Kit strings together the generators, templates and checklists a real problem needs, in the sequence you'd actually use them — not just a list of links. Every tool in every kit is completely free to use, no account required. Browse by category below.</p>
+    <p class="section-label">ACTION KIT · SUBSCRIPTIONS &amp; SERVICES</p>
+    <h1 class="section-title">Wrongful Charge <em>After Cancellation Kit</em></h1>
+    <p class="section-subtitle">Already cancelled, but charged anyway? Dispute it, escalate it, and get it refunded — every tool in this kit is completely free to use.</p>
   </div>
 </div>
 
 <main class="section-main">
   <div class="container">
 
-    <div class="pillar-category" id="shopping-digital-life">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="7"><circle cx="12" cy="12" r="8.5"/></svg>
-        </div>
-        <h2 class="pillar-category-name">Shopping &amp; Digital Life</h2>
-        <span class="pillar-category-count">2 kits</span>
-      </div>
-      <div class="pillar-card-grid">
-        <a href="/kits/subscription-gym-cancellation" class="pillar-card"><span>Subscription &amp; Gym Cancellation</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a href="/kits/wrongful-charge-after-cancellation" class="pillar-card"><span>Wrongful Charge After Cancellation</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
+    <p class="kit-intro">This kit is for a different moment than the <a href="/kits/subscription-gym-cancellation">Subscription &amp; Gym Cancellation Kit</a>: it's not for cancelling a subscription or membership — it's for when you <strong>already cancelled</strong> and got charged anyway. Start with the billing dispute, escalate formally if it's ignored or refused, and use the checklists and evidence pack below to build your case and claim a refund. <strong>Every generator, checklist and template on this page is completely free to use — no account, no payment, no catch.</strong></p>
+
+    <div class="kit-cross-link">
+      Haven't actually cancelled yet? Start with the <a href="/kits/subscription-gym-cancellation">Subscription &amp; Gym Cancellation Kit</a> instead — cancel first, then come back here only if a charge lands anyway.
     </div>
 
-    <!-- More categories and kits are added here over time, following the same
-         .pillar-category / .pillar-card-grid pattern as pillar-pages.html.
-         Every new kit page must also state plainly, in its own intro copy
-         (not just a badge), that every tool inside it is completely free
-         to use — see /kits/subscription-gym-cancellation.html for the
-         established wording pattern. -->
+    <!-- THE 2-LETTER SEQUENCE -->
+    <section aria-labelledby="kit-sequence-h2" style="margin-top: 40px;">
+      <h2 id="kit-sequence-h2" class="cl-hub-cat">The sequence</h2>
+      <p class="cl-hub-cat-sub">Start at step 1 with the specific charge in front of you — the escalation letter is written to reference the dispute you already sent.</p>
+      <div class="ch-start-grid">
+
+        <div class="ch-start-card">
+          <p class="ch-start-kicker">Step 1 · Dispute it</p>
+          <h3>Dispute the wrongful charge</h3>
+          <p class="kit-step-desc">A firm, formal dispute for a post-cancellation charge, a price increase without proper notice, a duplicate charge, or an unwanted renewal — the main tool in this kit.</p>
+          <ol class="ch-start-steps">
+            <li><span class="ch-step-num">1</span><a href="/generate/subscription-service-billing-dispute">Subscription &amp; Service Billing Dispute Generator →</a></li>
+          </ol>
+        </div>
+
+        <div class="ch-start-card">
+          <p class="ch-start-kicker">Step 2 · No response?</p>
+          <h3>Escalate it</h3>
+          <p class="kit-step-desc">If the dispute above is ignored or refused, escalate with a formal complaint that references what you already sent and demands a specific, timely response.</p>
+          <ol class="ch-start-steps">
+            <li><span class="ch-step-num">2</span><a href="/generate/service-complaint-escalation">Service Complaint &amp; Escalation Generator →</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUPPORTING CHECKLISTS & TEMPLATE -->
+    <section aria-labelledby="kit-support-h2" style="margin-top: 48px;">
+      <h2 id="kit-support-h2" class="cl-hub-cat">Checklists &amp; template to use alongside</h2>
+      <p class="cl-hub-cat-sub">Free, interactive checklists to confirm what happened and what you're owed, plus a ready-made evidence pack to organize your case.</p>
+      <div class="kit-support-grid">
+
+        <a class="cl-card" href="/checklists/post-cancellation-charge-checklist">
+          <span class="cl-card-tag">Checklist</span>
+          <h3 class="cl-card-title">Post-Cancellation Charge Checklist</h3>
+          <p class="cl-card-desc">Charged after a confirmed cancellation? Confirm your cancellation, document the charge, and get it refunded.</p>
+          <div class="cl-card-meta"><span>⏱ 7 min</span><span>✓ 12 checks</span><span class="cl-card-go">Start →</span></div>
+        </a>
+
+        <a class="cl-card" href="/checklists/unexpected-subscription-charge-checklist">
+          <span class="cl-card-tag">Checklist</span>
+          <h3 class="cl-card-title">Unexpected Subscription Charge Checklist</h3>
+          <p class="cl-card-desc">Identify a charge you don't recognize and work out whether it's a forgotten trial, a family member's purchase, or genuine fraud.</p>
+          <div class="cl-card-meta"><span>⏱ 7 min</span><span>✓ 12 checks</span><span class="cl-card-go">Start →</span></div>
+        </a>
+
+        <a class="cl-card" href="/checklists/subscription-refund-checklist">
+          <span class="cl-card-tag">Checklist</span>
+          <h3 class="cl-card-title">Subscription Refund Checklist</h3>
+          <p class="cl-card-desc">Check your eligibility, gather your evidence, and make a specific, well-supported refund request.</p>
+          <div class="cl-card-meta"><span>⏱ 7 min</span><span>✓ 13 checks</span><span class="cl-card-go">Start →</span></div>
+        </a>
+
+        <article class="prod-card free-lead">
+          <span class="prod-badge free">Free Download</span>
+          <h3 class="prod-title">Service Cancellation &amp; Refund Evidence Pack</h3>
+          <p class="prod-desc">Organize a subscription cancellation and refund claim in one place — service details, cancellation log, cancellation-window payments, refund tracking, communications, and an evidence checklist. PDF + Word.</p>
+          <div class="prod-foot">
+            <span class="prod-price free">FREE</span>
+            <a class="prod-btn" href="/templates/service-cancellation-refund-evidence-pack">Get it free →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- QUIET PAGE-FOOTER BRIDGE -->
+    <div class="ch-bridge" style="margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 10px 28px;">
+      <a href="/kits" style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-muted);">← All Action Kits</a>
+      <a href="/kits/subscription-gym-cancellation" style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-muted);">Subscription &amp; Gym Cancellation Kit →</a>
+      <a href="/subscriptions-services" style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-muted);">Subscriptions &amp; Services hub →</a>
+    </div>
 
   </div>
 </main>

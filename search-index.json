@@ -16066,5 +16066,18 @@
       "how to cancel subscription and dispute charge",
       "cancel gym membership still being charged"
     ]
+  },
+  {
+    "title": "Wrongful Charge After Cancellation Kit",
+    "type": "kit",
+    "block": "subscriptions-services",
+    "url": "/kits/wrongful-charge-after-cancellation",
+    "description": "Already cancelled but got charged anyway? Dispute the charge, escalate if it's ignored, and claim your refund — the real sequence, with the exact free tool for each step.",
+    "keywords": [
+      "wrongful charge after cancellation kit",
+      "charged after cancelling subscription",
+      "post cancellation charge dispute",
+      "how to get refund after cancelling subscription"
+    ]
   }
 ]
