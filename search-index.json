@@ -15846,5 +15846,70 @@
       "plumber caused damage claim",
       "contractor damaged my property"
     ]
+  },
+  {
+    "title": "Can a Company Change a Contract After I Have Signed It?",
+    "type": "question",
+    "block": "legal-contracts",
+    "url": "/questions/legal-contracts/can-company-change-contract-after-i-have-signed-it",
+    "description": "Only in limited ways. A clause letting a company change terms without a valid, specified reason is presumed unfair under the Consumer Rights Act 2015 and may not be binding on you.",
+    "keywords": [
+      "can a company change a contract after i have signed it",
+      "unfair contract terms consumer rights act",
+      "variation clause enforceable uk",
+      "company changed my contract terms"
+    ]
+  },
+  {
+    "title": "Can a Company Charge Me a Fee That Wasn't Clearly Stated in the Contract?",
+    "type": "question",
+    "block": "legal-contracts",
+    "url": "/questions/legal-contracts/can-company-charge-fee-not-clearly-stated-in-contract",
+    "description": "No — you're not liable for costs you weren't told about before the contract was made, and pre-ticked boxes for extra charges have been banned since 2014.",
+    "keywords": [
+      "can a company charge me a fee that wasnt clearly stated in the contract",
+      "hidden fee contract consumer rights",
+      "pre ticked box charge banned",
+      "consumer contracts regulations 2013 undisclosed fee"
+    ]
+  },
+  {
+    "title": "Can I Cancel a Contract I Signed Yesterday?",
+    "type": "question",
+    "block": "legal-contracts",
+    "url": "/questions/legal-contracts/can-i-cancel-contract-i-signed-yesterday",
+    "description": "Depends how and where you signed it. Distance and doorstep contracts usually give you a 14-day cooling-off right — contracts signed in person at a business's own premises generally don't.",
+    "keywords": [
+      "can i cancel a contract i signed yesterday",
+      "14 day cooling off period contract",
+      "distance contract off premises cancellation",
+      "cancel contract signed at home"
+    ]
+  },
+  {
+    "title": "Can I Refuse to Sign a Contract Written in a Language I Don't Understand?",
+    "type": "question",
+    "block": "legal-contracts",
+    "url": "/questions/legal-contracts/can-i-refuse-to-sign-contract-in-language-i-dont-understand",
+    "description": "Yes — no one can force you to sign anything. And once signed, terms must be in plain, intelligible language to be enforceable against a consumer; unclear wording is read in your favour.",
+    "keywords": [
+      "can i refuse to sign a contract written in a language i dont understand",
+      "plain intelligible language contract terms",
+      "signed contract didnt understand language barrier",
+      "contract translation request"
+    ]
+  },
+  {
+    "title": "Can a Verbal Agreement Be Legally Binding?",
+    "type": "question",
+    "block": "legal-contracts",
+    "url": "/questions/legal-contracts/can-verbal-agreement-be-legally-binding",
+    "description": "Yes, often — English law doesn't require contracts to be written. But land sales, guarantees and consumer credit agreements are key exceptions that must be in writing to count.",
+    "keywords": [
+      "can a verbal agreement be legally binding",
+      "oral contract enforceable uk",
+      "elements of a valid contract",
+      "proving a verbal agreement"
+    ]
   }
 ]
