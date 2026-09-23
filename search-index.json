@@ -15651,5 +15651,70 @@
       "parliamentary and health service ombudsman complaint",
       "maladministration avoidable delay"
     ]
+  },
+  {
+    "title": "Can an Online Seller Refuse a Refund Because I Opened the Supplement?",
+    "type": "question",
+    "block": "health-supplements",
+    "url": "/questions/health-supplements/can-online-seller-refuse-refund-opened-supplement",
+    "description": "Usually yes, if the product isn't defective. No federal law gives you a right to return an opened supplement for a change of mind — but a few situations override that.",
+    "keywords": [
+      "can an online seller refuse a refund because i opened the supplement",
+      "opened supplement return policy",
+      "ftc mail internet telephone order merchandise rule",
+      "no returns opened health product"
+    ]
+  },
+  {
+    "title": "Can a Shop Sell Supplements Without Showing the Ingredients?",
+    "type": "question",
+    "block": "health-supplements",
+    "url": "/questions/health-supplements/can-shop-sell-supplements-without-showing-ingredients",
+    "description": "No — federal law requires every dietary supplement to carry a full ingredient list and Supplement Facts panel, with one narrow exception for proprietary blend amounts.",
+    "keywords": [
+      "can a shop sell supplements without showing the ingredients",
+      "supplement facts panel requirements",
+      "dshea labeling requirements",
+      "proprietary blend disclosure rules"
+    ]
+  },
+  {
+    "title": "Can a Supplement Be Sold as \"Natural\" With Synthetic Ingredients?",
+    "type": "question",
+    "block": "health-supplements",
+    "url": "/questions/health-supplements/can-supplement-be-sold-as-natural-with-synthetic-ingredients",
+    "description": "No legal definition of 'natural' exists, but the FTC has repeatedly ruled that calling a product 'all natural' while it contains synthetic ingredients is deceptive advertising.",
+    "keywords": [
+      "can a supplement be sold as natural with synthetic ingredients",
+      "ftc all natural claim deceptive",
+      "california naturel ftc case",
+      "natural supplement false advertising"
+    ]
+  },
+  {
+    "title": "Can a Supplement Company Claim Its Product Can Treat a Disease?",
+    "type": "question",
+    "block": "health-supplements",
+    "url": "/questions/health-supplements/can-supplement-company-claim-product-treats-disease",
+    "description": "No — dietary supplements can describe how they support the body's structure or function, but claiming they treat, cure, or prevent a disease is illegal without FDA drug approval.",
+    "keywords": [
+      "can a supplement company claim its product can treat a disease",
+      "structure function claim vs disease claim",
+      "dshea disease claim illegal",
+      "supplement cure claim fda"
+    ]
+  },
+  {
+    "title": "Can a Supplement Subscription Keep Charging Me After I Cancel?",
+    "type": "question",
+    "block": "health-supplements",
+    "url": "/questions/health-supplements/can-supplement-subscription-keep-charging-after-cancel",
+    "description": "No — once you cancel, continued charges are illegal under federal law, even though the rule requiring the easiest possible cancel button was struck down in court.",
+    "keywords": [
+      "can a supplement subscription keep charging me after i cancel",
+      "rosca restore online shoppers confidence act",
+      "click to cancel rule vacated",
+      "supplement subscription charged after cancellation"
+    ]
   }
 ]
