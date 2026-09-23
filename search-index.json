@@ -16105,5 +16105,18 @@
       "card fraud dispute letter",
       "chargeback dispute sequence"
     ]
+  },
+  {
+    "title": "Hidden Bank Fees Kit",
+    "type": "kit",
+    "block": "financial-banking",
+    "url": "/kits/hidden-bank-fees",
+    "description": "Spot the hidden or undisclosed bank fees on your account, request a refund, and escalate if it's refused — the real sequence, with the exact free tool for each step.",
+    "keywords": [
+      "hidden bank fees kit",
+      "bank fee refund request",
+      "undisclosed bank charges",
+      "overdraft fee refund letter"
+    ]
   }
 ]
