@@ -15781,5 +15781,70 @@
       "water company leak allowance",
       "high water bill from leak"
     ]
+  },
+  {
+    "title": "Can a Builder Charge Me More Than the Agreed Quote?",
+    "type": "question",
+    "block": "home-renovations-services",
+    "url": "/questions/home-renovations-services/can-builder-charge-more-than-agreed-quote",
+    "description": "Not if you had a fixed quote — only an estimate can legally shift. A quote is a binding promise, and a builder can't charge more unless you agreed to extra work or there was an obvious mistake.",
+    "keywords": [
+      "can a builder charge me more than the agreed quote",
+      "quote vs estimate builder uk",
+      "fixed quote binding promise",
+      "builder raised price after quote"
+    ]
+  },
+  {
+    "title": "Can a Builder Start Additional Work Without Asking Me First?",
+    "type": "question",
+    "block": "home-renovations-services",
+    "url": "/questions/home-renovations-services/can-builder-start-additional-work-without-asking",
+    "description": "No — you don't owe anything extra for work you never agreed to. You can even ask them to undo it for free, unless your original contract specifically allowed for this.",
+    "keywords": [
+      "can a builder start additional work without asking me first",
+      "unapproved extra work builder",
+      "billed for work i didnt agree to",
+      "contractor unauthorized additional work"
+    ]
+  },
+  {
+    "title": "Can a Contractor Keep My Deposit If I Cancel the Work?",
+    "type": "question",
+    "block": "home-renovations-services",
+    "url": "/questions/home-renovations-services/can-contractor-keep-deposit-if-i-cancel-work",
+    "description": "Often partially — a contractor can keep enough of your deposit to cover reasonable losses, but not more, and if you signed away from their premises you may have a 14-day cooling-off right.",
+    "keywords": [
+      "can a contractor keep my deposit if i cancel the work",
+      "14 day cooling off period home improvement",
+      "cancellation fee contractor deposit",
+      "cancel building work refund"
+    ]
+  },
+  {
+    "title": "Can I Refuse to Pay the Final Invoice If the Work Is Unfinished?",
+    "type": "question",
+    "block": "home-renovations-services",
+    "url": "/questions/home-renovations-services/can-i-refuse-to-pay-final-invoice-work-unfinished",
+    "description": "You don't have to pay for work that hasn't been done. You can withhold a reasonable amount tied to what's missing or substandard, but outright refusing to pay anything can backfire.",
+    "keywords": [
+      "can i refuse to pay the final invoice if the work is unfinished",
+      "unfinished building work invoice",
+      "consumer rights act 2015 reasonable care and skill",
+      "withhold payment unfinished renovation"
+    ]
+  },
+  {
+    "title": "Who Pays If a Plumber Damages My House?",
+    "type": "question",
+    "block": "home-renovations-services",
+    "url": "/questions/home-renovations-services/who-pays-if-plumber-damages-my-house",
+    "description": "The plumber's business, usually through their public liability insurance — since they didn't use reasonable care and skill. If they're uninsured or underinsured, recovering the cost gets harder.",
+    "keywords": [
+      "who pays if a plumber damages my house",
+      "tradesperson public liability insurance uk",
+      "plumber caused damage claim",
+      "contractor damaged my property"
+    ]
   }
 ]
