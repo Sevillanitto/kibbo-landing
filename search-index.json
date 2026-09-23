@@ -15586,5 +15586,70 @@
       "early termination fee calculator",
       "cost to cancel subscription"
     ]
+  },
+  {
+    "title": "Can an Administration Refuse to Tell Me Why My Application Was Rejected?",
+    "type": "question",
+    "block": "public-services-administration",
+    "url": "/questions/public-services-administration/can-administration-refuse-to-tell-me-why-application-rejected",
+    "description": "There's no general legal duty to give reasons in UK law, but courts have found one applies in many real situations — especially where you have a right of appeal or your interests are directly affected.",
+    "keywords": [
+      "can an administration refuse to tell me why my application was rejected",
+      "duty to give reasons uk public body",
+      "government rejected application no explanation",
+      "maladministration refusing to answer questions"
+    ]
+  },
+  {
+    "title": "Can a Government Office Refuse to Accept My Application Online?",
+    "type": "question",
+    "block": "public-services-administration",
+    "url": "/questions/public-services-administration/can-government-office-refuse-accept-application-online",
+    "description": "Not as your only option. Public bodies must offer accessible alternatives, and if going online genuinely isn't practicable for you, you can request paper or phone, with a right of appeal.",
+    "keywords": [
+      "can a government office refuse to accept my application online",
+      "digital by default accessibility regulations",
+      "government service online only alternative",
+      "hmrc phone or paper filing instead of online"
+    ]
+  },
+  {
+    "title": "Can I Request a Copy of Documents Held by a Public Authority?",
+    "type": "question",
+    "block": "public-services-administration",
+    "url": "/questions/public-services-administration/can-i-request-copy-of-documents-held-by-public-authority",
+    "description": "Yes — under the Freedom of Information Act 2000, most public authorities must respond within 20 working days, though requests costing over £450 to answer can legally be refused.",
+    "keywords": [
+      "can i request a copy of documents held by a public authority",
+      "freedom of information act request uk",
+      "foi request 20 working days",
+      "foi £450 cost limit"
+    ]
+  },
+  {
+    "title": "Can a Public Body Ask Me for a Document It Already Has?",
+    "type": "question",
+    "block": "public-services-administration",
+    "url": "/questions/public-services-administration/can-public-body-ask-for-document-it-already-has",
+    "description": "Usually, yes — the UK has no general legal duty forcing departments to reuse data they already hold, though a few joined-up services like Tell Us Once show it's technically possible.",
+    "keywords": [
+      "can a public body ask me for a document it already has",
+      "tell us once service",
+      "government once-only data reuse principle",
+      "resubmit document government department"
+    ]
+  },
+  {
+    "title": "What Happens If an Authority Misses the Deadline to Answer Me?",
+    "type": "question",
+    "block": "public-services-administration",
+    "url": "/questions/public-services-administration/what-happens-if-authority-misses-deadline-to-answer",
+    "description": "There's no automatic penalty, but an avoidable delay counts as maladministration. Here's how to escalate through the department's own complaints process and, eventually, the Ombudsman.",
+    "keywords": [
+      "what happens if an authority misses the deadline to answer me",
+      "government department not responding complaint",
+      "parliamentary and health service ombudsman complaint",
+      "maladministration avoidable delay"
+    ]
   }
 ]
