@@ -16287,5 +16287,18 @@
       "appeal health insurance denial",
       "wrong charges on hospital bill"
     ]
+  },
+  {
+    "title": "Small Claims Court Preparation Kit",
+    "type": "kit",
+    "block": "legal-contracts",
+    "url": "/kits/small-claims-court-preparation",
+    "description": "Demand letter, dispute, or complaint didn't work? The final step for any unresolved dispute — organize your case, gather evidence, send a final demand, then file in small claims court.",
+    "keywords": [
+      "small claims court kit",
+      "how to prepare for small claims court",
+      "final demand letter before small claims",
+      "small claims evidence bundle"
+    ]
   }
 ]
