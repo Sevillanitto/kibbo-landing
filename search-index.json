@@ -16352,5 +16352,18 @@
       "accused of plagiarism or ai use",
       "academic misconduct hearing defence"
     ]
+  },
+  {
+    "title": "Lost/Stolen Package Kit",
+    "type": "kit",
+    "block": "delivery-parcels",
+    "url": "/kits/lost-stolen-package",
+    "description": "Package lost in transit or stolen after delivery? Confirm it's really gone, document the evidence, file the claim, and escalate to the ombudsman if needed — the exact free tool for each step.",
+    "keywords": [
+      "lost package kit",
+      "package stolen from porch what to do",
+      "courier lost my parcel claim",
+      "parcel marked delivered but not received"
+    ]
   }
 ]
