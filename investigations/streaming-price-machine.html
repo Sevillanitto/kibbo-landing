@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-image-preview:large">
+<title>The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal | Kibbo</title>
+<meta name="description" content="Kibbo built its own 15-year dataset of streaming price changes across Netflix, Disney+, Hulu, Max, Prime Video and five more. The real story isn't how much prices rose — it's who actually pays for it.">
+<link rel="canonical" href="https://www.getkibbo.com/investigations/streaming-price-machine">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal">
+<meta property="og:description" content="Kibbo built its own 15-year dataset of streaming price changes across Netflix, Disney+, Hulu, Max, Prime Video and five more. The real story isn't how much prices rose — it's who actually pays for it.">
+<meta property="og:url" content="https://www.getkibbo.com/investigations/streaming-price-machine">
+<meta property="og:image" content="https://www.getkibbo.com/investigations-images/streaming-price-machine-hero.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal">
+<meta name="twitter:description" content="Kibbo built its own 15-year dataset of streaming price changes across Netflix, Disney+, Hulu, Max, Prime Video and five more. The real story isn't how much prices rose — it's who actually pays for it.">
+<meta name="twitter:image" content="https://www.getkibbo.com/investigations-images/streaming-price-machine-hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0QKW8L27Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N0QKW8L27Y');
+</script>
+
+<!-- JSON-LD Article schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal About What You Actually Agreed To",
+  "description": "An original Kibbo investigation tracking every price change across 10 major US streaming platforms since launch, with an original dataset and analysis of what happens after you press Subscribe.",
+  "author": {
+    "@type": "Person",
+    "name": "Carlos Lopez",
+    "url": "https://www.getkibbo.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibbo"
+  },
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "image": "https://www.getkibbo.com/investigations-images/streaming-price-machine-hero.jpg",
+  "mainEntityOfPage": "https://www.getkibbo.com/investigations/streaming-price-machine",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.getkibbo.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Investigations",
+        "item": "https://www.getkibbo.com/investigations"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal",
+        "item": "https://www.getkibbo.com/investigations/streaming-price-machine"
+      }
+    ]
+  }
+}
+</script>
+
+<link rel="stylesheet" href="/styles.css">
+<style>
+  :root {
+    --bg: #F7F5F0;
+    --bg-dark: #141210;
+    --accent-green: #3D6B4F;
+    --accent-amber: #C8922A;
+    --accent-terra: #B85C3A;
+    --font-serif: 'Syne', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --text-primary: #1A1815;
+    --text-secondary: #56504A;
+    --border-soft: #E4DFD5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--bg); color: var(--text-primary); line-height: 1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .hero-image { width: 100%; aspect-ratio: 1600 / 900; object-fit: cover; display: block; }
+  .hero-clear { padding-top: 64px; background: var(--bg); }
+  .breadcrumb-inv { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 0 0 24px; color: var(--accent-green); }
+  .breadcrumb-inv a { color: var(--accent-green); text-decoration: none; }
+  .breadcrumb-inv a:hover { color: var(--text-primary); }
+  .dataset-block p.dataset-more { margin: 14px 0 0; font-size: 14.5px; line-height: 1.9; }
+  .dataset-block p.dataset-more a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+
+
+
+  .art-header { padding: 56px 0 28px; }
+  .art-category { display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
+  .art-header h1 { font-family: var(--font-serif); font-size: 38px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+  .art-dek { font-size: 19px; color: var(--text-secondary); max-width: 660px; }
+  .art-meta { display: flex; gap: 18px; margin-top: 22px; font-size: 13px; color: var(--text-secondary); flex-wrap: wrap; }
+
+
+  .art-body h2 { font-family: var(--font-serif); font-size: 27px; font-weight: 700; margin: 52px 0 18px; }
+  .art-body h3 { font-family: var(--font-sans); font-size: 18px; font-weight: 700; margin: 30px 0 10px; }
+  .art-body p { margin-bottom: 17px; font-size: 17px; }
+  .art-body ul, .art-body ol { margin: 0 0 17px 22px; }
+  .art-body li { margin-bottom: 8px; font-size: 17px; }
+
+  .lede { font-size: 20px; color: var(--text-primary); font-weight: 500; margin-bottom: 20px; }
+
+  table.data-table { width: 100%; border-collapse: collapse; margin: 24px 0 30px; font-size: 15px; }
+  table.data-table th { text-align: left; padding: 10px 12px; font-weight: 700; border-bottom: 2px solid var(--text-primary); }
+  table.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  table.data-table tr:last-child td { border-bottom: 1px solid var(--text-primary); }
+
+  .dw-embed { margin: 30px 0 36px; }
+  .dw-caption { font-size: 14px; color: var(--text-secondary); margin-top: 8px; font-style: italic; }
+
+  figure.doc-shot { margin: 30px 0 36px; }
+  figure.doc-shot img { width: 100%; height: auto; border: 1px solid var(--border-soft); display: block; }
+  figure.doc-shot figcaption { font-size: 14px; color: var(--text-secondary); margin-top: 10px; }
+  figure.doc-shot figcaption a { color: var(--accent-green); }
+
+  blockquote.pull-quote { border-left: 3px solid var(--text-primary); padding-left: 22px; margin: 28px 0; font-size: 20px; line-height: 1.5; font-family: var(--font-serif); font-weight: 600; color: var(--text-primary); }
+  blockquote.pull-quote cite { display: block; margin-top: 10px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; font-style: normal; color: var(--text-secondary); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--border-soft); margin: 48px 0; }
+
+  .dataset-block { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0; margin: 20px 0 40px; }
+  .dataset-block .label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+  .dataset-block h3 { margin: 0 0 10px; }
+  .dataset-block p { font-size: 15.5px; color: var(--text-secondary); margin-bottom: 14px; }
+  .dataset-block a.download-link { font-weight: 700; color: var(--accent-green); text-decoration: underline; }
+
+  .related-list { list-style: none; margin: 0; }
+  .related-list li { border-bottom: 1px solid var(--border-soft); padding: 14px 0; }
+  .related-list a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 16px; }
+  .related-list a:hover { color: var(--accent-green); }
+
+  .sources-list { list-style: none; margin: 0; }
+  .sources-list li { margin-bottom: 10px; font-size: 14.5px; }
+  .sources-list a { color: var(--accent-green); }
+
+
+  @media (max-width: 640px) {
+    .art-header h1 { font-size: 28px; }
+    .lede { font-size: 18px; }
+    table.data-table { font-size: 13px; }
+    blockquote.pull-quote { font-size: 17px; padding-left: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-item is-disabled" aria-disabled="true">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <span class="kibbo-mobile-disabled">Cases <span class="kibbo-badge-soon">COMING SOON</span></span>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<div class="hero-clear">
+  <nav class="breadcrumb-inv" aria-label="Breadcrumb"><a href="/investigations">← Investigations</a></nav>
+  <!-- HERO IMAGE — 1600x900px -->
+  <img class="hero-image" src="/investigations-images/streaming-price-machine-hero.jpg" alt="Rows of streaming service interfaces on a television screen" width="1600" height="900">
+</div>
+
+<div class="wrap">
+
+  <header class="art-header">
+    <span class="art-category">Kibbo Investigation · Subscriptions &amp; Services</span>
+    <h1>The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal About What You Actually Agreed To</h1>
+    <p class="art-dek">We built our own 15-year dataset tracking every price change across Netflix, Disney+, Hulu, Max, Prime Video and five more. The real story isn't how much prices went up — it's who actually pays for it.</p>
+    <div class="art-meta">
+      <span>Carlos Lopez</span>
+      <span>·</span>
+      <span>September 2026</span>
+      <span>·</span>
+      <span>14 min read</span>
+    </div>
+  </header>
+
+  <div class="art-body">
+
+    <p class="lede">Every year, streaming prices go up somewhere, and every year the coverage looks the same: a company raises a number, a handful of outlets report the new figure, and the story ends there. We wanted to ask a different question. Not "how much does Netflix cost now," but: what actually happens to the price you agreed to, month after month, year after year — and does it happen the same way to everyone?</p>
+
+    <p>To answer that, we built something that didn't exist before we built it: a single dataset tracking every publicly confirmed price change — launch, increase, decrease, or restructure — across 10 major US streaming platforms, from each one's launch through September 2026. Ninety-seven separate events. Fifteen years. Every figure cross-checked against at least two independent sources at the time it happened, not reconstructed from memory or copied from someone else's summary.</p>
+
+    <p>What we found complicates the usual "streaming keeps getting more expensive" story in a way we didn't expect going in — and points to a much more specific, and more useful, question: who is actually paying the cost of these fifteen years of increases?</p>
+
+    <hr class="section-rule">
+
+    <h2>Ninety-seven price changes, ten platforms, fifteen years</h2>
+
+    <p>We tracked Netflix, Disney+, Hulu, Max (formerly HBO Max), Prime Video, Peacock, Apple TV+, Paramount+, ESPN, and YouTube TV — chosen because together they cover the large majority of US streaming spend, and because each has a long enough public record to actually reconstruct a history from, not just a snapshot.</p>
+
+    <p>The headline number is the one you'd expect: every single platform costs more today than it did at launch. But the size of that increase varies enormously — from a streaming service that's barely moved in five years, to one that has tripled.</p>
+
+    <table class="data-table">
+      <tr><th>Platform</th><th>Launch price</th><th>Current price (same plan)</th><th>Total increase</th></tr>
+      <tr><td>Apple TV+</td><td>$4.99 (2019)</td><td>$14.99</td><td>+200.4%</td></tr>
+      <tr><td>ESPN</td><td>$4.99 (2018)</td><td>$13.99</td><td>+180.4%</td></tr>
+      <tr><td>Disney+</td><td>$6.99 (2019)</td><td>$18.99</td><td>+171.7%</td></tr>
+      <tr><td>Netflix</td><td>$7.99 (2011)</td><td>$19.99</td><td>+150.3%</td></tr>
+      <tr><td>YouTube TV</td><td>$34.99 (2017)</td><td>$82.99</td><td>+137.2%</td></tr>
+      <tr><td>Peacock</td><td>$9.99 (2020)</td><td>$19.99</td><td>+100.1%</td></tr>
+      <tr><td>Paramount+</td><td>$4.99 (2021)</td><td>$8.99</td><td>+80.2%</td></tr>
+      <tr><td>Hulu</td><td>$11.99 (2015)</td><td>$18.99</td><td>+58.4%</td></tr>
+      <tr><td>Prime Video</td><td>$79/yr (2005)</td><td>$139/yr</td><td>+75.9%</td></tr>
+      <tr><td>Max</td><td>$14.99 (2020)</td><td>$18.49</td><td>+23.3%</td></tr>
+    </table>
+
+    <div class="dw-embed">
+      <iframe title="Every streaming platform's cheapest plan, 2011–2026" aria-label="Small multiple line chart" id="datawrapper-chart-i4mtq" src="https://datawrapper.dwcdn.net/i4mtq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="723" data-external="1"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0,i=e.length;r<i;r++)if(e[r].contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";e[r].style.height=d}}})}();</script>
+    </div>
+
+    <p>A few patterns hold across almost every platform we tracked. Increases rarely arrive on their own — they're consistently bundled with something else: a rebrand (HBO Max became Max, then became HBO Max again, both times without touching price, but the increases came right alongside), a merger (Paramount+ absorbing Showtime, ESPN+ relaunching as ESPN Select and ESPN Unlimited), or a restructuring of tiers that makes the "before vs. after" genuinely harder to compare. And the justification is almost always some version of the same sentence — more content, more investment, more value — regardless of whether the platform's library actually grew that year.</p>
+
+    <p>Hulu's 2019 price cut — from $7.99 to $5.99 on its ad-supported plan — is the only decrease anywhere in our 97 tracked events. Everything else, across fifteen years and ten platforms, only ever moved one direction.</p>
+
+    <hr class="section-rule">
+
+    <h2>The price that didn't look like a price increase</h2>
+
+    <p>The clearest example of how a price increase can be engineered to not look like one comes from Amazon. In January 2024, Prime Video introduced ads into its standard viewing experience — a service that, for nineteen years, had been ad-free as part of what Prime members already paid for. Amazon's own statement at the time was explicit: <strong>"We're not making changes in 2024 to the current price of Prime membership."</strong> Technically true. Prime's headline price didn't move.</p>
+
+    <p>What changed instead was what that price actually bought you. To keep the ad-free experience you already had, Amazon introduced a new, separate charge: $2.99 a month. In April 2026, that add-on — rebranded "Prime Video Ultra" along the way — rose again, from $2.99 to $4.99, a 67% increase on its own.</p>
+
+    <div class="dw-embed">
+      <iframe title="The Price That Didn't Look Like a Price Increase" aria-label="Bar Chart" id="datawrapper-chart-4DVtu" src="https://datawrapper.dwcdn.net/4DVtu/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="150" data-external="1"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0,i=e.length;r<i;r++)if(e[r].contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";e[r].style.height=d}}})}();</script>
+      <p class="dw-caption">The effective cost of watching Prime Video without ads, before and after Amazon's 2024 and 2026 changes — with no change to Prime's own listed price.</p>
+    </div>
+
+    <p>The net effect: keeping the exact same viewing experience you had in December 2023 now costs $19.98 a month instead of $14.99 — a 33% increase — while Amazon's own marketing can accurately say Prime's price hasn't changed. A group of subscribers sued over the 2024 change. A federal judge dismissed the case in July 2025, ruling that adding ads was a <strong>"benefit modification"</strong> authorized under Amazon's existing subscriber agreement, not a price increase at all.</p>
+
+    <p>That ruling matters beyond Amazon. It establishes, at least for now, that a platform can take something away — or make you pay extra to keep it — without that counting as raising your price under the terms you originally agreed to. Every platform in our dataset has some version of this lever available. Amazon is just the one that has already used it, and had a court agree it was allowed to.</p>
+
+    <hr class="section-rule">
+
+    <h2>The newcomer's gap</h2>
+
+    <p>Here is where our own analysis produced something we didn't expect. We calculated, for each platform, the average monthly price a subscriber has actually paid if they joined on launch day and never cancelled — a blended rate across every price they lived through, not just the current one. Then we compared that to what a new subscriber pays today.</p>
+
+    <p>If the "loyal customers get punished" narrative were true, you'd expect long-time subscribers to be paying roughly today's price, or close to it, after years of accumulated hikes. That's not what the numbers show. Because every platform started cheap and rose gradually, a subscriber who's been there since launch has, on average, paid meaningfully <em>less per month</em> than someone signing up today pays from their very first bill.</p>
+
+    <div class="dw-embed">
+      <iframe title="The Newcomer's Gap: How Much More You Pay by Joining Today" aria-label="Bar Chart" id="datawrapper-chart-TG8ti" src="https://datawrapper.dwcdn.net/TG8ti/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="368" data-external="1"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0,i=e.length;r<i;r++)if(e[r].contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";e[r].style.height=d}}})}();</script>
+      <p class="dw-caption">Gap between each platform's current price and the blended average price paid by a subscriber who joined at launch and never cancelled.</p>
+    </div>
+
+    <p>Apple TV+ is the most extreme case: someone who subscribed in November 2019 has paid an average of $7.94 a month across every price change since. Someone subscribing today pays $14.99 from day one — 89% more than that historical average, with none of the years of $4.99 pricing that made the average low in the first place. ESPN shows nearly the same pattern (72% gap). Max sits at the opposite end: its blended historical rate and its current price are almost identical, because it simply hasn't raised prices very often.</p>
+
+    <p>The honest way to state this finding is not "loyal subscribers are being punished" — the data says the opposite. It's this: <strong>the cost of fifteen years of streaming price increases hasn't been distributed evenly. It's concentrated almost entirely on whoever signs up today</strong>, who gets none of the early, cheaper years and pays the highest price any of these platforms have ever charged, from their very first bill.</p>
+
+    <div class="dataset-block">
+      <div class="label">Kibbo original dataset</div>
+      <h3>Kibbo Streaming Pricing Dataset, 2011–2026</h3>
+      <p>97 verified price-change events across all 10 platforms, cross-checked against contemporaneous reporting at the time each change happened. Includes full methodology notes and every source used.</p>
+      <a class="download-link" href="/investigations-data/kibbo-streaming-pricing-dataset-2011-2026.csv" download>Download the full dataset (CSV) →</a>
+      <p class="dataset-more"><a href="/investigations-data/streaming-dataset-README.md" download>Methodology &amp; column notes (README) →</a><br>
+      <a href="/datasets">See all datasets in Kibbo's Consumer Data Library →</a></p>
+    </div>
+
+    <hr class="section-rule">
+
+    <h2>What contracts actually allow — four places where this is already being tested</h2>
+
+    <p>The pattern we found in the pricing data — increases justified loosely, bundled with unrelated changes, applied unilaterally — isn't just an observation about spreadsheets. In four separate jurisdictions over the past year, regulators and courts have been asking a version of the same question we asked: what did you actually agree to when you subscribed, and how much can a company change it without asking again?</p>
+
+    <h3>Italy: a court ordered Netflix to pay back seven years of increases</h3>
+
+    <p>On April 1, 2026, the Court of Rome ruled that the clauses Netflix used to justify price increases in Italy from 2017 to January 2024 were <strong>null and vexatious</strong> — void under Italian consumer law, because they let Netflix raise prices without stating a justified reason in the contract itself. The court ordered current prices rolled back to their 2015 launch levels and ordered refunds for affected subscribers, including those who've since cancelled.</p>
+
+    <blockquote class="pull-quote">
+      "A Premium subscriber who has paid for Netflix continuously from 2017 to the present day is entitled to a refund of about €500."
+      <cite>— Lawyers for the plaintiffs, via Reuters, April 2026</cite>
+    </blockquote>
+
+    <p>Netflix has said it will appeal, and the company has 90 days to comply or face further penalties. Whatever the outcome on appeal, the ruling establishes something worth sitting with: the exact mechanism we documented across all 10 US platforms — repeated price increases justified by little more than "we're adding value" — has already been found unlawful under one major consumer-protection regime.</p>
+
+    <h3>The UK: regulating the trap, not just the price</h3>
+
+    <p>On April 2, 2026, the UK's Department for Business and Trade published new rules under the Digital Markets, Competition and Consumers Act 2024, aimed specifically at subscription mechanics rather than pricing itself. The government's own figures are the real story here: of the UK's 155 million active subscriptions, an estimated 9.7 million are unwanted, costing consumers roughly £1.6 billion a year — £602 million of that from free trials that silently convert into paid contracts, and £573 million more from people simply forgetting to cancel.</p>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/streaming-price-machine-uk-gov-screenshot.jpg" alt="Screenshot of the UK government's official press release on subscription trap reforms" width="1080" height="1080" loading="lazy">
+      <figcaption>UK Department for Business and Trade press release, April 2, 2026. Source: <a href="https://www.gov.uk/government/news/consumers-to-save-around-400-million-every-year-from-government-crackdown-on-costly-subscription-traps" target="_blank" rel="noopener">gov.uk</a></figcaption>
+    </figure>
+
+    <p>The new rules, expected in force by spring 2027, require clear pre-signup information, reminders before a trial ends or a long contract renews, cancellation as easy as sign-up, and a new 14-day cooling-off right after any trial ends or a 12-month-plus contract renews. Separately, from February 2026, streaming platforms with more than 500,000 UK users — Netflix, Prime Video and Disney+ named explicitly — were brought under enhanced Ofcom oversight for the first time, closer to how traditional broadcasters are regulated.</p>
+
+    <h3>The FTC's $2.5 billion Amazon Prime case just got bigger</h3>
+
+    <p>In September 2025, the FTC settled its case against Amazon over what it called deceptive "dark patterns" used to enrol customers into Prime without clear consent and make cancellation deliberately difficult — a $1.5 billion consumer refund pool plus a $1 billion civil penalty, the largest of its kind in FTC history. On September 17, 2026, the FTC announced it was expanding that settlement: raising the maximum individual refund from $51 to $200, widening eligibility to millions more affected consumers, and making all future payments automatic. Amazon has already paid out more than $845 million.</p>
+
+    <blockquote class="pull-quote">
+      "The revised order will ensure more consumers who were harmed by Amazon's deceptive enrollment and cancellation practices benefit from the FTC's historic settlement."
+      <cite>— Christopher Mufarrige, Director, FTC Bureau of Consumer Protection, September 2026</cite>
+    </blockquote>
+
+    <p>It's worth being precise about what this case is and isn't. It's about how people were signed up and how hard they had to work to cancel — not about the ad-free add-on we described earlier, which remains untouched by this settlement and was separately upheld in court as a legitimate "benefit modification." Two different practices, same company, same underlying pattern: change what the subscriber is actually getting, and let the sign-up price do the talking.</p>
+
+    <h3>The EU: what makes streaming different from a download</h3>
+
+    <p>On July 9, 2026, the Court of Justice of the European Union ruled in Sky Österreich Fernsehen (C-234/25) that a streaming subscription is a <strong>"digital service"</strong> under EU consumer law, not "digital content" — a distinction that decides whether a consumer can be made to waive their 14-day right of withdrawal simply by agreeing that the contract starts immediately.</p>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/streaming-price-machine-cjeu-screenshot.jpg" alt="Screenshot of the official Court of Justice of the European Union press release on the Sky Österreich streaming ruling" width="1080" height="1080" loading="lazy">
+      <figcaption>Court of Justice of the European Union, official press release No. 97/26, July 9, 2026. Source: <a href="https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260097en.pdf" target="_blank" rel="noopener">curia.europa.eu</a></figcaption>
+    </figure>
+
+    <p>The Court's reasoning is more interesting than the outcome alone: what makes a streaming service a "service" rather than static "content" is precisely that it's dynamic and adapts to the individual user — recommendations, watch lists, a catalogue that keeps changing. In other words, the same personalization that makes modern streaming feel tailored to you is exactly what the Court says entitles you to stronger cancellation rights, not weaker ones. Sky Österreich can no longer require customers to give up their withdrawal right just because they agreed to start watching immediately.</p>
+
+    <h3>Four jurisdictions, four different answers</h3>
+
+    <table class="data-table">
+      <tr><th>Jurisdiction</th><th>What's regulated</th><th>Status</th></tr>
+      <tr><td>Italy</td><td>Justification required for price-increase clauses</td><td>Court ruling issued April 2026, under appeal</td></tr>
+      <tr><td>United Kingdom</td><td>Trial rollovers, auto-renewal, cancellation friction, streaming content standards</td><td>New rules from spring 2027; Ofcom oversight already active</td></tr>
+      <tr><td>European Union</td><td>Right of withdrawal on dynamic digital services</td><td>Binding CJEU ruling, July 2026</td></tr>
+      <tr><td>United States</td><td>Deceptive enrollment/cancellation practices (case-by-case, no general federal price rule)</td><td>Ongoing FTC enforcement; no federal cooling-off right for these contracts</td></tr>
+    </table>
+
+    <p>The pattern across all three non-US jurisdictions is the same: increasingly specific rules about the mechanics of subscribing and unsubscribing, not caps on price itself. In the US, by contrast, enforcement has so far focused narrowly on outright deception in sign-up and cancellation flows — real, and backed by real money, but with no equivalent yet to the UK's mandatory cooling-off right or the EU's ruling on withdrawal rights for dynamic services.</p>
+
+    <hr class="section-rule">
+
+    <h2>What you can actually do about it</h2>
+
+    <p>None of this makes any individual price increase illegal in the US today. But the patterns in this data point to concrete, specific things worth checking before your next renewal notice arrives:</p>
+
+    <ul>
+      <li>Check whether a "price change" is actually a <strong>feature change</strong> wearing a different name — the Prime Video pattern (same headline price, less included) is now a documented, court-tested playbook other platforms can copy.</li>
+      <li>If you're a long-time subscriber weighing whether to cancel over a price hike, remember the math: you've likely already paid less on average than what a new subscriber pays from day one. That's not a reason to accept every future increase — it's a reason to compare your actual options now, rather than assume loyalty owes you anything going forward.</li>
+      <li>If you cancel and re-subscribe, you reset to today's price with none of the historical averaging that's currently working in your favor.</li>
+    </ul>
+
+    <h3>Related Kibbo tools</h3>
+    <ul class="related-list">
+      <li><a href="/kits/subscription-gym-cancellation">Subscription &amp; Gym Cancellation Kit</a></li>
+      <li><a href="/kits/wrongful-charge-after-cancellation">Wrongful Charge After Cancellation Kit</a></li>
+      <li><a href="/generate/subscription-service-billing-dispute">Subscription &amp; Service Billing Dispute Generator</a></li>
+      <li><a href="/checklists/subscription-price-increase-checklist">Subscription Price Increase Checklist</a></li>
+    </ul>
+
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://en.ilsole24ore.com/art/netflix-subscription-price-increases-unlawful-refunds-up-to-eur-500-customers-AIUHzWKC" target="_blank" rel="noopener">Il Sole 24 Ore — Netflix price increases ruled unlawful, refunds up to €500</a></li>
+      <li><a href="https://www.gov.uk/government/news/consumers-to-save-around-400-million-every-year-from-government-crackdown-on-costly-subscription-traps" target="_blank" rel="noopener">GOV.UK — Consumers to save around £400 million every year</a></li>
+      <li><a href="https://wiggin.co.uk/?p=26611" target="_blank" rel="noopener">Wiggin — New Tier 1 VOD regulations bring streaming services under Ofcom oversight</a></li>
+      <li><a href="https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260097en.pdf" target="_blank" rel="noopener">Court of Justice of the European Union — Press Release No. 97/26</a></li>
+      <li><a href="https://mynorthwest.com/money/amazon-prime-refund-settlement/4277416" target="_blank" rel="noopener">FTC-Amazon Prime settlement expansion coverage</a></li>
+      <li><a href="https://www.techlicious.com/blog/amazon-prime-refund-cap-jumps-to-200-for-millions-of-customers/" target="_blank" rel="noopener">Techlicious — Amazon Prime refund cap jumps to $200</a></li>
+      <li>The publication each price change was verified against is listed row by row in the dataset's <code>source_publication</code> column; methodology notes are in the dataset README, both available with the download above.</li>
+    </ul>
+
+  </div>
+
+
+</div>
+
+<div id="engagement-footer"></div>
+<script src="/blog/engagement-footer.js"></script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -922,7 +922,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     { title: 'Cancellation Cost Calculator', desc: 'How much will it cost to cancel your gym membership, phone contract, or subscription right now — plus whether cancellation itself is legally supposed to be this hard.', url: '/subscriptions-services/calculators/cancellation-cost-calculator.html' }
   ];
   var CASES = [];
-  var INVESTIGATIONS = [];
+  var INVESTIGATIONS = [
+    { title: 'The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal', desc: 'Kibbo\'s own 15-year dataset of every price change across Netflix, Disney+, Hulu, Max, Prime Video and five more — and who actually pays for the increases. Full dataset included.', url: '/investigations/streaming-price-machine', tag: 'Investigation' }
+  ];
 
   function buildToolCard(item) {
     var a = document.createElement('a');

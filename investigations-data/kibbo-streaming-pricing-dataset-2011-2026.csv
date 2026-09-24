@@ -1,0 +1,98 @@
+platform,tier_or_plan,event_date,event_type,price_before_usd,price_after_usd,percent_change,country,notes,source_publication
+Netflix,Standard-only (streaming),2011,launch,,7.99,,US,Streaming-only tier launch,Android Authority
+Netflix,Premium (4-screen),2013,launch,,11.99,,US,New top tier launch,9meters
+Netflix,Standard,2014-05,increase,7.99,8.99,12.5,US,,Comparitech
+Netflix,Standard,2015,increase,8.99,9.99,11.1,US,,Comparitech
+Netflix,Standard,2017,increase,9.99,10.99,10.0,US,,Comparitech
+Netflix,Premium,2017,increase,11.99,13.99,16.7,US,,Comparitech
+Netflix,Basic,2019,increase,7.99,8.99,12.5,US,,Comparitech
+Netflix,Standard,2019,increase,10.99,12.99,18.2,US,,Comparitech
+Netflix,Premium,2019,increase,13.99,15.99,14.3,US,,Comparitech
+Netflix,Standard,2020,increase,12.99,13.99,7.7,US,,9meters
+Netflix,Premium,2020,increase,15.99,17.99,12.5,US,,9meters
+Netflix,Basic,2022-01,increase,8.99,9.99,11.1,US,,BGR
+Netflix,Standard,2022-01,increase,13.99,15.49,10.7,US,,BGR
+Netflix,Premium,2022-01,increase,17.99,19.99,11.1,US,,BGR
+Netflix,Standard with Ads,2022-11,launch,,6.99,,US,New ad-supported tier launch,ABC7 Chicago
+Netflix,Premium,2023-10,increase,19.99,22.99,15.0,US,,ABC7 Chicago
+Netflix,Standard with Ads,2025-01-21,increase,6.99,7.99,14.3,US,,9meters
+Netflix,Standard,2025-01-21,increase,15.49,17.99,16.1,US,,9meters
+Netflix,Premium,2025-01-21,increase,22.99,24.99,8.7,US,,9meters
+Netflix,Standard with Ads,2026-03-26,increase,7.99,8.99,12.5,US,,Android Authority
+Netflix,Standard,2026-03-26,increase,17.99,19.99,11.1,US,,Android Authority
+Netflix,Premium,2026-03-26,increase,24.99,26.99,8.0,US,,Android Authority
+Disney+,Ad-free,2019-11,launch,,6.99,,US,,Reuters
+Disney+,Ad-free,2021-03,increase,6.99,7.99,14.3,US,,A Good Movie To Watch
+Disney+,Ad-free,2022-12,increase,7.99,10.99,37.5,US,,A Good Movie To Watch
+Disney+,Ad-supported,2022-12,launch,,7.99,,US,New ad-supported tier launch,A Good Movie To Watch
+Disney+,Ad-free,2023-10-12,increase,10.99,13.99,27.3,US,,GSMArena
+Disney+,Ad-free,2024-10-17,increase,13.99,15.99,14.3,US,,WDWNT
+Disney+,Ad-supported,2024-10-17,increase,7.99,9.99,25.0,US,,WDWNT
+Disney+,Ad-free,2025-10-21,increase,15.99,18.99,18.8,US,,Reuters/BNN Bloomberg
+Disney+,Ad-supported,2025-10-21,increase,9.99,11.99,20.0,US,,Reuters/BNN Bloomberg
+Hulu,Ad-supported (Hulu Plus),2010,launch,,7.99,,US,,cabletv.com
+Hulu,Ad-free,2015,launch,,11.99,,US,New ad-free tier launch,AOL
+Hulu,Ad-supported,2019,decrease,7.99,5.99,-25.0,US,Only price decrease found across all 10 platforms,TechRadar
+Hulu,Ad-supported,2021,increase,5.99,6.99,16.7,US,,AOL
+Hulu,Ad-free,2021,increase,11.99,12.99,8.3,US,,AOL
+Hulu,Ad-supported,2022-10-10,increase,6.99,7.99,14.3,US,,BGR
+Hulu,Ad-free,2022-10-10,increase,12.99,14.99,15.4,US,,BGR
+Hulu,Ad-free,2023-10-12,increase,14.99,17.99,20.0,US,,PhoneArena
+Hulu,Ad-supported,2024-10-17,increase,7.99,9.99,25.0,US,,TechRadar
+Hulu,Ad-free,2024-10-17,increase,17.99,18.99,5.6,US,,TechRadar
+Hulu,Ad-supported,2025-10-21,increase,9.99,11.99,20.0,US,,TechRadar
+Max,Ad-free,2020-05,launch,,14.99,,US,Launched as HBO Max,Variety
+Max,Ad-supported,2021-06,launch,,9.99,,US,New ad-supported tier launch,TheWrap
+Max,Ad-free,2023-01-12,increase,14.99,15.99,6.7,US,"First-ever price increase; rebranded to ""Max"" in May 2023 with no price change",TheWrap
+Max,Standard (ad-free),2024-06-04,increase,15.99,16.99,6.3,US,,Variety
+Max,Ultimate (ad-free 4K),2024-06-04,increase,19.99,20.99,5.0,US,,Variety
+Max,Basic with Ads,2025-10-21,increase,9.99,10.99,10.0,US,"Rebranded back to ""HBO Max"" in July 2025 with no price change",Variety/AOL
+Max,Standard,2025-10-21,increase,16.99,18.49,8.8,US,,Variety/AOL
+Max,Premium,2025-10-21,increase,20.99,22.99,9.5,US,,Variety/AOL
+Prime Video,Annual membership,2005-02,launch,,79,,US,,OpenStax
+Prime Video,Annual membership,2014,increase,79,99,25.3,US,,CNBC
+Prime Video,Annual membership,2018,increase,99,119,20.2,US,,CNBC
+Prime Video,Annual membership,2022-02,increase,119,139,16.8,US,,CNBC
+Prime Video,Monthly membership,2022-02,increase,12.99,14.99,15.5,US,,CNBC
+Prime Video,Ad-free add-on,2024-01-29,launch,,2.99,,US,Ads introduced to base Prime Video at no change to Prime price; ad-free became a new paid add-on -- effectively a hidden price increase for ad-free viewers,CNN/BGR
+Prime Video,Ad-free add-on (renamed Prime Video Ultra),2026-04-10,increase,2.99,4.99,67.0,US,"A federal judge dismissed a class action over the 2024 ads change in July 2025, ruling it a 'benefit modification' not a price increase",Parade/AOL
+Peacock,Premium (ad-supported; renamed Select in 2025),2020-07,launch,,4.99,,US,Launched alongside a since-discontinued free tier,A Good Movie To Watch
+Peacock,Premium Plus (ad-free),2020-07,launch,,9.99,,US,,A Good Movie To Watch
+Peacock,Premium (ad-supported; renamed Select in 2025),2023-08-17,increase,4.99,5.99,20.0,US,First-ever price increase; free tier removed for new users Jan 2023,TechRadar
+Peacock,Premium Plus,2023-08-17,increase,9.99,11.99,20.0,US,,TechRadar
+Peacock,Premium (ad-supported; renamed Select in 2025),2024-07,increase,5.99,7.99,33.4,US,,TechRadar
+Peacock,Premium Plus,2024-07,increase,11.99,13.99,16.7,US,,TechRadar
+Peacock,Select (renamed from Premium),2025-07,restructure,7.99,7.99,0.0,US,Tier renamed from Premium to Select at same price,cabletv.com
+Peacock,Premium (new mid-tier),2025-07,launch,,10.99,,US,New intermediate tier introduced between Select and Premium Plus,cabletv.com
+Peacock,Premium Plus,2025-07,increase,13.99,16.99,21.4,US,,cabletv.com
+Peacock,Select,2026-08-18,increase,7.99,8.99,12.5,US,,9to5Google
+Peacock,Premium,2026-08-18,increase,10.99,12.99,18.2,US,,9to5Google
+Peacock,Premium Plus,2026-08-18,increase,16.99,19.99,17.7,US,,9to5Google
+Apple TV+,Standard,2019-11-01,launch,,4.99,,US,,A Good Movie To Watch
+Apple TV+,Standard,2022-10,increase,4.99,6.99,40.1,US,,BGR
+Apple TV+,Standard,2023-10,increase,6.99,9.99,43.0,US,,Movieguide
+Apple TV+,Standard,2025-08-21,increase,9.99,12.99,30.0,US,,TechCrunch
+Apple TV+,Standard,2026-08-28,increase,12.99,14.99,15.4,US,Fourth price hike since 2019 launch; price has tripled overall,TweakTown
+Paramount+,Essential (with ads),2021-03-04,launch,,4.99,,US,"Paramount+ launch, rebrand of CBS All Access",Wikipedia
+Paramount+,Premium (ad-free),2021-03-04,launch,,9.99,,US,,Wikipedia
+Paramount+,Essential,2023-06-27,increase,4.99,5.99,20.0,US,Coincided with Paramount+/Showtime merger,Android Central
+Paramount+,"Premium (renamed ""with Showtime"")",2023-06-27,increase,9.99,11.99,20.0,US,,Android Central
+Paramount+,Essential,2024-08-20,increase,5.99,7.99,33.4,US,,Tom's Guide
+Paramount+,With Showtime,2024-08-20,increase,11.99,12.99,8.3,US,,Tom's Guide
+Paramount+,Essential,2026-01-15,increase,7.99,8.99,12.5,US,,Kibbo research notes
+Paramount+,Premium,2026-01-15,increase,12.99,13.99,7.7,US,,Kibbo research notes
+ESPN,ESPN+ (renamed ESPN Select in 2025),2018-04,launch,,4.99,,US,,SportsBusinessDaily
+ESPN,ESPN+ (renamed ESPN Select in 2025),2020-08-12,increase,4.99,5.99,20.0,US,First-ever price increase,SportBusiness/TechNadu
+ESPN,ESPN+ (renamed ESPN Select in 2025),2021-08,increase,5.99,6.99,16.7,US,,Engadget
+ESPN,ESPN+ (renamed ESPN Select in 2025),2022-08-23,increase,6.99,9.99,43.0,US,,Axios
+ESPN,ESPN+ (renamed ESPN Select in 2025),2024-10,increase,10.99,11.99,9.1,US,Data gap: an unverified intermediate increase from 9.99 to 10.99 occurred between Aug 2022 and Oct 2024 that could not be confirmed against a primary source,TechRadar
+ESPN,ESPN Select (relaunch of ESPN+),2025-08-21,restructure,12.99,12.99,0.0,US,"ESPN+ renamed ESPN Select at relaunch. Price shown here (12.99) vs the last confirmed ESPN+ price (11.99, Oct 2024) implies a second small unconfirmed increase before the relaunch that could not be verified against a primary source -- flagged as a data gap, not stated as fact.",AOL
+ESPN,ESPN Unlimited (new top tier),2025-08-21,launch,,29.99,,US,New tier launched alongside ESPN Select relaunch,AOL
+ESPN,ESPN Select,2026-09-17,increase,12.99,13.99,7.7,US,First increase since the 2025 relaunch,TVTech
+ESPN,ESPN Unlimited,2026-09-17,increase,29.99,31.99,6.7,US,"First increase, ~80% of subscribers access via Disney+/Hulu bundle at unchanged price",Sports Media Watch
+YouTube TV,Base plan,2017-02,launch,,34.99,,US,,9to5Google
+YouTube TV,Base plan,2018-03-13,increase,34.99,39.99,14.3,US,,9to5Google
+YouTube TV,Base plan,2019-04,increase,39.99,49.99,25.0,US,,9to5Google
+YouTube TV,Base plan,2020-07,increase,49.99,64.99,30.0,US,,9to5Google
+YouTube TV,Base plan,2023-04-18,increase,64.99,72.99,12.3,US,,9to5Google
+YouTube TV,Base plan,2025-01-13,increase,72.99,82.99,13.7,US,,9to5Google

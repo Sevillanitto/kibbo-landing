@@ -16378,5 +16378,44 @@
       "import vat charged on delivery",
       "courier handling fee refund"
     ]
+  },
+  {
+    "title": "The Streaming Price Machine: What 97 Price Changes Across 10 Platforms Reveal",
+    "type": "investigation",
+    "block": "subscriptions-services",
+    "url": "/investigations/streaming-price-machine",
+    "description": "Kibbo built its own 15-year dataset of streaming price changes across Netflix, Disney+, Hulu, Max, Prime Video and five more. The real story isn't how much prices rose — it's who actually pays for it.",
+    "keywords": [
+      "streaming price increases investigation",
+      "netflix disney+ hulu price history",
+      "streaming subscription price hikes 2011-2026",
+      "who pays for streaming price increases"
+    ]
+  },
+  {
+    "title": "Kibbo Streaming Pricing Dataset, 2011–2026 (CSV)",
+    "type": "dataset",
+    "block": "subscriptions-services",
+    "url": "/investigations-data/kibbo-streaming-pricing-dataset-2011-2026.csv",
+    "description": "Download Kibbo's original dataset: 97 verified price-change events across 10 major US streaming platforms, from each platform's launch through September 2026.",
+    "keywords": [
+      "streaming pricing dataset csv",
+      "streaming price history data download",
+      "netflix price history data",
+      "kibbo dataset"
+    ]
+  },
+  {
+    "title": "Consumer Data Library — Kibbo Streaming Pricing Dataset",
+    "type": "dataset",
+    "block": "subscriptions-services",
+    "url": "/datasets#kibbo-streaming-pricing-dataset",
+    "description": "The Kibbo Streaming Pricing Dataset in Kibbo's Consumer Data Library — what it contains, the investigation that used it, and download links for the CSV and methodology notes.",
+    "keywords": [
+      "consumer data library",
+      "streaming price dataset",
+      "kibbo datasets",
+      "subscription pricing data"
+    ]
   }
 ]

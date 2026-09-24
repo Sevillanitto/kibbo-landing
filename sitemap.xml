@@ -994,7 +994,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/datasets</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/directory</loc>
@@ -1318,7 +1318,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1</loc>
@@ -1327,6 +1327,14 @@
   <url>
     <loc>https://www.getkibbo.com/investigations/ai-scam-playbook-2026</loc>
     <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/investigations/streaming-price-machine</loc>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/investigations-data/kibbo-streaming-pricing-dataset-2011-2026.csv</loc>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/financial-banking/calculators/hidden-bank-fee-calculator</loc>
