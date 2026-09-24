@@ -16261,5 +16261,18 @@
       "public records request ignored",
       "freedom of information request letter"
     ]
+  },
+  {
+    "title": "Data Breach / Ignored Privacy Rights Kit",
+    "type": "kit",
+    "block": "privacy-data",
+    "url": "/kits/data-breach-ignored-privacy-rights",
+    "description": "Company ignoring your data access or deletion request, or your data caught in a breach? Pick your path — the exact free tools for each privacy situation, in order.",
+    "keywords": [
+      "data breach kit",
+      "company ignored data access request",
+      "gdpr deletion request refused",
+      "report data breach to regulator"
+    ]
   }
 ]
