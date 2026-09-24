@@ -16183,5 +16183,18 @@
       "appeal insurance claim denial letter",
       "insurer not responding to claim"
     ]
+  },
+  {
+    "title": "Third-Party Claim Kit",
+    "type": "kit",
+    "block": "insurance-claims",
+    "url": "/kits/third-party-claim",
+    "description": "Damaged by someone else — like an uninsured driver? Document the damage, file the third-party claim, and escalate if it stalls — the exact free tool for each step.",
+    "keywords": [
+      "third-party claim kit",
+      "uninsured driver damage claim",
+      "claim against someone else's insurance",
+      "third-party liability claim letter"
+    ]
   }
 ]
