@@ -16313,5 +16313,18 @@
       "source of funds request exchange",
       "unfreeze crypto account"
     ]
+  },
+  {
+    "title": "Crypto Scam Recovery Kit",
+    "type": "kit",
+    "block": "crypto-fintech",
+    "url": "/kits/crypto-scam-recovery",
+    "description": "Lost money to a crypto scam? Confirm and document the scam pattern, file a formal complaint, and secure what's left — the exact free tool for each step.",
+    "keywords": [
+      "crypto scam recovery kit",
+      "lost money to crypto scam what to do",
+      "report crypto scam complaint",
+      "secure wallet after crypto scam"
+    ]
   }
 ]
