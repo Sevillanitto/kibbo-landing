@@ -16235,5 +16235,18 @@
       "contractor charging more than quote",
       "defective renovation work complaint"
     ]
+  },
+  {
+    "title": "Public Benefit Denied / Delayed Application Kit",
+    "type": "kit",
+    "block": "public-services-administration",
+    "url": "/kits/public-benefit-denied-delayed-application",
+    "description": "Benefit application denied, or stuck with no response? Pick your path — the exact free tools to appeal a refusal or push a delayed application forward, in order.",
+    "keywords": [
+      "public benefit denied kit",
+      "appeal government benefits denial",
+      "benefit application delayed no response",
+      "complain about government delay"
+    ]
   }
 ]
