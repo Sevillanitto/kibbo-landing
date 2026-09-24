@@ -16170,5 +16170,18 @@
       "landlord won't make repairs",
       "tenant repair request habitability"
     ]
+  },
+  {
+    "title": "Denied or Delayed Insurance Claim Kit",
+    "type": "kit",
+    "block": "insurance-claims",
+    "url": "/kits/denied-delayed-insurance-claim",
+    "description": "Insurance claim delayed with no answer, or formally denied? Pick your situation — the exact free letters, evidence packs and checklists for each, in order.",
+    "keywords": [
+      "denied insurance claim kit",
+      "insurance claim delayed what to do",
+      "appeal insurance claim denial letter",
+      "insurer not responding to claim"
+    ]
   }
 ]
