@@ -16274,5 +16274,18 @@
       "gdpr deletion request refused",
       "report data breach to regulator"
     ]
+  },
+  {
+    "title": "Medical Billing Dispute / Insurance Appeal Kit",
+    "type": "kit",
+    "block": "healthcare-medical",
+    "url": "/kits/medical-billing-dispute-insurance-appeal",
+    "description": "Disputing a medical bill with the provider, or appealing an insurer's coverage denial? Pick your path — the exact free tools for each situation, in order.",
+    "keywords": [
+      "medical billing dispute kit",
+      "dispute a medical bill",
+      "appeal health insurance denial",
+      "wrong charges on hospital bill"
+    ]
   }
 ]
