@@ -1150,6 +1150,18 @@ padding: 15px 20px; cursor: pointer; margin-top: 6px; transition: var(--transiti
 .calc-result-context { font-family: var(--font-sans); font-size: 15px; line-height: 1.65; color: var(--text-secondary); margin-top: 14px; }
 .calc-result-context p { margin-top: 10px; }
 .calc-result-context p:first-child { margin-top: 0; }
+/* "Embed this calculator" block on calculator pages. Flat: same dark code-block look as .post-body pre, minus the shadow. */
+.embed-share { max-width: 600px; margin: 56px auto 0; padding-top: 22px; border-top: 1px solid var(--border); font-family: var(--font-sans); }
+.embed-share summary { cursor: pointer; list-style: none; font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.embed-share summary::-webkit-details-marker { display: none; }
+.embed-share summary::after { content: " +"; color: var(--text-muted); font-weight: 400; }
+.embed-share[open] summary::after { content: " −"; }
+.embed-share-sub { font-size: 14px; line-height: 1.55; color: var(--text-secondary); margin: 12px 0 14px; }
+.embed-code { background: var(--bg-dark); color: #f0ede6; padding: 18px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-dark); overflow-x: auto; white-space: pre-wrap; word-break: break-all; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.6; }
+.embed-copy-btn { margin-top: 12px; font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--text-primary); background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 16px; cursor: pointer; transition: var(--transition); }
+.embed-copy-btn:hover { border-color: var(--text-primary); }
+.embed-share-attrib { font-size: 13px; color: var(--text-muted); margin-top: 14px; line-height: 1.5; }
+.embed-share-attrib a { color: var(--accent-green); font-weight: 600; }
 .calc-cta {
 display: inline-block; margin-top: 26px; font-family: var(--font-sans); font-size: 15px; font-weight: 600;
 color: var(--text-primary); border: 1px solid var(--border); border-radius: var(--radius-sm);

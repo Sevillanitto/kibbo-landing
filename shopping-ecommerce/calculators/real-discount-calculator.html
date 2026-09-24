@@ -293,6 +293,27 @@
     </div>
 
   </div>
+
+  <details class="embed-share">
+    <summary>Embed this calculator</summary>
+    <p class="embed-share-sub">Free to use on your own site or blog. Copy the code below and paste it into your page — the calculator resizes itself to fit.</p>
+    <pre class="embed-code"><code id="embedCode-real-discount-calculator">&lt;iframe src="https://www.getkibbo.com/embed/real-discount-calculator" title="Real Discount Calculator by Kibbo" width="100%" height="720" style="border:0;max-width:640px;" loading="lazy" data-kibbo-embed&gt;&lt;/iframe&gt;
+&lt;script&gt;window.addEventListener("message",function(e){if(e.origin!=="https://www.getkibbo.com"||!e.data||!e.data.kibboEmbedHeight)return;document.querySelectorAll("iframe[data-kibbo-embed]").forEach(function(f){if(f.contentWindow===e.source)f.style.height=e.data.kibboEmbedHeight+"px";});});&lt;/script&gt;
+&lt;p&gt;&lt;a href="https://www.getkibbo.com/shopping-ecommerce/calculators/real-discount-calculator"&gt;Real Discount Calculator by Kibbo&lt;/a&gt;&lt;/p&gt;</code></pre>
+    <button type="button" class="embed-copy-btn" data-copy="embedCode-real-discount-calculator">Copy code</button>
+    <p class="embed-share-attrib">Suggested attribution (already included in the code): <a href="https://www.getkibbo.com/shopping-ecommerce/calculators/real-discount-calculator">Real Discount Calculator by Kibbo</a></p>
+    <script>
+    (function () {
+      var btn = document.querySelector('[data-copy="embedCode-real-discount-calculator"]');
+      btn.addEventListener('click', function () {
+        var text = document.getElementById('embedCode-real-discount-calculator').textContent;
+        var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy code'; }, 2000); };
+        if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+        else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+      });
+    })();
+    </script>
+  </details>
 </main>
 
 <!-- FOOTER -->
