@@ -16339,5 +16339,18 @@
       "bootcamp refund refused",
       "complaint against course provider"
     ]
+  },
+  {
+    "title": "Academic Appeal / Misconduct Defence Kit",
+    "type": "kit",
+    "block": "training-education",
+    "url": "/kits/academic-appeal-misconduct-defence",
+    "description": "Appealing a grade or academic decision, or accused of plagiarism, cheating, or AI misuse? Pick your path — the exact free tools for each situation.",
+    "keywords": [
+      "academic appeal kit",
+      "how to appeal a university grade",
+      "accused of plagiarism or ai use",
+      "academic misconduct hearing defence"
+    ]
   }
 ]
