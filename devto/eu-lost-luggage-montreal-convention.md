@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, airlines
 canonical_url: https://www.getkibbo.com/blog/eu-lost-luggage-montreal-convention
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-lost-luggage-montreal-convention). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-lost-luggage-montreal-convention). By Kibbo Editorial Team.*
 
 A suitcase that never appears on the carousel at the end of a European trip is often met with the assumption that the airline will offer some flat, token payout — a fixed sum regardless of what was actually inside. That's not how the law works. Claims for lost, damaged, or delayed baggage on flights within and connecting to the EU are governed by the Montreal Convention, and the real compensation available is tied to the value of what you lost, not a flat rate.
 

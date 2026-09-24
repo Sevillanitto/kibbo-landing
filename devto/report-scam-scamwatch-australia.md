@@ -6,7 +6,7 @@ tags: australia, scams, cybersecurity, privacy
 canonical_url: https://www.getkibbo.com/blog/report-scam-scamwatch-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-scam-scamwatch-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-scam-scamwatch-australia). By Kibbo Editorial Team.*
 
 If you've fallen for a fake investment scheme or bought from a cloned online store, reporting it to Scamwatch feels like it should trigger an investigation into your specific case. It's important to understand what it actually does, so you use it the right way alongside the steps that can genuinely help you personally.
 

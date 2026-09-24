@@ -6,7 +6,7 @@ tags: eu, consumerrights, productsafety, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-ce-mark-explained
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-ce-mark-explained). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-ce-mark-explained). By Kibbo Editorial Team.*
 
 The "CE" logo stamped on an electronic device or toy is often mistaken for a mark of premium quality or a certification that the product was manufactured within the EU. It's neither. The CE (Conformité Européenne) mark is a legal safety passport: it means the manufacturer declares, under its own sole responsibility, that the product meets essential safety, health, and environmental requirements set out in EU directives, allowing it to circulate freely across the European market. For specific product categories — electronics, toys, machinery — this declaration is mandatory, and a product without it is simply illegal to sell in Europe.
 

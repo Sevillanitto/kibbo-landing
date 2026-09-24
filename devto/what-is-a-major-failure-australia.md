@@ -6,7 +6,7 @@ tags: australia, consumerrights, shopping, law
 canonical_url: https://www.getkibbo.com/blog/what-is-a-major-failure-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/what-is-a-major-failure-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/what-is-a-major-failure-australia). By Kibbo Editorial Team.*
 
 You don't have to sit through three or four failed repair attempts before a store owes you a refund — if the fault qualifies as a **major failure**, the choice is yours from the start: repair, replacement, or a full refund. Getting this classification right is the single biggest factor in whether you walk away with your money back or get stuck in a repair loop.
 

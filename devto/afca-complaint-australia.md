@@ -6,7 +6,7 @@ tags: australia, banking, consumerrights, finance
 canonical_url: https://www.getkibbo.com/blog/afca-complaint-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/afca-complaint-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/afca-complaint-australia). By Kibbo Editorial Team.*
 
 If your bank, insurer, or super fund in Australia has charged you unfairly, denied a legitimate claim, or made an error on your loan, you don't have to fight their customer service department indefinitely or head to court. The Australian Financial Complaints Authority (AFCA) is a free, independent external dispute resolution scheme — and critically, its decisions are binding on the financial firm once you accept them.
 

@@ -6,7 +6,7 @@ tags: eu, consumerrights, ecommerce, warranty
 canonical_url: https://www.getkibbo.com/blog/eu-2-year-consumer-guarantee
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-2-year-consumer-guarantee). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-2-year-consumer-guarantee). By Kibbo Editorial Team.*
 
 Electronics retailers across Europe have a well-worn script: "the manufacturer's warranty only covers the first year — after that, you're on your own, or you can pay for an extended warranty." That script is legally wrong, and it relies on customers not knowing the difference between a manufacturer's commercial warranty and their statutory legal guarantee, which are two entirely separate things.
 

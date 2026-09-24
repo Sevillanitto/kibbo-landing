@@ -6,7 +6,7 @@ tags: australia, consumerrights, housing, renting
 canonical_url: https://www.getkibbo.com/blog/landlord-wont-fix-repairs-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/landlord-wont-fix-repairs-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/landlord-wont-fix-repairs-australia). By Kibbo Editorial Team.*
 
 If your hot water system dies or there's a gas leak in your rented home, you don't have to wait for your landlord to authorise the expense on their own timeline. Australian tenancy law draws a hard line around what counts as an urgent repair — and getting it fixed doesn't require putting your tenancy at risk.
 

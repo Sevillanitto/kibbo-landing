@@ -6,7 +6,7 @@ tags: eu, consumerrights, ecommerce, disputeresolution
 canonical_url: https://www.getkibbo.com/blog/eu-store-refuses-refund-dispute-resolution
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-store-refuses-refund-dispute-resolution). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-store-refuses-refund-dispute-resolution). By Kibbo Editorial Team.*
 
 If an online store based in a different EU country than yours refuses to honour your refund, it's tempting to assume your only real options are hiring a cross-border lawyer or writing the money off. Neither is true, but the landscape here changed significantly and recently, so it's worth being precise about what actually exists today rather than relying on outdated guides.
 

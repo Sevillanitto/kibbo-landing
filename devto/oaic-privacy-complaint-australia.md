@@ -6,7 +6,7 @@ tags: australia, privacy, dataprotection, consumerrights
 canonical_url: https://www.getkibbo.com/blog/oaic-privacy-complaint-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/oaic-privacy-complaint-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/oaic-privacy-complaint-australia). By Kibbo Editorial Team.*
 
 If an Australian company shares your personal data without consent, ignores your requests to be removed from their database, or suffers a data breach that exposes your information, you don't need to fund a class action to get a real response. The Privacy Act 1988 and its 13 Australian Privacy Principles (APPs) give you a free, formal complaint pathway through the Office of the Australian Information Commissioner (OAIC).
 

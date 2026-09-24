@@ -6,7 +6,7 @@ tags: australia, consumerrights, health, safety
 canonical_url: https://www.getkibbo.com/blog/report-side-effect-tga-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-side-effect-tga-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-side-effect-tga-australia). By Kibbo Editorial Team.*
 
 If you have an unexpected or severe reaction to a prescription medicine, an over-the-counter drug, or a medical device in Australia, telling your GP isn't the only step that matters. Australia's medicine safety net relies on a centralised reporting system run by the Therapeutic Goods Administration (TGA) — and both health professionals and everyday consumers can report directly.
 

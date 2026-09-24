@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, airbnb
 canonical_url: https://www.getkibbo.com/blog/eu-airbnb-refund-rules
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-airbnb-refund-rules). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-airbnb-refund-rules). By Kibbo Editorial Team.*
 
 Arriving at a rental booked through Airbnb to find serious habitability problems, extreme uncleanliness, or missing essential amenities that were advertised — heating, Wi-Fi — doesn't mean you have to simply wait and hope the host agrees to a refund. Airbnb's own Guest Refund Policy operates within the wider context of EU rules against misleading commercial practices, and a listing that's genuinely "not as described" gives you real leverage.
 

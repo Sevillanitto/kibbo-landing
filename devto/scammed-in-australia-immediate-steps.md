@@ -6,7 +6,7 @@ tags: australia, scams, cybersecurity, privacy
 canonical_url: https://www.getkibbo.com/blog/scammed-in-australia-immediate-steps
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/scammed-in-australia-immediate-steps). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/scammed-in-australia-immediate-steps). By Kibbo Editorial Team.*
 
 Realising you've just sent money to a scammer, or entered your identity details into a fake portal, feels paralysing. But panic is exactly what costs you the window where something can still be done. Speed genuinely matters here — the sooner you act, the better your odds.
 

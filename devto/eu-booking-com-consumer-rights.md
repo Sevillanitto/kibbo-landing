@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-booking-com-consumer-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-booking-com-consumer-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-booking-com-consumer-rights). By Kibbo Editorial Team.*
 
 Arriving at a hotel booked through Booking.com only to be told there's no room due to overbooking feels like exactly the kind of situation you're left to sort out alone. You're not entirely unprotected — but it matters whether your booking was a standalone hotel reservation or part of a bundled package, because the strength of your legal position differs between the two.
 

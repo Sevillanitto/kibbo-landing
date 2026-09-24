@@ -6,7 +6,7 @@ tags: eu, consumerrights, ecommerce, amazon
 canonical_url: https://www.getkibbo.com/blog/eu-amazon-refund-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-amazon-refund-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-amazon-refund-rights). By Kibbo Editorial Team.*
 
 Buying from a third-party seller on Amazon in Europe, only to receive something defective or nothing like the listing, doesn't mean you're stuck with that seller's own restrictive return policy. However strict an independent seller's terms are, EU law overrides them.
 

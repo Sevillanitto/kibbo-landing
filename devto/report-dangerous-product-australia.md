@@ -6,7 +6,7 @@ tags: australia, consumerrights, productsafety, safety
 canonical_url: https://www.getkibbo.com/blog/report-dangerous-product-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-dangerous-product-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/report-dangerous-product-australia). By Kibbo Editorial Team.*
 
 If an appliance, a child's toy, or a car accessory bought in Australia overheats dangerously, explodes, or causes an injury, returning it to the store for a refund isn't the end of the story. A product that endangers physical safety is a public safety matter, not just a commercial return — and reporting it can trigger a national recall that protects everyone else who bought the same item.
 

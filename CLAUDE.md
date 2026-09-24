@@ -22,7 +22,7 @@ kibbo-landing/
 ├── directory/          # 8 free resource pages
 ├── templates/          # Template product pages
 ├── images/
-│   ├── authors/        # carlos-lopez.jpg + margaret-spencer-breen.jpg
+│   ├── authors/        # carlos-lopez.png (Editorial Team uses /favicon.svg)
 │   └── hero-illustration.svg
 ├── analyze.html
 ├── generate.html
@@ -48,9 +48,10 @@ kibbo-landing/
 ```
 
 ## Authors
-- Carlos Lopez → `images/authors/carlos-lopez.jpg` → technical articles
-- Margaret Spencer Breen → `images/authors/margaret-spencer-breen.jpg` → consumer articles
-- Both link to `/about.html`
+- Carlos Lopez → `images/authors/carlos-lopez.png` → technical articles → Person schema → `authors.html#carlos-lopez`
+- Kibbo Editorial Team → no headshot, byline avatar is `/favicon.svg` → consumer articles → Organization schema → `authors.html#kibbo-editorial-team`
+- The former individual byline for consumer articles is retired — never attribute new content to it; use "Kibbo Editorial Team"
+- Factual corrections to live content get a dated entry in `corrections-log.html` (linked from the footer and both author profiles)
 
 ## Rules
 1. Every HTML file MUST have Google Analytics in head

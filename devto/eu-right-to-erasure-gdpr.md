@@ -6,7 +6,7 @@ tags: eu, privacy, gdpr, security
 canonical_url: https://www.getkibbo.com/blog/eu-right-to-erasure-gdpr
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-right-to-erasure-gdpr). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-right-to-erasure-gdpr). By Kibbo Editorial Team.*
 
 Closing an account or unsubscribing from a marketing newsletter in Europe doesn't automatically mean a company wipes your information from its servers, backups, and analytics history. Many organisations retain personal data indefinitely, quietly building commercial profiles, unless you explicitly invoke your legal rights. Article 17 of the GDPR enshrines the Right to Erasure — popularly known as the "right to be forgotten."
 

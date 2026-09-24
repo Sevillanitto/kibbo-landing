@@ -6,7 +6,7 @@ tags: eu, privacy, gdpr, legal
 canonical_url: https://www.getkibbo.com/blog/eu-gdpr-complaint-guide
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-gdpr-complaint-guide). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-gdpr-complaint-guide). By Kibbo Editorial Team.*
 
 It's easy to assume an individual complaint against a large tech company or e-commerce platform in Europe simply disappears into a void. The GDPR was built specifically to prevent that outcome — backed by fines of up to €20 million or 4% of a company's global annual turnover, whichever is higher, a free, formal complaint from any individual can trigger a real government investigation.
 

@@ -6,7 +6,7 @@ tags: eu, consumerrights, digital, software
 canonical_url: https://www.getkibbo.com/blog/eu-digital-content-refund-rules
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-digital-content-refund-rules). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-digital-content-refund-rules). By Kibbo Editorial Team.*
 
 A common assumption trips up consumers across Europe: that because digital goods can't be physically returned, they simply aren't covered by consumer protection law at all. That's false, and it costs people money on broken software, games that don't run, and subscriptions that quietly stop delivering what was promised. Directive (EU) 2019/770 gives digital content and digital services their own dedicated framework — separate from, but modeled closely on, the physical goods guarantee.
 

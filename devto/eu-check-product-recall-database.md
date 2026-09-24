@@ -6,7 +6,7 @@ tags: eu, consumerrights, productsafety, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-check-product-recall-database
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-check-product-recall-database). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-check-product-recall-database). By Kibbo Editorial Team.*
 
 It's a common assumption that if a manufacturer discovers a critical safety fault in a car model or appliance and issues a recall, they'll contact you directly by letter or email. Unless you registered the product with an official warranty card linking your personal details, you'll very likely never receive that notice. Auditing what's already in your home is, in practice, largely your own responsibility — but the EU makes that audit genuinely easy to do.
 

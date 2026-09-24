@@ -6,7 +6,7 @@ tags: eu, privacy, gdpr, dataprotection
 canonical_url: https://www.getkibbo.com/blog/eu-right-of-access-sar-guide
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-right-of-access-sar-guide). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-right-of-access-sar-guide). By Kibbo Editorial Team.*
 
 Asking a company what information it holds about you might sound like it would return a basic summary — your name, email, and a simple purchase history. The reality goes considerably deeper. Under Article 15 of the GDPR, you have the legal power to make what's called a Subject Access Request (SAR), and the organisation is legally obligated to hand over a complete, legible copy of essentially all personal data it processes about you.
 

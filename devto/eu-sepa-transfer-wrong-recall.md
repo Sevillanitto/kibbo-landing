@@ -6,7 +6,7 @@ tags: eu, consumerrights, banking, payments
 canonical_url: https://www.getkibbo.com/blog/eu-sepa-transfer-wrong-recall
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-sepa-transfer-wrong-recall). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-sepa-transfer-wrong-recall). By Kibbo Editorial Team.*
 
 A single wrong digit in an IBAN used to feel like money vanishing with no safety net at all. Europe's payment infrastructure has genuinely changed to reduce that risk, and it matters to know exactly what protections now exist and where their real limits sit.
 

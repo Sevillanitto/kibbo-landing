@@ -6,7 +6,7 @@ tags: australia, privacy, cybersecurity, dataprotection
 canonical_url: https://www.getkibbo.com/blog/remove-personal-info-google-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/remove-personal-info-google-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/remove-personal-info-google-australia). By Kibbo Editorial Team.*
 
 If someone posts your private phone number, home address, medical records, or intimate images without your consent, Australia doesn't have a GDPR-style general "right to be forgotten" — that's specifically a European mechanism. But you're not without options. Two different pathways exist here, and it matters which one you use for which problem.
 

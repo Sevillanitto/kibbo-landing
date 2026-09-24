@@ -6,7 +6,7 @@ tags: australia, consumerrights, shopping, law
 canonical_url: https://www.getkibbo.com/blog/acl-protocol-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/acl-protocol-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/acl-protocol-australia). By Kibbo Editorial Team.*
 
 Many shoppers in Australia assume that if a product bought from a major retailer stops working, they're limited to whatever the manufacturer's warranty or the store's printed terms allow. That's backwards. Every product and service sold in Australia comes with a set of automatic **consumer guarantees** under the Australian Consumer Law (ACL). No retailer can contract out of them, charge extra for them, or point you to an overseas manufacturer instead of dealing with you directly.
 

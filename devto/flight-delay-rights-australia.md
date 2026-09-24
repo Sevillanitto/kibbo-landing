@@ -6,7 +6,7 @@ tags: australia, consumerrights, travel, airlines
 canonical_url: https://www.getkibbo.com/blog/flight-delay-rights-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/flight-delay-rights-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/flight-delay-rights-australia). By Kibbo Editorial Team.*
 
 Australia doesn't have anything like the EU's automatic flight-delay compensation rules — there's no fixed $250-$600 payout just because your domestic flight ran hours late. That surprises a lot of people who've heard about European air passenger rights. What Australia has instead is less predictable, and it's important to understand honestly what it does and doesn't guarantee.
 

@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, holidays
 canonical_url: https://www.getkibbo.com/blog/eu-package-holiday-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-package-holiday-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-package-holiday-rights). By Kibbo Editorial Team.*
 
 Booking a package holiday — flight, hotel, and excursions bundled together — often comes with a nasty surprise when something goes wrong: the agency pointing fingers at the airline or the local hotelier, leaving the customer to fight each provider separately. Under the Package Travel Directive (EU) 2015/2302, that's not how liability is supposed to work, and the protections here are considerably stronger than for booking each element separately.
 

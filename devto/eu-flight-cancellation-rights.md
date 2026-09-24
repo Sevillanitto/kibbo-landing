@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, airlines
 canonical_url: https://www.getkibbo.com/blog/eu-flight-cancellation-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-flight-cancellation-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-flight-cancellation-rights). By Kibbo Editorial Team.*
 
 An airline cancelling your flight the day before you're due to travel can feel like being cut loose entirely — left to buy a last-minute ticket on another carrier at triple the price. Under EU law, that's not how it's supposed to work, and the protections are stronger and more specific than most passengers realise.
 

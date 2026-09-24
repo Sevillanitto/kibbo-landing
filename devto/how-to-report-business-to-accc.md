@@ -6,7 +6,7 @@ tags: australia, consumerrights, shopping, law
 canonical_url: https://www.getkibbo.com/blog/how-to-report-business-to-accc
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/how-to-report-business-to-accc). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/how-to-report-business-to-accc). By Kibbo Editorial Team.*
 
 If a large retailer is misleading customers about their rights or running a systemically dishonest practice, reporting it to the Australian Competition and Consumer Commission (ACCC) feels like the obvious move. But the ACCC itself is direct about this: it doesn't resolve individual disputes or give you legal advice about your specific entitlement. Understanding what it *does* do changes how you should use it.
 

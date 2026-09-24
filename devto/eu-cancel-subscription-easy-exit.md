@@ -6,7 +6,7 @@ tags: eu, consumerrights, subscriptions, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-cancel-subscription-easy-exit
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-cancel-subscription-easy-exit). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-cancel-subscription-easy-exit). By Kibbo Editorial Team.*
 
 Signing up for a subscription with one tap on your phone, only to discover cancelling requires an international premium-rate phone call or a signed physical letter, feels like an obvious injustice — and increasingly, it's one the law is catching up to. But it's important to be precise about which cancellation right you're actually using, because two very different rules apply depending on your timing.
 

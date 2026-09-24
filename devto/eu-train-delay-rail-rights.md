@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, rail
 canonical_url: https://www.getkibbo.com/blog/eu-train-delay-rail-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-train-delay-rail-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-train-delay-rail-rights). By Kibbo Editorial Team.*
 
 Rail delays across Europe are often assumed to be a dead end for passengers — an inconvenience with no financial remedy attached, unlike air travel. That assumption is wrong. Regulation (EU) 2021/782 on rail passengers' rights and obligations gives you a genuine, tiered right to a cash refund when a train arrives significantly late, regardless of the operator.
 

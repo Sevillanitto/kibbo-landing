@@ -6,7 +6,7 @@ tags: australia, banking, consumerrights, fraud
 canonical_url: https://www.getkibbo.com/blog/unauthorised-transaction-bank-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/unauthorised-transaction-bank-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/unauthorised-transaction-bank-australia). By Kibbo Editorial Team.*
 
 This is one of the most misunderstood areas of Australian banking rights, because two very different situations get lumped together: someone stealing your card details or hacking your account without your knowledge, versus you being tricked into sending money yourself. The law treats these very differently — and knowing which one applies to you changes everything about what you're entitled to.
 

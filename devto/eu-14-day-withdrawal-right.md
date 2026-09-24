@@ -6,7 +6,7 @@ tags: eu, consumerrights, ecommerce, shopping
 canonical_url: https://www.getkibbo.com/blog/eu-14-day-withdrawal-right
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-14-day-withdrawal-right). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-14-day-withdrawal-right). By Kibbo Editorial Team.*
 
 A lot of shoppers across the EU still believe that returning something you bought online is a courtesy the retailer extends, not a right the law guarantees. That belief is backwards, and it costs consumers real money every year. Under EU consumer law, distance purchases — anything bought online, by phone, or by mail order — come with a mandatory 14-day cooling-off period, and as of 19 June 2026, the mechanics of using that right have gotten dramatically easier thanks to a new legal requirement most shoppers haven't heard of yet.
 

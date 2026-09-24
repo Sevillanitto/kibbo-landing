@@ -6,7 +6,7 @@ tags: australia, banking, consumerrights, chargeback
 canonical_url: https://www.getkibbo.com/blog/chargebacks-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/chargebacks-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/chargebacks-australia). By Kibbo Editorial Team.*
 
 If a business never ships your order, disappears, or sends something nothing like what you paid for, and simply stops responding — you're not necessarily out of luck. If you paid by debit or credit card, you may have access to a chargeback: a dispute process run by the card network (Visa, Mastercard, or others) that sits on top of, and independently of, Australian Consumer Law.
 

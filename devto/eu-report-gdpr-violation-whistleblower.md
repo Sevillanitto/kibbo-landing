@@ -6,7 +6,7 @@ tags: eu, privacy, gdpr, security
 canonical_url: https://www.getkibbo.com/blog/eu-report-gdpr-violation-whistleblower
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-report-gdpr-violation-whistleblower). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-report-gdpr-violation-whistleblower). By Kibbo Editorial Team.*
 
 Discovering that your own employer sells customer databases on the side, stores passwords in plain text, or knowingly ignores a data breach can feel like something you can't safely speak up about — as if reporting it guarantees immediate dismissal with no legal protection. That fear is understandable, but it doesn't reflect how strongly the EU protects this kind of disclosure.
 

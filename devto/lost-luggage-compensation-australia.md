@@ -6,7 +6,7 @@ tags: australia, consumerrights, travel, airlines
 canonical_url: https://www.getkibbo.com/blog/lost-luggage-compensation-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/lost-luggage-compensation-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/lost-luggage-compensation-australia). By Kibbo Editorial Team.*
 
 If an airline loses or damages your bag on a domestic flight within Australia, the airline's financial responsibility isn't unlimited — and the deadlines to make a claim are tight enough that most people miss them without realising. Getting the timing and the paperwork right matters more here than almost anywhere else in consumer complaints.
 

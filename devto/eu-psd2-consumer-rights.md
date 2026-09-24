@@ -6,7 +6,7 @@ tags: eu, consumerrights, banking, security
 canonical_url: https://www.getkibbo.com/blog/eu-psd2-consumer-rights
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-psd2-consumer-rights). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-psd2-consumer-rights). By Kibbo Editorial Team.*
 
 If your card details get cloned or someone steals your online banking credentials, it's a common fear that the bank will simply blame you for not protecting your data and leave you to absorb the loss. The Payment Services Directive (PSD2) — the law currently in force across the EU — exists specifically to prevent that outcome, and it's worth being precise about what applies today versus what's still on the way.
 

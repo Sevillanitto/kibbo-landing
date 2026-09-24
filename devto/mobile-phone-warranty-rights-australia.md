@@ -6,7 +6,7 @@ tags: australia, consumerrights, smartphone, warranty
 canonical_url: https://www.getkibbo.com/blog/mobile-phone-warranty-rights-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/mobile-phone-warranty-rights-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/mobile-phone-warranty-rights-australia). By Kibbo Editorial Team.*
 
 A premium smartphone failing at 14 or 18 months — with no drops, no water damage, just an internal fault — doesn't have to mean an expensive out-of-pocket repair just because the manufacturer's printed 12-month warranty has expired. In Australia, that 12-month figure is a manufacturer's marketing limit, not a legal cutoff. The Australian Consumer Law's automatic guarantees can still apply well beyond it.
 

@@ -6,7 +6,7 @@ tags: eu, consumerrights, paypal, fintech
 canonical_url: https://www.getkibbo.com/blog/eu-paypal-buyer-protection
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-paypal-buyer-protection). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-paypal-buyer-protection). By Kibbo Editorial Team.*
 
 Paying with PayPal is often assumed to mean total, unlimited protection against any scam, delay, or unsatisfactory digital service, forever. PayPal's Buyer Protection program is genuinely one of the more efficient private dispute resolution tools available, but it's a commercial policy with real limits — not an unlimited legal right, and it doesn't replace the law.
 

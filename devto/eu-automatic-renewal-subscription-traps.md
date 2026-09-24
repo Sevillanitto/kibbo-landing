@@ -6,7 +6,7 @@ tags: eu, consumerrights, subscriptions, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-automatic-renewal-subscription-traps
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-automatic-renewal-subscription-traps). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-automatic-renewal-subscription-traps). By Kibbo Editorial Team.*
 
 Plenty of consumers assume that once they've ticked a checkbox at sign-up, a SaaS tool, gym membership, or streaming service can keep renewing their subscription indefinitely at full price, with no further warning required. Auto-renewal itself is legal as a convenience mechanism — but the EU has been steadily closing the loopholes that let companies use it as a trap rather than a convenience.
 

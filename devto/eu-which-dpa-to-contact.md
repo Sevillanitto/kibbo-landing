@@ -6,7 +6,7 @@ tags: eu, privacy, gdpr, dataprotection
 canonical_url: https://www.getkibbo.com/blog/eu-which-dpa-to-contact
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-which-dpa-to-contact). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-which-dpa-to-contact). By Kibbo Editorial Team.*
 
 If you live in Italy and want to complain about a US-based social media platform's GDPR violation, it's a common assumption that you'd need to write your complaint in English and file it directly with the regulator in Ireland or Luxembourg, wherever that company's European headquarters happens to sit. That's not how the system is designed to protect you.
 

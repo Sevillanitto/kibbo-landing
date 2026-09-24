@@ -6,7 +6,7 @@ tags: australia, consumerrights, shopping, law
 canonical_url: https://www.getkibbo.com/blog/fair-trading-complaint-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/fair-trading-complaint-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/fair-trading-complaint-australia). By Kibbo Editorial Team.*
 
 If a retailer won't honour a repair or refund and you're not looking to fund a court case, you don't need a lawyer or a civil claim to force the issue. Every Australian state and territory runs its own free consumer mediation agency, and that — not the ACCC, not a courtroom — is where individual disputes actually get resolved.
 

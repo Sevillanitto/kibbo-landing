@@ -6,7 +6,7 @@ tags: australia, consumerrights, shopping, law
 canonical_url: https://www.getkibbo.com/blog/refund-boundary-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/refund-boundary-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/refund-boundary-australia). By Kibbo Editorial Team.*
 
 This is one of the most misunderstood areas of Australian retail law. Consumer protection does *not* give you an unconditional right to a refund whenever you feel like returning something. But the moment a product is actually faulty, the picture changes completely — and a "No Refunds" sign becomes a real problem for the store, not you.
 

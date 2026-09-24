@@ -6,7 +6,7 @@ tags: eu, consumerrights, ecommerce, geoblocking
 canonical_url: https://www.getkibbo.com/blog/eu-cross-border-geoblocking
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-cross-border-geoblocking). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-cross-border-geoblocking). By Kibbo Editorial Team.*
 
 If you've ever tried to buy something from an online store based in a different EU country and found yourself redirected to a local version with higher prices, or had your foreign-issued card mysteriously rejected, you've run into geo-blocking — a practice the EU has made explicitly illegal for most consumer transactions, though the rule has real limits worth understanding before you assume every case is a violation.
 

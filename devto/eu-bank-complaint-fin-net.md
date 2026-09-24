@@ -6,7 +6,7 @@ tags: eu, consumerrights, banking, finance
 canonical_url: https://www.getkibbo.com/blog/eu-bank-complaint-fin-net
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-bank-complaint-fin-net). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-bank-complaint-fin-net). By Kibbo Editorial Team.*
 
 A serious dispute with a European bank — hidden fees, an unjustified freeze on your funds — can feel like it leaves you with only one option: an expensive lawsuit in the bank's home country. That's not how the system is designed to work. The EU has built a free, cross-border financial dispute resolution network specifically so consumers don't have to go to court as a first resort.
 

@@ -6,7 +6,7 @@ tags: eu, consumerrights, travel, airlines
 canonical_url: https://www.getkibbo.com/blog/eu-flight-delay-eu261-compensation
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-flight-delay-eu261-compensation). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-flight-delay-eu261-compensation). By Kibbo Editorial Team.*
 
 A flight delayed several hours by a technical fault often ends with an airline handing out a meal voucher and a rebooking, as if that fully discharges their obligation. It doesn't. Regulation (EC) No 261/2004 is widely regarded as the most aggressive air passenger protection law in the world, and it entitles you to direct cash compensation, entirely separate from any meal or accommodation assistance you receive at the airport.
 

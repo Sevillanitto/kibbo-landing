@@ -6,7 +6,7 @@ tags: eu, consumerrights, productsafety, ecommerce
 canonical_url: https://www.getkibbo.com/blog/eu-report-unsafe-product-safety-gate
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-report-unsafe-product-safety-gate). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/eu-report-unsafe-product-safety-gate). By Kibbo Editorial Team.*
 
 If you buy something online that turns out to be genuinely dangerous — a charger that melts, a children's toy with parts that detach — it's easy to assume your only option is asking the seller for a refund, and that European authorities don't get involved in individual purchases. That's not accurate. The EU runs Safety Gate, one of the most advanced rapid-alert systems in the world for dangerous non-food products, and any consumer can report directly into it.
 

@@ -6,7 +6,7 @@ tags: australia, consumerrights, housing, renting
 canonical_url: https://www.getkibbo.com/blog/rental-bond-dispute-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/rental-bond-dispute-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/rental-bond-dispute-australia). By Kibbo Editorial Team.*
 
 A lot of renters assume they have to wait patiently for the property manager to decide how much of the bond to keep back for "carpet cleaning" or "painting," then sign whatever form gets sent their way. In most states, that's backwards — you don't have to wait for the landlord to move first.
 

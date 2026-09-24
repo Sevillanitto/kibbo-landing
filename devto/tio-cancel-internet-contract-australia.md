@@ -6,7 +6,7 @@ tags: australia, consumerrights, telecom, internet
 canonical_url: https://www.getkibbo.com/blog/tio-cancel-internet-contract-australia
 ---
 
-*Originally published on [Kibbo](https://www.getkibbo.com/blog/tio-cancel-internet-contract-australia). By Margaret Spencer Breen.*
+*Originally published on [Kibbo](https://www.getkibbo.com/blog/tio-cancel-internet-contract-australia). By Kibbo Editorial Team.*
 
 If your NBN or mobile plan keeps dropping out, delivers nowhere near the speeds you were promised, or you've moved somewhere it simply isn't available — you are not automatically locked into paying an early termination fee to walk away. Telecom contracts in Australia are closely regulated, and providers that fail to deliver the service they sold, or that stonewall your cancellation request, have real regulatory exposure through the **Telecommunications Industry Ombudsman (TIO)**.
 
