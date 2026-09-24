@@ -51,6 +51,7 @@ kibbo-landing/
 - Carlos Lopez → `images/authors/carlos-lopez.png` → technical articles → Person schema → `authors.html#carlos-lopez`
 - Kibbo Editorial Team → no headshot, byline avatar is `/favicon.svg` → consumer articles → Organization schema → `authors.html#kibbo-editorial-team`
 - The former individual byline for consumer articles is retired — never attribute new content to it; use "Kibbo Editorial Team"
+- Questions and Investigations also use "Kibbo Editorial Team" unless Carlos-bylined (no other desk/team labels); the JSON-LD author must always match the visible byline
 - Factual corrections to live content get a dated entry in `corrections-log.html` (linked from the footer and both author profiles)
 
 ## Rules
