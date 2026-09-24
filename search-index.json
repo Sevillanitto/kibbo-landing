@@ -16248,5 +16248,18 @@
       "benefit application delayed no response",
       "complain about government delay"
     ]
+  },
+  {
+    "title": "Denied Public Records Request (FOIA) Kit",
+    "type": "kit",
+    "block": "public-services-administration",
+    "url": "/kits/denied-public-records-request-foia",
+    "description": "FOIA or public records request denied or ignored? File it properly, track every reply, and appeal formally — the exact free tool for each step.",
+    "keywords": [
+      "foia request denied kit",
+      "appeal foia denial",
+      "public records request ignored",
+      "freedom of information request letter"
+    ]
   }
 ]
