@@ -594,6 +594,12 @@ font-size: 15px; font-weight: 700; padding: 14px 26px; border-radius: 100px; tra
 .author-profile-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green); flex-shrink: 0; }
 .author-profile-role { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-green); margin: 4px 0 0; }
 .author-line a { color: var(--text-primary); text-decoration: underline; text-underline-offset: 2px; }
+/* Share row: last element of the article header on blog + Questions pages. Plain icon links, no boxes or shadows. */
+.share-row { display: flex; align-items: center; gap: 16px; margin: 16px 0 0; font-family: var(--font-sans); }
+.share-label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.share-link { display: inline-flex; line-height: 0; color: var(--text-muted); transition: color 0.15s ease; }
+.share-link:hover, .share-link:focus-visible { color: var(--text-primary); }
+.share-link svg { width: 18px; height: 18px; fill: currentColor; }
 .post-cta { max-width: 720px; margin: 16px auto 100px; padding: 0 clamp(20px, 4vw, 48px); }
 .post-cta-inner { background: var(--bg-dark); border: 1px solid var(--border-dark); border-radius: var(--radius); padding: 38px 34px; box-shadow: var(--shadow-md); }
 .post-cta-tag { display: inline-block; background: rgba(200,146,42,0.15); color: #D4A050; border: 1px solid rgba(200,146,42,0.25); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
