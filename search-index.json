@@ -16157,5 +16157,18 @@
       "security deposit demand letter",
       "dispute deposit deductions tenant"
     ]
+  },
+  {
+    "title": "Illegal Eviction / Unresolved Repairs Kit",
+    "type": "kit",
+    "block": "housing-rentals",
+    "url": "/kits/illegal-eviction-unresolved-repairs",
+    "description": "Being illegally evicted or locked out, or stuck with repairs your landlord won't make? Pick your path — the exact free tools for each tenant situation, in order.",
+    "keywords": [
+      "illegal eviction kit",
+      "landlord changed the locks what to do",
+      "landlord won't make repairs",
+      "tenant repair request habitability"
+    ]
   }
 ]
