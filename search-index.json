@@ -16365,5 +16365,18 @@
       "courier lost my parcel claim",
       "parcel marked delivered but not received"
     ]
+  },
+  {
+    "title": "Unexpected Customs Charges Kit",
+    "type": "kit",
+    "block": "delivery-parcels",
+    "url": "/kits/unexpected-customs-charges",
+    "description": "Surprise customs duty, import VAT, or handling fee on a delivery? Check whether it's legitimate, calculate what you're disputing, and file the formal dispute — the exact free tool for each step.",
+    "keywords": [
+      "unexpected customs charges kit",
+      "dispute customs fee on parcel",
+      "import vat charged on delivery",
+      "courier handling fee refund"
+    ]
   }
 ]
