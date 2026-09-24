@@ -16209,5 +16209,18 @@
       "reject faulty used car",
       "complaint against car dealer"
     ]
+  },
+  {
+    "title": "Garage/Repair Shop Dispute Kit",
+    "type": "kit",
+    "block": "cars-vehicles",
+    "url": "/kits/garage-repair-shop-dispute",
+    "description": "Overcharged or let down by a garage or repair shop? Document the work, file the formal dispute, and back it up with your maintenance record — the exact free tool for each step.",
+    "keywords": [
+      "garage dispute kit",
+      "dispute car repair bill",
+      "mechanic overcharged or poor workmanship",
+      "complaint against repair shop"
+    ]
   }
 ]
