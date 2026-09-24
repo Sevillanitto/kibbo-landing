@@ -16300,5 +16300,18 @@
       "final demand letter before small claims",
       "small claims evidence bundle"
     ]
+  },
+  {
+    "title": "Frozen/Locked Exchange Account Kit",
+    "type": "kit",
+    "block": "crypto-fintech",
+    "url": "/kits/frozen-locked-exchange-account",
+    "description": "Crypto exchange froze or locked your account? Respond formally, prepare the source-of-funds documents they ask for, and make sure nothing is missing — the exact free tool for each step.",
+    "keywords": [
+      "frozen exchange account kit",
+      "crypto exchange locked my account",
+      "source of funds request exchange",
+      "unfreeze crypto account"
+    ]
   }
 ]
