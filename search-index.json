@@ -16222,5 +16222,18 @@
       "mechanic overcharged or poor workmanship",
       "complaint against repair shop"
     ]
+  },
+  {
+    "title": "Contractor Won't Finish / Overcharging Kit",
+    "type": "kit",
+    "block": "home-renovations-services",
+    "url": "/kits/contractor-unfinished-work-overcharging",
+    "description": "Contractor left the job unfinished or defective, or billed more than the agreed quote? Pick your path — the exact free tools for each situation, in order.",
+    "keywords": [
+      "contractor dispute kit",
+      "contractor won't finish the job",
+      "contractor charging more than quote",
+      "defective renovation work complaint"
+    ]
   }
 ]
