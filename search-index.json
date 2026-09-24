@@ -16196,5 +16196,18 @@
       "claim against someone else's insurance",
       "third-party liability claim letter"
     ]
+  },
+  {
+    "title": "Used Car with Hidden Fault Kit",
+    "type": "kit",
+    "block": "cars-vehicles",
+    "url": "/kits/used-car-hidden-fault",
+    "description": "Bought a used car with a fault the seller didn't disclose? Check its real history, document what was promised, and file the formal complaint — the exact free tool for each step.",
+    "keywords": [
+      "used car hidden fault kit",
+      "used car fault not disclosed by dealer",
+      "reject faulty used car",
+      "complaint against car dealer"
+    ]
   }
 ]
