@@ -3607,7 +3607,7 @@ function renderTelecomUtilityServiceComplaint(a) {
   const telecom = ['Broadband / internet', 'Mobile phone', 'Landline phone'].indexOf(a.service_type) !== -1;
   const energy = a.service_type === 'Electricity or gas';
   const water = a.service_type === 'Water';
-  const svc = a.service_type.toLowerCase();
+  const svc = String(a.service_type).toLowerCase();
   lines.push(todayDate());
   lines.push('');
   lines.push('To: ' + a.provider_name + ' — Complaints Department');
@@ -3747,7 +3747,7 @@ function renderFoodHospitalityConsumerComplaint(a) {
   lines.push('To: ' + a.business_name + ' — Customer Support');
   lines.push('Re: Complaint about order ' + a.order_number + ' placed on ' + formatIsoDate(a.order_date));
   lines.push('');
-  let opening = 'I am writing to complain about my order ' + a.order_number + ', placed on ' + formatIsoDate(a.order_date) + ' (' + a.order_method.toLowerCase().replace(/ \(.*\)$/, '') + ')';
+  let opening = 'I am writing to complain about my order ' + a.order_number + ', placed on ' + formatIsoDate(a.order_date) + ' (' + String(a.order_method).toLowerCase().replace(/ \(.*\)$/, '') + ')';
   if (toPlatform) opening += ' from ' + a.restaurant_name;
   lines.push(opening + ', total paid ' + a.order_total + '.');
   lines.push('');
