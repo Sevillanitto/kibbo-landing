@@ -16417,5 +16417,61 @@
       "kibbo datasets",
       "subscription pricing data"
     ]
+  },
+  {
+    "title": "Civil Aviation Authority Escalation Generator",
+    "type": "generator",
+    "block": "flights-travel",
+    "url": "/generate/civil-aviation-authority-escalation",
+    "description": "Generate an escalation letter for a flight claim the airline rejected or ignored — to an approved ADR scheme or the CAA (UK), the US Department of Transportation, or an EU National Enforcement Body. Free.",
+    "keywords": [
+      "civil aviation authority complaint letter",
+      "escalate flight compensation claim caa adr",
+      "dot airline complaint letter",
+      "eu261 national enforcement body complaint",
+      "airline rejected my claim what next"
+    ]
+  },
+  {
+    "title": "Telecom & Utility Service Complaint Generator",
+    "type": "generator",
+    "block": "telecoms-utilities",
+    "url": "/generate/telecom-utility-service-complaint",
+    "description": "Generate a formal complaint to a broadband, mobile, landline, energy or water provider about a billing error, disconnection, or service failure — with the escalation route for the US, UK, EU or Australia. Free.",
+    "keywords": [
+      "telecom complaint letter generator",
+      "utility bill dispute letter",
+      "broadband outage complaint letter",
+      "utility disconnection complaint letter",
+      "energy ombudsman complaint letter"
+    ]
+  },
+  {
+    "title": "Food & Hospitality Consumer Complaint Generator",
+    "type": "generator",
+    "block": "food-hospitality",
+    "url": "/generate/food-hospitality-consumer-complaint",
+    "description": "Generate a complaint to a food delivery app or restaurant about wrong or missing items, late delivery, or poor, damaged or unsafe food — with consumer rights for the UK, EU, US or Australia. Free.",
+    "keywords": [
+      "food delivery complaint letter",
+      "missing items refund delivery app",
+      "restaurant complaint letter generator",
+      "late food delivery refund",
+      "food made me ill complaint letter"
+    ]
+  },
+  {
+    "title": "Supplement Adverse Reaction & Complaint Generator",
+    "type": "generator",
+    "block": "health-supplements",
+    "url": "/generate/supplement-adverse-reaction-complaint",
+    "description": "Prepare an adverse reaction report for FDA MedWatch, MHRA Yellow Card or the TGA plus a notice to the manufacturer, or a refund complaint for an unsafe, mislabelled or not-as-described supplement. Free.",
+    "keywords": [
+      "supplement adverse reaction report",
+      "medwatch supplement report",
+      "yellow card supplement reaction",
+      "tga supplement side effect report",
+      "supplement refund complaint letter"
+    ]
   }
 ]

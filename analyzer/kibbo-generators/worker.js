@@ -3476,6 +3476,437 @@ function renderThirdPartyLiabilityClaimLetterGenerator(a) {
   return lines.join('\n');
 }
 
+// ---- Static render functions, 2026-09-25 batch (built static from day one,
+// no AI version ever existed): civil-aviation-authority-escalation,
+// telecom-utility-service-complaint, food-hospitality-consumer-complaint,
+// supplement-adverse-reaction-complaint. Legal wording is deliberately
+// hedged ("I understand...", "may", "if") -- no guaranteed outcomes.
+
+// Date inputs arrive as YYYY-MM-DD; show them the same way todayDate() does.
+function formatIsoDate(v) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(v || '').trim());
+  if (!m) return v;
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return parseInt(m[3], 10) + ' ' + months[parseInt(m[2], 10) - 1] + ' ' + m[1];
+}
+
+function renderCivilAviationAuthorityEscalation(a) {
+  const lines = [];
+  const isUK = a.authority === 'UK — Civil Aviation Authority (CAA) / approved ADR scheme';
+  const isUS = a.authority === 'US — Department of Transportation (DOT)';
+  const isEU = a.authority === 'EU — National Enforcement Body (NEB)';
+  const disruptionDate = formatIsoDate(a.disruption_date);
+  const priorDate = formatIsoDate(a.prior_date);
+  const ref = hasValue(a.prior_reference) ? ' (airline reference ' + a.prior_reference + ')' : '';
+  let ukRoute = '';
+  lines.push(todayDate());
+  lines.push('');
+  if (isUK) {
+    if (a.uk_adr === 'Yes — AviationADR') {
+      ukRoute = 'adr';
+      lines.push('To: AviationADR');
+    } else if (a.uk_adr === 'Yes — CEDR') {
+      ukRoute = 'adr';
+      lines.push('To: CEDR — Aviation Adjudication Scheme');
+    } else {
+      ukRoute = a.uk_adr === 'Not sure' ? 'unsure' : 'pact';
+      lines.push('To: Civil Aviation Authority — Passenger Advice and Complaints Team (PACT)');
+    }
+  } else if (isUS) {
+    lines.push('To: U.S. Department of Transportation — Office of Aviation Consumer Protection');
+  } else if (isEU) {
+    lines.push('To: National Enforcement Body for Regulation (EC) 261/2004 — ' + a.eu_neb_country);
+  }
+  lines.push('Re: Escalated complaint against ' + a.airline_name + ' — ' + a.flight_details + ' on ' + disruptionDate + ' (booking ' + a.booking_reference + ')');
+  lines.push('');
+  if (ukRoute === 'adr') {
+    lines.push('I am referring an unresolved complaint against ' + a.airline_name + ' to your scheme for independent adjudication. ' + a.airline_name + ' is a member of your scheme.');
+  } else if (ukRoute === 'pact') {
+    lines.push('I am asking the Passenger Advice and Complaints Team to review an unresolved complaint against ' + a.airline_name + '. To my knowledge, ' + a.airline_name + ' is not a member of an approved alternative dispute resolution (ADR) scheme.');
+  } else if (ukRoute === 'unsure') {
+    lines.push('I am asking the Passenger Advice and Complaints Team to review an unresolved complaint against ' + a.airline_name + '. I have not been able to confirm whether ' + a.airline_name + ' is a member of an approved alternative dispute resolution (ADR) scheme — if it is, please tell me which scheme so I can refer the complaint there instead.');
+  } else if (isUS) {
+    lines.push('I am filing a consumer complaint against ' + a.airline_name + ' about the flight below, after raising it with the airline directly without a satisfactory outcome.');
+  } else if (isEU) {
+    lines.push('I am submitting a complaint under Article 16 of Regulation (EC) 261/2004 about an alleged infringement of the Regulation by ' + a.airline_name + ', after raising it with the airline directly without a satisfactory outcome.');
+  }
+  lines.push('');
+  lines.push('What happened');
+  lines.push('Flight: ' + a.flight_details + ' on ' + disruptionDate + ' (booking ' + a.booking_reference + ').');
+  lines.push('Disruption: ' + a.disruption_type + '.');
+  lines.push('Reason given by the airline: ' + a.airline_reason + '.');
+  lines.push('');
+  lines.push('My complaint to the airline');
+  let status = '';
+  if (a.airline_status === 'Rejected my claim') {
+    status = a.airline_name + ' rejected my claim.';
+  } else if (a.airline_status === 'Made a partial offer I do not accept') {
+    status = a.airline_name + ' made a partial offer, which I do not accept as it does not reflect what I am owed.';
+  } else if (a.airline_status === 'Has not responded') {
+    status = a.airline_name + ' has not given me a substantive response.';
+  }
+  lines.push('I submitted my claim to ' + a.airline_name + ' on ' + priorDate + ref + '. ' + status);
+  lines.push('Why I disagree with the airline\'s position: ' + a.dispute_reason);
+  lines.push('');
+  lines.push('The rules I am relying on');
+  if (isUK) {
+    if (a.disruption_type === 'Downgrade to a lower class') {
+      lines.push('Under UK261 (Regulation (EC) 261/2004 as retained in UK law), a passenger placed in a lower class than booked is entitled to reimbursement of 30%, 50% or 75% of the ticket price, depending on the distance of the flight.');
+    } else {
+      lines.push('Under UK261 (Regulation (EC) 261/2004 as retained in UK law), passengers on a qualifying flight that is cancelled at short notice, delayed by 3 hours or more at arrival, or who are denied boarding against their will are entitled to fixed compensation of £220, £350 or £520 depending on distance, unless the airline can show the disruption was caused by extraordinary circumstances that could not have been avoided even if all reasonable measures had been taken. The airline also owes a duty of care (meals, refreshments and accommodation where needed) during the disruption.');
+    }
+    if (ukRoute === 'adr') {
+      lines.push('I understand that if I accept the scheme\'s decision, it is binding on the airline.');
+    } else {
+      lines.push('I understand that PACT does not make binding decisions, but can review the complaint and make a recommendation to the airline, and that I remain free to pursue the claim through the small claims process if the complaint is not resolved.');
+    }
+  } else if (isUS) {
+    if (a.disruption_type === 'Cancellation' || a.disruption_type === 'Significant schedule change') {
+      lines.push('Under the Department\'s airline refund rules, a passenger is entitled to a refund when a flight is cancelled or significantly changed and the passenger chooses not to travel or does not accept the alternative offered.');
+    } else if (a.disruption_type === 'Long delay') {
+      lines.push('I understand there is no fixed federal cash compensation for delays in the US. However, under the Department\'s airline refund rules, a significant delay counts as a significant change, and a passenger who chooses not to travel as a result is entitled to a refund. I am also asking the Department to consider the airline\'s handling of the delay against its own customer service commitments.');
+    } else if (a.disruption_type === 'Denied boarding (overbooking)') {
+      lines.push('Under the Department\'s oversales rules, passengers bumped involuntarily from an oversold flight are, in many cases, entitled to denied boarding compensation, and the airline must provide a written statement explaining those rights.');
+    } else if (a.disruption_type === 'Downgrade to a lower class') {
+      lines.push('I was not given the class of service I paid for, and I am asking for a refund of the fare difference.');
+    }
+    lines.push('I understand the Department forwards consumer complaints to the airline for a response and uses them in its oversight and enforcement work, and I would be grateful for the Department\'s assistance in obtaining a response.');
+  } else if (isEU) {
+    if (a.disruption_type === 'Downgrade to a lower class') {
+      lines.push('Under Article 10 of Regulation (EC) 261/2004, a passenger placed in a lower class than booked is entitled to reimbursement of 30%, 50% or 75% of the ticket price, depending on the distance of the flight.');
+    } else {
+      lines.push('Under Article 7 of Regulation (EC) 261/2004, passengers who are denied boarding (Article 4), whose flight is cancelled at short notice (Article 5), or who reach their final destination 3 hours or more late (as confirmed by the Court of Justice of the EU) are entitled to compensation of €250, €400 or €600 depending on distance, unless the carrier can prove extraordinary circumstances under Article 5(3) that could not have been avoided even if all reasonable measures had been taken. The carrier also owes assistance and care under Articles 8 and 9.');
+    }
+    lines.push('I understand that not every national enforcement body issues binding decisions on individual claims. If your body does not handle individual complaints of this kind, please tell me which body or alternative dispute resolution route applies.');
+  }
+  lines.push('');
+  lines.push('What I am asking for');
+  if (ukRoute === 'adr') {
+    lines.push('I ask the scheme to find in my favour and direct ' + a.airline_name + ' to pay ' + a.amount_claimed + '.');
+  } else if (isUK) {
+    lines.push('I ask PACT to review this complaint and recommend that ' + a.airline_name + ' pays ' + a.amount_claimed + '.');
+  } else if (isUS) {
+    lines.push('I ask the Department to review this complaint and to help me obtain ' + a.amount_claimed + ' from ' + a.airline_name + '.');
+  } else {
+    lines.push('I ask you to review this complaint, to assess whether ' + a.airline_name + ' has complied with Regulation (EC) 261/2004, and to help me obtain ' + a.amount_claimed + '.');
+  }
+  lines.push('');
+  lines.push('Enclosed');
+  lines.push('- Booking confirmation and boarding pass(es)');
+  lines.push('- My claim to ' + a.airline_name + ' dated ' + priorDate);
+  lines.push(a.airline_status === 'Has not responded' ? '- Proof of my claim being sent (no substantive reply was received)' : '- The airline\'s response');
+  lines.push('- Receipts for any expenses claimed');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderTelecomUtilityServiceComplaint(a) {
+  const lines = [];
+  const telecom = ['Broadband / internet', 'Mobile phone', 'Landline phone'].indexOf(a.service_type) !== -1;
+  const energy = a.service_type === 'Electricity or gas';
+  const water = a.service_type === 'Water';
+  const svc = a.service_type.toLowerCase();
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.provider_name + ' — Complaints Department');
+  lines.push('Re: Formal complaint — account ' + a.account_number + ' (' + a.service_address + ')');
+  lines.push('');
+  lines.push('I am making a formal complaint about my ' + svc + ' service with ' + a.provider_name + ', account number ' + a.account_number + '. Please treat this letter as a formal complaint under your complaints procedure.');
+  lines.push('');
+  const asks = [];
+  if (a.scenario === 'Billing error or overcharge') {
+    lines.push('The problem: billing error');
+    lines.push('My bill dated ' + formatIsoDate(a.bill_date) + ' is wrong. Issue: ' + a.billing_issue + '. The amount in dispute is ' + a.amount_disputed + '.');
+    lines.push(a.billing_details);
+    asks.push('correct the bill and refund or credit the ' + a.amount_disputed + ' overcharged');
+    asks.push('put the disputed amount on hold, and take no collection or credit-reporting action on it, while this complaint is open');
+    asks.push('send me a corrected bill and a breakdown of how the charge was calculated');
+  } else if (a.scenario === 'Disconnection or threatened disconnection') {
+    lines.push('The problem: disconnection');
+    let status = '';
+    if (a.disconnection_status === 'Service already disconnected') {
+      status = 'My service was disconnected on or around ' + a.disconnection_date + '.';
+    } else {
+      status = 'You have told me my service will be disconnected (date given: ' + a.disconnection_date + ').';
+    }
+    lines.push(status + ' Notice I received: ' + a.notice_received + '. Reason for the disconnection, as I understand it: ' + a.disconnection_reason + '.');
+    lines.push(a.disconnection_details);
+    if (a.disconnection_status === 'Service already disconnected') {
+      asks.push('reconnect my service immediately');
+      asks.push('waive any reconnection or disconnection fees');
+    } else {
+      asks.push('confirm in writing that my service will not be disconnected while this complaint is being dealt with');
+    }
+    if (a.disconnection_reason === 'Arrears I can pay through a payment plan') {
+      asks.push('agree an affordable payment plan for the balance');
+    } else if (a.disconnection_reason === 'A bill I am disputing') {
+      asks.push('resolve the disputed bill before taking any further action on the account');
+    } else if (a.disconnection_reason === 'Your error — my account is paid up') {
+      asks.push('correct your records to show my account is up to date');
+    }
+  } else if (a.scenario === 'Service failure or outage') {
+    lines.push('The problem: service failure');
+    let status = 'My ' + svc + ' service stopped working properly on ' + formatIsoDate(a.fault_start) + '. I reported the fault to you on ' + formatIsoDate(a.fault_reported) + '.';
+    if (a.fault_status === 'Fixed — service restored') {
+      status += ' It was not restored until ' + formatIsoDate(a.fault_end) + '.';
+    } else {
+      status += ' It is still not fixed.';
+    }
+    lines.push(status);
+    lines.push(a.fault_details);
+    if (a.missed_appointment === 'Yes') {
+      lines.push('In addition, an engineer or repair appointment was missed.');
+    }
+    if (a.fault_status !== 'Fixed — service restored') {
+      asks.push('fix the fault and tell me in writing when the service will be restored');
+    }
+    asks.push('credit my account for the period I did not receive the service I am paying for');
+    asks.push('pay compensation for the inconvenience this has caused');
+  }
+  if (a.vulnerable === 'Yes') {
+    lines.push('');
+    lines.push('Please note: ' + a.vulnerable_details + ' Please record this on my account and apply any protections or priority services you offer to customers in vulnerable circumstances.');
+  }
+  lines.push('');
+  lines.push('What I am asking you to do');
+  asks.forEach(function (x) { lines.push('- ' + x.charAt(0).toUpperCase() + x.slice(1) + '.'); });
+  lines.push('');
+  if (a.country === 'United Kingdom') {
+    if (telecom) {
+      if (a.scenario === 'Service failure or outage' && a.service_type !== 'Mobile phone') {
+        lines.push('If ' + a.provider_name + ' participates in Ofcom\'s automatic compensation scheme, I expect the automatic payments due for a delayed repair (currently £10.34 for each day after the second full working day the service is not fixed)' + (a.missed_appointment === 'Yes' ? ' and for the missed appointment (currently £32.31)' : '') + ', in addition to a credit for the lost service.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved, I will refer it to your approved alternative dispute resolution scheme (the Communications Ombudsman or CISAS). I understand I can do this once 6 weeks have passed since my complaint, or sooner if you issue a deadlock letter.');
+    } else if (energy) {
+      if (a.scenario === 'Disconnection or threatened disconnection') {
+        lines.push('I understand Ofgem\'s rules require suppliers to take a customer\'s ability to pay into account and to offer suitable payment arrangements before considering disconnection, with extra protection for customers in vulnerable circumstances.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved within 8 weeks, or you send me a deadlock letter sooner, I will refer it to the Energy Ombudsman. I understand the Ombudsman\'s decision is binding on the supplier if I accept it.');
+    } else if (water) {
+      if (a.scenario === 'Disconnection or threatened disconnection') {
+        lines.push('I understand that in England and Wales, water companies cannot disconnect a household customer\'s supply for non-payment.');
+        lines.push('');
+      }
+      if (a.scenario === 'Service failure or outage') {
+        lines.push('Please also confirm whether any payment is due to me under the Guaranteed Standards Scheme for this interruption.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved, I will take it to the Consumer Council for Water (CCW) and, if necessary, to the Water Redress Scheme (WATRS).');
+    }
+  } else if (a.country === 'United States') {
+    if (telecom) {
+      lines.push('If this complaint is not resolved, I will file an informal complaint with the Federal Communications Commission (FCC). I understand the FCC forwards complaints to the provider, which is expected to respond in writing, normally within 30 days. I may also contact my state attorney general or public utility commission.');
+    } else {
+      if (a.scenario === 'Disconnection or threatened disconnection') {
+        lines.push('I understand that most states require a utility to give advance written notice before a shutoff, and many restrict shutoffs during extreme weather or where there is a medical need, and require payment plans to be offered.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved, I will file a complaint with my state public utility commission.');
+    }
+  } else if (a.country === 'European Union') {
+    if (telecom) {
+      lines.push('If this complaint is not resolved, I will refer it to the national regulator or the out-of-court dispute resolution body that EU member states must provide for electronic communications disputes under the European Electronic Communications Code (Directive (EU) 2018/1972).');
+    } else if (energy) {
+      if (a.scenario === 'Disconnection or threatened disconnection') {
+        lines.push('I understand that under Directive (EU) 2019/944, customers must be given adequate information on alternatives to disconnection, such as payment plans, before a disconnection takes place.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved, I will refer it to the energy ombudsman or out-of-court dispute resolution body in my country, which Directive (EU) 2019/944 requires to be available to household customers.');
+    } else if (water) {
+      lines.push('If this complaint is not resolved, I will refer it to the national water regulator, ombudsman or consumer body in my country.');
+    }
+  } else if (a.country === 'Australia') {
+    if (telecom) {
+      lines.push('If this complaint is not resolved, I will take it to the Telecommunications Industry Ombudsman (TIO), which is free for consumers and which all telecommunications providers are required to be members of.');
+    } else {
+      if (energy && a.scenario === 'Disconnection or threatened disconnection') {
+        lines.push('I understand the energy retail rules in my state require retailers to offer payment plans and hardship assistance, and to follow notice requirements, before disconnecting a customer.');
+        lines.push('');
+      }
+      lines.push('If this complaint is not resolved, I will take it to the energy and water ombudsman for my state (for example EWON in NSW or EWOV in Victoria).');
+    }
+  }
+  lines.push('');
+  lines.push(a.scenario === 'Disconnection or threatened disconnection' ? 'Given the urgency, please respond within 7 days.' : 'Please respond within 14 days.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  lines.push(a.service_address);
+  return lines.join('\n');
+}
+
+function renderFoodHospitalityConsumerComplaint(a) {
+  const lines = [];
+  const toPlatform = a.complain_to === 'The delivery app / platform';
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.business_name + ' — Customer Support');
+  lines.push('Re: Complaint about order ' + a.order_number + ' placed on ' + formatIsoDate(a.order_date));
+  lines.push('');
+  let opening = 'I am writing to complain about my order ' + a.order_number + ', placed on ' + formatIsoDate(a.order_date) + ' (' + a.order_method.toLowerCase().replace(/ \(.*\)$/, '') + ')';
+  if (toPlatform) opening += ' from ' + a.restaurant_name;
+  lines.push(opening + ', total paid ' + a.order_total + '.');
+  lines.push('');
+  let safety = false;
+  if (a.scenario === 'Wrong or missing items') {
+    lines.push('The following items were wrong or missing: ' + a.items_affected);
+    lines.push('Value of the affected items: ' + a.items_value + '.');
+  } else if (a.scenario === 'Late delivery') {
+    let late = 'The order was promised for ' + a.promised_time;
+    if (a.late_outcome === 'Never arrived') {
+      late += ', but it never arrived.';
+    } else {
+      late += ', but it did not arrive until ' + a.actual_time + '.';
+      late += a.late_outcome === 'Arrived cold or inedible' ? ' By then the food was cold and not fit to eat.' : ' The food was still usable, but the delay was unreasonable.';
+    }
+    lines.push(late);
+  } else if (a.scenario === 'Poor quality, unsafe or damaged order') {
+    lines.push('Problem with the order: ' + a.quality_issue + '.');
+    lines.push(a.quality_details);
+    if (a.quality_issue === 'Food made me ill' || a.quality_issue === 'Foreign object found in the food' || a.quality_issue === 'Contained an allergen I was told it did not') {
+      safety = true;
+      lines.push('Because this is a food safety matter, I may also report it to the relevant food safety authority, and I ask you to keep any records of this order and its preparation.');
+    }
+  }
+  if (a.photos === 'Yes — photos attached') {
+    lines.push('Photos of the order are attached.');
+  }
+  if (a.already_contacted === 'Yes — I reported it but it was not resolved') {
+    lines.push('');
+    lines.push('I have already reported this, without a satisfactory outcome: ' + a.prior_contact_details);
+  }
+  lines.push('');
+  if (a.country === 'United Kingdom') {
+    lines.push('Under the Consumer Rights Act 2015, food sold to me must be as described and of satisfactory quality, and any service (including delivery) must be carried out with reasonable care and skill and, where no time was agreed, within a reasonable time.');
+    if (safety) lines.push('Food safety concerns can also be reported to the local authority food safety team through the Food Standards Agency\'s "Report a food problem" service.');
+  } else if (a.country === 'European Union') {
+    lines.push('Under EU consumer law, goods sold to consumers must conform to the contract — they must match their description and be fit for the purposes such goods are normally used for.');
+    if (safety) lines.push('Food safety concerns can also be reported to the national or local food safety authority.');
+  } else if (a.country === 'United States') {
+    lines.push('I paid for an order that was not delivered as described. If this is not resolved, I may dispute the charge with my card issuer and report the matter to my state attorney general\'s consumer protection office.');
+    if (safety) lines.push('Food safety concerns can also be reported to my local or state health department.');
+  } else if (a.country === 'Australia') {
+    lines.push('Under the Australian Consumer Law, food must be of acceptable quality and match its description, and services (including delivery) must be provided with due care and skill and within a reasonable time.');
+    if (safety) lines.push('Food safety concerns can also be reported to the food safety authority in my state or territory, or to my local council.');
+  }
+  lines.push('');
+  let remedy = a.remedy;
+  if (a.remedy === 'Full refund') remedy = 'a full refund of ' + a.order_total;
+  else if (a.remedy === 'Refund for the affected items only') remedy = 'a refund for the affected items' + (a.scenario === 'Wrong or missing items' ? ' (' + a.items_value + ')' : '');
+  else if (a.remedy === 'Replacement order') remedy = 'a replacement order at no extra cost';
+  else if (a.remedy === 'Account credit') remedy = 'account credit for the value of the problem';
+  lines.push('I am asking for ' + remedy + '. Please confirm within 7 days how you will resolve this.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
+function renderSupplementAdverseReactionComplaint(a) {
+  const lines = [];
+  const us = a.country === 'United States (FDA MedWatch)';
+  const uk = a.country === 'United Kingdom (MHRA Yellow Card)';
+  const au = a.country === 'Australia (TGA)';
+  const product = a.product_name + ' by ' + a.brand_name;
+  const hasBatch = hasValue(a.batch_number) && !/^not (shown|known|available)\.?$/i.test(String(a.batch_number).trim());
+  const batchRef = hasBatch ? ' (batch ' + a.batch_number + ')' : '';
+  if (a.scenario === 'Report an adverse reaction') {
+    lines.push('ADVERSE REACTION REPORT — PREPARED DETAILS');
+    lines.push('Prepared ' + todayDate() + ' by ' + a.your_name);
+    lines.push('');
+    if (us) {
+      lines.push('Where to report: FDA MedWatch — the voluntary consumer form (Form 3500B), at fda.gov/safety/medwatch. The FDA does not approve dietary supplements before they are sold, so consumer reports are one of the main ways it learns about safety problems.');
+    } else if (uk) {
+      lines.push('Where to report: the MHRA Yellow Card scheme, at yellowcard.mhra.gov.uk. Yellow Card covers medicines, including licensed herbal medicines. Most food supplements are regulated as food rather than medicines; a suspected reaction can still be reported through Yellow Card, and a problem with the product itself (contamination, an undeclared ingredient, a suspected fake) can also be reported to local Trading Standards.');
+    } else if (au) {
+      lines.push('Where to report: the Therapeutic Goods Administration (TGA), using its online adverse event report. Complementary medicines such as vitamins and herbal supplements are regulated by the TGA. Reports are recorded in the TGA\'s Database of Adverse Event Notifications (DAEN).');
+    }
+    lines.push('');
+    lines.push('1. Product');
+    lines.push('Product: ' + a.product_name);
+    lines.push('Brand / manufacturer: ' + a.brand_name);
+    lines.push('Batch / lot number and expiry: ' + a.batch_number);
+    lines.push('Purchased from: ' + a.purchased_from + ', on ' + formatIsoDate(a.purchase_date));
+    lines.push('Amount taken and how often: ' + a.dose_taken);
+    lines.push('');
+    lines.push('2. The reaction');
+    lines.push('Started: ' + formatIsoDate(a.reaction_start));
+    lines.push('Description: ' + a.reaction_description);
+    lines.push('Medical attention: ' + a.medical_attention);
+    lines.push('Current status: ' + a.reaction_outcome);
+    lines.push('Stopped taking the product: ' + a.stopped_taking);
+    lines.push('');
+    lines.push('3. Other medicines and supplements taken at the same time');
+    lines.push(a.other_medicines);
+    lines.push('');
+    lines.push('4. Product kept for testing');
+    lines.push(a.kept_product === 'Yes — I still have the product and packaging' ? 'Yes — I have kept the product and its packaging, and can make them available if requested.' : 'No — the product and packaging are no longer available.');
+    lines.push('');
+    lines.push('--------------------------------------------------');
+    lines.push('');
+    lines.push('NOTIFICATION TO THE MANUFACTURER');
+    lines.push('');
+    lines.push(todayDate());
+    lines.push('');
+    lines.push('To: ' + a.brand_name + ' — Customer Safety / Quality Department');
+    lines.push('Re: Suspected adverse reaction to ' + a.product_name + batchRef);
+    lines.push('');
+    lines.push('I am writing to tell you about a suspected adverse reaction to ' + product + (hasBatch ? ', batch ' + a.batch_number : ' (no batch number shown on the packaging)') + ', which I bought from ' + a.purchased_from + ' on ' + formatIsoDate(a.purchase_date) + '.');
+    lines.push('');
+    lines.push('On ' + formatIsoDate(a.reaction_start) + ' I experienced the following: ' + a.reaction_description + ' Medical attention: ' + a.medical_attention + '.');
+    lines.push('');
+    if (us) {
+      lines.push('I have reported, or will report, this to the FDA through MedWatch. I understand that dietary supplement companies are required to report serious adverse events they are told about to the FDA.');
+    } else if (uk) {
+      lines.push('I have reported, or will report, this to the MHRA through the Yellow Card scheme and, if appropriate, to Trading Standards.');
+    } else if (au) {
+      lines.push('I have reported, or will report, this to the Therapeutic Goods Administration.');
+    }
+    lines.push('');
+    lines.push('Please record this report, tell me whether other reports have been received for this batch, and confirm in writing within 14 days what action you are taking.');
+    lines.push('');
+    lines.push('Sincerely,');
+    lines.push(a.your_name);
+    return lines.join('\n');
+  }
+  // Complaint / refund branch
+  lines.push(todayDate());
+  lines.push('');
+  lines.push('To: ' + a.purchased_from);
+  lines.push('Cc: ' + a.brand_name);
+  lines.push('Re: Complaint and ' + (a.remedy === 'Replacement' ? 'replacement' : 'refund') + ' request — ' + a.product_name + batchRef);
+  lines.push('');
+  lines.push('On ' + formatIsoDate(a.purchase_date) + ' I bought ' + product + (hasBatch ? ' (batch/lot ' + a.batch_number + ')' : '') + ' from you for ' + a.amount_paid + '.');
+  lines.push('');
+  lines.push('The problem: ' + a.complaint_issue + '.');
+  lines.push(a.complaint_details);
+  lines.push('');
+  if (uk) {
+    lines.push('Under the Consumer Rights Act 2015, goods must be of satisfactory quality (which includes being safe) and as described. Within 30 days of purchase I am entitled to reject faulty goods for a full refund. This right is against the seller, which is why I am writing to you.');
+    lines.push('I may also report this product to Trading Standards through the Citizens Advice consumer helpline.');
+  } else if (us) {
+    lines.push('A supplement that is contaminated, mislabelled or sold with false claims may be adulterated or misbranded under the Federal Food, Drug, and Cosmetic Act, and misleading claims may also be deceptive under federal and state consumer protection law.');
+    lines.push('If this is not resolved, I may dispute the charge with my card issuer, report the product to the FDA, and complain to the Federal Trade Commission and my state attorney general.');
+  } else if (au) {
+    lines.push('Under the Australian Consumer Law, goods must be of acceptable quality (which includes being safe) and match their description. Where there is a major failure, I am entitled to choose a refund or a replacement. This right is against the seller, which is why I am writing to you.');
+    lines.push('I may also report this product to the Therapeutic Goods Administration and to the ACCC.');
+  }
+  lines.push('');
+  let remedy = a.remedy;
+  if (a.remedy === 'Full refund') remedy = 'a full refund of ' + a.amount_paid;
+  else if (a.remedy === 'Replacement') remedy = 'a replacement from a different, unaffected batch';
+  else if (a.remedy === 'Refund and confirmation the batch is being investigated') remedy = 'a full refund of ' + a.amount_paid + ', and written confirmation that this batch is being investigated';
+  lines.push('I am asking for ' + remedy + '. I can make the product and packaging available if you need to inspect them. Please respond within 14 days.');
+  lines.push('');
+  lines.push('Sincerely,');
+  lines.push(a.your_name);
+  return lines.join('\n');
+}
+
 // Override for generators producing a formatted document rather than a letter
 // (e.g. a Scope of Work attached to a contract) — no date/address block at the
 // top, numbered sections instead, signature blocks at the end for both parties.
@@ -4566,6 +4997,46 @@ const GENERATORS = {
     render: renderThirdPartyLiabilityClaimLetterGenerator,
     prompt_template:
       "Write a formal liability claim letter addressed to {at_fault_party_name} ({insurer_if_known}) regarding an incident that occurred on {incident_date} at {incident_location}. Describe what happened: {incident_description}. Describe the damages or losses suffered: {damages_description}. Reference the supporting evidence available: {evidence_list}. State the amount being claimed ({amount_claimed}) and the basis for that amount ({amount_basis}). State the desired outcome ({desired_outcome}) clearly. Keep tone factual, professional, and non-accusatory in describing fault — state what happened and let the facts establish liability, rather than using inflammatory language. Close with a reasonable response deadline (14 days) and contact details for reply. Do not invent legal citations, liability percentages, or threaten specific legal action beyond stating that further steps will be considered.",
+  },
+  'civil-aviation-authority-escalation': {
+    title: 'Civil Aviation Authority Escalation Generator',
+    // No Gumroad product -- built static and free from day one. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_civil-aviation-authority-escalation',
+    // STATIC from creation (2026-09-25) -- no AI version ever existed; the
+    // prompt_template below is a stub so the shared shape stays intact.
+    static: true,
+    render: renderCivilAviationAuthorityEscalation,
+    prompt_template: 'STATIC ONLY -- rendered by renderCivilAviationAuthorityEscalation(); never sent to a model.',
+  },
+  'telecom-utility-service-complaint': {
+    title: 'Telecom & Utility Service Complaint Generator',
+    // No Gumroad product -- built static and free from day one. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_telecom-utility-service-complaint',
+    // STATIC from creation (2026-09-25) -- no AI version ever existed; the
+    // prompt_template below is a stub so the shared shape stays intact.
+    static: true,
+    render: renderTelecomUtilityServiceComplaint,
+    prompt_template: 'STATIC ONLY -- rendered by renderTelecomUtilityServiceComplaint(); never sent to a model.',
+  },
+  'food-hospitality-consumer-complaint': {
+    title: 'Food & Hospitality Consumer Complaint Generator',
+    // No Gumroad product -- built static and free from day one. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_food-hospitality-consumer-complaint',
+    // STATIC from creation (2026-09-25) -- no AI version ever existed; the
+    // prompt_template below is a stub so the shared shape stays intact.
+    static: true,
+    render: renderFoodHospitalityConsumerComplaint,
+    prompt_template: 'STATIC ONLY -- rendered by renderFoodHospitalityConsumerComplaint(); never sent to a model.',
+  },
+  'supplement-adverse-reaction-complaint': {
+    title: 'Supplement Adverse Reaction & Complaint Generator',
+    // No Gumroad product -- built static and free from day one. PLACEHOLDER.
+    gumroad_product_id: 'PLACEHOLDER_supplement-adverse-reaction-complaint',
+    // STATIC from creation (2026-09-25) -- no AI version ever existed; the
+    // prompt_template below is a stub so the shared shape stays intact.
+    static: true,
+    render: renderSupplementAdverseReactionComplaint,
+    prompt_template: 'STATIC ONLY -- rendered by renderSupplementAdverseReactionComplaint(); never sent to a model.',
   },
 };
 
