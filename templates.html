@@ -2843,6 +2843,19 @@
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
     });
   });
+  // Deep links: /templates#flights-travel opens that block's tab and scrolls to the tabs
+  // (used by "See all … templates" links, e.g. in the free templates roundup article).
+  function openFromHash() {
+    var cat = (location.hash || '').slice(1);
+    if (!/^[a-z-]+$/.test(cat)) return;
+    var tab = document.querySelector('#templatesTabs .crc-tab[data-toolcat="' + cat + '"]');
+    if (!tab) return;
+    tab.click();
+    var bar = document.getElementById('templatesTabs');
+    window.scrollTo({ top: bar.getBoundingClientRect().top + window.pageYOffset - 96 });
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 })();
 </script>
 <script>
