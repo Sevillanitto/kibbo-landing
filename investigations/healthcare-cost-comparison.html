@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-image-preview:large">
+<title>What Does It Really Cost to Get Sick? US, UK, Germany &amp; Spain Compared | Kibbo</title>
+<meta name="description" content="Kibbo built its own dataset comparing the real cost of getting sick across four countries with genuinely different healthcare systems — what you pay in advance, what a treatment actually costs, and how long you wait.">
+<link rel="canonical" href="https://www.getkibbo.com/investigations/healthcare-cost-comparison">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="What Does It Really Cost to Get Sick? US, UK, Germany &amp; Spain Compared">
+<meta property="og:description" content="Kibbo built its own dataset comparing the real cost of getting sick across four countries with genuinely different healthcare systems — what you pay in advance, what a treatment actually costs, and how long you wait.">
+<meta property="og:url" content="https://www.getkibbo.com/investigations/healthcare-cost-comparison">
+<meta property="og:image" content="https://www.getkibbo.com/investigations-images/healthcare-cost-comparison-hero.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Does It Really Cost to Get Sick? US, UK, Germany &amp; Spain Compared">
+<meta name="twitter:description" content="Kibbo built its own dataset comparing the real cost of getting sick across four countries with genuinely different healthcare systems — what you pay in advance, what a treatment actually costs, and how long you wait.">
+<meta name="twitter:image" content="https://www.getkibbo.com/investigations-images/healthcare-cost-comparison-hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+
+<!-- JSON-LD Article schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Does It Really Cost to Get Sick? Healthcare Costs, Insurance and Waiting Times in the US, UK, Germany and Spain",
+  "description": "An original Kibbo investigation comparing real healthcare cost, insurance structure, and wait times across four countries with genuinely different systems, with an original dataset.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kibbo Editorial Team",
+    "url": "https://www.getkibbo.com/authors.html#kibbo-editorial-team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibbo",
+    "url": "https://www.getkibbo.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.getkibbo.com/favicon.png"
+    }
+  },
+  "datePublished": "2026-09-28",
+  "dateModified": "2026-09-28",
+  "image": "https://www.getkibbo.com/investigations-images/healthcare-cost-comparison-hero.jpg",
+  "mainEntityOfPage": "https://www.getkibbo.com/investigations/healthcare-cost-comparison",
+  "about": "Healthcare & Medical",
+  "isBasedOn": "https://www.getkibbo.com/investigations-data/kibbo-healthcare-cost-dataset-2026.csv",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.getkibbo.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Investigations",
+        "item": "https://www.getkibbo.com/investigations"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "What Does It Really Cost to Get Sick?",
+        "item": "https://www.getkibbo.com/investigations/healthcare-cost-comparison"
+      }
+    ]
+  }
+}
+</script>
+
+<link rel="stylesheet" href="/styles.css">
+<style>
+  :root {
+    --bg: #F7F5F0;
+    --bg-dark: #141210;
+    --accent-green: #3D6B4F;
+    --accent-amber: #C8922A;
+    --accent-terra: #B85C3A;
+    --font-serif: 'Syne', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --text-primary: #1A1815;
+    --text-secondary: #56504A;
+    --border-soft: #E4DFD5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--bg); color: var(--text-primary); line-height: 1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .hero-image { width: 100%; aspect-ratio: 1600 / 900; object-fit: cover; display: block; }
+  .hero-clear { padding-top: 64px; background: var(--bg); }
+  .breadcrumb-inv { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 0 0 24px; color: var(--accent-green); }
+  .breadcrumb-inv a { color: var(--accent-green); text-decoration: none; }
+  .breadcrumb-inv a:hover { color: var(--text-primary); }
+  .dataset-block p.dataset-more { margin: 14px 0 0; font-size: 14.5px; line-height: 1.9; }
+  .dataset-block p.dataset-more a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+
+
+
+  .art-header { padding: 56px 0 28px; }
+  .art-category { display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
+  .art-header h1 { font-family: var(--font-serif); font-size: 38px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+  .art-dek { font-size: 19px; color: var(--text-secondary); max-width: 660px; }
+  .art-meta { display: flex; gap: 18px; margin-top: 22px; font-size: 13px; color: var(--text-secondary); flex-wrap: wrap; }
+
+
+  .art-body h2 { font-family: var(--font-serif); font-size: 27px; font-weight: 700; margin: 52px 0 18px; }
+  .art-body h3 { font-family: var(--font-sans); font-size: 18px; font-weight: 700; margin: 30px 0 10px; }
+  .art-body p { margin-bottom: 17px; font-size: 17px; }
+  .art-body ul, .art-body ol { margin: 0 0 17px 22px; }
+  .art-body li { margin-bottom: 8px; font-size: 17px; }
+
+  .lede { font-size: 20px; color: var(--text-primary); font-weight: 500; margin-bottom: 20px; }
+
+  table.data-table { width: 100%; border-collapse: collapse; margin: 24px 0 30px; font-size: 15px; }
+  table.data-table th { text-align: left; padding: 10px 12px; font-weight: 700; border-bottom: 2px solid var(--text-primary); }
+  table.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  table.data-table tr:last-child td { border-bottom: 1px solid var(--text-primary); }
+
+  .dw-embed { margin: 30px 0 36px; }
+  .dw-caption { font-size: 14px; color: var(--text-secondary); margin-top: 8px; font-style: italic; }
+
+  figure.doc-shot { margin: 30px 0 36px; }
+  figure.doc-shot img { width: 100%; height: auto; border: 1px solid var(--border-soft); display: block; }
+  figure.doc-shot figcaption { font-size: 14px; color: var(--text-secondary); margin-top: 10px; }
+  figure.doc-shot figcaption a { color: var(--accent-green); }
+
+  blockquote.pull-quote { border-left: 3px solid var(--text-primary); padding-left: 22px; margin: 28px 0; font-size: 20px; line-height: 1.5; font-family: var(--font-serif); font-weight: 600; color: var(--text-primary); }
+  blockquote.pull-quote cite { display: block; margin-top: 10px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; font-style: normal; color: var(--text-secondary); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--border-soft); margin: 48px 0; }
+
+  .dataset-block { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0; margin: 20px 0 40px; }
+  .dataset-block .label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+  .dataset-block h3 { margin: 0 0 10px; }
+  .dataset-block p { font-size: 15.5px; color: var(--text-secondary); margin-bottom: 14px; }
+  .dataset-block a.download-link { font-weight: 700; color: var(--accent-green); text-decoration: underline; }
+
+  .related-list { list-style: none; margin: 0; }
+  .related-list li { border-bottom: 1px solid var(--border-soft); padding: 14px 0; }
+  .related-list a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 16px; }
+  .related-list a:hover { color: var(--accent-green); }
+
+  .sources-list { list-style: none; margin: 0; }
+  .sources-list li { margin-bottom: 10px; font-size: 14.5px; }
+  .sources-list a { color: var(--accent-green); }
+
+
+  @media (max-width: 640px) {
+    .art-header h1 { font-size: 28px; }
+    .lede { font-size: 18px; }
+    table.data-table { font-size: 13px; }
+    blockquote.pull-quote { font-size: 17px; padding-left: 16px; }
+  }
+
+  /* Healthcare-cost investigation components */
+  .country-card { border-top: 1px solid var(--text-primary); padding: 22px 0; margin-bottom: 4px; }
+  .country-card h3 { font-family: var(--font-serif); font-size: 21px; margin: 0 0 12px; }
+  .country-card p { font-size: 15.5px; margin-bottom: 10px; }
+  .country-card .label { font-weight: 700; }
+  .calc-placeholder { border: 2px dashed var(--accent-amber); padding: 32px; text-align: center; margin: 30px 0 36px; }
+  .calc-placeholder strong { display: block; font-size: 16px; margin-bottom: 8px; }
+  ul.case-summary-list { list-style: none; margin: 0; }
+  ul.case-summary-list li { border-bottom: 1px solid var(--border-soft); padding: 18px 0; }
+  ul.case-summary-list .tags { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 6px; }
+  ul.case-summary-list a.case-title { color: var(--text-primary); text-decoration: none; font-weight: 700; font-size: 17px; display: block; margin-bottom: 6px; }
+  ul.case-summary-list a.case-title:hover { color: var(--accent-green); }
+  ul.case-summary-list p { font-size: 15px; color: var(--text-secondary); margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <a href="/real-cases" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases</span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <a href="/real-cases">Cases</a>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<div class="hero-clear">
+  <nav class="breadcrumb-inv" aria-label="Breadcrumb"><a href="/investigations">← Investigations</a></nav>
+  <!-- HERO IMAGE — 1600x900px -->
+  <img class="hero-image" src="/investigations-images/healthcare-cost-comparison-hero.jpg" alt="A surgeon and a nurse in scrubs and masks at work in a hospital operating room" width="1600" height="900">
+</div>
+
+<div class="wrap">
+
+  <header class="art-header">
+    <span class="art-category">Kibbo Investigation · Healthcare &amp; Medical</span>
+    <h1>What Does It Really Cost to Get Sick?</h1>
+    <p class="art-dek">Healthcare costs, insurance, and the financial risk of getting medical treatment in the US, UK, Germany and Spain — with an original dataset, real documented cases, and the gaps we couldn't fill honestly stated.</p>
+    <div class="art-meta">
+      <span>Kibbo Editorial Team</span>
+      <span>·</span>
+      <span>September 2026</span>
+      <span>·</span>
+      <span>18 min read</span>
+    </div>
+  </header>
+
+
+  <div class="art-body">
+
+    <p class="lede">David is 58 and lives in Ohio. For the past six months, his hip has been getting worse — stiff in the morning, painful on stairs, impossible to ignore anymore. His doctor tells him what he already suspected: he needs a hip replacement.</p>
+
+    <p>David has health insurance through his employer. He pays his premium every month, has done for years, and has always assumed that if something serious happened, he'd be covered. And he is — but "covered" doesn't mean "free."</p>
+
+    <p>Before the surgery even happens, David has to work out what his plan's deductible actually requires him to pay first, what percentage of the remaining cost falls to him as coinsurance, whether his surgeon and hospital are actually in his insurer's network, and what his annual out-of-pocket maximum is — the ceiling past which, in theory, he stops paying. He finds out that a routine, medically necessary procedure can still leave him owing several thousand dollars, depending on decisions made months earlier by an insurance company he's never spoken to.</p>
+
+    <p>David's situation is illustrative, not a documented case — a composite built to show how the pieces of a real bill actually fit together. But every piece of it — the deductible, the coinsurance, the network rules, the out-of-pocket maximum — is real, and it's the same basic structure millions of insured Americans navigate every year without fully understanding it until the bill arrives.</p>
+
+    <p>And in some countries, David wouldn't be doing any of this math at all. Not because the treatment is free — nothing is — but because the cost is collected somewhere else entirely: in taxes, in mandatory contributions, in a system that decided, at a policy level, not to hand this particular decision to the patient. In other countries, David might not be paying much at all — but he might be waiting considerably longer than he would in Ohio.</p>
+
+    <p><strong>This investigation asks a simple question: what does getting sick actually cost — and who is really paying for it?</strong></p>
+
+    <p>We compared four countries with genuinely different ways of answering that question — the United States, the United Kingdom, Germany, and Spain — across four common medical treatments, using primary sources, official data, and documented real cases wherever they exist. Where the data doesn't allow a fair comparison, we say so, rather than force one.</p>
+
+    <hr class="section-rule">
+
+    <h2>There Is No Single "Healthcare Cost"</h2>
+
+    <p>When someone says "healthcare costs $X in America," they could be talking about entirely different things: the hospital's listed charge, the amount an insurer actually negotiated down to, the amount insurance covered, or the patient's own final bill. The same confusion applies, differently, to every country in this investigation.</p>
+
+    <p>So before comparing anything, we built our own methodology — three separate cost layers, applied consistently to every country and every treatment:</p>
+
+    <h3>Layer A — What You Already Paid, Before You Got Sick</h3>
+    <p>An annual cost, paid whether you use the system or not: an insurance premium, a mandatory payroll contribution, or a share of general taxation.</p>
+
+    <h3>Layer B — What the Treatment Itself Costs</h3>
+    <p>Broken into up to four figures where the data allows: the listed/billed charge, the negotiated or cash price, what insurance actually covers, and what the patient pays out of pocket.</p>
+
+    <h3>Layer C — Optional Private Top-Up</h3>
+    <p>Supplementary private insurance, shown separately, never treated as a country's base case.</p>
+
+    <p><strong>Total real cost = Layer A + Layer B (+ Layer C where relevant).</strong></p>
+
+    <p>We used one standard profile per country — employer-sponsored insurance in the US, standard NHS with no private top-up in the UK, statutory GKV in Germany, and public Seguridad Social in Spain — and a strict source hierarchy: government or regulator data first, then international bodies with public methodology, then peer-reviewed studies, then investigative journalism with cited primary sources. Never blogs or commercial insurance-comparison sites. And where a country simply doesn't have a comparable figure, we say so in the data itself, rather than estimate one.</p>
+
+    <hr class="section-rule">
+
+    <h2>Four Health Systems, Four Different Answers</h2>
+
+    <div class="country-card">
+      <h3>🇺🇸 United States</h3>
+      <p><span class="label">Financing:</span> Mixed — employer insurance (53.5% of the population at some point in the year), Medicare (20.1%), Medicaid (17.1%), direct purchase (10.5%). 7.9% uninsured all year. <em>(US Census Bureau, report P60-291, 2025 data)</em></p>
+      <p><span class="label">Layer A (employer plan, single coverage):</span> Total premium $9,325/year — worker pays 16% = <strong>$1,440/year</strong>. Average deductible $1,886/year. Typical coinsurance 20%.</p>
+      <p><span class="label">If you need treatment:</span> No centralized public waiting list. Access depends on your insurer's network, prior authorization, and your ability to pay the deductible/coinsurance upfront. Average time to a specialist appointment (not treatment): 24.1 days.*</p>
+    </div>
+
+    <div class="country-card">
+      <h3>🇬🇧 United Kingdom</h3>
+      <p><span class="label">Financing:</span> ~80% general taxation, ~18% National Insurance, ~2% patient charges. <em>(BMJ 2024 / King's Fund)</em></p>
+      <p><span class="label">Layer A:</span> No individually assignable contribution exists — this is a genuine structural difference from Spain/Germany, not a data gap.*</p>
+      <p><span class="label">If you need treatment:</span> Public NHS waiting list, with the parallel option of paying privately without losing NHS rights. Median wait: 11.9 weeks, 65.8% within 18 weeks (June 2026, all specialties).*</p>
+    </div>
+
+    <div class="country-card">
+      <h3>🇩🇪 Germany</h3>
+      <p><span class="label">Financing:</span> Mandatory social insurance (GKV, ~90% of the population) or private insurance (PKV). <em>(vdek, 2026)</em></p>
+      <p><span class="label">Layer A:</span> 14.6% general rate + 2.9% average additional contribution = <strong>~17.5% total</strong>, split equally between employer and employee.</p>
+      <p><span class="label">If you need treatment:</span> No centralized public waiting list like the NHS. Average time to a specialist appointment (not treatment): 42 days.*</p>
+    </div>
+
+    <div class="country-card">
+      <h3>🇪🇸 Spain</h3>
+      <p><span class="label">Financing:</span> Social Security (Sistema Nacional de Salud), via the Contingencias Comunes contribution — 28.30% total (23.60% employer + 4.70% worker), 2026. <em>(Ibermutua, Orden PJC/297/2026)</em></p>
+      <p><span class="label">Layer A:</span> This 28.30% is <strong>not exclusive to healthcare</strong> — it also covers sick leave, maternity/paternity, and more, all bundled into one rate.*</p>
+      <p><span class="label">If you need treatment:</span> Public waiting list managed regionally, with enormous variation (Madrid: 50 days; Andalucía: 173 days for surgery). Average wait: 121 days for non-urgent surgery, 102 days for first specialist consultation.</p>
+    </div>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/healthcare-cost-kff-medicaid-map.png" alt="KFF map of US states by Medicaid expansion status: 10 states shown in dark blue as not adopted — Wyoming, Kansas, Wisconsin, Texas, Mississippi, Alabama, Georgia, South Carolina, Tennessee and Florida" width="1113" height="610" loading="lazy">
+      <figcaption>Medicaid expansion status by state — the 10 dark-blue states have not adopted it. (Washington appears highlighted only because it was under the cursor when the map was captured.) Source: <a href="https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/" target="_blank" rel="noopener">KFF, State Activity Around Medicaid Expansion</a>.</figcaption>
+    </figure>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/healthcare-cost-nhs-rtt-page.png" alt="NHS England&#x27;s official Referral to Treatment (RTT) Waiting Times statistics page, marked as accredited official statistics" width="1252" height="692" loading="lazy">
+      <figcaption>NHS England publishes Referral to Treatment waiting times as accredited official statistics, measuring the time from referral through to treatment — the figure most countries in this investigation don't publish. Source: <a href="https://www.england.nhs.uk/statistics/rtt-waiting-times/" target="_blank" rel="noopener">NHS England, RTT Waiting Times</a>.</figcaption>
+    </figure>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/healthcare-cost-vdek-germany.png" alt="vdek page in German explaining the 2026 statutory health insurance rates: a 14.6 percent general rate and a 2.9 percent average additional contribution, split equally between members and employers" width="851" height="560" loading="lazy">
+      <figcaption>Germany's 2026 statutory health insurance (GKV) rates: a 14.6% general rate plus a 2.9% average additional contribution, paid half by the member and half by the employer. Source: <a href="https://www.vdek.com/politik/was-aendert-sich/gesundheitswesen-2026/" target="_blank" rel="noopener">vdek, Gesundheitswesen 2026</a>.</figcaption>
+    </figure>
+
+    <figure class="doc-shot">
+      <img src="/investigations-images/healthcare-cost-ibermutua-spain.png" alt="Ibermutua table of Spain&#x27;s 2026 Social Security contribution rates, showing Contingencias Comunes at 23.60 percent employer, 4.70 percent worker, 28.30 percent total" width="821" height="488" loading="lazy">
+      <figcaption>Spain's 2026 Social Security contribution rates: <em>Contingencias Comunes</em> at 28.30% (23.60% employer, 4.70% worker) — a single rate that funds healthcare along with sick leave, parental leave and more. Source: <a href="https://www.ibermutua.es/" target="_blank" rel="noopener">Ibermutua, Bases y Tipos de Cotización 2026</a>.</figcaption>
+    </figure>
+
+    <hr class="section-rule">
+
+    <h2>Four Treatments, Compared</h2>
+
+    <p>We tracked four uncomplicated, standard cases — the kind of procedure comparable across systems: an appendectomy, a hip replacement, a knee MRI without contrast, and a vaginal delivery.</p>
+
+    <table class="data-table">
+      <tr><th>Treatment</th><th>US (Layer B, billed/cash)</th><th>UK (Layer C)</th><th>Germany (Layer C)</th><th>Spain (Layer C)</th></tr>
+      <tr><td>Appendectomy</td><td>$10,972 / $6,848</td><td>$3,950</td><td>$3,980</td><td>$2,622</td></tr>
+      <tr><td>Hip replacement</td><td>$23,550 / $14,428</td><td>$14,849</td><td>$7,681</td><td>$6,780</td></tr>
+      <tr><td>Knee MRI (no contrast)</td><td>$3,653 / $1,595</td><td>$527</td><td>$613</td><td>$113</td></tr>
+      <tr><td>Vaginal delivery</td><td>~$13,000*</td><td>$3,002</td><td>$1,361</td><td>$2,175</td></tr>
+    </table>
+
+    <p><em>UK/Germany/Spain figures are private insurance claims pricing (our Layer C) — not the public system's internal cost, which none of the three publishes in a comparable per-treatment breakdown (see below). US figures are Layer B, since the US base case is already employer/private insurance.</em></p>
+
+    <div class="dw-embed">
+      <iframe title="The Same Treatment Costs Very Differently — Private Insurance Pricing, 2022" aria-label="Table" id="datawrapper-chart-tGpWR" src="https://datawrapper.dwcdn.net/tGpWR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="292" data-external="1"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0,i=e.length;r<i;r++)if(e[r].contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";e[r].style.height=d}}})}();</script>
+    </div>
+
+    <p>One pattern stands out immediately: Spain has the lowest private-market cost in three of the four treatments, and is essentially tied for lowest in the fourth. This alone complicates any simple assumption that lower cost means worse access — Spain is also one of only two countries in this investigation that measures and publishes real wait times through to treatment.</p>
+
+    <hr class="section-rule">
+
+    <h2>The Same Treatment, Four Different Bills</h2>
+
+    <p>For the US, where we have all four cost figures, we calculated what David — our composite patient — would actually owe, using his real deductible ($1,886) and coinsurance (20%):</p>
+
+    <table class="data-table">
+      <tr><th>Treatment</th><th>Listed</th><th>Negotiated/cash</th><th>Insurance pays</th><th>Patient pays</th></tr>
+      <tr><td>Appendectomy</td><td>$10,972</td><td>$6,848</td><td>$3,969.60</td><td><strong>$2,878.40</strong></td></tr>
+      <tr><td>Hip replacement</td><td>$23,550</td><td>$14,428</td><td>$10,033.60</td><td><strong>$4,394.40</strong></td></tr>
+      <tr><td>Knee MRI</td><td>$3,653</td><td>$1,595</td><td>$0</td><td><strong>$1,595</strong></td></tr>
+      <tr><td>Vaginal delivery</td><td>—</td><td>$13,000</td><td>$8,891.20</td><td><strong>$4,108.80</strong></td></tr>
+    </table>
+
+    <div class="dw-embed">
+      <iframe title="Anatomy of a Hip Replacement Bill (US)" aria-label="Bar Chart" id="datawrapper-chart-D4ICe" src="https://datawrapper.dwcdn.net/D4ICe/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="162" data-external="1"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0,i=e.length;r<i;r++)if(e[r].contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";e[r].style.height=d}}})}();</script>
+    </div>
+
+    <p>Notice the MRI: the patient pays 100% of it, because the negotiated price doesn't clear the annual deductible — insurance pays nothing at all. Having insurance doesn't guarantee it actually pays for a given visit; it depends entirely on where you are in your deductible year.</p>
+
+    <hr class="section-rule">
+
+    <h2>The Other Healthcare Bill: Waiting</h2>
+
+    <table class="data-table">
+      <tr><th>Treatment</th><th>US</th><th>UK</th><th>Germany</th><th>Spain</th></tr>
+      <tr><td>Appendectomy (emergency)</td><td colspan="4">Immediate via ER in all four countries — no elective wait applies</td></tr>
+      <tr><td>Hip replacement (elective)</td><td>24.1 days*</td><td>11.9 weeks (median)</td><td>42 days*</td><td>121 days</td></tr>
+      <tr><td>Knee MRI / Vaginal delivery</td><td colspan="4">No comparable per-procedure wait-time data found in any of the four countries — stated as a limitation, not estimated</td></tr>
+    </table>
+
+    <p><em>*Only the UK and Spain measure and publish wait time through to actual treatment. The US and Germany figures measure time to the first specialist appointment — a different, earlier point in the process. Comparing the raw numbers side by side would suggest the US and Germany are faster; in fact, we simply don't know how long US and German patients wait for the hip replacement itself, because neither country publishes that figure the way the UK and Spain do. That gap in transparency is itself one of this investigation's findings.</em></p>
+
+    <hr class="section-rule">
+
+    <h2>The US Healthcare System &amp; the ACA</h2>
+
+    <p>The enhanced ACA premium tax credits — created in 2021 (American Rescue Plan), extended in 2022 (Inflation Reduction Act) — expired on December 31, 2025. The Senate fell short of the 60 votes needed to extend them (51 votes, with 2 Republican senators and 4 House Republicans crossing party lines to support extension), tangled with a partial federal government shutdown.</p>
+
+    <p>According to the CBO, premiums for subsidized enrollees rose an average of 114% as a result, with 4.2 million more people projected to become uninsured by 2034–2035.</p>
+
+    <p>David's own employer-sponsored plan doesn't depend on these Marketplace subsidies — but if he lost his job and had to buy an individual plan on the Marketplace, this change would hit him immediately.</p>
+
+    <p>Separately, Medicaid expansion remains a state-by-state decision: 10 states have not adopted it (Wyoming, Kansas, Wisconsin, Texas, Mississippi, Alabama, Georgia, South Carolina, Tennessee, Florida), all under state governments that declined it at the time of the decision; 41 states have.</p>
+
+    <p>What hasn't changed: the ACA's protection against denial or higher pricing for pre-existing conditions, dependent coverage to age 26, and the ban on lifetime coverage limits — these structural protections remain in place regardless of the subsidy fight.</p>
+
+    <hr class="section-rule">
+
+    <h2>Real Healthcare Bill Case Files</h2>
+
+    <p>The following cases are drawn from official rulings, regulator findings, and documented reporting — not composites. Each one is covered in full detail, with its primary source, on Kibbo's <a href="/real-cases">Real Cases</a> section.</p>
+
+    <ul class="case-summary-list">
+      <li>
+        <div class="tags">Ombudsman Decision · United Kingdom</div>
+        <a class="case-title" href="/real-cases/nhs-fife-hip-replacement-ombudsman">NHS Fife Ordered to Reimburse a Patient's Private Hip Replacement After Ignoring Her Pain</a>
+        <p>A consultant refused to consider a patient for hip surgery based on her BMI alone, without a physical examination. Scotland's Ombudsman found the assessment was never actually carried out — and ordered the health board to pay for the private surgery she'd been forced into.</p>
+      </li>
+      <li>
+        <div class="tags">Documented Account · United Kingdom</div>
+        <a class="case-title" href="/real-cases/nhs-wait-private-hip-replacement-uk">"Unless You Go Private, There's an 18-Month Waiting List" — a £28,000 Decision</a>
+        <p>A 71-year-old was told her only real options were an 18-month wait or paying privately. She chose to pay — nearly £28,000 for both hips. A concrete price on what this investigation's wait-time data only shows in the abstract.</p>
+      </li>
+      <li>
+        <div class="tags">Ombudsman Decision · Spain</div>
+        <a class="case-title" href="/real-cases/spain-defensor-pueblo-hospital-bill">Spain's Ombudsman Cancels a Hospital Bill After a Patient Was Never Warned She'd Be Charged</a>
+        <p>An elderly patient was transported by Spain's public health service, then admitted as a "private patient" for a single room — without being told that would trigger a bill for the emergency care itself. The Defensor del Pueblo recommended that it be cancelled.</p>
+      </li>
+      <li>
+        <div class="tags">Court Case · Spain</div>
+        <a class="case-title" href="/real-cases/spain-malaga-insurer-rejection-clause-ruling">A Spanish Court Just Voided the Clause Every Private Hospital Patient Signs</a>
+        <p>A Málaga court declared null and abusive the standard clause forcing patients to personally cover whatever their insurer refuses to pay — a final first-instance ruling that other patients can point to.</p>
+      </li>
+      <li>
+        <div class="tags">Documented Bill · United States</div>
+        <a class="case-title" href="/real-cases/appendectomy-55000-bill-breakdown-us">The $55,000 Appendectomy: What a Documented US Hospital Bill Actually Contained</a>
+        <p>A fully-insured 20-year-old's emergency appendectomy was billed at $55,029 — including $7,501 for two hours in a recovery room. His actual bill shows exactly how a hospital's listed price and what a patient owes can diverge.</p>
+      </li>
+      <li>
+        <div class="tags">Documented Bill · United States</div>
+        <a class="case-title" href="/real-cases/uninsured-appendectomy-80000-bill-us">Uninsured Veteran Owed $80,232 After an Appendectomy Went Wrong</a>
+        <p>Without an insurer negotiating on his behalf, an uninsured veteran's appendicitis complications left him owing far more than any insured patient would have paid for the same two surgeries.</p>
+      </li>
+      <li>
+        <div class="tags">Documented Bill · United States</div>
+        <a class="case-title" href="/real-cases/childbirth-er-coding-bill-us">Same Hospital, Same Family: Why the Second Delivery Cost $16,000 More Than the First</a>
+        <p>A family's first delivery cost $30. Their second — medically identical, at the same hospital — was coded through the ER because of which door was open during the pandemic, and billed at over $16,000.</p>
+      </li>
+    </ul>
+
+    <p><em>We could not find a documented, equivalent case for Germany — stated here explicitly rather than filled with a weaker substitute.</em></p>
+
+    <hr class="section-rule">
+
+    <h2>What We Found</h2>
+
+    <ol>
+      <li><strong>The cheapest country isn't necessarily the least transparent.</strong> Spain has the lowest private-market cost in three of four treatments — and is one of only two countries here that measures and publishes its real wait time.</li>
+      <li><strong>Being uninsured means paying the full list price — insurance's real function is negotiating that price down before you ever see it.</strong></li>
+      <li><strong>A hospital's "list price" is a starting point almost nobody actually pays.</strong> The gap between billed and cash price ran 30–55% across our four US treatments.</li>
+      <li><strong>The countries most transparent about their wait times (UK, Spain) are also the ones most publicly criticized for them — that's not a coincidence.</strong></li>
+      <li><strong>Two of the four countries (US, Germany) don't measure or publish how long it actually takes to receive treatment</strong> — only how long it takes to get an appointment. That's a policy choice with real accountability consequences.</li>
+      <li><strong>A single billing decision — which door you walked through, which room you were assigned — can add thousands to an otherwise identical treatment.</strong> Three of our seven documented cases prove it.</li>
+      <li><strong>A political decision with no connection to your health system's structure can change what you pay overnight.</strong> The ACA subsidy expiration doubled Marketplace premiums for millions without a single clinical rule changing.</li>
+      <li><strong>"Free at the point of use" and "no cost to the patient" are not the same claim.</strong> In both the UK and Spain, a patient who can't or won't wait can end up paying five figures privately, inside a system that's on paper funded entirely by taxes.</li>
+      <li><strong>Much of the US-vs-rest cost gap isn't different treatment — it's a fundamentally different pricing mechanism for the identical medical service.</strong> Using the same clinical definition (iFHP/HCCI), US private cost is 3–10x Germany's or Spain's — not because the treatment differs, but because the price-setting process does.</li>
+      <li><strong>The most important financial function of insurance may not be "paying for your treatment" — it's negotiating the price before you ever see it.</strong> See finding #2 and #3 together.</li>
+    </ol>
+
+    <hr class="section-rule">
+
+    <h2>The Healthcare Consumer Checklist</h2>
+
+    <ol>
+      <li><strong>Is the provider actually in your insurance network?</strong> → <a href="/checklists/choosing-healthcare-provider-red-flags">Choosing a Healthcare Provider &amp; Red Flags Checklist</a></li>
+      <li><strong>Does the bill match what you were actually told it would cost?</strong> → <a href="/checklists/medical-bill-invoice-review">Medical Bill &amp; Invoice Review Checklist</a></li>
+      <li><strong>Track every bill and disputed charge in one place.</strong> → <a href="/templates/medical-billing-dispute-tracker">Medical Expenses &amp; Billing Dispute Tracker</a></li>
+      <li><strong>What should you confirm before treatment, and how do you file a claim?</strong> → <a href="/checklists/health-insurance-claim">Health Insurance Claim Checklist</a></li>
+      <li><strong>The bill is wrong, unexpected, or not what you agreed to.</strong> → <a href="/generate/healthcare-billing-dispute-refund-letter">Healthcare Billing Dispute &amp; Refund Letter Generator</a></li>
+      <li><strong>Your insurance claim was denied.</strong> → <a href="/generate/healthcare-insurance-appeal-letter">Healthcare Insurance Appeal Letter Generator</a></li>
+      <li><strong>You need your own medical records.</strong> → <a href="/generate/medical-records-request-letter">Medical Records Request Letter Generator</a></li>
+      <li><strong>Your complaint is going nowhere.</strong> → <a href="/generate/healthcare-complaint-letter">Healthcare Complaint Letter Generator</a></li>
+      <li><strong>Comparing providers before you commit.</strong> → <a href="/templates/healthcare-provider-comparison-workbook">Healthcare Provider Comparison &amp; Decision Workbook</a></li>
+      <li><strong>Where do you actually complain, by country?</strong> UK → <a href="/blog/nhs-complaint-deadlock-phso-escalation">The NHS Complaint Deadlock</a>; US → the complaint generator above; Spain/Germany → your national ombudsman, as shown in our <a href="/real-cases">Real Cases</a>.</li>
+    </ol>
+
+    <p>Want to see what happened when someone actually used one of these? Read <a href="/real-cases/nhs-fife-hip-replacement-ombudsman">what the Scottish Ombudsman decided</a> after a patient filed exactly this kind of complaint.</p>
+
+    <hr class="section-rule">
+
+    <h2>Estimate Your Own Cost</h2>
+
+    <!-- PLACEHOLDER: EMBEDDED CALCULATOR "What Would This Actually Cost You?"
+         To be built as a separate follow-up piece — see Point 12 of the
+         locked article structure. Inputs: country, treatment, annual
+         income, has-supplementary-insurance checkbox. Lives only inside
+         this article, no standalone /calculators/ URL. -->
+    <div class="calc-placeholder">
+      <strong>INTERACTIVE CALCULATOR GOES HERE</strong>
+      "What Would This Actually Cost You?" — country + treatment + income + optional private insurance.<br>
+      To be built as a follow-up piece (Point 12), embedded only in this article.
+    </div>
+
+    <hr class="section-rule">
+
+    <div class="dataset-block">
+      <div class="label">Kibbo original dataset</div>
+      <h3>Kibbo Healthcare Cost Dataset, 2026</h3>
+      <p>58 data points across 4 countries, 4 treatments, and 3 cost layers, cross-checked against primary sources, with every unverifiable gap explicitly marked rather than estimated.</p>
+      <a class="download-link" href="/investigations-data/kibbo-healthcare-cost-dataset-2026.csv" download>Download the full dataset (CSV) →</a>
+      <p class="dataset-more"><a href="/investigations-data/healthcare-dataset-README.md" download>Methodology, sources &amp; column notes (README) →</a><br>
+      <a href="/datasets">See all datasets in Kibbo's Consumer Data Library →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://www.kff.org/health-costs/report/2025-employer-health-benefits-survey/" target="_blank" rel="noopener">KFF 2025 Employer Health Benefits Survey</a></li>
+      <li><a href="https://www.census.gov/library/publications/2026/demo/p60-291.html" target="_blank" rel="noopener">US Census Bureau, Health Insurance Coverage in the United States: 2025 (P60-291)</a></li>
+      <li><a href="https://www.england.nhs.uk/statistics/rtt-waiting-times/" target="_blank" rel="noopener">NHS England, Referral to Treatment (RTT) Waiting Times</a></li>
+      <li><a href="https://www.vdek.com/politik/was-aendert-sich/gesundheitswesen-2026/" target="_blank" rel="noopener">vdek, Gesundheitswesen 2026 — GKV-Beitragssätze</a></li>
+      <li><a href="https://www.ibermutua.es/" target="_blank" rel="noopener">Ibermutua, Bases y Tipos de Cotización a la Seguridad Social 2026</a></li>
+      <li>International Federation of Health Plans / Health Care Cost Institute, International Healthcare Cost Comparison Report 2024 (2022 claims data)</li>
+      <li><a href="https://mycarecost.com/" target="_blank" rel="noopener">MyCareCost — US hospital price transparency data (CMS-mandated)</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/" target="_blank" rel="noopener">KFF, State Activity Around Medicaid Expansion</a></li>
+      <li>Full list of all sources used, including for the wait-time and case-file data, is included in the dataset's own README, available with the download above.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div id="engagement-footer"></div>
+<script src="/blog/engagement-footer.js"></script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+          <a href="/corrections-log">Corrections Log</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

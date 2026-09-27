@@ -16644,5 +16644,45 @@
       "labor delivery bill er charge",
       "dispute emergency room charge birth"
     ]
+  },
+  {
+    "title": "What Does It Really Cost to Get Sick? US, UK, Germany & Spain Compared",
+    "type": "investigation",
+    "block": "healthcare-medical",
+    "url": "/investigations/healthcare-cost-comparison",
+    "description": "Kibbo built its own dataset comparing the real cost of getting sick across four countries with genuinely different healthcare systems — what you pay in advance, what a treatment actually costs, and how long you wait.",
+    "keywords": [
+      "healthcare costs by country comparison",
+      "us uk germany spain healthcare cost",
+      "hip replacement cost comparison",
+      "nhs waiting times vs us costs",
+      "how much does it cost to get sick"
+    ]
+  },
+  {
+    "title": "Kibbo Healthcare Cost Dataset, 2026 (CSV)",
+    "type": "dataset",
+    "block": "healthcare-medical",
+    "url": "/investigations-data/kibbo-healthcare-cost-dataset-2026.csv",
+    "description": "Download Kibbo's original dataset: 58 verified data points on healthcare costs, insurance contributions and waiting times across the US, UK, Germany and Spain.",
+    "keywords": [
+      "healthcare cost dataset csv",
+      "international healthcare cost data download",
+      "treatment cost comparison data",
+      "kibbo dataset"
+    ]
+  },
+  {
+    "title": "Consumer Data Library — Kibbo Healthcare Cost Dataset",
+    "type": "dataset",
+    "block": "healthcare-medical",
+    "url": "/datasets#kibbo-healthcare-cost-dataset",
+    "description": "The Kibbo Healthcare Cost Dataset in Kibbo's Consumer Data Library — what it contains, the investigation that used it, and download links for the CSV and methodology notes.",
+    "keywords": [
+      "consumer data library",
+      "healthcare cost dataset",
+      "kibbo datasets",
+      "medical cost data"
+    ]
   }
 ]

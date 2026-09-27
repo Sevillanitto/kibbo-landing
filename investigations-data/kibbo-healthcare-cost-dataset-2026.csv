@@ -1,0 +1,59 @@
+country,treatment,layer,metric,value,unit,source,notes
+United States,All treatments (country-level),A,Worker's annual premium share (employer-sponsored single coverage),1440,USD/year,KFF 2025 Employer Health Benefits Survey,Base case: employer-sponsored plan
+United States,All treatments (country-level),A,Total annual premium (employer + worker share),9325,USD/year,KFF 2025 Employer Health Benefits Survey,Employer pays remaining 84%
+United States,All treatments (country-level),A,Average annual deductible (single coverage),1886,USD/year,KFF 2025 Employer Health Benefits Survey,
+United States,All treatments (country-level),A,Typical hospital admission coinsurance rate,20,%,KFF 2025 Employer Health Benefits Survey,
+United States,All treatments (country-level),A,Out-of-pocket maximum - workers above $3000,72,%,KFF 2025 Employer Health Benefits Survey,No single clean average published; distribution data only
+United States,All treatments (country-level),A,Out-of-pocket maximum - legal ACA limit 2025 (single),9450,USD/year,ACA statutory limit,
+United Kingdom,All treatments (country-level),A,Share of NHS funding from general taxation,80,%,BMJ 2024 / King's Fund,Approximate; no individually assignable contribution exists
+United Kingdom,All treatments (country-level),A,Share of NHS funding from National Insurance,18,%,BMJ 2024 / King's Fund,Approximate
+United Kingdom,All treatments (country-level),A,Share of NHS funding from direct patient charges,2,%,BMJ 2024 / King's Fund,Approximate
+Germany,All treatments (country-level),A,GKV general contribution rate,14.6,%,vdek 2026 (Beitragssatz),Split equally employer/employee
+Germany,All treatments (country-level),A,GKV average additional contribution (Zusatzbeitrag),2.9,%,vdek 2026 (Beitragssatz),Split equally employer/employee; +0.4pp vs prior year
+Spain,All treatments (country-level),A,Contingencias Comunes contribution rate (total),28.3,%,Ibermutua 2026 / Orden PJC-297-2026,"NOT health-specific — also covers sick leave, maternity/paternity etc, not isolated to healthcare"
+Spain,All treatments (country-level),A,Contingencias Comunes - employer share,23.6,%,Ibermutua 2026 / Orden PJC-297-2026,
+Spain,All treatments (country-level),A,Contingencias Comunes - worker share,4.7,%,Ibermutua 2026 / Orden PJC-297-2026,
+United States,Appendectomy (uncomplicated),B,Listed/billed charge,10972,USD,MyCareCost (CMS hospital price transparency data; 1840 hospitals),
+United States,Appendectomy (uncomplicated),B,Cash/self-pay price,6848,USD,MyCareCost (CMS hospital price transparency data),Used as negotiated-rate proxy
+United States,Hip replacement (uncomplicated),B,Listed/billed charge,23550,USD,MyCareCost (CMS hospital price transparency data; 1680 hospitals),
+United States,Hip replacement (uncomplicated),B,Cash/self-pay price,14428,USD,MyCareCost (CMS hospital price transparency data),Used as negotiated-rate proxy
+United States,Knee MRI (no contrast),B,Listed/billed charge,3653,USD,MyCareCost (CMS hospital price transparency data; 213 hospitals),
+United States,Knee MRI (no contrast),B,Cash/self-pay price,1595,USD,MyCareCost (CMS hospital price transparency data),Used as negotiated-rate proxy
+United States,Vaginal delivery (uncomplicated),B,National median price,13000,USD,MyCareCost national median,"Less precise than the other 3 treatments — no matching listed-vs-cash DRG breakdown found; secondary source (MDsave) gives $16570 for a facility+physician bundle, a different definition"
+United Kingdom,Appendectomy (uncomplicated),B,Public system internal cost,,USD,DATA GAP,"Not accessible via public search with the precision of US data — NHS stopped publishing detailed per-treatment Reference Costs by HRG around 2019/20. Treated as a finding, not filled with an estimate."
+United Kingdom,Hip replacement (uncomplicated),B,Public system internal cost (historical reference only),6061,GBP,NHS Reference Costs HRG HB12F,"Last verifiable HRG-level figure found is 2017/18 — NOT presented as current, shown for historical illustration only"
+United Kingdom,Knee MRI (no contrast),B,Public system internal cost,,USD,DATA GAP,Same limitation as appendectomy above
+United Kingdom,Vaginal delivery (uncomplicated),B,Public system internal cost,,USD,DATA GAP,Same limitation as appendectomy above
+Germany,Appendectomy (uncomplicated),B,Public system internal cost (GKV DRG),,EUR,DATA GAP,Could not isolate the exact DRG relative weight for this treatment from published hospital tariff schedules despite extensive search
+Germany,Hip replacement (uncomplicated),B,Public system internal cost (GKV DRG),,EUR,DATA GAP,Same limitation
+Germany,Knee MRI (no contrast),B,Public system internal cost (GKV DRG),,EUR,DATA GAP,Same limitation
+Germany,Vaginal delivery (uncomplicated),B,Public system internal cost (GKV DRG),,EUR,DATA GAP,Same limitation
+Spain,Appendectomy (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA GAP,Not published in a comparable per-treatment breakdown
+Spain,Hip replacement (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
+Spain,Knee MRI (no contrast),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
+Spain,Vaginal delivery (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
+United States,Appendectomy (uncomplicated),C,Private insurance claims price,13560,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),This IS the correct Layer B source for the US base case (already employer/private insurance) — shown here in Layer C for cross-country table consistency
+United Kingdom,Appendectomy (uncomplicated),C,Private insurance claims price,3950,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Germany,Appendectomy (uncomplicated),C,Private insurance claims price,3980,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Spain,Appendectomy (uncomplicated),C,Private insurance claims price,2622,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United States,Hip replacement (uncomplicated),C,Private insurance claims price,29006,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United Kingdom,Hip replacement (uncomplicated),C,Private insurance claims price,14849,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Germany,Hip replacement (uncomplicated),C,Private insurance claims price,7681,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Spain,Hip replacement (uncomplicated),C,Private insurance claims price,6780,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United States,Knee MRI (no contrast),C,Private insurance claims price,566,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United Kingdom,Knee MRI (no contrast),C,Private insurance claims price,527,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Germany,Knee MRI (no contrast),C,Private insurance claims price,613,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Spain,Knee MRI (no contrast),C,Private insurance claims price,113,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United States,Vaginal delivery (uncomplicated),C,Private insurance claims price,8655,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United Kingdom,Vaginal delivery (uncomplicated),C,Private insurance claims price,3002,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Germany,Vaginal delivery (uncomplicated),C,Private insurance claims price,1361,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+Spain,Vaginal delivery (uncomplicated),C,Private insurance claims price,2175,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
+United States,Appendectomy (emergency),Wait time,Time to treatment,0,days,N/A,"Emergency case — treated immediately via ER in all 4 countries regardless of system"
+United Kingdom,Appendectomy (emergency),Wait time,Time to treatment,0,days,N/A,Same
+Germany,Appendectomy (emergency),Wait time,Time to treatment,0,days,N/A,Same
+Spain,Appendectomy (emergency),Wait time,Time to treatment,0,days,N/A,Same
+United States,Hip replacement (elective) - proxy metric,Wait time,Time to first specialist appointment (NOT time to treatment),24.1,days,Merritt Hawkins physician appointment wait times survey (most recent located),"Measures a different, earlier point in the process than the UK/Spain time-to-treatment figures — not directly comparable without this caveat"
+United Kingdom,Hip replacement (elective),Wait time,Time to treatment (referral-to-treatment),11.9,weeks (~83 days),NHS England RTT statistics June 2026,"Median, all specialties combined (not hip-specific) — 65.8% within 18 weeks"
+Germany,Hip replacement (elective) - proxy metric,Wait time,Time to specialist appointment (NOT time to treatment),42,days,Bundesgesundheitsministerium response to parliamentary question 2024 (via Ärzteblatt/ZDF/Pharmazeutische Zeitung),Same limitation as the US figure — up from 33 days in 2019
+Spain,Hip replacement (elective),Wait time,Time to treatment (surgery),121,days,Ministerio de Sanidad official data H2 2025,21.6% of patients wait over 6 months; huge regional variation (Madrid 50 days vs Andalucía 173 days)
+Spain,Hip replacement (elective) - proxy metric,Wait time,Time to first specialist consultation,102,days,Ministerio de Sanidad official data H2 2025,Comparable to the US/Germany appointment-wait metric

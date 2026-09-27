@@ -922,7 +922,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 (function () {
   var CALCULATORS = [];
   var CASES = [];
-  var INVESTIGATIONS = [];
+  var INVESTIGATIONS = [
+    { title: 'What Does It Really Cost to Get Sick? US, UK, Germany & Spain Compared', desc: 'Kibbo\'s own dataset comparing what you pay in advance, what four common treatments cost, and how long you wait in four very different health systems — with seven documented real cases. Full dataset included.', url: '/investigations/healthcare-cost-comparison', tag: 'Investigation' }
+  ];
 
   function buildToolCard(item) {
     var a = document.createElement('a');
