@@ -16539,5 +16539,110 @@
       "free refund request template",
       "consumer rights templates no sign up"
     ]
+  },
+  {
+    "title": "Real Consumer Cases",
+    "type": "case",
+    "block": "general",
+    "url": "/real-cases",
+    "description": "Real court rulings, ombudsman decisions, and documented bills — what actually happened when a consumer pushed back, with the primary source and what you can learn from it.",
+    "keywords": [
+      "real consumer cases",
+      "consumer case studies",
+      "ombudsman decisions examples",
+      "court rulings consumer rights",
+      "real medical bill cases"
+    ]
+  },
+  {
+    "title": "NHS Fife Ordered to Reimburse a Patient's Private Hip Replacement After Ignoring Her Pain",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/nhs-fife-hip-replacement-ombudsman",
+    "description": "A Scottish Public Services Ombudsman ruling found NHS Fife focused on a patient's weight instead of examining her pain, forcing her to pay for two private hip replacements herself.",
+    "keywords": [
+      "nhs refused hip surgery bmi",
+      "spso ombudsman reimburse private surgery",
+      "nhs fife ombudsman ruling",
+      "reimbursed private hip replacement"
+    ]
+  },
+  {
+    "title": "\"Unless You Go Private, There's an 18-Month Waiting List\" — a £28,000 Decision",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/nhs-wait-private-hip-replacement-uk",
+    "description": "A 71-year-old retiree paid nearly £28,000 to have both hips replaced privately, after being told the NHS waiting list would take 18 months.",
+    "keywords": [
+      "nhs 18 month waiting list hip",
+      "paying for private hip replacement uk",
+      "nhs waiting list go private cost",
+      "private hip replacement cost uk"
+    ]
+  },
+  {
+    "title": "Spain's Ombudsman Cancels a Hospital Bill After a Patient Was Never Warned She'd Be Charged",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/spain-defensor-pueblo-hospital-bill",
+    "description": "An elderly patient was brought to hospital by Spain's public health service, then admitted as a private patient for a single room — without ever being told she'd be billed for it.",
+    "keywords": [
+      "defensor del pueblo hospital bill",
+      "spain hospital bill cancelled ombudsman",
+      "private room emergency bill spain",
+      "sermas ambulance billed private"
+    ]
+  },
+  {
+    "title": "A Spanish Court Just Voided the Clause Every Private Hospital Patient Signs",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/spain-malaga-insurer-rejection-clause-ruling",
+    "description": "A court in Málaga ruled that the standard clause forcing patients to personally cover whatever their insurer refuses to pay is null and abusive — a final ruling other patients can point to.",
+    "keywords": [
+      "malaga court abusive clause private clinic",
+      "insurer refused clinic bills patient spain",
+      "clausula abusiva clinica privada",
+      "private hospital admission clause void"
+    ]
+  },
+  {
+    "title": "The $55,000 Appendectomy: What a Documented US Hospital Bill Actually Contained",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/appendectomy-55000-bill-breakdown-us",
+    "description": "A 20-year-old's emergency appendectomy was billed at $55,029. His insurance covered most of it — but the itemized bill reveals how hospital pricing actually works.",
+    "keywords": [
+      "55000 appendectomy bill",
+      "itemized hospital bill example",
+      "recovery room charge hospital bill",
+      "appendectomy cost us hospital"
+    ]
+  },
+  {
+    "title": "Uninsured Veteran Owed $80,232 After an Appendectomy Went Wrong",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/uninsured-appendectomy-80000-bill-us",
+    "description": "An uninsured Colorado veteran needed two surgeries after appendicitis complications. Months of negotiating still left him owing far more than any insurer would have paid.",
+    "keywords": [
+      "uninsured appendectomy bill",
+      "negotiate hospital bill uninsured",
+      "hospital chargemaster uninsured patient",
+      "bill of the month appendectomy"
+    ]
+  },
+  {
+    "title": "Same Hospital, Same Family: Why the Second Delivery Cost $16,000 More Than the First",
+    "type": "case",
+    "block": "healthcare-medical",
+    "url": "/real-cases/childbirth-er-coding-bill-us",
+    "description": "A family's first delivery cost $30. Their second, at the same hospital, was coded through the ER and billed at over $16,000 — despite an identical, uncomplicated birth.",
+    "keywords": [
+      "childbirth billed as emergency",
+      "hospital er coding bill dispute",
+      "labor delivery bill er charge",
+      "dispute emergency room charge birth"
+    ]
   }
 ]
