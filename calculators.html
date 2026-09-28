@@ -219,15 +219,43 @@
 }
 </script>
 <style>
-  /* Calculators hub — tabbed by block (same pattern as templates.html and
-     checklists.html). Prefix .calch- (Calculators Hub), matching the
-     per-page-prefix convention (.tp- for templates, .ckh- for checklists).
-     Only tabs for blocks that actually have a calculator exist here — per
-     site convention, never show an empty category/tab; add more
-     <button class="crc-tab">/<div class="calch-tool-panel"> pairs here as
-     each block's first calculator ships. */
+  /* Calculators hub — filtered by block via the .calch-cat sidebar below
+     (same pattern as templates.html and checklists.html). Prefix .calch-
+     (Calculators Hub), matching the per-page-prefix convention (.tp- for
+     templates, .ckh- for checklists). Only entries for blocks that actually
+     have a calculator exist here — per site convention, never show an empty
+     category; add more <li><button data-toolcat="..."> (in .calch-cat-list)
+     / <div class="calch-tool-panel"> pairs as each block's first calculator
+     ships. */
   .calch-tool-panel { display: none; }
   .calch-tool-panel.active { display: block; }
+
+  /* Category sidebar — copied 1:1 from real-cases.html's .rcs-* sidebar via
+     generate.html (same container, typography, count treatment, arrow icon,
+     spacing, mobile behavior). Classes prefixed calch- for this page; values
+     identical to their .rcs-*/.gen-* counterparts. Only functional
+     difference: list items are filter <button>s, not <a> links. */
+  .calch-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
+  .calch-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
+  .calch-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
+  .calch-cat { border-bottom: 1px solid var(--border); }
+  .calch-cat summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 0; cursor: pointer; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .calch-cat summary::-webkit-details-marker { display: none; }
+  .calch-cat summary:hover .calch-cat-name { color: var(--accent-green); }
+  .calch-cat summary:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+  .calch-cat-name { flex: 1; }
+  .calch-count { font-size: 12px; font-weight: 600; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .calch-arrow { flex: 0 0 auto; color: var(--text-muted); transition: transform 0.2s ease; transform: rotate(-90deg); }
+  .calch-cat[open] .calch-arrow { transform: rotate(0deg); }
+  .calch-cat-list { list-style: none; margin: 0; padding: 0 0 12px; }
+  .calch-cat-list li { margin: 0; }
+  .calch-cat-list button { display: block; width: 100%; background: none; border: none; font: inherit; cursor: pointer; text-align: left; padding: 7px 0 7px 12px; border-left: 1px solid var(--border); font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); }
+  .calch-cat-list button:hover, .calch-cat-list button.active { color: var(--accent-green); border-left-color: var(--accent-green); }
+  .calch-cat-list button.active { font-weight: 600; }
+  @media (max-width: 860px) {
+    .calch-layout { grid-template-columns: 1fr; gap: 36px; }
+    .calch-sidebar { position: static; }
+  }
 </style>
 </head>
 <body>
@@ -435,22 +463,32 @@
 <main class="section-main">
   <div class="container">
 
-    <div class="crc-tabs" role="tablist" aria-label="Block" id="calculatorsTabs">
-      <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="flights-travel">Flights &amp; Travel (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals">Housing &amp; Rentals (3)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="financial-banking">Finance &amp; Banking (3)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="shopping-ecommerce">Shopping &amp; E-Commerce (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services">Subscriptions &amp; Services (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="employment">Employment (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles">Cars &amp; Vehicles (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts">Legal &amp; Contracts (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims">Insurance &amp; Claims (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels">Parcel &amp; Delivery (2)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities">Telecoms &amp; Utilities (1)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="training-education">Training &amp; Education (1)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services">Home Renovations &amp; Services (1)</button>
-      <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="health-supplements">Health &amp; Supplements (1)</button>
-    </div>
+      <div class="calch-layout">
+
+    <aside class="calch-sidebar" aria-label="Calculators">
+      <p class="calch-sidebar-label">Blocks</p>
+      <details class="calch-cat" id="calculatorsTabsToggle">
+        <summary><span class="calch-cat-name" id="calculatorsTabsName">Flights &amp; Travel</span><span class="calch-count" id="calculatorsTabsCount" aria-label="2 calculators">2</span><svg class="calch-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <ul class="calch-cat-list" role="tablist" aria-label="Block" id="calculatorsTabs">
+          <li><button type="button" role="tab" aria-selected="true" class="active" data-toolcat="flights-travel" data-name="Flights &amp; Travel" data-count="2">Flights &amp; Travel (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals" data-name="Housing &amp; Rentals" data-count="3">Housing &amp; Rentals (3)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="financial-banking" data-name="Finance &amp; Banking" data-count="3">Finance &amp; Banking (3)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="shopping-ecommerce" data-name="Shopping &amp; E-Commerce" data-count="2">Shopping &amp; E-Commerce (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services" data-name="Subscriptions &amp; Services" data-count="2">Subscriptions &amp; Services (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="employment" data-name="Employment" data-count="2">Employment (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles" data-name="Cars &amp; Vehicles" data-count="2">Cars &amp; Vehicles (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts" data-name="Legal &amp; Contracts" data-count="2">Legal &amp; Contracts (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims" data-name="Insurance &amp; Claims" data-count="2">Insurance &amp; Claims (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels" data-name="Parcel &amp; Delivery" data-count="2">Parcel &amp; Delivery (2)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities" data-name="Telecoms &amp; Utilities" data-count="1">Telecoms &amp; Utilities (1)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="training-education" data-name="Training &amp; Education" data-count="1">Training &amp; Education (1)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services" data-name="Home Renovations &amp; Services" data-count="1">Home Renovations &amp; Services (1)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="health-supplements" data-name="Health &amp; Supplements" data-count="1">Health &amp; Supplements (1)</button></li>
+        </ul>
+      </details>
+    </aside>
+
+  <div class="calch-content">
 
     <div class="calch-tool-panel active" data-toolpanel="flights-travel">
       <div class="cl-hub-grid">
@@ -679,6 +717,9 @@
     </div>
 
   </div>
+  </div>
+
+  </div>
 </main>
 
 <!-- FOOTER -->
@@ -743,16 +784,29 @@
 </footer>
 
 <script>
-// Category tabs (calculators hub) — same tabbed pattern used sitewide (crc-tabs/crc-tab)
+// Category sidebar (calculators hub) — same details/summary accordion as the
+// Real Cases hub sidebar (.rcs-cat) / generate.html (.gen-cat), driving the
+// same panel-filtering logic the old crc-tabs pill row used. Selecting a
+// block updates the summary's name + count and closes the accordion back
+// down, so it never sits open occupying the page.
 (function () {
-  var tabs = document.querySelectorAll('#calculatorsTabs .crc-tab');
+  var toggle = document.getElementById('calculatorsTabsToggle');
+  var currentName = document.getElementById('calculatorsTabsName');
+  var currentCount = document.getElementById('calculatorsTabsCount');
+  var items = document.querySelectorAll('#calculatorsTabs button[data-toolcat]');
   var panels = document.querySelectorAll('.calch-tool-panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var cat = tab.getAttribute('data-toolcat');
-      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var cat = item.getAttribute('data-toolcat');
+      items.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      item.classList.add('active'); item.setAttribute('aria-selected', 'true');
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
+      if (currentName) currentName.textContent = item.getAttribute('data-name');
+      if (currentCount) {
+        currentCount.textContent = item.getAttribute('data-count');
+        currentCount.setAttribute('aria-label', item.getAttribute('data-count') + ' calculators');
+      }
+      if (toggle) toggle.open = false;
     });
   });
 })();

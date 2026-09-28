@@ -32,6 +32,37 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/styles.css">
+<style>
+  /* Category sidebar — copied 1:1 from real-cases.html's .rcs-* sidebar via
+     generate.html (same container, typography, count treatment, arrow icon,
+     spacing, mobile behavior). Prefix .blf- (Blog Filter). List items are
+     built by the existing filter script below (unchanged counting logic),
+     just appended as <li><button> instead of flat .blog-filter-pill
+     buttons, and wrapped in a collapsible <details> instead of a
+     horizontal drag-scroll row. */
+  .blf-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+  .blf-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
+  .blf-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
+  .blf-cat { border-bottom: 1px solid var(--border); }
+  .blf-cat summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 0; cursor: pointer; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .blf-cat summary::-webkit-details-marker { display: none; }
+  .blf-cat summary:hover .blf-cat-name { color: var(--accent-green); }
+  .blf-cat summary:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+  .blf-cat-name { flex: 1; }
+  .blf-count { font-size: 12px; font-weight: 600; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .blf-arrow { flex: 0 0 auto; color: var(--text-muted); transition: transform 0.2s ease; transform: rotate(-90deg); }
+  .blf-cat[open] .blf-arrow { transform: rotate(0deg); }
+  .blf-cat-list { list-style: none; margin: 0; padding: 0 0 12px; max-height: 60vh; overflow-y: auto; }
+  .blf-cat-list li { margin: 0; }
+  .blf-cat-list button { display: block; width: 100%; background: none; border: none; font: inherit; cursor: pointer; text-align: left; padding: 7px 0 7px 12px; border-left: 1px solid var(--border); font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); }
+  .blf-cat-list button:hover, .blf-cat-list button.active { color: var(--accent-green); border-left-color: var(--accent-green); }
+  .blf-cat-list button.active { font-weight: 600; }
+  .blf-layout .blog-index { max-width: none; margin: 0; padding: 0; }
+  @media (max-width: 860px) {
+    .blf-layout { grid-template-columns: 1fr; gap: 36px; }
+    .blf-sidebar { position: static; }
+  }
+</style>
 
 <!-- Blog + Breadcrumb -->
 <script type="application/ld+json">
@@ -899,11 +930,18 @@
   </div>
 </div>
 
-<!-- CATEGORY FILTER -->
-<div class="blog-filter">
-  <p class="blog-filter-label">Filter by category</p>
-  <div class="blog-filter-row" id="blogFilter" role="tablist" aria-label="Guide categories"></div>
-</div>
+<!-- CATEGORY FILTER + POST LIST -->
+<div class="blf-layout">
+
+  <!-- CATEGORY SIDEBAR — list items are appended by the script below (unchanged
+       counting logic, computed live from the cards' own data-category attributes). -->
+  <aside class="blf-sidebar" aria-label="Filter by category">
+    <p class="blf-sidebar-label">Categories</p>
+    <details class="blf-cat" id="blogFilterToggle">
+      <summary><span class="blf-cat-name" id="blogFilterName">All</span><span class="blf-count" id="blogFilterCount" aria-label="articles"></span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="blogFilter" role="tablist" aria-label="Guide categories"></ul>
+    </details>
+  </aside>
 
 <!-- POST LIST -->
 <main class="blog-index">
@@ -4576,6 +4614,8 @@
 
 </main>
 
+</div>
+
 <!-- FOOTER -->
 <!-- NEWSLETTER SIGNUP -->
 <section class="newsletter-signup" aria-label="Newsletter signup">
@@ -4673,6 +4713,9 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   var grid = document.querySelector('.blog-index');
   var filterRow = document.getElementById('blogFilter');
   var emptyEl = document.getElementById('blogEmpty');
+  var toggle = document.getElementById('blogFilterToggle');
+  var currentName = document.getElementById('blogFilterName');
+  var currentCount = document.getElementById('blogFilterCount');
   if (!grid || !filterRow) return;
 
   // Single source of truth: every card carrying a data-category attribute.
@@ -4699,14 +4742,17 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   var pills = [];
   function makePill(label, value, count) {
+    var li = document.createElement('li');
     var btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'blog-filter-pill';
     btn.setAttribute('role', 'tab');
     btn.dataset.value = value; // "" == All
-    btn.innerHTML = label + ' <span class="count">(' + count + ')</span>';
+    btn.dataset.name = label;
+    btn.dataset.count = count;
+    btn.textContent = label + ' (' + count + ')';
     btn.addEventListener('click', function () { applyFilter(value, true); });
-    filterRow.appendChild(btn);
+    li.appendChild(btn);
+    filterRow.appendChild(li);
     pills.push(btn);
   }
 
@@ -4727,7 +4773,15 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
       var on = p.dataset.value === value;
       p.classList.toggle('active', on);
       p.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) {
+        if (currentName) currentName.textContent = p.dataset.name;
+        if (currentCount) {
+          currentCount.textContent = p.dataset.count;
+          currentCount.setAttribute('aria-label', p.dataset.count + ' articles');
+        }
+      }
     });
+    if (toggle) toggle.open = false;
     if (emptyEl) emptyEl.hidden = visible !== 0;
     if (updateUrl) {
       var url = new URL(window.location.href);

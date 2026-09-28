@@ -943,6 +943,33 @@
      convention already used on every pillar page. */
   .tp-tool-panel { display: none; }
   .tp-tool-panel.active { display: block; }
+
+  /* Category sidebar — copied 1:1 from real-cases.html's .rcs-* sidebar via
+     generate.html (same container, typography, count treatment, arrow icon,
+     spacing, mobile behavior). Classes prefixed tp- for this page; values
+     identical to their .rcs-*/.gen-* counterparts. Only functional
+     difference: list items are filter <button>s, not <a> links. */
+  .tp-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
+  .tp-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
+  .tp-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
+  .tp-cat { border-bottom: 1px solid var(--border); }
+  .tp-cat summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 0; cursor: pointer; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .tp-cat summary::-webkit-details-marker { display: none; }
+  .tp-cat summary:hover .tp-cat-name { color: var(--accent-green); }
+  .tp-cat summary:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+  .tp-cat-name { flex: 1; }
+  .tp-count { font-size: 12px; font-weight: 600; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .tp-arrow { flex: 0 0 auto; color: var(--text-muted); transition: transform 0.2s ease; transform: rotate(-90deg); }
+  .tp-cat[open] .tp-arrow { transform: rotate(0deg); }
+  .tp-cat-list { list-style: none; margin: 0; padding: 0 0 12px; }
+  .tp-cat-list li { margin: 0; }
+  .tp-cat-list button { display: block; width: 100%; background: none; border: none; font: inherit; cursor: pointer; text-align: left; padding: 7px 0 7px 12px; border-left: 1px solid var(--border); font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); }
+  .tp-cat-list button:hover, .tp-cat-list button.active { color: var(--accent-green); border-left-color: var(--accent-green); }
+  .tp-cat-list button.active { font-weight: 600; }
+  @media (max-width: 860px) {
+    .tp-layout { grid-template-columns: 1fr; gap: 36px; }
+    .tp-sidebar { position: static; }
+  }
 </style>
 </head>
 <body>
@@ -1152,140 +1179,38 @@
     <p>Kibbo’s templates are practical, not decorative: checklists, trackers and document packs built around specific consumer problems. Download one, fill in your details, and you’re done — keeping money and time that would otherwise quietly slip away.</p>
   </div>
 
-  <div class="crc-tabs" role="tablist" aria-label="Block" id="templatesTabs">
-    <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="financial-banking">Financial &amp; Banking (11)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="shopping-ecommerce">Shopping &amp; E-Commerce (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels">Delivery &amp; Parcels (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="privacy-data">Privacy &amp; Data (11)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals">Housing &amp; Rentals (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities">Telecoms &amp; Utilities (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts">Legal &amp; Contracts (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="health-supplements">Health &amp; Supplements (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="flights-travel">Flights &amp; Travel (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="employment">Employment (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="crypto-fintech">Crypto &amp; Fintech (1)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="food-hospitality">Food &amp; Hospitality (12)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="training-education">Training &amp; Education (10)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="healthcare-medical">Healthcare &amp; Medical (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services">Subscriptions &amp; Services (10)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="shipping-ecommerce">Shipping &amp; E-commerce (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services">Home Renovations &amp; Services (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="public-services-administration">Public Services &amp; Administration (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles">Cars &amp; Vehicles (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims">Insurance &amp; Claims (6)</button>
-  </div>
+    <div class="tp-layout">
 
-  <div class="tp-tool-panel active" data-toolpanel="financial-banking">
-    <div class="prod-grid">
-      <article class="prod-card featured">
-        <span class="prod-badge free">FREE</span>
-        <h3 class="prod-title">The Complete Financial &amp; Banking Bundle</h3>
-        <p class="prod-desc">All 11 Financial &amp; Banking templates in one download.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="https://carlosdevlop.gumroad.com/l/financial-banking-bundle" target="_blank" rel="noopener">Get the bundle →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">EU Banking Dispute Evidence Log</h3>
-        <p class="prod-desc">The initial complaint sent, the bank's response (or missed 15 business-day deadline), account statements showing the disputed item, the communications timeline, and the specific remedy requested — the paper trail a FIN-NET ombudsman expects. PDF + Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/eu-banking-dispute-evidence-log">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Credit Card Statement Audit Sheet</h3>
-        <p class="prod-desc">Audit your statement line by line and catch fraud or forgotten charges before the chargeback window closes.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/credit-card-statement-audit">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Chargeback Dispute Evidentiary Pack</h3>
-        <p class="prod-desc">A formal dispute letter, evidence checklist, and phone script to help you win a bank chargeback dispute.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/chargeback-dispute-pack">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Phishing &amp; Scam Incident Report Template</h3>
-        <p class="prod-desc">A structured incident report to document phishing and scams for your bank, police, or fraud agencies.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/phishing-scam-report">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Hidden Fees &amp; Overcharge Calculator</h3>
-        <p class="prod-desc">Compare what you were quoted vs. what you were charged, flag suspicious fees, and generate your claim letter.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/hidden-fees-calculator">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Unauthorized Transaction &amp; Fraud Tracker</h3>
-        <p class="prod-desc">Document, report, and recover funds from unauthorized card and account activity — fraud log, bank communication log, key contacts, and rights reference by country. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/unauthorized-transaction-fraud-tracker">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Chargeback &amp; Card Dispute Evidence Pack</h3>
-        <p class="prod-desc">Organize everything you need to win a card dispute before the deadline closes — transaction details, evidence checklist by dispute reason, communication log, and status tracker. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/chargeback-card-dispute-evidence-pack">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Bank Fees &amp; Charges Audit Workbook</h3>
-        <p class="prod-desc">Track every bank fee, spot the ones worth disputing, and calculate what's recoverable — with auto-calculating annual cost and recovery totals. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/bank-fees-charges-audit-workbook">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Loan &amp; Credit Agreement Review Workbook</h3>
-        <p class="prod-desc">Compare loan offers side by side with the real total cost of credit calculated automatically — not just the headline interest rate. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/loan-credit-agreement-review-workbook">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Financial Complaint &amp; Escalation Evidence Log</h3>
-        <p class="prod-desc">Document a financial complaint from first contact through to regulator escalation (CFPB, FOS, and equivalents) — timeline, commitments, and escalation tracker. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/financial-complaint-escalation-evidence-log">Get it free →</a>
-        </div>
-      </article>
-      <article class="prod-card free-lead">
-        <span class="prod-badge free">Free Download</span>
-        <h3 class="prod-title">Money Transfer &amp; Payment Dispute Tracker</h3>
-        <p class="prod-desc">Track international transfers, exchange rates, and fees, and build your case if a transfer is delayed, lost, or wrong — with auto-calculating fee percentage. Excel.</p>
-        <div class="prod-foot">
-          <span class="prod-price free">FREE</span>
-          <a class="prod-btn" href="/templates/money-transfer-payment-dispute-tracker">Get it free →</a>
-        </div>
-      </article>
-    </div>
+    <aside class="tp-sidebar" aria-label="Templates">
+      <p class="tp-sidebar-label">Blocks</p>
+      <details class="tp-cat" id="templatesTabsToggle">
+        <summary><span class="tp-cat-name" id="templatesTabsName">Financial &amp; Banking</span><span class="tp-count" id="templatesTabsCount" aria-label="11 templates">11</span><svg class="tp-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <ul class="tp-cat-list" role="tablist" aria-label="Block" id="templatesTabs">
+          <li><button type="button" role="tab" aria-selected="true" class="active" data-toolcat="financial-banking" data-name="Financial &amp; Banking" data-count="11">Financial &amp; Banking (11)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="shopping-ecommerce" data-name="Shopping &amp; E-Commerce" data-count="4">Shopping &amp; E-Commerce (4)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels" data-name="Delivery &amp; Parcels" data-count="6">Delivery &amp; Parcels (6)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="privacy-data" data-name="Privacy &amp; Data" data-count="11">Privacy &amp; Data (11)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals" data-name="Housing &amp; Rentals" data-count="8">Housing &amp; Rentals (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities" data-name="Telecoms &amp; Utilities" data-count="8">Telecoms &amp; Utilities (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts" data-name="Legal &amp; Contracts" data-count="8">Legal &amp; Contracts (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="health-supplements" data-name="Health &amp; Supplements" data-count="4">Health &amp; Supplements (4)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="flights-travel" data-name="Flights &amp; Travel" data-count="6">Flights &amp; Travel (6)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="employment" data-name="Employment" data-count="4">Employment (4)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="crypto-fintech" data-name="Crypto &amp; Fintech" data-count="1">Crypto &amp; Fintech (1)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="food-hospitality" data-name="Food &amp; Hospitality" data-count="12">Food &amp; Hospitality (12)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="training-education" data-name="Training &amp; Education" data-count="10">Training &amp; Education (10)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="healthcare-medical" data-name="Healthcare &amp; Medical" data-count="8">Healthcare &amp; Medical (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services" data-name="Subscriptions &amp; Services" data-count="10">Subscriptions &amp; Services (10)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="shipping-ecommerce" data-name="Shipping &amp; E-commerce" data-count="8">Shipping &amp; E-commerce (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services" data-name="Home Renovations &amp; Services" data-count="6">Home Renovations &amp; Services (6)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="public-services-administration" data-name="Public Services &amp; Administration" data-count="6">Public Services &amp; Administration (6)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles" data-name="Cars &amp; Vehicles" data-count="8">Cars &amp; Vehicles (8)</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims" data-name="Insurance &amp; Claims" data-count="6">Insurance &amp; Claims (6)</button></li>
+        </ul>
+      </details>
+    </aside>
+
+  <div class="tp-content">
   </div>
 
   <div class="tp-tool-panel" data-toolpanel="shopping-ecommerce">
@@ -2766,6 +2691,7 @@
       </article>
     </div>
   </div>
+  </div>
 
   <p class="section-note"><a href="/free-to-try">See everything you can try for free →</a></p>
 </main>
@@ -2831,27 +2757,40 @@
 </footer>
 
 <script>
-// Category tabs (templates hub) — same tabbed pattern used sitewide (crc-tabs/crc-tab)
+// Category sidebar (templates hub) — same details/summary accordion as the
+// Real Cases hub sidebar (.rcs-cat) / generate.html (.gen-cat), driving the
+// same panel-filtering logic the old crc-tabs pill row used. Selecting a
+// block updates the summary's name + count and closes the accordion back
+// down, so it never sits open occupying the page.
 (function () {
-  var tabs = document.querySelectorAll('#templatesTabs .crc-tab');
+  var toggle = document.getElementById('templatesTabsToggle');
+  var currentName = document.getElementById('templatesTabsName');
+  var currentCount = document.getElementById('templatesTabsCount');
+  var items = document.querySelectorAll('#templatesTabs button[data-toolcat]');
   var panels = document.querySelectorAll('.tp-tool-panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var cat = tab.getAttribute('data-toolcat');
-      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var cat = item.getAttribute('data-toolcat');
+      items.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      item.classList.add('active'); item.setAttribute('aria-selected', 'true');
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
+      if (currentName) currentName.textContent = item.getAttribute('data-name');
+      if (currentCount) {
+        currentCount.textContent = item.getAttribute('data-count');
+        currentCount.setAttribute('aria-label', item.getAttribute('data-count') + ' templates');
+      }
+      if (toggle) toggle.open = false;
     });
   });
-  // Deep links: /templates#flights-travel opens that block's tab and scrolls to the tabs
-  // (used by "See all … templates" links, e.g. in the free templates roundup article).
+  // Deep links: /templates#flights-travel selects that block's filter and scrolls to the
+  // sidebar (used by "See all … templates" links, e.g. in the free templates roundup article).
   function openFromHash() {
     var cat = (location.hash || '').slice(1);
     if (!/^[a-z-]+$/.test(cat)) return;
-    var tab = document.querySelector('#templatesTabs .crc-tab[data-toolcat="' + cat + '"]');
-    if (!tab) return;
-    tab.click();
-    var bar = document.getElementById('templatesTabs');
+    var item = document.querySelector('#templatesTabs button[data-toolcat="' + cat + '"]');
+    if (!item) return;
+    item.click();
+    var bar = document.querySelector('.tp-sidebar');
     window.scrollTo({ top: bar.getBoundingClientRect().top + window.pageYOffset - 96 });
   }
   openFromHash();
