@@ -947,8 +947,9 @@
   /* Category sidebar — copied 1:1 from real-cases.html's .rcs-* sidebar via
      generate.html (same container, typography, count treatment, arrow icon,
      spacing, mobile behavior). Classes prefixed tp- for this page; values
-     identical to their .rcs-*/.gen-* counterparts. Only functional
-     difference: list items are filter <button>s, not <a> links. */
+     identical to their real-cases.html (.rcs-*) and generate.html (.gen-*)
+     counterparts. Only functional difference: list items are filter
+     <button>s, not <a> links. */
   .tp-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
   .tp-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
   .tp-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
@@ -1179,8 +1180,10 @@
     <p>Kibbo’s templates are practical, not decorative: checklists, trackers and document packs built around specific consumer problems. Download one, fill in your details, and you’re done — keeping money and time that would otherwise quietly slip away.</p>
   </div>
 
-    <div class="tp-layout">
+  <div class="tp-layout">
 
+    <!-- CATEGORY SIDEBAR — same structure/markup as real-cases.html's .rcs-cat sidebar,
+         one <details class="tp-cat"> holding every block as a filter button. -->
     <aside class="tp-sidebar" aria-label="Templates">
       <p class="tp-sidebar-label">Blocks</p>
       <details class="tp-cat" id="templatesTabsToggle">
@@ -1211,6 +1214,118 @@
     </aside>
 
   <div class="tp-content">
+
+  <div class="tp-tool-panel active" data-toolpanel="financial-banking">
+    <div class="prod-grid">
+      <article class="prod-card featured">
+        <span class="prod-badge free">FREE</span>
+        <h3 class="prod-title">The Complete Financial &amp; Banking Bundle</h3>
+        <p class="prod-desc">All 11 Financial &amp; Banking templates in one download.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="https://carlosdevlop.gumroad.com/l/financial-banking-bundle" target="_blank" rel="noopener">Get the bundle →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">EU Banking Dispute Evidence Log</h3>
+        <p class="prod-desc">The initial complaint sent, the bank's response (or missed 15 business-day deadline), account statements showing the disputed item, the communications timeline, and the specific remedy requested — the paper trail a FIN-NET ombudsman expects. PDF + Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/eu-banking-dispute-evidence-log">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Credit Card Statement Audit Sheet</h3>
+        <p class="prod-desc">Audit your statement line by line and catch fraud or forgotten charges before the chargeback window closes.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/credit-card-statement-audit">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Chargeback Dispute Evidentiary Pack</h3>
+        <p class="prod-desc">A formal dispute letter, evidence checklist, and phone script to help you win a bank chargeback dispute.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/chargeback-dispute-pack">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Phishing &amp; Scam Incident Report Template</h3>
+        <p class="prod-desc">A structured incident report to document phishing and scams for your bank, police, or fraud agencies.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/phishing-scam-report">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Hidden Fees &amp; Overcharge Calculator</h3>
+        <p class="prod-desc">Compare what you were quoted vs. what you were charged, flag suspicious fees, and generate your claim letter.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/hidden-fees-calculator">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Unauthorized Transaction &amp; Fraud Tracker</h3>
+        <p class="prod-desc">Document, report, and recover funds from unauthorized card and account activity — fraud log, bank communication log, key contacts, and rights reference by country. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/unauthorized-transaction-fraud-tracker">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Chargeback &amp; Card Dispute Evidence Pack</h3>
+        <p class="prod-desc">Organize everything you need to win a card dispute before the deadline closes — transaction details, evidence checklist by dispute reason, communication log, and status tracker. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/chargeback-card-dispute-evidence-pack">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Bank Fees &amp; Charges Audit Workbook</h3>
+        <p class="prod-desc">Track every bank fee, spot the ones worth disputing, and calculate what's recoverable — with auto-calculating annual cost and recovery totals. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/bank-fees-charges-audit-workbook">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Loan &amp; Credit Agreement Review Workbook</h3>
+        <p class="prod-desc">Compare loan offers side by side with the real total cost of credit calculated automatically — not just the headline interest rate. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/loan-credit-agreement-review-workbook">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Financial Complaint &amp; Escalation Evidence Log</h3>
+        <p class="prod-desc">Document a financial complaint from first contact through to regulator escalation (CFPB, FOS, and equivalents) — timeline, commitments, and escalation tracker. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/financial-complaint-escalation-evidence-log">Get it free →</a>
+        </div>
+      </article>
+      <article class="prod-card free-lead">
+        <span class="prod-badge free">Free Download</span>
+        <h3 class="prod-title">Money Transfer &amp; Payment Dispute Tracker</h3>
+        <p class="prod-desc">Track international transfers, exchange rates, and fees, and build your case if a transfer is delayed, lost, or wrong — with auto-calculating fee percentage. Excel.</p>
+        <div class="prod-foot">
+          <span class="prod-price free">FREE</span>
+          <a class="prod-btn" href="/templates/money-transfer-payment-dispute-tracker">Get it free →</a>
+        </div>
+      </article>
+    </div>
   </div>
 
   <div class="tp-tool-panel" data-toolpanel="shopping-ecommerce">
@@ -2690,6 +2805,8 @@
         </div>
       </article>
     </div>
+  </div>
+
   </div>
   </div>
 
