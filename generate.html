@@ -45,6 +45,31 @@
 <style>
   .gen-tool-panel { display: none; }
   .gen-tool-panel.active { display: block; }
+
+  /* Category sidebar (collapsible, native <details>/<summary> — same accordion
+     pattern used on the Real Cases hub sidebar and the mobile nav menu).
+     Flat editorial style: border only, no shadow, no rounded corners. */
+  .gen-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: start; }
+  .gen-sidebar { position: sticky; top: 96px; }
+  .gen-sidebar-toggle { border: 1px solid var(--border); }
+  .gen-sidebar-summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; list-style: none; cursor: pointer; padding: 14px 16px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .gen-sidebar-summary::-webkit-details-marker { display: none; }
+  .gen-sidebar-summary:hover { color: var(--accent-green); }
+  .gen-sidebar-summary:focus-visible { outline: 2px solid var(--accent-green); outline-offset: -2px; }
+  .gen-sidebar-current { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .gen-sidebar-count { color: var(--text-muted); font-weight: 500; }
+  .gen-sidebar-arrow { flex: 0 0 auto; color: var(--text-muted); transition: transform 0.2s ease; }
+  .gen-sidebar-toggle[open] .gen-sidebar-arrow { transform: rotate(180deg); }
+  .gen-sidebar-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); max-height: 60vh; overflow-y: auto; }
+  .gen-sidebar-list li { margin: 0; border-bottom: 1px solid var(--border); }
+  .gen-sidebar-list li:last-child { border-bottom: none; }
+  .gen-sidebar-item { display: block; width: 100%; text-align: left; background: none; border: none; padding: 11px 16px; font-family: var(--font-sans); font-size: 14px; color: var(--text-secondary); cursor: pointer; }
+  .gen-sidebar-item:hover { color: var(--accent-green); }
+  .gen-sidebar-item.active { color: var(--accent-green); font-weight: 700; }
+  @media (max-width: 860px) {
+    .gen-layout { grid-template-columns: 1fr; gap: 18px; }
+    .gen-sidebar { position: static; }
+  }
 </style>
 </head>
 <body>
@@ -254,29 +279,39 @@
     <p>Kibbo’s generators close that gap. Answer a few plain questions about your situation and get back a properly structured, ready-to-send document. No jargon to decode, no template to wrestle with, no lawyer’s hourly rate.</p>
   </div>
 
-  <div class="crc-tabs" role="tablist" aria-label="Block" id="genTabs">
-    <button class="crc-tab active" type="button" role="tab" aria-selected="true" data-toolcat="all">All (92)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles">Cars &amp; Vehicles (2)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="crypto-fintech">Crypto &amp; Fintech (3)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels">Delivery &amp; Parcels (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="employment">Employment (8)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="financial-banking">Financial &amp; Banking (13)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="flights-travel">Flights &amp; Travel (7)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="food-hospitality">Food &amp; Hospitality (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="health-supplements">Health &amp; Supplements (1)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="healthcare-medical">Healthcare &amp; Medical (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services">Home Renovations &amp; Services (2)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals">Housing &amp; Rentals (7)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims">Insurance &amp; Claims (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts">Legal &amp; Contracts (5)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="privacy-data">Privacy &amp; Data (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="public-services-administration">Public Services &amp; Administration (3)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="shipping-e-commerce">Shipping &amp; E-commerce (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="shopping-e-commerce">Shopping &amp; E-Commerce (4)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services">Subscriptions &amp; Services (6)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities">Telecoms &amp; Utilities (1)</button>
-    <button class="crc-tab" type="button" role="tab" aria-selected="false" data-toolcat="training-education">Training &amp; Education (2)</button>
-  </div>
+  <div class="gen-layout">
+  <aside class="gen-sidebar">
+    <details class="gen-sidebar-toggle" id="genSidebarToggle">
+      <summary class="gen-sidebar-summary">
+        <span class="gen-sidebar-current" id="genSidebarCurrent">All <span class="gen-sidebar-count">(92)</span></span>
+        <svg class="gen-sidebar-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <ul class="gen-sidebar-list" role="tablist" aria-label="Block" id="genTabs">
+        <li><button class="gen-sidebar-item active" type="button" role="tab" aria-selected="true" data-toolcat="all">All <span class="gen-sidebar-count">(92)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="cars-vehicles">Cars &amp; Vehicles <span class="gen-sidebar-count">(2)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="crypto-fintech">Crypto &amp; Fintech <span class="gen-sidebar-count">(3)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="delivery-parcels">Delivery &amp; Parcels <span class="gen-sidebar-count">(4)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="employment">Employment <span class="gen-sidebar-count">(8)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="financial-banking">Financial &amp; Banking <span class="gen-sidebar-count">(13)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="flights-travel">Flights &amp; Travel <span class="gen-sidebar-count">(7)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="food-hospitality">Food &amp; Hospitality <span class="gen-sidebar-count">(4)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="health-supplements">Health &amp; Supplements <span class="gen-sidebar-count">(1)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="healthcare-medical">Healthcare &amp; Medical <span class="gen-sidebar-count">(6)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="home-renovations-services">Home Renovations &amp; Services <span class="gen-sidebar-count">(2)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="housing-rentals">Housing &amp; Rentals <span class="gen-sidebar-count">(7)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="insurance-claims">Insurance &amp; Claims <span class="gen-sidebar-count">(4)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="legal-contracts">Legal &amp; Contracts <span class="gen-sidebar-count">(5)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="privacy-data">Privacy &amp; Data <span class="gen-sidebar-count">(6)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="public-services-administration">Public Services &amp; Administration <span class="gen-sidebar-count">(3)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="shipping-e-commerce">Shipping &amp; E-commerce <span class="gen-sidebar-count">(4)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="shopping-e-commerce">Shopping &amp; E-Commerce <span class="gen-sidebar-count">(4)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="subscriptions-services">Subscriptions &amp; Services <span class="gen-sidebar-count">(6)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="telecoms-utilities">Telecoms &amp; Utilities <span class="gen-sidebar-count">(1)</span></button></li>
+        <li><button class="gen-sidebar-item" type="button" role="tab" aria-selected="false" data-toolcat="training-education">Training &amp; Education <span class="gen-sidebar-count">(2)</span></button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="gen-content">
 
   <div class="gen-tool-panel active" data-toolpanel="all">
       <div class="prod-grid">
@@ -2046,6 +2081,9 @@
     </div>
 
   </div>
+  </div>
+
+  </div>
 
   <p class="section-note">Free preview on every generator — unlock the full letter free, just enter your email once. More generators coming soon. <a href="/free-to-try">See everything you can try for free →</a></p>
 </main>
@@ -2117,16 +2155,24 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 <script>
-// Category tabs (generate hub) — same tabbed pattern used sitewide (crc-tabs/crc-tab)
+// Category sidebar (generate hub) — collapsible <details> accordion (same
+// mechanism as the Real Cases hub sidebar and the mobile nav menu) driving
+// the same panel-filtering logic the old crc-tabs pill row used. Selecting
+// a block updates the collapsed summary label and closes the accordion back
+// down, so it never sits open occupying the page (mobile included).
 (function () {
-  var tabs = document.querySelectorAll('#genTabs .crc-tab');
+  var toggle = document.getElementById('genSidebarToggle');
+  var current = document.getElementById('genSidebarCurrent');
+  var items = document.querySelectorAll('#genTabs .gen-sidebar-item');
   var panels = document.querySelectorAll('.gen-tool-panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var cat = tab.getAttribute('data-toolcat');
-      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var cat = item.getAttribute('data-toolcat');
+      items.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      item.classList.add('active'); item.setAttribute('aria-selected', 'true');
       panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-toolpanel') === cat); });
+      if (current) current.innerHTML = item.innerHTML;
+      if (toggle) toggle.open = false;
     });
   });
 })();
