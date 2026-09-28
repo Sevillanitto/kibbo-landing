@@ -174,14 +174,44 @@
   .country-card h3 { font-family: var(--font-serif); font-size: 21px; margin: 0 0 12px; }
   .country-card p { font-size: 15.5px; margin-bottom: 10px; }
   .country-card .label { font-weight: 700; }
-  .calc-placeholder { border: 2px dashed var(--accent-amber); padding: 32px; text-align: center; margin: 30px 0 36px; }
-  .calc-placeholder strong { display: block; font-size: 16px; margin-bottom: 8px; }
   ul.case-summary-list { list-style: none; margin: 0; }
   ul.case-summary-list li { border-bottom: 1px solid var(--border-soft); padding: 18px 0; }
   ul.case-summary-list .tags { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 6px; }
   ul.case-summary-list a.case-title { color: var(--text-primary); text-decoration: none; font-weight: 700; font-size: 17px; display: block; margin-bottom: 6px; }
   ul.case-summary-list a.case-title:hover { color: var(--accent-green); }
   ul.case-summary-list p { font-size: 15px; color: var(--text-secondary); margin: 0; }
+
+  /* Embedded cost calculator — flat: rules and borders only, square inputs, tokens from /styles.css */
+  .hc-calc { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0 30px; margin: 24px 0 36px; }
+  .hc-calc-kicker { font-size: 12px !important; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin: 0 0 8px !important; }
+  .art-body .hc-calc-title { font-family: var(--font-serif); font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+  .art-body .hc-calc-sub { font-size: 15.5px; color: var(--text-secondary); margin-bottom: 24px; }
+  .hc-calc .calc-wrap { max-width: none; margin: 0; }
+  .hc-calc .calc-input, .hc-calc .calc-select, .hc-calc .calc-btn { border-radius: 0; }
+  .hc-calc .calc-select { background: var(--bg-card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2356504A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 14px center; padding-right: 36px; }
+  .hc-check { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--text-primary); cursor: pointer; }
+  .hc-check input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent-green); }
+  .art-body .hc-calc .calc-error { font-size: 14px; margin: 14px 0 0; }
+  .hc-calc-result { margin-top: 30px; }
+  .art-body .hc-calc .calc-result-compare { font-size: 13px; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+  .art-body .hc-calc .calc-result-headline { font-size: 15px; margin: 8px 0 0; }
+  .hc-totals.is-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .hc-totals.is-pair .calc-result-figure { font-size: clamp(32px, 7vw, 44px); }
+  .art-body ul.hc-breakdown { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--border-soft); }
+  .art-body ul.hc-breakdown li { border-bottom: 1px solid var(--border-soft); padding: 14px 0; margin: 0; font-size: 15px; }
+  .hc-row-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .hc-layer { flex: 0 0 64px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-green); }
+  .hc-row-name { flex: 1 1 200px; font-weight: 600; color: var(--text-primary); }
+  .hc-row-val { font-weight: 700; color: var(--text-primary); white-space: nowrap; }
+  .hc-row-val.hc-na { font-weight: 600; color: var(--text-secondary); }
+  .art-body .hc-row-note { font-size: 14px; line-height: 1.55; color: var(--text-secondary); margin: 6px 0 0; }
+  .art-body .hc-calc .calc-result-context { font-size: 15px; margin: 16px 0 0; }
+  .art-body .hc-fine { font-size: 13px; color: var(--text-secondary); margin: 14px 0 0; }
+  /* Wide data tables scroll inside their own box on phones instead of widening the page */
+  @media (max-width: 640px) { table.data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+  /* Anchor targets clear the floating nav */
+  .art-body h2[id] { scroll-margin-top: 96px; }
+  @media (max-width: 560px) { .hc-totals.is-pair { grid-template-columns: 1fr; gap: 18px; } .hc-layer { flex-basis: 100%; } }
 </style>
 </head>
 <body>
@@ -534,7 +564,7 @@
 
     <hr class="section-rule">
 
-    <h2>The Other Healthcare Bill: Waiting</h2>
+    <h2 id="the-other-healthcare-bill-waiting">The Other Healthcare Bill: Waiting</h2>
 
     <table class="data-table">
       <tr><th>Treatment</th><th>US</th><th>UK</th><th>Germany</th><th>Spain</th></tr>
@@ -645,16 +675,190 @@
 
     <h2>Estimate Your Own Cost</h2>
 
-    <!-- PLACEHOLDER: EMBEDDED CALCULATOR "What Would This Actually Cost You?"
-         To be built as a separate follow-up piece — see Point 12 of the
-         locked article structure. Inputs: country, treatment, annual
-         income, has-supplementary-insurance checkbox. Lives only inside
-         this article, no standalone /calculators/ URL. -->
-    <div class="calc-placeholder">
-      <strong>INTERACTIVE CALCULATOR GOES HERE</strong>
-      "What Would This Actually Cost You?" — country + treatment + income + optional private insurance.<br>
-      To be built as a follow-up piece (Point 12), embedded only in this article.
+    <!-- EMBEDDED CALCULATOR "What Would This Actually Cost You?" — lives only in this article (no /calculators/ URL).
+         Client-side only. Figures are the article's own dataset values (kibbo-healthcare-cost-dataset-2026.csv), all USD. -->
+    <div class="hc-calc" id="hcCalc">
+      <p class="hc-calc-kicker">Interactive</p>
+      <h3 class="hc-calc-title">What Would This Actually Cost You?</h3>
+      <p class="hc-calc-sub">Pick a country and a treatment. The estimate uses this investigation's own figures and methodology — three cost layers, with the gaps left as gaps rather than guessed.</p>
+
+      <form class="calc-wrap hc-calc-form" id="hcCalcForm" novalidate>
+        <div class="calc-field">
+          <label class="calc-label" for="hcCountry">Country</label>
+          <select class="calc-select" id="hcCountry">
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="de">Germany</option>
+            <option value="es">Spain</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label class="calc-label" for="hcTreatment">Treatment</label>
+          <select class="calc-select" id="hcTreatment">
+            <option value="appendectomy">Appendectomy</option>
+            <option value="hip">Hip replacement</option>
+            <option value="mri">Knee MRI (no contrast)</option>
+            <option value="delivery">Vaginal delivery</option>
+          </select>
+        </div>
+        <div class="calc-field" id="hcIncomeField">
+          <label class="calc-label" for="hcIncome">Annual income (USD)</label>
+          <input class="calc-input" id="hcIncome" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 50000">
+          <span class="calc-help" id="hcIncomeHelp"></span>
+        </div>
+        <div class="calc-field" id="hcSuppField" hidden>
+          <label class="hc-check"><input type="checkbox" id="hcSupp"> Do you have supplementary private insurance?</label>
+          <span class="calc-help">Shows the private-market price for the treatment (our Layer C) instead of the public route.</span>
+        </div>
+        <button class="calc-btn" type="submit">Calculate</button>
+        <p class="calc-error" id="hcCalcError" role="alert" hidden></p>
+      </form>
+
+      <div class="calc-result hc-calc-result" id="hcCalcResult" aria-live="polite" hidden></div>
     </div>
+
+    <script>
+    /* ---- hcCostCalc: pure calculation, no DOM (also exercised by a Node test harness) ---- BEGIN */
+    function hcCostCalc(input) {
+      var TREAT = { appendectomy: 'Appendectomy', hip: 'Hip replacement', mri: 'Knee MRI (no contrast)', delivery: 'Vaginal delivery' };
+      var US_NEGOTIATED = { appendectomy: 6848, hip: 14428, mri: 1595, delivery: 13000 };
+      var LAYER_C = {
+        uk: { appendectomy: 3950, hip: 14849, mri: 527, delivery: 3002 },
+        de: { appendectomy: 3980, hip: 7681, mri: 613, delivery: 1361 },
+        es: { appendectomy: 2622, hip: 6780, mri: 113, delivery: 2175 }
+      };
+      var US_PREMIUM = 1440, US_DEDUCTIBLE = 1886, US_COINS = 0.20;
+      var DE_RATE = 0.175, ES_WORKER = 0.047, ES_TOTAL = 0.283;
+      var r2 = function (x) { return Math.round(x * 100) / 100; };
+      var c = input.country, t = input.treatment, income = input.income, supp = !!input.supplementary;
+      if (!TREAT[t]) return { error: 'Choose a treatment.' };
+      var out = { country: c, treatment: TREAT[t], layerA: null, layerB: null, layerC: null, totals: [], notes: [] };
+
+      if (c === 'us') {
+        var price = US_NEGOTIATED[t];
+        var deductiblePart = Math.min(price, US_DEDUCTIBLE);
+        var coinsBase = Math.max(0, price - US_DEDUCTIBLE);
+        var coinsPart = r2(coinsBase * US_COINS);
+        var oop = r2(deductiblePart + coinsPart);
+        out.layerA = { amount: US_PREMIUM, label: 'Your share of the annual premium', note: 'Based on the average worker share of an employer-sponsored premium — doesn’t vary with income in this dataset.' };
+        out.layerB = { amount: oop, label: 'Your out-of-pocket cost for this treatment', negotiated: price, deductiblePart: deductiblePart, coinsBase: coinsBase, coinsPart: coinsPart, insurerPays: r2(price - oop),
+                       note: 'Assumes this is your first claim of the year, so the full $1,886 deductible applies, then 20% coinsurance on the rest of the negotiated price. Real plans have an annual out-of-pocket maximum that varies — this is the raw calculated figure, not capped.' };
+        out.totals.push({ label: 'Estimated total', amount: r2(US_PREMIUM + oop) });
+        return out;
+      }
+
+      if (c === 'uk') {
+        out.layerA = { text: 'Funded via general taxation and National Insurance — not calculable as an individual line item from income alone.' };
+        out.layerB = { text: 'No public per-treatment cost data available — the NHS doesn’t publish this at the point of use, since there’s no charge to the patient directly.' };
+        if (supp) {
+          out.layerC = { amount: LAYER_C.uk[t], label: 'Private cost of this treatment (supplementary insurance / private route)' };
+          out.totals.push({ label: 'Estimated total (private route)', amount: LAYER_C.uk[t] });
+        } else {
+          out.totals.push({ label: 'At the point of use', text: '£0 at the point of use' });
+          out.notes.push('waiting');
+        }
+        return out;
+      }
+
+      if (c !== 'de' && c !== 'es') return { error: 'Choose a country.' };
+      if (!(typeof income === 'number' && isFinite(income) && income > 0)) return { error: 'Enter your annual income to calculate the ' + (c === 'de' ? 'German' : 'Spanish') + ' contribution.' };
+
+      var gap = c === 'de'
+        ? 'No public per-treatment cost data available for this dataset — Germany’s DRG reimbursement rates for these specific procedures couldn’t be verified from public sources.'
+        : 'No public per-treatment cost data available for this dataset — Spain’s Ministry of Health doesn’t publish a comparable per-treatment breakdown.';
+      out.layerB = { text: gap };
+      var cAmt = supp ? LAYER_C[c][t] : 0;
+      if (supp) out.layerC = { amount: cAmt, label: 'Private cost of this treatment (supplementary insurance / private route)' };
+
+      if (c === 'de') {
+        var a = r2(income * DE_RATE);
+        out.layerA = { amount: a, label: 'Your annual GKV contribution (17.5% of income)', note: 'Simplified — doesn’t model Germany’s income contribution ceiling (Beitragsbemessungsgrenze), which caps this percentage for higher earners. In practice the 17.5% is split equally between you and your employer.' };
+        out.totals.push({ label: supp ? 'Estimated total (contribution + private cost)' : 'Estimated total', amount: r2(a + cAmt) });
+      } else {
+        var worker = r2(income * ES_WORKER), total = r2(income * ES_TOTAL);
+        out.layerA = { worker: worker, total: total, label: 'Social Security contribution', note: 'This contribution isn’t healthcare-specific — it also funds sick leave, maternity/paternity pay, and more, all combined into one rate.' };
+        out.totals.push({ label: 'What comes out of your paycheck' + (supp ? ' + private cost' : ''), amount: r2(worker + cAmt) });
+        out.totals.push({ label: 'Total cost including employer contribution' + (supp ? ' + private cost' : ''), amount: r2(total + cAmt) });
+      }
+      return out;
+    }
+    /* ---- hcCostCalc ---- END */
+
+    (function () {
+      var form = document.getElementById('hcCalcForm');
+      if (!form) return;
+      var country = document.getElementById('hcCountry'), treatment = document.getElementById('hcTreatment');
+      var income = document.getElementById('hcIncome'), incomeField = document.getElementById('hcIncomeField'), incomeHelp = document.getElementById('hcIncomeHelp');
+      var suppField = document.getElementById('hcSuppField'), supp = document.getElementById('hcSupp');
+      var errBox = document.getElementById('hcCalcError'), result = document.getElementById('hcCalcResult');
+      var shown = false;
+      var HELP = { us: 'Doesn’t change the US estimate — the premium share in this dataset isn’t tied to income.', de: 'Required — Germany’s statutory contribution is a percentage of income.', es: 'Required — Spain’s Social Security contribution is a percentage of income.' };
+
+      function money(n) {
+        var whole = Math.abs(n - Math.round(n)) < 0.005;
+        return '$' + n.toLocaleString('en-US', { minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2 });
+      }
+      function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+      function parseIncome(v) { var n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : NaN; }
+
+      function syncFields() {
+        var c = country.value;
+        incomeField.hidden = (c === 'uk');
+        incomeHelp.textContent = HELP[c] || '';
+        suppField.hidden = (c === 'us');
+        supp.disabled = (c === 'us');
+        if (c === 'us') supp.checked = false;
+      }
+
+      function row(layer, name, valueHtml, note) {
+        return '<li><div class="hc-row-head"><span class="hc-layer">' + layer + '</span><span class="hc-row-name">' + esc(name) + '</span><span class="hc-row-val">' + valueHtml + '</span></div>' +
+               (note ? '<p class="hc-row-note">' + esc(note) + '</p>' : '') + '</li>';
+      }
+      function textRow(layer, name, text) {
+        return '<li><div class="hc-row-head"><span class="hc-layer">' + layer + '</span><span class="hc-row-name">' + esc(name) + '</span><span class="hc-row-val hc-na">Not available</span></div><p class="hc-row-note">' + esc(text) + '</p></li>';
+      }
+
+      function render() {
+        var c = country.value;
+        var res = hcCostCalc({ country: c, treatment: treatment.value, income: parseIncome(income.value), supplementary: supp.checked });
+        if (res.error) { errBox.textContent = res.error; errBox.hidden = false; result.hidden = true; return; }
+        errBox.hidden = true;
+        var names = { us: 'United States', uk: 'United Kingdom', de: 'Germany', es: 'Spain' };
+        var html = '<p class="calc-result-compare">' + esc(res.treatment) + ' · ' + names[c] + '</p>';
+        html += '<div class="hc-totals' + (res.totals.length > 1 ? ' is-pair' : '') + '">';
+        res.totals.forEach(function (t) {
+          html += '<div class="hc-total"><div class="calc-result-figure">' + (t.text ? esc(t.text) : money(t.amount)) + '</div><p class="calc-result-headline">' + esc(t.label) + '</p></div>';
+        });
+        html += '</div><ul class="hc-breakdown">';
+        var A = res.layerA, B = res.layerB, C = res.layerC;
+        if (c === 'us') {
+          html += row('Layer A', A.label, money(A.amount) + '/yr', A.note);
+          var detail = 'Negotiated/cash price ' + money(B.negotiated) + ': you pay ' + money(B.deductiblePart) + (B.coinsBase > 0 ? ' toward the deductible + ' + money(B.coinsPart) + ' (20% of the remaining ' + money(B.coinsBase) + ')' : ' — the whole price, because it doesn’t clear the deductible') + '; insurance pays ' + money(B.insurerPays) + '. ' + B.note;
+          html += row('Layer B', B.label, money(B.amount), detail);
+          html += '<li class="hc-muted"><p class="hc-row-note">No Layer C: the US base case is already private (employer) insurance.</p></li>';
+        } else {
+          if (A.text) html += textRow('Layer A', 'What you already paid', A.text);
+          else if (c === 'es') html += row('Layer A', 'Your share (4.70%) · total with employer (28.30%)', money(A.worker) + ' · ' + money(A.total), A.note);
+          else html += row('Layer A', A.label, money(A.amount) + '/yr', A.note);
+          html += textRow('Layer B', 'Public system cost of this treatment', B.text);
+          if (C) html += row('Layer C', C.label, money(C.amount), 'Private insurance claims pricing from the iFHP/HCCI 2024 report (2022 data), as used in the tables above.');
+          else html += '<li class="hc-muted"><p class="hc-row-note">Layer C (private top-up) not included — tick the box above to see the private price.</p></li>';
+        }
+        html += '</ul>';
+        if (res.notes.indexOf('waiting') !== -1) html += '<p class="calc-result-context">No charge at the point of use — <a href="#the-other-healthcare-bill-waiting">but see how long you might wait</a>.</p>';
+        html += '<p class="hc-fine">Estimate from this investigation’s dataset, in USD. Layer A is an annual figure; Layers B and C are for this one treatment.</p>';
+        result.innerHTML = html;
+        result.hidden = false;
+        shown = true;
+      }
+
+      country.addEventListener('change', function () { syncFields(); if (shown) render(); });
+      [treatment, supp].forEach(function (el) { el.addEventListener('change', function () { if (shown) render(); }); });
+      income.addEventListener('input', function () { if (shown) render(); });
+      form.addEventListener('submit', function (e) { e.preventDefault(); render(); });
+      syncFields();
+    })();
+    </script>
 
     <hr class="section-rule">
 
