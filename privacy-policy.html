@@ -266,6 +266,16 @@
   </ul>
   <p>Each of these providers has its own privacy policy governing how they handle data on our behalf.</p>
 
+  <h2>Checkout Security Shield Chrome Extension</h2>
+  <p>Checkout Security Shield, Kibbo's Chrome extension, handles data differently from the rest of this site:</p>
+  <ul>
+    <li>It runs entirely on-device, inside your browser.</li>
+    <li>It makes zero network requests and collects zero user data — no personal information, no browsing history, no payment details, nothing.</li>
+    <li>It reads one bundled file inside its own package (a local list of domains reported for fraud) to check the current site against it. This check happens locally — nothing is sent anywhere.</li>
+    <li>The only value it stores is a single on/off toggle (<code>shieldEnabled</code>), saved locally via <code>chrome.storage.local</code> and set by you from the extension's popup. This is never synced, transmitted, or shared with Kibbo or any third party.</li>
+    <li>No account, sign-up, or personal information is required to use the extension.</li>
+  </ul>
+
   <h2>Your rights</h2>
   <p>Depending on where you live, you may have rights to access, correct, delete, or export your personal data, and to object to or restrict certain processing.</p>
   <ul>
