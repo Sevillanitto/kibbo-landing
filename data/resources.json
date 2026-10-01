@@ -472,25 +472,149 @@
       "slug": "employment",
       "name": "Employment",
       "group": "Work & Travel",
-      "resources": []
+      "resources": [
+        {
+          "name": "Workplace Fairness",
+          "url": "https://www.workplacefairness.org/",
+          "description": "Nonprofit with free, plain-language information on US employment law: wages and overtime, discrimination, harassment, leave, firing and workplace injuries, organized by topic and state.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "A Better Balance",
+          "url": "https://www.abetterbalance.org/",
+          "description": "Nonprofit legal organization with free know-your-rights guides and a helpline for workers on pregnancy, family leave, sick time and caregiving rights at work.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "JobWatch",
+          "url": "https://jobwatch.org.au/",
+          "description": "Australian employment law community legal centre offering free, confidential advice and factsheets on unfair dismissal, underpayment, bullying and discrimination at work.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "flights-travel",
       "name": "Flights & Travel",
       "group": "Work & Travel",
-      "resources": []
+      "resources": [
+        {
+          "name": "FlyersRights",
+          "url": "https://flyersrights.org/",
+          "description": "The largest US nonprofit airline passenger organization. Explains your rights on delays, cancellations, refunds and tarmac waits, and campaigns for stronger passenger protections.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Elliott Report",
+          "url": "https://www.elliott.org/",
+          "description": "Consumer advocacy site by journalist Christopher Elliott that helps travelers resolve disputes with airlines, hotels and car rental companies, with guides on how to fix your own consumer problem.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Wikivoyage",
+          "url": "https://en.wikivoyage.org/",
+          "description": "Free, community-written travel guide from the Wikimedia movement, with practical, ad-free information on destinations, getting around, costs and staying safe.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "The Man in Seat 61",
+          "url": "https://www.seat61.com/",
+          "description": "Independent, award-winning guide to train travel in Europe and worldwide: routes, how to book, real fares and tips to avoid overpaying through third-party sites.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "training-education",
       "name": "Training & Education",
       "group": "Work & Travel",
-      "resources": []
+      "resources": [
+        {
+          "name": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "description": "Nonprofit offering free, world-class courses in maths, science, economics and personal finance for learners of any age.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "freeCodeCamp",
+          "url": "https://www.freecodecamp.org/",
+          "description": "Nonprofit with a full, free coding curriculum and certifications in web development, data and programming, a free alternative to expensive bootcamps.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Class Central",
+          "url": "https://www.classcentral.com/",
+          "description": "Search engine and reviews for online courses from universities and platforms, with curated lists of courses that are still completely free and how to avoid paying for certificates you don't need.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Student Borrower Protection Center",
+          "url": "https://protectborrowers.org/",
+          "description": "Nonprofit focused on student debt, with research and resources on student loan servicers, predatory schools and borrower rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Save the Student",
+          "url": "https://www.savethestudent.org/",
+          "description": "Independent UK site on student money: student finance, budgeting, banking and avoiding scams, with free tools and practical guides written for students.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "cars-vehicles",
       "name": "Cars & Vehicles",
       "group": "Work & Travel",
-      "resources": []
+      "resources": [
+        {
+          "name": "Center for Auto Safety",
+          "url": "https://www.autosafety.org/",
+          "description": "Nonprofit car safety advocacy group with free guides on recalls, defects and lemon laws, including a state-by-state ranking of lemon law protections.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "CarComplaints.com",
+          "url": "https://www.carcomplaints.com/",
+          "description": "Independent database of owner-reported car problems by make, model and year, showing the most common defects, repair costs and worst model years before you buy.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Consumers for Auto Reliability and Safety (CARS)",
+          "url": "https://www.carconsumers.org/",
+          "description": "Nonprofit auto safety and consumer group with resources on unrepaired recalls in used cars, dealer practices and car buyers' rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "shopping-ecommerce",
