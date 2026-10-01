@@ -32,7 +32,7 @@ Spain,Appendectomy (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA
 Spain,Hip replacement (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
 Spain,Knee MRI (no contrast),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
 Spain,Vaginal delivery (uncomplicated),B,Public system internal cost (SNS),,EUR,DATA GAP,Same limitation
-United States,Appendectomy (uncomplicated),C,Private insurance claims price,13560,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),This IS the correct Layer B source for the US base case (already employer/private insurance) — shown here in Layer C for cross-country table consistency
+United States,Appendectomy (uncomplicated),C,Private insurance claims price,13560,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),"Included for cross-country Layer C consistency; the US base case uses the CMS billed/cash figures above (Layer B), not this figure"
 United Kingdom,Appendectomy (uncomplicated),C,Private insurance claims price,3950,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
 Germany,Appendectomy (uncomplicated),C,Private insurance claims price,3980,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),
 Spain,Appendectomy (uncomplicated),C,Private insurance claims price,2622,USD,iFHP/HCCI International Healthcare Cost Comparison Report 2024 (2022 claims data),

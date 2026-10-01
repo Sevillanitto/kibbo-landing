@@ -1,0 +1,10 @@
+airline,cancelled_pct_h1_2025,cancelled_pct_h1_2026,change_points,change_relative_pct,on_time_pct_h1_2025,on_time_pct_h1_2026,on_time_change_points
+Allegiant Air,0.55,0.90,0.35,63.6,74.82,72.71,-2.11
+Southwest Airlines,0.95,1.05,0.10,10.5,78.91,74.76,-4.15
+Alaska Airlines,0.98,1.24,0.26,26.5,77.72,80.51,2.79
+United Airlines,1.35,1.76,0.41,30.4,77.42,77.60,0.18
+Frontier Airlines,1.85,1.99,0.14,7.6,70.01,72.06,2.05
+Delta Air Lines,1.22,2.35,1.13,92.6,78.70,79.33,0.63
+JetBlue Airways,1.04,2.86,1.82,175.0,74.49,71.02,-3.47
+American Airlines,2.69,3.32,0.63,23.4,73.35,74.38,1.03
+Spirit Airlines,1.41,7.47,6.06,429.8,78.34,59.84,-18.50

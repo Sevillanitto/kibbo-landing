@@ -15518,6 +15518,43 @@
     ]
   },
   {
+    "title": "US Airline Reliability Dataset, 2026 H1 (CSV)",
+    "type": "dataset",
+    "block": "flights-travel",
+    "url": "/investigations-data/us-airline-ranking-2026-h1.csv",
+    "description": "Download Kibbo's extract of DOT reliability data for the 9 major US airlines, January–June 2026: on-time rate, cancellations, mishandled baggage, and involuntary bumping.",
+    "keywords": [
+      "us airline ranking dataset csv",
+      "dot airline reliability data download",
+      "airline on time performance data",
+      "kibbo dataset"
+    ]
+  },
+  {
+    "title": "US Airline Year-Over-Year Comparison, H1 2025 vs H1 2026 (CSV)",
+    "type": "dataset",
+    "block": "flights-travel",
+    "url": "/investigations-data/us-airline-ranking-2026-h1-yoy-comparison.csv",
+    "description": "Download the year-over-year comparison table from Kibbo's US airline reliability dataset: cancellation and on-time rate changes, H1 2025 vs H1 2026, for all 9 major US airlines.",
+    "keywords": [
+      "airline year over year comparison csv",
+      "dot airline data 2025 vs 2026",
+      "kibbo dataset"
+    ]
+  },
+  {
+    "title": "Spirit Airlines Monthly On-Time Rate, Jan–May 2026 (CSV)",
+    "type": "dataset",
+    "block": "flights-travel",
+    "url": "/investigations-data/us-airline-ranking-2026-h1-spirit-monthly.csv",
+    "description": "Download Spirit Airlines' monthly on-time rate against the industry average, January through May 2026, the months before it ceased operations.",
+    "keywords": [
+      "spirit airlines on time rate csv",
+      "spirit airlines shutdown data",
+      "kibbo dataset"
+    ]
+  },
+  {
     "title": "The AI Scam Playbook: How Artificial Intelligence Is Changing Fraud in 2026",
     "type": "investigation",
     "block": "privacy-data",

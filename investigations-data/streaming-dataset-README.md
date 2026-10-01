@@ -26,8 +26,8 @@ two independent sources before being included.
 | `tier_or_plan` | The specific plan/tier affected. Renamed tiers are noted in parentheses so the same underlying tier can be traced across a rebrand |
 | `event_date` | Date the change took effect (YYYY-MM or YYYY-MM-DD, depending on source precision) |
 | `event_type` | `launch`, `increase`, `decrease`, or `restructure` (a tier renamed/repositioned with no price change) |
-| `price_before_usd` | Monthly price before the change (USD). Blank for `launch` rows |
-| `price_after_usd` | Monthly price after the change (USD) |
+| `price_before_usd` | Monthly price before the change (USD), except Prime Video's "Annual membership" rows, which are annual prices — flagged in each of those rows' `notes` field. Blank for `launch` rows |
+| `price_after_usd` | Monthly price after the change (USD), with the same Prime Video "Annual membership" exception as `price_before_usd` |
 | `percent_change` | Calculated percentage change. Blank for `launch` rows |
 | `country` | Currently US-only for every row |
 | `notes` | Context, data-gap flags, or relevant detail (e.g. rebrands, class-action outcomes, restructures) |
@@ -43,10 +43,14 @@ two independent sources before being included.
   Select) but the underlying tier continued, the `platform` and
   `tier_or_plan` fields keep that continuity traceable rather than treating
   the rebrand as an unrelated new product.
-- One confirmed data gap exists: ESPN's exact price between October 2022
-  ($9.99) and the next confirmed figure (oct 2024, $10.99 base) could not be
-  pinned to a specific date against a primary source, and no figure was
-  invented to fill it — see the `notes` field on that row.
+- Two confirmed data gaps exist, both on ESPN, and no figure was invented
+  to fill either one — see the `notes` field on each row:
+  - An unverified intermediate increase from $9.99 to $10.99 between
+    August 2022 and October 2024 that could not be pinned to a specific
+    date against a primary source.
+  - A second small unconfirmed increase from $11.99 (the last confirmed
+    ESPN+ price, October 2024) to $12.99 at the ESPN Select relaunch
+    (August 2025).
 - Hulu (2019) is the only documented price *decrease* found across all 10
   platforms and 97 tracked events.
 
@@ -63,4 +67,4 @@ two independent sources before being included.
 If you use this dataset, please credit "Kibbo (getkibbo.com)" and link back
 to the investigation it was built for.
 
-Last updated: September 2026.
+Last updated: October 2026.

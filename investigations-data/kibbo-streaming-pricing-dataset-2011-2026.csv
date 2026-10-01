@@ -49,13 +49,13 @@ Max,Ultimate (ad-free 4K),2024-06-04,increase,19.99,20.99,5.0,US,,Variety
 Max,Basic with Ads,2025-10-21,increase,9.99,10.99,10.0,US,"Rebranded back to ""HBO Max"" in July 2025 with no price change",Variety/AOL
 Max,Standard,2025-10-21,increase,16.99,18.49,8.8,US,,Variety/AOL
 Max,Premium,2025-10-21,increase,20.99,22.99,9.5,US,,Variety/AOL
-Prime Video,Annual membership,2005-02,launch,,79,,US,,OpenStax
-Prime Video,Annual membership,2014,increase,79,99,25.3,US,,CNBC
-Prime Video,Annual membership,2018,increase,99,119,20.2,US,,CNBC
-Prime Video,Annual membership,2022-02,increase,119,139,16.8,US,,CNBC
-Prime Video,Monthly membership,2022-02,increase,12.99,14.99,15.5,US,,CNBC
+Prime Video,Annual membership,2005-02,launch,,79,,US,"Annual price, not monthly",OpenStax
+Prime Video,Annual membership,2014,increase,79,99,25.3,US,"Annual price, not monthly",CNBC
+Prime Video,Annual membership,2018,increase,99,119,20.2,US,"Annual price, not monthly",CNBC
+Prime Video,Annual membership,2022-02,increase,119,139,16.8,US,"Annual price, not monthly",CNBC
+Prime Video,Monthly membership,2022-02,increase,12.99,14.99,15.4,US,,CNBC
 Prime Video,Ad-free add-on,2024-01-29,launch,,2.99,,US,Ads introduced to base Prime Video at no change to Prime price; ad-free became a new paid add-on -- effectively a hidden price increase for ad-free viewers,CNN/BGR
-Prime Video,Ad-free add-on (renamed Prime Video Ultra),2026-04-10,increase,2.99,4.99,67.0,US,"A federal judge dismissed a class action over the 2024 ads change in July 2025, ruling it a 'benefit modification' not a price increase",Parade/AOL
+Prime Video,Ad-free add-on (renamed Prime Video Ultra),2026-04-10,increase,2.99,4.99,66.9,US,"A federal judge dismissed a class action over the 2024 ads change in July 2025, ruling it a 'benefit modification' not a price increase",Parade/AOL
 Peacock,Premium (ad-supported; renamed Select in 2025),2020-07,launch,,4.99,,US,Launched alongside a since-discontinued free tier,A Good Movie To Watch
 Peacock,Premium Plus (ad-free),2020-07,launch,,9.99,,US,,A Good Movie To Watch
 Peacock,Premium (ad-supported; renamed Select in 2025),2023-08-17,increase,4.99,5.99,20.0,US,First-ever price increase; free tier removed for new users Jan 2023,TechRadar
@@ -70,7 +70,7 @@ Peacock,Premium,2026-08-18,increase,10.99,12.99,18.2,US,,9to5Google
 Peacock,Premium Plus,2026-08-18,increase,16.99,19.99,17.7,US,,9to5Google
 Apple TV+,Standard,2019-11-01,launch,,4.99,,US,,A Good Movie To Watch
 Apple TV+,Standard,2022-10,increase,4.99,6.99,40.1,US,,BGR
-Apple TV+,Standard,2023-10,increase,6.99,9.99,43.0,US,,Movieguide
+Apple TV+,Standard,2023-10,increase,6.99,9.99,42.9,US,,Movieguide
 Apple TV+,Standard,2025-08-21,increase,9.99,12.99,30.0,US,,TechCrunch
 Apple TV+,Standard,2026-08-28,increase,12.99,14.99,15.4,US,Fourth price hike since 2019 launch; price has tripled overall,TweakTown
 Paramount+,Essential (with ads),2021-03-04,launch,,4.99,,US,"Paramount+ launch, rebrand of CBS All Access",Wikipedia
@@ -84,7 +84,7 @@ Paramount+,Premium,2026-01-15,increase,12.99,13.99,7.7,US,,Kibbo research notes
 ESPN,ESPN+ (renamed ESPN Select in 2025),2018-04,launch,,4.99,,US,,SportsBusinessDaily
 ESPN,ESPN+ (renamed ESPN Select in 2025),2020-08-12,increase,4.99,5.99,20.0,US,First-ever price increase,SportBusiness/TechNadu
 ESPN,ESPN+ (renamed ESPN Select in 2025),2021-08,increase,5.99,6.99,16.7,US,,Engadget
-ESPN,ESPN+ (renamed ESPN Select in 2025),2022-08-23,increase,6.99,9.99,43.0,US,,Axios
+ESPN,ESPN+ (renamed ESPN Select in 2025),2022-08-23,increase,6.99,9.99,42.9,US,,Axios
 ESPN,ESPN+ (renamed ESPN Select in 2025),2024-10,increase,10.99,11.99,9.1,US,Data gap: an unverified intermediate increase from 9.99 to 10.99 occurred between Aug 2022 and Oct 2024 that could not be confirmed against a primary source,TechRadar
 ESPN,ESPN Select (relaunch of ESPN+),2025-08-21,restructure,12.99,12.99,0.0,US,"ESPN+ renamed ESPN Select at relaunch. Price shown here (12.99) vs the last confirmed ESPN+ price (11.99, Oct 2024) implies a second small unconfirmed increase before the relaunch that could not be verified against a primary source -- flagged as a data gap, not stated as fact.",AOL
 ESPN,ESPN Unlimited (new top tier),2025-08-21,launch,,29.99,,US,New tier launched alongside ESPN Select relaunch,AOL
