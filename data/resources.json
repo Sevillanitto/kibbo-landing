@@ -15,7 +15,72 @@
       "slug": "financial-banking",
       "name": "Finance & Banking",
       "group": "Money & Protection",
-      "resources": []
+      "resources": [
+        {
+          "name": "Consumer Federation of America",
+          "url": "https://consumerfed.org/",
+          "description": "A nonprofit association of consumer groups that has advocated for US consumers since 1968. Publishes research, tips and policy analysis on banking fees, credit, debt collection and financial products.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Consumer Law Center",
+          "url": "https://www.nclc.org/",
+          "description": "Nonprofit consumer law experts working on behalf of low-income consumers. Their free consumer-facing resources explain debt collection, credit reporting, student loans and what to do when a lender breaks the rules.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Foundation for Credit Counseling (NFCC)",
+          "url": "https://www.nfcc.org/",
+          "description": "The largest US network of nonprofit credit counseling agencies. Its agency finder connects people with accredited counselors for budgeting and debt management plans, as an alternative to for-profit debt relief companies.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "r/personalfinance Wiki",
+          "url": "https://www.reddit.com/r/personalfinance/wiki/index/",
+          "description": "Community-maintained wiki from one of the largest personal finance forums online. Known for its step-by-step 'what to do with my money' flowchart, plus plain guides on debt, banking and building credit.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "StepChange Debt Charity",
+          "url": "https://www.stepchange.org/",
+          "description": "UK charity offering free, confidential debt advice online and by phone, including an online debt tool that builds a personal action plan and debt solutions without fees.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Which? Money",
+          "url": "https://www.which.co.uk/money",
+          "description": "The money section of Which?, the UK's consumer association. Independent guides on bank accounts, savings, credit and scams, with practical advice on complaining and getting money back.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Better Finance",
+          "url": "https://betterfinance.eu/",
+          "description": "The European federation of investors and financial services users. Independent research and campaigns on banking fees, retail investment products and pensions from the consumer side.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Financial Rights Legal Centre",
+          "url": "https://financialrights.org.au/",
+          "description": "Australian community legal centre that helps people with debt, credit, banking and insurance problems. Free fact sheets, sample letters and a national helpline.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "insurance-claims",
