@@ -248,20 +248,14 @@
 
 <main class="section-main">
   <div class="container" style="max-width: 560px;">
-    <!--
-      FORM NOT WIRED YET — no backend connected. See the end-of-task
-      recommendation for how to connect this (Formspree vs. a small
-      Cloudflare Worker + Resend). action="" and no method currently
-      submit nowhere on purpose.
-    -->
-    <form id="resourceSubmitForm" novalidate>
+    <form id="resourceSubmitForm" action="https://formspree.io/f/myezaoak" method="POST" novalidate>
       <div class="calc-field">
         <label class="calc-label" for="rs-name">Name</label>
         <input class="calc-input" type="text" id="rs-name" name="name" required>
       </div>
       <div class="calc-field">
         <label class="calc-label" for="rs-url">Website URL</label>
-        <input class="calc-input" type="url" id="rs-url" name="url" placeholder="https://" required>
+        <input class="calc-input" type="url" id="rs-url" name="website" placeholder="https://" required>
       </div>
       <div class="calc-field">
         <label class="calc-label" for="rs-description">Description</label>
@@ -298,21 +292,62 @@
       </div>
       <div class="calc-field">
         <label class="calc-label" for="rs-why">Why is this useful?</label>
-        <textarea class="calc-input" id="rs-why" name="why" rows="3" required></textarea>
+        <textarea class="calc-input" id="rs-why" name="why_useful" rows="3" required></textarea>
       </div>
       <div class="calc-field">
         <label class="calc-label" for="rs-email">Contact email</label>
         <input class="calc-input" type="email" id="rs-email" name="email" required>
       </div>
-      <!-- Honeypot: hidden from real users via CSS, bots that fill every field will trip this -->
+      <input type="hidden" name="_subject" value="New Kibbo resource submission">
+      <!-- Honeypot: hidden from real users via CSS, bots that fill every field will trip this. _gotcha is Formspree's recognized honeypot field name. -->
       <div class="calc-field" style="position:absolute; left:-5000px;" aria-hidden="true">
-        <label for="rs-website2">Leave this field blank</label>
-        <input type="text" id="rs-website2" name="website2" tabindex="-1" autocomplete="off">
+        <label for="rs-gotcha">Leave this field blank</label>
+        <input type="text" id="rs-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
-      <button type="submit" class="calc-btn">Submit resource</button>
+      <button type="submit" class="calc-btn" id="rsSubmitBtn">Submit resource</button>
+      <p class="calc-error" id="rsFormError" hidden></p>
     </form>
+    <p class="calc-result-context" id="rsFormSuccess" hidden>Thanks! Your submission has been received and will be reviewed manually. Inclusion is free and not guaranteed.</p>
   </div>
 </main>
+
+<script>
+(function () {
+  var form = document.getElementById('resourceSubmitForm');
+  if (!form) return;
+  var btn = document.getElementById('rsSubmitBtn');
+  var errorEl = document.getElementById('rsFormError');
+  var successEl = document.getElementById('rsFormSuccess');
+  var defaultBtnText = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.hidden = true;
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' },
+    })
+      .then(function (res) {
+        if (res.ok) {
+          form.hidden = true;
+          successEl.hidden = false;
+        } else {
+          throw new Error('submit failed');
+        }
+      })
+      .catch(function () {
+        errorEl.textContent = 'Something went wrong sending your submission. Please try again.';
+        errorEl.hidden = false;
+        btn.disabled = false;
+        btn.textContent = defaultBtnText;
+      });
+  });
+})();
+</script>
 
 <footer class="footer">
   <div class="container">
