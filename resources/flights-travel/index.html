@@ -275,6 +275,43 @@
       </div>
 <!-- RESOURCES:END -->
     </div>
+    <!-- BADGE:START -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
+      <span class="section-label">Optional</span>
+      <h2 class="section-title" style="font-size: 24px;">Listed here? Add a badge to your site</h2>
+      <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.6; margin: 10px 0 0;">Totally optional — inclusion never depends on linking back. Copy the code and paste it anywhere on your site.</p>
+      <div class="product-audience-grid">
+        <div class="audience-card">
+          <h3>Light</h3>
+          <div style="background:var(--bg); padding:20px; border-radius:var(--radius-sm); margin:12px 0; display:flex;">
+            <a href="https://www.getkibbo.com/resources/flights-travel/" target="_blank" rel="noopener"><img src="/badges/listed-light.svg" alt="Listed in Kibbo Consumer Resources" width="244" height="56"></a>
+          </div>
+          <pre class="embed-code"><code id="badgeCode-light-flights-travel">&lt;a href=&quot;https://www.getkibbo.com/resources/flights-travel/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://www.getkibbo.com/badges/listed-light.svg&quot; alt=&quot;Listed in Kibbo Consumer Resources&quot; width=&quot;244&quot; height=&quot;56&quot;&gt;&lt;/a&gt;</code></pre>
+          <button type="button" class="embed-copy-btn" data-copy="badgeCode-light-flights-travel">Copy code</button>
+        </div>
+        <div class="audience-card">
+          <h3>Dark</h3>
+          <div style="background:#2A2925; padding:20px; border-radius:var(--radius-sm); margin:12px 0; display:flex;">
+            <a href="https://www.getkibbo.com/resources/flights-travel/" target="_blank" rel="noopener"><img src="/badges/listed-dark.svg" alt="Listed in Kibbo Consumer Resources" width="244" height="56"></a>
+          </div>
+          <pre class="embed-code"><code id="badgeCode-dark-flights-travel">&lt;a href=&quot;https://www.getkibbo.com/resources/flights-travel/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://www.getkibbo.com/badges/listed-dark.svg&quot; alt=&quot;Listed in Kibbo Consumer Resources&quot; width=&quot;244&quot; height=&quot;56&quot;&gt;&lt;/a&gt;</code></pre>
+          <button type="button" class="embed-copy-btn" data-copy="badgeCode-dark-flights-travel">Copy code</button>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function () {
+      document.querySelectorAll('.embed-copy-btn[data-copy^="badgeCode-"]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var text = document.getElementById(btn.getAttribute('data-copy')).textContent;
+          var done = function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy code'; }, 2000); };
+          if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+          else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+        });
+      });
+    })();
+    </script>
+<!-- BADGE:END -->
     <p style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <a href="/flights-travel" class="resource-link">← Flights &amp; Travel hub page</a>
       &nbsp;·&nbsp;

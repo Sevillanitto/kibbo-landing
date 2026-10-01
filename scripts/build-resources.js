@@ -23,6 +23,8 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA_PATH = path.join(ROOT, 'data', 'resources.json');
 const START = '<!-- RESOURCES:START -->';
 const END = '<!-- RESOURCES:END -->';
+const BADGE_START = '<!-- BADGE:START -->';
+const BADGE_END = '<!-- BADGE:END -->';
 
 // The 5 top-level groups shown on resources/index.html — id, icon SVG,
 // and display name, exactly as used on pillar-pages.html. Hardcoded here
@@ -64,16 +66,20 @@ function esc(s) {
     .replace(/"/g, '&quot;');
 }
 
-function injectBetweenMarkers(filePath, content) {
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const startIdx = raw.indexOf(START);
-  const endIdx = raw.indexOf(END);
+function injectBetweenMarkersRaw(raw, content, start, end, filePath) {
+  const startIdx = raw.indexOf(start);
+  const endIdx = raw.indexOf(end);
   if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
-    throw new Error(`Markers not found (or out of order) in ${filePath}`);
+    throw new Error(`Markers ${start}/${end} not found (or out of order) in ${filePath}`);
   }
-  const before = raw.slice(0, startIdx + START.length);
+  const before = raw.slice(0, startIdx + start.length);
   const after = raw.slice(endIdx);
-  const out = `${before}\n${content}\n${after}`;
+  return `${before}\n${content}\n${after}`;
+}
+
+function injectBetweenMarkers(filePath, content, start, end) {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const out = injectBetweenMarkersRaw(raw, content, start || START, end || END, filePath);
   fs.writeFileSync(filePath, out);
 }
 
@@ -124,6 +130,53 @@ function buildCategoryBlock(cat) {
   return items.join('\n');
 }
 
+// "Listed in Kibbo Resources" badge section — light/dark embed code the
+// site owner can copy onto their own page. Pure HTML/CSS reusing the
+// site's existing card (.audience-card) and embed-code/copy-button
+// (.embed-code / .embed-copy-btn, same pattern as the calculator embed
+// widgets) components — no new visual language introduced.
+function buildBadgeBlock(cat) {
+  const pageUrl = `https://www.getkibbo.com/resources/${cat.slug}/`;
+  const variant = (key, bg, svgFile) => {
+    const codeId = `badgeCode-${key}-${cat.slug}`;
+    const embedHtml = `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="https://www.getkibbo.com/badges/${svgFile}" alt="Listed in Kibbo Consumer Resources" width="244" height="56"></a>`;
+    return [
+      `        <div class="audience-card">`,
+      `          <h3>${key === 'light' ? 'Light' : 'Dark'}</h3>`,
+      `          <div style="background:${bg}; padding:20px; border-radius:var(--radius-sm); margin:12px 0; display:flex;">`,
+      `            <a href="${pageUrl}" target="_blank" rel="noopener"><img src="/badges/${svgFile}" alt="Listed in Kibbo Consumer Resources" width="244" height="56"></a>`,
+      `          </div>`,
+      `          <pre class="embed-code"><code id="${codeId}">${esc(embedHtml)}</code></pre>`,
+      `          <button type="button" class="embed-copy-btn" data-copy="${codeId}">Copy code</button>`,
+      `        </div>`,
+    ].join('\n');
+  };
+
+  return [
+    `    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">`,
+    `      <span class="section-label">Optional</span>`,
+    `      <h2 class="section-title" style="font-size: 24px;">Listed here? Add a badge to your site</h2>`,
+    `      <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.6; margin: 10px 0 0;">Totally optional — inclusion never depends on linking back. Copy the code and paste it anywhere on your site.</p>`,
+    `      <div class="product-audience-grid">`,
+    variant('light', 'var(--bg)', 'listed-light.svg'),
+    variant('dark', '#2A2925', 'listed-dark.svg'),
+    `      </div>`,
+    `    </div>`,
+    `    <script>`,
+    `    (function () {`,
+    `      document.querySelectorAll('.embed-copy-btn[data-copy^="badgeCode-"]').forEach(function (btn) {`,
+    `        btn.addEventListener('click', function () {`,
+    `          var text = document.getElementById(btn.getAttribute('data-copy')).textContent;`,
+    `          var done = function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy code'; }, 2000); };`,
+    `          if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }`,
+    `          else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }`,
+    `        });`,
+    `      });`,
+    `    })();`,
+    `    </script>`,
+  ].join('\n');
+}
+
 function main() {
   const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
   const categories = data.categories;
@@ -133,7 +186,10 @@ function main() {
 
   for (const cat of categories) {
     const filePath = path.join(ROOT, 'resources', cat.slug, 'index.html');
-    injectBetweenMarkers(filePath, buildCategoryBlock(cat));
+    let raw = fs.readFileSync(filePath, 'utf8');
+    raw = injectBetweenMarkersRaw(raw, buildCategoryBlock(cat), START, END, filePath);
+    raw = injectBetweenMarkersRaw(raw, buildBadgeBlock(cat), BADGE_START, BADGE_END, filePath);
+    fs.writeFileSync(filePath, raw);
     console.log(`Updated resources/${cat.slug}/index.html`);
   }
 
