@@ -355,6 +355,30 @@
           "country": "CA",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "National Coalition for the Homeless",
+          "url": "https://nationalhomeless.org/",
+          "description": "US network of people who are or have been homeless, advocates and service providers. Resources on homeless rights, finding shelters and how communities can help.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Crisis",
+          "url": "https://www.crisis.org.uk/",
+          "description": "UK homelessness charity offering practical support with housing, employment and wellbeing through local centres, plus guidance for anyone at risk of losing their home.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Launch Housing",
+          "url": "https://www.launchhousing.org.au/",
+          "description": "Melbourne-based not-for-profit providing crisis accommodation, homelessness support and long-term housing, with clear information on how to get help.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
         }
       ]
     },
@@ -823,19 +847,142 @@
       "slug": "healthcare-medical",
       "name": "Healthcare & Medical",
       "group": "Health & Everyday",
-      "resources": []
+      "resources": [
+        {
+          "name": "Dollar For",
+          "url": "https://dollarfor.org/",
+          "description": "Nonprofit that helps patients apply for hospital charity care, the free or reduced-cost care most US nonprofit hospitals must offer, and get medical bills reduced or wiped out at no cost.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Health Care for the Homeless Council",
+          "url": "https://nhchc.org/",
+          "description": "Nonprofit network of health centers serving people experiencing homelessness. Its directory helps people find free or low-cost healthcare without needing an address or insurance.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "NeedyMeds",
+          "url": "https://www.needymeds.org/",
+          "description": "Nonprofit database of patient assistance programs, free clinics and discount programs that help people afford their prescription medications.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Undue Medical Debt",
+          "url": "https://unduemedicaldebt.org/",
+          "description": "Nonprofit, formerly RIP Medical Debt, that buys and forgives medical debt for people facing financial hardship. Explains how medical debt relief works and what to do if you receive a forgiveness letter.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "The Patients Association",
+          "url": "https://www.patients-association.org.uk/",
+          "description": "Independent UK charity with a free helpline and advice leaflets for patients navigating the NHS, from accessing treatment to making complaints about care.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "health-supplements",
       "name": "Health & Supplements",
       "group": "Health & Everyday",
-      "resources": []
+      "resources": [
+        {
+          "name": "Science-Based Medicine",
+          "url": "https://sciencebasedmedicine.org/",
+          "description": "Independent blog written by physicians and scientists that evaluates health claims, supplements and alternative treatments against the evidence, with no products to sell.",
+          "country": "US",
+          "type": "publication",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Examine",
+          "url": "https://examine.com/",
+          "description": "Independent research summaries on supplements and nutrition, with no ads or sponsors. Free pages cover what the evidence says about each supplement; deeper analysis is a paid tier.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "CSPI – Dietary Supplements",
+          "url": "https://www.cspi.org/dietary-supplements",
+          "description": "The Center for Science in the Public Interest, a nonprofit consumer watchdog, investigates misleading supplement marketing, contaminated products and weak regulation.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Cochrane",
+          "url": "https://www.cochrane.org/evidence",
+          "description": "International nonprofit network producing systematic reviews of health treatments, with plain-language summaries anyone can read to see whether a treatment actually works.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Sense about Science",
+          "url": "https://senseaboutscience.org/",
+          "description": "UK charity that helps the public question health and science claims. Its 'Ask for Evidence' campaign encourages people to challenge companies about the evidence behind their products.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "food-hospitality",
       "name": "Food & Hospitality",
       "group": "Health & Everyday",
-      "resources": []
+      "resources": [
+        {
+          "name": "Feeding America – Find Your Local Food Bank",
+          "url": "https://www.feedingamerica.org/find-your-local-foodbank",
+          "description": "The largest US hunger-relief network. Enter your ZIP code to find your local food bank, food pantries and free meal programs.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Trussell",
+          "url": "https://www.trussell.org.uk/",
+          "description": "UK charity supporting a network of more than a thousand food banks. Explains how to get a food voucher and find your nearest food bank, plus help with the money problems behind it.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Foodbank Australia",
+          "url": "https://www.foodbank.org.au/",
+          "description": "Australia's largest food relief organisation, supplying charities and school programs nationwide. Shows how individuals can find food help in their state.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Mouse Print",
+          "url": "https://www.mouseprint.org/",
+          "description": "Long-running independent consumer site that exposes the fine print in ads and packaging, especially shrinkflation, where products get smaller while the price stays the same.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "FARE – Dining Out with Food Allergies",
+          "url": "https://www.foodallergy.org/resources/dining-out",
+          "description": "Practical guidance from the nonprofit Food Allergy Research & Education on eating out safely: talking to restaurant staff, chef cards and what to do if a reaction happens.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        }
+      ]
     }
   ]
 }
