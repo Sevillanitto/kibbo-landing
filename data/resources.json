@@ -86,7 +86,64 @@
       "slug": "insurance-claims",
       "name": "Insurance & Claims",
       "group": "Money & Protection",
-      "resources": []
+      "resources": [
+        {
+          "name": "United Policyholders",
+          "url": "https://uphelp.org/",
+          "description": "Nonprofit that helps policyholders navigate insurance claims, especially after disasters. Free claim guides, sample letters, a 'Roadmap to Recovery' program and practical tips for resolving disputes with insurers.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Consumer Watchdog",
+          "url": "https://consumerwatchdog.org/",
+          "description": "California-based nonprofit consumer group with a long track record on insurance rates and practices. Publishes investigations, consumer alerts and case updates on insurer conduct.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Citizens Advice – Insurance",
+          "url": "https://www.citizensadvice.org.uk/consumer/insurance/",
+          "description": "Free, step-by-step guidance from the UK charity on what to do when an insurer refuses or delays a claim, how to complain, and when to escalate to the Financial Ombudsman.",
+          "country": "UK",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Resolver",
+          "url": "https://www.resolver.co.uk/",
+          "description": "Free online tool that helps you raise and track complaints with insurers and other companies, keeps all correspondence in one place and guides you through escalation if the company doesn't respond.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Fairer Finance",
+          "url": "https://www.fairerfinance.com/",
+          "description": "Independent UK consumer group that rates insurers and banks on customer experience and policy quality, and publishes a regular Trust in Insurance Index. Useful for comparing how insurers actually treat customers.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "CHOICE – Insurance advice",
+          "url": "https://www.choice.com.au/money/insurance/insurance-advice",
+          "description": "Guides from Australia's leading independent consumer organisation on choosing insurance, understanding exclusions and what to do when a claim goes wrong.",
+          "country": "AU",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Consumer Action Law Centre",
+          "url": "https://consumeraction.org.au/",
+          "description": "Australian community legal centre with free fact sheets and toolkits on insurance disputes, unfair claims handling and consumer rights, plus a free legal advice line for Victorians.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "crypto-fintech",
