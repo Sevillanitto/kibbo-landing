@@ -620,31 +620,204 @@
       "slug": "shopping-ecommerce",
       "name": "Shopping & E-Commerce",
       "group": "Shopping & Digital Life",
-      "resources": []
+      "resources": [
+        {
+          "name": "US PIRG",
+          "url": "https://pirg.org/",
+          "description": "Nonprofit consumer watchdog with free consumer tips, product safety alerts and campaigns on right to repair, hidden fees and dangerous products.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "ScamAdviser",
+          "url": "https://www.scamadviser.com/",
+          "description": "Free website checker that gives an automated trust score for online shops based on domain age, ownership, hosting and user reports. A quick first check before buying from an unfamiliar store.",
+          "country": "EU",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "CHOICE",
+          "url": "https://www.choice.com.au/",
+          "description": "Australia's leading independent consumer organisation. Product testing, buying guides and campaigns against misleading pricing and unfair business practices.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "subscriptions-services",
       "name": "Subscriptions & Services",
       "group": "Shopping & Digital Life",
-      "resources": []
+      "resources": [
+        {
+          "name": "Consumer Rights Wiki",
+          "url": "https://consumerrights.wiki/",
+          "description": "Community wiki that documents anti-consumer practices by companies and products: forced subscriptions, features removed after purchase, hidden fees and devices that stop working when servers shut down.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Deceptive Patterns",
+          "url": "https://deceptive.design/",
+          "description": "Long-running catalog of deceptive design tricks like hard-to-cancel subscriptions, sneaky add-ons and fake urgency, with real examples so you can recognize them before they cost you.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Dark Patterns Tip Line",
+          "url": "https://darkpatternstipline.org/",
+          "description": "Coalition project, backed by consumer and digital rights groups, where people report manipulative designs such as subscription traps and hidden charges. Reports are used for research and advocacy.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "JustDeleteMe",
+          "url": "https://justdeleteme.xyz/",
+          "description": "Community-maintained directory of direct links to delete accounts on hundreds of websites and services, rated by how easy or hard each company makes it.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "delivery-parcels",
       "name": "Parcel & Delivery",
       "group": "Shopping & Digital Life",
-      "resources": []
+      "resources": [
+        {
+          "name": "Citizens Advice – Damaged, Lost or Delayed Parcels",
+          "url": "https://www.citizensadvice.org.uk/consumer/post-and-parcels/damaged-lost-delayed-post-or-parcel/",
+          "description": "Step-by-step UK guide from the charity on who is responsible when a parcel is lost, damaged or late (usually the seller, not the courier) and how to get a refund or replacement.",
+          "country": "UK",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Which? – Delivery Rights",
+          "url": "https://www.which.co.uk/consumer-rights/shopping/delivery-rights",
+          "description": "Guidance from the UK consumer association on your rights when online orders arrive late, damaged or not at all, including template letters to claim from the retailer.",
+          "country": "UK",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "17TRACK",
+          "url": "https://www.17track.net/en",
+          "description": "Free universal package tracker covering thousands of carriers worldwide. Handy for international orders where tracking is handed between couriers, and for checking whether a 'delivery problem' text is genuine.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "telecoms-utilities",
       "name": "Telecoms & Utilities",
       "group": "Shopping & Digital Life",
-      "resources": []
+      "resources": [
+        {
+          "name": "EveryoneOn",
+          "url": "https://www.everyoneon.org/",
+          "description": "Nonprofit that helps low-income households find low-cost internet plans and affordable computers in their area, plus free digital skills training.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "NCLC – Utility Rights",
+          "url": "https://www.nclc.org/topic/utility-consumer-protections-bill-payment-assistance/",
+          "description": "Resources from the National Consumer Law Center on utility shutoffs, payment plans and bill assistance programs, and what protections customers have when they fall behind.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Energy Action",
+          "url": "https://www.nea.org.uk/",
+          "description": "The UK's fuel poverty charity, with free advice on cutting energy bills, dealing with energy debt and accessing grants and support schemes.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "ACCAN",
+          "url": "https://accan.org.au/",
+          "description": "Australia's peak body for phone and internet consumers. Free tip sheets on contracts, billing disputes, financial hardship and choosing a provider.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "privacy-data",
       "name": "Privacy & Data",
       "group": "Shopping & Digital Life",
-      "resources": []
+      "resources": [
+        {
+          "name": "Surveillance Self-Defense (EFF)",
+          "url": "https://ssd.eff.org/",
+          "description": "Free guides from the Electronic Frontier Foundation on protecting your privacy online: strong passwords, two-factor authentication, secure messaging and avoiding tracking.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Privacy Guides",
+          "url": "https://www.privacyguides.org/en/",
+          "description": "Independent, nonprofit, community-run site with privacy and security recommendations for browsers, email, messaging and more. Explains the trade-offs instead of selling products.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "description": "Free service to check whether your email address or phone number has appeared in a data breach, with optional alerts for future breaches.",
+          "country": "AU",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Big Ass Data Broker Opt-Out List",
+          "url": "https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List",
+          "description": "Community-maintained list of data brokers and people-search sites with direct opt-out links and instructions, prioritized by which ones matter most.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Privacy Rights Clearinghouse",
+          "url": "https://privacyrights.org/",
+          "description": "Nonprofit privacy organization with consumer guides and a searchable Data Breach Chronology to check which companies have exposed customer data.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "noyb – European Center for Digital Rights",
+          "url": "https://noyb.eu/en",
+          "description": "Nonprofit led by Max Schrems that enforces GDPR through strategic complaints against big tech. Useful explainers on your data rights in Europe, such as access and deletion requests.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Open Rights Group",
+          "url": "https://www.openrightsgroup.org/",
+          "description": "UK digital rights organisation campaigning on privacy, data protection and online surveillance, with explainers on how changes in the law affect your data.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "healthcare-medical",
