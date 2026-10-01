@@ -25,6 +25,8 @@ const START = '<!-- RESOURCES:START -->';
 const END = '<!-- RESOURCES:END -->';
 const BADGE_START = '<!-- BADGE:START -->';
 const BADGE_END = '<!-- BADGE:END -->';
+const BADGE_INDEX_START = '<!-- BADGE_INDEX:START -->';
+const BADGE_INDEX_END = '<!-- BADGE_INDEX:END -->';
 
 // The 5 top-level groups shown on resources/index.html — id, icon SVG,
 // and display name, exactly as used on pillar-pages.html. Hardcoded here
@@ -135,10 +137,13 @@ function buildCategoryBlock(cat) {
 // site's existing card (.audience-card) and embed-code/copy-button
 // (.embed-code / .embed-copy-btn, same pattern as the calculator embed
 // widgets) components — no new visual language introduced.
-function buildBadgeBlock(cat) {
-  const pageUrl = `https://www.getkibbo.com/resources/${cat.slug}/`;
+// Shared by the per-category badge section and the general, directory-wide
+// one on resources/index.html — same markup/script, different link target
+// and id namespace (idSuffix) so the two never collide if both appear on
+// the same rendered output.
+function buildBadgeSection(pageUrl, idSuffix, heading) {
   const variant = (key, bg, svgFile) => {
-    const codeId = `badgeCode-${key}-${cat.slug}`;
+    const codeId = `badgeCode-${key}-${idSuffix}`;
     const embedHtml = `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="https://www.getkibbo.com/badges/${svgFile}" alt="Listed in Kibbo Consumer Resources" width="244" height="56"></a>`;
     return [
       `        <div class="audience-card">`,
@@ -155,7 +160,7 @@ function buildBadgeBlock(cat) {
   return [
     `    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">`,
     `      <span class="section-label">Optional</span>`,
-    `      <h2 class="section-title" style="font-size: 24px;">Listed here? Add a badge to your site</h2>`,
+    `      <h2 class="section-title" style="font-size: 24px;">${heading}</h2>`,
     `      <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.6; margin: 10px 0 0;">Totally optional — inclusion never depends on linking back. Copy the code and paste it anywhere on your site.</p>`,
     `      <div class="product-audience-grid">`,
     variant('light', 'var(--bg)', 'listed-light.svg'),
@@ -177,12 +182,30 @@ function buildBadgeBlock(cat) {
   ].join('\n');
 }
 
+function buildBadgeBlock(cat) {
+  const pageUrl = `https://www.getkibbo.com/resources/${cat.slug}/`;
+  return buildBadgeSection(pageUrl, cat.slug, 'Listed here? Add a badge to your site');
+}
+
+// General, directory-wide badge for resources/index.html — links to the
+// whole directory rather than any one category, for sites that want to
+// show they're in Kibbo Resources without tying it to a specific block.
+function buildIndexBadgeBlock() {
+  return buildBadgeSection('https://www.getkibbo.com/resources/', 'directory', 'Add a Kibbo Resources badge to your site');
+}
+
 function main() {
   const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
   const categories = data.categories;
 
-  injectBetweenMarkers(path.join(ROOT, 'resources', 'index.html'), buildIndexBlock(categories));
-  console.log('Updated resources/index.html');
+  {
+    const filePath = path.join(ROOT, 'resources', 'index.html');
+    let raw = fs.readFileSync(filePath, 'utf8');
+    raw = injectBetweenMarkersRaw(raw, buildIndexBlock(categories), START, END, filePath);
+    raw = injectBetweenMarkersRaw(raw, buildIndexBadgeBlock(), BADGE_INDEX_START, BADGE_INDEX_END, filePath);
+    fs.writeFileSync(filePath, raw);
+    console.log('Updated resources/index.html');
+  }
 
   for (const cat of categories) {
     const filePath = path.join(ROOT, 'resources', cat.slug, 'index.html');
