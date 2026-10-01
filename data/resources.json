@@ -299,19 +299,174 @@
       "slug": "housing-rentals",
       "name": "Housing & Rentals",
       "group": "Home & Living",
-      "resources": []
+      "resources": [
+        {
+          "name": "JustFix",
+          "url": "https://www.justfix.org/",
+          "description": "Nonprofit building free tools for tenants: send repair request letters to landlords, research who really owns a building, and understand your rights. Strongest for New York, with guidance useful far beyond it.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Low Income Housing Coalition",
+          "url": "https://nlihc.org/",
+          "description": "Nonprofit research and advocacy group focused on affordable housing for renters. Publishes the annual 'Out of Reach' report on what it costs to rent in every US state and tracks renter protections.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "National Housing Law Project",
+          "url": "https://www.nhlp.org/",
+          "description": "Nonprofit housing law organization with a free resource center on tenant rights, evictions and subsidized housing, plus know-your-rights material for renters and the people who help them.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Shelter",
+          "url": "https://england.shelter.org.uk/",
+          "description": "UK housing charity with detailed, free advice on private renting: deposits, repairs, rent increases, evictions and getting help with rent. Also runs a free housing advice helpline.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Tenants' Union of NSW",
+          "url": "https://www.tenants.org.au/",
+          "description": "Community legal centre and peak body for renters in New South Wales. Clear factsheets on leases, bonds, repairs, rent increases and ending a tenancy, including Easy Read versions.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Tenants Victoria",
+          "url": "https://www.tenantsvic.org.au/",
+          "description": "Not-for-profit community legal centre for renters in Victoria, with free advice and plain-language guides on renting rights, repairs, bonds and evictions.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "ACORN Canada",
+          "url": "https://acorncanada.org/",
+          "description": "Independent tenant and community union organizing renters across Canada, with campaigns and resources on rent increases, repairs and renovictions.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "home-renovations-services",
       "name": "Home Renovations & Services",
       "group": "Home & Living",
-      "resources": []
+      "resources": [
+        {
+          "name": "Consumers' Checkbook",
+          "url": "https://www.checkbook.org/",
+          "description": "Nonprofit consumer organization that rates local contractors and home service providers based on customer surveys and price comparisons, with no advertising from the companies it rates.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Rebuilding Together",
+          "url": "https://rebuildingtogether.org/",
+          "description": "National nonprofit network providing free critical home repairs and accessibility modifications for low-income homeowners, older adults and veterans through local affiliates.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Rewiring America",
+          "url": "https://www.rewiringamerica.org/",
+          "description": "Nonprofit focused on home electrification. Free calculators and guides to find rebates and tax credits for heat pumps, insulation, induction stoves and solar, and estimate real savings.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "iFixit",
+          "url": "https://www.ifixit.com/",
+          "description": "Free, community-written repair guides for appliances, electronics and household items. A good first stop before paying for a repair or replacing something that might be easy to fix.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Energy Saving Trust",
+          "url": "https://energysavingtrust.org.uk/",
+          "description": "Independent UK organisation with impartial advice on insulation, heating, heat pumps and solar panels, including what to check before hiring an installer.",
+          "country": "UK",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Which? Trusted Traders",
+          "url": "https://trustedtraders.which.co.uk/",
+          "description": "Directory of UK tradespeople who have passed checks by the consumer association Which?, including references, credit checks and an assessment of how they work. Traders pay to join after vetting.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Repair Café",
+          "url": "https://www.repaircafe.org/en/",
+          "description": "International volunteer movement of free repair meetups where people bring broken household items and fix them with volunteers. Find a Repair Café near you on the world map.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Renew",
+          "url": "https://renew.org.au/",
+          "description": "Australian not-for-profit helping households make their homes more comfortable and energy-efficient, with independent guides on solar, batteries, heating, cooling and renovations.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "public-services-administration",
       "name": "Public Services & Administration",
       "group": "Home & Living",
-      "resources": []
+      "resources": [
+        {
+          "name": "211",
+          "url": "https://www.211.org/",
+          "description": "Free, confidential service supported by United Way that connects people with local help for bills, food, housing, utilities and more, by phone, text or online.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Turn2us",
+          "url": "https://www.turn2us.org.uk/",
+          "description": "UK charity with a free benefits calculator and grants search to check what financial support you may be entitled to, plus guides on claiming and challenging benefit decisions.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Ask Izzy",
+          "url": "https://askizzy.org.au/",
+          "description": "Free, anonymous Australian directory built by the not-for-profit Infoxchange to find nearby services for housing, food, money help, health and legal support.",
+          "country": "AU",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Citizens Advice – Benefits",
+          "url": "https://www.citizensadvice.org.uk/benefits/",
+          "description": "Independent charity guidance on UK benefits: checking eligibility, applying, and challenging decisions through mandatory reconsideration and appeals.",
+          "country": "UK",
+          "type": "guide",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "employment",
