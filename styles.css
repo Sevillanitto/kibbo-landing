@@ -1271,3 +1271,17 @@ transition: var(--transition);
 .pillar-card svg { color: var(--text-muted); flex-shrink: 0; }
 @media (max-width: 760px) { .pillar-card-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .pillar-card-grid { grid-template-columns: 1fr; } }
+
+/* Resource directory: count badge on pillar-card (index), flat resource list (category pages) */
+.pillar-card-count { display: block; font-size: 11.5px; font-weight: 500; color: var(--text-muted); margin-top: 3px; }
+.resource-list { margin-top: 24px; }
+.resource-item { padding: 24px 0; border-bottom: 1px solid var(--border); }
+.resource-item:last-child { border-bottom: none; }
+.resource-name { font-family: var(--font-serif); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: var(--text-primary); margin: 0 0 8px; }
+.resource-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin: 0 0 12px; }
+.resource-meta { display: flex; gap: 10px; margin-bottom: 12px; }
+.resource-meta span { font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 100px; padding: 4px 10px; }
+.resource-link { font-size: 14px; font-weight: 600; color: var(--accent-green); text-decoration: none; }
+.resource-link:hover { text-decoration: underline; }
+.resource-empty { font-size: 15px; color: var(--text-secondary); line-height: 1.6; padding: 24px 0; }
+.resource-empty a { color: var(--accent-green); font-weight: 600; }

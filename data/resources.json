@@ -1,0 +1,129 @@
+{
+  "_schema": {
+    "note": "Each category's 'resources' array holds objects with this shape. Filling the directory is just adding objects here — no other file needs to change.",
+    "resource": {
+      "name": "string — resource name",
+      "url": "string — full https:// URL",
+      "description": "string — one or two sentences",
+      "country": "string — e.g. 'US', 'UK', 'EU', 'Global'",
+      "type": "string — one of: website, tool, guide, dataset, organization, publication",
+      "added": "string — ISO date, e.g. '2026-10-01'"
+    }
+  },
+  "categories": [
+    {
+      "slug": "financial-banking",
+      "name": "Finance & Banking",
+      "group": "Money & Protection",
+      "resources": []
+    },
+    {
+      "slug": "insurance-claims",
+      "name": "Insurance & Claims",
+      "group": "Money & Protection",
+      "resources": []
+    },
+    {
+      "slug": "crypto-fintech",
+      "name": "Crypto & Fintech",
+      "group": "Money & Protection",
+      "resources": []
+    },
+    {
+      "slug": "legal-contracts",
+      "name": "Legal & Contracts",
+      "group": "Money & Protection",
+      "resources": []
+    },
+    {
+      "slug": "housing-rentals",
+      "name": "Housing & Rentals",
+      "group": "Home & Living",
+      "resources": []
+    },
+    {
+      "slug": "home-renovations-services",
+      "name": "Home Renovations & Services",
+      "group": "Home & Living",
+      "resources": []
+    },
+    {
+      "slug": "public-services-administration",
+      "name": "Public Services & Administration",
+      "group": "Home & Living",
+      "resources": []
+    },
+    {
+      "slug": "employment",
+      "name": "Employment",
+      "group": "Work & Travel",
+      "resources": []
+    },
+    {
+      "slug": "flights-travel",
+      "name": "Flights & Travel",
+      "group": "Work & Travel",
+      "resources": []
+    },
+    {
+      "slug": "training-education",
+      "name": "Training & Education",
+      "group": "Work & Travel",
+      "resources": []
+    },
+    {
+      "slug": "cars-vehicles",
+      "name": "Cars & Vehicles",
+      "group": "Work & Travel",
+      "resources": []
+    },
+    {
+      "slug": "shopping-ecommerce",
+      "name": "Shopping & E-Commerce",
+      "group": "Shopping & Digital Life",
+      "resources": []
+    },
+    {
+      "slug": "subscriptions-services",
+      "name": "Subscriptions & Services",
+      "group": "Shopping & Digital Life",
+      "resources": []
+    },
+    {
+      "slug": "delivery-parcels",
+      "name": "Parcel & Delivery",
+      "group": "Shopping & Digital Life",
+      "resources": []
+    },
+    {
+      "slug": "telecoms-utilities",
+      "name": "Telecoms & Utilities",
+      "group": "Shopping & Digital Life",
+      "resources": []
+    },
+    {
+      "slug": "privacy-data",
+      "name": "Privacy & Data",
+      "group": "Shopping & Digital Life",
+      "resources": []
+    },
+    {
+      "slug": "healthcare-medical",
+      "name": "Healthcare & Medical",
+      "group": "Health & Everyday",
+      "resources": []
+    },
+    {
+      "slug": "health-supplements",
+      "name": "Health & Supplements",
+      "group": "Health & Everyday",
+      "resources": []
+    },
+    {
+      "slug": "food-hospitality",
+      "name": "Food & Hospitality",
+      "group": "Health & Everyday",
+      "resources": []
+    }
+  ]
+}
