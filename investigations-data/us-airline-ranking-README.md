@@ -72,18 +72,23 @@ visible in the rounded data.** Three of the four metrics have no tied
 values among these 9 airlines, so ranking them from the published
 figures is unambiguous. `bumped_per_10000` does have two ties at this
 rounding (Allegiant and Delta both show `0.00`; Southwest and United
-both show `0.01`), and those ties were broken using the airlines'
-underlying DOT figures at a precision finer than the two decimals shown
-here. We don't have that unrounded figure on file to publish — only the
-resulting order, which we verified reproduces every published
-`composite_score` in this file exactly:
+both show `0.01`). The unrounded values that were used when the
+original ranking was built were not retained, so those ties can't be
+broken from source data.
+
+**The order below is a reconstruction, not the original method.** We
+worked backward from the 9 published `composite_score` values to find
+a bumping order that reproduces all of them exactly, and this is the
+one that does:
 
 **Bumping rank, best to worst:** Delta → Allegiant → United → Southwest
 → JetBlue → Alaska → American → Spirit → Frontier.
 
 Use that order (rather than the tied `0.00`/`0.01` values) when ranking
-`bumped_per_10000`, and the standard rank-average method above
-reproduces `composite_score` for all 9 airlines with no rounding error.
+`bumped_per_10000` if you need to reproduce `composite_score` exactly —
+it is confirmed to match all 9 published scores with no rounding error,
+but it was derived after the fact, not sourced from DOT's underlying
+figures.
 
 ## Limitations
 
