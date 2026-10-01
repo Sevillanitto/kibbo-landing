@@ -149,7 +149,72 @@
       "slug": "crypto-fintech",
       "name": "Crypto & Fintech",
       "group": "Money & Protection",
-      "resources": []
+      "resources": [
+        {
+          "name": "Web3 is Going Just Great",
+          "url": "https://www.web3isgoinggreat.com/",
+          "description": "An independent, sourced timeline of crypto scams, hacks, rug pulls and collapses, with a running total of losses. A sober reality check before putting money into any crypto project.",
+          "country": "US",
+          "type": "website",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Citation Needed",
+          "url": "https://www.citationneeded.news/",
+          "description": "Independent newsletter and podcast by Molly White, the researcher behind Web3 is Going Just Great. Clear, well-sourced analysis of crypto, fintech and the policies around them, written for non-specialists.",
+          "country": "US",
+          "type": "publication",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Chainabuse",
+          "url": "https://www.chainabuse.com/",
+          "description": "Free community database of reported crypto scams. Search a wallet address, website or domain to see if others have reported it, or file your own report to warn people.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Revoke.cash",
+          "url": "https://revoke.cash/",
+          "description": "Free, open-source tool to see and cancel the token approvals your crypto wallet has granted. Its learning section explains in plain language how approval scams drain wallets and how to protect yourself.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Global Anti-Scam Organization (GASO)",
+          "url": "https://www.globalantiscam.org/",
+          "description": "Volunteer-run nonprofit founded by scam survivors. Supports victims of romance and crypto investment scams ('pig butchering'), publishes scam reports and warns about fake 'fund recovery' services.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "Operation Shamrock",
+          "url": "https://www.operationshamrock.org/",
+          "description": "Nonprofit coalition fighting pig-butchering and crypto investment scams. Its library and podcast explain how these scams work, who runs them and what victims can do.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "AARP – Cryptocurrency Scams",
+          "url": "https://www.aarp.org/money/scams-fraud/cryptocurrency/",
+          "description": "Plain-language guide from AARP's Fraud Watch Network on how crypto scams work, including crypto ATM and romance scams, and the warning signs to share with older relatives.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        },
+        {
+          "name": "NCLC – Payments & Payment Fraud",
+          "url": "https://www.nclc.org/topic/payments-and-payment-fraud/",
+          "description": "Resources from the National Consumer Law Center on payment apps like Zelle and Cash App, prepaid cards and fintech accounts. Explains which protections you have when money is stolen or sent to a scammer.",
+          "country": "US",
+          "type": "guide",
+          "added": "2026-10-01"
+        }
+      ]
     },
     {
       "slug": "legal-contracts",
