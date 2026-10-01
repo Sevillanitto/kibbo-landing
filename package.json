@@ -1,0 +1,7 @@
+{
+  "name": "kibbo-landing",
+  "private": true,
+  "scripts": {
+    "build:resources": "node scripts/build-resources.js"
+  }
+}
