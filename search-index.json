@@ -16055,6 +16055,19 @@
     ]
   },
   {
+    "title": "Kibbo Research",
+    "type": "research",
+    "url": "/research",
+    "description": "Kibbo's original research: consumer investigations built on primary sources, with published methodology and downloadable datasets. For journalists, researchers, and anyone who wants to cite the data.",
+    "keywords": [
+      "kibbo research",
+      "consumer investigations",
+      "original datasets",
+      "cite kibbo data",
+      "research methodology"
+    ]
+  },
+  {
     "title": "Subscription & Gym Cancellation Kit",
     "type": "kit",
     "block": "subscriptions-services",
