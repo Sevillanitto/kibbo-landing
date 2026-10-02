@@ -541,6 +541,71 @@
     ]
   },
   {
+    "title": "Can a Restaurant Refuse to Give Me Tap Water?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-restaurant-refuse-to-give-me-tap-water",
+    "description": "Yes, in most of the US — there's no federal or general state law forcing a restaurant to serve free tap water. The main limit is that it can't refuse selectively based on a protected characteristic.",
+    "keywords": [
+      "restaurant refuse free tap water",
+      "does restaurant have to give water",
+      "tap water law restaurant US",
+      "restaurant refusing water discrimination"
+    ]
+  },
+  {
+    "title": "Can a Hotel Charge Me for a Minibar Item I Didn't Take?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-hotel-charge-me-for-minibar-item-i-didnt-take",
+    "description": "A hotel can try, but you're only responsible for what you actually consumed. If you paid by credit card, the Fair Credit Billing Act gives you a formal right to dispute an inaccurate charge.",
+    "keywords": [
+      "hotel charged me for minibar item not taken",
+      "dispute hotel minibar charge",
+      "Fair Credit Billing Act hotel dispute",
+      "incorrect hotel bill charge"
+    ]
+  },
+  {
+    "title": "Can a Hotel Refuse My Booking Because I Have a Dog?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-hotel-refuse-my-booking-because-i-have-dog",
+    "description": "For an ordinary pet, yes — a hotel can have a no-pets policy and charge fees freely. For a trained service dog, no — the ADA overrides pet policies, and no fee or deposit can be charged.",
+    "keywords": [
+      "hotel refuse booking because of dog",
+      "hotel no pets policy law",
+      "service dog hotel rights ADA",
+      "hotel pet fee service animal"
+    ]
+  },
+  {
+    "title": "Can a Restaurant Refuse to Serve Me if I Only Order a Drink?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-restaurant-refuse-to-serve-me-if-i-only-order-drink",
+    "description": "Generally, yes — a restaurant can set a minimum purchase policy or ask drink-only customers to free up a table, as long as it isn't discriminating against a legally protected group.",
+    "keywords": [
+      "restaurant refuse service drink only order",
+      "minimum purchase policy restaurant",
+      "restaurant table minimum order rights",
+      "refused service for not ordering food"
+    ]
+  },
+  {
+    "title": "Can a Hotel Move Me to a Different Room After I Arrive?",
+    "type": "question",
+    "block": "food-hospitality",
+    "url": "/questions/food-hospitality/can-hotel-move-me-to-different-room-after-i-arrive",
+    "description": "Usually, yes — there's no federal law barring it, whether you're walked at check-in due to overbooking or relocated mid-stay for maintenance. Your main protection comes from contract law, not a specific statute.",
+    "keywords": [
+      "hotel move me different room after arrival",
+      "hotel walked overbooking rights",
+      "hotel relocate room mid-stay",
+      "hotel room change contract law"
+    ]
+  },
+  {
     "title": "Can a Restaurant Charge Me If I Don't Show Up for a Reservation?",
     "type": "question",
     "block": "food-hospitality",
