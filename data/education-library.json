@@ -703,5 +703,50 @@
         "summary": "Australia's official free money guidance from the financial regulator, including how credit cards, personal loans and buy-now-pay-later work, how to check your credit report, and calculators to see the real cost of borrowing."
       }
     ]
+  },
+  {
+    "topic": "Work & employment rights",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "dol-youthrules-young-worker-toolkit",
+        "title": "YouthRules! Young Worker Toolkit",
+        "publisher": "U.S. Department of Labor, Wage and Hour Division",
+        "type": "Toolkit (fact sheets, hour trackers, guides)",
+        "level": ["High school", "Educators", "Parents"],
+        "length": "Collection of fact sheets, calendars and guides",
+        "language": "English and Spanish",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.dol.gov/agencies/whd/YouthRules/young-worker-toolkit",
+        "summary": "The US government's resources on the rules for working teenagers: which jobs under-18s can and can't do, how many hours 14- and 15-year-olds can work on school days and school weeks, plus calendars to track your own hours and understand overtime. Note that each state also has its own rules, and the stricter one applies."
+      },
+      {
+        "id": "eeoc-youth-at-work",
+        "title": "Youth@Work",
+        "publisher": "U.S. Equal Employment Opportunity Commission (EEOC)",
+        "type": "Guidance and classroom materials",
+        "level": ["High school", "Educators"],
+        "length": "Guidance pages plus classroom guides",
+        "language": "English and Spanish",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.eeoc.gov/youth",
+        "summary": "The EEOC's programme to teach young workers about their rights against discrimination and harassment at work: what counts as illegal discrimination, how to respond if it happens to you or a co-worker, and classroom guides for teachers."
+      },
+      {
+        "id": "fair-work-young-workers-students",
+        "title": "Young workers and students",
+        "publisher": "Fair Work Ombudsman, Australia",
+        "type": "Official guidance and tools",
+        "level": ["High school", "University", "General public"],
+        "length": "Guidance pages plus pay, shift and leave calculators",
+        "language": "English (website translatable)",
+        "licence": "Commonwealth of Australia copyright (link only)",
+        "download_allowed": false,
+        "url": "https://www.fairwork.gov.au/find-help-for/young-workers-and-students",
+        "summary": "Australia's workplace regulator explains what young workers and students are entitled to — the minimum working age, getting ready for your first day, pay and conditions, and workplace bullying, harassment and discrimination — and offers a free Pay Calculator to check you're being paid correctly."
+      }
+    ]
   }
 ]
