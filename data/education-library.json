@@ -561,5 +561,76 @@
         "summary": "The standard international reference for comparing health systems: life expectancy, access and quality of care, waiting times, and how much each country spends on health and how that spending is financed. Built from comparable official national statistics."
       }
     ]
+  },
+  {
+    "topic": "Housing & renting",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "uk-renters-rights-act-overview-tenants",
+        "title": "Renters' Rights Act overview for tenants",
+        "publisher": "UK Government — GOV.UK",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guidance page",
+        "language": "English",
+        "licence": "UK Open Government Licence / Crown copyright (link only)",
+        "download_allowed": false,
+        "url": "https://www.gov.uk/guidance/renters-rights-act-overview-for-tenants",
+        "summary": "The official summary of how private renting in England changed on 1 May 2026: most tenancies became rolling (periodic) with no fixed end date, rent can only be increased through a formal yearly process, and tenants can end a tenancy with two months' notice. Applies to England only."
+      },
+      {
+        "id": "shelter-renters-rights-private-tenants",
+        "title": "Renters' Rights Act: private tenants",
+        "publisher": "Shelter England (housing charity)",
+        "type": "Advice guide",
+        "level": ["High school", "General public"],
+        "length": "Advice pages",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://england.shelter.org.uk/housing_advice/private_renting/renters_rights_act_changes_for_private_renters",
+        "summary": "Independent, practical advice from England's best-known housing charity on what the Renters' Rights Act means for private tenants: the end of section 21 and fixed-term tenancies, rent increase rules, the right to ask to keep a pet, and the 1-month limit on rent in advance."
+      },
+      {
+        "id": "cfpb-your-home-loan-toolkit",
+        "title": "Your Home Loan Toolkit: A step-by-step guide",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Guide (workbook)",
+        "level": ["High school", "University", "General public"],
+        "length": "28 pages, with fillable worksheets",
+        "language": "English and Spanish",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.consumerfinance.gov/owning-a-home/explore/home-loan-toolkit/",
+        "summary": "The booklet US lenders must give every home buyer, written in plain language: how much you can afford, how your credit affects your interest rate, how to compare loan offers, and how to read your Loan Estimate and Closing Disclosure."
+      },
+      {
+        "id": "hud-report-housing-discrimination",
+        "title": "Report Housing Discrimination",
+        "publisher": "U.S. Department of Housing and Urban Development (HUD)",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Guidance page and complaint process",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.hud.gov/reporthousingdiscrimination",
+        "summary": "How to report housing discrimination to HUD's Fair Housing and Equal Opportunity office: what counts as a violation under the Fair Housing Act and the Violence Against Women Act, and how to file a complaint online, by phone, or by mail."
+      },
+      {
+        "id": "nlihc-out-of-reach-2026",
+        "title": "Out of Reach 2026: The High Cost of Housing",
+        "publisher": "National Low Income Housing Coalition (NLIHC, non-profit)",
+        "type": "Annual report (data)",
+        "level": ["High school", "University", "General public"],
+        "length": "Full report plus interactive data for every state, metro area and county",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://nlihc.org/oor",
+        "summary": "Calculates the 'Housing Wage' — the hourly wage a full-time worker needs to rent a modest home without spending more than 30% of income on rent — for every US state and county. Strong material for data lessons, and for debate: the report is produced by an advocacy group, and critics argue the fixed 30% benchmark overstates how unaffordable housing is."
+      }
+    ]
   }
 ]
