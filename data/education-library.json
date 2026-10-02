@@ -270,5 +270,115 @@
         "summary": "Australia's official guide to scams and the original that inspired the UK's Little Book of Fraud: the most common scams, how scammers make contact, the warning signs, and where to get help. The Easy Read version is especially useful for students and people with lower literacy. Formerly published as 'The Little Black Book of Scams'."
       }
     ]
+  },
+  {
+    "topic": "Consumer rights & law basics",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "cornell-lii-consumer-protection-laws",
+        "title": "Consumer protection laws (Wex legal encyclopedia)",
+        "publisher": "Legal Information Institute, Cornell Law School",
+        "type": "Reference entry",
+        "level": ["High school", "University", "General public"],
+        "length": "Short encyclopedia entry with links to related terms",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://law.cornell.edu/wex/consumer_protection_laws",
+        "summary": "A clear starting point on how US consumer protection works: from 'let the buyer beware' to the FTC Act, the CFPB, specialised laws such as the Fair Debt Collection Practices Act, and the state 'little FTC Acts'. Reviewed by Cornell's Wex team in September 2025."
+      },
+      {
+        "id": "openstax-business-law-i-essentials-2e",
+        "title": "Business Law I Essentials (2nd edition)",
+        "publisher": "OpenStax (Rice University)",
+        "type": "Open textbook",
+        "level": ["University", "Community college"],
+        "length": "Full textbook with end-of-chapter questions and answer key",
+        "language": "English",
+        "licence": "CC BY-NC-SA 4.0 (link only)",
+        "download_allowed": false,
+        "url": "https://openstax.org/books/business-law-i-essentials-2e/pages/1-introduction",
+        "summary": "A short introductory textbook on US business law — the legal system, contracts, sales, torts — with a chapter on consumer protection covering unfair trade practices and the role of the FTC. Chapter 12, 'Unfair Trade Practices and the Federal Trade Commission,' covers consumer protection. Useful for understanding the legal framework behind everyday consumer disputes."
+      },
+      {
+        "id": "arxiv-consumer-rights-and-algorithms",
+        "title": "Consumer Rights and Algorithms",
+        "publisher": "Gregory M. Dickinson — arXiv (open-access preprint, Computers and Society)",
+        "type": "Academic article",
+        "level": ["University"],
+        "length": "Journal-length article",
+        "language": "English",
+        "licence": "CC BY 4.0 (link only)",
+        "download_allowed": false,
+        "url": "https://arxiv.org/abs/2603.10022",
+        "summary": "A 2026 overview of consumer protection law from its historical roots to the digital age: deception and unfair trade practices, how AI and big data are changing advertising and fraud, and regulatory responses such as data privacy laws and bans on dark patterns."
+      },
+      {
+        "id": "uk-consumer-rights-act-2015-explanatory-notes",
+        "title": "Consumer Rights Act 2015 — Explanatory Notes",
+        "publisher": "UK Government — legislation.gov.uk",
+        "type": "Official guidance on legislation",
+        "level": ["University", "General public"],
+        "length": "Long document, organised by section of the Act",
+        "language": "English",
+        "licence": "UK Open Government Licence / Crown copyright (link only)",
+        "download_allowed": false,
+        "url": "https://www.legislation.gov.uk/ukpga/2015/15/notes/contents",
+        "summary": "The government's own plain-language explanation of the UK's main consumer law: rights when buying goods, digital content and services, the remedies when things go wrong, and unfair contract terms. Written for readers who are not lawyers. These notes explain the Act as passed in 2015; the Act itself has since been amended, so check the current version for anything recent."
+      },
+      {
+        "id": "uk-business-companion",
+        "title": "Business Companion — trading standards law explained",
+        "publisher": "Chartered Trading Standards Institute (CTSI), on behalf of the UK Department for Business and Trade",
+        "type": "Guidance website",
+        "level": ["University", "General public", "Small businesses"],
+        "length": "Quick guides and in-depth guides on consumer protection law",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.businesscompanion.info",
+        "summary": "Free, government-backed guidance on UK consumer law written by experts in trading standards: consumer contracts, returns, unfair terms, pricing and more. Written for businesses, which makes it a useful way for students to see consumer rights from the other side of the counter."
+      },
+      {
+        "id": "your-europe-shopping-rights",
+        "title": "Your rights when shopping in the EU",
+        "publisher": "European Commission — Your Europe",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Interactive guide with country-by-country links",
+        "language": "English (and other EU languages)",
+        "licence": "European Commission reuse policy (link only)",
+        "download_allowed": false,
+        "url": "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm",
+        "summary": "The EU's official explanation of the minimum two-year legal guarantee on goods, what you can ask for when something breaks (repair, replacement, price reduction or refund), and where to get help — with links to extra rights in each country."
+      },
+      {
+        "id": "ecc-net-online-shopping-rights",
+        "title": "What are my consumer rights when shopping online?",
+        "publisher": "European Consumer Centres Network (ECC-Net)",
+        "type": "Guide",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guide page",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.eccnet.eu/consumer-rights/what-are-my-consumer-rights/shopping-rights/online-shopping-rights",
+        "summary": "A clear guide to online shopping rights in the EU, Norway and Iceland: the 14-day cooling-off period, refund deadlines, delivery within 30 days, and what to do if an order doesn't arrive. ECC-Net also helps consumers with cross-border disputes for free."
+      },
+      {
+        "id": "accc-repair-replace-refund",
+        "title": "Repair, replace, refund — consumer guarantees",
+        "publisher": "Australian Competition and Consumer Commission (ACCC)",
+        "type": "Official guidance and interactive problem solver",
+        "level": ["High school", "General public"],
+        "length": "Guidance pages plus an interactive problem solver",
+        "language": "English",
+        "licence": "Commonwealth of Australia copyright (link only)",
+        "download_allowed": false,
+        "url": "https://www.accc.gov.au/consumers/consumer-rights-guarantees/repair-replace-refund",
+        "summary": "How Australia's consumer guarantees work: products must be safe, durable and as described, and when they aren't you're entitled to a repair, replacement or refund depending on whether the failure is major or minor. Includes an interactive problem solver to check your rights for a specific purchase."
+      }
+    ]
   }
 ]
