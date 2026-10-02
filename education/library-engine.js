@@ -153,19 +153,28 @@
 
     card.appendChild(el('p', 'lib-card-summary', r.summary));
 
-    // One-off cross-links to Kibbo's own investigations built on the same
-    // underlying data — surfaced next to the external link, not in the data.
+    // One-off cross-links to Kibbo's own investigations and exercises built
+    // on the same underlying data — surfaced next to the external link, not
+    // in the data. Each id maps to one or more {label, url} links.
     var RELATED_KIBBO = {
-      'fbi-ic3-internet-crime-report-2025': { label: 'Related on Kibbo: The AI Scam Playbook →', url: '/investigations/ai-scam-playbook-2026' },
-      'oecd-health-at-a-glance-2025': { label: 'Related on Kibbo: Healthcare Cost Comparison →', url: '/investigations/healthcare-cost-comparison' }
+      'fbi-ic3-internet-crime-report-2025': [
+        { label: 'Related on Kibbo: The AI Scam Playbook →', url: '/investigations/ai-scam-playbook-2026' }
+      ],
+      'oecd-health-at-a-glance-2025': [
+        { label: 'Related on Kibbo: Healthcare Cost Comparison →', url: '/investigations/healthcare-cost-comparison' }
+      ],
+      'dot-cancellation-delay-dashboard': [
+        { label: 'Related on Kibbo: US Airline Ranking investigation →', url: '/investigations/us-airline-ranking-2026-h1' },
+        { label: 'Related on Kibbo: US Airline Ranking classroom exercise →', url: '/education/exercises/us-airline-ranking' }
+      ]
     };
-    if (RELATED_KIBBO[r.id]) {
+    (RELATED_KIBBO[r.id] || []).forEach(function (rk) {
       var rel = el('p', 'lib-card-related');
-      var relLink = el('a', null, RELATED_KIBBO[r.id].label);
-      relLink.href = RELATED_KIBBO[r.id].url;
+      var relLink = el('a', null, rk.label);
+      relLink.href = rk.url;
       rel.appendChild(relLink);
       card.appendChild(rel);
-    }
+    });
 
     var footer = el('div', 'lib-card-footer');
     var open = el('a', 'lib-card-open', 'Open resource ↗');

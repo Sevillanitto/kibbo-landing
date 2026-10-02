@@ -748,5 +748,89 @@
         "summary": "Australia's workplace regulator explains what young workers and students are entitled to — the minimum working age, getting ready for your first day, pay and conditions, and workplace bullying, harassment and discrimination — and offers a free Pay Calculator to check you're being paid correctly."
       }
     ]
+  },
+  {
+    "topic": "Travel & transport",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "dot-airline-refunds",
+        "title": "Airline refunds: when you're entitled to one",
+        "publisher": "U.S. Department of Transportation — Aviation Consumer Protection",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guidance page with FAQs",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+        "summary": "When US rules entitle you to a refund from an airline: a cancelled flight, a significant delay or schedule change you don't accept, delayed bags or extra services you paid for and didn't get — plus the 24-hour rule for cancelling a booking without penalty."
+      },
+      {
+        "id": "dot-cancellation-delay-dashboard",
+        "title": "Airline Cancellation and Delay Dashboard",
+        "publisher": "U.S. Department of Transportation",
+        "type": "Interactive comparison",
+        "level": ["High school", "University", "General public"],
+        "length": "Dashboard plus FAQs",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.transportation.gov/airconsumer/airline-cancellation-delay-dashboard",
+        "summary": "Shows, airline by airline, what each US carrier has committed to provide when a delay or cancellation is its own fault — meals, hotels, rebooking, compensation. These are the airlines' own commitments, which DOT can hold them to, and they can change over time."
+      },
+      {
+        "id": "your-europe-air-passenger-rights",
+        "title": "Air passenger rights in the EU",
+        "publisher": "European Commission — Your Europe",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Guidance pages",
+        "language": "English (and other EU languages)",
+        "licence": "European Commission reuse policy (link only)",
+        "download_allowed": false,
+        "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+        "summary": "The EU's official explanation of your rights when a flight departing from the EU (or arriving with an EU airline) is delayed, cancelled or overbooked: assistance, rerouting or refund, and when compensation is due. As of this check, the page still describes the existing Regulation 261/2004 framework and does not yet reflect the revised regulation the European Parliament approved in July 2026 — worth re-checking as that reform is implemented."
+      },
+      {
+        "id": "uk-caa-delays-cancellations",
+        "title": "Flight delays and cancellations — your rights",
+        "publisher": "UK Civil Aviation Authority (CAA)",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Guidance pages",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.caa.co.uk/air-passengers/travel-problems-and-rights/flight-delays-and-cancellations/",
+        "summary": "The UK aviation regulator's guidance on what airlines owe you when a flight from the UK is delayed or cancelled, how to claim, and where to go if the airline says no. Covers delays, cancellations, denied boarding, missed flights, downgrading and how to make a compensation claim."
+      },
+      {
+        "id": "ftc-buying-used-car",
+        "title": "Buying a used car from a dealer",
+        "publisher": "Federal Trade Commission (FTC)",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guide page",
+        "language": "English (also in Spanish)",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://consumer.ftc.gov/articles/buying-used-car-dealer",
+        "summary": "What to check before buying a used car in the US, including the Buyers Guide that dealers must display on every used car: whether it's sold 'as is' or with a warranty, why spoken promises are hard to enforce, and why to get the car inspected by an independent mechanic before you buy."
+      },
+      {
+        "id": "nhtsa-recalls",
+        "title": "Check for vehicle safety recalls",
+        "publisher": "National Highway Traffic Safety Administration (NHTSA)",
+        "type": "Lookup tool",
+        "level": ["High school", "General public"],
+        "length": "Lookup tool",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": false,
+        "url": "https://www.nhtsa.gov/recalls",
+        "summary": "The official US tool for checking whether a car has an unrepaired safety recall, using its vehicle identification number (VIN). A simple, practical step before buying any used car."
+      }
+    ]
   }
 ]
