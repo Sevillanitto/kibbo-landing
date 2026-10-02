@@ -832,5 +832,76 @@
         "summary": "The official US tool for checking whether a car has an unrepaired safety recall, using its vehicle identification number (VIN). A simple, practical step before buying any used car."
       }
     ]
+  },
+  {
+    "topic": "Shopping, subscriptions & advertising",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "ftc-bringing-dark-patterns-to-light",
+        "title": "Bringing Dark Patterns to Light",
+        "publisher": "Federal Trade Commission (FTC) — staff report",
+        "type": "Research report",
+        "level": ["High school", "University", "General public"],
+        "length": "Full report with an appendix cataloguing common dark patterns",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.ftc.gov/reports/bringing-dark-patterns-light",
+        "summary": "The FTC's 2022 report on 'dark patterns' — website and app designs that push people into choices they didn't intend, such as hidden fees, pre-ticked boxes and subscriptions that are hard to cancel. Its appendix is a ready-made catalogue for a lesson on spotting manipulative design. Note that it predates later developments: the FTC's 2024 'click-to-cancel' rule was struck down by a federal appeals court in 2025."
+      },
+      {
+        "id": "cma-online-choice-architecture",
+        "title": "Online Choice Architecture: How digital design can harm competition and consumers",
+        "publisher": "UK Competition and Markets Authority (CMA)",
+        "type": "Discussion paper and evidence review",
+        "level": ["University", "General public"],
+        "length": "Discussion paper (about 76 pages) plus a separate evidence review",
+        "language": "English",
+        "licence": "UK Open Government Licence / Crown copyright (link only)",
+        "download_allowed": false,
+        "url": "https://www.gov.uk/government/publications/online-choice-architecture-how-digital-design-can-harm-competition-and-consumers",
+        "summary": "A clear framework from the UK competition regulator for understanding how online design shapes what we buy: defaults, rankings, false scarcity ('only 2 left!'), drip pricing and more, with real case studies. The companion evidence review summarises the research behind 21 of these practices — useful for university work."
+      },
+      {
+        "id": "oecd-dark-commercial-patterns",
+        "title": "Dark Commercial Patterns",
+        "publisher": "OECD (Digital Economy Papers, No. 336)",
+        "type": "Research report",
+        "level": ["University"],
+        "length": "Full report",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.oecd.org/en/publications/dark-commercial-patterns_44f5e846-en.html",
+        "summary": "An international review of dark patterns in online commerce: a working definition, a taxonomy, the evidence on how much they influence consumer decisions, and how different countries are responding."
+      },
+      {
+        "id": "edpb-dark-patterns-social-media",
+        "title": "Guidelines 03/2022 on deceptive design patterns in social media platform interfaces",
+        "publisher": "European Data Protection Board (EDPB)",
+        "type": "Official guidelines",
+        "level": ["University"],
+        "length": "Full guidelines with illustrated examples",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-032022-on-deceptive-design-patterns-in-social-media-platform_en",
+        "summary": "The EU data protection regulators' guidance on design tricks in social media apps that nudge users into sharing more personal data than they intended, organised around the stages of using a platform, from signing up to deleting an account, with examples of each. This is the final adopted version (2.0)."
+      },
+      {
+        "id": "ftc-free-trials-subscriptions",
+        "title": "Free trials, automatic renewals and cancelling subscriptions",
+        "publisher": "Federal Trade Commission (FTC)",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guide page",
+        "language": "English (also in Spanish)",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions",
+        "summary": "The FTC's plain-language advice on 'free' trials that turn into paid subscriptions, automatic renewals, and what to do if a company makes it hard to cancel or keeps charging you."
+      }
+    ]
   }
 ]

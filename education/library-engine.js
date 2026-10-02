@@ -166,6 +166,10 @@
       'dot-cancellation-delay-dashboard': [
         { label: 'Related on Kibbo: US Airline Ranking investigation →', url: '/investigations/us-airline-ranking-2026-h1' },
         { label: 'Related on Kibbo: US Airline Ranking classroom exercise →', url: '/education/exercises/us-airline-ranking' }
+      ],
+      'ftc-free-trials-subscriptions': [
+        { label: 'Related on Kibbo: The Streaming Price Machine investigation →', url: '/investigations/streaming-price-machine' },
+        { label: 'Related on Kibbo: Streaming Price Machine classroom exercise →', url: '/education/exercises/streaming-prices' }
       ]
     };
     (RELATED_KIBBO[r.id] || []).forEach(function (rk) {
