@@ -632,5 +632,76 @@
         "summary": "Calculates the 'Housing Wage' — the hourly wage a full-time worker needs to rent a modest home without spending more than 30% of income on rent — for every US state and county. Strong material for data lessons, and for debate: the report is produced by an advocacy group, and critics argue the fixed 30% benchmark overstates how unaffordable housing is."
       }
     ]
+  },
+  {
+    "topic": "Credit, debt & borrowing",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "ftc-free-credit-reports",
+        "title": "Free Credit Reports",
+        "publisher": "Federal Trade Commission (FTC)",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Single guide page",
+        "language": "English (also in Spanish)",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://consumer.ftc.gov/articles/free-credit-reports",
+        "summary": "How to get your credit reports for free from the one official site, AnnualCreditReport.com — now available every week from all three national credit bureaus — and how to spot the look-alike sites that charge you or steal your details. Note that the free reports don't include a credit score."
+      },
+      {
+        "id": "studentaid-loan-simulator",
+        "title": "Loan Simulator",
+        "publisher": "Federal Student Aid, U.S. Department of Education",
+        "type": "Interactive tool",
+        "level": ["High school", "University"],
+        "length": "Interactive tool",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": false,
+        "url": "https://studentaid.gov/loan-simulator/",
+        "summary": "The official tool for estimating federal student loan payments: compare repayment plans, see the effect of borrowing more, or explore options if payments become hard to manage. Students planning to borrow can use it before taking out any loan."
+      },
+      {
+        "id": "cfpb-student-loan-calculator-activity",
+        "title": "Using a student loan calculator — classroom activity",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Lesson activity",
+        "level": ["High school"],
+        "length": "One class period: teacher guide and student worksheet",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_using-student-loan-calculator_guide.pdf",
+        "summary": "A ready-to-teach activity in which students use the official federal Loan Simulator to see how much a student loan really costs over time, and learn the difference between federal and private student loans. Pairs directly with the Loan Simulator listed in this section."
+      },
+      {
+        "id": "uk-moneyhelper",
+        "title": "MoneyHelper",
+        "publisher": "Money and Pensions Service (UK government-backed)",
+        "type": "Guidance website and tools",
+        "level": ["High school", "University", "General public"],
+        "length": "Guides, budget planner, calculators and a free debt advice locator",
+        "language": "English (and Welsh)",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt",
+        "summary": "The UK's free, impartial, government-backed money guidance service: what to know before you borrow, how credit ratings work, how to prioritise several debts, and a tool to find free accredited debt advice nearby."
+      },
+      {
+        "id": "au-moneysmart",
+        "title": "Moneysmart — credit and loans",
+        "publisher": "Australian Securities and Investments Commission (ASIC)",
+        "type": "Guidance website and tools",
+        "level": ["High school", "University", "General public"],
+        "length": "Guides and calculators",
+        "language": "English",
+        "licence": "Commonwealth of Australia copyright (link only)",
+        "download_allowed": false,
+        "url": "https://moneysmart.gov.au/loans",
+        "summary": "Australia's official free money guidance from the financial regulator, including how credit cards, personal loans and buy-now-pay-later work, how to check your credit report, and calculators to see the real cost of borrowing."
+      }
+    ]
   }
 ]
