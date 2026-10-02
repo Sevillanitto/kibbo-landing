@@ -380,5 +380,102 @@
         "summary": "How Australia's consumer guarantees work: products must be safe, durable and as described, and when they aren't you're entitled to a repair, replacement or refund depending on whether the failure is major or minor. Includes an interactive problem solver to check your rights for a specific purchase."
       }
     ]
+  },
+  {
+    "topic": "Privacy & online safety",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "eff-surveillance-self-defense",
+        "title": "Surveillance Self-Defense",
+        "publisher": "Electronic Frontier Foundation (EFF), non-profit",
+        "type": "Guide collection",
+        "level": ["High school", "University", "General public"],
+        "length": "Dozens of guides: basics, step-by-step tool guides and scenario playlists",
+        "language": "English (and other languages)",
+        "licence": "CC BY 4.0",
+        "download_allowed": true,
+        "url": "https://ssd.eff.org/",
+        "summary": "A practical, regularly updated guide to protecting your privacy online: making a security plan, passwords and two-factor authentication, avoiding phishing, phone privacy settings, and privacy when using AI tools. It includes a guide written specifically for students."
+      },
+      {
+        "id": "cisa-secure-our-world",
+        "title": "Secure Our World",
+        "publisher": "Cybersecurity and Infrastructure Security Agency (CISA), U.S. government",
+        "type": "Campaign resources (tip sheets, toolkit, activities)",
+        "level": ["High school", "General public", "Families"],
+        "length": "Tip sheets, family guide, toolkit and activities such as bingo cards",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.cisa.gov/secure-our-world/partner-resources",
+        "summary": "The US government's ongoing online safety campaign, built around four habits: strong passwords and a password manager, multifactor authentication, recognising and reporting phishing, and keeping software updated. Includes printable tip sheets and simple classroom-friendly activities."
+      },
+      {
+        "id": "common-sense-education-digital-literacy",
+        "title": "Digital Literacy & Well-Being and Digital Citizenship curricula",
+        "publisher": "Common Sense Education (non-profit)",
+        "type": "Curriculum",
+        "level": ["Elementary", "Middle school", "High school"],
+        "length": "More than 140 lessons, plus AI literacy lessons",
+        "language": "English",
+        "licence": "Free to use; lessons shareable with attribution for non-commercial use (link only). A free teacher account unlocks some materials.",
+        "download_allowed": false,
+        "url": "https://www.commonsense.org/education",
+        "summary": "Free, research-backed K–12 lessons on online privacy and safety, digital footprint, media literacy, cyberbullying and healthy tech habits, used in a large share of US schools. Each lesson comes with slides and activities."
+      },
+      {
+        "id": "libraries-stand-for-privacy-handbook",
+        "title": "Libraries Stand for Privacy — Participant Handbook",
+        "publisher": "Sarah Hartman-Caverly (editor), Penn State University Libraries (Pressbooks)",
+        "type": "Open handbook",
+        "level": ["University", "Librarians and educators"],
+        "length": "Full handbook",
+        "language": "English",
+        "licence": "CC BY-NC-SA 4.0 (link only)",
+        "download_allowed": false,
+        "url": "https://psu.pb.unizin.org/privacyliteracynatforum/",
+        "summary": "A 2025 open handbook on privacy literacy written for libraries and educators, gathering key concepts and trusted tools for teaching people to protect their personal information."
+      },
+      {
+        "id": "ncsc-cyber-aware",
+        "title": "Cyber Aware",
+        "publisher": "UK National Cyber Security Centre (NCSC)",
+        "type": "Official guidance",
+        "level": ["High school", "General public", "Families"],
+        "length": "Six key actions plus short guides",
+        "language": "English (accessible formats available)",
+        "licence": "Crown copyright (UK) — link only",
+        "download_allowed": false,
+        "url": "https://www.ncsc.gov.uk/cyberaware/home",
+        "summary": "The UK government's top tips for staying secure online, built around six simple actions: a strong separate email password, passwords made of three random words, a password manager, 2-step verification, software updates and backups."
+      },
+      {
+        "id": "ico-your-data-rights",
+        "title": "Your data protection rights",
+        "publisher": "Information Commissioner's Office (ICO), UK",
+        "type": "Official guidance",
+        "level": ["High school", "University", "General public"],
+        "length": "Guidance pages on each individual right",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://ico.org.uk/for-the-public/what-rights-do-i-have-over-my-personal-information/",
+        "summary": "The UK data protection regulator's guidance for the public on your rights over your personal information — including how to ask an organisation for a copy of everything it holds about you (a subject access request), which in most cases is free and must be answered within one month."
+      },
+      {
+        "id": "esafety-schools-hub",
+        "title": "eSafety schools' hub",
+        "publisher": "eSafety Commissioner, Australia",
+        "type": "Classroom resources and professional learning",
+        "level": ["Elementary", "Middle school", "High school", "Educators"],
+        "length": "Classroom resources, posters, videos with lesson plans, and free professional learning",
+        "language": "English (some resources in other languages)",
+        "licence": "Commonwealth of Australia copyright — link only",
+        "download_allowed": false,
+        "url": "https://www.esafety.gov.au/educators/schools-hub",
+        "summary": "Australia's national online safety regulator gathers its school resources in one place: classroom lessons and videos with slide decks and worksheets, posters, an evidence-based framework for teaching online safety, and free training for teachers."
+      }
+    ]
   }
 ]
