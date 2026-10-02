@@ -6,22 +6,22 @@
 <script src="/kibbo-navbar.js" defer></script>
 
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.getkibbo.com/education">
+<link rel="canonical" href="https://www.getkibbo.com/education/library">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kibbo Education — Free Classroom Exercises on Consumer Data | Kibbo</title>
+<title>Kibbo Education Library — Free External Learning Resources | Kibbo</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="description" content="Free classroom exercises built on Kibbo's own consumer datasets, for teachers and students covering statistics, economics, and personal finance. No sign-up, print and use.">
+<meta name="description" content="A curated library of free learning resources from government agencies, non-profits and open textbook publishers, organised by topic, for teachers and students.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kibbo">
-<meta property="og:title" content="Kibbo Education — Free Classroom Exercises on Consumer Data">
-<meta property="og:description" content="Free classroom exercises built on Kibbo's own consumer datasets, for teachers and students.">
-<meta property="og:url" content="https://www.getkibbo.com/education">
+<meta property="og:title" content="Kibbo Education Library — Free External Learning Resources">
+<meta property="og:description" content="A curated library of free learning resources from government agencies, non-profits and open textbook publishers, organised by topic.">
+<meta property="og:url" content="https://www.getkibbo.com/education/library">
 <meta property="og:image" content="https://www.getkibbo.com/favicon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kibbo Education — Free Classroom Exercises on Consumer Data">
-<meta name="twitter:description" content="Free classroom exercises built on Kibbo's own consumer datasets, for teachers and students.">
+<meta name="twitter:title" content="Kibbo Education Library — Free External Learning Resources">
+<meta name="twitter:description" content="A curated library of free learning resources from government agencies, non-profits and open textbook publishers, organised by topic.">
 <meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,23 +32,16 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Kibbo Education",
-  "url": "https://www.getkibbo.com/education",
-  "description": "Free classroom exercises built on Kibbo's own consumer datasets, for teachers and students.",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Kibbo Education", "item": "https://www.getkibbo.com/education" }
-    ]
-  }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Kibbo Education", "item": "https://www.getkibbo.com/education" },
+    { "@type": "ListItem", "position": 3, "name": "Library", "item": "https://www.getkibbo.com/education/library" }
+  ]
 }
 </script>
 
 <style>
-  /* Category sidebar — same .blf- pattern as blog.html/research.html,
-     reused verbatim. Filters between this page's own sections. */
   .blf-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
   .blf-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
   .blf-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
@@ -71,22 +64,28 @@
     .blf-sidebar { position: static; }
   }
 
-  /* Page-specific blocks, reusing .pillar-category-* and .audience-card
-     like research.html. Education's accent is green where Research's is
-     the shared yellow icon block — scoped override below, not a change
-     to the shared .pillar-category-icon rule (that would affect every
-     other page that still wants yellow). */
   .edu-section { padding: 0 0 56px; }
   .edu-section:last-child { padding-bottom: 0; }
   .edu-section .pillar-category-icon { background: var(--accent-green); }
-  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-  .edu-card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 14px; }
-  .edu-card-meta span { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 100px; padding: 3px 9px; }
-  .edu-card-link { font-size: 13.5px; font-weight: 600; color: var(--accent-green); text-decoration: none; }
-  .edu-card-link:hover { text-decoration: underline; }
-  .edu-using-list { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 12px; max-width: 640px; }
-  .edu-using-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
-  .edu-using-list li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
+
+  .lib-intro { max-width: 760px; }
+  .lib-disclaimer { font-size: 13.5px; color: var(--text-muted); margin-top: 10px; }
+
+  .lib-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+  .lib-card { display: flex; flex-direction: column; }
+  .lib-card h3 { font-size: 18px; margin-bottom: 4px; }
+  .lib-card-publisher { font-size: 13.5px; color: var(--text-muted); margin: 0 0 12px; }
+  .lib-card-meta { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .lib-card-meta strong { color: var(--text-primary); font-weight: 600; }
+  .lib-card-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.6; flex: 1; margin-bottom: 14px; }
+  .lib-card-related { font-size: 13px; margin: 0 0 14px; }
+  .lib-card-related a { color: var(--accent-terra); font-weight: 600; text-decoration: none; }
+  .lib-card-related a:hover { text-decoration: underline; }
+  .lib-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid var(--border); }
+  .lib-card-open { font-size: 14px; font-weight: 700; color: var(--accent-green); text-decoration: none; }
+  .lib-card-open:hover { text-decoration: underline; }
+  .lib-card-checked { font-size: 12px; color: var(--text-muted); }
+  .lib-error { color: var(--accent-terra); font-size: 15px; }
 </style>
 </head>
 <body>
@@ -318,123 +317,15 @@
 <div class="section-page-hero">
   <div class="container">
     <p class="section-label">Kibbo Education</p>
-    <h1 class="section-title">Free classroom material, built on our own data</h1>
-    <p class="section-subtitle">Free, practical exercises for teachers and students, built directly on Kibbo's own consumer datasets. No sign-up, no accreditation or institutional partnership claims — just material you can print and use.</p>
+    <h1 class="section-title">Library</h1>
+    <div class="lib-intro">
+      <p class="section-subtitle">A curated selection of free resources from government agencies, non-profits and open textbook publishers, chosen for teachers and students, organised by topic.</p>
+      <p class="lib-disclaimer">Kibbo is not affiliated with these publishers; each is listed because it is free and useful.</p>
+    </div>
   </div>
 </div>
 
-<div class="blf-layout">
-
-  <!-- SIDEBAR -->
-  <aside class="blf-sidebar" aria-label="Jump to section">
-    <p class="blf-sidebar-label">Sections</p>
-    <details class="blf-cat" id="eduFilterToggle">
-      <summary><span class="blf-cat-name" id="eduFilterName">All</span><span class="blf-count" id="eduFilterCount">6</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
-      <ul class="blf-cat-list" id="eduFilter" role="tablist" aria-label="Education sections">
-        <li><button type="button" data-value="" data-name="All" data-count="6" class="active">All (6)</button></li>
-        <li><button type="button" data-value="Exercises" data-name="Classroom exercises" data-count="3">Classroom exercises (3)</button></li>
-        <li><button type="button" data-value="Library" data-name="Library" data-count="1">Library (1)</button></li>
-        <li><button type="button" data-value="DataBehind" data-name="The data behind the exercises" data-count="1">The data behind the exercises (1)</button></li>
-        <li><button type="button" data-value="UsingInClass" data-name="Using these in class" data-count="1">Using these in class (1)</button></li>
-      </ul>
-    </details>
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="section-main" style="padding-top:0;">
-
-    <!-- CLASSROOM EXERCISES -->
-    <section class="edu-section" data-category="Exercises">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-        </div>
-        <h2 class="pillar-category-name">Classroom exercises</h2>
-        <span class="pillar-category-count">3 available</span>
-      </div>
-      <p style="color:var(--text-secondary); font-size:15px; line-height:1.6; margin:12px 0 0; max-width:640px;">Each sheet is built on one published Kibbo dataset, with graded exercises and a closed-by-default teacher answer key.</p>
-
-      <div class="edu-grid">
-        <div class="audience-card">
-          <h3><a href="/education/exercises/streaming-prices" style="color:inherit; text-decoration:none;">The Streaming Price Machine</a></h3>
-          <p>Seven exercises on 97 verified price-change events across 10 US streaming platforms — percentage change, cumulative cost, household budgeting, and what the data can't tell you.</p>
-          <div class="edu-card-meta">
-            <span>Streaming Pricing Dataset</span>
-            <span>High school &amp; university</span>
-            <span>Statistics, economics, personal finance, media studies</span>
-          </div>
-          <a class="edu-card-link" href="/education/exercises/streaming-prices">Open the exercise sheet →</a>
-        </div>
-        <div class="audience-card">
-          <h3><a href="/education/exercises/us-airline-ranking" style="color:inherit; text-decoration:none;">US Airline Ranking 2026 H1</a></h3>
-          <p>Six exercises on the DOT's own reliability data for 9 US airlines — rank-based scoring, percentage points vs. percent, and whether the ranking methodology is fair.</p>
-          <div class="edu-card-meta">
-            <span>US Airline Reliability Dataset</span>
-            <span>High school &amp; university</span>
-            <span>Statistics, mathematics, economics, business studies</span>
-          </div>
-          <a class="edu-card-link" href="/education/exercises/us-airline-ranking">Open the exercise sheet →</a>
-        </div>
-        <div class="audience-card">
-          <h3><a href="/education/exercises/healthcare-costs" style="color:inherit; text-decoration:none;">What Does It Really Cost to Get Sick?</a></h3>
-          <p>Eight exercises on a 58-row, 4-country healthcare cost dataset — comparing prices fairly, reading missing data as a finding, and spotting conclusions the data can't support.</p>
-          <div class="edu-card-meta">
-            <span>Healthcare Cost Dataset</span>
-            <span>University (critical-thinking questions also work for upper high school)</span>
-            <span>Health economics, public policy, statistics, economics</span>
-          </div>
-          <a class="edu-card-link" href="/education/exercises/healthcare-costs">Open the exercise sheet →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIBRARY -->
-    <section class="edu-section" data-category="Library">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <h2 class="pillar-category-name">Library</h2>
-        <span class="pillar-category-count">Curated free resources</span>
-      </div>
-      <div class="edu-grid">
-        <div class="audience-card">
-          <h3><a href="/education/library" style="color:inherit; text-decoration:none;">Kibbo Education Library</a></h3>
-          <p>A curated selection of free external resources from government agencies, non-profits and open textbook publishers, organised by topic — not hosted on Kibbo, just linked.</p>
-          <a class="edu-card-link" href="/education/library">Browse the library →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE DATA BEHIND THE EXERCISES -->
-    <section class="edu-section" data-category="DataBehind">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
-        </div>
-        <h2 class="pillar-category-name">The data behind the exercises</h2>
-      </div>
-      <p style="color:var(--text-secondary); font-size:15px; line-height:1.6; margin:12px 0 0; max-width:640px;">Every exercise sheet here is built directly on a published Kibbo dataset — the same CSVs and READMEs used in our investigations, not a simplified or separate teaching version. For the full methodology, sourcing notes, and raw downloads, see the <a href="/datasets" style="color:var(--accent-green); font-weight:600;">Consumer Data Library</a>. For the investigations these datasets were built for, see <a href="/research" style="color:var(--accent-green); font-weight:600;">Kibbo Research</a>.</p>
-    </section>
-
-    <!-- USING THESE IN CLASS -->
-    <section class="edu-section" data-category="UsingInClass">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
-        </div>
-        <h2 class="pillar-category-name">Using these in class</h2>
-      </div>
-      <ul class="edu-using-list">
-        <li>Free to use, print, and share in your teaching — no license, sign-up, or fee.</li>
-        <li>We only ask that you credit "Kibbo (getkibbo.com)" when you share or adapt a sheet.</li>
-        <li>Each sheet's teacher answer key is collapsed by default, so it won't appear if you hand the page straight to a class.</li>
-      </ul>
-      <p style="color:var(--text-secondary); font-size:15px; line-height:1.6; margin:16px 0 0; max-width:640px;">Teaching with these and have a question, or built something with them you'd like to share? <a href="mailto:hello@getkibbo.com" style="color:var(--accent-green); font-weight:600;">hello@getkibbo.com</a></p>
-    </section>
-
-  </main>
-</div>
+<div id="library-app"></div>
 
 <!-- NEWSLETTER SIGNUP -->
 <section class="newsletter-signup" aria-label="Newsletter signup">
@@ -503,46 +394,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
-
-<!-- SECTION FILTER LOGIC (same interaction pattern as blog.html's .blf- filter) -->
-<script>
-(function () {
-  var sections = Array.prototype.slice.call(document.querySelectorAll('.edu-section[data-category]'));
-  var pills = Array.prototype.slice.call(document.querySelectorAll('#eduFilter button'));
-  var toggle = document.getElementById('eduFilterToggle');
-  var currentName = document.getElementById('eduFilterName');
-  var currentCount = document.getElementById('eduFilterCount');
-
-  function applyFilter(value, updateUrl) {
-    sections.forEach(function (s) {
-      s.hidden = !!value && s.getAttribute('data-category') !== value;
-    });
-    pills.forEach(function (p) {
-      var on = p.dataset.value === value;
-      p.classList.toggle('active', on);
-      if (on) {
-        currentName.textContent = p.dataset.name;
-        currentCount.textContent = p.dataset.count;
-      }
-    });
-    if (toggle) toggle.open = false;
-    if (updateUrl) {
-      var url = new URL(window.location.href);
-      if (value) url.searchParams.set('section', value);
-      else url.searchParams.delete('section');
-      history.replaceState(null, '', url);
-    }
-  }
-
-  pills.forEach(function (p) {
-    p.addEventListener('click', function () { applyFilter(p.dataset.value, true); });
-  });
-
-  var valid = ['Exercises', 'Library', 'DataBehind', 'UsingInClass'];
-  var initial = new URLSearchParams(window.location.search).get('section') || '';
-  if (initial && valid.indexOf(initial) === -1) initial = '';
-  applyFilter(initial, false);
-})();
-</script>
+<script src="/education/library-engine.js"></script>
 </body>
 </html>

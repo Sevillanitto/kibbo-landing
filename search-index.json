@@ -16154,6 +16154,19 @@
     ]
   },
   {
+    "title": "Kibbo Education Library",
+    "type": "library",
+    "url": "/education/library",
+    "description": "A curated library of free external learning resources from government agencies, non-profits and open textbook publishers, organised by topic, for teachers and students.",
+    "keywords": [
+      "free education resources",
+      "open textbooks",
+      "financial literacy curriculum",
+      "scam awareness resources",
+      "teacher resources"
+    ]
+  },
+  {
     "title": "Subscription & Gym Cancellation Kit",
     "type": "kit",
     "block": "subscriptions-services",
