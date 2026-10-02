@@ -153,12 +153,16 @@
 
     card.appendChild(el('p', 'lib-card-summary', r.summary));
 
-    // One-off cross-link: IC3's report also underlies Kibbo's own AI Scam
-    // Playbook investigation — worth surfacing next to the external link.
-    if (r.id === 'fbi-ic3-internet-crime-report-2025') {
+    // One-off cross-links to Kibbo's own investigations built on the same
+    // underlying data — surfaced next to the external link, not in the data.
+    var RELATED_KIBBO = {
+      'fbi-ic3-internet-crime-report-2025': { label: 'Related on Kibbo: The AI Scam Playbook →', url: '/investigations/ai-scam-playbook-2026' },
+      'oecd-health-at-a-glance-2025': { label: 'Related on Kibbo: Healthcare Cost Comparison →', url: '/investigations/healthcare-cost-comparison' }
+    };
+    if (RELATED_KIBBO[r.id]) {
       var rel = el('p', 'lib-card-related');
-      var relLink = el('a', null, 'Related on Kibbo: The AI Scam Playbook →');
-      relLink.href = '/investigations/ai-scam-playbook-2026';
+      var relLink = el('a', null, RELATED_KIBBO[r.id].label);
+      relLink.href = RELATED_KIBBO[r.id].url;
       rel.appendChild(relLink);
       card.appendChild(rel);
     }

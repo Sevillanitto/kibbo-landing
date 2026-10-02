@@ -477,5 +477,89 @@
         "summary": "Australia's national online safety regulator gathers its school resources in one place: classroom lessons and videos with slide decks and worksheets, posters, an evidence-based framework for teaching online safety, and free training for teachers."
       }
     ]
+  },
+  {
+    "topic": "Healthcare costs & insurance",
+    "verified": "2026-10-02",
+    "resources": [
+      {
+        "id": "kff-health-policy-101",
+        "title": "Health Policy 101",
+        "publisher": "KFF (non-profit health policy research organisation), edited by Drew Altman",
+        "type": "Online textbook",
+        "level": ["University", "General public"],
+        "length": "16 chapters, each downloadable as a PDF and updated regularly",
+        "language": "English",
+        "licence": "Free to read and download for students and faculty (link only)",
+        "download_allowed": false,
+        "url": "https://www.kff.org/other-health/health-policy-101-introduction/",
+        "summary": "A free 'mini textbook' on US health policy written for students and faculty: Medicare, Medicaid, the Affordable Care Act, employer insurance, health care costs and affordability, medical debt, the regulation of private insurance, and an international comparison of health systems."
+      },
+      {
+        "id": "healthcare-gov-glossary",
+        "title": "Glossary of Health Coverage and Medical Terms",
+        "publisher": "HealthCare.gov (U.S. Centers for Medicare & Medicaid Services)",
+        "type": "Glossary",
+        "level": ["High school", "University", "General public"],
+        "length": "Glossary page with a downloadable PDF and a worked example",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.healthcare.gov/SBC-GLOSSARY/",
+        "summary": "The official US definitions of the words that make health insurance confusing — deductible, coinsurance, copayment, out-of-pocket limit — with an illustrated example of how they work together when you actually get care."
+      },
+      {
+        "id": "cms-medical-bill-rights-guides",
+        "title": "Medical bill rights — consumer guides",
+        "publisher": "U.S. Centers for Medicare & Medicaid Services (CMS)",
+        "type": "Fact sheets",
+        "level": ["High school", "University", "General public"],
+        "length": "Short printable fact sheets",
+        "language": "English plus several other languages",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.cms.gov/medical-bill-rights/help/guides/advocate-resources",
+        "summary": "Plain-language fact sheets on your rights against surprise medical bills under the No Surprises Act: what a surprise bill is, what a good faith estimate is, how to read a medical bill and how it differs from an Explanation of Benefits, and what to know before signing a consent form."
+      },
+      {
+        "id": "cms-no-surprises-consumer-advocate-toolkit",
+        "title": "No Surprises Act — Consumer Advocate Toolkit",
+        "publisher": "U.S. Centers for Medicare & Medicaid Services (CMS)",
+        "type": "Toolkit",
+        "level": ["University", "General public", "Educators and advocates"],
+        "length": "Toolkit with decision trees, sample documents and key terms",
+        "language": "English",
+        "licence": "US federal government work (public domain)",
+        "download_allowed": true,
+        "url": "https://www.cms.gov/nosurprises/consumer-advocate-toolkit",
+        "summary": "A deeper guide to the federal surprise-billing protections, built for people who help others with medical bills. Includes decision trees showing when the protections apply, a sample good faith estimate and a sample notice — useful for case-study work in class."
+      },
+      {
+        "id": "commonwealth-fund-mirror-mirror-2024",
+        "title": "Mirror, Mirror 2024: A Portrait of the Failing U.S. Health System — Comparing Performance in 10 Nations",
+        "publisher": "The Commonwealth Fund (private foundation) — David Blumenthal et al.",
+        "type": "Research report",
+        "level": ["University", "General public"],
+        "length": "Full report, plus chartpack",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.commonwealthfund.org/publications/fund-reports/2024/sep/mirror-mirror-2024",
+        "summary": "Compares the health systems of 10 high-income countries, including the US, UK, Germany and Australia, on 70 measures of access, care process, administrative efficiency, equity and outcomes. A good basis for discussing how rankings are built: the result depends on which measures are chosen and how they are weighted."
+      },
+      {
+        "id": "oecd-health-at-a-glance-2025",
+        "title": "Health at a Glance 2025: OECD Indicators",
+        "publisher": "OECD",
+        "type": "Statistical report",
+        "level": ["University"],
+        "length": "About 244 pages, readable online or as a PDF",
+        "language": "English",
+        "licence": "Free to read (link only)",
+        "download_allowed": false,
+        "url": "https://www.oecd.org/en/publications/2025/11/health-at-a-glance-2025_a894f72e.html",
+        "summary": "The standard international reference for comparing health systems: life expectancy, access and quality of care, waiting times, and how much each country spends on health and how that spending is financed. Built from comparable official national statistics."
+      }
+    ]
   }
 ]
