@@ -16105,6 +16105,55 @@
     ]
   },
   {
+    "title": "Kibbo Education",
+    "type": "education",
+    "url": "/education",
+    "description": "Free classroom exercises built on Kibbo's own consumer datasets, for teachers and students covering statistics, economics, and personal finance.",
+    "keywords": [
+      "kibbo education",
+      "classroom exercises",
+      "teaching consumer data",
+      "free worksheets",
+      "statistics exercises"
+    ]
+  },
+  {
+    "title": "The Streaming Price Machine — Classroom Exercises",
+    "type": "exercise",
+    "url": "/education/exercises/streaming-prices",
+    "description": "Seven classroom exercises built on Kibbo's 97-row streaming pricing dataset, with a teacher answer key.",
+    "keywords": [
+      "streaming prices classroom exercise",
+      "statistics worksheet",
+      "percentage change exercise",
+      "teacher answer key"
+    ]
+  },
+  {
+    "title": "US Airline Ranking 2026 H1 — Classroom Exercises",
+    "type": "exercise",
+    "url": "/education/exercises/us-airline-ranking",
+    "description": "Six classroom exercises built on the DOT's own US airline reliability data, with a teacher answer key.",
+    "keywords": [
+      "airline ranking classroom exercise",
+      "statistics worksheet",
+      "percentage points vs percent",
+      "teacher answer key"
+    ]
+  },
+  {
+    "title": "What Does It Really Cost to Get Sick? — Classroom Exercises",
+    "type": "exercise",
+    "url": "/education/exercises/healthcare-costs",
+    "description": "Eight classroom exercises built on Kibbo's 58-row, 4-country healthcare cost dataset, with a teacher answer key.",
+    "keywords": [
+      "healthcare cost classroom exercise",
+      "health economics worksheet",
+      "statistics exercise",
+      "teacher answer key"
+    ]
+  },
+  {
     "title": "Subscription & Gym Cancellation Kit",
     "type": "kit",
     "block": "subscriptions-services",
