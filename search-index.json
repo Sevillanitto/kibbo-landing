@@ -60,6 +60,71 @@
     ]
   },
   {
+    "title": "Can a Bank Refuse to Let Me Transfer Money to a Crypto Exchange?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-bank-refuse-let-me-transfer-money-to-crypto-exchange",
+    "description": "Usually, yes — banks have broad discretion to decline or delay transfers to crypto exchanges under their own risk policies and anti-money-laundering obligations, and no federal law entitles you to force the transfer through.",
+    "keywords": [
+      "bank refuse transfer to crypto exchange",
+      "bank blocking crypto purchase",
+      "bank anti-money-laundering crypto policy",
+      "can bank stop you sending money to exchange"
+    ]
+  },
+  {
+    "title": "What Happens if a Crypto Exchange Closes While I Have Money There?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/what-happens-if-crypto-exchange-closes-while-i-have-money-there",
+    "description": "Your crypto is not protected by FDIC or SIPC insurance. If the exchange goes bankrupt, you typically become an unsecured creditor, as seen in the Celsius, Voyager and FTX collapses, with uncertain and often partial recovery.",
+    "keywords": [
+      "crypto exchange closes what happens to my money",
+      "crypto exchange bankruptcy unsecured creditor",
+      "is crypto FDIC insured",
+      "FTX Celsius Voyager customer recovery"
+    ]
+  },
+  {
+    "title": "Can a Payment App Reverse a Transfer After I Receive the Money?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-payment-app-reverse-transfer-after-i-receive-money",
+    "description": "Usually not simply at will — but your bank or the app can freeze or claw back funds if it determines the transfer was unauthorized or part of fraud, and the legal landscape for who absorbs scam losses is currently unsettled.",
+    "keywords": [
+      "payment app reverse transfer after received",
+      "can Venmo Zelle Cash App claw back money",
+      "unauthorized transfer clawback rights",
+      "who pays for scam payment app transfer"
+    ]
+  },
+  {
+    "title": "Can a Crypto Platform Change Its Fees Without Telling Me?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-crypto-platform-change-its-fees-without-telling-me",
+    "description": "In most states, yes — crypto platforms are largely governed by their own terms of service, which usually allow fee changes at any time. A few states, including California and New York, now require licensed platforms to give advance notice.",
+    "keywords": [
+      "crypto platform change fees without notice",
+      "exchange raised fees without telling me",
+      "crypto terms of service fee changes",
+      "state law crypto fee notice requirement"
+    ]
+  },
+  {
+    "title": "Can a Bank Block a Payment Because It Thinks It Is a Scam?",
+    "type": "question",
+    "block": "crypto-fintech",
+    "url": "/questions/crypto-fintech/can-bank-block-payment-because-it-thinks-it-is-scam",
+    "description": "Yes — banks have broad legal authority, and in many cases an obligation, to delay or block a payment they suspect is fraudulent, under the Bank Secrecy Act and a growing number of state fraud-hold laws.",
+    "keywords": [
+      "bank blocked my payment suspected scam",
+      "bank fraud hold on payment",
+      "Bank Secrecy Act payment delay",
+      "state fraud hold law bank"
+    ]
+  },
+  {
     "title": "Can a Fintech Company Close My Account Without Explaining Why?",
     "type": "question",
     "block": "crypto-fintech",
