@@ -203,6 +203,71 @@
     ]
   },
   {
+    "title": "Can My Employer Make Me Explain Why I Need a Day Off?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-employer-make-me-explain-why-i-need-day-off",
+    "description": "Usually, yes — no federal law stops an employer from asking. But if the time off falls under a state paid sick leave law, you may not have to give a reason or proof for short absences.",
+    "keywords": [
+      "employer asking why I need day off",
+      "do I have to explain absence to employer",
+      "state paid sick leave law proof",
+      "employee privacy reason for time off"
+    ]
+  },
+  {
+    "title": "Can My Employer Change My Working Hours Without Asking Me?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-employer-change-working-hours-without-asking",
+    "description": "In most of the US, yes — federal law sets no notice requirement for schedule changes. A growing number of cities and states have their own advance-notice rules, and your pay can't drop for work already done.",
+    "keywords": [
+      "employer change working hours without notice",
+      "schedule change no notice law",
+      "predictive scheduling laws by state",
+      "employer reduce pay for hours already worked"
+    ]
+  },
+  {
+    "title": "Can My Employer Record Me on CCTV Without Telling Me?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-employer-record-me-cctv-without-telling-me",
+    "description": "Often yes for video-only cameras in open work areas, but it depends on your state. If the camera also records audio, a dozen or so states require everyone's consent, and some states require advance written notice.",
+    "keywords": [
+      "employer CCTV recording without telling me",
+      "workplace video surveillance law",
+      "audio recording consent at work",
+      "hidden camera employee rights"
+    ]
+  },
+  {
+    "title": "Can I Refuse to Answer Work Calls While I Am on Vacation?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-i-refuse-answer-work-calls-on-vacation",
+    "description": "In most cases, no — US law doesn't give you a right to disconnect. But if you're a non-exempt (hourly) employee, any time you actually spend working must be paid, even during paid vacation.",
+    "keywords": [
+      "refuse work calls on vacation",
+      "right to disconnect US law",
+      "non-exempt employee paid for vacation work",
+      "employer contact during time off"
+    ]
+  },
+  {
+    "title": "Can My Employer Make Me Pay for Equipment I Break Accidentally?",
+    "type": "question",
+    "block": "employment",
+    "url": "/questions/employment/can-employer-make-me-pay-equipment-i-break-accidentally",
+    "description": "Under federal law, a deduction can't drop your pay below minimum wage. Many states go much further — California and New York, for example, generally bar charging employees for ordinary accidental damage at all.",
+    "keywords": [
+      "employer charge me for broken equipment",
+      "paycheck deduction accidental damage",
+      "minimum wage deduction limit",
+      "state law employee equipment damage"
+    ]
+  },
+  {
     "title": "Can My Employer Deduct Money From My Salary for Mistakes?",
     "type": "question",
     "block": "employment",
