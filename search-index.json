@@ -775,6 +775,71 @@
     ]
   },
   {
+    "title": "Can a University Change My Course After I Have Already Paid?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-university-change-my-course-after-i-have-already-paid",
+    "description": "Usually, yes — most enrollment agreements give the school broad rights to change course content, instructors or format. Your main protection is if the change is so drastic it breaches what you were actually sold.",
+    "keywords": [
+      "university change course after paid",
+      "school changed course content after enrollment",
+      "enrollment agreement course change rights",
+      "material breach course change university"
+    ]
+  },
+  {
+    "title": "Can a School Charge Me for a Certificate I Was Promised for Free?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-school-charge-me-for-certificate-i-was-promised-for-free",
+    "description": "No — if a school advertised a certificate as free and then charges for it, that's a classic bait-and-switch, which the FTC and state deceptive trade practices laws specifically prohibit.",
+    "keywords": [
+      "school charging for free certificate",
+      "bait and switch certificate course",
+      "FTC deceptive trade practices school",
+      "promised free certificate now charged"
+    ]
+  },
+  {
+    "title": "Can a University Use My Work Without My Permission?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-university-use-my-work-without-my-permission",
+    "description": "Generally, no — under standard US copyright principles, students own the copyright to their own coursework by default, with narrow exceptions for paid employment work or significant use of university resources.",
+    "keywords": [
+      "university use my work without permission",
+      "who owns copyright student coursework",
+      "university copyright student work rights",
+      "school using student project without consent"
+    ]
+  },
+  {
+    "title": "Can a Teacher Record an Online Class Without Asking Students?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-teacher-record-online-class-without-asking-students",
+    "description": "It depends on two separate things: FERPA governs sharing the recording outside the class, not the act of recording itself, while your state's recording consent law governs whether students must be told before being recorded at all.",
+    "keywords": [
+      "teacher recording online class without consent",
+      "FERPA class recording rights",
+      "state consent law recording online class",
+      "student rights being recorded in class"
+    ]
+  },
+  {
+    "title": "Can a University Share My Grades With My Parents?",
+    "type": "question",
+    "block": "training-education",
+    "url": "/questions/training-education/can-university-share-my-grades-with-my-parents",
+    "description": "Generally, no, without your consent — FERPA transfers privacy rights to you once you enroll in college, at any age. The main exception is if your parents claim you as a tax dependent, which lets (but doesn't require) the school to share records with them.",
+    "keywords": [
+      "university share grades with parents",
+      "FERPA college student privacy rights",
+      "parents access college grades tax dependent",
+      "can college tell parents my grades"
+    ]
+  },
+  {
     "title": "Can an Online Course Automatically Renew My Subscription?",
     "type": "question",
     "block": "training-education",
