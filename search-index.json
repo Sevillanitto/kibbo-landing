@@ -16940,6 +16940,123 @@
     ]
   },
   {
+    "title": "A Zelle User Says the Bank Blamed Them Repeatedly, Then Closed Their Account Without Warning",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/zelle-account-closed-cfpb-complaint-2025",
+    "description": "A January 2025 CFPB complaint against Early Warning Services (Zelle) describes repeated losses, no help from the bank, and an account closure. The company closed it with an explanation.",
+    "keywords": [
+      "zelle account closed cfpb complaint",
+      "early warning services complaint",
+      "zelle fraud no help from bank",
+      "cfpb complaint zelle 2025"
+    ]
+  },
+  {
+    "title": "A Servicemember Says Ford Credit Refused to Apply a State Interest-Rate Law to Their Loan",
+    "type": "case",
+    "block": "cars-vehicles",
+    "url": "/real-cases/ford-credit-servicemember-interest-rate-cfpb",
+    "description": "A December 2024 CFPB complaint against Ford Motor Credit describes a refused request to apply a state servicemember law to an auto loan. The company closed it with monetary relief.",
+    "keywords": [
+      "ford credit servicemember interest rate",
+      "louisiana servicemembers civil relief act auto loan",
+      "cfpb complaint ford motor credit",
+      "scra auto loan interest rate dispute"
+    ]
+  },
+  {
+    "title": "A Consumer Says a Collector Keeps Calling About a Card They Closed in 2018",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/encore-capital-debt-not-yours-cfpb",
+    "description": "A September 2025 CFPB complaint against Encore Capital Group describes seven years of collection calls over a credit card the consumer says was lost and closed in 2018.",
+    "keywords": [
+      "encore capital debt collection complaint",
+      "debt collector calling closed account",
+      "debt is not yours cfpb complaint",
+      "fdcpa debt validation dispute"
+    ]
+  },
+  {
+    "title": "A Customer Says U.S. Bank Cleared a Stolen Check Twice, Then Refunded Only One",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/us-bank-duplicate-check-deposits-cfpb",
+    "description": "A 2024 CFPB complaint against U.S. Bank describes an altered check deposited three times, two years of back and forth, and a partial refund. The company closed it with monetary relief.",
+    "keywords": [
+      "us bank duplicate check deposit complaint",
+      "altered check deposited twice cfpb",
+      "stolen check fraud bank refund",
+      "cfpb complaint us bancorp check fraud"
+    ]
+  },
+  {
+    "title": "A Customer Says Citizens Bank Denied a $300 Savings Bonus on Terms It Never Disclosed",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/citizens-savings-account-bonus-cfpb",
+    "description": "A 2023 CFPB complaint against Citizens Financial Group describes a mailed bank bonus offer, a denied savings bonus and unanswered calls. The company closed it with monetary relief.",
+    "keywords": [
+      "citizens bank savings bonus denied",
+      "bank bonus offer terms dispute",
+      "cfpb complaint citizens financial group",
+      "savings account bonus not disclosed"
+    ]
+  },
+  {
+    "title": "A Customer Says Bank of America Approved a $3,400 Fraud Refund, Then Reversed Its Decision",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/bank-of-america-fraud-reimbursement-reversed-cfpb",
+    "description": "A May 2023 CFPB complaint against Bank of America describes an approved fraud reimbursement that never arrived and was later withdrawn. The company reported monetary relief.",
+    "keywords": [
+      "bank of america fraud reimbursement reversed",
+      "fraud refund withdrawn cfpb complaint",
+      "regulation e provisional credit reversed",
+      "bank of america unauthorized transaction complaint"
+    ]
+  },
+  {
+    "title": "The Same Identity-Theft Message, Filed 33 Times From 21 Places Against Three Credit Bureaus",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/cfpb-shared-template-identity-theft-33-complaints",
+    "description": "In December 2025, at least 33 CFPB complaints contained the same identity-theft text. Kibbo traced it across 21 locations, 9 states and three credit bureaus.",
+    "keywords": [
+      "cfpb shared template identity theft",
+      "copy paste cfpb complaints credit bureau",
+      "identity theft template complaint analysis",
+      "cfpb complaint vault shared template"
+    ]
+  },
+  {
+    "title": "One Letter, Three Credit Bureaus: The Complaint Addressed to Equifax and Filed Against All Three",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/cfpb-same-text-three-credit-bureaus-one-filer",
+    "description": "On 19 October 2025 the same text was filed three times in the CFPB database against Equifax, TransUnion and Experian. All three name Equifax.",
+    "keywords": [
+      "same complaint filed against three credit bureaus",
+      "equifax transunion experian same text",
+      "cfpb same filer repeat complaint",
+      "credit bureau complaint one person three companies"
+    ]
+  },
+  {
+    "title": "The Complaint That Still Said \"[ Credit Bureau Name ]\"",
+    "type": "case",
+    "block": "financial-banking",
+    "url": "/real-cases/cfpb-template-unfilled-credit-bureau-placeholder",
+    "description": "A 2025 CFPB complaint against Equifax was filed three times with the same text, including a placeholder where the company name should have been.",
+    "keywords": [
+      "cfpb complaint unfilled template placeholder",
+      "equifax complaint bracket placeholder",
+      "credit bureau name placeholder complaint",
+      "cfpb complaint vault template example"
+    ]
+  },
+  {
     "title": "\"Unless You Go Private, There's an 18-Month Waiting List\" — a £28,000 Decision",
     "type": "case",
     "block": "healthcare-medical",
