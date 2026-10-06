@@ -1,0 +1,653 @@
+year,product_family,company_response_to_consumer,n
+2011,Credit & prepaid cards,Closed,5
+2011,Credit & prepaid cards,Closed with explanation,9
+2011,Credit & prepaid cards,Closed with monetary relief,1
+2011,Credit & prepaid cards,Closed with non-monetary relief,1
+2011,Credit & prepaid cards,Closed with relief,499
+2011,Credit & prepaid cards,Closed without relief,733
+2011,Credit & prepaid cards,Untimely response,12
+2011,Mortgage,Closed,2
+2011,Mortgage,Closed with explanation,14
+2011,Mortgage,Closed with monetary relief,1
+2011,Mortgage,Closed with non-monetary relief,1
+2011,Mortgage,Closed with relief,158
+2011,Mortgage,Closed without relief,1094
+2011,Mortgage,Untimely response,6
+2012,Bank accounts,Closed,411
+2012,Bank accounts,Closed with explanation,5442
+2012,Bank accounts,Closed with monetary relief,2482
+2012,Bank accounts,Closed with non-monetary relief,654
+2012,Bank accounts,Closed with relief,1216
+2012,Bank accounts,Closed without relief,1987
+2012,Bank accounts,Untimely response,18
+2012,Credit & prepaid cards,Closed,182
+2012,Credit & prepaid cards,Closed with explanation,5529
+2012,Credit & prepaid cards,Closed with monetary relief,2722
+2012,Credit & prepaid cards,Closed with non-monetary relief,1304
+2012,Credit & prepaid cards,Closed with relief,2029
+2012,Credit & prepaid cards,Closed without relief,3575
+2012,Credit & prepaid cards,Untimely response,11
+2012,Credit reporting,Closed,6
+2012,Credit reporting,Closed with explanation,1389
+2012,Credit reporting,Closed with monetary relief,20
+2012,Credit reporting,Closed with non-monetary relief,458
+2012,Mortgage,Closed,941
+2012,Mortgage,Closed with explanation,21052
+2012,Mortgage,Closed with monetary relief,1040
+2012,Mortgage,Closed with non-monetary relief,4100
+2012,Mortgage,Closed with relief,1239
+2012,Mortgage,Closed without relief,9536
+2012,Mortgage,Untimely response,199
+2012,Student loans,Closed,31
+2012,Student loans,Closed with explanation,1553
+2012,Student loans,Closed with monetary relief,154
+2012,Student loans,Closed with non-monetary relief,373
+2012,Student loans,Closed with relief,75
+2012,Student loans,Closed without relief,648
+2012,Student loans,Untimely response,6
+2012,Vehicle & consumer loans,Closed,97
+2012,Vehicle & consumer loans,Closed with explanation,1148
+2012,Vehicle & consumer loans,Closed with monetary relief,158
+2012,Vehicle & consumer loans,Closed with non-monetary relief,201
+2012,Vehicle & consumer loans,Closed with relief,88
+2012,Vehicle & consumer loans,Closed without relief,294
+2013,Bank accounts,Closed,627
+2013,Bank accounts,Closed with explanation,8695
+2013,Bank accounts,Closed with monetary relief,3333
+2013,Bank accounts,Closed with non-monetary relief,732
+2013,Bank accounts,Untimely response,1
+2013,Credit & prepaid cards,Closed,159
+2013,Credit & prepaid cards,Closed with explanation,8201
+2013,Credit & prepaid cards,Closed with monetary relief,3213
+2013,Credit & prepaid cards,Closed with non-monetary relief,1532
+2013,Credit reporting,Closed,63
+2013,Credit reporting,Closed with explanation,8911
+2013,Credit reporting,Closed with monetary relief,107
+2013,Credit reporting,Closed with non-monetary relief,5298
+2013,Credit reporting,Untimely response,1
+2013,Debt collection,Closed,445
+2013,Debt collection,Closed with explanation,8140
+2013,Debt collection,Closed with monetary relief,283
+2013,Debt collection,Closed with non-monetary relief,2192
+2013,Debt collection,Untimely response,8
+2013,Money transfers & virtual currency,Closed,12
+2013,Money transfers & virtual currency,Closed with explanation,419
+2013,Money transfers & virtual currency,Closed with monetary relief,115
+2013,Money transfers & virtual currency,Closed with non-monetary relief,13
+2013,Mortgage,Closed,1569
+2013,Mortgage,Closed with explanation,42719
+2013,Mortgage,Closed with monetary relief,1323
+2013,Mortgage,Closed with non-monetary relief,3758
+2013,Mortgage,Untimely response,29
+2013,Payday & personal loans,Closed,8
+2013,Payday & personal loans,Closed with explanation,132
+2013,Payday & personal loans,Closed with monetary relief,20
+2013,Payday & personal loans,Closed with non-monetary relief,12
+2013,Payday & personal loans,Untimely response,22
+2013,Student loans,Closed,39
+2013,Student loans,Closed with explanation,2345
+2013,Student loans,Closed with monetary relief,267
+2013,Student loans,Closed with non-monetary relief,354
+2013,Vehicle & consumer loans,Closed,119
+2013,Vehicle & consumer loans,Closed with explanation,2471
+2013,Vehicle & consumer loans,Closed with monetary relief,258
+2013,Vehicle & consumer loans,Closed with non-monetary relief,267
+2013,Vehicle & consumer loans,Untimely response,2
+2014,Bank accounts,Closed,418
+2014,Bank accounts,Closed with explanation,10270
+2014,Bank accounts,Closed with monetary relief,3145
+2014,Bank accounts,Closed with non-monetary relief,824
+2014,Bank accounts,Untimely response,5
+2014,Credit & prepaid cards,Closed,73
+2014,Credit & prepaid cards,Closed with explanation,9439
+2014,Credit & prepaid cards,Closed with monetary relief,3322
+2014,Credit & prepaid cards,Closed with non-monetary relief,1476
+2014,Credit reporting,Closed,109
+2014,Credit reporting,Closed with explanation,19051
+2014,Credit reporting,Closed with monetary relief,211
+2014,Credit reporting,Closed with non-monetary relief,9867
+2014,Debt collection,Closed,1854
+2014,Debt collection,Closed with explanation,29539
+2014,Debt collection,Closed with monetary relief,693
+2014,Debt collection,Closed with non-monetary relief,6744
+2014,Debt collection,Untimely response,202
+2014,Money transfers & virtual currency,Closed,11
+2014,Money transfers & virtual currency,Closed with explanation,977
+2014,Money transfers & virtual currency,Closed with monetary relief,144
+2014,Money transfers & virtual currency,Closed with non-monetary relief,38
+2014,Mortgage,Closed,952
+2014,Mortgage,Closed with explanation,39287
+2014,Mortgage,Closed with monetary relief,1050
+2014,Mortgage,Closed with non-monetary relief,1633
+2014,Mortgage,Untimely response,18
+2014,Other,Closed,1
+2014,Other,Closed with explanation,99
+2014,Other,Closed with monetary relief,12
+2014,Other,Closed with non-monetary relief,4
+2014,Payday & personal loans,Closed,48
+2014,Payday & personal loans,Closed with explanation,1430
+2014,Payday & personal loans,Closed with monetary relief,72
+2014,Payday & personal loans,Closed with non-monetary relief,95
+2014,Payday & personal loans,Untimely response,58
+2014,Student loans,Closed,18
+2014,Student loans,Closed with explanation,3567
+2014,Student loans,Closed with monetary relief,289
+2014,Student loans,Closed with non-monetary relief,408
+2014,Vehicle & consumer loans,Closed,58
+2014,Vehicle & consumer loans,Closed with explanation,4541
+2014,Vehicle & consumer loans,Closed with monetary relief,407
+2014,Vehicle & consumer loans,Closed with non-monetary relief,435
+2014,Vehicle & consumer loans,Untimely response,14
+2015,Bank accounts,Closed,459
+2015,Bank accounts,Closed with explanation,12396
+2015,Bank accounts,Closed with monetary relief,3368
+2015,Bank accounts,Closed with non-monetary relief,911
+2015,Bank accounts,Untimely response,3
+2015,Credit & prepaid cards,Closed,110
+2015,Credit & prepaid cards,Closed with explanation,12390
+2015,Credit & prepaid cards,Closed with monetary relief,4144
+2015,Credit & prepaid cards,Closed with non-monetary relief,2434
+2015,Credit & prepaid cards,Untimely response,3
+2015,Credit reporting,Closed,108
+2015,Credit reporting,Closed with explanation,25113
+2015,Credit reporting,Closed with monetary relief,180
+2015,Credit reporting,Closed with non-monetary relief,8866
+2015,Credit reporting,Untimely response,3
+2015,Debt collection,Closed,2167
+2015,Debt collection,Closed with explanation,30086
+2015,Debt collection,Closed with monetary relief,423
+2015,Debt collection,Closed with non-monetary relief,6457
+2015,Debt collection,Untimely response,432
+2015,Money transfers & virtual currency,Closed,16
+2015,Money transfers & virtual currency,Closed with explanation,1363
+2015,Money transfers & virtual currency,Closed with monetary relief,203
+2015,Money transfers & virtual currency,Closed with non-monetary relief,44
+2015,Mortgage,Closed,1176
+2015,Mortgage,Closed with explanation,37673
+2015,Mortgage,Closed with monetary relief,1301
+2015,Mortgage,Closed with non-monetary relief,2126
+2015,Mortgage,Untimely response,52
+2015,Other,Closed,10
+2015,Other,Closed with explanation,249
+2015,Other,Closed with monetary relief,36
+2015,Other,Closed with non-monetary relief,14
+2015,Other,Untimely response,3
+2015,Payday & personal loans,Closed,71
+2015,Payday & personal loans,Closed with explanation,1286
+2015,Payday & personal loans,Closed with monetary relief,90
+2015,Payday & personal loans,Closed with non-monetary relief,60
+2015,Payday & personal loans,Untimely response,69
+2015,Student loans,Closed,34
+2015,Student loans,Closed with explanation,3916
+2015,Student loans,Closed with monetary relief,239
+2015,Student loans,Closed with non-monetary relief,309
+2015,Student loans,Untimely response,3
+2015,Vehicle & consumer loans,Closed,109
+2015,Vehicle & consumer loans,Closed with explanation,6595
+2015,Vehicle & consumer loans,Closed with monetary relief,490
+2015,Vehicle & consumer loans,Closed with non-monetary relief,657
+2015,Vehicle & consumer loans,Untimely response,25
+2016,Bank accounts,Closed,395
+2016,Bank accounts,Closed with explanation,15280
+2016,Bank accounts,Closed with monetary relief,4337
+2016,Bank accounts,Closed with non-monetary relief,1833
+2016,Bank accounts,Untimely response,1
+2016,Credit & prepaid cards,Closed,156
+2016,Credit & prepaid cards,Closed with explanation,15000
+2016,Credit & prepaid cards,Closed with monetary relief,4712
+2016,Credit & prepaid cards,Closed with non-monetary relief,2410
+2016,Credit & prepaid cards,Untimely response,36
+2016,Credit reporting,Closed,80
+2016,Credit reporting,Closed with explanation,33271
+2016,Credit reporting,Closed with monetary relief,155
+2016,Credit reporting,Closed with non-monetary relief,10569
+2016,Credit reporting,Untimely response,5
+2016,Debt collection,Closed,1872
+2016,Debt collection,Closed with explanation,32352
+2016,Debt collection,Closed with monetary relief,383
+2016,Debt collection,Closed with non-monetary relief,5195
+2016,Debt collection,Untimely response,532
+2016,Money transfers & virtual currency,Closed,21
+2016,Money transfers & virtual currency,Closed with explanation,1309
+2016,Money transfers & virtual currency,Closed with monetary relief,155
+2016,Money transfers & virtual currency,Closed with non-monetary relief,89
+2016,Mortgage,Closed,883
+2016,Mortgage,Closed with explanation,37662
+2016,Mortgage,Closed with monetary relief,1281
+2016,Mortgage,Closed with non-monetary relief,1572
+2016,Mortgage,Untimely response,56
+2016,Other,Closed,27
+2016,Other,Closed with explanation,361
+2016,Other,Closed with monetary relief,54
+2016,Other,Closed with non-monetary relief,14
+2016,Other,Untimely response,7
+2016,Payday & personal loans,Closed,58
+2016,Payday & personal loans,Closed with explanation,1351
+2016,Payday & personal loans,Closed with monetary relief,65
+2016,Payday & personal loans,Closed with non-monetary relief,38
+2016,Payday & personal loans,Untimely response,50
+2016,Student loans,Closed,46
+2016,Student loans,Closed with explanation,7222
+2016,Student loans,Closed with monetary relief,265
+2016,Student loans,Closed with non-monetary relief,539
+2016,Student loans,Untimely response,11
+2016,Vehicle & consumer loans,Closed,207
+2016,Vehicle & consumer loans,Closed with explanation,7938
+2016,Vehicle & consumer loans,Closed with monetary relief,565
+2016,Vehicle & consumer loans,Closed with non-monetary relief,826
+2016,Vehicle & consumer loans,Untimely response,46
+2017,Bank accounts,Closed,82
+2017,Bank accounts,Closed with explanation,14274
+2017,Bank accounts,Closed with monetary relief,4521
+2017,Bank accounts,Closed with non-monetary relief,829
+2017,Bank accounts,Untimely response,12
+2017,Credit & prepaid cards,Closed,49
+2017,Credit & prepaid cards,Closed with explanation,16329
+2017,Credit & prepaid cards,Closed with monetary relief,4220
+2017,Credit & prepaid cards,Closed with non-monetary relief,2345
+2017,Credit & prepaid cards,Untimely response,40
+2017,Credit reporting,Closed,69
+2017,Credit reporting,Closed with explanation,74381
+2017,Credit reporting,Closed with monetary relief,358
+2017,Credit reporting,Closed with non-monetary relief,15014
+2017,Credit reporting,Untimely response,132
+2017,Debt collection,Closed,831
+2017,Debt collection,Closed with explanation,40985
+2017,Debt collection,Closed with monetary relief,413
+2017,Debt collection,Closed with non-monetary relief,4967
+2017,Debt collection,Untimely response,639
+2017,Money transfers & virtual currency,Closed,2
+2017,Money transfers & virtual currency,Closed with explanation,3164
+2017,Money transfers & virtual currency,Closed with monetary relief,287
+2017,Money transfers & virtual currency,Closed with non-monetary relief,242
+2017,Money transfers & virtual currency,Untimely response,13
+2017,Mortgage,Closed,163
+2017,Mortgage,Closed with explanation,28269
+2017,Mortgage,Closed with monetary relief,1012
+2017,Mortgage,Closed with non-monetary relief,1042
+2017,Mortgage,Untimely response,69
+2017,Other,Closed,1
+2017,Other,Closed with explanation,131
+2017,Other,Closed with monetary relief,19
+2017,Other,Closed with non-monetary relief,8
+2017,Other,Untimely response,6
+2017,Payday & personal loans,Closed,11
+2017,Payday & personal loans,Closed with explanation,3015
+2017,Payday & personal loans,Closed with monetary relief,210
+2017,Payday & personal loans,Closed with non-monetary relief,109
+2017,Payday & personal loans,Untimely response,86
+2017,Student loans,Closed,48
+2017,Student loans,Closed with explanation,16100
+2017,Student loans,Closed with monetary relief,282
+2017,Student loans,Closed with non-monetary relief,695
+2017,Student loans,Untimely response,36
+2017,Vehicle & consumer loans,Closed,92
+2017,Vehicle & consumer loans,Closed with explanation,6113
+2017,Vehicle & consumer loans,Closed with monetary relief,427
+2017,Vehicle & consumer loans,Closed with non-monetary relief,548
+2017,Vehicle & consumer loans,Untimely response,55
+2018,Bank accounts,Closed with explanation,15563
+2018,Bank accounts,Closed with monetary relief,4860
+2018,Bank accounts,Closed with non-monetary relief,766
+2018,Bank accounts,Untimely response,18
+2018,Credit & prepaid cards,Closed with explanation,17244
+2018,Credit & prepaid cards,Closed with monetary relief,4269
+2018,Credit & prepaid cards,Closed with non-monetary relief,2703
+2018,Credit & prepaid cards,Untimely response,26
+2018,Credit reporting,Closed with explanation,88836
+2018,Credit reporting,Closed with monetary relief,472
+2018,Credit reporting,Closed with non-monetary relief,22069
+2018,Credit reporting,Untimely response,218
+2018,Credit reporting,,1
+2018,Debt collection,Closed with explanation,43453
+2018,Debt collection,Closed with monetary relief,379
+2018,Debt collection,Closed with non-monetary relief,6624
+2018,Debt collection,Untimely response,622
+2018,Money transfers & virtual currency,Closed with explanation,4718
+2018,Money transfers & virtual currency,Closed with monetary relief,430
+2018,Money transfers & virtual currency,Closed with non-monetary relief,261
+2018,Money transfers & virtual currency,Untimely response,21
+2018,Mortgage,Closed with explanation,22882
+2018,Mortgage,Closed with monetary relief,760
+2018,Mortgage,Closed with non-monetary relief,853
+2018,Mortgage,Untimely response,68
+2018,Payday & personal loans,Closed with explanation,3775
+2018,Payday & personal loans,Closed with monetary relief,243
+2018,Payday & personal loans,Closed with non-monetary relief,265
+2018,Payday & personal loans,Untimely response,78
+2018,Student loans,Closed with explanation,7967
+2018,Student loans,Closed with monetary relief,167
+2018,Student loans,Closed with non-monetary relief,533
+2018,Student loans,Untimely response,102
+2018,Vehicle & consumer loans,Closed with explanation,4990
+2018,Vehicle & consumer loans,Closed with monetary relief,334
+2018,Vehicle & consumer loans,Closed with non-monetary relief,532
+2018,Vehicle & consumer loans,Untimely response,28
+2019,Bank accounts,Closed with explanation,16531
+2019,Bank accounts,Closed with monetary relief,4366
+2019,Bank accounts,Closed with non-monetary relief,831
+2019,Bank accounts,Untimely response,6
+2019,Credit & prepaid cards,Closed with explanation,18838
+2019,Credit & prepaid cards,Closed with monetary relief,4449
+2019,Credit & prepaid cards,Closed with non-monetary relief,2522
+2019,Credit & prepaid cards,Untimely response,14
+2019,Credit reporting,Closed with explanation,105729
+2019,Credit reporting,Closed with monetary relief,445
+2019,Credit reporting,Closed with non-monetary relief,32201
+2019,Credit reporting,Untimely response,181
+2019,Debt collection,Closed with explanation,40645
+2019,Debt collection,Closed with monetary relief,336
+2019,Debt collection,Closed with non-monetary relief,4833
+2019,Debt collection,Untimely response,519
+2019,Money transfers & virtual currency,Closed with explanation,4236
+2019,Money transfers & virtual currency,Closed with monetary relief,487
+2019,Money transfers & virtual currency,Closed with non-monetary relief,329
+2019,Money transfers & virtual currency,Untimely response,30
+2019,Mortgage,Closed with explanation,21193
+2019,Mortgage,Closed with monetary relief,734
+2019,Mortgage,Closed with non-monetary relief,725
+2019,Mortgage,In progress,1
+2019,Mortgage,Untimely response,47
+2019,Payday & personal loans,Closed with explanation,3856
+2019,Payday & personal loans,Closed with monetary relief,186
+2019,Payday & personal loans,Closed with non-monetary relief,208
+2019,Payday & personal loans,Untimely response,68
+2019,Student loans,Closed with explanation,6433
+2019,Student loans,Closed with monetary relief,135
+2019,Student loans,Closed with non-monetary relief,503
+2019,Student loans,Untimely response,137
+2019,Vehicle & consumer loans,Closed with explanation,4828
+2019,Vehicle & consumer loans,Closed with monetary relief,252
+2019,Vehicle & consumer loans,Closed with non-monetary relief,370
+2019,Vehicle & consumer loans,Untimely response,35
+2020,Bank accounts,Closed with explanation,19321
+2020,Bank accounts,Closed with monetary relief,3969
+2020,Bank accounts,Closed with non-monetary relief,938
+2020,Bank accounts,Untimely response,10
+2020,Credit & prepaid cards,Closed with explanation,24732
+2020,Credit & prepaid cards,Closed with monetary relief,5665
+2020,Credit & prepaid cards,Closed with non-monetary relief,3462
+2020,Credit & prepaid cards,Untimely response,20
+2020,Credit reporting,Closed with explanation,267335
+2020,Credit reporting,Closed with monetary relief,583
+2020,Credit reporting,Closed with non-monetary relief,15585
+2020,Credit reporting,Untimely response,212
+2020,Debt collection,Closed with explanation,48120
+2020,Debt collection,Closed with monetary relief,335
+2020,Debt collection,Closed with non-monetary relief,5046
+2020,Debt collection,Untimely response,367
+2020,Money transfers & virtual currency,Closed with explanation,7009
+2020,Money transfers & virtual currency,Closed with monetary relief,785
+2020,Money transfers & virtual currency,Closed with non-monetary relief,488
+2020,Money transfers & virtual currency,Untimely response,24
+2020,Mortgage,Closed with explanation,22741
+2020,Mortgage,Closed with monetary relief,1079
+2020,Mortgage,Closed with non-monetary relief,797
+2020,Mortgage,Untimely response,35
+2020,Payday & personal loans,Closed with explanation,3749
+2020,Payday & personal loans,Closed with monetary relief,193
+2020,Payday & personal loans,Closed with non-monetary relief,212
+2020,Payday & personal loans,Untimely response,45
+2020,Student loans,Closed with explanation,3794
+2020,Student loans,Closed with monetary relief,74
+2020,Student loans,Closed with non-monetary relief,418
+2020,Student loans,Untimely response,99
+2020,Vehicle & consumer loans,Closed with explanation,6149
+2020,Vehicle & consumer loans,Closed with monetary relief,246
+2020,Vehicle & consumer loans,Closed with non-monetary relief,537
+2020,Vehicle & consumer loans,Untimely response,39
+2021,Bank accounts,Closed with explanation,23364
+2021,Bank accounts,Closed with monetary relief,4739
+2021,Bank accounts,Closed with non-monetary relief,1441
+2021,Bank accounts,Untimely response,12
+2021,Credit & prepaid cards,Closed with explanation,23042
+2021,Credit & prepaid cards,Closed with monetary relief,5412
+2021,Credit & prepaid cards,Closed with non-monetary relief,3356
+2021,Credit & prepaid cards,Untimely response,12
+2021,Credit reporting,Closed with explanation,277721
+2021,Credit reporting,Closed with monetary relief,447
+2021,Credit reporting,Closed with non-monetary relief,29101
+2021,Credit reporting,Untimely response,268
+2021,Credit reporting,,1
+2021,Debt collection,Closed with explanation,62374
+2021,Debt collection,Closed with monetary relief,363
+2021,Debt collection,Closed with non-monetary relief,7183
+2021,Debt collection,In progress,1
+2021,Debt collection,Untimely response,379
+2021,Money transfers & virtual currency,Closed with explanation,11468
+2021,Money transfers & virtual currency,Closed with monetary relief,1593
+2021,Money transfers & virtual currency,Closed with non-monetary relief,808
+2021,Money transfers & virtual currency,Untimely response,27
+2021,Mortgage,Closed with explanation,24485
+2021,Mortgage,Closed with monetary relief,1079
+2021,Mortgage,Closed with non-monetary relief,914
+2021,Mortgage,Untimely response,49
+2021,Payday & personal loans,Closed with explanation,3905
+2021,Payday & personal loans,Closed with monetary relief,206
+2021,Payday & personal loans,Closed with non-monetary relief,214
+2021,Payday & personal loans,Untimely response,27
+2021,Student loans,Closed with explanation,3454
+2021,Student loans,Closed with monetary relief,81
+2021,Student loans,Closed with non-monetary relief,542
+2021,Student loans,Untimely response,49
+2021,Vehicle & consumer loans,Closed with explanation,7103
+2021,Vehicle & consumer loans,Closed with monetary relief,252
+2021,Vehicle & consumer loans,Closed with non-monetary relief,433
+2021,Vehicle & consumer loans,Untimely response,35
+2022,Bank accounts,Closed with explanation,29339
+2022,Bank accounts,Closed with monetary relief,5983
+2022,Bank accounts,Closed with non-monetary relief,2250
+2022,Bank accounts,Untimely response,10
+2022,Credit & prepaid cards,Closed with explanation,27515
+2022,Credit & prepaid cards,Closed with monetary relief,7409
+2022,Credit & prepaid cards,Closed with non-monetary relief,4941
+2022,Credit & prepaid cards,Untimely response,14
+2022,Credit reporting,Closed with explanation,359766
+2022,Credit reporting,Closed with monetary relief,535
+2022,Credit reporting,Closed with non-monetary relief,243704
+2022,Credit reporting,Untimely response,176
+2022,Debt collection,Closed with explanation,51101
+2022,Debt collection,Closed with monetary relief,410
+2022,Debt collection,Closed with non-monetary relief,7684
+2022,Debt collection,Untimely response,243
+2022,Money transfers & virtual currency,Closed with explanation,11578
+2022,Money transfers & virtual currency,Closed with monetary relief,1240
+2022,Money transfers & virtual currency,Closed with non-monetary relief,685
+2022,Money transfers & virtual currency,Untimely response,31
+2022,Mortgage,Closed with explanation,21695
+2022,Mortgage,Closed with monetary relief,665
+2022,Mortgage,Closed with non-monetary relief,891
+2022,Mortgage,Untimely response,27
+2022,Payday & personal loans,Closed with explanation,5112
+2022,Payday & personal loans,Closed with monetary relief,305
+2022,Payday & personal loans,Closed with non-monetary relief,318
+2022,Payday & personal loans,Untimely response,27
+2022,Student loans,Closed with explanation,7426
+2022,Student loans,Closed with monetary relief,88
+2022,Student loans,Closed with non-monetary relief,418
+2022,Student loans,Untimely response,20
+2022,Vehicle & consumer loans,Closed with explanation,7908
+2022,Vehicle & consumer loans,Closed with monetary relief,217
+2022,Vehicle & consumer loans,Closed with non-monetary relief,490
+2022,Vehicle & consumer loans,Untimely response,24
+2023,Bank accounts,Closed with explanation,39705
+2023,Bank accounts,Closed with monetary relief,7179
+2023,Bank accounts,Closed with non-monetary relief,2974
+2023,Bank accounts,Untimely response,15
+2023,Credit & prepaid cards,Closed with explanation,38069
+2023,Credit & prepaid cards,Closed with monetary relief,9633
+2023,Credit & prepaid cards,Closed with non-monetary relief,11727
+2023,Credit & prepaid cards,Untimely response,15
+2023,Credit reporting,Closed with explanation,529732
+2023,Credit reporting,Closed with monetary relief,787
+2023,Credit reporting,Closed with non-monetary relief,516120
+2023,Credit reporting,Untimely response,225
+2023,Credit reporting,,5
+2023,Debt & credit management,Closed with explanation,408
+2023,Debt & credit management,Closed with monetary relief,23
+2023,Debt & credit management,Closed with non-monetary relief,47
+2023,Debt & credit management,Untimely response,6
+2023,Debt collection,Closed with explanation,57146
+2023,Debt collection,Closed with monetary relief,402
+2023,Debt collection,Closed with non-monetary relief,10268
+2023,Debt collection,Untimely response,291
+2023,Money transfers & virtual currency,Closed with explanation,12041
+2023,Money transfers & virtual currency,Closed with monetary relief,1047
+2023,Money transfers & virtual currency,Closed with non-monetary relief,635
+2023,Money transfers & virtual currency,Untimely response,26
+2023,Mortgage,Closed with explanation,21741
+2023,Mortgage,Closed with monetary relief,491
+2023,Mortgage,Closed with non-monetary relief,595
+2023,Mortgage,Untimely response,25
+2023,Mortgage,,1
+2023,Payday & personal loans,Closed with explanation,6541
+2023,Payday & personal loans,Closed with monetary relief,332
+2023,Payday & personal loans,Closed with non-monetary relief,332
+2023,Payday & personal loans,Untimely response,38
+2023,Student loans,Closed with explanation,9466
+2023,Student loans,Closed with monetary relief,164
+2023,Student loans,Closed with non-monetary relief,972
+2023,Student loans,Untimely response,31
+2023,Vehicle & consumer loans,Closed with explanation,11774
+2023,Vehicle & consumer loans,Closed with monetary relief,297
+2023,Vehicle & consumer loans,Closed with non-monetary relief,685
+2023,Vehicle & consumer loans,Untimely response,38
+2024,Bank accounts,Closed with explanation,41106
+2024,Bank accounts,Closed with monetary relief,7929
+2024,Bank accounts,Closed with non-monetary relief,3764
+2024,Bank accounts,Untimely response,22
+2024,Credit & prepaid cards,Closed with explanation,50651
+2024,Credit & prepaid cards,Closed with monetary relief,11754
+2024,Credit & prepaid cards,Closed with non-monetary relief,19875
+2024,Credit & prepaid cards,Untimely response,32
+2024,Credit reporting,Closed with explanation,1067411
+2024,Credit reporting,Closed with monetary relief,794
+2024,Credit reporting,Closed with non-monetary relief,1296961
+2024,Credit reporting,Untimely response,410
+2024,Credit reporting,,10
+2024,Debt & credit management,Closed with explanation,1911
+2024,Debt & credit management,Closed with monetary relief,98
+2024,Debt & credit management,Closed with non-monetary relief,263
+2024,Debt & credit management,Untimely response,141
+2024,Debt collection,Closed with explanation,109674
+2024,Debt collection,Closed with monetary relief,385
+2024,Debt collection,Closed with non-monetary relief,45245
+2024,Debt collection,Untimely response,587
+2024,Debt collection,,3
+2024,Money transfers & virtual currency,Closed with explanation,14529
+2024,Money transfers & virtual currency,Closed with monetary relief,1416
+2024,Money transfers & virtual currency,Closed with non-monetary relief,754
+2024,Money transfers & virtual currency,Untimely response,52
+2024,Mortgage,Closed with explanation,20321
+2024,Mortgage,Closed with monetary relief,460
+2024,Mortgage,Closed with non-monetary relief,595
+2024,Mortgage,Untimely response,62
+2024,Payday & personal loans,Closed with explanation,8088
+2024,Payday & personal loans,Closed with monetary relief,400
+2024,Payday & personal loans,Closed with non-monetary relief,446
+2024,Payday & personal loans,Untimely response,102
+2024,Student loans,Closed with explanation,14249
+2024,Student loans,Closed with monetary relief,117
+2024,Student loans,Closed with non-monetary relief,244
+2024,Student loans,Untimely response,47
+2024,Vehicle & consumer loans,Closed with explanation,12005
+2024,Vehicle & consumer loans,Closed with monetary relief,392
+2024,Vehicle & consumer loans,Closed with non-monetary relief,918
+2024,Vehicle & consumer loans,Untimely response,45
+2025,Bank accounts,Closed with explanation,71136
+2025,Bank accounts,Closed with monetary relief,8906
+2025,Bank accounts,Closed with non-monetary relief,4072
+2025,Bank accounts,In progress,1
+2025,Bank accounts,Untimely response,80
+2025,Credit & prepaid cards,Closed with explanation,65087
+2025,Credit & prepaid cards,Closed with monetary relief,12355
+2025,Credit & prepaid cards,Closed with non-monetary relief,18963
+2025,Credit & prepaid cards,In progress,1
+2025,Credit & prepaid cards,Untimely response,74
+2025,Credit reporting,Closed with explanation,2694381
+2025,Credit reporting,Closed with monetary relief,921
+2025,Credit reporting,Closed with non-monetary relief,2112287
+2025,Credit reporting,In progress,65
+2025,Credit reporting,Untimely response,2647
+2025,Debt & credit management,Closed with explanation,3569
+2025,Debt & credit management,Closed with monetary relief,133
+2025,Debt & credit management,Closed with non-monetary relief,435
+2025,Debt & credit management,In progress,1
+2025,Debt & credit management,Untimely response,128
+2025,Debt collection,Closed with explanation,207576
+2025,Debt collection,Closed with monetary relief,447
+2025,Debt collection,Closed with non-monetary relief,72452
+2025,Debt collection,In progress,21
+2025,Debt collection,Untimely response,2708
+2025,Money transfers & virtual currency,Closed with explanation,81172
+2025,Money transfers & virtual currency,Closed with monetary relief,2034
+2025,Money transfers & virtual currency,Closed with non-monetary relief,1302
+2025,Money transfers & virtual currency,In progress,2
+2025,Money transfers & virtual currency,Untimely response,109
+2025,Mortgage,Closed with explanation,23451
+2025,Mortgage,Closed with monetary relief,425
+2025,Mortgage,Closed with non-monetary relief,672
+2025,Mortgage,Untimely response,149
+2025,Payday & personal loans,Closed with explanation,12097
+2025,Payday & personal loans,Closed with monetary relief,368
+2025,Payday & personal loans,Closed with non-monetary relief,487
+2025,Payday & personal loans,Untimely response,185
+2025,Student loans,Closed with explanation,17423
+2025,Student loans,Closed with monetary relief,90
+2025,Student loans,Closed with non-monetary relief,249
+2025,Student loans,In progress,193
+2025,Student loans,Untimely response,3339
+2025,Vehicle & consumer loans,Closed with explanation,18903
+2025,Vehicle & consumer loans,Closed with monetary relief,446
+2025,Vehicle & consumer loans,Closed with non-monetary relief,1317
+2025,Vehicle & consumer loans,Untimely response,103
+2026,Bank accounts,Closed with explanation,51020
+2026,Bank accounts,Closed with monetary relief,8191
+2026,Bank accounts,Closed with non-monetary relief,3289
+2026,Bank accounts,In progress,3882
+2026,Bank accounts,Untimely response,101
+2026,Credit & prepaid cards,Closed with explanation,53251
+2026,Credit & prepaid cards,Closed with monetary relief,11337
+2026,Credit & prepaid cards,Closed with non-monetary relief,7130
+2026,Credit & prepaid cards,In progress,3831
+2026,Credit & prepaid cards,Untimely response,325
+2026,Credit reporting,Closed with explanation,3009749
+2026,Credit reporting,Closed with monetary relief,664
+2026,Credit reporting,Closed with non-monetary relief,1373916
+2026,Credit reporting,In progress,610350
+2026,Credit reporting,Untimely response,3271
+2026,Debt & credit management,Closed with explanation,2461
+2026,Debt & credit management,Closed with monetary relief,120
+2026,Debt & credit management,Closed with non-monetary relief,376
+2026,Debt & credit management,In progress,183
+2026,Debt & credit management,Untimely response,149
+2026,Debt collection,Closed with explanation,173112
+2026,Debt collection,Closed with monetary relief,290
+2026,Debt collection,Closed with non-monetary relief,54087
+2026,Debt collection,In progress,6067
+2026,Debt collection,Untimely response,5980
+2026,Money transfers & virtual currency,Closed with explanation,23233
+2026,Money transfers & virtual currency,Closed with monetary relief,2339
+2026,Money transfers & virtual currency,Closed with non-monetary relief,1868
+2026,Money transfers & virtual currency,In progress,972
+2026,Money transfers & virtual currency,Untimely response,142
+2026,Mortgage,Closed with explanation,22201
+2026,Mortgage,Closed with monetary relief,390
+2026,Mortgage,Closed with non-monetary relief,746
+2026,Mortgage,In progress,1531
+2026,Mortgage,Untimely response,437
+2026,Payday & personal loans,Closed with explanation,12561
+2026,Payday & personal loans,Closed with monetary relief,401
+2026,Payday & personal loans,Closed with non-monetary relief,369
+2026,Payday & personal loans,In progress,568
+2026,Payday & personal loans,Untimely response,241
+2026,Student loans,Closed with explanation,9916
+2026,Student loans,Closed with monetary relief,33
+2026,Student loans,Closed with non-monetary relief,203
+2026,Student loans,In progress,942
+2026,Student loans,Untimely response,4329
+2026,Vehicle & consumer loans,Closed with explanation,16274
+2026,Vehicle & consumer loans,Closed with monetary relief,375
+2026,Vehicle & consumer loans,Closed with non-monetary relief,1219
+2026,Vehicle & consumer loans,In progress,782
+2026,Vehicle & consumer loans,Untimely response,128

@@ -1,0 +1,143 @@
+year,product_family,n
+2011,Credit & prepaid cards,1260
+2011,Mortgage,1276
+2012,Bank accounts,12210
+2012,Credit & prepaid cards,15352
+2012,Credit reporting,1873
+2012,Mortgage,38107
+2012,Student loans,2840
+2012,Vehicle & consumer loans,1986
+2013,Bank accounts,13388
+2013,Credit & prepaid cards,13105
+2013,Credit reporting,14380
+2013,Debt collection,11068
+2013,Money transfers & virtual currency,559
+2013,Mortgage,49398
+2013,Payday & personal loans,194
+2013,Student loans,3005
+2013,Vehicle & consumer loans,3117
+2014,Bank accounts,14662
+2014,Credit & prepaid cards,14310
+2014,Credit reporting,29238
+2014,Debt collection,39032
+2014,Money transfers & virtual currency,1170
+2014,Mortgage,42940
+2014,Other,116
+2014,Payday & personal loans,1703
+2014,Student loans,4282
+2014,Vehicle & consumer loans,5455
+2015,Bank accounts,17137
+2015,Credit & prepaid cards,19081
+2015,Credit reporting,34270
+2015,Debt collection,39565
+2015,Money transfers & virtual currency,1626
+2015,Mortgage,42328
+2015,Other,312
+2015,Payday & personal loans,1576
+2015,Student loans,4501
+2015,Vehicle & consumer loans,7876
+2016,Bank accounts,21846
+2016,Credit & prepaid cards,22314
+2016,Credit reporting,44080
+2016,Debt collection,40334
+2016,Money transfers & virtual currency,1574
+2016,Mortgage,41454
+2016,Other,463
+2016,Payday & personal loans,1562
+2016,Student loans,8083
+2016,Vehicle & consumer loans,9582
+2017,Bank accounts,19718
+2017,Credit & prepaid cards,22983
+2017,Credit reporting,89954
+2017,Debt collection,47835
+2017,Money transfers & virtual currency,3708
+2017,Mortgage,30555
+2017,Other,165
+2017,Payday & personal loans,3431
+2017,Student loans,17161
+2017,Vehicle & consumer loans,7235
+2018,Bank accounts,21207
+2018,Credit & prepaid cards,24242
+2018,Credit reporting,111596
+2018,Debt collection,51078
+2018,Money transfers & virtual currency,5430
+2018,Mortgage,24563
+2018,Payday & personal loans,4361
+2018,Student loans,8769
+2018,Vehicle & consumer loans,5884
+2019,Bank accounts,21734
+2019,Credit & prepaid cards,25823
+2019,Credit reporting,138556
+2019,Debt collection,46333
+2019,Money transfers & virtual currency,5082
+2019,Mortgage,22700
+2019,Payday & personal loans,4318
+2019,Student loans,7208
+2019,Vehicle & consumer loans,5485
+2020,Bank accounts,24238
+2020,Credit & prepaid cards,33879
+2020,Credit reporting,283715
+2020,Debt collection,53868
+2020,Money transfers & virtual currency,8306
+2020,Mortgage,24652
+2020,Payday & personal loans,4199
+2020,Student loans,4385
+2020,Vehicle & consumer loans,6971
+2021,Bank accounts,29556
+2021,Credit & prepaid cards,31822
+2021,Credit reporting,307538
+2021,Debt collection,70300
+2021,Money transfers & virtual currency,13896
+2021,Mortgage,26527
+2021,Payday & personal loans,4352
+2021,Student loans,4126
+2021,Vehicle & consumer loans,7823
+2022,Bank accounts,37582
+2022,Credit & prepaid cards,39879
+2022,Credit reporting,604181
+2022,Debt collection,59438
+2022,Money transfers & virtual currency,13534
+2022,Mortgage,23278
+2022,Payday & personal loans,5762
+2022,Student loans,7952
+2022,Vehicle & consumer loans,8639
+2023,Bank accounts,49873
+2023,Credit & prepaid cards,59444
+2023,Credit reporting,1046869
+2023,Debt & credit management,484
+2023,Debt collection,68107
+2023,Money transfers & virtual currency,13749
+2023,Mortgage,22853
+2023,Payday & personal loans,7243
+2023,Student loans,10633
+2023,Vehicle & consumer loans,12794
+2024,Bank accounts,52821
+2024,Credit & prepaid cards,82312
+2024,Credit reporting,2365586
+2024,Debt & credit management,2413
+2024,Debt collection,155894
+2024,Money transfers & virtual currency,16751
+2024,Mortgage,21438
+2024,Payday & personal loans,9036
+2024,Student loans,14657
+2024,Vehicle & consumer loans,13360
+2025,Bank accounts,84195
+2025,Credit & prepaid cards,96480
+2025,Credit reporting,4810301
+2025,Debt & credit management,4266
+2025,Debt collection,283204
+2025,Money transfers & virtual currency,84619
+2025,Mortgage,24697
+2025,Payday & personal loans,13137
+2025,Student loans,21294
+2025,Vehicle & consumer loans,20769
+2026,Bank accounts,66483
+2026,Credit & prepaid cards,75874
+2026,Credit reporting,4997950
+2026,Debt & credit management,3289
+2026,Debt collection,239536
+2026,Money transfers & virtual currency,28554
+2026,Mortgage,25305
+2026,Payday & personal loans,14140
+2026,Student loans,15423
+2026,Vehicle & consumer loans,18778

@@ -1,0 +1,128 @@
+product,sub_product,product_family,first_date,last_date,n
+Bank account or service,(CD) Certificate of deposit,Bank accounts,2012-03-01,2017-04-22,3416
+Bank account or service,Cashing a check without an account,Bank accounts,2012-03-01,2017-04-18,625
+Bank account or service,Checking account,Bank accounts,2012-03-01,2017-04-22,59041
+Bank account or service,Other bank product/service,Bank accounts,2012-03-01,2017-04-21,17822
+Bank account or service,Savings account,Bank accounts,2012-03-01,2017-04-21,5294
+Checking or savings account,CD (Certificate of Deposit),Bank accounts,2017-04-24,2026-10-02,7994
+Checking or savings account,Checking account,Bank accounts,2017-04-21,2026-10-02,324888
+Checking or savings account,Credit reporting,Bank accounts,2024-07-17,2024-07-17,1
+Checking or savings account,Other banking product or service,Bank accounts,2017-04-21,2026-10-01,37435
+Checking or savings account,Savings account,Bank accounts,2017-04-24,2026-10-02,30035
+Checking or savings account,,Bank accounts,2017-05-21,2024-05-11,99
+Consumer Loan,Installment loan,Vehicle & consumer loans,2012-03-05,2017-04-21,8671
+Consumer Loan,Pawn loan,Vehicle & consumer loans,2014-07-26,2017-04-21,94
+Consumer Loan,Personal line of credit,Vehicle & consumer loans,2012-03-01,2017-04-19,1824
+Consumer Loan,Title loan,Vehicle & consumer loans,2014-07-21,2017-04-20,547
+Consumer Loan,Vehicle lease,Vehicle & consumer loans,2012-03-02,2017-04-21,2654
+Consumer Loan,Vehicle loan,Vehicle & consumer loans,2012-03-01,2017-04-21,17769
+Credit card,General-purpose credit card or charge card,Credit & prepaid cards,2023-08-17,2026-10-02,230522
+Credit card,Store credit card,Credit & prepaid cards,2023-08-24,2026-10-01,28623
+Credit card,,Credit & prepaid cards,2011-12-01,2017-04-22,89185
+Credit card or prepaid card,General-purpose credit card or charge card,Credit & prepaid cards,2017-04-24,2023-08-25,158877
+Credit card or prepaid card,General-purpose prepaid card,Credit & prepaid cards,2017-04-25,2023-08-24,8530
+Credit card or prepaid card,Gift card,Credit & prepaid cards,2017-04-25,2023-08-24,1021
+Credit card or prepaid card,Government benefit card,Credit & prepaid cards,2017-04-25,2023-08-24,9067
+Credit card or prepaid card,Payroll card,Credit & prepaid cards,2017-04-26,2023-08-23,917
+Credit card or prepaid card,Store credit card,Credit & prepaid cards,2017-04-24,2023-08-24,27909
+Credit card or prepaid card,Student prepaid card,Credit & prepaid cards,2018-06-25,2023-08-19,32
+Credit card or prepaid card,,Credit & prepaid cards,2021-03-24,2021-04-01,3
+Credit reporting,,Credit reporting,2012-10-22,2017-04-22,140426
+Credit reporting or other personal consumer reports,Credit reporting,Credit reporting,2023-08-24,2026-10-03,12528569
+Credit reporting or other personal consumer reports,Other personal consumer report,Credit reporting,2023-08-25,2026-10-03,47322
+"Credit reporting, credit repair services, or other personal consumer reports",Conventional home mortgage,Credit reporting,2018-05-22,2018-05-22,1
+"Credit reporting, credit repair services, or other personal consumer reports",Credit repair services,Credit reporting,2017-04-24,2023-08-24,5064
+"Credit reporting, credit repair services, or other personal consumer reports",Credit reporting,Credit reporting,2017-04-24,2023-08-25,2142647
+"Credit reporting, credit repair services, or other personal consumer reports",Other personal consumer report,Credit reporting,2017-04-24,2023-08-24,16058
+Debt collection,Auto,Debt collection,2013-07-10,2017-04-21,3748
+Debt collection,Auto debt,Debt collection,2017-04-24,2026-10-02,32835
+Debt collection,Credit card,Debt collection,2013-07-10,2017-04-21,28626
+Debt collection,Credit card debt,Debt collection,2017-04-24,2026-10-02,182154
+Debt collection,Federal student loan,Debt collection,2013-07-10,2017-04-21,2473
+Debt collection,Federal student loan debt,Debt collection,2017-04-24,2026-09-28,6073
+Debt collection,I do not know,Debt collection,2013-07-10,2026-10-02,497574
+Debt collection,Medical,Debt collection,2013-07-10,2017-04-21,21143
+Debt collection,Medical debt,Debt collection,2017-04-24,2026-10-02,77962
+Debt collection,Mortgage,Debt collection,2013-07-10,2017-04-21,4807
+Debt collection,Mortgage debt,Debt collection,2017-04-24,2026-10-02,8585
+Debt collection,Non-federal student loan,Debt collection,2013-07-10,2017-04-21,2878
+Debt collection,"Other (i.e. phone, health club, etc.)",Debt collection,2013-07-10,2017-04-21,44436
+Debt collection,Other debt,Debt collection,2017-04-24,2026-10-02,199982
+Debt collection,Payday loan,Debt collection,2013-10-30,2017-04-21,7493
+Debt collection,Payday loan debt,Debt collection,2017-04-24,2026-10-01,16715
+Debt collection,Private student loan debt,Debt collection,2017-04-25,2026-10-02,6162
+Debt collection,Rental debt,Debt collection,2023-08-25,2026-10-02,30156
+Debt collection,Telecommunications debt,Debt collection,2023-08-25,2026-10-02,31790
+Debt or credit management,Credit repair services,Debt & credit management,2023-08-25,2026-10-01,4356
+Debt or credit management,Debt settlement,Debt & credit management,2023-08-27,2026-10-01,5552
+Debt or credit management,Mortgage modification or foreclosure avoidance,Debt & credit management,2023-08-26,2026-09-22,394
+Debt or credit management,Student loan debt relief,Debt & credit management,2023-08-31,2026-09-06,150
+"Money transfer, virtual currency, or money service",Check cashing service,Money transfers & virtual currency,2017-04-25,2026-09-24,2293
+"Money transfer, virtual currency, or money service",Debt settlement,Money transfers & virtual currency,2017-04-26,2023-08-24,946
+"Money transfer, virtual currency, or money service",Domestic (US) money transfer,Money transfers & virtual currency,2017-04-24,2026-10-02,85705
+"Money transfer, virtual currency, or money service",Foreign currency exchange,Money transfers & virtual currency,2017-04-26,2026-10-01,1397
+"Money transfer, virtual currency, or money service",International money transfer,Money transfers & virtual currency,2017-04-25,2026-09-29,14731
+"Money transfer, virtual currency, or money service",Mobile or digital wallet,Money transfers & virtual currency,2017-04-24,2026-10-02,61087
+"Money transfer, virtual currency, or money service",Money order,Money transfers & virtual currency,2017-05-02,2023-08-16,776
+"Money transfer, virtual currency, or money service","Money order, traveler's check or cashier's check",Money transfers & virtual currency,2023-08-25,2026-10-01,2622
+"Money transfer, virtual currency, or money service",Refund anticipation check,Money transfers & virtual currency,2017-05-04,2023-08-24,627
+"Money transfer, virtual currency, or money service",Traveler's check or cashier's check,Money transfers & virtual currency,2017-04-27,2023-08-23,983
+"Money transfer, virtual currency, or money service",Virtual currency,Money transfers & virtual currency,2017-04-26,2026-09-30,22019
+Money transfers,Domestic (US) money transfer,Money transfers & virtual currency,2013-04-04,2017-04-21,2584
+Money transfers,International money transfer,Money transfers & virtual currency,2013-04-04,2017-04-20,2770
+Mortgage,Conventional adjustable mortgage (ARM),Mortgage,2011-12-01,2017-04-21,25380
+Mortgage,Conventional fixed mortgage,Mortgage,2011-12-01,2017-04-22,70591
+Mortgage,Conventional home mortgage,Mortgage,2017-04-21,2026-10-03,139495
+Mortgage,FHA mortgage,Mortgage,2011-12-01,2026-09-30,64296
+Mortgage,Home equity loan or line of credit,Mortgage,2011-12-01,2017-04-21,11622
+Mortgage,Home equity loan or line of credit (HELOC),Mortgage,2017-04-24,2026-09-29,14674
+Mortgage,Manufactured home loan,Mortgage,2023-08-29,2026-09-28,859
+Mortgage,Other mortgage,Mortgage,2011-12-01,2017-04-21,86612
+Mortgage,Other type of mortgage,Mortgage,2017-04-21,2026-09-26,17941
+Mortgage,Reverse mortgage,Mortgage,2011-12-01,2026-09-28,5418
+Mortgage,Second mortgage,Mortgage,2011-12-16,2016-03-10,662
+Mortgage,USDA mortgage,Mortgage,2023-08-29,2026-09-23,789
+Mortgage,VA mortgage,Mortgage,2011-12-05,2026-09-30,23732
+Other financial service,Check cashing,Other,2014-07-21,2017-04-21,266
+Other financial service,Credit repair,Other,2014-08-04,2017-04-21,102
+Other financial service,Debt settlement,Other,2014-07-21,2017-04-21,331
+Other financial service,Foreign currency exchange,Other,2014-08-01,2017-04-04,58
+Other financial service,Money order,Other,2014-07-24,2017-04-17,143
+Other financial service,Refund anticipation check,Other,2014-07-19,2017-03-28,68
+Other financial service,Traveler’s/Cashier’s checks,Other,2014-07-23,2017-04-12,88
+Payday loan,,Payday & personal loans,2013-11-06,2017-04-21,5528
+"Payday loan, title loan, or personal loan",Installment loan,Payday & personal loans,2017-04-24,2023-08-24,13416
+"Payday loan, title loan, or personal loan",Pawn loan,Payday & personal loans,2017-05-22,2023-08-19,76
+"Payday loan, title loan, or personal loan",Payday loan,Payday & personal loans,2017-04-24,2023-08-24,6963
+"Payday loan, title loan, or personal loan",Personal line of credit,Payday & personal loans,2017-04-24,2023-08-24,7367
+"Payday loan, title loan, or personal loan",Title loan,Payday & personal loans,2017-04-24,2023-08-24,2758
+"Payday loan, title loan, or personal loan",,Payday & personal loans,2017-08-14,2022-07-15,34
+"Payday loan, title loan, personal loan, or advance loan",Earned wage access,Payday & personal loans,2023-08-25,2026-09-25,400
+"Payday loan, title loan, personal loan, or advance loan",Installment loan,Payday & personal loans,2023-08-25,2026-10-02,22184
+"Payday loan, title loan, personal loan, or advance loan",Other advances of future income,Payday & personal loans,2023-08-30,2026-09-28,739
+"Payday loan, title loan, personal loan, or advance loan",Pawn loan,Payday & personal loans,2023-08-29,2026-09-14,127
+"Payday loan, title loan, personal loan, or advance loan",Payday loan,Payday & personal loans,2023-08-25,2026-10-01,6091
+"Payday loan, title loan, personal loan, or advance loan",Personal line of credit,Payday & personal loans,2023-08-25,2026-10-02,6763
+"Payday loan, title loan, personal loan, or advance loan",Tax refund anticipation loan or check,Payday & personal loans,2023-09-15,2026-09-18,63
+"Payday loan, title loan, personal loan, or advance loan",Title loan,Payday & personal loans,2023-08-25,2026-09-29,2505
+Prepaid card,Electronic Benefit Transfer / EBT card,Credit & prepaid cards,2014-11-06,2017-04-06,12
+Prepaid card,General purpose card,Credit & prepaid cards,2014-07-20,2017-04-21,1752
+Prepaid card,General-purpose prepaid card,Credit & prepaid cards,2023-08-25,2026-09-29,10777
+Prepaid card,Gift card,Credit & prepaid cards,2023-08-25,2026-09-27,2523
+Prepaid card,Gift or merchant card,Credit & prepaid cards,2014-07-21,2017-04-20,402
+Prepaid card,Government benefit card,Credit & prepaid cards,2023-08-18,2026-10-02,5306
+Prepaid card,Government benefit payment card,Credit & prepaid cards,2014-07-21,2017-04-21,389
+Prepaid card,ID prepaid card,Credit & prepaid cards,2014-08-18,2017-04-21,207
+Prepaid card,Mobile wallet,Credit & prepaid cards,2014-07-21,2017-04-21,418
+Prepaid card,Other special purpose card,Credit & prepaid cards,2014-08-06,2017-04-05,191
+Prepaid card,Payroll card,Credit & prepaid cards,2014-07-25,2026-09-27,1434
+Prepaid card,Student prepaid card,Credit & prepaid cards,2023-10-12,2026-09-08,26
+Prepaid card,Transit card,Credit & prepaid cards,2014-08-10,2017-04-08,37
+Student loan,Federal student loan servicing,Student loans,2016-02-25,2026-09-30,86535
+Student loan,Non-federal student loan,Student loans,2012-03-01,2017-04-21,22282
+Student loan,Private student loan,Student loans,2017-04-24,2026-10-01,25502
+Vehicle loan or lease,Lease,Vehicle & consumer loans,2017-04-25,2026-10-02,14800
+Vehicle loan or lease,Loan,Vehicle & consumer loans,2017-04-24,2026-10-03,89349
+Vehicle loan or lease,Title loan,Vehicle & consumer loans,2017-07-25,2022-09-19,46
+Virtual currency,Domestic (US) money transfer,Money transfers & virtual currency,2014-08-15,2017-04-03,17
+Virtual currency,International money transfer,Money transfers & virtual currency,2016-03-28,2016-03-28,1

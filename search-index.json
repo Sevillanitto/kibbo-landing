@@ -15778,6 +15778,19 @@
     ]
   },
   {
+    "title": "The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database",
+    "type": "investigation",
+    "block": "financial-banking",
+    "url": "/investigations/cfpb-copy-paste-complaints",
+    "description": "Kibbo Research analysed 18.2 million CFPB complaints and 3.85 million consumer narratives. Half of 2025's narratives were shared templates — and templates rarely get consumers their money back. With an open dataset.",
+    "keywords": [
+      "cfpb complaint database templates",
+      "copy paste cfpb complaints investigation",
+      "shared template cfpb narratives",
+      "cfpb complaint vault dataset"
+    ]
+  },
+  {
     "title": "US Airline Reliability Dataset, 2026 H1 (CSV)",
     "type": "dataset",
     "block": "flights-travel",

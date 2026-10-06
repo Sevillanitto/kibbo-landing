@@ -1,0 +1,106 @@
+file,column,type,pct_empty,example_value,description
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Date received,DATE,0.0,2024-01-25 00:00:00,Date the CFPB received the complaint. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Product,VARCHAR,0.0,Credit reporting or other personal consumer reports,"Product the consumer identified, as published by the CFPB. Category names changed in April 2017 and August 2023; use product_family for comparisons across years. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Sub-product,VARCHAR,1.3,Credit reporting,Sub-product the consumer identified. Not available for every product. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Issue,VARCHAR,0.0,Incorrect information on your report,"Issue the consumer identified. The list of issues changed with the 2017 and 2023 taxonomy updates, so issue values are only directly comparable within the same taxonomy period. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Sub-issue,VARCHAR,5.17,Information belongs to someone else,Sub-issue the consumer identified. Not available for every issue. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Company public response,VARCHAR,44.92,,"Company's optional public-facing response, chosen from a list of CFPB-defined options. Empty when the company did not select one. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Company,VARCHAR,0.0,"CBC Companies, Inc.","Company the complaint is about, as named by the CFPB. Names are published as-is; a parent company and its subsidiaries may appear under different names. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),State,VARCHAR,0.35,CA,Consumer's state as reported in the mailing address. Includes territories and military addresses. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),ZIP code,VARCHAR,0.02,92882,"Consumer's ZIP code as published by the CFPB, which truncates or masks some ZIP codes (e.g. '123XX' or 'XXXXX') to protect privacy. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Tags,VARCHAR,95.51,,"CFPB flags for complaints from older Americans (62+) and/or servicemembers and veterans, based on what the consumer reported. Empty for most complaints. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Submitted via,VARCHAR,0.0,Web,"Channel through which the complaint was submitted (e.g. Web, Referral, Phone). Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Date sent to company,DATE,0.0,2024-01-25 00:00:00,Date the CFPB sent the complaint to the company. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Company response to consumer,VARCHAR,0.0,Closed with non-monetary relief,"How the company says it closed the complaint (e.g. 'Closed with explanation', 'Closed with monetary relief', 'Closed with non-monetary relief'), or 'In progress'. This is self-reported by the company and is not verified by the CFPB. Original CFPB field."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Timely response?,BOOLEAN,0.0,True,Whether the company responded within the CFPB's timeliness window (generally 15 days). Says nothing about whether the issue was resolved. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),Complaint ID,BIGINT,0.0,8228081,Unique CFPB complaint identifier. Use it to look up the public record at consumerfinance.gov/data-research/consumer-complaints/search/detail/<ID>. Original CFPB field.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),product_family,VARCHAR,0.0,Credit reporting,Kibbo-added. Harmonised product category that stays consistent across the April 2017 and August 2023 taxonomy changes (11 families). See product-taxonomy-crosswalk.csv for the exact mapping.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),year,BIGINT,0.0,2024,Kibbo-added. Calendar year of Date received.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),month,VARCHAR,0.0,2024-01,Kibbo-added. Year and month of Date received (YYYY-MM).
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),has_narrative,BOOLEAN,0.0,False,Kibbo-added. True if the complaint has a consumer narrative in the CFPB's Narratives Archive (published narratives start on 2015-03-19 and end on 2026-08-14). Narrative text itself is not included in this dataset.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),narrative_word_count,BIGINT,78.8,,Kibbo-added. Number of words in the narrative. Empty when there is no narrative.
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),exact_duplicate,BOOLEAN,0.0,False,"Kibbo-added. True if the narrative text is identical, character for character, to at least one other narrative in the archive."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),normalised_duplicate,BOOLEAN,0.0,False,"Kibbo-added. True if the narrative is identical to at least one other after normalisation (lowercased; CFPB redaction marks, numbers and punctuation removed; whitespace collapsed)."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),fuzzy_cluster_id,VARCHAR,91.58,,"Kibbo-added. ID of the near-duplicate cluster the narrative belongs to, from MinHash/LSH on word 5-shingles (128 permutations, Jaccard threshold 0.8). Empty if the narrative is not in a cluster of 2+, has no narrative, or has fewer than 30 words. Clusters are built within each year (2025 within each half-year), so IDs are not comparable across years."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),fuzzy_scope,VARCHAR,91.58,,"Kibbo-added. Period within which the fuzzy cluster was built: the year, or '2025H1'/'2025H2'."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),text_group_locations,BIGINT,87.8,,"Kibbo-added. Number of distinct locations (published ZIP code, or state when the ZIP is missing or fully masked) in which the narrative's text group appears. Empty when the narrative is not part of a text group."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),template_category,VARCHAR,0.0,no_narrative,"Kibbo-added. 'original' (text not shared with any other narrative); 'shared_template_strict' (same text appears in 2+ distinct locations — a lower bound for different people using the same template); 'same_filer_repeat' (same text, single location — most likely one person filing against several companies or re-filing); 'unknown_filer' (text group, but no usable location); 'no_narrative'. Measures standardised wording, not whether a complaint is genuine."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),company_business_type,VARCHAR,3.68,Specialty consumer reporting company,"Kibbo-added. Business type of the company (e.g. 'Bank or bank holding company', 'Debt collector or debt buyer'). Only for the 200 companies with the most complaints; empty otherwise."
+kibbo-cfpb-complaints-harmonized (+ complaints-parquet),company_classification_basis,VARCHAR,3.68,profile,Kibbo-added. 'known': classification based on the company's well-established public identity. 'profile': based on the company name and its complaint profile; not independently verified.
+complaints-by-year.csv,year,int64,0.0,2011,Calendar year the CFPB received the complaints.
+complaints-by-year.csv,n,int64,0.0,2536,"Number of complaints (or narratives, in the template table)."
+complaints-by-year-product-family.csv,year,int64,0.0,2011,Calendar year the CFPB received the complaints.
+complaints-by-year-product-family.csv,product_family,str,0.0,Credit & prepaid cards,Harmonised product category (see product-taxonomy-crosswalk.csv).
+complaints-by-year-product-family.csv,n,int64,0.0,1260,"Number of complaints (or narratives, in the template table)."
+complaints-by-year-product-family-response.csv,year,int64,0.0,2011,Calendar year the CFPB received the complaints.
+complaints-by-year-product-family-response.csv,product_family,str,0.0,Credit & prepaid cards,Harmonised product category (see product-taxonomy-crosswalk.csv).
+complaints-by-year-product-family-response.csv,company_response_to_consumer,str,0.92,Closed,"How the company says it closed the complaint, as self-reported to the CFPB. Empty in a small share of early (2011-2012) records."
+complaints-by-year-product-family-response.csv,n,int64,0.0,5,Number of complaints.
+template-category-by-year-product-family-narratives-only.csv,year,int64,0.0,2015,Calendar year the CFPB received the complaints.
+template-category-by-year-product-family-narratives-only.csv,product_family,str,0.0,Bank accounts,Harmonised product category (see product-taxonomy-crosswalk.csv).
+template-category-by-year-product-family-narratives-only.csv,template_category,str,0.0,original,Template category of the narrative (see the complaint-level file definition).
+template-category-by-year-product-family-narratives-only.csv,n,int64,0.0,4454,"Number of complaints (or narratives, in the template table)."
+template-category-by-year-product-family-narratives-only.csv,pct,float64,0.0,97.7,"Share of narratives in that year and product family, in percent."
+company-comparisons-2023-08-25-onwards.csv,company,str,0.0,"TRANSUNION INTERMEDIATE HOLDINGS, INC.",Company name exactly as published by the CFPB.
+company-comparisons-2023-08-25-onwards.csv,product_family,str,0.0,Credit reporting,Harmonised product category (see product-taxonomy-crosswalk.csv).
+company-comparisons-2023-08-25-onwards.csv,template_category,str,0.0,no_narrative,Template category of the narrative (see the complaint-level file definition).
+company-comparisons-2023-08-25-onwards.csv,company_response_to_consumer,str,0.0,Closed with explanation,"How the company says it closed the complaint, as self-reported to the CFPB. Empty in a small share of early (2011-2012) records."
+company-comparisons-2023-08-25-onwards.csv,n,int64,0.0,1538454,"Number of complaints (or narratives, in the template table)."
+complaints-per-100k-all-by-state-year.csv,state,str,0.0,PA,"Two-letter state code (50 states, DC and Puerto Rico)."
+complaints-per-100k-all-by-state-year.csv,year,int64,0.0,2023,Calendar year the CFPB received the complaints.
+complaints-per-100k-all-by-state-year.csv,complaints,int64,0.0,64759,Number of complaints from that state in that year.
+complaints-per-100k-all-by-state-year.csv,population,float64,12.5,13009406.0,"U.S. Census Bureau resident population estimate for that state and year (Vintage 2019 for 2012-2019, Vintage 2025 for 2020-2025). Empty for 2011 and 2026 (no matching estimate)."
+complaints-per-100k-all-by-state-year.csv,complaints_per_100k,float64,12.5,497.79,"Complaints per 100,000 residents. Empty where population is empty."
+complaints-per-100k-excl-credit-reporting-by-state-year.csv,state,str,0.0,OK,"Two-letter state code (50 states, DC and Puerto Rico)."
+complaints-per-100k-excl-credit-reporting-by-state-year.csv,year,int64,0.0,2024,Calendar year the CFPB received the complaints.
+complaints-per-100k-excl-credit-reporting-by-state-year.csv,complaints,int64,0.0,2444,Number of complaints from that state in that year.
+complaints-per-100k-excl-credit-reporting-by-state-year.csv,population,float64,12.5,4097758.0,"U.S. Census Bureau resident population estimate for that state and year (Vintage 2019 for 2012-2019, Vintage 2025 for 2020-2025). Empty for 2011 and 2026 (no matching estimate)."
+complaints-per-100k-excl-credit-reporting-by-state-year.csv,complaints_per_100k,float64,12.5,59.64,"Complaints per 100,000 residents. Empty where population is empty."
+complaints-per-100k-by-state-year-product-family.csv,state,str,0.0,TX,"Two-letter state code (50 states, DC and Puerto Rico)."
+complaints-per-100k-by-state-year-product-family.csv,year,int64,0.0,2026,Calendar year the CFPB received the complaints.
+complaints-per-100k-by-state-year-product-family.csv,product_family,str,0.0,Money transfers & virtual currency,Harmonised product category (see product-taxonomy-crosswalk.csv).
+complaints-per-100k-by-state-year-product-family.csv,complaints,int64,0.0,2681,Number of complaints from that state in that year.
+complaints-per-100k-by-state-year-product-family.csv,population,float64,8.53,23265838.0,"U.S. Census Bureau resident population estimate for that state and year (Vintage 2019 for 2012-2019, Vintage 2025 for 2020-2025). Empty for 2011 and 2026 (no matching estimate)."
+complaints-per-100k-by-state-year-product-family.csv,complaints_per_100k,float64,8.53,9.49,"Complaints per 100,000 residents. Empty where population is empty."
+top100-template-clusters.csv,cluster_id,str,0.0,Y2024-1,Fuzzy cluster ID (prefix = year or half-year scope).
+top100-template-clusters.csv,scope,str,0.0,2024,Period within which the cluster was built.
+top100-template-clusters.csv,size,int64,0.0,34309,Number of narratives in the cluster.
+top100-template-clusters.csv,n_distinct_locations,int64,0.0,2588,"Number of distinct locations (ZIP, or state when ZIP is masked) the cluster appears in."
+top100-template-clusters.csv,first_seen,str,0.0,2024-01-01,Earliest date received in the cluster.
+top100-template-clusters.csv,last_seen,str,0.0,2024-12-31,Latest date received in the cluster.
+top100-template-clusters.csv,top5_companies,str,0.0,"TRANSUNION INTERMEDIATE HOLDINGS, INC. (12655); EQUIFAX, INC. (12346); Experian Information Solutions Inc. (8799); LEXIS","The five companies receiving the most complaints with this text, with counts."
+top100-template-clusters.csv,top3_product_families,str,0.0,Credit reporting (34265); Debt collection (39); Credit & prepaid cards (5),"The three product families with the most complaints with this text, with counts."
+top100-template-clusters.csv,representative_text_300,str,0.0,In accordance with the Fair Credit Reporting act. The List of accounts below has violated my federally protected consume,"The first 300 characters of one narrative from the cluster, as redacted by the CFPB. These are mass-repeated template texts, not individual stories."
+product-taxonomy-crosswalk.csv,product,str,0.0,Bank account or service,Original CFPB product name.
+product-taxonomy-crosswalk.csv,sub_product,str,4.72,(CD) Certificate of deposit,Original CFPB sub-product name (empty where none).
+product-taxonomy-crosswalk.csv,product_family,str,0.0,Bank accounts,Harmonised product category (see product-taxonomy-crosswalk.csv).
+product-taxonomy-crosswalk.csv,first_date,datetime64[us],0.0,2012-03-01 00:00:00,First date this product/sub-product value appears in the data.
+product-taxonomy-crosswalk.csv,last_date,datetime64[us],0.0,2017-04-22 00:00:00,Last date this product/sub-product value appears in the data.
+product-taxonomy-crosswalk.csv,n,int64,0.0,3416,"Number of complaints (or narratives, in the template table)."
+company-classification-top200.csv,company,str,0.0,"TRANSUNION INTERMEDIATE HOLDINGS, INC.",Company name exactly as published by the CFPB.
+company-classification-top200.csv,total_complaints,int64,0.0,5024305,Total complaints about the company since December 2011.
+company-classification-top200.csv,first_year,int64,0.0,2012,First year the company appears.
+company-classification-top200.csv,last_year,int64,0.0,2026,Last year the company appears.
+company-classification-top200.csv,dominant_product_family,str,0.0,Credit reporting,Product family with the largest share of the company's complaints.
+company-classification-top200.csv,dominant_pct,float64,0.0,98.42,"Share of the company's complaints in its dominant product family, in percent."
+company-classification-top200.csv,business_type,str,0.0,Nationwide credit bureau,Kibbo classification of the company's business type.
+company-classification-top200.csv,basis,str,0.0,known,'known' (well-established public identity) or 'profile' (name and complaint profile; not independently verified).
+bank-complaint-rates.csv,company,str,0.0,ALLY FINANCIAL INC.,Company name exactly as it appears in the CFPB complaint data (the 'Company' field) — complaint counts in this table are matched on this exact string.
+bank-complaint-rates.csv,cert,int64,0.0,57803,"FDIC Certificate number of the institution selected for this company — see analysis/step7/fdic-selected.csv for how each was chosen, including corrections and notes on inactive/merged institutions."
+bank-complaint-rates.csv,year,int64,0.0,2023,"Calendar year (2023, 2024 or 2025)."
+bank-complaint-rates.csv,complaints_all,int64,0.0,3351,"All CFPB complaints that year for this exact company name, every product family."
+bank-complaint-rates.csv,complaints_excl_credit_reporting,int64,0.0,1993,"Same as complaints_all, excluding product_family = 'Credit reporting'."
+bank-complaint-rates.csv,bank_accounts_complaints,int64,0.0,673,Complaints that year for this exact company name with product_family = 'Bank accounts' only — the like-for-like numerator for the deposits- and accounts-based rates below.
+bank-complaint-rates.csv,deposits_thousands_usd,float64,12.38,159041000.0,"FDIC total domestic deposits (Call Report field DEP, in thousands of USD) for the selected institution, from the call report at or nearest to year-end (target REPDTE=YYYY1231). Includes large business/institutional deposits."
+bank-complaint-rates.csv,total_assets_thousands_usd,float64,12.38,186114000.0,"FDIC total assets (Call Report field ASSET, in thousands of USD) for the selected institution, same year-end date as deposits_thousands_usd."
+bank-complaint-rates.csv,report_date,float64,12.38,20231231.0,"The actual Call Report date (REPDTE, YYYYMMDD) the deposits/assets figures were taken from — normally year-end, blank where no report exists after a merger or acquisition."
+bank-complaint-rates.csv,complaints_per_billion_deposits_all,float64,12.38,21.07,"complaints_all divided by deposits_thousands_usd, expressed per $1 billion of deposits."
+bank-complaint-rates.csv,complaints_per_billion_deposits_excl_credit_reporting,float64,12.38,12.531,"complaints_excl_credit_reporting divided by deposits_thousands_usd, per $1 billion of deposits."
+bank-complaint-rates.csv,bank_accounts_complaints_per_billion_deposits,float64,12.38,4.232,"bank_accounts_complaints divided by deposits_thousands_usd, per $1 billion of deposits — the fairer, like-for-like comparison, since both sides relate to deposit-account business rather than cards or other lending."
+bank-complaint-rates.csv,complaints_per_billion_assets_all,float64,12.38,18.005,"complaints_all divided by total_assets_thousands_usd, per $1 billion of total assets."
+bank-complaint-rates.csv,deposits_figure_used,str,0.0,"domestic total deposits (FDIC field DEP), call report closest to year-end (target REPDTE=YYYY1231)",Text note naming the exact FDIC field and report date basis used for deposits_thousands_usd.
+bank-complaint-rates.csv,assets_figure_used,str,0.0,"FDIC total assets (field ASSET), call report at the same year-end date as deposits (target REPDTE=YYYY1231)",Text note naming the exact FDIC field and report date basis used for total_assets_thousands_usd.
+bank-complaint-rates.csv,num_deposit_accounts_250k_or_less,float64,12.38,5738164.0,"Number of deposit accounts (not dollar amount) with a balance at or below $250,000, from FDIC Call Report Schedule RC-O memorandum field DEPSMB, same year-end date as deposits_thousands_usd. A proxy for the number of ordinary consumer deposit customers, since it excludes large business/institutional accounts."
+bank-complaint-rates.csv,bank_accounts_complaints_per_100k_accounts,float64,12.38,11.7285,"bank_accounts_complaints divided by num_deposit_accounts_250k_or_less, per 100,000 such accounts — a customer-count-based rate, as opposed to the dollar-based rates above."
+bank-complaint-rates.csv,min_volume_flag,bool,0.0,False,True when bank_accounts_complaints for that company/year is below 300 — too few to treat the rate columns as reliable; use with caution or exclude when ranking.
+bank-complaint-rates.csv,accounts_figure_used,str,0.0,"FDIC Call Report Schedule RC-O memorandum field DEPSMB (number of deposit accounts, non-retirement, with a balance at or",Text note naming the exact FDIC field and report date basis used for num_deposit_accounts_250k_or_less.
