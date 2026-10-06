@@ -272,6 +272,10 @@ margin-bottom: 20px;
 .section-page-hero { padding: clamp(80px, 10vh, 120px) 0 clamp(48px, 6vh, 72px); border-bottom: 1px solid var(--border); margin-bottom: clamp(48px, 6vh, 72px); }
 .section-page-hero .section-title { max-width: 760px; }
 .section-page-hero .section-subtitle { max-width: 640px; }
+/* Chrome extension banner (index.html only) */
+.ext-banner { width: 100%; }
+.ext-banner-link { display: block; max-width: 1200px; margin: 0 auto; }
+.ext-banner-link img { display: block; width: 100%; height: auto; }
 /* "What's your problem?" search widget (index.html only) */
 .problem-search { padding: clamp(64px, 8vh, 96px) 0; background: var(--bg); }
 .ps-inner { max-width: 900px; text-align: center; }
