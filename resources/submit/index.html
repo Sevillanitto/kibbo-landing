@@ -336,6 +336,15 @@
 (function () {
   var form = document.getElementById('resourceSubmitForm');
   if (!form) return;
+
+  var categoryParam = new URLSearchParams(window.location.search).get('category');
+  if (categoryParam) {
+    var categorySelect = document.getElementById('rs-category');
+    if (categorySelect && categorySelect.querySelector('option[value="' + categoryParam.replace(/"/g, '\\"') + '"]')) {
+      categorySelect.value = categoryParam;
+    }
+  }
+
   var btn = document.getElementById('rsSubmitBtn');
   var errorEl = document.getElementById('rsFormError');
   var successEl = document.getElementById('rsFormSuccess');

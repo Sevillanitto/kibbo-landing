@@ -68,6 +68,24 @@ function esc(s) {
     .replace(/"/g, '&quot;');
 }
 
+// Country code -> display label, and the fixed display order for the
+// region filter sidebar (only regions actually present in a topic are
+// rendered, in this order).
+const COUNTRY_LABELS = {
+  US: 'US', UK: 'UK', EU: 'Europe', CA: 'Canada', AU: 'Australia',
+  NZ: 'New Zealand', GLOBAL: 'Global',
+};
+const COUNTRY_ORDER = ['US', 'UK', 'EU', 'CA', 'AU', 'NZ', 'GLOBAL'];
+
+const TYPE_LABELS = {
+  organization: 'Organization', tool: 'Tool', website: 'Website',
+  guide: 'Guide', dataset: 'Dataset', publication: 'Publication',
+};
+
+function sortKey(name) {
+  return String(name).replace(/^The\s+/i, '').toLowerCase();
+}
+
 function injectBetweenMarkersRaw(raw, content, start, end, filePath) {
   const startIdx = raw.indexOf(start);
   const endIdx = raw.indexOf(end);
@@ -118,18 +136,111 @@ function buildIndexBlock(categories) {
 }
 
 function buildCategoryBlock(cat) {
-  if (cat.resources.length === 0) {
-    return '      <p class="resource-empty">No resources listed yet. Know a good one? <a href="/resources/submit/">Submit it →</a></p>';
-  }
-  const items = cat.resources.map(r => [
-    `      <div class="resource-item">`,
-    `        <h3 class="resource-name">${esc(r.name)}</h3>`,
-    `        <p class="resource-desc">${esc(r.description)}</p>`,
-    `        <div class="resource-meta"><span>${esc(r.country)}</span><span>${esc(r.type)}</span></div>`,
-    `        <a href="${esc(r.url)}" class="resource-link" target="_blank" rel="noopener">Visit website →</a>`,
+  const sorted = cat.resources.slice().sort((a, b) => {
+    const ka = sortKey(a.name), kb = sortKey(b.name);
+    return ka < kb ? -1 : ka > kb ? 1 : 0;
+  });
+
+  // Regions present in this topic, in the fixed display order, with counts.
+  const counts = new Map();
+  for (const r of sorted) counts.set(r.country, (counts.get(r.country) || 0) + 1);
+  const regionsPresent = COUNTRY_ORDER.filter(c => counts.has(c));
+  const showSidebar = regionsPresent.length > 1;
+
+  const cells = sorted.map(r => {
+    const regionLabel = COUNTRY_LABELS[r.country] || r.country;
+    const typeLabel = TYPE_LABELS[r.type] || r.type;
+    return [
+      `        <div class="cr-cell" data-region="${esc(r.country)}">`,
+      `          <a class="cr-name" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>`,
+      `          <p class="cr-desc">${esc(r.description)}</p>`,
+      `          <p class="cr-meta-line">${esc(regionLabel)} &middot; ${esc(typeLabel)}</p>`,
+      `          <a class="cr-link" href="${esc(r.url)}" target="_blank" rel="noopener">Visit website &rarr;</a>`,
+      `        </div>`,
+    ].join('\n');
+  });
+
+  const gridBlock = [
+    `      <div class="cr-grid" id="crGrid-${cat.slug}" data-resource-grid="${cat.slug}">`,
+    cells.join('\n'),
     `      </div>`,
-  ].join('\n'));
-  return items.join('\n');
+  ].join('\n');
+
+  const addLine = `      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=${encodeURIComponent(cat.slug)}">Add your website, free of charge &rarr;</a></p>`;
+
+  if (cat.resources.length === 0) {
+    return [
+      `  <div class="cr-main-full">`,
+      `      <p class="resource-empty">No resources listed yet. Know a good one? <a href="/resources/submit/?category=${encodeURIComponent(cat.slug)}">Submit it →</a></p>`,
+      `  </div>`,
+    ].join('\n');
+  }
+
+  if (!showSidebar) {
+    return [
+      `  <div class="cr-main-full">`,
+      gridBlock,
+      addLine,
+      `  </div>`,
+    ].join('\n');
+  }
+
+  const total = sorted.length;
+  const sidebarItems = regionsPresent.map(c =>
+    `        <li><button type="button" data-value="${esc(c)}" data-name="${esc(COUNTRY_LABELS[c] || c)}" data-count="${counts.get(c)}">${esc(COUNTRY_LABELS[c] || c)} (${counts.get(c)})</button></li>`
+  ).join('\n');
+
+  const sidebar = [
+    `  <aside class="blf-sidebar" aria-label="Filter by region">`,
+    `    <p class="blf-sidebar-label">Region</p>`,
+    `    <details class="blf-cat" open id="crFilterToggle-${cat.slug}">`,
+    `      <summary><span class="blf-cat-name" id="crFilterName-${cat.slug}">All</span><span class="blf-count" id="crFilterCount-${cat.slug}" aria-label="resources">${total}</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>`,
+    `      <ul class="blf-cat-list" id="crFilter-${cat.slug}" role="tablist" aria-label="Region filter">`,
+    `        <li><button type="button" data-value="" data-name="All" data-count="${total}" class="active">All (${total})</button></li>`,
+    sidebarItems,
+    `      </ul>`,
+    `    </details>`,
+    `  </aside>`,
+  ].join('\n');
+
+  const filterScript = [
+    `  <script>`,
+    `  (function () {`,
+    `    var slug = ${JSON.stringify(cat.slug)};`,
+    `    var grid = document.getElementById('crGrid-' + slug);`,
+    `    if (!grid) return;`,
+    `    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));`,
+    `    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));`,
+    `    var nameEl = document.getElementById('crFilterName-' + slug);`,
+    `    var countEl = document.getElementById('crFilterCount-' + slug);`,
+    `    function apply(value) {`,
+    `      var shown = 0;`,
+    `      cells.forEach(function (c) {`,
+    `        var match = !value || c.getAttribute('data-region') === value;`,
+    `        c.hidden = !match;`,
+    `        if (match) shown++;`,
+    `      });`,
+    `      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });`,
+    `      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';`,
+    `      if (countEl) countEl.textContent = shown;`,
+    `    }`,
+    `    buttons.forEach(function (b) {`,
+    `      b.addEventListener('click', function () { apply(b.dataset.value); });`,
+    `    });`,
+    `  })();`,
+    `  </script>`,
+  ].join('\n');
+
+  return [
+    `  <div class="cr-layout">`,
+    sidebar,
+    `  <div class="cr-main">`,
+    gridBlock,
+    addLine,
+    `  </div>`,
+    `  </div>`,
+    filterScript,
+  ].join('\n');
 }
 
 // "Listed in Kibbo Resources" badge section — light/dark embed code the

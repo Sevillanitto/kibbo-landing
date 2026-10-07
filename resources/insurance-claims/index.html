@@ -262,53 +262,145 @@
 </div>
 
 <main class="section-main">
-  <div class="container" style="max-width: 760px;">
-    <div class="resource-list" data-resource-list="insurance-claims">
-      <!-- RESOURCES:START -->
-      <div class="resource-item">
-        <h3 class="resource-name">United Policyholders</h3>
-        <p class="resource-desc">Nonprofit that helps policyholders navigate insurance claims, especially after disasters. Free claim guides, sample letters, a 'Roadmap to Recovery' program and practical tips for resolving disputes with insurers.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://uphelp.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
+  <!-- RESOURCES:START -->
+  <div class="cr-layout">
+  <aside class="blf-sidebar" aria-label="Filter by region">
+    <p class="blf-sidebar-label">Region</p>
+    <details class="blf-cat" open id="crFilterToggle-insurance-claims">
+      <summary><span class="blf-cat-name" id="crFilterName-insurance-claims">All</span><span class="blf-count" id="crFilterCount-insurance-claims" aria-label="resources">15</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="crFilter-insurance-claims" role="tablist" aria-label="Region filter">
+        <li><button type="button" data-value="" data-name="All" data-count="15" class="active">All (15)</button></li>
+        <li><button type="button" data-value="US" data-name="US" data-count="3">US (3)</button></li>
+        <li><button type="button" data-value="UK" data-name="UK" data-count="3">UK (3)</button></li>
+        <li><button type="button" data-value="EU" data-name="Europe" data-count="6">Europe (6)</button></li>
+        <li><button type="button" data-value="CA" data-name="Canada" data-count="1">Canada (1)</button></li>
+        <li><button type="button" data-value="AU" data-name="Australia" data-count="2">Australia (2)</button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="cr-main">
+      <div class="cr-grid" id="crGrid-insurance-claims" data-resource-grid="insurance-claims">
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.assoutenti.it/" target="_blank" rel="noopener">Assoutenti</a>
+          <p class="cr-desc">Italian consumer association with information, civil-rights work and consumer education. In Italian.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.assoutenti.it/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.bundderversicherten.de/" target="_blank" rel="noopener">Bund der Versicherten</a>
+          <p class="cr-desc">German association of policyholders offering independent insurance advice. In German.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.bundderversicherten.de/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.choice.com.au/money/insurance/insurance-advice" target="_blank" rel="noopener">CHOICE – Insurance advice</a>
+          <p class="cr-desc">Guides from Australia's leading independent consumer organisation on choosing insurance, understanding exclusions and what to do when a claim goes wrong.</p>
+          <p class="cr-meta-line">Australia &middot; Guide</p>
+          <a class="cr-link" href="https://www.choice.com.au/money/insurance/insurance-advice" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.citizensadvice.org.uk/consumer/insurance/" target="_blank" rel="noopener">Citizens Advice – Insurance</a>
+          <p class="cr-desc">Free, step-by-step guidance from the UK charity on what to do when an insurer refuses or delays a claim, how to complain, and when to escalate to the Financial Ombudsman.</p>
+          <p class="cr-meta-line">UK &middot; Guide</p>
+          <a class="cr-link" href="https://www.citizensadvice.org.uk/consumer/insurance/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.clcv.org/" target="_blank" rel="noopener">CLCV</a>
+          <p class="cr-desc">French national consumer association defending consumers on housing, consumption and quality of life. In French.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.clcv.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://consumeraction.org.au/" target="_blank" rel="noopener">Consumer Action Law Centre</a>
+          <p class="cr-desc">Australian community legal centre with free fact sheets and toolkits on insurance disputes, unfair claims handling and consumer rights, plus a free legal advice line for Victorians.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://consumeraction.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://consumerwatchdog.org/" target="_blank" rel="noopener">Consumer Watchdog</a>
+          <p class="cr-desc">California-based nonprofit consumer group with a long track record on insurance rates and practices. Publishes investigations, consumer alerts and case updates on insurer conduct.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://consumerwatchdog.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.facua.org/" target="_blank" rel="noopener">FACUA</a>
+          <p class="cr-desc">Spanish consumer association fighting abuses by companies and governments, with claim templates. In Spanish.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.facua.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.fairerfinance.com/" target="_blank" rel="noopener">Fairer Finance</a>
+          <p class="cr-desc">Independent UK consumer group that rates insurers and banks on customer experience and policy quality, and publishes a regular Trust in Insurance Index. Useful for comparing how insurers actually treat customers.</p>
+          <p class="cr-meta-line">UK &middot; Website</p>
+          <a class="cr-link" href="https://www.fairerfinance.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.federconsumatori.it/" target="_blank" rel="noopener">Federconsumatori</a>
+          <p class="cr-desc">Italian nonprofit consumer association that informs and protects consumers and users. In Italian.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.federconsumatori.it/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.consumeradvocates.org/" target="_blank" rel="noopener">National Association of Consumer Advocates</a>
+          <p class="cr-desc">Association of consumer attorneys, with a directory to find a lawyer and consumer rights resources.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.consumeradvocates.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://www.ocu.org/" target="_blank" rel="noopener">OCU</a>
+          <p class="cr-desc">Spain's largest consumer organisation, with claims help, tests and advice. In Spanish; some content is paid.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://www.ocu.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://olhi-oap.ca/" target="_blank" rel="noopener">OmbudService for Life &amp; Health Insurance</a>
+          <p class="cr-desc">Free, independent and impartial ombudsman for complaints about life and health insurance in Canada.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://olhi-oap.ca/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.resolver.co.uk/" target="_blank" rel="noopener">Resolver</a>
+          <p class="cr-desc">Free online tool that helps you raise and track complaints with insurers and other companies, keeps all correspondence in one place and guides you through escalation if the company doesn't respond.</p>
+          <p class="cr-meta-line">UK &middot; Tool</p>
+          <a class="cr-link" href="https://www.resolver.co.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://uphelp.org/" target="_blank" rel="noopener">United Policyholders</a>
+          <p class="cr-desc">Nonprofit that helps policyholders navigate insurance claims, especially after disasters. Free claim guides, sample letters, a 'Roadmap to Recovery' program and practical tips for resolving disputes with insurers.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://uphelp.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
       </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Consumer Watchdog</h3>
-        <p class="resource-desc">California-based nonprofit consumer group with a long track record on insurance rates and practices. Publishes investigations, consumer alerts and case updates on insurer conduct.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://consumerwatchdog.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Citizens Advice – Insurance</h3>
-        <p class="resource-desc">Free, step-by-step guidance from the UK charity on what to do when an insurer refuses or delays a claim, how to complain, and when to escalate to the Financial Ombudsman.</p>
-        <div class="resource-meta"><span>UK</span><span>guide</span></div>
-        <a href="https://www.citizensadvice.org.uk/consumer/insurance/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Resolver</h3>
-        <p class="resource-desc">Free online tool that helps you raise and track complaints with insurers and other companies, keeps all correspondence in one place and guides you through escalation if the company doesn't respond.</p>
-        <div class="resource-meta"><span>UK</span><span>tool</span></div>
-        <a href="https://www.resolver.co.uk/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Fairer Finance</h3>
-        <p class="resource-desc">Independent UK consumer group that rates insurers and banks on customer experience and policy quality, and publishes a regular Trust in Insurance Index. Useful for comparing how insurers actually treat customers.</p>
-        <div class="resource-meta"><span>UK</span><span>website</span></div>
-        <a href="https://www.fairerfinance.com/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">CHOICE – Insurance advice</h3>
-        <p class="resource-desc">Guides from Australia's leading independent consumer organisation on choosing insurance, understanding exclusions and what to do when a claim goes wrong.</p>
-        <div class="resource-meta"><span>AU</span><span>guide</span></div>
-        <a href="https://www.choice.com.au/money/insurance/insurance-advice" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Consumer Action Law Centre</h3>
-        <p class="resource-desc">Australian community legal centre with free fact sheets and toolkits on insurance disputes, unfair claims handling and consumer rights, plus a free legal advice line for Victorians.</p>
-        <div class="resource-meta"><span>AU</span><span>organization</span></div>
-        <a href="https://consumeraction.org.au/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
+      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=insurance-claims">Add your website, free of charge &rarr;</a></p>
+  </div>
+  </div>
+  <script>
+  (function () {
+    var slug = "insurance-claims";
+    var grid = document.getElementById('crGrid-' + slug);
+    if (!grid) return;
+    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));
+    var nameEl = document.getElementById('crFilterName-' + slug);
+    var countEl = document.getElementById('crFilterCount-' + slug);
+    function apply(value) {
+      var shown = 0;
+      cells.forEach(function (c) {
+        var match = !value || c.getAttribute('data-region') === value;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });
+      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';
+      if (countEl) countEl.textContent = shown;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.value); });
+    });
+  })();
+  </script>
 <!-- RESOURCES:END -->
-    </div>
+  <div class="container" style="max-width: 760px;">
     <!-- BADGE:START -->
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <span class="section-label">Optional</span>

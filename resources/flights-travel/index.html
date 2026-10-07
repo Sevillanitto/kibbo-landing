@@ -262,35 +262,84 @@
 </div>
 
 <main class="section-main">
-  <div class="container" style="max-width: 760px;">
-    <div class="resource-list" data-resource-list="flights-travel">
-      <!-- RESOURCES:START -->
-      <div class="resource-item">
-        <h3 class="resource-name">FlyersRights</h3>
-        <p class="resource-desc">The largest US nonprofit airline passenger organization. Explains your rights on delays, cancellations, refunds and tarmac waits, and campaigns for stronger passenger protections.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://flyersrights.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
+  <!-- RESOURCES:START -->
+  <div class="cr-layout">
+  <aside class="blf-sidebar" aria-label="Filter by region">
+    <p class="blf-sidebar-label">Region</p>
+    <details class="blf-cat" open id="crFilterToggle-flights-travel">
+      <summary><span class="blf-cat-name" id="crFilterName-flights-travel">All</span><span class="blf-count" id="crFilterCount-flights-travel" aria-label="resources">5</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="crFilter-flights-travel" role="tablist" aria-label="Region filter">
+        <li><button type="button" data-value="" data-name="All" data-count="5" class="active">All (5)</button></li>
+        <li><button type="button" data-value="US" data-name="US" data-count="2">US (2)</button></li>
+        <li><button type="button" data-value="UK" data-name="UK" data-count="1">UK (1)</button></li>
+        <li><button type="button" data-value="CA" data-name="Canada" data-count="1">Canada (1)</button></li>
+        <li><button type="button" data-value="GLOBAL" data-name="Global" data-count="1">Global (1)</button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="cr-main">
+      <div class="cr-grid" id="crGrid-flights-travel" data-resource-grid="flights-travel">
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://airpassengerrights.ca/" target="_blank" rel="noopener">Air Passenger Rights</a>
+          <p class="cr-desc">Volunteer group explaining flight rights in Canada and how to enforce them.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://airpassengerrights.ca/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.elliott.org/" target="_blank" rel="noopener">Elliott Report</a>
+          <p class="cr-desc">Consumer advocacy site by journalist Christopher Elliott that helps travelers resolve disputes with airlines, hotels and car rental companies, with guides on how to fix your own consumer problem.</p>
+          <p class="cr-meta-line">US &middot; Website</p>
+          <a class="cr-link" href="https://www.elliott.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://flyersrights.org/" target="_blank" rel="noopener">FlyersRights</a>
+          <p class="cr-desc">The largest US nonprofit airline passenger organization. Explains your rights on delays, cancellations, refunds and tarmac waits, and campaigns for stronger passenger protections.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://flyersrights.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.seat61.com/" target="_blank" rel="noopener">The Man in Seat 61</a>
+          <p class="cr-desc">Independent, award-winning guide to train travel in Europe and worldwide: routes, how to book, real fares and tips to avoid overpaying through third-party sites.</p>
+          <p class="cr-meta-line">UK &middot; Website</p>
+          <a class="cr-link" href="https://www.seat61.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://en.wikivoyage.org/" target="_blank" rel="noopener">Wikivoyage</a>
+          <p class="cr-desc">Free, community-written travel guide from the Wikimedia movement, with practical, ad-free information on destinations, getting around, costs and staying safe.</p>
+          <p class="cr-meta-line">Global &middot; Website</p>
+          <a class="cr-link" href="https://en.wikivoyage.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
       </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Elliott Report</h3>
-        <p class="resource-desc">Consumer advocacy site by journalist Christopher Elliott that helps travelers resolve disputes with airlines, hotels and car rental companies, with guides on how to fix your own consumer problem.</p>
-        <div class="resource-meta"><span>US</span><span>website</span></div>
-        <a href="https://www.elliott.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Wikivoyage</h3>
-        <p class="resource-desc">Free, community-written travel guide from the Wikimedia movement, with practical, ad-free information on destinations, getting around, costs and staying safe.</p>
-        <div class="resource-meta"><span>US</span><span>website</span></div>
-        <a href="https://en.wikivoyage.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">The Man in Seat 61</h3>
-        <p class="resource-desc">Independent, award-winning guide to train travel in Europe and worldwide: routes, how to book, real fares and tips to avoid overpaying through third-party sites.</p>
-        <div class="resource-meta"><span>UK</span><span>website</span></div>
-        <a href="https://www.seat61.com/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
+      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=flights-travel">Add your website, free of charge &rarr;</a></p>
+  </div>
+  </div>
+  <script>
+  (function () {
+    var slug = "flights-travel";
+    var grid = document.getElementById('crGrid-' + slug);
+    if (!grid) return;
+    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));
+    var nameEl = document.getElementById('crFilterName-' + slug);
+    var countEl = document.getElementById('crFilterCount-' + slug);
+    function apply(value) {
+      var shown = 0;
+      cells.forEach(function (c) {
+        var match = !value || c.getAttribute('data-region') === value;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });
+      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';
+      if (countEl) countEl.textContent = shown;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.value); });
+    });
+  })();
+  </script>
 <!-- RESOURCES:END -->
-    </div>
+  <div class="container" style="max-width: 760px;">
     <!-- BADGE:START -->
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <span class="section-label">Optional</span>

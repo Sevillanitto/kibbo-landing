@@ -5,9 +5,26 @@
       "name": "string — resource name",
       "url": "string — full https:// URL",
       "description": "string — one or two sentences",
-      "country": "string — e.g. 'US', 'UK', 'EU', 'Global'",
+      "country": "string — one of: US, UK, EU, CA, AU, NZ, GLOBAL",
       "type": "string — one of: website, tool, guide, dataset, organization, publication",
       "added": "string — ISO date, e.g. '2026-10-01'"
+    },
+    "countryLabels": {
+      "US": "US",
+      "UK": "UK",
+      "EU": "Europe",
+      "CA": "Canada",
+      "AU": "Australia",
+      "NZ": "New Zealand",
+      "GLOBAL": "Global"
+    },
+    "typeLabels": {
+      "organization": "Organization",
+      "tool": "Tool",
+      "website": "Website",
+      "guide": "Guide",
+      "dataset": "Dataset",
+      "publication": "Publication"
     }
   },
   "categories": [
@@ -79,6 +96,310 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "ADICAE",
+          "url": "https://www.adicae.es/",
+          "description": "Spanish consumer association focused on banking, insurance and consumer claims, with collective actions. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Altroconsumo",
+          "url": "https://www.altroconsumo.it/",
+          "description": "Italy's largest consumer association, with product tests, guides and tools to defend consumer rights. In Italian.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Americans for Financial Reform",
+          "url": "https://ourfinancialsecurity.org/",
+          "description": "Coalition of consumer, civil rights and community groups pushing for stronger rules on banks and financial products.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "ASUFIN",
+          "url": "https://asufin.com/",
+          "description": "Spanish association of financial users that advises members on banking and financial claims. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "BEUC",
+          "url": "https://www.beuc.eu/",
+          "description": "Umbrella group of 44 consumer organisations from 31 countries, representing consumers before the EU institutions.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Center for Responsible Lending",
+          "url": "https://www.responsiblelending.org/",
+          "description": "Nonprofit research and advocacy group working against predatory lending and other abusive financial practices.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/",
+          "description": "UK charity giving free, confidential advice on consumer, money, housing and work problems.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Consumentenbond",
+          "url": "https://www.consumentenbond.nl/",
+          "description": "Dutch consumer organisation with product tests and financial and legal advice. In Dutch; some content is paid.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Credit Canada",
+          "url": "https://www.creditcanada.com/",
+          "description": "Canadian non-profit credit counselling agency offering debt help and financial coaching. Programs may carry fees.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Credit Counselling Society",
+          "url": "https://nomoredebts.org/",
+          "description": "Canadian non-profit offering credit counselling and debt management programs.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Debt Advice Foundation",
+          "url": "https://www.debtadvicefoundation.org/",
+          "description": "UK charity offering free, confidential debt advice and education to anyone worried about debt.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Euroconsumers",
+          "url": "https://www.euroconsumers.org/",
+          "description": "Consumer group active in Belgium, Italy, Spain, Portugal and Brazil, with tests, advice and collective actions.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Finance Watch",
+          "url": "https://www.finance-watch.org/",
+          "description": "Non-profit association working to reform finance in the interest of citizens, with EU-level research and explainers.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Financial Counselling Australia",
+          "url": "https://financialcounsellingaustralia.org.au/",
+          "description": "Peak body for financial counsellors in Australia, with information on how to find free financial counselling.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Forbrukerrådet",
+          "url": "https://www.forbrukerradet.no/",
+          "description": "Norwegian Consumer Council, with advice and complaint guidance for consumers. In Norwegian.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fédération Romande des Consommateurs",
+          "url": "https://www.frc.ch/",
+          "description": "Consumer federation of French-speaking Switzerland offering information, advice and advocacy. In French.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "GreenPath Financial Wellness",
+          "url": "https://www.greenpath.com/",
+          "description": "Nonprofit financial counseling with NFCC-certified counselors for debt, budgeting and housing. Debt management plans carry fees.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "InCharge Debt Solutions",
+          "url": "https://www.incharge.org/",
+          "description": "Nonprofit credit counseling agency offering debt management plans, which carry fees.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Kuluttajaliitto",
+          "url": "https://www.kuluttajaliitto.fi/",
+          "description": "Finnish consumer federation whose local and national associations promote consumer rights. In Finnish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "LSS Financial Counseling",
+          "url": "https://financialcounseling.lssmn.org/",
+          "description": "Financial counseling from Lutheran Social Service of Minnesota to help people manage and pay off debt.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Money Advice Trust",
+          "url": "https://moneyadvicetrust.org/",
+          "description": "UK charity behind National Debtline and Business Debtline, with advice and research on debt and money.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Money and Mental Health Policy Institute",
+          "url": "https://www.moneyandmentalhealth.org/",
+          "description": "UK research charity on the link between money and mental health, with guides for people in financial difficulty.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Money Management International",
+          "url": "https://www.moneymanagement.org/",
+          "description": "Nonprofit credit counseling agency offering debt management programs and budgeting help. Programs may carry fees.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Debtline",
+          "url": "https://nationaldebtline.org/",
+          "description": "Free, confidential debt advice from an independent charity for England and Wales, by phone, chat and online.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Option consommateurs",
+          "url": "https://option-consommateurs.org/",
+          "description": "Quebec nonprofit that helps consumers and defends their rights, with guides and complaint help. In French.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Prosper Canada",
+          "url": "https://prospercanada.org/",
+          "description": "Canadian charity making financial help accessible to people on low incomes, with tools and resources.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Public Citizen",
+          "url": "https://www.citizen.org/",
+          "description": "Nonprofit consumer advocacy organization working on corporate accountability, health and safety, and consumer rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Public Justice",
+          "url": "https://www.publicjustice.net/",
+          "description": "Nonprofit legal advocacy organization that fights corporate abuses through consumer and civil rights litigation.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Student Debt Crisis Center",
+          "url": "https://studentdebtcrisis.org/",
+          "description": "Nonprofit centering borrowers' voices to end the student debt crisis, with guides to loan relief programs.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Sveriges Konsumenter",
+          "url": "https://www.sverigeskonsumenter.se/",
+          "description": "Independent Swedish non-profit consumer organisation fighting for consumer rights. In Swedish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Take Charge America",
+          "url": "https://www.takechargeamerica.org/",
+          "description": "Nonprofit credit counseling and debt help agency. Debt management plans carry fees.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Test-Achats",
+          "url": "https://www.test-achats.be/",
+          "description": "Belgian consumer association that informs, defends and represents consumers. In French and Dutch; some content is paid.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Money Charity",
+          "url": "https://themoneycharity.org.uk/",
+          "description": "UK charity promoting financial wellbeing through money education, workshops and guides.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "UFC-Que Choisir",
+          "url": "https://www.quechoisir.org/",
+          "description": "French consumer association with independent product tests, legal advice and collective actions. In French; some content is paid.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Undebt.it",
+          "url": "https://undebt.it/",
+          "description": "Free debt payoff planner and tracker with snowball and avalanche strategies.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Verbraucherzentrale",
+          "url": "https://www.verbraucherzentrale.de/",
+          "description": "German consumer advice centres with information and advice on contracts, finance, energy and digital issues. In German.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Verbraucherzentrale Bundesverband",
+          "url": "https://www.vzbv.de/",
+          "description": "Federation of German consumer organisations representing consumers in politics, business and courts. In German.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Which?",
+          "url": "https://www.which.co.uk/",
+          "description": "UK consumer organisation that tests products and services and publishes advice. Some content needs a paid membership.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -142,6 +463,70 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Assoutenti",
+          "url": "https://www.assoutenti.it/",
+          "description": "Italian consumer association with information, civil-rights work and consumer education. In Italian.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Bund der Versicherten",
+          "url": "https://www.bundderversicherten.de/",
+          "description": "German association of policyholders offering independent insurance advice. In German.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "CLCV",
+          "url": "https://www.clcv.org/",
+          "description": "French national consumer association defending consumers on housing, consumption and quality of life. In French.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "FACUA",
+          "url": "https://www.facua.org/",
+          "description": "Spanish consumer association fighting abuses by companies and governments, with claim templates. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Federconsumatori",
+          "url": "https://www.federconsumatori.it/",
+          "description": "Italian nonprofit consumer association that informs and protects consumers and users. In Italian.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Association of Consumer Advocates",
+          "url": "https://www.consumeradvocates.org/",
+          "description": "Association of consumer attorneys, with a directory to find a lawyer and consumer rights resources.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "OCU",
+          "url": "https://www.ocu.org/",
+          "description": "Spain's largest consumer organisation, with claims help, tests and advice. In Spanish; some content is paid.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "OmbudService for Life & Health Insurance",
+          "url": "https://olhi-oap.ca/",
+          "description": "Free, independent and impartial ombudsman for complaints about life and health insurance in Canada.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -154,7 +539,7 @@
           "name": "Web3 is Going Just Great",
           "url": "https://www.web3isgoinggreat.com/",
           "description": "An independent, sourced timeline of crypto scams, hacks, rug pulls and collapses, with a running total of losses. A sober reality check before putting money into any crypto project.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -170,7 +555,7 @@
           "name": "Chainabuse",
           "url": "https://www.chainabuse.com/",
           "description": "Free community database of reported crypto scams. Search a wallet address, website or domain to see if others have reported it, or file your own report to warn people.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -178,7 +563,7 @@
           "name": "Revoke.cash",
           "url": "https://revoke.cash/",
           "description": "Free, open-source tool to see and cancel the token approvals your crypto wallet has granted. Its learning section explains in plain language how approval scams drain wallets and how to protect yourself.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -213,6 +598,38 @@
           "country": "US",
           "type": "guide",
           "added": "2026-10-01"
+        },
+        {
+          "name": "AARP Fraud Watch Network",
+          "url": "https://www.aarp.org/money/scams-fraud/",
+          "description": "AARP's free scam alerts, prevention tips and support for people affected by fraud.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Bitcoin Abuse Database",
+          "url": "https://www.bitcoinabuse.com/",
+          "description": "Database of bitcoin addresses reported for ransomware, blackmail and fraud. May no longer be updated.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Consumers League",
+          "url": "https://nclnet.org/",
+          "description": "Pioneering US consumer advocacy organization that runs Fraud.org and publishes consumer alerts.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Cybersecurity Alliance",
+          "url": "https://www.staysafeonline.org/",
+          "description": "Nonprofit offering online safety guides for consumers; partly funded by technology companies.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -241,7 +658,7 @@
           "name": "Terms of Service; Didn't Read",
           "url": "https://tosdr.org/",
           "description": "Community project that reads and grades the terms of service and privacy policies of popular websites and apps, highlighting the clauses that matter. Also available as a browser extension.",
-          "country": "EU",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -292,6 +709,174 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Advice Direct Scotland",
+          "url": "https://www.advicedirect.scot/",
+          "description": "Scottish charity running free advice services on consumer, energy and money problems.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Advocate",
+          "url": "https://weareadvocate.org.uk/",
+          "description": "UK charity connecting people with free legal help from barristers (formerly Bar Pro Bono Unit).",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "American Bar Association — Free Legal Answers",
+          "url": "https://abafreelegalanswers.org/",
+          "description": "Virtual legal advice clinic where eligible users post civil legal questions and volunteer lawyers answer for free.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Canadian Centre for Elder Law",
+          "url": "https://www.bcli.org/ccel",
+          "description": "Canadian research and education centre on elder law, with information on seniors' legal issues.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Citizens Advice Bureau New Zealand",
+          "url": "https://www.cab.org.nz/",
+          "description": "Free advice on rights and obligations in New Zealand, to help people take action.",
+          "country": "NZ",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Community Law New Zealand",
+          "url": "https://communitylaw.org.nz/",
+          "description": "Free legal help and information across New Zealand, with a focus on people on low incomes.",
+          "country": "NZ",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Community Legal Centres Australia",
+          "url": "https://clcs.org.au/",
+          "description": "National body for Australia's community legal centres, with a way to find free legal help near you.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Community Legal Centres Queensland",
+          "url": "https://www.clcq.org.au/",
+          "description": "Peak body for community legal centres in Queensland, with information on free legal help.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Consumer NZ",
+          "url": "https://www.consumer.org.nz/",
+          "description": "New Zealand's independent consumer organisation, with test reports and reviews. Premium content is paid.",
+          "country": "NZ",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Consumers International",
+          "url": "https://www.consumersinternational.org/",
+          "description": "Worldwide federation of consumer organisations that campaigns for safe and fair treatment of consumers.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Law Centres Network",
+          "url": "https://www.lawcentres.org.uk/",
+          "description": "Network of UK Law Centres providing free legal advice in areas such as housing, debt and employment.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Legal Aid at Work",
+          "url": "https://legalaidatwork.org/",
+          "description": "California nonprofit with a self-help library of factsheets and sample letters on workplace and family rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Legal Aid Society",
+          "url": "https://legalaidnyc.org/",
+          "description": "New York's largest legal aid provider, giving free legal help to people who cannot afford a lawyer.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Legal Information Institute — Cornell",
+          "url": "https://www.law.cornell.edu/",
+          "description": "Free online access to US law, with plain-language explanations of legal terms and topics.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Legal Services Corporation",
+          "url": "https://www.lsc.gov/",
+          "description": "US nonprofit funded by Congress that funds civil legal aid, with a locator to find free legal help.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Maine Volunteer Lawyers Project",
+          "url": "https://www.vlp.org/",
+          "description": "Free civil legal help in Maine through volunteer lawyers, for low-income residents.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "People's Law School",
+          "url": "https://www.peopleslawschool.ca/",
+          "description": "Free legal education and information for people in British Columbia on everyday legal matters.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Public Counsel",
+          "url": "https://publiccounsel.org/",
+          "description": "Pro bono law firm in Los Angeles providing free legal help to families, veterans, students and immigrants.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Steps to Justice",
+          "url": "https://stepstojustice.ca/",
+          "description": "Step-by-step information on everyday legal problems for people in Ontario. A project of CLEO.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "YouthLaw",
+          "url": "https://youthlaw.co.nz/",
+          "description": "Free legal help for young people across New Zealand.",
+          "country": "NZ",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Éducaloi",
+          "url": "https://educaloi.qc.ca/",
+          "description": "Non-governmental organisation in Quebec explaining the law in plain language. In French.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -379,6 +964,318 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Advocacy Centre for Tenants Ontario",
+          "url": "https://www.acto.ca/",
+          "description": "Ontario legal clinic and advocacy centre providing tenant resources and legal help.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Better Renting",
+          "url": "https://www.betterrenting.org.au/",
+          "description": "Community of Australian renters working together for stable, affordable and liveable homes.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Canadian Centre for Housing Rights (antes CERA)",
+          "url": "https://housingrightscanada.com/",
+          "description": "Canadian organisation promoting housing rights, formerly the Centre for Equality Rights in Accommodation.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "CECU",
+          "url": "https://cecu.es/",
+          "description": "Spanish confederation of consumers and users, defending consumer rights. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Community Legal Services",
+          "url": "https://clsphila.org/",
+          "description": "Free legal advice and representation for low-income residents of Philadelphia.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "East Bay Community Law Center",
+          "url": "https://ebclc.org/",
+          "description": "Legal services for low-income residents of Alameda County, California, including tenant defence.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Eviction Lab",
+          "url": "https://evictionlab.org/",
+          "description": "Princeton's nationwide eviction database with maps and rankings by community. Data, not legal help.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Center for Central Indiana",
+          "url": "https://www.fhcci.org/",
+          "description": "Fair housing center in Indianapolis helping people with housing discrimination.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Center of Southeast & Mid Michigan",
+          "url": "https://www.fhcmichigan.org/",
+          "description": "Michigan fair housing center offering investigation, advice, advocacy and attorney referrals.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Center of West Michigan",
+          "url": "https://www.fhcwm.org/",
+          "description": "Fair housing center for West Michigan, helping people who face housing discrimination.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Council of Oregon",
+          "url": "https://fhco.org/",
+          "description": "Oregon fair housing organisation with information and help for housing discrimination.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Services Akron",
+          "url": "https://www.fairhousingakron.org/",
+          "description": "Fair housing services in the Akron area (Ohio): discrimination complaints and tenant help.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Federation of Metro Tenants' Associations",
+          "url": "https://www.torontotenants.org/",
+          "description": "Toronto federation of tenant associations with tenant rights information.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Greater Manchester Tenants Union",
+          "url": "https://www.tenantsunion.org.uk/",
+          "description": "Tenants' union in Greater Manchester: homes for people, not for profit.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Court Answers",
+          "url": "https://housingcourtanswers.org/",
+          "description": "New York City hotline answering questions about Housing Court, housing laws and regulations.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Equality Center of Pennsylvania",
+          "url": "https://www.equalhousing.org/",
+          "description": "Pennsylvania fair housing organisation working against housing discrimination.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Justice Center",
+          "url": "https://www.hjcmn.org/",
+          "description": "Minnesota nonprofit working for housing justice for tenants and communities.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Rights Center",
+          "url": "https://www.housingrightscenter.org/",
+          "description": "Fair housing organisation helping residents of Los Angeles and Ventura counties with discrimination and tenant rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Rights Committee of San Francisco",
+          "url": "https://hrcsf.org/",
+          "description": "Tenant advocacy, resources and legal support in San Francisco since 1979.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Housing Rights Northern Ireland",
+          "url": "https://www.housingrights.org.uk/",
+          "description": "Charity helping people in Northern Ireland with housing problems since 1964.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Justice for Tenants",
+          "url": "https://www.justicefortenants.org/",
+          "description": "Free advice, support and representation for tenants with all kinds of issues in the UK.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "KC Tenants",
+          "url": "https://kctenants.org/",
+          "description": "Citywide tenant union in Kansas City, led by poor and working-class tenants.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Living Rent",
+          "url": "https://www.livingrent.org/",
+          "description": "Scotland's tenants' union, helping tenants organise to defend their rights.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "London Renters Union",
+          "url": "https://londonrentersunion.org/",
+          "description": "Union of London renters building collective power to improve housing.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Metropolitan Tenants Organization",
+          "url": "https://www.tenants-rights.org/",
+          "description": "Chicago tenants' organisation helping tenants improve their living conditions since 1981.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Montgomery County Renters Alliance",
+          "url": "https://rentersalliance.org/",
+          "description": "New independent nonprofit advancing renters' rights and security in Montgomery County, Maryland.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Fair Housing Alliance",
+          "url": "https://nationalfairhousing.org/",
+          "description": "US alliance of fair housing organisations fighting housing discrimination, with guidance on how to report it.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Philadelphia Tenants Union",
+          "url": "https://www.phillytenantsunion.org/",
+          "description": "Grassroots, tenant-led organisation fighting for affordable housing in Philadelphia.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Plataforma de Afectados por la Hipoteca",
+          "url": "https://afectadosporlahipoteca.com/",
+          "description": "Spanish platform fighting evictions and defending housing as a stable, affordable right since 2009. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Renters United",
+          "url": "https://rentersunited.org.nz/",
+          "description": "Renters' advocacy group campaigning to make renting better in Aotearoa New Zealand.",
+          "country": "NZ",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "San Francisco Tenants Union",
+          "url": "https://sftu.org/",
+          "description": "San Francisco tenants' union, fighting for tenants since 1970.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Shelter",
+          "url": "https://www.shelter.org.uk/",
+          "description": "UK housing and homelessness charity offering free advice by phone, web chat and online guides for tenants.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Shelter Scotland",
+          "url": "https://scotland.shelter.org.uk/",
+          "description": "Shelter's Scottish branch, helping people fight bad housing and homelessness with advice and guides.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenant Resource & Advisory Centre",
+          "url": "https://tenants.bc.ca/",
+          "description": "Non-profit providing free legal education, representation and advocacy to tenants in British Columbia.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenant Resource Center",
+          "url": "https://www.tenantresourcecenter.org/",
+          "description": "Free housing counseling and other services for neighbours in Dane County, Wisconsin.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenants Queensland",
+          "url": "https://tenantsqld.org.au/",
+          "description": "Tenancy information and advocacy for Queensland renters, with fact sheets on renting rights.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenants Together",
+          "url": "https://www.tenantstogether.org/",
+          "description": "California statewide organisation defending the rights of renters, with tenant resources.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenants Union of Tasmania",
+          "url": "https://tutas.org.au/",
+          "description": "Free advice, advocacy and support for Tasmanian tenants on their tenancy rights.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Tenants Union of Washington State",
+          "url": "https://tenantsunion.org/",
+          "description": "Washington State renters' organisation offering tenant education, organising and advocacy.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -415,7 +1312,7 @@
           "name": "iFixit",
           "url": "https://www.ifixit.com/",
           "description": "Free, community-written repair guides for appliances, electronics and household items. A good first stop before paying for a repair or replacing something that might be easy to fix.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -439,7 +1336,7 @@
           "name": "Repair Café",
           "url": "https://www.repaircafe.org/en/",
           "description": "International volunteer movement of free repair meetups where people bring broken household items and fix them with volunteers. Find a Repair Café near you on the world map.",
-          "country": "EU",
+          "country": "GLOBAL",
           "type": "organization",
           "added": "2026-10-01"
         },
@@ -450,6 +1347,70 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Fixit Clinic",
+          "url": "https://fixitclinic.org/",
+          "description": "Community repair events that build resilient communities through do-it-together repair.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Home Energy Scotland",
+          "url": "https://www.homeenergyscotland.org/",
+          "description": "Free, expert and impartial advice on saving energy and cutting bills. Funded by the Scottish Government.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "HomeOwners Alliance",
+          "url": "https://hoa.org.uk/",
+          "description": "UK advice for homeowners on buying, selling, improving and running a home.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Center for Healthy Housing",
+          "url": "https://nchh.org/",
+          "description": "Nonprofit promoting healthy homes, with guides on lead, mould and other housing hazards.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Open Repair Alliance",
+          "url": "https://openrepair.org/",
+          "description": "International group of community repair organisations working for longer-lasting electronics.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Right to Repair Europe",
+          "url": "https://repair.eu/",
+          "description": "Campaign for products that last longer and are easy to repair, with information on repair rights.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Restart Project",
+          "url": "https://therestartproject.org/",
+          "description": "UK charity helping people use their electronics longer through community repair events.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "TrustMark",
+          "url": "https://www.trustmark.org.uk/",
+          "description": "Government-endorsed UK quality scheme covering work consumers have done in or around their home.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -489,6 +1450,46 @@
           "country": "UK",
           "type": "guide",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Access Info Europe",
+          "url": "https://www.access-info.org/",
+          "description": "Organisation defending the right to information in Europe, with tools to request public information.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "FixMyStreet",
+          "url": "https://www.fixmystreet.com/",
+          "description": "Report, view and discuss local street problems such as potholes and fly-tipping, sent to your council.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "FragDenStaat",
+          "url": "https://fragdenstaat.de/",
+          "description": "Request documents from more than 40,000 German authorities for free under freedom of information law. In German.",
+          "country": "EU",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "mySociety",
+          "url": "https://www.mysociety.org/",
+          "description": "UK charity that builds tools to help people be active citizens, including FixMyStreet and WhatDoTheyKnow.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "WriteToThem",
+          "url": "https://www.writetothem.com/",
+          "description": "Easy way to contact your MPs, councillors and other elected representatives in the UK.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -520,6 +1521,206 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Accem",
+          "url": "https://www.accem.es/",
+          "description": "Spanish NGO protecting the rights of people in vulnerable situations, including refugees and migrants. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Andalucía Acoge",
+          "url": "https://acoge.org/",
+          "description": "Federation of organisations supporting migrants and refugees in Andalusia. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Centro de los Derechos del Migrante",
+          "url": "https://cdmigrante.org/",
+          "description": "Organisation defending the rights of migrant workers in the US and Mexico. In English and Spanish.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Dress for Success",
+          "url": "https://dressforsuccess.org/",
+          "description": "International nonprofit helping women reach economic independence with professional attire and career support.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Farmworker Justice",
+          "url": "https://www.farmworkerjustice.org/",
+          "description": "US nonprofit empowering farmworkers through legal advocacy and information.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fundación Cepaim",
+          "url": "https://cepaim.org/",
+          "description": "Spanish foundation promoting an intercultural society, with services for migrants and vulnerable people. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fundación Secretariado Gitano",
+          "url": "https://www.gitanos.org/",
+          "description": "Spanish foundation working for the rights and social progress of Roma, including employment programmes.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Inserta Empleo",
+          "url": "https://www.insertaempleo.es/",
+          "description": "Fundación ONCE's employment programme for people with disabilities. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Make the Road New York",
+          "url": "https://maketheroadny.org/",
+          "description": "New York community organisation offering legal, health and education services to immigrants and workers.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Migrant Workers Centre",
+          "url": "https://www.migrantworkers.org.au/",
+          "description": "Centre in Victoria, Australia supporting migrant workers with workplace rights.",
+          "country": "AU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Day Laborer Organizing Network",
+          "url": "https://www.ndlon.org/",
+          "description": "Network of more than 70 organisations working with day laborers and low-wage workers across the US.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Disability Institute",
+          "url": "https://www.nationaldisabilityinstitute.org/",
+          "description": "US nonprofit focused on the financial health and wellbeing of people with disabilities.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Domestic Workers Alliance",
+          "url": "https://www.domesticworkers.org/",
+          "description": "Alliance working for the rights of more than 2.2 million domestic workers in the US.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Employment Law Project",
+          "url": "https://www.nelp.org/",
+          "description": "US nonprofit working for a good-jobs economy, with resources on workers' rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Parkdale Community Legal Services",
+          "url": "https://www.parkdalelegal.org/",
+          "description": "Toronto community legal clinic giving free legal help on housing, income and employment.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Per Scholas",
+          "url": "https://perscholas.org/",
+          "description": "No-cost job training and career support in IT and other fields across the US.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Protect",
+          "url": "https://protect-advice.org.uk/",
+          "description": "UK whistleblowing charity giving free advice to people who want to raise concerns at work.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Fortune Society",
+          "url": "https://fortunesociety.org/",
+          "description": "New York nonprofit supporting reentry from incarceration, with housing, job and counselling services.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Upwardly Global",
+          "url": "https://upwardlyglobal.org/",
+          "description": "Nonprofit helping immigrant and refugee professionals rebuild their careers in the US.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "WageIndicator Foundation",
+          "url": "https://wageindicator.org/",
+          "description": "Shares global information on salaries, minimum and living wages, labour laws and gig work.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Work Rights Centre",
+          "url": "https://www.workrightscentre.org/",
+          "description": "UK charity that helps migrants and disadvantaged Britons access employment justice.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Worker Info Exchange",
+          "url": "https://www.workerinfoexchange.org/",
+          "description": "Non-profit helping workers access and gain insight from the data collected about them at work.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Workers Defense Project",
+          "url": "https://www.workersdefense.org/",
+          "description": "Texas community organisation for low-wage, immigrant workers in the construction industry.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Workers' Action Centre",
+          "url": "https://workersactioncentre.org/",
+          "description": "Toronto organisation of low-wage and precarious workers, with information on employment rights.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Year Up",
+          "url": "https://www.yearup.org/",
+          "description": "Job training programme and access to career opportunities for young adults.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -548,7 +1749,7 @@
           "name": "Wikivoyage",
           "url": "https://en.wikivoyage.org/",
           "description": "Free, community-written travel guide from the Wikimedia movement, with practical, ad-free information on destinations, getting around, costs and staying safe.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -559,6 +1760,14 @@
           "country": "UK",
           "type": "website",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Air Passenger Rights",
+          "url": "https://airpassengerrights.ca/",
+          "description": "Volunteer group explaining flight rights in Canada and how to enforce them.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -587,7 +1796,7 @@
           "name": "Class Central",
           "url": "https://www.classcentral.com/",
           "description": "Search engine and reviews for online courses from universities and platforms, with curated lists of courses that are still completely free and how to avoid paying for certificates you don't need.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -606,6 +1815,46 @@
           "country": "UK",
           "type": "website",
           "added": "2026-10-01"
+        },
+        {
+          "name": "MIT OpenCourseWare",
+          "url": "https://ocw.mit.edu/",
+          "description": "Free web publication of virtually all MIT course content, open to the world.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "OER Commons",
+          "url": "https://oercommons.org/",
+          "description": "Digital library of free open education resources for teachers and students.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "OpenStax",
+          "url": "https://openstax.org/",
+          "description": "Free college textbooks for students, making education more affordable.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Saylor Academy",
+          "url": "https://www.saylor.org/",
+          "description": "Free online courses, with the option to earn credit toward a degree.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Odin Project",
+          "url": "https://www.theodinproject.com/",
+          "description": "Free open-source curriculum for learning web development.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -657,7 +1906,7 @@
           "name": "ScamAdviser",
           "url": "https://www.scamadviser.com/",
           "description": "Free website checker that gives an automated trust score for online shops based on domain age, ownership, hosting and user reports. A quick first check before buying from an unfamiliar store.",
-          "country": "EU",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -668,6 +1917,46 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Ethical Consumer",
+          "url": "https://www.ethicalconsumer.org/",
+          "description": "UK ethical consumer guide with independent product guides and research since 1989. Some content is paid.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fake Website Buster",
+          "url": "https://www.fakewebsitebuster.com/",
+          "description": "Scam website checker that flags risks such as fraud, phishing and spam.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/",
+          "description": "Collaborative, free and open database of ingredients in cosmetic products.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Open Products Facts",
+          "url": "https://world.openproductsfacts.org/",
+          "description": "Collaborative, free and open database of information on products from around the world.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Truth in Advertising (TINA.org)",
+          "url": "https://www.truthinadvertising.org/",
+          "description": "US nonprofit that watches for deceptive advertising and keeps ads honest.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -680,7 +1969,7 @@
           "name": "Consumer Rights Wiki",
           "url": "https://consumerrights.wiki/",
           "description": "Community wiki that documents anti-consumer practices by companies and products: forced subscriptions, features removed after purchase, hidden fees and devices that stop working when servers shut down.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -688,7 +1977,7 @@
           "name": "Deceptive Patterns",
           "url": "https://deceptive.design/",
           "description": "Long-running catalog of deceptive design tricks like hard-to-cancel subscriptions, sneaky add-ons and fake urgency, with real examples so you can recognize them before they cost you.",
-          "country": "UK",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -697,14 +1986,6 @@
           "url": "https://darkpatternstipline.org/",
           "description": "Coalition project, backed by consumer and digital rights groups, where people report manipulative designs such as subscription traps and hidden charges. Reports are used for research and advocacy.",
           "country": "US",
-          "type": "tool",
-          "added": "2026-10-01"
-        },
-        {
-          "name": "JustDeleteMe",
-          "url": "https://justdeleteme.xyz/",
-          "description": "Community-maintained directory of direct links to delete accounts on hundreds of websites and services, rated by how easy or hard each company makes it.",
-          "country": "UK",
           "type": "tool",
           "added": "2026-10-01"
         }
@@ -735,7 +2016,7 @@
           "name": "17TRACK",
           "url": "https://www.17track.net/en",
           "description": "Free universal package tracker covering thousands of carriers worldwide. Handy for international orders where tracking is handed between couriers, and for checking whether a 'delivery problem' text is genuine.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         }
@@ -777,6 +2058,38 @@
           "country": "AU",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Centre for Sustainable Energy",
+          "url": "https://www.cse.org.uk/",
+          "description": "UK charity with free energy advice to help people end cold homes.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "LibreSpeed",
+          "url": "https://librespeed.org/",
+          "description": "Free and open source speed test you can run in your browser.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "OpenSpeedTest",
+          "url": "https://openspeedtest.com/",
+          "description": "Free browser-based internet speed test, useful to check what your provider delivers.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Public Interest Advocacy Centre",
+          "url": "https://piac.ca/",
+          "description": "Canadian not-for-profit and charity that protects consumer interests in regulated services such as telecom and energy.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -797,7 +2110,7 @@
           "name": "Privacy Guides",
           "url": "https://www.privacyguides.org/en/",
           "description": "Independent, nonprofit, community-run site with privacy and security recommendations for browsers, email, messaging and more. Explains the trade-offs instead of selling products.",
-          "country": "US",
+          "country": "GLOBAL",
           "type": "website",
           "added": "2026-10-01"
         },
@@ -805,7 +2118,7 @@
           "name": "Have I Been Pwned",
           "url": "https://haveibeenpwned.com/",
           "description": "Free service to check whether your email address or phone number has appeared in a data breach, with optional alerts for future breaches.",
-          "country": "AU",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-01"
         },
@@ -840,6 +2153,118 @@
           "country": "UK",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Am I Unique?",
+          "url": "https://amiunique.org/",
+          "description": "Check whether your browser has a unique fingerprint and how identifiable you are online.",
+          "country": "EU",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Blacklight",
+          "url": "https://themarkup.org/blacklight",
+          "description": "Real-time website privacy inspector from The Markup that shows the trackers a site uses.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Cover Your Tracks",
+          "url": "https://coveryourtracks.eff.org/",
+          "description": "EFF tool that shows how trackers see your browser.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Derechos Digitales",
+          "url": "https://www.derechosdigitales.org/",
+          "description": "Latin American organisation defending digital rights and inclusive technology, with guides on privacy and online freedoms. In Spanish.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Electronic Frontier Foundation (EFF)",
+          "url": "https://www.eff.org/",
+          "description": "Nonprofit defending civil liberties in the digital world, with privacy guides and tools.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Exodus Privacy",
+          "url": "https://exodus-privacy.eu.org/",
+          "description": "Non-profit that analyses Android apps for trackers and permissions.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "NOYB — European Center for Digital Rights",
+          "url": "https://noyb.eu/",
+          "description": "Non-profit based in Vienna that enforces data protection rights by filing complaints against companies.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Privacy Badger",
+          "url": "https://privacybadger.org/",
+          "description": "EFF browser extension that blocks trackers that follow you across the web.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Privacy Guides",
+          "url": "https://www.privacyguides.org/",
+          "description": "Impartial non-profit outlet recommending privacy tools and explaining how to protect your data.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Privacy International",
+          "url": "https://privacyinternational.org/",
+          "description": "UK-based charity working on technology and rights, with guides on protecting personal data.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "PrivacySpy",
+          "url": "https://privacyspy.org/",
+          "description": "Open project that grades and monitors privacy policies.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "PrivacyTests",
+          "url": "https://privacytests.org/",
+          "description": "Independent tests of the privacy protection offered by major web browsers.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "VirusTotal",
+          "url": "https://www.virustotal.com/",
+          "description": "Free service that scans files and links for malware using multiple antivirus engines. Owned by Google.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Webbkoll",
+          "url": "https://webbkoll.5july.net/",
+          "description": "Tool that checks what data-protecting measures a website has taken.",
+          "country": "EU",
+          "type": "tool",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -887,6 +2312,70 @@
           "country": "UK",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "BenefitsCheckUp",
+          "url": "https://www.benefitscheckup.org/",
+          "description": "National Council on Aging tool to find benefits that help seniors pay for everyday needs.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "CancerCare",
+          "url": "https://www.cancercare.org/",
+          "description": "Free cancer support services including counseling, support groups, workshops and financial assistance.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Community Health Advocates",
+          "url": "https://communityhealthadvocates.org/",
+          "description": "Helpline and education for New Yorkers navigating the health care system and insurance problems.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "FAIR Health",
+          "url": "https://www.fairhealthconsumer.org/",
+          "description": "Nonprofit consumer site to estimate what medical and dental procedures cost in your area.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Family Voices",
+          "url": "https://familyvoices.org/",
+          "description": "National network of families of children and youth with special health care needs, with health insurance guides.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "HealthWell Foundation",
+          "url": "https://www.healthwellfoundation.org/",
+          "description": "Foundation that helps with copays, premiums and out-of-pocket costs for people with certain health conditions.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Swiss Patient Organisation",
+          "url": "https://www.spo.ch/",
+          "description": "Swiss patient organisation advising on medical and dental treatment for 40 years. In German.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Triage Cancer",
+          "url": "https://triagecancer.org/",
+          "description": "Free education on legal and practical issues for people with cancer, caregivers and professionals.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -934,6 +2423,22 @@
           "country": "UK",
           "type": "organization",
           "added": "2026-10-01"
+        },
+        {
+          "name": "ConsumerLab",
+          "url": "https://www.consumerlab.com/",
+          "description": "Independent test results and reviews of vitamins, supplements and nutrition products. Paid subscription.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Labdoor",
+          "url": "https://labdoor.com/",
+          "description": "Sends supplements to an FDA-registered lab for purity and label accuracy tests and ranks the results.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -981,6 +2486,62 @@
           "country": "US",
           "type": "guide",
           "added": "2026-10-01"
+        },
+        {
+          "name": "Allergy UK",
+          "url": "https://www.allergyuk.org/",
+          "description": "UK charity offering free allergy support and resources.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "AllergyEats",
+          "url": "https://www.allergyeats.com/",
+          "description": "Community-built restaurant guide for people with food allergies. Run by a company.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Barnivore",
+          "url": "https://www.barnivore.com/",
+          "description": "Guide to vegan beer, wine, cider and liquor.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Coeliac UK",
+          "url": "https://www.coeliac.org.uk/",
+          "description": "UK charity with advice on coeliac disease and gluten-free living.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Food Allergy Research & Education (FARE)",
+          "url": "https://www.foodallergy.org/",
+          "description": "Largest US private funder of food allergy research, with information for people living with food allergies.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Gluten Free Watchdog",
+          "url": "https://www.glutenfreewatchdog.org/",
+          "description": "Independent laboratory testing of gluten-free foods, with product reports. Part of the content is paid.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Open Food Facts",
+          "url": "https://world.openfoodfacts.org/",
+          "description": "Collaborative, free and open database of ingredients and nutrition facts for food products.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
         }
       ]
     }

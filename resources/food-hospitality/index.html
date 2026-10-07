@@ -262,41 +262,126 @@
 </div>
 
 <main class="section-main">
-  <div class="container" style="max-width: 760px;">
-    <div class="resource-list" data-resource-list="food-hospitality">
-      <!-- RESOURCES:START -->
-      <div class="resource-item">
-        <h3 class="resource-name">Feeding America – Find Your Local Food Bank</h3>
-        <p class="resource-desc">The largest US hunger-relief network. Enter your ZIP code to find your local food bank, food pantries and free meal programs.</p>
-        <div class="resource-meta"><span>US</span><span>tool</span></div>
-        <a href="https://www.feedingamerica.org/find-your-local-foodbank" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
+  <!-- RESOURCES:START -->
+  <div class="cr-layout">
+  <aside class="blf-sidebar" aria-label="Filter by region">
+    <p class="blf-sidebar-label">Region</p>
+    <details class="blf-cat" open id="crFilterToggle-food-hospitality">
+      <summary><span class="blf-cat-name" id="crFilterName-food-hospitality">All</span><span class="blf-count" id="crFilterCount-food-hospitality" aria-label="resources">12</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="crFilter-food-hospitality" role="tablist" aria-label="Region filter">
+        <li><button type="button" data-value="" data-name="All" data-count="12" class="active">All (12)</button></li>
+        <li><button type="button" data-value="US" data-name="US" data-count="6">US (6)</button></li>
+        <li><button type="button" data-value="UK" data-name="UK" data-count="3">UK (3)</button></li>
+        <li><button type="button" data-value="AU" data-name="Australia" data-count="1">Australia (1)</button></li>
+        <li><button type="button" data-value="GLOBAL" data-name="Global" data-count="2">Global (2)</button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="cr-main">
+      <div class="cr-grid" id="crGrid-food-hospitality" data-resource-grid="food-hospitality">
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.allergyuk.org/" target="_blank" rel="noopener">Allergy UK</a>
+          <p class="cr-desc">UK charity offering free allergy support and resources.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.allergyuk.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.allergyeats.com/" target="_blank" rel="noopener">AllergyEats</a>
+          <p class="cr-desc">Community-built restaurant guide for people with food allergies. Run by a company.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://www.allergyeats.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://www.barnivore.com/" target="_blank" rel="noopener">Barnivore</a>
+          <p class="cr-desc">Guide to vegan beer, wine, cider and liquor.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://www.barnivore.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.coeliac.org.uk/" target="_blank" rel="noopener">Coeliac UK</a>
+          <p class="cr-desc">UK charity with advice on coeliac disease and gluten-free living.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.coeliac.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.foodallergy.org/resources/dining-out" target="_blank" rel="noopener">FARE – Dining Out with Food Allergies</a>
+          <p class="cr-desc">Practical guidance from the nonprofit Food Allergy Research &amp; Education on eating out safely: talking to restaurant staff, chef cards and what to do if a reaction happens.</p>
+          <p class="cr-meta-line">US &middot; Guide</p>
+          <a class="cr-link" href="https://www.foodallergy.org/resources/dining-out" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank" rel="noopener">Feeding America – Find Your Local Food Bank</a>
+          <p class="cr-desc">The largest US hunger-relief network. Enter your ZIP code to find your local food bank, food pantries and free meal programs.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.foodallergy.org/" target="_blank" rel="noopener">Food Allergy Research &amp; Education (FARE)</a>
+          <p class="cr-desc">Largest US private funder of food allergy research, with information for people living with food allergies.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.foodallergy.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.foodbank.org.au/" target="_blank" rel="noopener">Foodbank Australia</a>
+          <p class="cr-desc">Australia's largest food relief organisation, supplying charities and school programs nationwide. Shows how individuals can find food help in their state.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://www.foodbank.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.glutenfreewatchdog.org/" target="_blank" rel="noopener">Gluten Free Watchdog</a>
+          <p class="cr-desc">Independent laboratory testing of gluten-free foods, with product reports. Part of the content is paid.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.glutenfreewatchdog.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.mouseprint.org/" target="_blank" rel="noopener">Mouse Print</a>
+          <p class="cr-desc">Long-running independent consumer site that exposes the fine print in ads and packaging, especially shrinkflation, where products get smaller while the price stays the same.</p>
+          <p class="cr-meta-line">US &middot; Website</p>
+          <a class="cr-link" href="https://www.mouseprint.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a>
+          <p class="cr-desc">Collaborative, free and open database of ingredients and nutrition facts for food products.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.trussell.org.uk/" target="_blank" rel="noopener">Trussell</a>
+          <p class="cr-desc">UK charity supporting a network of more than a thousand food banks. Explains how to get a food voucher and find your nearest food bank, plus help with the money problems behind it.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.trussell.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
       </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Trussell</h3>
-        <p class="resource-desc">UK charity supporting a network of more than a thousand food banks. Explains how to get a food voucher and find your nearest food bank, plus help with the money problems behind it.</p>
-        <div class="resource-meta"><span>UK</span><span>organization</span></div>
-        <a href="https://www.trussell.org.uk/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Foodbank Australia</h3>
-        <p class="resource-desc">Australia's largest food relief organisation, supplying charities and school programs nationwide. Shows how individuals can find food help in their state.</p>
-        <div class="resource-meta"><span>AU</span><span>organization</span></div>
-        <a href="https://www.foodbank.org.au/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Mouse Print</h3>
-        <p class="resource-desc">Long-running independent consumer site that exposes the fine print in ads and packaging, especially shrinkflation, where products get smaller while the price stays the same.</p>
-        <div class="resource-meta"><span>US</span><span>website</span></div>
-        <a href="https://www.mouseprint.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">FARE – Dining Out with Food Allergies</h3>
-        <p class="resource-desc">Practical guidance from the nonprofit Food Allergy Research &amp; Education on eating out safely: talking to restaurant staff, chef cards and what to do if a reaction happens.</p>
-        <div class="resource-meta"><span>US</span><span>guide</span></div>
-        <a href="https://www.foodallergy.org/resources/dining-out" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
+      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=food-hospitality">Add your website, free of charge &rarr;</a></p>
+  </div>
+  </div>
+  <script>
+  (function () {
+    var slug = "food-hospitality";
+    var grid = document.getElementById('crGrid-' + slug);
+    if (!grid) return;
+    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));
+    var nameEl = document.getElementById('crFilterName-' + slug);
+    var countEl = document.getElementById('crFilterCount-' + slug);
+    function apply(value) {
+      var shown = 0;
+      cells.forEach(function (c) {
+        var match = !value || c.getAttribute('data-region') === value;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });
+      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';
+      if (countEl) countEl.textContent = shown;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.value); });
+    });
+  })();
+  </script>
 <!-- RESOURCES:END -->
-    </div>
+  <div class="container" style="max-width: 760px;">
     <!-- BADGE:START -->
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <span class="section-label">Optional</span>

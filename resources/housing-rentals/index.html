@@ -262,71 +262,350 @@
 </div>
 
 <main class="section-main">
-  <div class="container" style="max-width: 760px;">
-    <div class="resource-list" data-resource-list="housing-rentals">
-      <!-- RESOURCES:START -->
-      <div class="resource-item">
-        <h3 class="resource-name">JustFix</h3>
-        <p class="resource-desc">Nonprofit building free tools for tenants: send repair request letters to landlords, research who really owns a building, and understand your rights. Strongest for New York, with guidance useful far beyond it.</p>
-        <div class="resource-meta"><span>US</span><span>tool</span></div>
-        <a href="https://www.justfix.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
+  <!-- RESOURCES:START -->
+  <div class="cr-layout">
+  <aside class="blf-sidebar" aria-label="Filter by region">
+    <p class="blf-sidebar-label">Region</p>
+    <details class="blf-cat" open id="crFilterToggle-housing-rentals">
+      <summary><span class="blf-cat-name" id="crFilterName-housing-rentals">All</span><span class="blf-count" id="crFilterCount-housing-rentals" aria-label="resources">49</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="crFilter-housing-rentals" role="tablist" aria-label="Region filter">
+        <li><button type="button" data-value="" data-name="All" data-count="49" class="active">All (49)</button></li>
+        <li><button type="button" data-value="US" data-name="US" data-count="26">US (26)</button></li>
+        <li><button type="button" data-value="UK" data-name="UK" data-count="9">UK (9)</button></li>
+        <li><button type="button" data-value="EU" data-name="Europe" data-count="2">Europe (2)</button></li>
+        <li><button type="button" data-value="CA" data-name="Canada" data-count="5">Canada (5)</button></li>
+        <li><button type="button" data-value="AU" data-name="Australia" data-count="6">Australia (6)</button></li>
+        <li><button type="button" data-value="NZ" data-name="New Zealand" data-count="1">New Zealand (1)</button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="cr-main">
+      <div class="cr-grid" id="crGrid-housing-rentals" data-resource-grid="housing-rentals">
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://acorncanada.org/" target="_blank" rel="noopener">ACORN Canada</a>
+          <p class="cr-desc">Independent tenant and community union organizing renters across Canada, with campaigns and resources on rent increases, repairs and renovictions.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://acorncanada.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://www.acto.ca/" target="_blank" rel="noopener">Advocacy Centre for Tenants Ontario</a>
+          <p class="cr-desc">Ontario legal clinic and advocacy centre providing tenant resources and legal help.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://www.acto.ca/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.betterrenting.org.au/" target="_blank" rel="noopener">Better Renting</a>
+          <p class="cr-desc">Community of Australian renters working together for stable, affordable and liveable homes.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://www.betterrenting.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://housingrightscanada.com/" target="_blank" rel="noopener">Canadian Centre for Housing Rights (antes CERA)</a>
+          <p class="cr-desc">Canadian organisation promoting housing rights, formerly the Centre for Equality Rights in Accommodation.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://housingrightscanada.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://cecu.es/" target="_blank" rel="noopener">CECU</a>
+          <p class="cr-desc">Spanish confederation of consumers and users, defending consumer rights. In Spanish.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://cecu.es/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://clsphila.org/" target="_blank" rel="noopener">Community Legal Services</a>
+          <p class="cr-desc">Free legal advice and representation for low-income residents of Philadelphia.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://clsphila.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.crisis.org.uk/" target="_blank" rel="noopener">Crisis</a>
+          <p class="cr-desc">UK homelessness charity offering practical support with housing, employment and wellbeing through local centres, plus guidance for anyone at risk of losing their home.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.crisis.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://ebclc.org/" target="_blank" rel="noopener">East Bay Community Law Center</a>
+          <p class="cr-desc">Legal services for low-income residents of Alameda County, California, including tenant defence.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://ebclc.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://evictionlab.org/" target="_blank" rel="noopener">Eviction Lab</a>
+          <p class="cr-desc">Princeton's nationwide eviction database with maps and rankings by community. Data, not legal help.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://evictionlab.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.fhcci.org/" target="_blank" rel="noopener">Fair Housing Center for Central Indiana</a>
+          <p class="cr-desc">Fair housing center in Indianapolis helping people with housing discrimination.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.fhcci.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.fhcmichigan.org/" target="_blank" rel="noopener">Fair Housing Center of Southeast &amp; Mid Michigan</a>
+          <p class="cr-desc">Michigan fair housing center offering investigation, advice, advocacy and attorney referrals.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.fhcmichigan.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.fhcwm.org/" target="_blank" rel="noopener">Fair Housing Center of West Michigan</a>
+          <p class="cr-desc">Fair housing center for West Michigan, helping people who face housing discrimination.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.fhcwm.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://fhco.org/" target="_blank" rel="noopener">Fair Housing Council of Oregon</a>
+          <p class="cr-desc">Oregon fair housing organisation with information and help for housing discrimination.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://fhco.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.fairhousingakron.org/" target="_blank" rel="noopener">Fair Housing Services Akron</a>
+          <p class="cr-desc">Fair housing services in the Akron area (Ohio): discrimination complaints and tenant help.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.fairhousingakron.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://www.torontotenants.org/" target="_blank" rel="noopener">Federation of Metro Tenants' Associations</a>
+          <p class="cr-desc">Toronto federation of tenant associations with tenant rights information.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://www.torontotenants.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.tenantsunion.org.uk/" target="_blank" rel="noopener">Greater Manchester Tenants Union</a>
+          <p class="cr-desc">Tenants' union in Greater Manchester: homes for people, not for profit.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenantsunion.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://housingcourtanswers.org/" target="_blank" rel="noopener">Housing Court Answers</a>
+          <p class="cr-desc">New York City hotline answering questions about Housing Court, housing laws and regulations.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://housingcourtanswers.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.equalhousing.org/" target="_blank" rel="noopener">Housing Equality Center of Pennsylvania</a>
+          <p class="cr-desc">Pennsylvania fair housing organisation working against housing discrimination.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.equalhousing.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.hjcmn.org/" target="_blank" rel="noopener">Housing Justice Center</a>
+          <p class="cr-desc">Minnesota nonprofit working for housing justice for tenants and communities.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.hjcmn.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.housingrightscenter.org/" target="_blank" rel="noopener">Housing Rights Center</a>
+          <p class="cr-desc">Fair housing organisation helping residents of Los Angeles and Ventura counties with discrimination and tenant rights.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.housingrightscenter.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://hrcsf.org/" target="_blank" rel="noopener">Housing Rights Committee of San Francisco</a>
+          <p class="cr-desc">Tenant advocacy, resources and legal support in San Francisco since 1979.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://hrcsf.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.housingrights.org.uk/" target="_blank" rel="noopener">Housing Rights Northern Ireland</a>
+          <p class="cr-desc">Charity helping people in Northern Ireland with housing problems since 1964.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.housingrights.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.justfix.org/" target="_blank" rel="noopener">JustFix</a>
+          <p class="cr-desc">Nonprofit building free tools for tenants: send repair request letters to landlords, research who really owns a building, and understand your rights. Strongest for New York, with guidance useful far beyond it.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://www.justfix.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.justicefortenants.org/" target="_blank" rel="noopener">Justice for Tenants</a>
+          <p class="cr-desc">Free advice, support and representation for tenants with all kinds of issues in the UK.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.justicefortenants.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://kctenants.org/" target="_blank" rel="noopener">KC Tenants</a>
+          <p class="cr-desc">Citywide tenant union in Kansas City, led by poor and working-class tenants.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://kctenants.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.launchhousing.org.au/" target="_blank" rel="noopener">Launch Housing</a>
+          <p class="cr-desc">Melbourne-based not-for-profit providing crisis accommodation, homelessness support and long-term housing, with clear information on how to get help.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://www.launchhousing.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.livingrent.org/" target="_blank" rel="noopener">Living Rent</a>
+          <p class="cr-desc">Scotland's tenants' union, helping tenants organise to defend their rights.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.livingrent.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://londonrentersunion.org/" target="_blank" rel="noopener">London Renters Union</a>
+          <p class="cr-desc">Union of London renters building collective power to improve housing.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://londonrentersunion.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.tenants-rights.org/" target="_blank" rel="noopener">Metropolitan Tenants Organization</a>
+          <p class="cr-desc">Chicago tenants' organisation helping tenants improve their living conditions since 1981.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenants-rights.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://rentersalliance.org/" target="_blank" rel="noopener">Montgomery County Renters Alliance</a>
+          <p class="cr-desc">New independent nonprofit advancing renters' rights and security in Montgomery County, Maryland.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://rentersalliance.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://nationalhomeless.org/" target="_blank" rel="noopener">National Coalition for the Homeless</a>
+          <p class="cr-desc">US network of people who are or have been homeless, advocates and service providers. Resources on homeless rights, finding shelters and how communities can help.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://nationalhomeless.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://nationalfairhousing.org/" target="_blank" rel="noopener">National Fair Housing Alliance</a>
+          <p class="cr-desc">US alliance of fair housing organisations fighting housing discrimination, with guidance on how to report it.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://nationalfairhousing.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.nhlp.org/" target="_blank" rel="noopener">National Housing Law Project</a>
+          <p class="cr-desc">Nonprofit housing law organization with a free resource center on tenant rights, evictions and subsidized housing, plus know-your-rights material for renters and the people who help them.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.nhlp.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://nlihc.org/" target="_blank" rel="noopener">National Low Income Housing Coalition</a>
+          <p class="cr-desc">Nonprofit research and advocacy group focused on affordable housing for renters. Publishes the annual 'Out of Reach' report on what it costs to rent in every US state and tracks renter protections.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://nlihc.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.phillytenantsunion.org/" target="_blank" rel="noopener">Philadelphia Tenants Union</a>
+          <p class="cr-desc">Grassroots, tenant-led organisation fighting for affordable housing in Philadelphia.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.phillytenantsunion.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://afectadosporlahipoteca.com/" target="_blank" rel="noopener">Plataforma de Afectados por la Hipoteca</a>
+          <p class="cr-desc">Spanish platform fighting evictions and defending housing as a stable, affordable right since 2009. In Spanish.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://afectadosporlahipoteca.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="NZ">
+          <a class="cr-name" href="https://rentersunited.org.nz/" target="_blank" rel="noopener">Renters United</a>
+          <p class="cr-desc">Renters' advocacy group campaigning to make renting better in Aotearoa New Zealand.</p>
+          <p class="cr-meta-line">New Zealand &middot; Organization</p>
+          <a class="cr-link" href="https://rentersunited.org.nz/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://sftu.org/" target="_blank" rel="noopener">San Francisco Tenants Union</a>
+          <p class="cr-desc">San Francisco tenants' union, fighting for tenants since 1970.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://sftu.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://england.shelter.org.uk/" target="_blank" rel="noopener">Shelter</a>
+          <p class="cr-desc">UK housing charity with detailed, free advice on private renting: deposits, repairs, rent increases, evictions and getting help with rent. Also runs a free housing advice helpline.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://england.shelter.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.shelter.org.uk/" target="_blank" rel="noopener">Shelter</a>
+          <p class="cr-desc">UK housing and homelessness charity offering free advice by phone, web chat and online guides for tenants.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.shelter.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://scotland.shelter.org.uk/" target="_blank" rel="noopener">Shelter Scotland</a>
+          <p class="cr-desc">Shelter's Scottish branch, helping people fight bad housing and homelessness with advice and guides.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://scotland.shelter.org.uk/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="CA">
+          <a class="cr-name" href="https://tenants.bc.ca/" target="_blank" rel="noopener">Tenant Resource &amp; Advisory Centre</a>
+          <p class="cr-desc">Non-profit providing free legal education, representation and advocacy to tenants in British Columbia.</p>
+          <p class="cr-meta-line">Canada &middot; Organization</p>
+          <a class="cr-link" href="https://tenants.bc.ca/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.tenantresourcecenter.org/" target="_blank" rel="noopener">Tenant Resource Center</a>
+          <p class="cr-desc">Free housing counseling and other services for neighbours in Dane County, Wisconsin.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenantresourcecenter.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://tenantsqld.org.au/" target="_blank" rel="noopener">Tenants Queensland</a>
+          <p class="cr-desc">Tenancy information and advocacy for Queensland renters, with fact sheets on renting rights.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://tenantsqld.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.tenantstogether.org/" target="_blank" rel="noopener">Tenants Together</a>
+          <p class="cr-desc">California statewide organisation defending the rights of renters, with tenant resources.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenantstogether.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://tutas.org.au/" target="_blank" rel="noopener">Tenants Union of Tasmania</a>
+          <p class="cr-desc">Free advice, advocacy and support for Tasmanian tenants on their tenancy rights.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://tutas.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://tenantsunion.org/" target="_blank" rel="noopener">Tenants Union of Washington State</a>
+          <p class="cr-desc">Washington State renters' organisation offering tenant education, organising and advocacy.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://tenantsunion.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.tenantsvic.org.au/" target="_blank" rel="noopener">Tenants Victoria</a>
+          <p class="cr-desc">Not-for-profit community legal centre for renters in Victoria, with free advice and plain-language guides on renting rights, repairs, bonds and evictions.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenantsvic.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="AU">
+          <a class="cr-name" href="https://www.tenants.org.au/" target="_blank" rel="noopener">Tenants' Union of NSW</a>
+          <p class="cr-desc">Community legal centre and peak body for renters in New South Wales. Clear factsheets on leases, bonds, repairs, rent increases and ending a tenancy, including Easy Read versions.</p>
+          <p class="cr-meta-line">Australia &middot; Organization</p>
+          <a class="cr-link" href="https://www.tenants.org.au/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
       </div>
-      <div class="resource-item">
-        <h3 class="resource-name">National Low Income Housing Coalition</h3>
-        <p class="resource-desc">Nonprofit research and advocacy group focused on affordable housing for renters. Publishes the annual 'Out of Reach' report on what it costs to rent in every US state and tracks renter protections.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://nlihc.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">National Housing Law Project</h3>
-        <p class="resource-desc">Nonprofit housing law organization with a free resource center on tenant rights, evictions and subsidized housing, plus know-your-rights material for renters and the people who help them.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://www.nhlp.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Shelter</h3>
-        <p class="resource-desc">UK housing charity with detailed, free advice on private renting: deposits, repairs, rent increases, evictions and getting help with rent. Also runs a free housing advice helpline.</p>
-        <div class="resource-meta"><span>UK</span><span>organization</span></div>
-        <a href="https://england.shelter.org.uk/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Tenants' Union of NSW</h3>
-        <p class="resource-desc">Community legal centre and peak body for renters in New South Wales. Clear factsheets on leases, bonds, repairs, rent increases and ending a tenancy, including Easy Read versions.</p>
-        <div class="resource-meta"><span>AU</span><span>organization</span></div>
-        <a href="https://www.tenants.org.au/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Tenants Victoria</h3>
-        <p class="resource-desc">Not-for-profit community legal centre for renters in Victoria, with free advice and plain-language guides on renting rights, repairs, bonds and evictions.</p>
-        <div class="resource-meta"><span>AU</span><span>organization</span></div>
-        <a href="https://www.tenantsvic.org.au/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">ACORN Canada</h3>
-        <p class="resource-desc">Independent tenant and community union organizing renters across Canada, with campaigns and resources on rent increases, repairs and renovictions.</p>
-        <div class="resource-meta"><span>CA</span><span>organization</span></div>
-        <a href="https://acorncanada.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">National Coalition for the Homeless</h3>
-        <p class="resource-desc">US network of people who are or have been homeless, advocates and service providers. Resources on homeless rights, finding shelters and how communities can help.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://nationalhomeless.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Crisis</h3>
-        <p class="resource-desc">UK homelessness charity offering practical support with housing, employment and wellbeing through local centres, plus guidance for anyone at risk of losing their home.</p>
-        <div class="resource-meta"><span>UK</span><span>organization</span></div>
-        <a href="https://www.crisis.org.uk/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Launch Housing</h3>
-        <p class="resource-desc">Melbourne-based not-for-profit providing crisis accommodation, homelessness support and long-term housing, with clear information on how to get help.</p>
-        <div class="resource-meta"><span>AU</span><span>organization</span></div>
-        <a href="https://www.launchhousing.org.au/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
+      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=housing-rentals">Add your website, free of charge &rarr;</a></p>
+  </div>
+  </div>
+  <script>
+  (function () {
+    var slug = "housing-rentals";
+    var grid = document.getElementById('crGrid-' + slug);
+    if (!grid) return;
+    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));
+    var nameEl = document.getElementById('crFilterName-' + slug);
+    var countEl = document.getElementById('crFilterCount-' + slug);
+    function apply(value) {
+      var shown = 0;
+      cells.forEach(function (c) {
+        var match = !value || c.getAttribute('data-region') === value;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });
+      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';
+      if (countEl) countEl.textContent = shown;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.value); });
+    });
+  })();
+  </script>
 <!-- RESOURCES:END -->
-    </div>
+  <div class="container" style="max-width: 760px;">
     <!-- BADGE:START -->
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <span class="section-label">Optional</span>

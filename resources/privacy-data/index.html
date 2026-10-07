@@ -262,53 +262,180 @@
 </div>
 
 <main class="section-main">
-  <div class="container" style="max-width: 760px;">
-    <div class="resource-list" data-resource-list="privacy-data">
-      <!-- RESOURCES:START -->
-      <div class="resource-item">
-        <h3 class="resource-name">Surveillance Self-Defense (EFF)</h3>
-        <p class="resource-desc">Free guides from the Electronic Frontier Foundation on protecting your privacy online: strong passwords, two-factor authentication, secure messaging and avoiding tracking.</p>
-        <div class="resource-meta"><span>US</span><span>guide</span></div>
-        <a href="https://ssd.eff.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
+  <!-- RESOURCES:START -->
+  <div class="cr-layout">
+  <aside class="blf-sidebar" aria-label="Filter by region">
+    <p class="blf-sidebar-label">Region</p>
+    <details class="blf-cat" open id="crFilterToggle-privacy-data">
+      <summary><span class="blf-cat-name" id="crFilterName-privacy-data">All</span><span class="blf-count" id="crFilterCount-privacy-data" aria-label="resources">21</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="crFilter-privacy-data" role="tablist" aria-label="Region filter">
+        <li><button type="button" data-value="" data-name="All" data-count="21" class="active">All (21)</button></li>
+        <li><button type="button" data-value="US" data-name="US" data-count="7">US (7)</button></li>
+        <li><button type="button" data-value="UK" data-name="UK" data-count="2">UK (2)</button></li>
+        <li><button type="button" data-value="EU" data-name="Europe" data-count="5">Europe (5)</button></li>
+        <li><button type="button" data-value="GLOBAL" data-name="Global" data-count="7">Global (7)</button></li>
+      </ul>
+    </details>
+  </aside>
+  <div class="cr-main">
+      <div class="cr-grid" id="crGrid-privacy-data" data-resource-grid="privacy-data">
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://amiunique.org/" target="_blank" rel="noopener">Am I Unique?</a>
+          <p class="cr-desc">Check whether your browser has a unique fingerprint and how identifiable you are online.</p>
+          <p class="cr-meta-line">Europe &middot; Tool</p>
+          <a class="cr-link" href="https://amiunique.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List" target="_blank" rel="noopener">Big Ass Data Broker Opt-Out List</a>
+          <p class="cr-desc">Community-maintained list of data brokers and people-search sites with direct opt-out links and instructions, prioritized by which ones matter most.</p>
+          <p class="cr-meta-line">US &middot; Guide</p>
+          <a class="cr-link" href="https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://themarkup.org/blacklight" target="_blank" rel="noopener">Blacklight</a>
+          <p class="cr-desc">Real-time website privacy inspector from The Markup that shows the trackers a site uses.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://themarkup.org/blacklight" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://coveryourtracks.eff.org/" target="_blank" rel="noopener">Cover Your Tracks</a>
+          <p class="cr-desc">EFF tool that shows how trackers see your browser.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://coveryourtracks.eff.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://www.derechosdigitales.org/" target="_blank" rel="noopener">Derechos Digitales</a>
+          <p class="cr-desc">Latin American organisation defending digital rights and inclusive technology, with guides on privacy and online freedoms. In Spanish.</p>
+          <p class="cr-meta-line">Global &middot; Organization</p>
+          <a class="cr-link" href="https://www.derechosdigitales.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://www.eff.org/" target="_blank" rel="noopener">Electronic Frontier Foundation (EFF)</a>
+          <p class="cr-desc">Nonprofit defending civil liberties in the digital world, with privacy guides and tools.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://www.eff.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://exodus-privacy.eu.org/" target="_blank" rel="noopener">Exodus Privacy</a>
+          <p class="cr-desc">Non-profit that analyses Android apps for trackers and permissions.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://exodus-privacy.eu.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a>
+          <p class="cr-desc">Free service to check whether your email address or phone number has appeared in a data breach, with optional alerts for future breaches.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://noyb.eu/en" target="_blank" rel="noopener">noyb – European Center for Digital Rights</a>
+          <p class="cr-desc">Nonprofit led by Max Schrems that enforces GDPR through strategic complaints against big tech. Useful explainers on your data rights in Europe, such as access and deletion requests.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://noyb.eu/en" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://noyb.eu/" target="_blank" rel="noopener">NOYB — European Center for Digital Rights</a>
+          <p class="cr-desc">Non-profit based in Vienna that enforces data protection rights by filing complaints against companies.</p>
+          <p class="cr-meta-line">Europe &middot; Organization</p>
+          <a class="cr-link" href="https://noyb.eu/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://www.openrightsgroup.org/" target="_blank" rel="noopener">Open Rights Group</a>
+          <p class="cr-desc">UK digital rights organisation campaigning on privacy, data protection and online surveillance, with explainers on how changes in the law affect your data.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://www.openrightsgroup.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://privacybadger.org/" target="_blank" rel="noopener">Privacy Badger</a>
+          <p class="cr-desc">EFF browser extension that blocks trackers that follow you across the web.</p>
+          <p class="cr-meta-line">US &middot; Tool</p>
+          <a class="cr-link" href="https://privacybadger.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://www.privacyguides.org/en/" target="_blank" rel="noopener">Privacy Guides</a>
+          <p class="cr-desc">Independent, nonprofit, community-run site with privacy and security recommendations for browsers, email, messaging and more. Explains the trade-offs instead of selling products.</p>
+          <p class="cr-meta-line">Global &middot; Website</p>
+          <a class="cr-link" href="https://www.privacyguides.org/en/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://www.privacyguides.org/" target="_blank" rel="noopener">Privacy Guides</a>
+          <p class="cr-desc">Impartial non-profit outlet recommending privacy tools and explaining how to protect your data.</p>
+          <p class="cr-meta-line">Global &middot; Organization</p>
+          <a class="cr-link" href="https://www.privacyguides.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="UK">
+          <a class="cr-name" href="https://privacyinternational.org/" target="_blank" rel="noopener">Privacy International</a>
+          <p class="cr-desc">UK-based charity working on technology and rights, with guides on protecting personal data.</p>
+          <p class="cr-meta-line">UK &middot; Organization</p>
+          <a class="cr-link" href="https://privacyinternational.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://privacyrights.org/" target="_blank" rel="noopener">Privacy Rights Clearinghouse</a>
+          <p class="cr-desc">Nonprofit privacy organization with consumer guides and a searchable Data Breach Chronology to check which companies have exposed customer data.</p>
+          <p class="cr-meta-line">US &middot; Organization</p>
+          <a class="cr-link" href="https://privacyrights.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://privacyspy.org/" target="_blank" rel="noopener">PrivacySpy</a>
+          <p class="cr-desc">Open project that grades and monitors privacy policies.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://privacyspy.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://privacytests.org/" target="_blank" rel="noopener">PrivacyTests</a>
+          <p class="cr-desc">Independent tests of the privacy protection offered by major web browsers.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://privacytests.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="US">
+          <a class="cr-name" href="https://ssd.eff.org/" target="_blank" rel="noopener">Surveillance Self-Defense (EFF)</a>
+          <p class="cr-desc">Free guides from the Electronic Frontier Foundation on protecting your privacy online: strong passwords, two-factor authentication, secure messaging and avoiding tracking.</p>
+          <p class="cr-meta-line">US &middot; Guide</p>
+          <a class="cr-link" href="https://ssd.eff.org/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="GLOBAL">
+          <a class="cr-name" href="https://www.virustotal.com/" target="_blank" rel="noopener">VirusTotal</a>
+          <p class="cr-desc">Free service that scans files and links for malware using multiple antivirus engines. Owned by Google.</p>
+          <p class="cr-meta-line">Global &middot; Tool</p>
+          <a class="cr-link" href="https://www.virustotal.com/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
+        <div class="cr-cell" data-region="EU">
+          <a class="cr-name" href="https://webbkoll.5july.net/" target="_blank" rel="noopener">Webbkoll</a>
+          <p class="cr-desc">Tool that checks what data-protecting measures a website has taken.</p>
+          <p class="cr-meta-line">Europe &middot; Tool</p>
+          <a class="cr-link" href="https://webbkoll.5july.net/" target="_blank" rel="noopener">Visit website &rarr;</a>
+        </div>
       </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Privacy Guides</h3>
-        <p class="resource-desc">Independent, nonprofit, community-run site with privacy and security recommendations for browsers, email, messaging and more. Explains the trade-offs instead of selling products.</p>
-        <div class="resource-meta"><span>US</span><span>website</span></div>
-        <a href="https://www.privacyguides.org/en/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Have I Been Pwned</h3>
-        <p class="resource-desc">Free service to check whether your email address or phone number has appeared in a data breach, with optional alerts for future breaches.</p>
-        <div class="resource-meta"><span>AU</span><span>tool</span></div>
-        <a href="https://haveibeenpwned.com/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Big Ass Data Broker Opt-Out List</h3>
-        <p class="resource-desc">Community-maintained list of data brokers and people-search sites with direct opt-out links and instructions, prioritized by which ones matter most.</p>
-        <div class="resource-meta"><span>US</span><span>guide</span></div>
-        <a href="https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Privacy Rights Clearinghouse</h3>
-        <p class="resource-desc">Nonprofit privacy organization with consumer guides and a searchable Data Breach Chronology to check which companies have exposed customer data.</p>
-        <div class="resource-meta"><span>US</span><span>organization</span></div>
-        <a href="https://privacyrights.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">noyb – European Center for Digital Rights</h3>
-        <p class="resource-desc">Nonprofit led by Max Schrems that enforces GDPR through strategic complaints against big tech. Useful explainers on your data rights in Europe, such as access and deletion requests.</p>
-        <div class="resource-meta"><span>EU</span><span>organization</span></div>
-        <a href="https://noyb.eu/en" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
-      <div class="resource-item">
-        <h3 class="resource-name">Open Rights Group</h3>
-        <p class="resource-desc">UK digital rights organisation campaigning on privacy, data protection and online surveillance, with explainers on how changes in the law affect your data.</p>
-        <div class="resource-meta"><span>UK</span><span>organization</span></div>
-        <a href="https://www.openrightsgroup.org/" class="resource-link" target="_blank" rel="noopener">Visit website →</a>
-      </div>
+      <p class="cr-add-line">Know a free consumer resource that belongs here? <a href="/resources/submit/?category=privacy-data">Add your website, free of charge &rarr;</a></p>
+  </div>
+  </div>
+  <script>
+  (function () {
+    var slug = "privacy-data";
+    var grid = document.getElementById('crGrid-' + slug);
+    if (!grid) return;
+    var cells = Array.prototype.slice.call(grid.querySelectorAll('.cr-cell'));
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('#crFilter-' + slug + ' button'));
+    var nameEl = document.getElementById('crFilterName-' + slug);
+    var countEl = document.getElementById('crFilterCount-' + slug);
+    function apply(value) {
+      var shown = 0;
+      cells.forEach(function (c) {
+        var match = !value || c.getAttribute('data-region') === value;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.value === value); });
+      if (nameEl) nameEl.textContent = value ? (buttons.filter(function (b) { return b.dataset.value === value; })[0] || {}).dataset.name || 'All' : 'All';
+      if (countEl) countEl.textContent = shown;
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.value); });
+    });
+  })();
+  </script>
 <!-- RESOURCES:END -->
-    </div>
+  <div class="container" style="max-width: 760px;">
     <!-- BADGE:START -->
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
       <span class="section-label">Optional</span>
