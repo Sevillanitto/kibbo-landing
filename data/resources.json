@@ -400,6 +400,54 @@
           "country": "UK",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Consumer Action",
+          "url": "https://www.consumer-action.org/",
+          "description": "Nonprofit consumer advocacy and education group with free multilingual guides on banking, credit, privacy and scams.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Consumer Reports",
+          "url": "https://www.consumerreports.org/",
+          "description": "US nonprofit that tests products and rates services, with consumer advice. Some content needs a paid subscription.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Fair By Design",
+          "url": "https://fairbydesign.com/",
+          "description": "UK campaign against the poverty premium: the extra costs low-income households pay for essential services.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "MoneySavingExpert",
+          "url": "https://www.moneysavingexpert.com/",
+          "description": "UK money-saving guides and tools, including free consumer rights and refund guides. Funded partly by affiliate links.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "National Student Legal Defense Network",
+          "url": "https://studentdefense.org/",
+          "description": "Nonprofit legal advocacy group that fights fraud in higher education and represents defrauded students.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Institute for College Access & Success",
+          "url": "https://ticas.org/",
+          "description": "Nonprofit research and policy group on college affordability and student debt, with guides for borrowers.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -527,6 +575,14 @@
           "country": "CA",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "General Insurance OmbudService Canada",
+          "url": "https://www.giocanada.org/",
+          "description": "Free, independent ombudsman for complaints about home, car and business insurance in Canada.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -627,6 +683,30 @@
           "name": "National Cybersecurity Alliance",
           "url": "https://www.staysafeonline.org/",
           "description": "Nonprofit offering online safety guides for consumers; partly funded by technology companies.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Better Business Bureau — Scam Tracker",
+          "url": "https://www.bbb.org/scamtracker",
+          "description": "Free tool to report and search scams reported near you. BBB is funded by member businesses.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Cybercrime Support Network",
+          "url": "https://cybercrimesupport.org/",
+          "description": "Nonprofit helping victims of cybercrime and fraud find support and report incidents.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Identity Theft Resource Center",
+          "url": "https://www.idtheftcenter.org/",
+          "description": "Nonprofit offering free help to victims of identity theft and fraud.",
           "country": "US",
           "type": "organization",
           "added": "2026-10-07"
@@ -815,14 +895,6 @@
           "added": "2026-10-07"
         },
         {
-          "name": "Legal Information Institute — Cornell",
-          "url": "https://www.law.cornell.edu/",
-          "description": "Free online access to US law, with plain-language explanations of legal terms and topics.",
-          "country": "US",
-          "type": "organization",
-          "added": "2026-10-07"
-        },
-        {
           "name": "Legal Services Corporation",
           "url": "https://www.lsc.gov/",
           "description": "US nonprofit funded by Congress that funds civil legal aid, with a locator to find free legal help.",
@@ -874,6 +946,30 @@
           "name": "Éducaloi",
           "url": "https://educaloi.qc.ca/",
           "description": "Non-governmental organisation in Quebec explaining the law in plain language. In French.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Consumer Rights — Legal & Claims",
+          "url": "https://www.consumer-rights.org/legal-claims/",
+          "description": "Guidance for UK consumers on complaints, disputes, scams, housing disrepair and how to claim what you are owed.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Justia — Legal Resources",
+          "url": "https://www.justia.com/",
+          "description": "Free legal information on US law and cases. Funded by advertising from lawyers.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Pro Bono Ontario",
+          "url": "https://www.probonoontario.org/",
+          "description": "Free legal help in Ontario through volunteer lawyers, including a free legal advice helpline.",
           "country": "CA",
           "type": "organization",
           "added": "2026-10-07"
@@ -1276,6 +1372,62 @@
           "country": "US",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Fair Housing Council of Central California",
+          "url": "https://fhc-cc.org/",
+          "description": "Fair housing council serving Central California, helping with housing discrimination complaints.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Generation Rent",
+          "url": "https://www.generationrent.org/",
+          "description": "UK campaign group for renters, with guides on renting rights.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "NeighborWorks America",
+          "url": "https://www.neighborworks.org/",
+          "description": "Congress-chartered nonprofit with a network of housing counseling and community organisations.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Provivienda",
+          "url": "https://www.provivienda.org/",
+          "description": "Spanish NGO working for access to housing for people in vulnerable situations. In Spanish.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Shelter Cymru",
+          "url": "https://sheltercymru.org.uk/",
+          "description": "Housing advice and support in Wales from the Welsh housing charity.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Sindicat de Llogateres de Catalunya",
+          "url": "https://sindicatdellogateres.org/",
+          "description": "Catalan tenants' union defending tenants' rights and rent control. In Catalan.",
+          "country": "EU",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "The Tenants' Voice",
+          "url": "https://www.thetenantsvoice.co.uk/",
+          "description": "Plain-English guides on UK tenant and landlord law: deposits, eviction, disrepair and more.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -1411,6 +1563,38 @@
           "country": "UK",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "Better Business Bureau",
+          "url": "https://www.bbb.org/",
+          "description": "Nonprofit funded by accredited businesses, with business reviews and a way to file complaints.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Center for Environmental Health",
+          "url": "https://ceh.org/",
+          "description": "Nonprofit working to protect consumers from toxic chemicals in everyday products.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Environmental Working Group",
+          "url": "https://www.ewg.org/",
+          "description": "Nonprofit with consumer guides on chemicals in food, cosmetics and household products.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Repair Café",
+          "url": "https://www.repaircafe.org/",
+          "description": "Global network of free community repair events, with a map to find one near you.",
+          "country": "GLOBAL",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -1487,6 +1671,30 @@
           "name": "WriteToThem",
           "url": "https://www.writetothem.com/",
           "description": "Easy way to contact your MPs, councillors and other elected representatives in the UK.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Benefits Data Trust",
+          "url": "https://www.bdtrust.org/",
+          "description": "Nonprofit that helps people apply for public benefits such as food, health and tax assistance.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "MuckRock",
+          "url": "https://www.muckrock.com/",
+          "description": "Nonprofit news site with a tool to file and track public records requests in the US.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "WhatDoTheyKnow",
+          "url": "https://www.whatdotheyknow.com/",
+          "description": "Free service to send freedom of information requests to UK public bodies and read the responses.",
           "country": "UK",
           "type": "tool",
           "added": "2026-10-07"
@@ -1721,6 +1929,70 @@
           "country": "US",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "CareerVillage",
+          "url": "https://www.careervillage.org/",
+          "description": "Free career advice from volunteer professionals for students and job seekers.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Center for Employment Opportunities",
+          "url": "https://ceoworks.org/",
+          "description": "Employment programme providing transitional jobs for people returning from incarceration.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Goodwill",
+          "url": "https://www.goodwill.org/",
+          "description": "Nonprofit offering job training, career services and employment help across the US.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "JobsAware",
+          "url": "https://www.jobsaware.co.uk/",
+          "description": "UK organisation helping people avoid employment scams and rogue practices.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Maternity Action",
+          "url": "https://maternityaction.org.uk/",
+          "description": "UK charity advising on pregnancy, maternity and parental rights at work.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Migrant Workers Alliance for Change",
+          "url": "https://migrantworkersalliance.org/",
+          "description": "Canadian organisation of migrant workers defending their rights and status.",
+          "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Restaurant Opportunities Centers United",
+          "url": "https://rocunited.org/",
+          "description": "Worker organisation for restaurant workers, with information on workplace rights.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Working Families",
+          "url": "https://workingfamilies.org.uk/",
+          "description": "UK charity helping working parents and carers with their rights at work, with a free helpline.",
+          "country": "UK",
+          "type": "organization",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -1766,6 +2038,14 @@
           "url": "https://airpassengerrights.ca/",
           "description": "Volunteer group explaining flight rights in Canada and how to enforce them.",
           "country": "CA",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Travelers United",
+          "url": "https://www.travelersunited.org/",
+          "description": "US nonprofit advocating for travelers' rights, with consumer alerts.",
+          "country": "US",
           "type": "organization",
           "added": "2026-10-07"
         }
@@ -1957,6 +2237,14 @@
           "country": "US",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "CamelCamelCamel",
+          "url": "https://camelcamelcamel.com/",
+          "description": "Amazon price history tracker, useful to check whether a discount is real. Funded by affiliate links.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -2090,6 +2378,14 @@
           "country": "CA",
           "type": "organization",
           "added": "2026-10-07"
+        },
+        {
+          "name": "ThinkBroadband",
+          "url": "https://www.thinkbroadband.com/",
+          "description": "UK broadband news, speed test and availability checker. Funded by advertising.",
+          "country": "UK",
+          "type": "tool",
+          "added": "2026-10-07"
         }
       ]
     },
@@ -2203,27 +2499,11 @@
           "added": "2026-10-07"
         },
         {
-          "name": "NOYB — European Center for Digital Rights",
-          "url": "https://noyb.eu/",
-          "description": "Non-profit based in Vienna that enforces data protection rights by filing complaints against companies.",
-          "country": "EU",
-          "type": "organization",
-          "added": "2026-10-07"
-        },
-        {
           "name": "Privacy Badger",
           "url": "https://privacybadger.org/",
           "description": "EFF browser extension that blocks trackers that follow you across the web.",
           "country": "US",
           "type": "tool",
-          "added": "2026-10-07"
-        },
-        {
-          "name": "Privacy Guides",
-          "url": "https://www.privacyguides.org/",
-          "description": "Impartial non-profit outlet recommending privacy tools and explaining how to protect your data.",
-          "country": "GLOBAL",
-          "type": "organization",
           "added": "2026-10-07"
         },
         {
@@ -2263,6 +2543,22 @@
           "url": "https://webbkoll.5july.net/",
           "description": "Tool that checks what data-protecting measures a website has taken.",
           "country": "EU",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Firefox Monitor",
+          "url": "https://monitor.mozilla.org/",
+          "description": "Mozilla's free service to check whether your email appears in known data breaches.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Mozilla Privacy Not Included",
+          "url": "https://www.mozillafoundation.org/en/privacynotincluded/",
+          "description": "Mozilla's buying guide rating the privacy and security of connected products.",
+          "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-07"
         }
@@ -2373,6 +2669,46 @@
           "name": "Triage Cancer",
           "url": "https://triagecancer.org/",
           "description": "Free education on legal and practical issues for people with cancer, caregivers and professionals.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "AskAPatient",
+          "url": "https://www.askapatient.com/",
+          "description": "Patient-reported experiences and side effects of medicines.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Findhelp",
+          "url": "https://www.findhelp.org/",
+          "description": "Search tool for free and reduced-cost help with food, housing, health and more. Run by a company.",
+          "country": "US",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "PAN Foundation",
+          "url": "https://www.panfoundation.org/",
+          "description": "Foundation that helps underinsured patients afford medication copays for certain conditions.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "Patient Advocate Foundation",
+          "url": "https://www.patientadvocate.org/",
+          "description": "Nonprofit offering case management and financial aid to patients with serious illnesses, including help with insurance appeals.",
+          "country": "US",
+          "type": "organization",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "RIP Medical Debt",
+          "url": "https://ripmedicaldebt.org/",
+          "description": "Nonprofit that buys medical debt and forgives it for people in need.",
           "country": "US",
           "type": "organization",
           "added": "2026-10-07"
@@ -2539,6 +2875,14 @@
           "name": "Open Food Facts",
           "url": "https://world.openfoodfacts.org/",
           "description": "Collaborative, free and open database of ingredients and nutrition facts for food products.",
+          "country": "GLOBAL",
+          "type": "tool",
+          "added": "2026-10-07"
+        },
+        {
+          "name": "iwaspoisoned.com",
+          "url": "https://iwaspoisoned.com/",
+          "description": "Site where people report food poisoning incidents.",
           "country": "GLOBAL",
           "type": "tool",
           "added": "2026-10-07"
