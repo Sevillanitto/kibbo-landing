@@ -1315,6 +1315,7 @@ transition: var(--transition);
 
 .cr-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(15, 14, 12, 0.12); border-left: 1px solid rgba(15, 14, 12, 0.12); }
 .cr-cell { padding: 28px 24px; border-right: 1px solid rgba(15, 14, 12, 0.12); border-bottom: 1px solid rgba(15, 14, 12, 0.12); display: flex; flex-direction: column; min-height: 220px; }
+.cr-cell[hidden] { display: none; }
 .cr-name { font-family: var(--font-serif); font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: var(--text-primary); margin: 0 0 8px; text-decoration: none; }
 .cr-name:hover { color: var(--accent-green); }
 .cr-desc { font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex-grow: 1; }
