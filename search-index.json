@@ -17296,5 +17296,245 @@
       "kibbo datasets",
       "medical cost data"
     ]
+  },
+  {
+    "title": "Consumer Resource Directory — Kibbo",
+    "type": "resource",
+    "url": "/resources",
+    "description": "A directory of websites, tools and guides that help people understand their rights, avoid scams, save money and make better consumer decisions.",
+    "keywords": [
+      "community resources directory",
+      "free consumer resources",
+      "consumer tools and guides",
+      "resource directory by topic"
+    ]
+  },
+  {
+    "title": "Cars & Vehicles — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "cars-vehicles",
+    "url": "/resources/cars-vehicles",
+    "description": "Consumer resources for Cars & Vehicles: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "cars vehicles resources",
+      "cars vehicles consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Crypto & Fintech — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "crypto-fintech",
+    "url": "/resources/crypto-fintech",
+    "description": "Consumer resources for Crypto & Fintech: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "crypto fintech resources",
+      "crypto fintech consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Parcel & Delivery — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "delivery-parcels",
+    "url": "/resources/delivery-parcels",
+    "description": "Consumer resources for Parcel & Delivery: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "delivery parcels resources",
+      "delivery parcels consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Employment — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "employment",
+    "url": "/resources/employment",
+    "description": "Consumer resources for Employment: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "employment resources",
+      "employment consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Finance & Banking — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "financial-banking",
+    "url": "/resources/financial-banking",
+    "description": "Consumer resources for Finance & Banking: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "financial banking resources",
+      "financial banking consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Flights & Travel — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "flights-travel",
+    "url": "/resources/flights-travel",
+    "description": "Consumer resources for Flights & Travel: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "flights travel resources",
+      "flights travel consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Food & Hospitality — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "food-hospitality",
+    "url": "/resources/food-hospitality",
+    "description": "Consumer resources for Food & Hospitality: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "food hospitality resources",
+      "food hospitality consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Health & Supplements — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "health-supplements",
+    "url": "/resources/health-supplements",
+    "description": "Consumer resources for Health & Supplements: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "health supplements resources",
+      "health supplements consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Healthcare & Medical — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "healthcare-medical",
+    "url": "/resources/healthcare-medical",
+    "description": "Consumer resources for Healthcare & Medical: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "healthcare medical resources",
+      "healthcare medical consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Home Renovations & Services — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "home-renovations-services",
+    "url": "/resources/home-renovations-services",
+    "description": "Consumer resources for Home Renovations & Services: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "home renovations services resources",
+      "home renovations services consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Housing & Rentals — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "housing-rentals",
+    "url": "/resources/housing-rentals",
+    "description": "Consumer resources for Housing & Rentals: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "housing rentals resources",
+      "housing rentals consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Insurance & Claims — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "insurance-claims",
+    "url": "/resources/insurance-claims",
+    "description": "Consumer resources for Insurance & Claims: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "insurance claims resources",
+      "insurance claims consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Legal & Contracts — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "legal-contracts",
+    "url": "/resources/legal-contracts",
+    "description": "Consumer resources for Legal & Contracts: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "legal contracts resources",
+      "legal contracts consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Privacy & Data — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "privacy-data",
+    "url": "/resources/privacy-data",
+    "description": "Consumer resources for Privacy & Data: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "privacy data resources",
+      "privacy data consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Public Services & Administration — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "public-services-administration",
+    "url": "/resources/public-services-administration",
+    "description": "Consumer resources for Public Services & Administration: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "public services administration resources",
+      "public services administration consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Shopping & E-Commerce — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "shopping-ecommerce",
+    "url": "/resources/shopping-ecommerce",
+    "description": "Consumer resources for Shopping & E-Commerce: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "shopping ecommerce resources",
+      "shopping ecommerce consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Subscriptions & Services — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "subscriptions-services",
+    "url": "/resources/subscriptions-services",
+    "description": "Consumer resources for Subscriptions & Services: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "subscriptions services resources",
+      "subscriptions services consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Telecoms & Utilities — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "telecoms-utilities",
+    "url": "/resources/telecoms-utilities",
+    "description": "Consumer resources for Telecoms & Utilities: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "telecoms utilities resources",
+      "telecoms utilities consumer resources",
+      "free consumer resource directory"
+    ]
+  },
+  {
+    "title": "Training & Education — Consumer Resources | Kibbo",
+    "type": "resource",
+    "block": "training-education",
+    "url": "/resources/training-education",
+    "description": "Consumer resources for Training & Education: websites, tools and guides to understand your rights and avoid scams.",
+    "keywords": [
+      "training education resources",
+      "training education consumer resources",
+      "free consumer resource directory"
+    ]
   }
 ]
