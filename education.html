@@ -267,6 +267,13 @@
               <span class="kibbo-panel-desc">Free classroom exercises built on our own data.</span>
             </span>
           </a>
+          <a href="/library/" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Education Library</span>
+              <span class="kibbo-panel-desc">Free external resources for teachers and students.</span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -309,6 +316,7 @@
       <a href="/datasets">Consumer Data Library</a>
       <a href="/research">Kibbo Research</a>
       <a href="/education">Kibbo Education</a>
+      <a href="/library/">Education Library</a>
     </details>
     <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
   </div>
@@ -320,6 +328,7 @@
     <p class="section-label">Kibbo Education</p>
     <h1 class="section-title">Free classroom material, built on our own data</h1>
     <p class="section-subtitle">Free, practical exercises for teachers and students, built directly on Kibbo's own consumer datasets. No sign-up, no accreditation or institutional partnership claims — just material you can print and use.</p>
+    <p style="color:var(--text-secondary); font-size:14px; margin-top:10px;">Looking for free external resources? Visit the <a href="/library/" style="color:var(--accent-green); font-weight:600;">Education Library →</a></p>
   </div>
 </div>
 
@@ -329,11 +338,10 @@
   <aside class="blf-sidebar" aria-label="Jump to section">
     <p class="blf-sidebar-label">Sections</p>
     <details class="blf-cat" id="eduFilterToggle">
-      <summary><span class="blf-cat-name" id="eduFilterName">All</span><span class="blf-count" id="eduFilterCount">7</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <summary><span class="blf-cat-name" id="eduFilterName">All</span><span class="blf-count" id="eduFilterCount">6</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
       <ul class="blf-cat-list" id="eduFilter" role="tablist" aria-label="Education sections">
-        <li><button type="button" data-value="" data-name="All" data-count="7" class="active">All (7)</button></li>
+        <li><button type="button" data-value="" data-name="All" data-count="6" class="active">All (6)</button></li>
         <li><button type="button" data-value="Exercises" data-name="Classroom exercises" data-count="4">Classroom exercises (4)</button></li>
-        <li><button type="button" data-value="Library" data-name="Library" data-count="1">Library (1)</button></li>
         <li><button type="button" data-value="DataBehind" data-name="The data behind the exercises" data-count="1">The data behind the exercises (1)</button></li>
         <li><button type="button" data-value="UsingInClass" data-name="Using these in class" data-count="1">Using these in class (1)</button></li>
       </ul>
@@ -394,24 +402,6 @@
             <span>Health economics, public policy, statistics, economics</span>
           </div>
           <a class="edu-card-link" href="/education/exercises/healthcare-costs">Open the exercise sheet →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIBRARY -->
-    <section class="edu-section" data-category="Library">
-      <div class="pillar-category-header">
-        <div class="pillar-category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <h2 class="pillar-category-name">Library</h2>
-        <span class="pillar-category-count">Curated free resources</span>
-      </div>
-      <div class="edu-grid">
-        <div class="audience-card">
-          <h3><a href="/education/library" style="color:inherit; text-decoration:none;">Kibbo Education Library</a></h3>
-          <p>A curated selection of free external resources from government agencies, non-profits and open textbook publishers, organised by topic — not hosted on Kibbo, just linked.</p>
-          <a class="edu-card-link" href="/education/library">Browse the library →</a>
         </div>
       </div>
     </section>
@@ -554,7 +544,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     p.addEventListener('click', function () { applyFilter(p.dataset.value, true); });
   });
 
-  var valid = ['Exercises', 'Library', 'DataBehind', 'UsingInClass'];
+  var valid = ['Exercises', 'DataBehind', 'UsingInClass'];
   var initial = new URLSearchParams(window.location.search).get('section') || '';
   if (initial && valid.indexOf(initial) === -1) initial = '';
   applyFilter(initial, false);

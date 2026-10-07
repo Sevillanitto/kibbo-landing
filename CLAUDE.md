@@ -65,7 +65,7 @@ kibbo-landing/
 8. Before publishing any new content (article, template, analyzer, generator, or checklist), read PUBLISHING-PROTOCOL.md and follow its checklist for that content type.
 9. When drafting an article with a "Related Kibbo Tools" section, tag it with `CROSSLINK_TAGS` (see Cross-Linking Workflow below) instead of hand-writing the links or a descriptive placeholder comment.
 10. Exception to rules 1, 3 and 4: `/embed/*.html` (embeddable calculators) intentionally have NO nav, footer, GA or cookie banner, are noindex, and must NOT go in sitemap.xml or search-index.json. They are GENERATED — never edit them by hand; after changing an embedded calculator (flight delay, real discount, rent increase) re-run `py -3 scripts/build-embeds.py`. `vercel.json` lets only `/embed/*` be framed by other sites.
-11. `/education/library` renders client-side from `data/education-library.json` (see `education/library-engine.js`). A new library topic is added by appending a `{topic, verified, resources}` batch to that JSON file — no HTML/JS changes needed.
+11. `/library` renders client-side from `data/education-library.json` (see `library/library-engine.js`). A new library topic is added by appending a `{topic, verified, resources}` batch to that JSON file — no HTML/JS changes needed.
 
 ## Cross-Linking Workflow
 Cross-links for "Related Kibbo Tools" sections are generated deterministically from `cross-link-map.json`, not reasoned about per-article. See `scripts/inject-cross-links.py` for full usage docs (`--help` or the file's docstring).
