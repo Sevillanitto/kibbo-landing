@@ -17213,6 +17213,78 @@
     ]
   },
   {
+    "title": "The Streaming Price Machine: Classroom Exercises, Student Sheet (PDF)",
+    "type": "dataset",
+    "block": "subscriptions-services",
+    "url": "/investigations-data/streaming-price-machine-student-sheet.pdf",
+    "description": "Download the printable student PDF for Kibbo's Streaming Pricing Dataset classroom exercise sheet — seven exercises on 97 streaming price-change events.",
+    "keywords": [
+      "streaming price machine classroom exercise pdf",
+      "streaming pricing dataset student sheet",
+      "streaming price worksheet pdf"
+    ]
+  },
+  {
+    "title": "The Streaming Price Machine: Classroom Exercises, Teacher Edition (PDF)",
+    "type": "dataset",
+    "block": "subscriptions-services",
+    "url": "/investigations-data/streaming-price-machine-teacher-edition.pdf",
+    "description": "Download the printable teacher edition PDF (includes the answer key) for Kibbo's Streaming Pricing Dataset classroom exercise sheet.",
+    "keywords": [
+      "streaming price machine teacher edition",
+      "streaming pricing dataset answer key pdf",
+      "streaming price machine teacher pdf"
+    ]
+  },
+  {
+    "title": "US Airline Ranking 2026 H1: Classroom Exercises, Student Sheet (PDF)",
+    "type": "dataset",
+    "block": "flights-travel",
+    "url": "/investigations-data/us-airline-ranking-2026-h1-student-sheet.pdf",
+    "description": "Download the printable student PDF for Kibbo's US Airline Reliability Dataset classroom exercise sheet.",
+    "keywords": [
+      "us airline ranking classroom exercise pdf",
+      "airline reliability dataset student sheet",
+      "us airline worksheet pdf"
+    ]
+  },
+  {
+    "title": "US Airline Ranking 2026 H1: Classroom Exercises, Teacher Edition (PDF)",
+    "type": "dataset",
+    "block": "flights-travel",
+    "url": "/investigations-data/us-airline-ranking-2026-h1-teacher-edition.pdf",
+    "description": "Download the printable teacher edition PDF (includes the answer key) for Kibbo's US Airline Reliability Dataset classroom exercise sheet.",
+    "keywords": [
+      "us airline ranking teacher edition",
+      "airline reliability dataset answer key pdf",
+      "us airline teacher pdf"
+    ]
+  },
+  {
+    "title": "What Does It Really Cost to Get Sick?: Classroom Exercises, Student Sheet (PDF)",
+    "type": "dataset",
+    "block": "healthcare-medical",
+    "url": "/investigations-data/healthcare-cost-comparison-student-sheet.pdf",
+    "description": "Download the printable student PDF for Kibbo's Healthcare Cost Dataset classroom exercise sheet.",
+    "keywords": [
+      "healthcare cost classroom exercise pdf",
+      "healthcare cost dataset student sheet",
+      "healthcare cost worksheet pdf"
+    ]
+  },
+  {
+    "title": "What Does It Really Cost to Get Sick?: Classroom Exercises, Teacher Edition (PDF)",
+    "type": "dataset",
+    "block": "healthcare-medical",
+    "url": "/investigations-data/healthcare-cost-comparison-teacher-edition.pdf",
+    "description": "Download the printable teacher edition PDF (includes the answer key) for Kibbo's Healthcare Cost Dataset classroom exercise sheet.",
+    "keywords": [
+      "healthcare cost teacher edition",
+      "healthcare cost dataset answer key pdf",
+      "healthcare cost teacher pdf"
+    ]
+  },
+  {
     "title": "Consumer Data Library — Kibbo Healthcare Cost Dataset",
     "type": "dataset",
     "block": "healthcare-medical",

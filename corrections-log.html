@@ -282,6 +282,13 @@
 
   <ol class="corrections-log">
     <li>
+      <p class="cl-date"><time datetime="2026-10-07">7 October 2026</time></p>
+      <p class="cl-article"><a href="/education/exercises/healthcare-costs">What Does It Really Cost to Get Sick? — Classroom Exercises</a></p>
+      <p><strong>What changed:</strong> The teacher answer key gave the 2025 ACA out-of-pocket maximum for self-only coverage as $9,450.</p>
+      <p><strong>Correction:</strong> The 2025 limit for self-only coverage is $9,200. $9,450 was the 2024 limit.</p>
+      <p><strong>Source:</strong> <a href="https://www.cms.gov/files/document/2025-papi-parameters-guidance-2023-11-15.pdf" target="_blank" rel="noopener">CMS, 2025 Premium Adjustment Percentage, Maximum Annual Limitation on Cost Sharing, Reduced Maximum Annual Limitation on Cost Sharing, and Required Contribution Percentage Guidance (PDF)</a>.</p>
+    </li>
+    <li>
       <p class="cl-date"><time datetime="2026-10-02">2 October 2026</time></p>
       <p class="cl-article"><a href="/datasets">Consumer Data Library</a></p>
       <p><strong>What changed:</strong> Data-quality fixes across three dataset files, made ahead of building classroom exercises on them. Streaming Pricing Dataset: corrected a rounding error in <code>percent_change</code> on 4 rows (Prime Video monthly membership, Prime Video Ultra, Apple TV+ Standard, ESPN+), flagged Prime Video's "Annual membership" rows as annual rather than monthly prices, and updated the README to describe both of the dataset's confirmed ESPN pricing gaps instead of one. US Airline Reliability Dataset: split the single CSV (which stacked three tables and broke spreadsheet/pandas imports) into three files — the main ranking, a year-over-year comparison, and Spirit Airlines' monthly on-time rate — moved its source citation into a new README, and documented the tie-break order behind the composite score so it can be reproduced from the published data. Healthcare Cost Dataset: corrected a note on the US appendectomy Layer C row that incorrectly claimed it was the Layer B source for the US base case, contradicting its own layer label and the article, which uses separate CMS-sourced figures as the US's Layer B. No headline finding in any of the three investigations changed.</p>
