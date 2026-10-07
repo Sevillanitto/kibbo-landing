@@ -17184,8 +17184,32 @@
     "keywords": [
       "healthcare cost dataset csv",
       "international healthcare cost data download",
-      "treatment cost comparison data",
+      "treatment cost comparison data"
+    ]
+  },
+  {
+    "title": "The Copy-Paste Complaint: Classroom Exercises, Student Sheet (PDF)",
+    "type": "dataset",
+    "block": "financial-banking",
+    "url": "/investigations-data/cfpb-copy-paste-complaint-student-sheet.pdf",
+    "description": "Download the printable student PDF for Kibbo's CFPB Complaint Vault classroom exercise sheet — seven exercises on 18.2 million CFPB complaints.",
+    "keywords": [
+      "cfpb classroom exercise pdf",
+      "cfpb complaint vault student sheet",
+      "copy paste complaint worksheet pdf",
       "kibbo dataset"
+    ]
+  },
+  {
+    "title": "The Copy-Paste Complaint: Classroom Exercises, Teacher Edition (PDF)",
+    "type": "dataset",
+    "block": "financial-banking",
+    "url": "/investigations-data/cfpb-copy-paste-complaint-teacher-edition.pdf",
+    "description": "Download the printable teacher edition PDF (includes the answer key) for Kibbo's CFPB Complaint Vault classroom exercise sheet.",
+    "keywords": [
+      "cfpb classroom exercise teacher edition",
+      "cfpb complaint vault answer key pdf",
+      "cfpb copy paste complaint teacher edition"
     ]
   },
   {
