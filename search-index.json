@@ -16427,6 +16427,18 @@
     ]
   },
   {
+    "title": "The CFPB Complaint Vault Dataset — Classroom Exercises",
+    "type": "exercise",
+    "url": "/education/exercises/cfpb-copy-paste-complaints",
+    "description": "Seven classroom exercises built on Kibbo's CFPB Complaint Vault dataset of 18.2 million complaints, with a teacher answer key.",
+    "keywords": [
+      "cfpb complaint classroom exercise",
+      "copy paste template worksheet",
+      "statistics data literacy exercise",
+      "teacher answer key"
+    ]
+  },
+  {
     "title": "Kibbo Education Library",
     "type": "library",
     "url": "/education/library",

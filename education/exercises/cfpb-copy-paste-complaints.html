@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+<meta charset="UTF-8">
+<link rel="canonical" href="https://www.getkibbo.com/education/exercises/cfpb-copy-paste-complaints">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The CFPB Complaint Vault Dataset — Classroom Exercises | Kibbo Education</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Free classroom exercises built on Kibbo's CFPB Complaint Vault dataset — 18.2 million complaints, measuring copy-paste templates, and why the denominator changes a bank ranking. With a teacher answer key.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="The CFPB Complaint Vault Dataset — Classroom Exercises">
+<meta property="og:description" content="Free classroom exercises built on Kibbo's CFPB Complaint Vault dataset. With a teacher answer key.">
+<meta property="og:url" content="https://www.getkibbo.com/education/exercises/cfpb-copy-paste-complaints">
+<meta property="og:image" content="https://www.getkibbo.com/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The CFPB Complaint Vault Dataset — Classroom Exercises">
+<meta name="twitter:description" content="Free classroom exercises built on Kibbo's CFPB Complaint Vault dataset. With a teacher answer key.">
+<meta name="twitter:image" content="https://www.getkibbo.com/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.getkibbo.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Kibbo Education", "item": "https://www.getkibbo.com/education" },
+    { "@type": "ListItem", "position": 3, "name": "The Copy-Paste Complaint", "item": "https://www.getkibbo.com/education/exercises/cfpb-copy-paste-complaints" }
+  ]
+}
+</script>
+
+<style>
+  .blf-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px) 80px; }
+  .blf-sidebar { position: sticky; top: 96px; border-top: 1px solid var(--text-primary); }
+  .blf-sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 14px 0 6px; margin: 0; }
+  .blf-cat { border-bottom: 1px solid var(--border); }
+  .blf-cat summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 0; cursor: pointer; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .blf-cat summary::-webkit-details-marker { display: none; }
+  .blf-cat-name { flex: 1; }
+  .blf-arrow { flex: 0 0 auto; color: var(--text-muted); transition: transform 0.2s ease; transform: rotate(-90deg); }
+  .blf-cat[open] .blf-arrow { transform: rotate(0deg); }
+  .blf-cat-list { list-style: none; margin: 0; padding: 0 0 12px; }
+  .blf-cat-list li { margin: 0; }
+  .blf-cat-list button { display: block; width: 100%; background: none; border: none; font: inherit; cursor: pointer; text-align: left; padding: 7px 0 7px 12px; border-left: 1px solid var(--border); font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); }
+  .blf-cat-list button:hover, .blf-cat-list button.active { color: var(--accent-green); border-left-color: var(--accent-green); }
+  .blf-cat-list button.active { font-weight: 600; }
+  @media (max-width: 860px) {
+    .blf-layout { grid-template-columns: 1fr; gap: 36px; }
+    .blf-sidebar { position: static; }
+  }
+
+  .edu-ex-hero { padding: clamp(60px, 8vh, 96px) 0 clamp(32px, 4vh, 48px); border-bottom: 1px solid var(--border); margin-bottom: clamp(32px, 4vh, 48px); }
+  .edu-ex-back { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 14px; }
+  .edu-ex-back a { color: var(--accent-green); text-decoration: none; }
+  .edu-ex-back a:hover { color: var(--text-primary); }
+
+  .dataset-block { max-width: 1200px; margin: 0 auto clamp(32px, 4vh, 48px); padding: 0 clamp(20px, 4vw, 48px); border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); }
+  .dataset-block-inner { padding: 24px 0; display: flex; flex-wrap: wrap; gap: 24px 40px; }
+  .dataset-block .label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 8px; }
+  .dataset-block dt { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+  .dataset-block dd { margin: 0; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; }
+  .dataset-block a.download-link { font-weight: 700; color: var(--accent-green); text-decoration: underline; }
+  .dataset-block a.download-link + a.download-link { margin-left: 14px; }
+
+  .edu-ex-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
+  .edu-ex-item:last-child { border-bottom: none; }
+  .edu-ex-item p.edu-ex-num { font-family: var(--font-sans); font-weight: 700; font-size: 16px; color: var(--text-primary); margin: 0 0 8px; }
+  .edu-ex-item p.edu-ex-num span { font-weight: 500; color: var(--text-muted); text-transform: lowercase; font-size: 13px; }
+  .edu-ex-item p.edu-ex-body { margin: 0 0 8px; font-size: 15.5px; color: var(--text-secondary); line-height: 1.65; }
+  .edu-ex-item ol.edu-ex-sublist { margin: 8px 0 0 20px; padding: 0; }
+  .edu-ex-item ol.edu-ex-sublist li { font-size: 15.5px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 6px; }
+
+  .edu-ex-section h2 { font-family: var(--font-serif); font-size: 26px; font-weight: 700; margin: 0 0 16px; color: var(--text-primary); }
+  .edu-ex-section { margin-bottom: 48px; }
+  .edu-ex-section > p { font-size: 15.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
+  .edu-ex-section ul.edu-ex-files { margin: 0 0 14px 20px; padding: 0; }
+  .edu-ex-section ul.edu-ex-files li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; }
+  .edu-ex-section ul.edu-ex-caveats { margin: 0 0 14px 20px; padding: 0; }
+  .edu-ex-section ul.edu-ex-caveats li { font-size: 15.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; }
+
+  .edu-ex-section table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 14px; margin: 14px 0; }
+  .edu-ex-section table th, .edu-ex-section table td { text-align: left; padding: 11px 14px; border: 1px solid var(--border); vertical-align: top; }
+  .edu-ex-section table th { background: var(--accent-green-light); color: var(--text-primary); font-weight: 600; }
+  .edu-ex-section table tr:nth-child(even) td { background: var(--bg-card); }
+  .edu-ex-section table caption { text-align: left; font-weight: 700; font-size: 14px; color: var(--text-primary); margin-bottom: 6px; caption-side: top; }
+
+  .edu-ex-answers { margin: 0; padding-left: 20px; }
+  .edu-ex-answers li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
+  .edu-ex-answers li strong { color: var(--text-primary); }
+
+  .edu-ex-backlinks { font-size: 14.5px; margin-top: 8px; }
+  .edu-ex-backlinks a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+  .edu-ex-backlinks a:hover { text-decoration: underline; }
+
+  @media print {
+    .blf-sidebar, .edu-ex-backlinks, .edu-ex-back { display: none !important; }
+    .blf-layout { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
+          <a href="/developer-tools" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Developer Tools</span>
+              <span class="kibbo-panel-desc">Source code for our browser extensions and tools.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <a href="/real-cases" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases</span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/resources/" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Community Resources</span>
+              <span class="kibbo-panel-desc">Free consumer resources, tools and guides from the community.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+          <a href="/research" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M8 13h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kibbo Research</span>
+              <span class="kibbo-panel-desc">Original investigations and datasets, built to be cited.</span>
+            </span>
+          </a>
+          <a href="/education" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kibbo Education</span>
+              <span class="kibbo-panel-desc">Free classroom exercises built on our own data.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
+      <a href="/developer-tools">Developer Tools</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <a href="/real-cases">Cases</a>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/resources/">Community Resources</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+      <a href="/research">Kibbo Research</a>
+      <a href="/education">Kibbo Education</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="edu-ex-hero">
+  <div class="container">
+    <p class="edu-ex-back"><a href="/education">← Kibbo Education</a></p>
+    <p class="section-label">Classroom exercise</p>
+    <h1 class="section-title">Use this in the classroom: The Copy-Paste Complaint</h1>
+    <p class="section-subtitle">Level: Upper secondary or first-year university. Fits: statistics, economics, personal finance, civics, data literacy. Tools needed: Excel or Google Sheets (pivot tables or SUMIFS) — no coding required.</p>
+  </div>
+</div>
+
+<!-- DATASET / DOWNLOAD BLOCK -->
+<div class="dataset-block">
+  <div class="dataset-block-inner">
+    <div style="flex:1 1 100%;">
+      <div class="label">Dataset</div>
+      <p style="margin:0 0 10px; font-size:15.5px; color:var(--text-secondary);">The CFPB Complaint Vault Dataset (2011–2026) — 18,167,713 complaints</p>
+      <a class="download-link" href="/investigations-data/cfpb-complaint-vault-README.md" download>Download the README →</a>
+      <a class="download-link" href="https://doi.org/10.5281/zenodo.23188842" target="_blank" rel="noopener">Zenodo record →</a>
+      <a class="download-link" href="/investigations/cfpb-copy-paste-complaints">Read the investigation →</a>
+    </div>
+  </div>
+</div>
+
+<div class="blf-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="blf-sidebar" aria-label="Jump to section">
+    <p class="blf-sidebar-label">On this page</p>
+    <details class="blf-cat" open id="exToc">
+      <summary><span class="blf-cat-name">Sections</span><svg class="blf-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <ul class="blf-cat-list" id="exTocList">
+        <li><button type="button" data-target="before-you-start" class="active">Before you start</button></li>
+        <li><button type="button" data-target="exercises">Exercises</button></li>
+        <li><button type="button" data-target="connect-real-life">Connect it to real life</button></li>
+        <li><button type="button" data-target="answer-key">Teacher answer key</button></li>
+      </ul>
+    </details>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="section-main" style="padding-top:0;">
+
+    <section class="edu-ex-section" id="before-you-start">
+      <h2>Before you start</h2>
+      <p>The U.S. Consumer Financial Protection Bureau (CFPB) publishes every consumer complaint it receives about financial products. This dataset adds three things: a product taxonomy that is comparable across years, a measure of which complaint narratives are copy-paste templates, and company and bank rates. Complaints are allegations, not findings, and company responses are self-reported.</p>
+
+      <p style="margin-bottom:6px;"><strong style="color:var(--text-primary);">Files used</strong> (use the published file names):</p>
+      <ul class="edu-ex-files">
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year.csv" download>complaints-by-year.csv</a> (columns: year, n)</li>
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year-product-family.csv" download>complaints-by-year-product-family.csv</a> (year, product_family, n)</li>
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year-product-family-response.csv" download>complaints-by-year-product-family-response.csv</a> (year, product_family, company_response_to_consumer, n)</li>
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-template-category-by-year-product-family-narratives-only.csv" download>template-category-by-year-product-family-narratives-only.csv</a> (year, product_family, template_category, n, pct)</li>
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-bank-complaint-rates.csv" download>bank-complaint-rates.csv</a> (company, year, complaint counts, FDIC deposits, assets and account counts, and the rates built from them)</li>
+        <li><a class="download-link" href="/investigations-data/cfpb-complaint-vault-top100-template-clusters.csv" download>top100-template-clusters.csv</a> (extra exercise)</li>
+      </ul>
+
+      <p style="margin-bottom:6px;"><strong style="color:var(--text-primary);">Before you start (read this with students):</strong></p>
+      <ul class="edu-ex-caveats">
+        <li>2026 is a partial year: complaints received from 1 January to 3 October. For narratives, the CFPB stopped publishing on 14 August 2026.</li>
+        <li>"In progress" complaints have no final outcome yet. Exercises that use outcomes exclude them.</li>
+        <li>A complaint is one person's account. A company's response category is reported by the company.</li>
+      </ul>
+    </section>
+
+    <section class="edu-ex-section" id="exercises">
+      <h2>Exercises</h2>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">1. Read, compare, and be careful with partial years <span>(basic)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year.csv" download>complaints-by-year.csv</a></p>
+        <ol class="edu-ex-sublist">
+          <li>How many complaints did the CFPB receive in 2024 and in 2025?</li>
+          <li>By what percentage did complaints change from 2024 to 2025?</li>
+          <li>The 2026 row is larger than the 2025 row. Does that mean 2026 had more complaints than 2025? Explain.</li>
+          <li>Calculate average complaints per day for 2025 (365 days) and for 2026 (1 January to 3 October = 276 days). Which year had more complaints per day, and by how much?</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">2. Proportions and what "everything else" did <span>(basic)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year-product-family.csv" download>complaints-by-year-product-family.csv</a></p>
+        <ol class="edu-ex-sublist">
+          <li>Calculate credit reporting's share of all complaints in 2015, 2025 and 2026.</li>
+          <li>Calculate how many complaints were NOT about credit reporting in 2015 and in 2025. How many times larger is the 2025 figure?</li>
+          <li>Money transfers &amp; virtual currency: how many complaints in 2024 and 2025? How many times larger is 2025?</li>
+          <li>Sentence to write: "Credit reporting's share rose from __% to __%, but complaints about everything else also ___."</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">3. The mix effect <span>(intermediate)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-complaints-by-year-product-family-response.csv" download>complaints-by-year-product-family-response.csv</a></p>
+        <p class="edu-ex-body">Definition: <strong style="color:var(--text-primary);">monetary relief rate</strong> = complaints closed "with monetary relief" ÷ all complaints with a final outcome (exclude "In progress"). Use 2023 and 2025.</p>
+        <ol class="edu-ex-sublist">
+          <li>Calculate the monetary relief rate for ALL complaints in 2023 and 2025.</li>
+          <li>Calculate it again EXCLUDING credit reporting, and the rate for credit reporting alone.</li>
+          <li>Credit reporting's share of complaints with a final outcome went from X% to Y%. Calculate both.</li>
+          <li>The overall rate fell much more than the rate excluding credit reporting. Explain why in two sentences, using the numbers.</li>
+          <li>(Challenge) If 2025 had the same product mix as 2023, but each group kept its own 2025 rate, what would the overall 2025 rate be? How much of the fall is explained by the change in mix, and how much by the change in rates within each group? Then redo the split using the 2025 mix with 2023 rates. Do you get the same split? Why or why not?</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">4. Template detection: measuring copy-paste <span>(intermediate)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-template-category-by-year-product-family-narratives-only.csv" download>template-category-by-year-product-family-narratives-only.csv</a></p>
+        <p class="edu-ex-body">Categories: <code>original</code> (unique text), <code>shared_template_strict</code> (same text filed from two or more different locations), <code>same_filer_repeat</code> (same text from one location, probably one person filing several times), <code>unknown_filer</code>. The file only covers complaints with a published narrative.</p>
+        <ol class="edu-ex-sublist">
+          <li>Calculate the share of narratives that were shared templates in 2015, 2020 and 2025.</li>
+          <li>In 2025, which product family had the highest shared-template share? Which had the lowest?</li>
+          <li>The 2026 share of shared templates is much lower than 2025. Give two reasons not to conclude that templates fell in 2026.</li>
+          <li>In 2025, what share of all narratives was about credit reporting? What share of all shared-template narratives was credit reporting?</li>
+          <li>Calculate the 2025 shared-template share EXCLUDING credit reporting. Compare it with the overall figure and explain what this tells us about where templates are concentrated.</li>
+          <li>Why does the dataset separate shared templates from same-filer repeats? What would happen to the template measure if it did not?</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">5. Denominators: three reasonable measures, three rankings <span>(advanced)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-bank-complaint-rates.csv" download>bank-complaint-rates.csv</a>. Use <strong style="color:var(--text-primary);">year = 2025</strong> only.</p>
+        <p class="edu-ex-body">Three ways to compare banks: (A) <code>complaints_per_billion_deposits_all</code> (all complaints per $1 billion of deposits), (B) <code>bank_accounts_complaints_per_billion_deposits</code> (bank-account complaints only, per $1 billion of deposits), (C) <code>bank_accounts_complaints_per_100k_accounts</code> (bank-account complaints per 100,000 deposit accounts of $250,000 or less).</p>
+        <ol class="edu-ex-sublist">
+          <li>Keep only 2025 rows where <code>min_volume_flag</code> is FALSE and the per-100k rate is not blank. How many banks remain?</li>
+          <li>Rank those banks from highest to lowest on A, B and C. Which bank is first on each measure?</li>
+          <li>Find Citibank and Bank of America. What rank does each get on A, B and C? On which measures is Citibank's rate higher than Bank of America's, and by how many times?</li>
+          <li>The three measures give three different rankings. Which one best answers the question "which bank gets more complaints per customer?" Justify it, and list two weaknesses of that measure.</li>
+          <li>The rule that removes banks with fewer than 300 bank-account complaints is arbitrary. Raise the threshold to 500: which banks drop out, and who is first on C now? What does that tell you about the reliability of rankings built on small counts?</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">6. What can we NOT conclude? <span>(advanced)</span></p>
+        <p class="edu-ex-body">Data: the table below (from the Kibbo analysis of the complaint-level file, 2022–2025, comparing original and shared-template narratives within the same issue). Share of complaints closed with each type of relief, %.</p>
+
+        <table>
+          <caption>Closed with monetary relief</caption>
+          <thead>
+            <tr><th>Issue</th><th>Original</th><th>Shared template</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bank accounts: Problem caused by your funds being low</td><td>18.6</td><td>0.3</td></tr>
+            <tr><td>Bank accounts: Managing an account</td><td>13.5</td><td>0.2</td></tr>
+            <tr><td>Money transfers: Other transaction problem</td><td>4.6</td><td>0.0</td></tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption>Closed with non-monetary relief (for example, correcting a credit report)</caption>
+          <thead>
+            <tr><th>Issue</th><th>Original</th><th>Shared template</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Credit reporting: Incorrect information on your report</td><td>35.1</td><td>51.2</td></tr>
+            <tr><td>Debt collection: Attempts to collect debt not owed</td><td>16.8</td><td>38.6</td></tr>
+            <tr><td>Debt collection: Written notification about debt</td><td>14.8</td><td>46.1</td></tr>
+          </tbody>
+        </table>
+
+        <ol class="edu-ex-sublist">
+          <li>For each row, calculate the gap in percentage points between original and shared template. For the second table, also calculate the ratio (template ÷ original).</li>
+          <li>A student writes: "Using a template makes it less likely you get money and more likely you get a correction." Rewrite the sentence so it is supported by the data and no more.</li>
+          <li>List at least three reasons the data cannot show that the template itself caused the difference (think: who uses templates, what problems they have, how companies record responses).</li>
+          <li>A company refunds a consumer but records the complaint as "Closed with explanation". How would that appear in the table, and why does it matter?</li>
+          <li>Does a shared template mean the complaint is false? Use the data and the definitions to answer.</li>
+        </ol>
+      </div>
+
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">Extra — Read the biggest clusters <span>(advanced)</span></p>
+        <p class="edu-ex-body">File: <a class="download-link" href="/investigations-data/cfpb-complaint-vault-top100-template-clusters.csv" download>top100-template-clusters.csv</a> (the 100 largest groups of near-identical narratives; the file includes the first 300 characters of each representative text).</p>
+        <ol class="edu-ex-sublist">
+          <li>Sort by <code>size</code>. Which cluster is the largest, and how many narratives and distinct locations does it have?</li>
+          <li>Which cluster covers the most distinct locations? What company is it mostly about?</li>
+          <li>For how many of the 100 clusters is credit reporting the main product family (the first one listed in <code>top3_product_families</code>)?</li>
+          <li>Create a column: distinct locations ÷ size. Which cluster has the lowest ratio? What are two possible explanations, and what other data would you need to choose between them?</li>
+          <li>Clusters were built within each calendar year (and 2025 within each half). Why can you not compare cluster sizes directly across all scopes?</li>
+        </ol>
+        <p class="edu-ex-body" style="margin-top:10px; font-style:italic;">Note for teachers: the texts in this file are mass-repeated texts, not individual accounts. Ask students to look at patterns, not to look for individuals.</p>
+      </div>
+    </section>
+
+    <section class="edu-ex-section" id="connect-real-life">
+      <h2>Connect it to real life</h2>
+      <p>The table shows that, for credit report errors, shared-template complaints more often end with a correction. If you found an error on your credit report, what three specific details would you add to any template before sending it, and why? Then use the <a href="/generate/fcra-credit-dispute" style="color:var(--accent-green); font-weight:600; text-decoration:none;">Credit Report Dispute Letter Generator</a> to draft your letter. If your problem is a debt you do not recognise, use the <a href="/generate/debt-collection-dispute-letter" style="color:var(--accent-green); font-weight:600; text-decoration:none;">Debt Collection Dispute Letter Generator</a> instead.</p>
+    </section>
+
+    <section class="edu-ex-section" id="answer-key" style="margin-bottom:24px;">
+      <h2>Teacher answer key</h2>
+      <details class="dir-acc-item">
+        <summary><span class="section-label">Click to reveal the answer key</span></summary>
+        <div class="dir-acc-body">
+          <ol class="edu-ex-answers">
+            <li><strong>Exercise 1</strong><br>1. 2024: 2,734,268. 2025: 5,442,962.<br>2. (5,442,962 ÷ 2,734,268 − 1) = <strong>+99.1%</strong> (about double).<br>3. No. 2026 covers only 1 January to 3 October (276 days); 5,485,332 complaints in about nine months is not comparable with a full year.<br>4. 2025: 5,442,962 ÷ 365 = <strong>14,912.2 per day</strong>. 2026: 5,485,332 ÷ 276 = <strong>19,874.4 per day</strong>. About <strong>+33.3%</strong> per day in 2026. (Caution: a daily average assumes complaints are spread evenly across the year; they are not, as the January 2025 surge shows.)</li>
+            <li><strong>Exercise 2</strong><br>1. 2015: 34,270 ÷ 168,272 = <strong>20.4%</strong>. 2025: 4,810,301 ÷ 5,442,962 = <strong>88.4%</strong>. 2026: 4,997,950 ÷ 5,485,332 = <strong>91.1%</strong>.<br>2. Not credit reporting: 2015 = 134,002; 2025 = 632,661. 632,661 ÷ 134,002 = <strong>4.72 times</strong>.<br>3. 2024: 16,751. 2025: 84,619. 84,619 ÷ 16,751 = <strong>5.05 times</strong>. (Most of this jump is concentrated in January 2025; see the investigation article.)<br>4. "Credit reporting's share rose from 20.4% to 88.4%, but complaints about everything else also grew about 4.7 times."</li>
+            <li><strong>Exercise 3</strong> (final-outcome complaints only, "In progress" excluded)<br>1. 2023: 20,355 ÷ 1,292,049 = <strong>1.58%</strong>. 2025: 26,125 ÷ 5,442,678 = <strong>0.48%</strong>.<br>2. Excluding credit reporting: 2023: 19,568 ÷ 245,180 = <strong>7.98%</strong>; 2025: 25,204 ÷ 632,442 = <strong>3.99%</strong>. Credit reporting alone: 2023: 787 ÷ 1,046,869 = <strong>0.075%</strong>; 2025: 921 ÷ 4,810,236 = <strong>0.019%</strong>.<br>3. Credit reporting's share of complaints with a final outcome: 1,046,869 ÷ 1,292,049 = <strong>81.0%</strong> (2023); 4,810,236 ÷ 5,442,678 = <strong>88.4%</strong> (2025).<br>4. Credit reporting almost never gets monetary relief (below 0.1%) and its share of complaints rose from 81% to 88%, so the all-complaints average falls partly because of the composition. But the rate excluding credit reporting also halved (7.98% → 3.99%), so mix alone does not explain it.<br>5. Same-mix calculation: 0.810 × 0.0191% + 0.190 × 3.985% ≈ <strong>0.77%</strong>. Total change = 0.48 − 1.58 = −1.10 percentage points. Split with 2023 mix: mix effect ≈ −0.29 pp (0.48 − 0.77), rate effect ≈ −0.80 pp (0.77 − 1.58). Split with the 2025 mix and 2023 rates (0.884 × 0.075% + 0.116 × 7.981% ≈ 0.99%): mix effect ≈ −0.58 pp, rate effect ≈ −0.51 pp. <strong>The split depends on which year's mix is used as the reference.</strong> Both mix and rates matter; neither explanation alone is complete. (Sanity check, shared with students: the excluding-credit-reporting figures, 7.98% and 3.99%, match those shown in the article's chart.)<br><br><em>Data note for teachers: the response file totals 5,442,678 for 2025 after excluding "In progress"; complaints-by-year.csv shows 5,442,962. The 284 difference is exactly the complaints still in progress.</em></li>
+            <li><strong>Exercise 4</strong> (shares computed with the published category <code>shared_template_strict</code>)<br>1. 2015: <strong>1.0%</strong>. 2020: <strong>15.2%</strong>. 2025: <strong>50.7%</strong>.<br>2. Highest: credit reporting <strong>60.0%</strong>, then money transfers &amp; virtual currency <strong>53.4%</strong>. Lowest: mortgage <strong>0.1%</strong> (20 of 14,031 narratives).<br>3. (a) 2026 is partial and the narrative archive ends on 14 August 2026 (121,385 narratives in 2026 against 1,222,049 in 2025). (b) Very few credit reporting narratives were published in 2026, and credit reporting is where most templates were. Also acceptable: the "original" share rising to 83.4% reflects what was published, not what was filed.<br>4. 2025 narratives: 1,222,049, of which credit reporting 912,756 = <strong>74.7%</strong>. Shared-template narratives in 2025: 619,464, of which credit reporting 547,603 = <strong>88.4%</strong>.<br>5. Excluding credit reporting: shared 619,464 − 547,603 = 71,861 of 309,293 narratives = <strong>23.2%</strong>, against 50.7% overall. Templates are present beyond credit reporting but strongly concentrated there; the headline figure is another mix effect.<br>6. A person filing the same text against several companies is not the same as many people sharing a text. Counting both together would overstate how many people use templates. Over all years (2015–2026), 36.1% of narratives were shared templates and 21.4% same-filer repeats. The strict measure is a lower bound: two people in the same ZIP code count as one location.</li>
+            <li><strong>Exercise 5</strong> (2025; 35 bank-year rows, 22 remain after the filter)<br>1. 35 rows for 2025; 12 are flagged (fewer than 300 bank-account complaints) and one more (Discover Bank) has no per-100k rate, so <strong>22 banks remain</strong>. (Students who only filter on the flag will get 23 and a blank rate; that is a useful catch.)<br>2. First on A: <strong>Santander Holdings USA (71.87)</strong>, then Capital One (67.56), then American Express (63.00). First on B: <strong>Capital One (15.68)</strong>, then USAA (13.15), then Santander Holdings USA (6.04). First on C: <strong>Comerica (29.93)</strong>, then Citibank (22.86), then Santander Holdings USA (17.90).<br>3. Citibank ranks <strong>8th on A, 19th on B, 2nd on C</strong>. Bank of America ranks <strong>15th on A, 17th on B, 17th on C</strong>. Citibank's rate relative to Bank of America: A: 13.51 ÷ 9.12 = <strong>1.48 times higher</strong>; B: 2.36 ÷ 3.18 = <strong>0.74 (lower)</strong>; C: 22.86 ÷ 8.33 = <strong>2.74 times higher</strong> ("nearly three times", as in the article). The comparison reverses depending on the denominator.<br>4. Best answer: <strong>C</strong>, because the denominator counts consumer-sized deposit accounts, so it is closer to "per customer" and is not inflated by large business or institutional deposits, which favour banks with big corporate businesses (Citibank has a large share of those). Weaknesses (any two): it counts accounts, not people, and one person can hold several; the $250,000 limit includes some small-business accounts; it counts complaints, which depend on how likely customers are to complain, not only on how a bank treats them; the account counts come from year-end regulatory reports; and the rates depend on the product match (bank-account complaints against deposit accounts).<br>5. With a 500 threshold, five banks drop out: <strong>Comerica (315), American Express (330), M&amp;T (393), KeyCorp (484) and Santander Holdings USA (496)</strong>. First on C becomes <strong>Citibank (22.86)</strong>. Comerica's first place rests on 315 complaints, just above the original threshold, so small counts can produce a top ranking that a small change in the rule removes.</li>
+            <li><strong>Exercise 6</strong><br>1. Monetary relief gaps (original − template): <strong>18.3</strong>, <strong>13.3</strong> and <strong>4.6</strong> percentage points. Non-monetary relief gaps (template − original): <strong>+16.1</strong>, <strong>+21.8</strong>, <strong>+31.3</strong> points. Ratios: 51.2 ÷ 35.1 = <strong>1.46</strong>; 38.6 ÷ 16.8 = <strong>2.30</strong>; 46.1 ÷ 14.8 = <strong>3.11</strong>.<br>2. Acceptable: "For these issues, in 2022–2025, complaints with shared-template narratives were closed with monetary relief less often and with non-monetary relief more often than original narratives, according to company-reported responses." (Correlation only.)<br>3. Any three of: different people and different problems use templates (credit report corrections vs money lost); a template may describe a simple, standard request that is easy to fix; companies may respond to volume or to the type of request, not to the text; response categories are chosen by the company; only some issues are shown; the narrative may differ from what the consumer actually asked; narratives only exist for part of all complaints.<br>4. It would appear as no relief, because the company's record says "Closed with explanation". Responses are self-reported, so the table shows what companies record, not necessarily what happened.<br>5. No. A real person with a real problem can use a template. The dataset measures standardised wording, not whether the complaint is true.</li>
+            <li><strong>Extra exercise</strong><br>1. <strong>Y2024-1</strong>: 34,309 narratives from 2,588 distinct locations (credit reporting, mainly TransUnion, Equifax and Experian).<br>2. <strong>Y2025H1-8</strong>: 4,952 distinct locations (23,481 narratives, 16 January to 30 June 2025), almost entirely about Block, Inc. (Cash App); the representative text is addressed to Cash App.<br>3. <strong>90</strong> of 100 (the others: debt collection 7, money transfers &amp; virtual currency 2, bank accounts 1).<br>4. Lowest ratio: <strong>Y2022-2</strong>, 97 locations ÷ 5,244 narratives = <strong>1.8%</strong> (credit reporting). Possible explanations: a text heavily used by a small number of filers, or the same people filing many times; or a text circulated within one community. To choose: the number of filings per location, filing dates, and companies per location. The ratio cannot decide this.<br>5. Clusters were built separately within each calendar year, and 2025 within each half, because of computing limits. A text active over several years is split across scopes, so sizes are not directly comparable.</li>
+            <li><strong>Consumer-rights question</strong><br>Good answers include: the name and number of each account, the date and what exactly is wrong, what you already tried (with dates), the evidence you attach, and what you want the company to do. The reason: a company's reviewer needs specifics to investigate; a general text gives them nothing to check.</li>
+          </ol>
+        </div>
+      </details>
+    </section>
+
+    <p class="edu-ex-backlinks"><a href="/education">← Back to Kibbo Education</a> &nbsp;·&nbsp; <a href="/investigations/cfpb-copy-paste-complaints">Read the full investigation →</a></p>
+
+  </main>
+</div>
+
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter-signup" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <p class="newsletter-copy">Get the latest on new scams, free tools, and consumer protection tips — straight to your inbox.</p>
+    <form action="https://getkibbo.us7.list-manage.com/subscribe/post?u=5eefe72f8cb72aa6d3421068d&amp;id=d011e6f7eb&amp;f_id=00c346e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+      <input type="email" name="EMAIL" class="newsletter-email-input" placeholder="Your email" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_5eefe72f8cb72aa6d3421068d_d011e6f7eb" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="newsletter-submit-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/calculators">Calculators</a>
+          <a href="/developer-tools">Developer Tools</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+          <a href="/corrections-log">Corrections Log</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+<!-- IN-PAGE SECTION NAV: same .blf- sidebar markup as blog.html/research.html,
+     but scroll-to behavior rather than hide/show filtering — every section
+     stays visible, since this is one worksheet, not a set of alternatives. -->
+<script>
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('#exTocList button'));
+  var sections = buttons.map(function (b) { return document.getElementById(b.dataset.target); });
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var target = document.getElementById(b.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.target === entry.target.id); });
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(function (s) { if (s) obs.observe(s); });
+})();
+</script>
+</body>
+</html>
