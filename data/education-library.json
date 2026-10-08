@@ -2300,5 +2300,180 @@
         "summary": "The US Department of Education explains Title IX protections for pregnant or parenting students at federally funded schools: the right to stay in classes and activities, excused absences while a doctor says necessary, protection from harassment, and the right to file a complaint."
       }
     ]
+  },
+  {
+    "topic": "Banking, payments & insurance",
+    "verified": "2026-10-08",
+    "resources": [
+      {
+        "id": "cfpb-know-your-overdraft-options",
+        "title": "Know your overdraft options",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Consumer guide",
+        "level": ["General public (United States)"],
+        "length": "Single guide page, 4 sections",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/know-your-overdraft-options/",
+        "summary": "The US Consumer Financial Protection Bureau explains three ways to reduce overdraft fees: opting out of debit and ATM overdraft coverage, linking a savings account to cover shortfalls, or asking for a line of credit, plus tips like balance alerts to avoid overdrawing your account."
+      },
+      {
+        "id": "cfpb-checklist-opening-bank-credit-union-account",
+        "title": "Checklist for Opening a Bank or Credit Union Account",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Checklist (PDF)",
+        "level": ["General public (United States)"],
+        "length": "4 pages",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_adult-fin-ed_checklist-for-opening-an-account.pdf",
+        "summary": "A CFPB checklist for opening a US bank or credit union account: getting fee and service recommendations, making an initial deposit of $25 to $100, understanding minimum balance requirements, and the identification documents needed, such as a driver's license, passport, Social Security number or ITIN."
+      },
+      {
+        "id": "cfpb-consumer-guide-selecting-lower-risk-account",
+        "title": "Consumer Guide to Selecting a Lower-Risk Account",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Consumer guide (PDF)",
+        "level": ["General public (United States)"],
+        "length": "3 pages",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://files.consumerfinance.gov/f/201602_cfpb_consumer-guide-to-selecting-a-lower-risk-account.pdf",
+        "summary": "The US CFPB's guide helps consumers choose a checking or prepaid account that won't let them spend beyond their balance, avoiding overdraft fees and negative checking-account reports, and lists questions to ask about fees, features and tradeoffs before selecting a lower-risk account."
+      },
+      {
+        "id": "fdic-consumer-resource-center",
+        "title": "Consumer Resource Center",
+        "publisher": "Federal Deposit Insurance Corporation (FDIC)",
+        "type": "Resource hub",
+        "level": ["General public (United States)"],
+        "length": "Hub page linking to multiple tools and guides",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.fdic.gov/consumer-resource-center",
+        "summary": "The FDIC's Consumer Resource Center is a hub for free US financial education: Bank Find to locate FDIC-insured institutions, deposit insurance coverage explained, the Electronic Deposit Insurance Estimator to calculate coverage, the Money Smart financial education program, fraud protection tips, and monthly FDIC Consumer News."
+      },
+      {
+        "id": "moneyhelper-how-to-choose-a-bank-account",
+        "title": "How to choose a bank account",
+        "publisher": "MoneyHelper",
+        "type": "Guide",
+        "level": ["General public (United Kingdom)"],
+        "length": "Single guide page, 4 sections",
+        "language": "English",
+        "licence": "© 2026 Money and Pensions Service (link only)",
+        "download_allowed": false,
+        "url": "https://www.moneyhelper.org.uk/en/everyday-money/banking/how-to-choose-the-right-bank-account",
+        "summary": "MoneyHelper's UK guide to choosing a bank account: listing common features like debit cards and bill payments, optional perks such as cashback or interest-free overdrafts, checking eligibility criteria, comparing deals, and alternatives like basic bank accounts or credit union accounts if you're refused one."
+      },
+      {
+        "id": "your-europe-bank-accounts-payments-transfers-eu",
+        "title": "Payments, transfers and cheques in the EU",
+        "publisher": "European Commission (Your Europe)",
+        "type": "Consumer rights guide",
+        "level": ["General public (European Union)"],
+        "length": "Single guide page, 8 sections",
+        "language": "English (also available in other EU languages)",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+        "summary": "Your Europe explains EU rules on payments, transfers and cheques: banks must charge the same rate for euro payments across the EU as for domestic ones, no card surcharges, fraud liability capped at €50, and blocked card amounts that must be released promptly."
+      },
+      {
+        "id": "moneyhelper-how-to-sort-a-problem-with-a-payment",
+        "title": "How to sort a problem with a payment",
+        "publisher": "MoneyHelper",
+        "type": "Guide",
+        "level": ["General public (United Kingdom)"],
+        "length": "Single guide page, 6 sections",
+        "language": "English",
+        "licence": "© 2026 Money and Pensions Service (link only)",
+        "download_allowed": false,
+        "url": "https://www.moneyhelper.org.uk/en/everyday-money/banking/how-to-sort-a-problem-with-a-payment",
+        "summary": "MoneyHelper's UK guide to fixing a payment problem: Section 75 claims on credit card purchases over £100, chargeback protection for debit cards and PayPal within 120 to 180 days, reporting wrong bank transfers within two working days, and escalating complaints to the Financial Ombudsman Service."
+      },
+      {
+        "id": "moneyhelper-section-75-and-chargeback-protection",
+        "title": "Section 75 and chargeback protection",
+        "publisher": "MoneyHelper",
+        "type": "Consumer rights guide",
+        "level": ["General public (United Kingdom)"],
+        "length": "Single guide page, 5 sections",
+        "language": "English",
+        "licence": "© 2026 Money and Pensions Service (link only)",
+        "download_allowed": false,
+        "url": "https://www.moneyhelper.org.uk/en/everyday-money/credit/how-youre-protected-when-you-pay-by-card",
+        "summary": "MoneyHelper explains UK Section 75 protection on credit card purchases of £100 to £30,000, covering goods not supplied or misrepresented, and debit card chargeback claims within 120 days, including how some Buy Now Pay Later purchases and PayPal payments can also qualify."
+      },
+      {
+        "id": "cfpb-what-is-a-remittance-transfer",
+        "title": "What is a remittance transfer and what are my rights?",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Consumer rights guide",
+        "level": ["General public (United States)"],
+        "length": "Single Q&A page",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-remittance-transfer-and-what-are-my-rights-en-1161/",
+        "summary": "The US CFPB explains rights for remittance transfers, electronic transfers over $15 sent abroad through a provider: receiving fee, exchange rate and delivery information upfront, receipts in your language, 30 minutes to cancel after paying, and 180 days to report a mistake for investigation."
+      },
+      {
+        "id": "eiopa-buying-and-using-insurance-and-pensions-products",
+        "title": "Buying and using insurance and pensions products",
+        "publisher": "European Insurance and Occupational Pensions Authority (EIOPA)",
+        "type": "Consumer guide (hub page)",
+        "level": ["General public (European Union)"],
+        "length": "Hub page, 6 sections",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.eiopa.europa.eu/consumers/buying-and-using-insurance-and-pensions-products_en",
+        "summary": "EIOPA's hub guides EU consumers through buying, tracking, claiming and cancelling insurance and pension products: where to purchase them, what documentation to expect, monitoring investment-linked contracts, making a claim, complaining about a provider, and the cooling-off period for cancellation."
+      },
+      {
+        "id": "your-europe-insurance-products-in-the-eu",
+        "title": "Insurance products in the EU",
+        "publisher": "European Commission (Your Europe)",
+        "type": "Consumer rights guide",
+        "level": ["General public (European Union)"],
+        "length": "Single guide page, 2 sections",
+        "language": "English (also available in other EU languages)",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/insurance-products/index_en.htm",
+        "summary": "Your Europe explains EU rules for buying insurance products: the right to shop across borders, receiving a standardised Insurance Product Information Document before signing, knowing whether the seller is an agent or broker, and the right to buy a product without its attached insurance policy."
+      },
+      {
+        "id": "moneyhelper-insurance-hub",
+        "title": "Insurance",
+        "publisher": "MoneyHelper",
+        "type": "Guide hub",
+        "level": ["General public (United Kingdom)"],
+        "length": "Hub page linking to dozens of articles",
+        "language": "English",
+        "licence": "© 2026 Money and Pensions Service (link only)",
+        "download_allowed": false,
+        "url": "https://www.moneyhelper.org.uk/en/everyday-money/insurance",
+        "summary": "MoneyHelper's UK insurance hub covers car, home, travel, health and life insurance, plus income protection and critical illness cover, with articles on choosing a policy, using an insurance broker, comparing deals with price comparison sites, and what to do if a provider rejects your claim."
+      },
+      {
+        "id": "cfpb-what-is-insurance-handout",
+        "title": "What is insurance?",
+        "publisher": "Consumer Financial Protection Bureau (CFPB)",
+        "type": "Educator handout (PDF)",
+        "level": ["High school students", "Educators (United States)"],
+        "length": "3 pages",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://www.consumerfinance.gov/f/documents/cfpb_building_block_activities_what-is-insurance_handout.pdf",
+        "summary": "A CFPB student handout from its Building Blocks financial education series explains what insurance is and how it reduces financial risk: premiums, deductibles, policyholders versus the insured, and common types including health, life, disability, auto and homeowner's or renter's insurance."
+      }
+    ]
   }
 ]
