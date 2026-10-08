@@ -742,6 +742,58 @@
         "download_allowed": false,
         "url": "https://www.accc.gov.au/consumers/consumer-rights-guarantees/repair-replace-refund",
         "summary": "How Australia's consumer guarantees work: products must be safe, durable and as described, and when they aren't you're entitled to a repair, replacement or refund depending on whether the failure is major or minor. Includes an interactive problem solver to check your rights for a specific purchase."
+      },
+      {
+        "id": "clicklaw-consumer-law-essentials",
+        "title": "Consumer Law Essentials",
+        "publisher": "Clicklaw Wikibooks — People's Law School",
+        "type": "Open wikibook (collaborative, plain-language legal publication)",
+        "level": ["General public"],
+        "length": "7 chapters, plus a downloadable PDF and print-on-demand option",
+        "language": "English",
+        "licence": "CC BY-NC-SA 2.5 Canada (images excepted)",
+        "download_allowed": true,
+        "url": "https://wiki.clicklaw.bc.ca/index.php?title=Consumer_Law_Essentials",
+        "summary": "A collaborative, plain-language Clicklaw Wikibook from People's Law School, a British Columbia non-profit, explaining consumer rights when buying goods or hiring services, making contracts, preventing problems, and what to do if something goes wrong, downloadable as a PDF or ordered as a printed book."
+      },
+      {
+        "id": "h2o-consumer-law-casebook",
+        "title": "Consumer Law",
+        "publisher": "H2O (Harvard Library Innovation Lab)",
+        "type": "Open casebook",
+        "level": ["Law students", "University"],
+        "length": "11 chapters",
+        "language": "English",
+        "licence": "CC licensed for sharing and re-use (specific CC variant not stated on this page); excerpts from the Restatements of the Law, Principles of the Law and the Model Penal Code are copyright The American Law Institute and reproduced by permission, outside the Creative Commons licence",
+        "download_allowed": true,
+        "url": "https://opencasebook.org/casebooks/2253-consumer-law/",
+        "summary": "An open, intentionally incomplete casebook on the H2O platform from Harvard's Library Innovation Lab, covering what consumer protection is for, fraud and deception, disclosure rules, unconscionability, product safety, equality and discrimination, and student debt, built from court cases, statutes and scholarly readings."
+      },
+      {
+        "id": "merlot-consumer-law-module",
+        "title": "Consumer Law module",
+        "publisher": "MERLOT",
+        "type": "Online course (module framework)",
+        "level": ["College General Ed", "Second and final year undergraduates"],
+        "length": "Not stated (semester-long module framework, taught Autumn 2009/10)",
+        "language": "English",
+        "licence": "CC BY-NC-SA 3.0 United States",
+        "download_allowed": true,
+        "url": "https://www.merlot.org/merlot/viewMaterial.htm?id=490978",
+        "summary": "A university module framework on consumer protection law by Professor Peter Cartwright of the University of Nottingham, taught in Autumn 2009/10 to second and final-year undergraduates, viewable online or downloadable as a zip file, catalogued on MERLOT, a collaborative educational resource directory."
+      },
+      {
+        "id": "idaho-ag-consumer-manuals",
+        "title": "Consumer Protection Manuals",
+        "publisher": "Idaho Office of the Attorney General",
+        "type": "Manuals and guides (PDF)",
+        "level": ["General public", "Young adults", "Older adults", "Landlords and tenants", "Motor vehicle dealers"],
+        "length": "7 manuals (Consumer Protection Manual, Motor Vehicle Advertising Guidelines, Landlord and Tenant Guidelines, Lemon Law Manual, Older Adults Manual, Nonprofit Board Service, Young Adult Handbook)",
+        "language": "English, with Spanish versions of most manuals",
+        "licence": "Not stated (page footer shows a standard © 2026 Idaho Office of the Attorney General. All Rights Reserved. notice)",
+        "download_allowed": true,
+        "url": "https://www.ag.idaho.gov/consumer-protection/consumer-manuals/",
+        "summary": "Seven manuals from the Idaho Attorney General's office covering consumer protection basics, motor vehicle advertising rules, landlord-tenant rights and responsibilities, the state's Lemon Law, consumer issues for older adults, nonprofit board service, and a handbook for young adults, most available in English and Spanish."
       }
     ]
   },
