@@ -2164,5 +2164,141 @@
         "summary": "ICPEN's 2024 international sweep by 27 consumer protection agencies in 26 countries examined 642 traders' subscription services and found 75.7% used at least one dark pattern, detailing sneaking, interface interference, obstruction, social proof, forced action, urgency and nagging practices that manipulate consumers."
       }
     ]
+  },
+  {
+    "topic": "Students & student rights",
+    "verified": "2026-10-08",
+    "resources": [
+      {
+        "id": "ofs-complaints-about-a-university-or-college",
+        "title": "Complaints about a university or college",
+        "publisher": "Office for Students (OfS)",
+        "type": "Student rights guide",
+        "level": ["General public (England)"],
+        "length": "Single guide page",
+        "language": "English",
+        "licence": "Open Government Licence 3.0",
+        "download_allowed": false,
+        "url": "https://www.officeforstudents.org.uk/for-students/understanding-students/complaints/complaints-about-a-university-or-college/",
+        "summary": "The Office for Students explains the complaint pathway for English higher education students: raise it with your university or college first, then escalate unresolved problems to the Office of the Independent Adjudicator, and how to notify the OfS if a provider is failing its duties."
+      },
+      {
+        "id": "ofs-course-campus-or-university-closures",
+        "title": "Course, campus or university closures",
+        "publisher": "Office for Students (OfS)",
+        "type": "Student rights guide",
+        "level": ["General public (England)"],
+        "length": "Overview page linking to 3 further sections",
+        "language": "English",
+        "licence": "Open Government Licence 3.0",
+        "download_allowed": false,
+        "url": "https://www.officeforstudents.org.uk/for-students/student-rights/course-campus-or-university-closures/",
+        "summary": "The Office for Students explains students' rights in England if their course, campus or university closes, including student protection plans that universities must have, and points to further guidance on what to expect from your institution and support available for affected students."
+      },
+      {
+        "id": "ofs-what-you-can-expect-from-your-university-or-college",
+        "title": "What you can expect from your university or college",
+        "publisher": "Office for Students (OfS)",
+        "type": "Student rights guide",
+        "level": ["General public (England)"],
+        "length": "Single guide page, 3 sections",
+        "language": "English",
+        "licence": "Open Government Licence 3.0",
+        "download_allowed": false,
+        "url": "https://www.officeforstudents.org.uk/for-students/student-rights/course-campus-or-university-closures/what-you-can-expect-from-your-university-or-college/",
+        "summary": "The Office for Students sets out what English higher education students should expect during a closure: reading your university's student protection plan, understanding options like credit transfer and refunds, and knowing you're still entitled to the level of service promised in your student contract."
+      },
+      {
+        "id": "oia-good-practice-framework-handling-complaints-and-academic-appeals",
+        "title": "Good Practice Framework: Handling complaints and academic appeals",
+        "publisher": "Office of the Independent Adjudicator for Higher Education (OIA)",
+        "type": "Complaints manual (guidance)",
+        "level": ["Higher education providers", "Students and advisers (England and Wales)"],
+        "length": "Guidance document, PDF 405KB (also available in Welsh)",
+        "language": "English (also available in Welsh)",
+        "licence": "© 2026 Office of the Independent Adjudicator for Higher Education (link only)",
+        "download_allowed": true,
+        "url": "https://www.oiahe.org.uk/resources-and-publications/good-practice-framework/handling-complaints-and-academic-appeals/",
+        "summary": "The OIA's Good Practice Framework guides higher education providers in England and Wales on handling student complaints and academic appeals fairly, covering timeframes, record-keeping and group complaints; it is also a useful resource for students and those who advise them."
+      },
+      {
+        "id": "gov-uk-student-finance-how-youre-assessed-and-paid",
+        "title": "Student finance: how you're assessed and paid 2026 to 2027",
+        "publisher": "Student Finance England / UK Government",
+        "type": "Finance guide",
+        "level": ["Undergraduate students (England)"],
+        "length": "Single long-form guidance page, 7 sections",
+        "language": "English",
+        "licence": "Open Government Licence v3.0",
+        "download_allowed": false,
+        "url": "https://www.gov.uk/government/publications/student-finance-how-youre-assessed-and-paid/student-finance-how-youre-assessed-and-paid-2026-to-2027",
+        "summary": "Student Finance England explains how undergraduate finance applications are assessed and paid for students in England studying anywhere in the UK: eligibility, household income assessment for Maintenance Loans and Grants, and payment timing, with tuition fees paid directly to the university in instalments."
+      },
+      {
+        "id": "sfe-your-guide-to-student-finance-england",
+        "title": "Your guide to Student Finance England",
+        "publisher": "Student Finance England (SFE)",
+        "type": "Finance guide",
+        "level": ["Undergraduate students (England)"],
+        "length": "Single guide page",
+        "language": "English",
+        "licence": "Open Government Licence v3.0",
+        "download_allowed": false,
+        "url": "https://studentfinance.campaign.gov.uk/understanding-sfe/",
+        "summary": "Student Finance England's plain-language guide for students in England covers Tuition Fee Loans, Maintenance Loans, Disabled Students' Allowance and other grants, how household income is assessed, the application journey from applying to repayment, and what you'll need to apply for student finance."
+      },
+      {
+        "id": "ed-gov-eligible-student-guide-to-ferpa",
+        "title": "An Eligible Student Guide to the Family Educational Rights and Privacy Act (FERPA)",
+        "publisher": "US Department of Education (Student Privacy Policy Office)",
+        "type": "Privacy guide (PDF)",
+        "level": ["Eligible students, 18+ or in postsecondary education (United States)"],
+        "length": "Single-page guide",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://studentprivacy.ed.gov/resources/eligible-student-guide-family-educational-rights-and-privacy-act-ferpa",
+        "summary": "The US Department of Education explains FERPA rights that transfer to students once they turn 18 or enter postsecondary education: the right to inspect and review education records within 45 days, to request corrections, and to control third-party disclosure of personally identifiable information."
+      },
+      {
+        "id": "ed-gov-eligible-student-guide-to-ferpa-spanish",
+        "title": "An Eligible Student Guide to the Family Educational Rights and Privacy Act (FERPA) (En Español)",
+        "publisher": "US Department of Education (Student Privacy Policy Office)",
+        "type": "Privacy guide (PDF, Spanish)",
+        "level": ["Eligible students, 18+ or in postsecondary education (United States)"],
+        "length": "Single-page guide",
+        "language": "Spanish",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://studentprivacy.ed.gov/resources/eligible-student-guide-family-educational-rights-and-privacy-act-ferpa-en-espanol",
+        "summary": "The US Department of Education's Spanish-language translation of its FERPA guide for eligible students: explaining that rights transfer from parents when a student turns 18 or enters postsecondary education, covering access to records, corrections, and consent before third parties see personal education information."
+      },
+      {
+        "id": "ed-gov-disability-discrimination-academic-adjustments-postsecondary-students",
+        "title": "Disability Discrimination: Academic Adjustments for Postsecondary Students",
+        "publisher": "US Department of Education (Office for Civil Rights)",
+        "type": "Disability rights guide",
+        "level": ["Students with disabilities in postsecondary education (United States)"],
+        "length": "Guidance hub page with linked policy documents",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.ed.gov/laws-and-policy/civil-rights-laws/disability-discrimination/disability-discrimination-key-issues/disability-discrimination-academic-adjustments-postsecondary-students",
+        "summary": "The US Department of Education's Office for Civil Rights explains academic adjustments available to postsecondary students with disabilities: modifications like priority registration, reduced course load, note takers and extended testing time, how to request them, and limits on changes schools must make."
+      },
+      {
+        "id": "ed-gov-know-your-rights-pregnant-or-parenting",
+        "title": "Know Your Rights: Pregnant or Parenting? Title IX Protects You From Discrimination At School",
+        "publisher": "US Department of Education (Office for Civil Rights)",
+        "type": "Civil rights guide",
+        "level": ["Pregnant or parenting students (United States)"],
+        "length": "Single guide page",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://www.ed.gov/laws-and-policy/civil-rights-laws/title-ix-and-sex-discrimination/title-ix-key-issues/know-your-rights-pregnant-or-parenting-title-ix-protects-you-discrimination-school",
+        "summary": "The US Department of Education explains Title IX protections for pregnant or parenting students at federally funded schools: the right to stay in classes and activities, excused absences while a doctor says necessary, protection from harassment, and the right to file a complaint."
+      }
+    ]
   }
 ]
