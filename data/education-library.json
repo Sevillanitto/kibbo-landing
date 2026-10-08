@@ -2,6 +2,11 @@
   {
     "topic": "Personal finance & financial literacy",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Finance & Banking", "url": "/resources/financial-banking" },
+      { "label": "Loan APR Calculator", "url": "/financial-banking/calculators/loan-apr-calculator" },
+      { "label": "Credit Card Interest Calculator", "url": "/financial-banking/calculators/credit-card-interest-calculator" }
+    ],
     "resources": [
       {
         "id": "cfpb-your-money-your-goals",
@@ -424,6 +429,12 @@
   {
     "topic": "Scams & fraud",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "The AI Scam Playbook", "url": "/investigations/ai-scam-playbook-2026" },
+      { "label": "Crypto & Fintech", "url": "/resources/crypto-fintech" },
+      { "label": "AI Phishing & Scam Detector", "url": "/phishing-detector" },
+      { "label": "Crypto Scam Red Flags Checklist", "url": "/checklists/crypto-scam-red-flags-checklist" }
+    ],
     "resources": [
       {
         "id": "sec-howeytrade-classroom-activity",
@@ -664,6 +675,12 @@
   {
     "topic": "Consumer rights & law basics",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Legal & Contracts", "url": "/resources/legal-contracts" },
+      { "label": "Rights Checker", "url": "/rights-checker" },
+      { "label": "Consumer Rights by Country", "url": "/consumer-rights-by-country" },
+      { "label": "Can I Cancel a Contract I Signed Yesterday?", "url": "/questions/legal-contracts/can-i-cancel-contract-i-signed-yesterday" }
+    ],
     "resources": [
       {
         "id": "cornell-lii-consumer-protection-laws",
@@ -839,6 +856,12 @@
   {
     "topic": "Privacy & online safety",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Privacy & Data", "url": "/resources/privacy-data" },
+      { "label": "Privacy Rights Request Generator", "url": "/generate/privacy-rights-request" },
+      { "label": "Privacy Audit Checklist", "url": "/checklists/privacy-audit-checklist" },
+      { "label": "Data Breach Response Checklist", "url": "/checklists/data-breach-response-checklist" }
+    ],
     "resources": [
       {
         "id": "eff-surveillance-self-defense",
@@ -1027,6 +1050,12 @@
   {
     "topic": "Healthcare costs & insurance",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "What Does It Really Cost to Get Sick?", "url": "/investigations/healthcare-cost-comparison" },
+      { "label": "Kibbo Healthcare Cost Dataset", "url": "/datasets#kibbo-healthcare-cost-dataset" },
+      { "label": "Healthcare Costs Exercise Sheet", "url": "/education/exercises/healthcare-costs" },
+      { "label": "Healthcare & Medical", "url": "/resources/healthcare-medical" }
+    ],
     "resources": [
       {
         "id": "kff-health-policy-101",
@@ -1228,6 +1257,12 @@
   {
     "topic": "Housing & renting",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Housing & Rentals", "url": "/resources/housing-rentals" },
+      { "label": "Rent Increase Calculator", "url": "/housing-rentals/calculators/rent-increase-calculator" },
+      { "label": "Illegal Eviction / Unresolved Repairs Kit", "url": "/kits/illegal-eviction-unresolved-repairs" },
+      { "label": "Unreturned Rental Deposit Kit", "url": "/kits/unreturned-rental-deposit" }
+    ],
     "resources": [
       {
         "id": "uk-renters-rights-act-overview-tenants",
@@ -1364,6 +1399,11 @@
   {
     "topic": "Credit, debt & borrowing",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Finance & Banking", "url": "/resources/financial-banking" },
+      { "label": "Debt Collection Dispute Letter Generator", "url": "/generate/debt-collection-dispute-letter" },
+      { "label": "Credit Report Dispute Letter (FCRA)", "url": "/generate/fcra-credit-dispute" }
+    ],
     "resources": [
       {
         "id": "ftc-free-credit-reports",
@@ -1604,6 +1644,12 @@
   {
     "topic": "Work & employment rights",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "Employment", "url": "/resources/employment" },
+      { "label": "Before Signing an Employment Contract Checklist", "url": "/checklists/before-signing-employment-contract-checklist" },
+      { "label": "Unpaid Wages / Wrongful Deduction Kit", "url": "/kits/unpaid-wages-wrongful-deduction" },
+      { "label": "Notice Period Calculator", "url": "/employment/calculators/notice-period-calculator" }
+    ],
     "resources": [
       {
         "id": "dol-youthrules-young-worker-toolkit",
@@ -1792,6 +1838,12 @@
   {
     "topic": "Travel & transport",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "US Airline Ranking 2026 H1", "url": "/investigations/us-airline-ranking-2026-h1" },
+      { "label": "Flight Delay Compensation Calculator", "url": "/flights-travel/calculators/flight-delay-compensation-calculator" },
+      { "label": "US Airline Ranking Exercise Sheet", "url": "/education/exercises/us-airline-ranking" },
+      { "label": "US Airline Reliability Dataset", "url": "/datasets#us-airline-ranking-dataset" }
+    ],
     "resources": [
       {
         "id": "dot-airline-refunds",
@@ -2019,6 +2071,12 @@
   {
     "topic": "Shopping, subscriptions & advertising",
     "verified": "2026-10-02",
+    "related": [
+      { "label": "The Streaming Price Machine", "url": "/investigations/streaming-price-machine" },
+      { "label": "Streaming Pricing Dataset", "url": "/datasets#kibbo-streaming-pricing-dataset" },
+      { "label": "Streaming Price Machine Exercise Sheet", "url": "/education/exercises/streaming-prices" },
+      { "label": "Real Discount Calculator", "url": "/shopping-ecommerce/calculators/real-discount-calculator" }
+    ],
     "resources": [
       {
         "id": "ftc-bringing-dark-patterns-to-light",
@@ -2220,6 +2278,11 @@
   {
     "topic": "Students & student rights",
     "verified": "2026-10-08",
+    "related": [
+      { "label": "Training & Education", "url": "/resources/training-education" },
+      { "label": "Education Scam Checklist", "url": "/checklists/education-scam-checklist" },
+      { "label": "Education Loan Safety Checklist", "url": "/checklists/education-loan-safety-checklist" }
+    ],
     "resources": [
       {
         "id": "ofs-complaints-about-a-university-or-college",
@@ -2356,6 +2419,12 @@
   {
     "topic": "Banking, payments & insurance",
     "verified": "2026-10-08",
+    "related": [
+      { "label": "Finance & Banking", "url": "/resources/financial-banking" },
+      { "label": "Insurance & Claims", "url": "/resources/insurance-claims" },
+      { "label": "Unauthorized Transaction / Card Fraud Kit", "url": "/kits/unauthorized-transaction-card-fraud" },
+      { "label": "Denied or Delayed Insurance Claim Kit", "url": "/kits/denied-delayed-insurance-claim" }
+    ],
     "resources": [
       {
         "id": "cfpb-know-your-overdraft-options",
@@ -2531,6 +2600,11 @@
   {
     "topic": "Energy & sustainable consumption",
     "verified": "2026-10-08",
+    "related": [
+      { "label": "Telecoms & Utilities", "url": "/resources/telecoms-utilities" },
+      { "label": "Utility Bill Audit Checklist", "url": "/checklists/utility-bill-audit-checklist" },
+      { "label": "Energy Tariff Comparison Checklist", "url": "/checklists/energy-tariff-comparison-checklist" }
+    ],
     "resources": [
       {
         "id": "unep-here-and-now-education-for-sustainable-consumption",

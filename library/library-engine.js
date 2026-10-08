@@ -109,6 +109,10 @@
       head.appendChild(el('span', 'pillar-category-count', t.resources.length + (t.resources.length === 1 ? ' resource' : ' resources')));
       section.appendChild(head);
 
+      if (t.related && t.related.length) {
+        section.appendChild(buildRelatedLine(t.related));
+      }
+
       var grid = el('div', 'lib-grid');
       t.resources.forEach(function (r) { grid.appendChild(buildCard(r, t.verified)); });
       section.appendChild(grid);
@@ -129,6 +133,18 @@
         details.open = false;
       });
     });
+  }
+
+  function buildRelatedLine(related) {
+    var p = el('p', 'lib-related-line');
+    p.appendChild(document.createTextNode('Related on Kibbo: '));
+    related.forEach(function (rel, i) {
+      if (i > 0) p.appendChild(document.createTextNode(', '));
+      var a = el('a', null, rel.label);
+      a.href = rel.url;
+      p.appendChild(a);
+    });
+    return p;
   }
 
   function buildCard(r, topicVerified) {
