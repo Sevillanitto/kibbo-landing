@@ -1241,6 +1241,71 @@
         "download_allowed": false,
         "url": "https://nlihc.org/oor",
         "summary": "Calculates the 'Housing Wage' — the hourly wage a full-time worker needs to rent a modest home without spending more than 30% of income on rent — for every US state and county. Strong material for data lessons, and for debate: the report is produced by an advocacy group, and critics argue the fixed 30% benchmark overstates how unaffordable housing is."
+      },
+      {
+        "id": "tyla-tenants-rights-handbook",
+        "title": "Tenants' Rights Handbook",
+        "publisher": "Texas Young Lawyers Association and the State Bar of Texas",
+        "type": "Handbook",
+        "level": ["General Public", "Law Students", "Attorneys"],
+        "length": "43 pages (2019 edition)",
+        "language": "English",
+        "licence": "May be republished with attribution to the Texas Young Lawyers Association (per tyla.org); the PDF itself carries no further licence terms, just copyright years 1985-2019",
+        "download_allowed": true,
+        "url": "https://tyla.org/resource/tenants-rights-handbook/",
+        "summary": "A 43-page handbook for Texas residential tenants, produced by the Texas Young Lawyers Association and the State Bar of Texas, explaining common landlord-tenant legal issues under the Texas Property Code, intended as general guidance rather than a substitute for legal advice."
+      },
+      {
+        "id": "tyla-tenants-rights-handbook-spanish",
+        "title": "Tenants' Rights Handbook (Spanish edition)",
+        "publisher": "Texas Young Lawyers Association and the State Bar of Texas",
+        "type": "Handbook",
+        "level": ["General Public", "Law Students", "Attorneys"],
+        "length": "47 pages (2019 edition)",
+        "language": "Spanish",
+        "licence": "May be republished with attribution to the Texas Young Lawyers Association (per tyla.org); the PDF itself carries no further licence terms, just copyright years 1985-2019",
+        "download_allowed": true,
+        "url": "https://tyla.org/resource/tenants-rights-handbook-spanish/",
+        "summary": "The Spanish-language edition of the Texas Young Lawyers Association and State Bar of Texas handbook for Texas residential tenants, covering the same landlord-tenant legal issues under the Texas Property Code as the English edition, produced as a public service for Spanish-speaking tenants."
+      },
+      {
+        "id": "legal-aid-western-ohio-housing-selfhelp",
+        "title": "Housing self-help guides (Know Your Rights series)",
+        "publisher": "Legal Aid of Western Ohio, Inc.",
+        "type": "Guides (brochures, flyers and self-help forms)",
+        "level": ["General public (Ohio tenants)"],
+        "length": "~20 materials: rent escrow guides, security deposit guides, a Know Your Rights booklet plus 11 flyers, and 3 interactive self-help forms",
+        "language": "English",
+        "licence": "Not stated (page footer shows © 2026 Legal Aid of Western Ohio, Inc.)",
+        "download_allowed": true,
+        "url": "https://www.legalaidline.org/selfhelp/housing/",
+        "summary": "Downloadable Ohio tenant self-help materials from Legal Aid of Western Ohio: rent escrow brochures, a security deposit packet, a Know Your Rights booklet and flyers on repairs, utility shut-offs and lease signing, plus online tools to prepare an eviction answer or a poverty affidavit."
+      },
+      {
+        "id": "pa-legal-aid-network-tenants-rights",
+        "title": "Tenants' Rights",
+        "publisher": "Pennsylvania Legal Aid Network, via PALawHelp.org (a project of the Pennsylvania Legal Aid Network and the Legal Services Corporation)",
+        "type": "Handbooks and guides (resource directory)",
+        "level": ["General public (Pennsylvania tenants)"],
+        "length": "91 resources across legal information, notice requirements, hearing/appeal procedure, self-help forms, and county-specific materials",
+        "language": "English (other languages filterable on site)",
+        "licence": "Not stated (page footer shows a general © Scale Justice copyright notice for the site platform)",
+        "download_allowed": false,
+        "url": "https://www.palawhelp.org/issues/housing-and-shelter/tenants-rights",
+        "summary": "A Pennsylvania-specific directory of 91 tenants' rights resources from PALawHelp.org, a project of the Pennsylvania Legal Aid Network and the Legal Services Corporation, covering legal information, notice requirements, hearing and appeal procedures, self-help forms, and county-specific guidance across the state."
+      },
+      {
+        "id": "injuve-juventud-con-derechos-2025",
+        "title": "Juventud con derechos: guía de los derechos de las inquilinas",
+        "publisher": "Ministerio de Juventud e Infancia (Gobierno de España), a través del Instituto de la Juventud (INJUVE)",
+        "type": "Guide",
+        "level": ["Young people (tenants)"],
+        "length": "45 pages",
+        "language": "Spanish",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://cpage.mpr.gob.es/publicacion/juventud-con-derechos-2025-160250012-0000/",
+        "summary": "A free 2025 Spanish-language guide on tenants' rights for young people, published by Spain's Ministry of Youth and Childhood through the Youth Institute (INJUVE). Despite its general 'Youth with Rights' title, this edition is specifically about housing law and renters' rights, not a broader guide."
       }
     ]
   },
