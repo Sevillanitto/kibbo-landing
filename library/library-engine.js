@@ -117,12 +117,15 @@
       t.resources.forEach(function (r) { grid.appendChild(buildCard(r, t.verified)); });
       section.appendChild(grid);
 
+      section.appendChild(buildSubmitLine(slugify(t.topic).replace('lib-topic-', '')));
+
       main.appendChild(section);
       sections.push(section);
     });
 
     layout.appendChild(main);
     mount.appendChild(layout);
+    mount.appendChild(buildSubmitLine(null));
 
     // ---- Filter interaction (same pattern as /education's section filter) ----
     buttons.forEach(function (b) {
@@ -133,6 +136,15 @@
         details.open = false;
       });
     });
+  }
+
+  function buildSubmitLine(categorySlug) {
+    var p = el('p', 'lib-submit-line');
+    p.appendChild(document.createTextNode('Know a resource that belongs here? '));
+    var a = el('a', null, 'Submit it →');
+    a.href = categorySlug ? '/library/submit?category=' + encodeURIComponent(categorySlug) : '/library/submit';
+    p.appendChild(a);
+    return p;
   }
 
   function buildRelatedLine(related) {
