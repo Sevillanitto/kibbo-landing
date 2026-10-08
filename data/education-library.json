@@ -8,10 +8,7 @@
         "title": "Your Money, Your Goals: A Financial Empowerment Toolkit",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Toolkit",
-        "level": [
-          "General public",
-          "Educators and trainers"
-        ],
+        "level": ["General public", "Educators and trainers"],
         "length": "241 pages (2020 edition), plus individual tools and handouts",
         "language": "English (also available in Spanish)",
         "licence": "US federal government work (public domain)",
@@ -24,11 +21,7 @@
         "title": "Youth Financial Education Classroom Activities",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Lesson activities",
-        "level": [
-          "Elementary",
-          "Middle school",
-          "High school"
-        ],
+        "level": ["Elementary", "Middle school", "High school"],
         "length": "135 activities, each designed for a single class period",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -41,10 +34,7 @@
         "title": "Money Smart for Young Adults",
         "publisher": "Federal Deposit Insurance Corporation (FDIC)",
         "type": "Curriculum",
-        "level": [
-          "High school",
-          "Young adults (16–24)"
-        ],
+        "level": ["High school", "Young adults (16–24)"],
         "length": "12 modules, each with instructor guide, participant guide and slides",
         "language": "English",
         "licence": "US federal government work; the FDIC describes Money Smart materials as non-copyrighted and free",
@@ -57,13 +47,7 @@
         "title": "Money Smart (full programme for all ages)",
         "publisher": "Federal Deposit Insurance Corporation (FDIC)",
         "type": "Curriculum collection",
-        "level": [
-          "Elementary",
-          "Middle school",
-          "High school",
-          "Adults",
-          "Older adults"
-        ],
+        "level": ["Elementary", "Middle school", "High school", "Adults", "Older adults"],
         "length": "Several separate curricula plus 14 interactive games",
         "language": "English (some materials also in Spanish and other languages)",
         "licence": "US federal government work; the FDIC describes Money Smart materials as non-copyrighted and free",
@@ -76,11 +60,7 @@
         "title": "Saving and Investing for Students",
         "publisher": "U.S. Securities and Exchange Commission (SEC) — Investor.gov",
         "type": "Guide",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Short brochure (about 30 pages)",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -93,9 +73,7 @@
         "title": "Making Personal Finance Decisions",
         "publisher": "Federal Reserve Education",
         "type": "Curriculum",
-        "level": [
-          "High school"
-        ],
+        "level": ["High school"],
         "length": "20 lessons covering 10 personal finance concepts",
         "language": "English",
         "licence": "Free to use; published by the Federal Reserve System (not a federal-agency public-domain work — link only)",
@@ -108,10 +86,7 @@
         "title": "It's Your Paycheck",
         "publisher": "Federal Reserve Education",
         "type": "Curriculum",
-        "level": [
-          "Middle school",
-          "High school"
-        ],
+        "level": ["Middle school", "High school"],
         "length": "9 lessons with handouts and slides",
         "language": "English",
         "licence": "Free to use; published by the Federal Reserve System (link only)",
@@ -124,10 +99,7 @@
         "title": "Next Gen Personal Finance (NGPF) curriculum",
         "publisher": "Next Gen Personal Finance (non-profit)",
         "type": "Curriculum",
-        "level": [
-          "Middle school",
-          "High school"
-        ],
+        "level": ["Middle school", "High school"],
         "length": "Full semester course, middle school course, plus hundreds of standalone activities and case studies",
         "language": "English",
         "licence": "Free to use; a free verified teacher account is needed for answer keys and assessments (link only)",
@@ -140,10 +112,7 @@
         "title": "Khan Academy Financial Literacy course",
         "publisher": "Khan Academy (non-profit), developed with funding from Capital One",
         "type": "Online course",
-        "level": [
-          "High school",
-          "General public"
-        ],
+        "level": ["High school", "General public"],
         "length": "Self-paced course with 16 units, videos, articles and exercises",
         "language": "English",
         "licence": "Free to use (link only)",
@@ -156,10 +125,7 @@
         "title": "Personal Finance (updated edition)",
         "publisher": "LibreTexts — Coastline College (Guy Buker, Jerrie Muir and Erin Thomas), building on the original by Rachel S. Siegel and Carol Yacht",
         "type": "Open textbook",
-        "level": [
-          "University",
-          "Community college"
-        ],
+        "level": ["University", "Community college"],
         "length": "Full textbook",
         "language": "English",
         "licence": "CC BY-NC-SA (link only)",
@@ -172,10 +138,7 @@
         "title": "Personal Finance – Your Money, Your Life",
         "publisher": "Kevin Wang-Nava, Foothill College (Pressbooks)",
         "type": "Open textbook",
-        "level": [
-          "University",
-          "Community college"
-        ],
+        "level": ["University", "Community college"],
         "length": "Full textbook",
         "language": "English",
         "licence": "CC BY-NC-ND 4.0 (the book's own licence footer; link only — a different page on the same site describes it as CC BY 4.0, but the footer governs)",
@@ -188,9 +151,7 @@
         "title": "Principles of Finance",
         "publisher": "OpenStax (Rice University) — Julie Dahlquist and Rainford Knight, senior contributing authors",
         "type": "Open textbook",
-        "level": [
-          "University"
-        ],
+        "level": ["University"],
         "length": "Full textbook, 20 chapters, with Excel data exercises",
         "language": "English",
         "licence": "CC BY-NC-SA 4.0 (link only)",
@@ -203,10 +164,7 @@
         "title": "Managing my money",
         "publisher": "The Open University (OpenLearn)",
         "type": "Free course",
-        "level": [
-          "Level 1: Introductory",
-          "General public"
-        ],
+        "level": ["Level 1: Introductory", "General public"],
         "length": "24 hours of study over an 8-week course",
         "language": "English",
         "licence": "CC BY-NC-SA (The Open University's standard OpenLearn licence; third-party materials within the course are excluded)",
@@ -219,10 +177,7 @@
         "title": "You and your money",
         "publisher": "The Open University (OpenLearn)",
         "type": "Free course",
-        "level": [
-          "Level 1: Introductory",
-          "General public"
-        ],
+        "level": ["Level 1: Introductory", "General public"],
         "length": "12 hours of study",
         "language": "English",
         "licence": "CC BY-NC-SA (The Open University's standard OpenLearn licence; third-party materials within the course are excluded)",
@@ -235,10 +190,7 @@
         "title": "Your Money, Your Goals Toolkit",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Toolkit",
-        "level": [
-          "Practitioners and educators",
-          "General public"
-        ],
+        "level": ["Practitioners and educators", "General public"],
         "length": "43 tools and handouts across 10 topic categories",
         "language": "English",
         "licence": "Not stated",
@@ -251,10 +203,7 @@
         "title": "Your Money, Your Goals: Booklets",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Booklets",
-        "level": [
-          "General public",
-          "Educators and practitioners"
-        ],
+        "level": ["General public", "Educators and practitioners"],
         "length": "4 booklets",
         "language": "English",
         "licence": "Not stated",
@@ -267,14 +216,7 @@
         "title": "Adult Financial Education Tools & Resources",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Resource collection (handouts, worksheets, webinars, guides, booklets)",
-        "level": [
-          "General adults",
-          "Older adults",
-          "Young adults",
-          "Servicemembers and veterans",
-          "People with disabilities",
-          "Financial educators and practitioners"
-        ],
+        "level": ["General adults", "Older adults", "Young adults", "Servicemembers and veterans", "People with disabilities", "Financial educators and practitioners"],
         "length": "150+ resources across 13 topic areas and 6 audience categories; handouts typically 1-2 pages, booklets up to 20+ pages",
         "language": "English",
         "licence": "Not stated",
@@ -287,9 +229,7 @@
         "title": "Money Smart for Adults",
         "publisher": "Federal Deposit Insurance Corporation (FDIC)",
         "type": "Curriculum",
-        "level": [
-          "Adults"
-        ],
+        "level": ["Adults"],
         "length": "14 modules, approximately 32 hours total (1 hour 25 minutes to 3 hours 50 minutes per module)",
         "language": "English, Spanish, Chinese, Korean, Vietnamese, Braille and large print",
         "licence": "Not stated",
@@ -302,12 +242,7 @@
         "title": "Money Smart for Young People",
         "publisher": "Federal Deposit Insurance Corporation (FDIC)",
         "type": "Curriculum",
-        "level": [
-          "PreK-2 (ages 4-7)",
-          "Grades 3-5 (ages 8-10)",
-          "Grades 6-8 (ages 11-13)",
-          "Grades 9-12 (ages 14-18)"
-        ],
+        "level": ["PreK-2 (ages 4-7)", "Grades 3-5 (ages 8-10)", "Grades 6-8 (ages 11-13)", "Grades 9-12 (ages 14-18)"],
         "length": "6-22 lessons per grade band (PreK-2: 6; grades 3-5: 8; grades 6-8: 12; grades 9-12: 22)",
         "language": "English and Spanish",
         "licence": "Not stated",
@@ -320,10 +255,7 @@
         "title": "Money Smart for Older Adults",
         "publisher": "Federal Deposit Insurance Corporation (FDIC) and Consumer Financial Protection Bureau (CFPB)",
         "type": "Curriculum",
-        "level": [
-          "Older adults",
-          "Caregivers"
-        ],
+        "level": ["Older adults", "Caregivers"],
         "length": "10 topic modules",
         "language": "English and Spanish",
         "licence": "Not stated",
@@ -336,11 +268,7 @@
         "title": "Money Manual, Student Money Manual and teacher packs",
         "publisher": "The Money Charity",
         "type": "Guides and teacher resource packs",
-        "level": [
-          "General adults",
-          "University-bound and current university students",
-          "Teachers and schools"
-        ],
+        "level": ["General adults", "University-bound and current university students", "Teachers and schools"],
         "length": "Not stated",
         "language": "English",
         "licence": "Not stated (page footer carries a standard © 2026 The Money Charity copyright notice)",
@@ -353,9 +281,7 @@
         "title": "Financial Basics Workshop",
         "publisher": "Financial Consumer Agency of Canada (FCAC)",
         "type": "Workshop (downloadable materials and e-learning video series)",
-        "level": [
-          "Young adults in post-secondary institutions, workplaces or community organisations"
-        ],
+        "level": ["Young adults in post-secondary institutions, workplaces or community organisations"],
         "length": "Not stated (6 topic areas; separate self-paced e-learning video series)",
         "language": "English and French",
         "licence": "Not stated",
@@ -368,9 +294,7 @@
         "title": "Money Matters: Financial Literacy Workbooks",
         "publisher": "ABC Life Literacy Canada",
         "type": "Workbooks and workshop programme",
-        "level": [
-          "Adult learners"
-        ],
+        "level": ["Adult learners"],
         "length": "Not stated",
         "language": "English and French",
         "licence": "Not stated (page footer carries a standard © ABC Life Literacy Canada 2026 copyright notice)",
@@ -383,10 +307,7 @@
         "title": "MoneySmart Publications & Resources",
         "publisher": "Australian Securities and Investments Commission (ASIC) — Moneysmart",
         "type": "Publications (factsheets) and translated resources",
-        "level": [
-          "General public",
-          "Newly arrived migrants (translated resources)"
-        ],
+        "level": ["General public", "Newly arrived migrants (translated resources)"],
         "length": "Not stated (categorised list of downloadable factsheets; no total count given)",
         "language": "English, plus separate resources translated into 10 languages",
         "licence": "Not stated",
@@ -399,14 +320,7 @@
         "title": "MoneySmart Lesson Plans",
         "publisher": "Australian Securities and Investments Commission (ASIC) — Moneysmart",
         "type": "Lesson plans",
-        "level": [
-          "Lower Primary",
-          "Middle Primary",
-          "Upper Primary",
-          "Secondary",
-          "Upper Secondary",
-          "Senior Secondary"
-        ],
+        "level": ["Lower Primary", "Middle Primary", "Upper Primary", "Secondary", "Upper Secondary", "Senior Secondary"],
         "length": "10 lesson plans across year levels",
         "language": "English",
         "licence": "Not stated",
@@ -419,9 +333,7 @@
         "title": "Tax, Super + You: Resource Library",
         "publisher": "Australian Taxation Office (ATO)",
         "type": "Resource library (activities, case studies, calculators, videos, worksheets)",
-        "level": [
-          "Year 7 to Senior Secondary (Stage 5)"
-        ],
+        "level": ["Year 7 to Senior Secondary (Stage 5)"],
         "length": "1,361 resources across 114 pages",
         "language": "Not stated",
         "licence": "Not stated (page footer carries a standard © Commonwealth of Australia notice)",
@@ -434,12 +346,7 @@
         "title": "Education resources (Money Anthology)",
         "publisher": "Bank of England",
         "type": "Teaching resources (lesson plans, interactive tools, videos, podcast)",
-        "level": [
-          "Ages 5-11",
-          "Ages 11-16",
-          "Ages 14-16",
-          "Age 16+"
-        ],
+        "level": ["Ages 5-11", "Ages 11-16", "Ages 14-16", "Age 16+"],
         "length": "Not stated (approximately a dozen resource collections)",
         "language": "English",
         "licence": "Not stated (page footer carries a standard ©2026 Bank of England notice)",
@@ -452,14 +359,7 @@
         "title": "Money and Me and Lessons from the Financial Crisis",
         "publisher": "Bank of England",
         "type": "Lesson programmes and home-learning resources",
-        "level": [
-          "Ages 5-11",
-          "Ages 8-14",
-          "Ages 11-16",
-          "Ages 14-18",
-          "Ages 16-19",
-          "Adults"
-        ],
+        "level": ["Ages 5-11", "Ages 8-14", "Ages 11-16", "Ages 14-18", "Ages 16-19", "Adults"],
         "length": "'Money and Me': 12 lessons; 'Lessons from the Financial Crisis': 6 lessons; EconoME: 4 lessons; plus videos, games and worksheets",
         "language": "English",
         "licence": "Not stated (page footer carries a standard ©2026 Bank of England notice)",
@@ -472,9 +372,7 @@
         "title": "Your Money Matters: financial education textbook",
         "publisher": "MoneySavingExpert",
         "type": "Curriculum-mapped textbook",
-        "level": [
-          "Secondary school students (ages 11-16+)"
-        ],
+        "level": ["Secondary school students (ages 11-16+)"],
         "length": "Not stated (includes interactive activities and questions; 4 UK regional editions)",
         "language": "English (versions for England, Northern Ireland, Scotland and Wales)",
         "licence": "Not stated",
@@ -487,12 +385,7 @@
         "title": "Resource Hub (LifeSavers, Milo's Money and more)",
         "publisher": "Just Finance Foundation",
         "type": "School and family resource hub",
-        "level": [
-          "Primary school students",
-          "Teachers",
-          "Parents",
-          "Community leaders"
-        ],
+        "level": ["Primary school students", "Teachers", "Parents", "Community leaders"],
         "length": "Not stated",
         "language": "Not stated",
         "licence": "Not stated",
@@ -511,11 +404,7 @@
         "title": "HoweyTrade Investment Program Classroom Activity",
         "publisher": "U.S. Securities and Exchange Commission (SEC) — Investor.gov",
         "type": "Lesson activity",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "One class period or more: mock scam video, reveal video, presentation, teacher's guide, worksheet and quiz",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -528,11 +417,7 @@
         "title": "Internet Crime Report 2025",
         "publisher": "FBI Internet Crime Complaint Center (IC3)",
         "type": "Annual report (data)",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Full annual report",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -545,11 +430,7 @@
         "title": "Consumer Sentinel Network Data Book (2024) and Explore Data dashboards",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Annual report and interactive data",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Annual data book plus interactive dashboards updated quarterly",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -562,11 +443,7 @@
         "title": "Pass It On",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Campaign materials (fact sheets, presentations, activity sheets)",
-        "level": [
-          "General public",
-          "Older adults",
-          "Community educators"
-        ],
+        "level": ["General public", "Older adults", "Community educators"],
         "length": "Short fact sheets, bookmarks, presentations and activity sheets",
         "language": "English and Spanish",
         "licence": "US federal government work; the FTC states all its information is in the public domain",
@@ -579,10 +456,7 @@
         "title": "FTC free consumer publications",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Publication collection",
-        "level": [
-          "General public",
-          "Educators"
-        ],
+        "level": ["General public", "Educators"],
         "length": "Dozens of leaflets and booklets on scams, privacy and credit",
         "language": "English, Spanish and other languages",
         "licence": "US federal government work; the FTC states its consumer education materials are free and in the public domain",
@@ -595,10 +469,7 @@
         "title": "The Little Book of Fraud",
         "publisher": "Metropolitan Police Service (London, UK)",
         "type": "Guide",
-        "level": [
-          "General public",
-          "High school"
-        ],
+        "level": ["General public", "High school"],
         "length": "Short booklet",
         "language": "English",
         "licence": "Crown copyright (UK) — link only",
@@ -611,11 +482,7 @@
         "title": "The Little Book of Cyber Scams 2.0",
         "publisher": "Metropolitan Police Service Cyber Crime Unit (London, UK)",
         "type": "Guide",
-        "level": [
-          "General public",
-          "High school",
-          "Small businesses"
-        ],
+        "level": ["General public", "High school", "Small businesses"],
         "length": "About 32 pages",
         "language": "English",
         "licence": "Crown copyright (UK) — link only",
@@ -628,10 +495,7 @@
         "title": "The Little Book of Scams",
         "publisher": "Australian Competition and Consumer Commission (ACCC) — National Anti-Scam Centre",
         "type": "Guide",
-        "level": [
-          "General public",
-          "High school"
-        ],
+        "level": ["General public", "High school"],
         "length": "Short booklet, with an Easy Read version",
         "language": "English, plus translated versions",
         "licence": "Commonwealth of Australia copyright — link only",
@@ -650,11 +514,7 @@
         "title": "Consumer protection laws (Wex legal encyclopedia)",
         "publisher": "Legal Information Institute, Cornell Law School",
         "type": "Reference entry",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Short encyclopedia entry with links to related terms",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -667,10 +527,7 @@
         "title": "Business Law I Essentials (2nd edition)",
         "publisher": "OpenStax (Rice University)",
         "type": "Open textbook",
-        "level": [
-          "University",
-          "Community college"
-        ],
+        "level": ["University", "Community college"],
         "length": "Full textbook with end-of-chapter questions and answer key",
         "language": "English",
         "licence": "CC BY-NC-SA 4.0 (link only)",
@@ -683,9 +540,7 @@
         "title": "Consumer Rights and Algorithms",
         "publisher": "Gregory M. Dickinson — arXiv (open-access preprint, Computers and Society)",
         "type": "Academic article",
-        "level": [
-          "University"
-        ],
+        "level": ["University"],
         "length": "Journal-length article",
         "language": "English",
         "licence": "CC BY 4.0 (link only)",
@@ -698,10 +553,7 @@
         "title": "Consumer Rights Act 2015 — Explanatory Notes",
         "publisher": "UK Government — legislation.gov.uk",
         "type": "Official guidance on legislation",
-        "level": [
-          "University",
-          "General public"
-        ],
+        "level": ["University", "General public"],
         "length": "Long document, organised by section of the Act",
         "language": "English",
         "licence": "UK Open Government Licence / Crown copyright (link only)",
@@ -714,11 +566,7 @@
         "title": "Business Companion — trading standards law explained",
         "publisher": "Chartered Trading Standards Institute (CTSI), on behalf of the UK Department for Business and Trade",
         "type": "Guidance website",
-        "level": [
-          "University",
-          "General public",
-          "Small businesses"
-        ],
+        "level": ["University", "General public", "Small businesses"],
         "length": "Quick guides and in-depth guides on consumer protection law",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -731,11 +579,7 @@
         "title": "Your rights when shopping in the EU",
         "publisher": "European Commission — Your Europe",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Interactive guide with country-by-country links",
         "language": "English (and other EU languages)",
         "licence": "European Commission reuse policy (link only)",
@@ -748,11 +592,7 @@
         "title": "What are my consumer rights when shopping online?",
         "publisher": "European Consumer Centres Network (ECC-Net)",
         "type": "Guide",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guide page",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -765,10 +605,7 @@
         "title": "Repair, replace, refund — consumer guarantees",
         "publisher": "Australian Competition and Consumer Commission (ACCC)",
         "type": "Official guidance and interactive problem solver",
-        "level": [
-          "High school",
-          "General public"
-        ],
+        "level": ["High school", "General public"],
         "length": "Guidance pages plus an interactive problem solver",
         "language": "English",
         "licence": "Commonwealth of Australia copyright (link only)",
@@ -787,11 +624,7 @@
         "title": "Surveillance Self-Defense",
         "publisher": "Electronic Frontier Foundation (EFF), non-profit",
         "type": "Guide collection",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Dozens of guides: basics, step-by-step tool guides and scenario playlists",
         "language": "English (and other languages)",
         "licence": "CC BY 4.0",
@@ -804,11 +637,7 @@
         "title": "Secure Our World",
         "publisher": "Cybersecurity and Infrastructure Security Agency (CISA), U.S. government",
         "type": "Campaign resources (tip sheets, toolkit, activities)",
-        "level": [
-          "High school",
-          "General public",
-          "Families"
-        ],
+        "level": ["High school", "General public", "Families"],
         "length": "Tip sheets, family guide, toolkit and activities such as bingo cards",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -821,11 +650,7 @@
         "title": "Digital Literacy & Well-Being and Digital Citizenship curricula",
         "publisher": "Common Sense Education (non-profit)",
         "type": "Curriculum",
-        "level": [
-          "Elementary",
-          "Middle school",
-          "High school"
-        ],
+        "level": ["Elementary", "Middle school", "High school"],
         "length": "More than 140 lessons, plus AI literacy lessons",
         "language": "English",
         "licence": "Free to use; lessons shareable with attribution for non-commercial use (link only). A free teacher account unlocks some materials.",
@@ -838,10 +663,7 @@
         "title": "Libraries Stand for Privacy — Participant Handbook",
         "publisher": "Sarah Hartman-Caverly (editor), Penn State University Libraries (Pressbooks)",
         "type": "Open handbook",
-        "level": [
-          "University",
-          "Librarians and educators"
-        ],
+        "level": ["University", "Librarians and educators"],
         "length": "Full handbook",
         "language": "English",
         "licence": "CC BY-NC-SA 4.0 (link only)",
@@ -854,11 +676,7 @@
         "title": "Cyber Aware",
         "publisher": "UK National Cyber Security Centre (NCSC)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "General public",
-          "Families"
-        ],
+        "level": ["High school", "General public", "Families"],
         "length": "Six key actions plus short guides",
         "language": "English (accessible formats available)",
         "licence": "Crown copyright (UK) — link only",
@@ -871,11 +689,7 @@
         "title": "Your data protection rights",
         "publisher": "Information Commissioner's Office (ICO), UK",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guidance pages on each individual right",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -888,12 +702,7 @@
         "title": "eSafety schools' hub",
         "publisher": "eSafety Commissioner, Australia",
         "type": "Classroom resources and professional learning",
-        "level": [
-          "Elementary",
-          "Middle school",
-          "High school",
-          "Educators"
-        ],
+        "level": ["Elementary", "Middle school", "High school", "Educators"],
         "length": "Classroom resources, posters, videos with lesson plans, and free professional learning",
         "language": "English (some resources in other languages)",
         "licence": "Commonwealth of Australia copyright — link only",
@@ -912,10 +721,7 @@
         "title": "Health Policy 101",
         "publisher": "KFF (non-profit health policy research organisation), edited by Drew Altman",
         "type": "Online textbook",
-        "level": [
-          "University",
-          "General public"
-        ],
+        "level": ["University", "General public"],
         "length": "16 chapters, each downloadable as a PDF and updated regularly",
         "language": "English",
         "licence": "Free to read and download for students and faculty (link only)",
@@ -928,11 +734,7 @@
         "title": "Glossary of Health Coverage and Medical Terms",
         "publisher": "HealthCare.gov (U.S. Centers for Medicare & Medicaid Services)",
         "type": "Glossary",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Glossary page with a downloadable PDF and a worked example",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -945,11 +747,7 @@
         "title": "Medical bill rights — consumer guides",
         "publisher": "U.S. Centers for Medicare & Medicaid Services (CMS)",
         "type": "Fact sheets",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Short printable fact sheets",
         "language": "English plus several other languages",
         "licence": "US federal government work (public domain)",
@@ -962,11 +760,7 @@
         "title": "No Surprises Act — Consumer Advocate Toolkit",
         "publisher": "U.S. Centers for Medicare & Medicaid Services (CMS)",
         "type": "Toolkit",
-        "level": [
-          "University",
-          "General public",
-          "Educators and advocates"
-        ],
+        "level": ["University", "General public", "Educators and advocates"],
         "length": "Toolkit with decision trees, sample documents and key terms",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -979,10 +773,7 @@
         "title": "Mirror, Mirror 2024: A Portrait of the Failing U.S. Health System — Comparing Performance in 10 Nations",
         "publisher": "The Commonwealth Fund (private foundation) — David Blumenthal et al.",
         "type": "Research report",
-        "level": [
-          "University",
-          "General public"
-        ],
+        "level": ["University", "General public"],
         "length": "Full report, plus chartpack",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -995,9 +786,7 @@
         "title": "Health at a Glance 2025: OECD Indicators",
         "publisher": "OECD",
         "type": "Statistical report",
-        "level": [
-          "University"
-        ],
+        "level": ["University"],
         "length": "About 244 pages, readable online or as a PDF",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1016,11 +805,7 @@
         "title": "Renters' Rights Act overview for tenants",
         "publisher": "UK Government — GOV.UK",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guidance page",
         "language": "English",
         "licence": "UK Open Government Licence / Crown copyright (link only)",
@@ -1033,10 +818,7 @@
         "title": "Renters' Rights Act: private tenants",
         "publisher": "Shelter England (housing charity)",
         "type": "Advice guide",
-        "level": [
-          "High school",
-          "General public"
-        ],
+        "level": ["High school", "General public"],
         "length": "Advice pages",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1049,11 +831,7 @@
         "title": "Your Home Loan Toolkit: A step-by-step guide",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Guide (workbook)",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "28 pages, with fillable worksheets",
         "language": "English and Spanish",
         "licence": "US federal government work (public domain)",
@@ -1066,11 +844,7 @@
         "title": "Report Housing Discrimination",
         "publisher": "U.S. Department of Housing and Urban Development (HUD)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guidance page and complaint process",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1083,11 +857,7 @@
         "title": "Out of Reach 2026: The High Cost of Housing",
         "publisher": "National Low Income Housing Coalition (NLIHC, non-profit)",
         "type": "Annual report (data)",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Full report plus interactive data for every state, metro area and county",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1106,11 +876,7 @@
         "title": "Free Credit Reports",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guide page",
         "language": "English (also in Spanish)",
         "licence": "US federal government work (public domain)",
@@ -1123,10 +889,7 @@
         "title": "Loan Simulator",
         "publisher": "Federal Student Aid, U.S. Department of Education",
         "type": "Interactive tool",
-        "level": [
-          "High school",
-          "University"
-        ],
+        "level": ["High school", "University"],
         "length": "Interactive tool",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1139,9 +902,7 @@
         "title": "Using a student loan calculator — classroom activity",
         "publisher": "Consumer Financial Protection Bureau (CFPB)",
         "type": "Lesson activity",
-        "level": [
-          "High school"
-        ],
+        "level": ["High school"],
         "length": "One class period: teacher guide and student worksheet",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1154,11 +915,7 @@
         "title": "MoneyHelper",
         "publisher": "Money and Pensions Service (UK government-backed)",
         "type": "Guidance website and tools",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guides, budget planner, calculators and a free debt advice locator",
         "language": "English (and Welsh)",
         "licence": "Free to read (link only)",
@@ -1171,11 +928,7 @@
         "title": "Moneysmart — credit and loans",
         "publisher": "Australian Securities and Investments Commission (ASIC)",
         "type": "Guidance website and tools",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guides and calculators",
         "language": "English",
         "licence": "Commonwealth of Australia copyright (link only)",
@@ -1194,11 +947,7 @@
         "title": "YouthRules! Young Worker Toolkit",
         "publisher": "U.S. Department of Labor, Wage and Hour Division",
         "type": "Toolkit (fact sheets, hour trackers, guides)",
-        "level": [
-          "High school",
-          "Educators",
-          "Parents"
-        ],
+        "level": ["High school", "Educators", "Parents"],
         "length": "Collection of fact sheets, calendars and guides",
         "language": "English and Spanish",
         "licence": "US federal government work (public domain)",
@@ -1211,10 +960,7 @@
         "title": "Youth@Work",
         "publisher": "U.S. Equal Employment Opportunity Commission (EEOC)",
         "type": "Guidance and classroom materials",
-        "level": [
-          "High school",
-          "Educators"
-        ],
+        "level": ["High school", "Educators"],
         "length": "Guidance pages plus classroom guides",
         "language": "English and Spanish",
         "licence": "US federal government work (public domain)",
@@ -1227,11 +973,7 @@
         "title": "Young workers and students",
         "publisher": "Fair Work Ombudsman, Australia",
         "type": "Official guidance and tools",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guidance pages plus pay, shift and leave calculators",
         "language": "English (website translatable)",
         "licence": "Commonwealth of Australia copyright (link only)",
@@ -1250,11 +992,7 @@
         "title": "Airline refunds: when you're entitled to one",
         "publisher": "U.S. Department of Transportation — Aviation Consumer Protection",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guidance page with FAQs",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1267,11 +1005,7 @@
         "title": "Airline Cancellation and Delay Dashboard",
         "publisher": "U.S. Department of Transportation",
         "type": "Interactive comparison",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Dashboard plus FAQs",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1284,11 +1018,7 @@
         "title": "Air passenger rights in the EU",
         "publisher": "European Commission — Your Europe",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guidance pages",
         "language": "English (and other EU languages)",
         "licence": "European Commission reuse policy (link only)",
@@ -1301,11 +1031,7 @@
         "title": "Flight delays and cancellations — your rights",
         "publisher": "UK Civil Aviation Authority (CAA)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Guidance pages",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1318,11 +1044,7 @@
         "title": "Buying a used car from a dealer",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guide page",
         "language": "English (also in Spanish)",
         "licence": "US federal government work (public domain)",
@@ -1335,10 +1057,7 @@
         "title": "Check for vehicle safety recalls",
         "publisher": "National Highway Traffic Safety Administration (NHTSA)",
         "type": "Lookup tool",
-        "level": [
-          "High school",
-          "General public"
-        ],
+        "level": ["High school", "General public"],
         "length": "Lookup tool",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1357,11 +1076,7 @@
         "title": "Bringing Dark Patterns to Light",
         "publisher": "Federal Trade Commission (FTC) — staff report",
         "type": "Research report",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Full report with an appendix cataloguing common dark patterns",
         "language": "English",
         "licence": "US federal government work (public domain)",
@@ -1374,10 +1089,7 @@
         "title": "Online Choice Architecture: How digital design can harm competition and consumers",
         "publisher": "UK Competition and Markets Authority (CMA)",
         "type": "Discussion paper and evidence review",
-        "level": [
-          "University",
-          "General public"
-        ],
+        "level": ["University", "General public"],
         "length": "Discussion paper (about 76 pages) plus a separate evidence review",
         "language": "English",
         "licence": "UK Open Government Licence / Crown copyright (link only)",
@@ -1390,9 +1102,7 @@
         "title": "Dark Commercial Patterns",
         "publisher": "OECD (Digital Economy Papers, No. 336)",
         "type": "Research report",
-        "level": [
-          "University"
-        ],
+        "level": ["University"],
         "length": "Full report",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1405,9 +1115,7 @@
         "title": "Guidelines 03/2022 on deceptive design patterns in social media platform interfaces",
         "publisher": "European Data Protection Board (EDPB)",
         "type": "Official guidelines",
-        "level": [
-          "University"
-        ],
+        "level": ["University"],
         "length": "Full guidelines with illustrated examples",
         "language": "English",
         "licence": "Free to read (link only)",
@@ -1420,11 +1128,7 @@
         "title": "Free trials, automatic renewals and cancelling subscriptions",
         "publisher": "Federal Trade Commission (FTC)",
         "type": "Official guidance",
-        "level": [
-          "High school",
-          "University",
-          "General public"
-        ],
+        "level": ["High school", "University", "General public"],
         "length": "Single guide page",
         "language": "English (also in Spanish)",
         "licence": "US federal government work (public domain)",
