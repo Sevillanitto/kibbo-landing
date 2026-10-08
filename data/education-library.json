@@ -2475,5 +2475,115 @@
         "summary": "A CFPB student handout from its Building Blocks financial education series explains what insurance is and how it reduces financial risk: premiums, deductibles, policyholders versus the insured, and common types including health, life, disability, auto and homeowner's or renter's insurance."
       }
     ]
+  },
+  {
+    "topic": "Energy & sustainable consumption",
+    "verified": "2026-10-08",
+    "resources": [
+      {
+        "id": "unep-here-and-now-education-for-sustainable-consumption",
+        "title": "Here and Now! Education for Sustainable Consumption: Recommendations and Guidelines",
+        "publisher": "United Nations Environment Programme (UNEP)",
+        "type": "Educator manual (report)",
+        "level": ["Policymakers", "Educators (international)"],
+        "length": "Report, 2 chapters",
+        "language": "English",
+        "licence": "© 2026 UNEP (link only)",
+        "download_allowed": true,
+        "url": "https://www.unep.org/resources/report/here-and-now-education-sustainable-consumption-recommendations-and-guidelines",
+        "summary": "UNEP's 2010 publication provides recommendations and guidelines for education on sustainable consumption, in two parts: a rationale and action-plan suggestions for policymakers, and practical guidance for educational authorities, teacher trainers, teachers and educators to bring sustainable consumption into classrooms internationally."
+      },
+      {
+        "id": "unep-unesco-youthxchange-training-kit",
+        "title": "YouthXchange Training Kit on Responsible Consumption: Towards Sustainable Lifestyles: The Guide",
+        "publisher": "UNEP and UNESCO",
+        "type": "Training kit (guide)",
+        "level": ["Trainers", "Youth (international)"],
+        "length": "Guide (train-the-trainer kit)",
+        "language": "English (also available in 18+ other languages)",
+        "licence": "© 2026 UNEP (link only)",
+        "download_allowed": true,
+        "url": "https://www.unep.org/resources/report/youthxchange-training-kit-responsible-consumption-towards-sustainable-lifestyles",
+        "summary": "UNEP and UNESCO's YouthXchange training kit helps trainers teach young people worldwide about sustainable consumption, using statistics, case studies, games and real company examples organised under youth-oriented themes like clothing, leisure and travel, aiming to shape consumption habits among tomorrow's decision makers."
+      },
+      {
+        "id": "doe-energy-saver-guide-tips-saving-money-energy-home",
+        "title": "Tips on Saving Money and Energy in Your Home (Energy Saver Guide)",
+        "publisher": "US Department of Energy",
+        "type": "Consumer guide (PDF)",
+        "level": ["General public (United States)"],
+        "length": "56 pages",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf",
+        "summary": "The US Department of Energy's 56-page guide covers home energy audits, weatherizing and insulating your home, efficient heating and cooling, energy-saving home design, renewable electricity and appliances, renters' options, and fuel-efficient and electric vehicles, with tips to cut utility bills."
+      },
+      {
+        "id": "doe-consumer-guide-home-energy-assessments",
+        "title": "Consumer Guide to Home Energy Assessments",
+        "publisher": "US Department of Energy",
+        "type": "Consumer guide (PDF)",
+        "level": ["General public (United States)"],
+        "length": "2 pages",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": true,
+        "url": "https://www.energy.gov/sites/default/files/2021-08/ES-Home%20Energy%20Assessments_080221.pdf",
+        "summary": "The US Department of Energy's 2-page guide explains DIY and professional home energy assessments: how to spot air leaks yourself, blower door tests and thermographic scans used by certified assessors, what to prepare before an assessment, and typical costs of $250 to $600 or more."
+      },
+      {
+        "id": "ec-energy-efficient-products-consumer-guide",
+        "title": "Consumers - Energy Efficient Products",
+        "publisher": "European Commission",
+        "type": "Consumer guide",
+        "level": ["General public (European Union)"],
+        "length": "Single guide page, 7 sections",
+        "language": "English",
+        "licence": "Not stated",
+        "download_allowed": false,
+        "url": "https://energy-efficient-products.ec.europa.eu/consumers_en",
+        "summary": "The European Commission explains EU Ecodesign and Energy Label rules that help consumers choose efficient products, save an average of €290 a year on household energy bills, and use the EPREL database to compare product models by energy use, water consumption and spare-parts availability."
+      },
+      {
+        "id": "ec-european-energy-consumers-rights-checklist",
+        "title": "European Energy Consumers' Rights: What You Gain as an Energy Consumer from European Legislation",
+        "publisher": "European Commission",
+        "type": "Checklist (rights list, PDF)",
+        "level": ["General public (European Union)"],
+        "length": "11 pages",
+        "language": "English",
+        "licence": "© European Union, 2014. Reproduction authorised provided the source is acknowledged.",
+        "download_allowed": true,
+        "url": "https://energy.ec.europa.eu/document/download/71fae156-91f3-48ca-befa-30ccb0d0c0cc_en?filename=MEP-ConsumerRights-web.pdf",
+        "summary": "A European Commission leaflet lists ten EU energy consumer rights: connection to the grid, free choice and easy switching of supplier, clear contract information, accurate billing, help using energy efficiently, protection for vulnerable customers, complaint resolution, an energy performance certificate, and a national contact point."
+      },
+      {
+        "id": "openlearn-energy-in-buildings",
+        "title": "Energy in Buildings",
+        "publisher": "The Open University (OpenLearn)",
+        "type": "Free course",
+        "level": ["Level 3: Advanced (United Kingdom)"],
+        "length": "10 hours study",
+        "language": "English",
+        "licence": "Creative Commons Attribution-NonCommercial (CC BY-NC)",
+        "download_allowed": false,
+        "url": "https://www.open.edu/openlearn/nature-environment/energy-buildings/content-section-0",
+        "summary": "The Open University's free OpenLearn course examines energy use in UK buildings: how houses lose heat, U-value calculations for windows and insulation, factors affecting heating system efficiency, CO2 emissions of different heating systems, and lighting calculations, rated Level 3 (Advanced), about 10 hours of study."
+      },
+      {
+        "id": "open-textbook-intro-environmental-sciences-sustainability",
+        "title": "Introduction to Environmental Sciences and Sustainability",
+        "publisher": "Emily P. Harris, University of West Florida (Open Textbook Library)",
+        "type": "Open textbook",
+        "level": ["College / introductory science course"],
+        "length": "14 chapters",
+        "language": "English",
+        "licence": "CC BY",
+        "download_allowed": true,
+        "url": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-environmental-sciences-and-sustainability",
+        "summary": "An open textbook (CC BY licensed) from the University of West Florida covering environmental science and sustainability in 14 chapters, including water availability, food and hunger, conventional and sustainable energy, and solid and hazardous waste, designed for an introductory college science course."
+      }
+    ]
   }
 ]
