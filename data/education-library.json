@@ -392,6 +392,32 @@
         "download_allowed": false,
         "url": "https://www.justfinancefoundation.org.uk/resource-hub",
         "summary": "A free resource hub from a UK charity offering school resources for financial decision-making lessons, family resources for home money conversations, and community resources, including the LifeSavers primary school savings programme, for teachers, parents and community organisations."
+      },
+      {
+        "id": "ecampusontario-financial-empowerment-indigenous",
+        "title": "Financial Empowerment: Personal Finance for Indigenous and Non-Indigenous People",
+        "publisher": "Bettina Schneider (eCampusOntario Pressbooks / University of Regina Press)",
+        "type": "Open textbook",
+        "level": ["First and second-year college students (Canada)"],
+        "length": "15 chapters",
+        "language": "English",
+        "licence": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)",
+        "download_allowed": true,
+        "url": "https://ecampusontario.pressbooks.pub/financialempowerment/",
+        "summary": "An open textbook adapting Saylor Academy's Personal Finance text with Indigenous and non-Indigenous Canadian perspectives, elder interviews and examples from the Canadian financial system, covering budgeting, taxes, insurance, retirement planning, investing and consumer strategies for first and second-year students."
+      },
+      {
+        "id": "saintpeters-financial-literacy-empowerment-for-life",
+        "title": "Financial Literacy and Empowerment for Life: A Saint Peter's University Student's Guide to Financial Wellness",
+        "publisher": "Bianca Suarez and Richard Mejia (Saint Peter's University Pressbooks)",
+        "type": "Open textbook",
+        "level": ["College students (United States)"],
+        "length": "10 chapters",
+        "language": "English (with an English-Spanish glossary)",
+        "licence": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)",
+        "download_allowed": true,
+        "url": "https://saintpeters.pressbooks.pub/financialempowerment/",
+        "summary": "A Saint Peter's University open textbook, adapted from 'FinLit for Life: Teaching Financial Literacy at a Community College,' builds critical financial literacy for college students: budgeting, the emotional side of money, college costs, saving strategies, banking, credit scores, and financial technology."
       }
     ]
   },
@@ -794,6 +820,19 @@
         "download_allowed": true,
         "url": "https://www.ag.idaho.gov/consumer-protection/consumer-manuals/",
         "summary": "Seven manuals from the Idaho Attorney General's office covering consumer protection basics, motor vehicle advertising rules, landlord-tenant rights and responsibilities, the state's Lemon Law, consumer issues for older adults, nonprofit board service, and a handbook for young adults, most available in English and Spanish."
+      },
+      {
+        "id": "pressbooks-consumer-protection-law",
+        "title": "Consumer Protection Law: A Guide for Navigating Safely in the Modern World",
+        "publisher": "tjsmith3 (Pressbooks)",
+        "type": "Open textbook",
+        "level": ["College / law students (United States)"],
+        "length": "8 chapters",
+        "language": "English",
+        "licence": "Creative Commons Attribution 4.0 International License (CC BY 4.0)",
+        "download_allowed": true,
+        "url": "https://pressbooks.pub/tjsmith3/",
+        "summary": "An open textbook on US consumer protection law covering why it matters, legal roots and enforcement entities, product safety and liability, antitrust and the FTC, advertising and marketing transactions, loans and financial data, and consumer privacy and data, published under a Creative Commons Attribution licence."
       }
     ]
   },
@@ -969,6 +1008,19 @@
         "download_allowed": false,
         "url": "https://onlinesafety.internetsociety.org/protecting-your-privacy-and-security/",
         "summary": "A non-technical guide from the Internet Society's Online Trust and Safety Hub on protecting an email account first, turning on automatic updates, limiting location sharing, using encrypted messaging, and checking app permissions, plus deeper sections on securing accounts, controlling sharing, and responding to incidents."
+      },
+      {
+        "id": "open-textbook-humans-r-social-media",
+        "title": "Humans R Social Media - 2024 \"Living Book\" Edition",
+        "publisher": "Diana Daly, Jacquie Kuru, Alexandria Fripp (University of Arizona) and Nathan Schneider (University of Colorado Boulder)",
+        "type": "Open textbook",
+        "level": ["College students"],
+        "length": "13 main chapters plus multimedia collections and glossary",
+        "language": "English",
+        "licence": "CC BY",
+        "download_allowed": true,
+        "url": "https://open.umn.edu/opentextbooks/textbooks/humans-r-social-media-open-textbook-edition",
+        "summary": "Humans R Social Media, a 2024 'living book' from the University of Arizona, examines how humans and social media shape each other across chapters on identity, regulation, privacy and publics, algorithms, equity and gender, activism and memes, with galleries of student-created stories and podcast episodes."
       }
     ]
   },
