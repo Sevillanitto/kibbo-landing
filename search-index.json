@@ -16452,6 +16452,18 @@
     ]
   },
   {
+    "title": "Teacher Resources",
+    "type": "library",
+    "url": "/library/teacher-resources",
+    "description": "Free consumer education resources for teachers, lecturers and librarians: classroom exercise sheets, datasets, and every lesson plan, toolkit and curriculum in the Education Library.",
+    "keywords": [
+      "teacher resources",
+      "lesson plans",
+      "classroom exercise sheets",
+      "consumer education curriculum"
+    ]
+  },
+  {
     "title": "Subscription & Gym Cancellation Kit",
     "type": "kit",
     "block": "subscriptions-services",
