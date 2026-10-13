@@ -1,0 +1,50 @@
+{
+  "slug": "flight-delay",
+  "title": "Flight delayed or cancelled: how to claim",
+  "block": "Travel",
+  "countries": ["UK", "EU", "US"],
+  "last_verified": "2026-10",
+  "can_you_claim": [
+    {"q": "Where did the flight depart from, or which airline operated it?", "UK": "UK departure (any airline) or UK/EU airline arriving in the UK: UK261 applies.", "EU": "EU departure (any airline) or EU airline arriving in the EU: EU261 applies.", "US": "No federal compensation right. You can claim a refund (see rights)."},
+    {"q": "How late did you arrive, or was the flight cancelled?", "answer": "3+ hours late on arrival, or cancelled, opens compensation under UK261/EU261."},
+    {"q": "Was it caused by 'extraordinary circumstances' (e.g. weather, air traffic control)?", "answer": "If yes, no compensation, but care and refund rights remain. Most technical faults and airline-staff strikes do not count as extraordinary (EU page)."}
+  ],
+  "rights": {
+    "UK": {
+      "rule": "UK261",
+      "compensation": {"under_1500km": "£220", "1500_3500km": "£350", "over_3500km": "£260 (3-4h late) / £520 (4h+ late)"},
+      "threshold": "Arrive 3+ hours late",
+      "escalation": "Complain to airline; if unresolved after final response or 8 weeks, go to the airline's ADR provider, or CAA PACT if the airline has none.",
+      "time_limit": "NOT STATED BY CAA: verify limitation period before publishing",
+      "source": "https://www.caa.co.uk/passengers/resolving-travel-problems/delays-and-cancellations/delays/"
+    },
+    "EU": {
+      "rule": "EU261",
+      "compensation": {"up_to_1500km": "€250", "1500_3500km": "€400 (and >1500km intra-EU)", "over_3500km": "€600"},
+      "threshold": "Arrive 3+ hours late (4h for the €600 tier on some non-EU flights); cancellation notified under 14 days before departure",
+      "care": "Meals, 2 calls/messages, hotel + transport if overnight. Refund option at 5h+ departure delay.",
+      "escalation": "Airline first; no reply in 2 months -> national enforcement body; ADR; European Small Claims.",
+      "time_limit": "Set by each country's national limitation rules (no single number)",
+      "source": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm"
+    },
+    "US": {
+      "rule": "DOT automatic refund rule",
+      "refund": "Full refund (incl. taxes/fees) if the airline cancels or significantly changes the flight and you decline the alternative. Significant change: >3h domestic, >6h international.",
+      "baggage": "Checked-bag fee refund if bag not delivered within 12h (domestic) / 15-30h (international).",
+      "timeline": "Card payments: within 7 business days. Other methods: within 20 calendar days.",
+      "no_compensation_note": "Rule covers refunds only, not compensation. DOT has a separate proposal on compensation: check status before publishing.",
+      "source": "https://www.transportation.gov/briefing-room/biden-harris-administration-announces-final-rule-requiring-automatic-refunds-airline"
+    }
+  },
+  "evidence": ["Booking confirmation", "Boarding pass", "Screenshot of actual vs scheduled arrival time", "Airline messages explaining the cause", "Receipts for meals/hotel/transport"],
+  "steps": ["1. Keep evidence and receipts", "2. Written claim to the airline", "3. Wait 8 weeks (UK) / 2 months (EU)", "4. Escalate to ADR / CAA PACT / national body", "5. Small claims court"],
+  "tools": {
+    "generators": ["/generate/eu261-flight-compensation-claim", "/generate/flight-disruption-compensation-reimbursement", "/generate/civil-aviation-authority-escalation"],
+    "templates": ["/templates/flight-disruption-communication-log", "/templates/flight-disruption-expense-tracker", "/templates/air-passenger-rights-claim-pack"],
+    "checklists": ["/checklists/uk261-claim-checklist", "/checklists/flight-disruption-evidence-checklist", "/checklists/duty-of-care-checklist"],
+    "calculators": ["/flights-travel/calculators/eu261-compensation-calculator", "/flights-travel/calculators/flight-delay-compensation-calculator"],
+    "kits": ["/kits/flight-disruption-compensation"]
+  },
+  "related": ["lost-luggage"],
+  "gaps": ["No UK261-specific generator (only EU261 and generic)", "No US DOT refund request generator", "No flight Real Case"]
+}

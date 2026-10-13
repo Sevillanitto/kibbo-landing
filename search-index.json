@@ -17548,5 +17548,292 @@
       "training education consumer resources",
       "free consumer resource directory"
     ]
+  },
+  {
+    "title": "Claims: How to Claim Your Consumer Rights",
+    "type": "claim",
+    "block": "general",
+    "url": "/claims",
+    "description": "Know your rights and claim what you're owed — flight delays, bank errors, deposits, unpaid wages and more, for the US, UK and Europe.",
+    "keywords": [
+      "how to claim",
+      "know your rights",
+      "consumer rights by problem"
+    ]
+  },
+  {
+    "title": "Flight delayed or cancelled: how to claim",
+    "type": "claim",
+    "block": "Travel",
+    "url": "/claims/flight-delay",
+    "description": "Flight delayed or cancelled: how to claim: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "flight delayed or cancelled: how to claim",
+      "travel"
+    ]
+  },
+  {
+    "title": "Unauthorized Card or Bank Transaction",
+    "type": "claim",
+    "block": "Money & Banking",
+    "url": "/claims/unauthorized-transaction",
+    "description": "Unauthorized Card or Bank Transaction: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "unauthorized card or bank transaction",
+      "money & banking"
+    ]
+  },
+  {
+    "title": "Hidden or Unfair Bank Fees",
+    "type": "claim",
+    "block": "Money & Banking",
+    "url": "/claims/hidden-bank-fees",
+    "description": "Hidden or Unfair Bank Fees: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "hidden or unfair bank fees",
+      "money & banking"
+    ]
+  },
+  {
+    "title": "Credit Report Error",
+    "type": "claim",
+    "block": "Money & Banking",
+    "url": "/claims/credit-report-dispute",
+    "description": "Credit Report Error: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "credit report error",
+      "money & banking"
+    ]
+  },
+  {
+    "title": "Debt Collector Harassment",
+    "type": "claim",
+    "block": "Money & Banking",
+    "url": "/claims/debt-collector-harassment",
+    "description": "Debt Collector Harassment: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "debt collector harassment",
+      "money & banking"
+    ]
+  },
+  {
+    "title": "Chargeback or Section 75 Claim",
+    "type": "claim",
+    "block": "Money & Banking",
+    "url": "/claims/chargeback",
+    "description": "Chargeback or Section 75 Claim: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "chargeback or section 75 claim",
+      "money & banking"
+    ]
+  },
+  {
+    "title": "Lost, Delayed or Damaged Luggage",
+    "type": "claim",
+    "block": "Travel",
+    "url": "/claims/lost-luggage",
+    "description": "Lost, Delayed or Damaged Luggage: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "lost, delayed or damaged luggage",
+      "travel"
+    ]
+  },
+  {
+    "title": "Rental Deposit Not Returned",
+    "type": "claim",
+    "block": "Home & Rentals",
+    "url": "/claims/rental-deposit-not-returned",
+    "description": "Rental Deposit Not Returned: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "rental deposit not returned",
+      "home & rentals"
+    ]
+  },
+  {
+    "title": "Illegal Eviction or Lockout",
+    "type": "claim",
+    "block": "Home & Rentals",
+    "url": "/claims/illegal-eviction",
+    "description": "Illegal Eviction or Lockout: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "illegal eviction or lockout",
+      "home & rentals"
+    ]
+  },
+  {
+    "title": "Landlord Won't Make Repairs",
+    "type": "claim",
+    "block": "Home & Rentals",
+    "url": "/claims/landlord-wont-repair",
+    "description": "Landlord Won't Make Repairs: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "landlord won't make repairs",
+      "home & rentals"
+    ]
+  },
+  {
+    "title": "Unfair or Unlawful Rent Increase",
+    "type": "claim",
+    "block": "Home & Rentals",
+    "url": "/claims/rent-increase",
+    "description": "Unfair or Unlawful Rent Increase: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "unfair or unlawful rent increase",
+      "home & rentals"
+    ]
+  },
+  {
+    "title": "Refund for a Defective Product",
+    "type": "claim",
+    "block": "Shopping",
+    "url": "/claims/refund-defective-product",
+    "description": "Refund for a Defective Product: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "refund for a defective product",
+      "shopping"
+    ]
+  },
+  {
+    "title": "Cancelling a Subscription",
+    "type": "claim",
+    "block": "Subscriptions",
+    "url": "/claims/cancel-subscription",
+    "description": "Cancelling a Subscription: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "cancelling a subscription",
+      "subscriptions"
+    ]
+  },
+  {
+    "title": "Charged After Cancelling",
+    "type": "claim",
+    "block": "Subscriptions",
+    "url": "/claims/charged-after-cancelling",
+    "description": "Charged After Cancelling: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "charged after cancelling",
+      "subscriptions"
+    ]
+  },
+  {
+    "title": "Insurance Claim Denied",
+    "type": "claim",
+    "block": "Insurance",
+    "url": "/claims/insurance-claim-denied",
+    "description": "Insurance Claim Denied: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "insurance claim denied",
+      "insurance"
+    ]
+  },
+  {
+    "title": "Medical Bill Dispute",
+    "type": "claim",
+    "block": "Health",
+    "url": "/claims/medical-bill-dispute",
+    "description": "Medical Bill Dispute: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "medical bill dispute",
+      "health"
+    ]
+  },
+  {
+    "title": "Requesting Your Medical Records",
+    "type": "claim",
+    "block": "Health",
+    "url": "/claims/medical-records-request",
+    "description": "Requesting Your Medical Records: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "requesting your medical records",
+      "health"
+    ]
+  },
+  {
+    "title": "Unpaid Wages or Wage Theft",
+    "type": "claim",
+    "block": "Work",
+    "url": "/claims/unpaid-wages",
+    "description": "Unpaid Wages or Wage Theft: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "unpaid wages or wage theft",
+      "work"
+    ]
+  },
+  {
+    "title": "Final Paycheck Not Paid",
+    "type": "claim",
+    "block": "Work",
+    "url": "/claims/final-paycheck",
+    "description": "Final Paycheck Not Paid: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "final paycheck not paid",
+      "work"
+    ]
+  },
+  {
+    "title": "Workplace Harassment",
+    "type": "claim",
+    "block": "Work",
+    "url": "/claims/workplace-harassment",
+    "description": "Workplace Harassment: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "workplace harassment",
+      "work"
+    ]
+  },
+  {
+    "title": "Lost or Stolen Parcel",
+    "type": "claim",
+    "block": "Parcels",
+    "url": "/claims/lost-parcel",
+    "description": "Lost or Stolen Parcel: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "lost or stolen parcel",
+      "parcels"
+    ]
+  },
+  {
+    "title": "Unexpected Customs Charges",
+    "type": "claim",
+    "block": "Parcels",
+    "url": "/claims/unexpected-customs-charges",
+    "description": "Unexpected Customs Charges: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "unexpected customs charges",
+      "parcels"
+    ]
+  },
+  {
+    "title": "Used Car With a Hidden Fault",
+    "type": "claim",
+    "block": "Vehicles",
+    "url": "/claims/used-car-hidden-fault",
+    "description": "Used Car With a Hidden Fault: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "used car with a hidden fault",
+      "vehicles"
+    ]
+  },
+  {
+    "title": "Crypto Scam",
+    "type": "claim",
+    "block": "Crypto & Scams",
+    "url": "/claims/crypto-scam",
+    "description": "Crypto Scam: rights, deadlines and free tools for US, UK.",
+    "keywords": [
+      "crypto scam",
+      "crypto & scams"
+    ]
+  },
+  {
+    "title": "Frozen or Locked Crypto Account",
+    "type": "claim",
+    "block": "Crypto & Scams",
+    "url": "/claims/frozen-crypto-account",
+    "description": "Frozen or Locked Crypto Account: rights, deadlines and free tools for US, UK, Europe.",
+    "keywords": [
+      "frozen or locked crypto account",
+      "crypto & scams"
+    ]
   }
 ]
