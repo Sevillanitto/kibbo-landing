@@ -72,13 +72,372 @@
     "return_deadline": "The deposit must be returned to the tenant within 10 days of landlord and tenant agreeing how much they'll get back.",
     "penalty_for_not_protecting": "Under Housing Act 2004 s.214 (as amended), if the landlord failed to protect the deposit or give the required prescribed information, a court must order the landlord to pay the tenant a sum \"not less than the amount of the deposit and not more than three times the amount of the deposit\", within 14 days of the court order.",
     "dispute_route": "If the deposit is protected in an 'insured' scheme and there's a dispute, the landlord/agent must give the deposit to the TDP scheme, which holds it until the dispute is settled via the scheme's free alternative dispute resolution service.",
-    "source_url": ["https://www.gov.uk/deposit-protection-schemes-and-landlords", "https://www.legislation.gov.uk/ukpga/2004/34/section/214"],
+    "source_url": [
+     "https://www.gov.uk/deposit-protection-schemes-and-landlords",
+     "https://www.legislation.gov.uk/ukpga/2004/34/section/214"
+    ],
     "verified_on": "2026-10-13",
     "status": "verified"
    },
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "State deposit return deadlines and penalties (give a table by state with each state statute source), small claims route"
+    "rule": "State landlord-tenant statutes (no federal deposit-return deadline); small claims court is the standard enforcement route in every state for amounts within that state's small-claims limit.",
+    "by_state": {
+     "Alabama": {
+      "deadline": "60 days after termination",
+      "penalty": "A landlord who fails to mail a timely refund/accounting must pay the tenant double the amount of the original deposit.",
+      "source_url": "http://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/35-9A-201.htm",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Alaska": {
+      "deadline": "30 days after termination when deductions are claimed (the commonly-cited 14-day no-deductions figure could not be independently confirmed in the statute text).",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://www.akleg.gov/basis/get_documents.asp?session=33&docid=26035",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Arizona": {
+      "deadline": "14 days (excluding Saturdays, Sundays and legal holidays) after termination, delivery of possession, and tenant demand.",
+      "penalty": "Tenant may recover the deposit due plus damages equal to twice the amount wrongfully withheld.",
+      "source_url": "https://www.azleg.gov/ars/33/01321.htm",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Arkansas": {
+      "deadline": "60 days after tenant moves out (statute applies only to landlords with 6+ units or who employ a property manager).",
+      "penalty": "Landlord may forfeit the right to withhold any portion; tenant may be entitled to twice the deposit plus costs/attorney's fees.",
+      "source_url": "https://arkansasag.gov/divisions/public-protection/homes/landlord-and-tenant-rights/",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "California": {
+      "deadline": "21 calendar days after tenant vacates.",
+      "penalty": "Landlord who fails to provide the itemized statement may lose the right to claim deductions; bad-faith retention entitles the tenant to up to twice the wrongfully withheld amount.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1950.5.&lawCode=CIV",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Colorado": {
+      "deadline": "30 days after lease termination or surrender of premises, whichever is later, unless the lease specifies longer (max 60 days).",
+      "penalty": "Not stated beyond the required itemized statement on the official page reviewed.",
+      "source_url": "https://content.leg.colorado.gov/sites/default/files/security-deposit-returns-to-renters.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Connecticut": {
+      "deadline": "21 days after tenancy ends, or 15 days after landlord receives tenant's forwarding address, whichever is later.",
+      "penalty": "Tenant may recover twice the wrongfully withheld amount as damages.",
+      "source_url": "https://www.cga.ct.gov/2024/sup/chap_831.htm",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Delaware": {
+      "deadline": "20 days after termination/expiration of the rental agreement.",
+      "penalty": "Tenant can seek a full refund plus double that amount as damages.",
+      "source_url": "https://delcode.delaware.gov/title25/c051/sc02/index.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Florida": {
+      "deadline": "15 days to return in full if no claim is made; 30 days to send notice of claim by certified mail or email.",
+      "penalty": "Landlord who misses the 30-day notice deadline forfeits the right to impose a claim on the deposit.",
+      "source_url": "https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099%2F0083%2FSections%2F0083.49.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Georgia": {
+      "status": "PENDING_VERIFY",
+      "note": "No official legis.ga.gov page could be located stating a specific numeric day-deadline for returning the deposit (O.C.G.A. 44-7-34 requires an itemized statement, but the fixed-day figure wasn't confirmed on an official page)."
+     },
+     "Hawaii": {
+      "deadline": "14 days after termination of the rental agreement.",
+      "penalty": "Landlord who misses the deadline forfeits the right to retain any part of the deposit and must return it in full.",
+      "source_url": "https://www.capitol.hawaii.gov/hrscurrent/vol12_ch0501-0588/HRS0521/HRS_0521-0044.htm",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Idaho": {
+      "deadline": "21 days by default, 30 days maximum, after surrender of premises.",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://legislature.idaho.gov/statutesrules/idstat/title6/t6ch3/sect6-321/",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Illinois": {
+      "deadline": "30 days to furnish an itemized statement; 45 days to return the deposit in full if no itemized statement is given.",
+      "penalty": "A landlord found to have acted in bad faith is liable for twice the deposit plus court costs and attorney's fees.",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2202",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Indiana": {
+      "deadline": "45 days after termination of occupancy.",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://iga.in.gov/ic/2026/Title_32/Article_31/Chapter_1.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Iowa": {
+      "deadline": "30 days from termination and receipt of the tenant's mailing address.",
+      "penalty": "Bad-faith retention subjects the landlord to punitive damages up to twice the monthly rent, plus actual damages.",
+      "source_url": "https://www.legis.iowa.gov/docs/code/562A.12.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Kansas": {
+      "deadline": "14 days after the amount of deductions is determined, but never more than 30 days after termination/possession/tenant demand.",
+      "penalty": "Tenant may recover the amount due plus damages equal to 1.5 times the amount wrongfully withheld.",
+      "source_url": "https://ksrevisor.gov/statutes/chapters/ch58/058_025_0050.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Kentucky": {
+      "deadline": "No single fixed number of days found; the statute describes a 30-day minimum hold and a 60-day tenant response window after the landlord sends notice of a refund due.",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=35733",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Louisiana": {
+      "deadline": "One month after lease termination (an itemized statement may extend this a further 15 days under a 2026 amendment).",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://legis.la.gov/Legis/Law.aspx?p=y&d=107468",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Maine": {
+      "deadline": "21 days for a tenancy-at-will; 30 days for a written rental agreement.",
+      "penalty": "Landlord who misses the deadline forfeits the right to withhold any portion of the deposit.",
+      "source_url": "https://legislature.maine.gov/statutes/14/title14sec6033.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Maryland": {
+      "deadline": "45 days after the end of tenancy.",
+      "penalty": "Tenant may recover up to 3 times the wrongfully withheld amount plus reasonable attorney's fees.",
+      "source_url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-203",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Massachusetts": {
+      "deadline": "30 days after termination of occupancy.",
+      "penalty": "A landlord who fails to comply and is taken to court must pay triple damages, interest, costs and attorney's fees.",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section15b",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Michigan": {
+      "deadline": "30 days after termination of occupancy to mail an itemized notice of damages.",
+      "penalty": "Not stated on the official page reviewed (tenant must respond within 7 days or forfeit the claimed amount).",
+      "source_url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-554-609",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Minnesota": {
+      "deadline": "21 days (3 weeks) after termination of tenancy.",
+      "penalty": "Landlord who fails to provide the written statement is liable for the withheld portion plus interest as a penalty, in addition to the amount wrongfully withheld.",
+      "source_url": "https://www.revisor.mn.gov/statutes/cite/504b.178",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Mississippi": {
+      "status": "PENDING_VERIFY",
+      "note": "Mississippi's official legislature.ms.gov site has no searchable/indexed statute text accessible via these tools; no official .gov page stating a specific deadline was located."
+     },
+     "Missouri": {
+      "deadline": "30 days after termination of tenancy.",
+      "penalty": "Tenant may recover twice the amount wrongfully withheld.",
+      "source_url": "https://www.revisor.mo.gov/main/OneSection.aspx?section=535.300",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Montana": {
+      "deadline": "10 days after termination if no deductions are claimed; 30 days if deductions are claimed (written itemized list required).",
+      "penalty": "Landlord liable for up to twice the deposit for noncompliance (figure moderately confirmed; the 10/30-day rule and forfeiture for failing to provide the list are directly confirmed on the statute page).",
+      "source_url": "https://leg.mt.gov/bills/mca/title_0700/chapter_0250/part_0020/section_0020/0700-0250-0020-0020.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Nebraska": {
+      "deadline": "14 days after termination of tenancy.",
+      "penalty": "If willful and not in good faith, the tenant may recover one month's rent or twice the deposit, whichever is less, plus court costs and attorney fees.",
+      "source_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=76-1416",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Nevada": {
+      "deadline": "30 days after termination of tenancy.",
+      "penalty": "Landlord liable for the entire deposit amount, plus a court-set sum up to the deposit amount, plus costs/fees.",
+      "source_url": "https://www.leg.state.nv.us/NRS/NRS-118A.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "New Hampshire": {
+      "deadline": "30 days from termination of tenancy.",
+      "penalty": "Landlord liable for double the amount wrongfully withheld.",
+      "source_url": "https://gc.nh.gov/rsa/html/lv/540-a/540-a-7.htm",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "New Jersey": {
+      "deadline": "30 days after tenancy ends (5 days if the tenant was displaced by fire, flood, condemnation or evacuation).",
+      "penalty": "A court may award double the amount wrongfully withheld, plus full costs and, at the court's discretion, attorney's fees; the landlord forfeits the right to deduct if no itemized statement is sent within 30 days.",
+      "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/secty_deposit_bulletin.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "New Mexico": {
+      "deadline": "30 days after termination of the rental agreement or departure, whichever is later.",
+      "penalty": "Landlord who misses the deadline forfeits the right to withhold any portion and loses the right to counterclaim, and is liable for the tenant's court costs/attorney fees; bad-faith retention carries a separate $250 statutory civil penalty (NMSA 47-8-18; figure moderately confirmed — no single clean statute page URL was located).",
+      "source_url": "https://www.nmlegis.gov",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "New York": {
+      "deadline": "14 days after the tenant vacates.",
+      "penalty": "Landlord forfeits any right to retain any portion of the deposit if the 14-day deadline is missed.",
+      "source_url": "https://www.nysenate.gov/legislation/laws/GOB/7-108",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "North Carolina": {
+      "deadline": "30 days after termination/delivery of possession for an interim accounting; final accounting within 60 days if the amount can't be determined by day 30.",
+      "penalty": "Not explicitly quoted; the statute imposes the interim/final accounting procedure described above.",
+      "source_url": "https://www.ncleg.gov/EnactedLegislation/Statutes/html/byarticle/chapter_42/article_6.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "North Dakota": {
+      "deadline": "30 days after termination of lease and delivery of possession.",
+      "penalty": "A landlord who withholds without justification is liable for triple the amount withheld.",
+      "source_url": "https://ndlegis.gov/cencode/t47c16.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Ohio": {
+      "deadline": "30 days after termination of the rental agreement and delivery of possession.",
+      "penalty": "Tenant may recover the deposit plus damages equal to the amount wrongfully withheld, plus reasonable attorney's fees.",
+      "source_url": "https://codes.ohio.gov/ohio-revised-code/section-5321.16",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Oklahoma": {
+      "deadline": "45 days after termination, delivery of possession, and written tenant demand (30 days for undamaged furnished-rental deposits).",
+      "penalty": "Not explicitly stated; the deposit reverts to the landlord if the tenant doesn't demand it within 6 months.",
+      "source_url": "https://www.oscn.net/applications/oscn/deliverdocument.asp?citeID=71764",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Oregon": {
+      "deadline": "31 days after the tenancy terminates and the tenant delivers possession.",
+      "penalty": "Tenant may recover twice the amount withheld without a required written accounting, or withheld in bad faith (ORS 90.300; exact official section page not independently reopened — moderately confirmed).",
+      "source_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors090.html",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Pennsylvania": {
+      "deadline": "30 days after the tenant moves out.",
+      "penalty": "Landlord liable for double the amount by which the deposit exceeds actual damages, if the 30-day deadline is missed (68 P.S. Section 250.512; general chapter page located, not the exact codified section — moderately confirmed).",
+      "source_url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/1951/0/0020.005.000..HTM",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Rhode Island": {
+      "deadline": "20 days after the later of termination, delivery of possession, or the tenant providing a forwarding address.",
+      "penalty": "Tenant may recover the amount due plus damages equal to twice the amount wrongfully withheld, plus attorney fees.",
+      "source_url": "https://webserver.rilegislature.gov/statutes/title34/34-18/34-18-19.HTM",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "South Carolina": {
+      "deadline": "30 days after termination, delivery of possession, and tenant demand, whichever is later.",
+      "penalty": "Tenant may recover the property/money plus damages equal to three times the amount wrongfully withheld, plus attorney's fees.",
+      "source_url": "https://www.scstatehouse.gov/code/t27c040.php",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "South Dakota": {
+      "deadline": "21 days after termination of tenancy and receipt of the tenant's mailing address (itemized accounting within 45 days on request).",
+      "penalty": "Landlord forfeits all rights to withhold any portion; bad-faith retention subjects the landlord to punitive damages up to $200.",
+      "source_url": "https://sdlegislature.gov/Statutes/43-32-24",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Tennessee": {
+      "deadline": "No single fixed statutory deadline found; the law requires inspection within 3 working days of move-out and a damage listing, with a 60-day window for the tenant to respond to a refund notice before the landlord may retain unclaimed funds.",
+      "penalty": "Landlord forfeits the right to retain any portion if the deposit wasn't held in a separate account and a damage listing wasn't provided as required.",
+      "source_url": "https://www.tn.gov/content/dam/tn/health/documents/healthy-places/healthy-homes/HHW_LAS_TN_Rural_Renters_Rights.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Texas": {
+      "deadline": "30 days after the tenant surrenders the premises.",
+      "penalty": "Not explicitly quoted (Property Code Ch. 92 Subch. C has a bad-faith-retention penalty provision not directly quoted in this pass).",
+      "source_url": "https://tcss.legis.texas.gov/resources/pr/pdf/pr.92.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Utah": {
+      "deadline": "30 days after the renter vacates and returns possession.",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://le.utah.gov/xcode/Title57/Chapter17/C57-17_1800010118000101.pdf",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Vermont": {
+      "deadline": "14 days from when the landlord discovers/learns the tenant vacated (60 days for seasonal rentals).",
+      "penalty": "Landlord forfeits the right to withhold any portion if missed; if willful, liable for double the amount wrongfully withheld plus attorney's fees/costs.",
+      "source_url": "https://legislature.vermont.gov/statutes/section/09/137/04461",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Virginia": {
+      "deadline": "45 days after termination/the tenant vacates, whichever is later.",
+      "penalty": "If willful noncompliance is found, a court orders return of the deposit plus actual damages and reasonable attorney fees.",
+      "source_url": "https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1226/",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Washington": {
+      "deadline": "30 days after termination and vacation of the premises (the deadline has changed over time — was 14 days, then 21 days, now 30 days under current RCW 59.18.280).",
+      "penalty": "Landlord liable to the tenant for the full amount of the deposit if the deadline/statement requirement is missed.",
+      "source_url": "https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.280",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "West Virginia": {
+      "deadline": "Statute references delivery \"within the applicable notice period\" (not a single flat number), with a further 15-day extension for itemizing damage requiring a third-party contractor.",
+      "penalty": "If willful/bad faith, the tenant is entitled to judgment for the unreturned deposit plus damages equal to 1.5 times the amount wrongfully withheld.",
+      "source_url": "https://code.wvlegislature.gov/37-6A-2/",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Wisconsin": {
+      "deadline": "21 days after the tenant moves out (or from the last day of the lease/new tenant move-in, whichever is first, for early move-outs).",
+      "penalty": "Tenant may recover twice the amount of actual pecuniary loss, plus court costs and, if awarded, attorney fees.",
+      "source_url": "https://docs.legis.wisconsin.gov/code/admin_code/atcp/090/134/06",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "Wyoming": {
+      "deadline": "30 days after termination of the rental agreement, or 15 days after receipt of the renter's new address, whichever is later (extended to 60 days total if there's damage).",
+      "penalty": "Not stated on the official page reviewed.",
+      "source_url": "https://wyoleg.gov/NXT/gateway.dll/Statutes/2021%20Titles/2/54/66",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     },
+     "District of Columbia": {
+      "deadline": "45 days to return the deposit with interest or notify of withholding; a further 30 days to provide an itemized statement if withholding.",
+      "penalty": "Not explicitly quoted on the official page reviewed.",
+      "source_url": "https://code.dccouncil.gov/us/dc/council/code/sections/42-3502.17",
+      "verified_on": "2026-10-13",
+      "status": "verified"
+     }
+    },
+    "small_claims_route": "If a landlord doesn't return the deposit or an itemized deduction statement within the state deadline, tenants in every state can sue in their local small claims court (limits and procedures vary by state and were not individually re-verified here beyond the deposit-specific statutes above).",
+    "note": "Georgia and Mississippi could not be confirmed against an official .gov source for a specific numeric deadline and are left PENDING_VERIFY within by_state; several other states (flagged inline) have a figure from an official state legislative/agency domain but with a secondary or less precisely located citation than the rest — flagged in their own entries rather than silently presented as fully certain.",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -119,10 +478,14 @@
   "rights": {
    "UK": {
     "rule": "Protection from Eviction Act 1977, section 1",
-    "what_is_unlawful": "It is a criminal offence to unlawfully deprive a residential occupier of occupation of the premises (or any part), or to attempt to, unless the person believed (with reasonable cause) that the occupier had ceased to reside there. It is also an offence for a landlord or their agent, with intent to cause the occupier to leave or stop exercising a right, to do acts likely to interfere with their peace or comfort, or to persistently withdraw/withhold services reasonably required for occupying the premises (e.g. cutting off utilities).","penalties":"On summary conviction: a fine and/or up to 6 months' imprisonment. On conviction on indictment: an unlimited fine and/or up to 2 years' imprisonment.",
+    "what_is_unlawful": "It is a criminal offence to unlawfully deprive a residential occupier of occupation of the premises (or any part), or to attempt to, unless the person believed (with reasonable cause) that the occupier had ceased to reside there. It is also an offence for a landlord or their agent, with intent to cause the occupier to leave or stop exercising a right, to do acts likely to interfere with their peace or comfort, or to persistently withdraw/withhold services reasonably required for occupying the premises (e.g. cutting off utilities).",
+    "penalties": "On summary conviction: a fine and/or up to 6 months' imprisonment. On conviction on indictment: an unlimited fine and/or up to 2 years' imprisonment.",
     "who_to_contact": "\"Contact the police if physical violence or threats are involved or if someone is trying to remove you or your belongings from the property without either a court order or court appointed bailiff.\" For non-emergencies: \"Talk to your local council if you think you're being harassed or threatened with illegal eviction.\" Also: a legal adviser, Citizens Advice, or Shelter's housing advice helpline.",
     "remedies": "A tenant may be able to \"be let back into your home\", \"claim compensation\", or \"apply for a rent repayment order\"; local councils can take legal action if there's enough evidence of harassment or illegal eviction.",
-    "source_url": ["https://www.legislation.gov.uk/ukpga/1977/43/section/1", "https://www.gov.uk/government/publications/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction"],
+    "source_url": [
+     "https://www.legislation.gov.uk/ukpga/1977/43/section/1",
+     "https://www.gov.uk/government/publications/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction"
+    ],
     "verified_on": "2026-10-13",
     "status": "verified"
    },
@@ -171,7 +534,11 @@
     "hfhha_2018": "The Homes (Fitness for Human Habitation) Act 2018 requires rented homes in England to be 'fit for human habitation' (safe, healthy, free from serious hazards e.g. damp/mould, structural problems, inadequate heating, carbon monoxide, electrical/fire hazards). If not, the tenant can take the landlord to court, which can order repairs and/or compensation. Applies immediately to tenancies signed on or after 20 March 2019; tenancies signed before that date were covered from 20 March 2020 (or sooner if a new tenancy/rolling contract started).",
     "awaabs_law_status": "In force for the SOCIAL rented sector only, from 27 October 2025: social landlords must fix emergency health/safety hazards within 24 hours of reporting, investigate significant damp/mould within 10 working days and make the property safe within 5 working days, and report inspection findings to the tenant within 3 working days. From 30 November 2026 this is due to expand to further hazards (excess cold/heat, falls, structural collapse, fire/explosion, electrical hazards, domestic hygiene). Does not currently apply to private rented tenancies.",
     "council_route": "Tenants of private landlords can report serious hazards to the council's environmental health team, which can assess the property under the Housing Health and Safety Rating System (HHSRS) and require the landlord to make repairs.",
-    "source_url": ["https://www.legislation.gov.uk/ukpga/1985/70/section/11", "https://www.gov.uk/government/publications/homes-fitness-for-human-habitation-act-2018/guide-for-tenants-homes-fitness-for-human-habitation-act-2018", "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector"],
+    "source_url": [
+     "https://www.legislation.gov.uk/ukpga/1985/70/section/11",
+     "https://www.gov.uk/government/publications/homes-fitness-for-human-habitation-act-2018/guide-for-tenants-homes-fitness-for-human-habitation-act-2018",
+     "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector"
+    ],
     "verified_on": "2026-10-13",
     "status": "verified"
    },
@@ -229,7 +596,10 @@
     "rule": "No federal law on rent increase notice periods or rent control — governed entirely by state/local law, which varies widely. Most states have no rent control and simply require the same notice as for ending a periodic tenancy (commonly 30 days, longer in some states/cities).",
     "state_examples_verified": "California (Tenant Protection Act of 2019 / AB 1482): for most covered rental units, rent increases are capped at 5% plus the regional CPI change, or 10%, whichever is lower, over any 12-month period, with no more than 2 increases in a 12-month period. Oregon (SB 608 as amended by SB 611): statewide rent increases on most tenancies are capped at 7% plus CPI or 10%, whichever is lower, published annually by the state; landlords must also give 90 days' notice of a rent increase (HB 3113).",
     "note": "This claim's verify_topics did not request a full 50-state table; only the two statewide rent-control examples above (CA, OR) were independently verified against state .gov sources. Other states' specific notice periods/rent-control status were not individually verified in this pass.",
-    "source_url": ["https://oag.ca.gov/rentcaps", "https://www.oregon.gov/ohcs/compliance-monitoring/Documents/rent-increase-policy-april-2025.pdf"],
+    "source_url": [
+     "https://oag.ca.gov/rentcaps",
+     "https://www.oregon.gov/ohcs/compliance-monitoring/Documents/rent-increase-policy-april-2025.pdf"
+    ],
     "verified_on": "2026-10-13",
     "status": "verified"
    }
