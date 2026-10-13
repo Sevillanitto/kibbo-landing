@@ -632,16 +632,27 @@
   ],
   "rights": {
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Consumer Rights Act 2015: 30-day short-term right to reject, 6-month presumption, repair or replace, time limits"
+    "rule": "Consumer Rights Act 2015, Part 1 Chapter 2",
+    "short_term_right_to_reject": "A 30-day window from delivery/taking possession of goods that don't conform to the contract, within which the consumer can reject them for a full refund.",
+    "six_month_presumption": "If the consumer chooses repair, replacement, price reduction or the final right to reject within the first 6 months, the fault is presumed to have been present at delivery unless the trader proves otherwise (or this is inconsistent with the circumstances, e.g. obvious abuse/misuse). No deduction can be made for use where goods are rejected within the first 6 months, except for motor vehicles.","after_six_months":"The burden of proof shifts to the consumer to show the defect was present at delivery.",
+    "source_url": "https://www.legislation.gov.uk/ukpga/2015/15/section/22",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "No general federal return right; FTC rules on refunds, state rules, warranty (Magnuson-Moss)"
+    "rule": "No general federal right to return/refund goods — the Magnuson-Moss Warranty Act (15 U.S.C. 2301 et seq.) only regulates written warranties where a business chooses to offer one; it does not require a refund or return policy.",
+    "warranty_rules": "Magnuson-Moss does not require any business to provide a written warranty. Where a written warranty is offered, the business cannot disclaim or modify implied warranties, and a 'full warranty' designation entitles the customer to a replacement or refund if repair isn't possible. Remedies otherwise depend on the seller's own return policy and state consumer-protection/UCC implied-warranty law.",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "EU": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Legal guarantee of 2 years and 14-day withdrawal right (europa.eu)"
+    "rule": "Consumer Rights Directive 2011/83/EU (withdrawal right) and Directive (EU) 2019/771 (sale of goods legal guarantee)",
+    "withdrawal_right": "Article 9(1) of Directive 2011/83/EU: for distance/off-premises contracts, \"the consumer shall have a period of 14 days\" to withdraw from the contract without giving any reason.",
+    "legal_guarantee": "Article 10 of Directive (EU) 2019/771 ('Liability of the seller') makes the seller liable where a lack of conformity becomes apparent within two years of delivery (member states may set a longer national period).",
+    "source_url": ["https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32011L0083", "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0771"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -680,16 +691,29 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "FTC Click-to-Cancel rule status (it was vacated by a court in 2025: confirm current status), ROSCA, state auto-renewal laws"
+    "rule": "FTC Negative Option Rule (status uncertain for the 2024 \"click-to-cancel\" amendments) and ROSCA",
+    "click_to_cancel_status": "The FTC announced a final \"click-to-cancel\" rule on 16 October 2024 and denied a petition to stay it pending judicial review on 13 December 2024. However, as of 13 March 2026 the FTC's own Negative Option Rule page states the Commission \"seeks public comment on the need for amendments to\" the rule \"to help consumers avoid recurring payments... and allow them to cancel such payments without unwarranted obstacles\" — a new Advance Notice of Proposed Rulemaking. This indicates the strict 2024 click-to-cancel provisions are not confirmed to be in full force today; the exact litigation history (reported elsewhere as an 8th Circuit vacatur in 2025) could not be independently confirmed from an allowed official ftc.gov page in this pass.",
+    "rosca_still_applies": "Independent of the above, the Restore Online Shoppers' Confidence Act (ROSCA), a separate federal statute, continues to require clear disclosure of all material terms, express informed consent, and a simple cancellation mechanism for negative-option/recurring online sales — its status was not separately brought into doubt by the rulemaking above, but a specific ftc.gov page restating ROSCA's text could not be located in this pass.",
+    "note": "Given the uncertainty above, do not state a specific vacatur date or court name without further verification.",
+    "source_url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "DMCC Act subscription rules and commencement date, cooling-off, reminder notices"
+    "rule": "Digital Markets, Competition and Consumers Act 2024 (DMCCA) new subscription contracts regime — NOT YET IN FORCE",
+    "commencement_status": "The government's consultation response (updated 2 April 2026) states: \"We will legislate when parliamentary time allows and we anticipate that the regime will commence in spring 2027.\" As of today, the DMCCA's new subscription-specific rules have not commenced — only the existing Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 (CCRs) currently apply, which already give a 14-day cooling-off right for contracts made at a distance or away from business premises.",
+    "future_regime_summary": "Once in force, the DMCCA will require: clear pre-contract information; reminder notices before a free/discounted trial or a 12-month+ contract auto-renews; an 'easy exit' — straightforward cancellation, available online if the consumer signed up online; and TWO 14-day cooling-off periods — an 'initial' cooling-off period on entering the contract, and a new 'renewal' cooling-off period after a trial or 12-month+ contract auto-renews, during which the consumer can cancel (for a full or proportionate refund depending on what's been supplied).",
+    "source_url": "https://www.gov.uk/government/consultations/consultation-on-the-implementation-of-the-new-subscription-contracts-regime/outcome/government-response-to-consultation-on-the-implementation-of-the-new-subscription-contracts-regime-web-accessible-version",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "EU": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Consumer Rights Directive cancellation, renewal notices"
+    "rule": "Consumer Rights Directive 2011/83/EU",
+    "cancellation_right": "Article 9(1): for distance/off-premises contracts (including subscriptions sold this way), \"the consumer shall have a period of 14 days\" to withdraw without giving any reason.",
+    "note": "A specific EU-level requirement for ongoing auto-renewal reminder notices (distinct from the one-time withdrawal right) was not independently confirmed against an EUR-Lex page in this pass; renewal-notice rules for subscriptions in the EU are largely set at individual member-state level rather than uniformly by the Consumer Rights Directive itself.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32011L0083",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -728,12 +752,20 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Fair Credit Billing Act dispute window; ROSCA; state laws"
+    "rule": "Fair Credit Billing Act (credit cards) and ROSCA (recurring/negative-option charges generally)",
+    "fcba_dispute_window": "Send a written dispute notice no later than 60 days after the credit card company sent the statement where the error (the post-cancellation charge) first appeared; the issuer then has 30 days to acknowledge and up to two billing cycles to investigate, and the disputed amount doesn't have to be paid while under investigation.",
+    "rosca": "ROSCA requires sellers running recurring/negative-option plans to provide a simple cancellation mechanism; a charge made after a valid cancellation is itself evidence of a ROSCA violation, reportable to the FTC.",
+    "source_url": "https://www.consumerfinance.gov/consumer-tools/credit-cards/how-to-fix-mistakes-in-your-credit-card-bill/",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Card chargeback / Section 75 route; FCA rules on continuous payment authorities (CPA cancellation right)"
+    "rule": "Section 75 of the Consumer Credit Act 1974 / chargeback, plus the right to withdraw consent for a continuous payment authority (CPA) under the Payment Services Regulations 2017",
+    "cpa_cancellation_right": "Regulation 67 of the Payment Services Regulations 2017: \"The payer may withdraw its consent to the execution of a series of payment transactions at any time with the effect that any future payment transactions are not regarded as authorised.\" In practice, a consumer can cancel a recurring card payment/CPA directly with their own bank or card issuer at any time, regardless of what the merchant says, and the bank must act on it; charges taken after that withdrawal are treated as unauthorised transactions (subject to the same next-business-day refund duty confirmed for unauthorized-transaction.UK in claims-batch1-money.json).",
+    "section_75_chargeback": "For card purchases over £100 up to £30,000, Section 75 joint liability may also apply; for other amounts, or debit cards, chargeback (120-day window) is the route — see the figures already verified in the 'chargeback' claim.",
+    "source_url": "https://www.legislation.gov.uk/uksi/2017/752/regulation/67/made",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -766,12 +798,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "State insurance department complaint route, internal appeal and bad-faith rules, ERISA for employer plans, deadlines by state"
+    "rule": "For ACA-compliant individual/group health plans: federal internal appeal / external review rules; for employer self-funded plans: ERISA claims procedure; for other insurance (auto, home, life): state insurance department complaint route.",
+    "internal_appeal": "You must file your internal appeal within 180 days (6 months) of receiving notice that your claim was denied. The insurer must notify you of a denial within 15 days for prior authorization, 30 days for services already received, or 72 hours for urgent care. The internal appeal itself must be completed within 30 days (service not yet received) or 60 days (service already received); for urgent situations, a decision must come within at least 4 business days, with written notice following within 48 hours.",
+    "external_review": "If the internal appeal is denied, you can request an independent external review; the insurer's final determination must explain how to request one.",
+    "note": "This internal/external appeal timeline is published on healthcare.gov (HealthCare.gov), which is CMS's own consumer-facing ACA Marketplace site — not literally 'cms.gov' as listed in the allowed-domain list, but operated by the same federal agency (CMS); flagging this for transparency. State insurance department complaint routes and ERISA-specific appeal deadlines for employer self-funded plans were not independently confirmed against a working dol.gov page in this pass (several dol.gov URLs attempted returned 404) and are left for further verification.",
+    "source_url": "https://www.healthcare.gov/appeal-insurance-company-decision/internal-appeals/",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "FCA ICOBS claims handling rules, 8 weeks to final response, Financial Ombudsman 6-month deadline"
+    "rule": "FCA Handbook ICOBS 8 (Insurers: general) claims-handling rules, plus the Financial Ombudsman Service complaint route",
+    "icobs_claims_handling": "ICOBS 8.1.1R: an insurer must (1) handle claims promptly and fairly; (2) provide reasonable guidance to help a policyholder make a claim and appropriate information on its progress; (3) not unreasonably reject a claim (including by terminating or avoiding a policy); and (4) settle claims promptly once settlement terms are agreed.",
+    "unreasonable_rejection": "ICOBS 8.1.2A guidance: rejection is considered unreasonable (among other cases) for a misrepresentation that isn't a 'qualifying misrepresentation', or for breach of warranty/term/fraud where the insurer can't rely on the relevant Insurance Act 2015 provisions.",
+    "complaint_route": "A business has 8 weeks to consider most complaints (15 days specifically for fraud/scams, payment services, or e-money complaints) before the consumer can refer it to the Financial Ombudsman Service; the consumer then has 6 months from the date of the firm's final response to bring the complaint to the Ombudsman.",
+    "source_url": ["https://www.handbook.fca.org.uk/handbook/icobs8/icobs8s1", "https://www.financial-ombudsman.org.uk/consumers/complaints-can-help/expect/time-limits"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -805,12 +847,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "No Surprises Act (surprise billing, good-faith estimate, dispute process), itemised bill rights, nonprofit hospital financial assistance"
+    "rule": "No Surprises Act (implemented via CMS)",
+    "surprise_billing_protections": "Patients are protected from unexpected out-of-network bills for: \"Emergency room visits\"; \"Non-emergency care related to a visit to an in-network hospital, hospital outpatient department, or ambulatory surgical center\"; and \"Air ambulance services.\"",
+    "good_faith_estimate": "Uninsured/self-pay patients: \"providers must give you a good faith estimate of how much your health care will cost if you request one or schedule services at least 3 business days in advance.\"",
+    "dispute_process": "\"You may be able to dispute your bill if it's at least $400 more than the estimate.\" (The specific number of days to initiate this patient-provider dispute resolution process was not stated on the page reviewed and was not independently confirmed elsewhere in this pass.)",
+    "nonprofit_hospital_financial_assistance": "Not independently verified against an irs.gov page in this pass (the Section 501(r) financial-assistance-policy guidance page could not be located at a working URL without WebSearch, which had hit its session quota) — left unconfirmed rather than stated from memory.",
+    "source_url": "https://www.cms.gov/nosurprises/consumers",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "NHS complaint route, private provider complaint and ISCAS / Ombudsman"
+    "rule": "NHS Constitution for England — complaints and redress",
+    "nhs_complaint_route": "The NHS Constitution gives patients the right to have any complaint dealt with efficiently and properly investigated, and: \"You have the right to take your complaint to the independent Parliamentary and Health Service Ombudsman... if you are not satisfied with the way your complaint has been dealt with by the NHS.\"",
+    "note": "ISCAS (Independent Sector Complaints Adjudication Service, for private healthcare providers) is not hosted on any domain in this task's allowed list, so its specific complaint process and any Ombudsman equivalent for private providers were not independently verified in this pass and are left unconfirmed rather than stated from memory.",
+    "source_url": "https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
