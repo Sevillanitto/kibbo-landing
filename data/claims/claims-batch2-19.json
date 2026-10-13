@@ -1201,16 +1201,26 @@
   ],
   "rights": {
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Post-Brexit import VAT and duty rules, £135 threshold, courier handling fees, how to dispute"
+    "rule": "UK customs/VAT rules for goods sent from abroad (gov.uk guidance)",
+    "thresholds": "VAT is charged on all goods sent from outside the UK to Great Britain (or from outside the UK/EU to Northern Ireland), except gifts worth £39 or less. Customs Duty applies on non-excise goods worth more than £135 (no charge at or below £135); excise goods (alcohol, tobacco, vapes) are dutiable at any value. For goods worth £135 or less bought directly, the seller should already have included VAT in the price; the delivery company only charges VAT separately for gifts worth over £39 or excise goods.",
+    "courier_handling": "Royal Mail, Parcelforce or the courier company contacts you with a bill for any VAT/duty/delivery charges owed, and will normally hold the parcel for about 3 weeks before returning it to the sender if unpaid.",
+    "how_to_dispute": "To get a refund if you were overcharged tax or you return the goods, fill in form BOR286 (if Royal Mail or Parcelforce delivered the goods) or form C285 (for any other courier/freight company).",
+    "source_url": "https://www.gov.uk/goods-sent-from-abroad/tax-and-duty",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "US": {
     "status": "PENDING_VERIFY",
-    "verify_topics": "De minimis rule status for low-value imports (changed in 2025: verify current status)"
+    "note": "The US de minimis import rule (duty-free threshold for low-value shipments, historically $800 under 19 U.S.C. 1321, widely reported as changed/suspended in 2025) is administered by U.S. Customs and Border Protection (CBP). cbp.gov is not in this task's allowed-domain list, and no equivalent current-status page was found on an allowed domain (irs.gov, ftc.gov, dot.gov, usps.com, etc. don't own this topic). Left unconfirmed rather than stated from memory or a non-allowed source."
    },
    "EU": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "EU €150 duty threshold and VAT import scheme (IOSS), 2026 changes: verify"
+    "rule": "EU VAT e-commerce reform (in force since 1 July 2021), as described on the European Commission's VAT One Stop Shop site",
+    "vat_exemption_removed": "\"The VAT exemption at importation of small consignments of a value up to EUR 22 is removed. This means all goods imported in the EU are subject to VAT.\"",
+    "ioss_threshold": "\"The Import One Stop Shop (IOSS) has been created to simplify the declaration and payment of VAT for distance sales of low value goods not exceeding 150€ imported from third territories or third countries.\" Special arrangements for consignments up to €150 also exist for sellers who don't use the IOSS.",
+    "note": "This EU Commission page describes the rules as in force since 1 July 2021 with no indication of a separate 2026 change; no evidence of a 2026 update to the €150 IOSS threshold was found on this page, so none is claimed.",
+    "source_url": "https://vat-one-stop-shop.ec.europa.eu/index_en",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -1247,12 +1257,21 @@
   ],
   "rights": {
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Consumer Rights Act for dealer sales: 30-day right to reject, 6-month presumption, satisfactory quality; private sales: 'as described' only"
+    "rule": "Consumer Rights Act 2015 — applies to dealer (trader) sales only; private sales are governed separately",
+    "satisfactory_quality": "Section 9: \"Every contract to supply goods is to be treated as including a term that the quality of the goods is satisfactory\" — judged by what a reasonable person would consider satisfactory, given the description, price, and all other relevant circumstances (including the goods' fitness for normal purpose, appearance/finish, freedom from minor defects, safety, and durability). Does not cover defects specifically pointed out before purchase, or apparent from the buyer's own pre-purchase examination.",
+    "short_term_right_and_presumption": "Same 30-day short-term right to reject and 6-month reversed-burden-of-proof presumption already confirmed for the 'refund-defective-product' claim apply equally to used cars bought from a dealer.",
+    "private_sales": "The Consumer Rights Act 2015 only applies to contracts where a trader supplies goods to a consumer — it does not apply to private (person-to-person) sales. For a private sale, the main protection is that the goods must match their description ('as described'); there is no statutory satisfactory-quality or fitness-for-purpose guarantee from a private seller.",
+    "source_url": "https://www.legislation.gov.uk/ukpga/2015/15/section/9",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "FTC Used Car Rule, implied warranty, state lemon laws for used cars (varies)"
+    "rule": "FTC Used Car Rule (16 CFR Part 455) plus state-level implied warranty and lemon laws",
+    "used_car_rule": "In force since 1985, formally the Used Motor Vehicle Trade Regulation Rule: dealers must display a window sticker, the 'Buyers Guide', disclosing whether the car is sold with a warranty and, if so, its terms (duration, percentage of repair costs covered, which systems are covered). \"In states that do not permit sales of used cars 'as is,' or without warranties, dealers must display an alternative version of the Buyers Guide.\"",
+    "state_variation": "Whether a dealer can sell 'as is' (no warranty), and whether a state's used-car 'lemon law' gives extra protection, varies by state and was not individually verified here.",
+    "source_url": "https://www.ftc.gov/legal-library/browse/rules/used-car-rule",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -1288,12 +1307,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Where to report (FTC, FBI IC3, CFTC, SEC), what recovery is realistic, card/bank reversal options"
+    "rule": "Report to multiple federal agencies depending on the scam type; realistic recovery is limited.",
+    "where_to_report": "FTC: report at ReportFraud.ftc.gov (\"We can't resolve your individual report, but we use reports to investigate and bring cases against fraud, scams, and bad business practices.\"). FBI: report cyber-enabled crime, including crypto scams, to the Internet Crime Complaint Center (IC3) at ic3.gov — IC3 \"cannot guarantee a response to every complaint\" but reports can help identify patterns and, in some cases, help freeze stolen funds. CFTC: if the scam involves commodity/derivatives fraud, report via a Complaint Form or whistleblower Form TCR to the Division of Enforcement (866-366-2382). SEC: if the scam involves an unregistered or fraudulent securities offer (e.g. a fake token sale, Ponzi/pyramid scheme), report via the SEC's online Tips, Complaints, and Referrals (TCR) system.",
+    "realistic_recovery": "None of the above agencies can get your money back for you individually — the FTC and IC3 both state explicitly that they cannot resolve individual reports or guarantee a response; reports are used for investigations and to help law enforcement identify and prosecute scammers.",
+    "card_bank_reversal": "If you paid by credit/debit card, you may be able to dispute the charge (see the FCBA figures already confirmed under 'chargeback'), though cryptocurrency purchases/transfers themselves generally cannot be reversed once confirmed on the blockchain. Beware of 'recovery scams' where fraudsters pose as being able to recover your lost crypto for a fee.",
+    "source_url": ["https://reportfraud.ftc.gov/", "https://www.ic3.gov/", "https://www.cftc.gov/complaint", "https://www.sec.gov/submit-tip-or-complaint/tips-complaints-resources/report-suspected-securities-fraud-or-wrongdoing"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Report to Action Fraud / Police Scotland, FCA warning list, bank APP fraud reimbursement scope for crypto transfers (usually excluded: verify)"
+    "rule": "Report Fraud (Action Fraud) / Police Scotland, plus FCA tools for checking firms and reporting unauthorised activity",
+    "where_to_report": "\"Contact Report Fraud on 0300 123 2040 or via the website... If you live in Scotland, you should report to Police Scotland by calling 101, or contact Advice Direct Scotland on 0808 164 6000.\" The FCA itself can only look into scams involving financial services it regulates, and explicitly states: \"We can't help you get your money back, but we look into every report we receive and it could help protect others.\"",
+    "fca_firm_checker": "Use the FCA Firm Checker to find out if a firm is authorised and has permission for the service it's offering — equivalent to checking the FCA's warning list of unauthorised firms. Also beware 'recovery room scammers' who pretend to be legitimate firms offering to recover lost funds.",
+    "app_fraud_reimbursement_crypto_scope": "Not independently verified in this pass — Authorised Push Payment (APP) fraud reimbursement is regulated by the Payment Systems Regulator (psr.org.uk), which is not in this task's allowed-domain list, and the equivalent FCA consumer page could not be located at a working URL. Left unconfirmed rather than stated from memory; do not assume crypto transfers are excluded from reimbursement without checking an official source.",
+    "source_url": "https://www.fca.org.uk/consumers/report-scam",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -1324,16 +1353,29 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Exchange obligations (KYC/AML), CFPB/state regulator complaint routes, arbitration clauses"
+    "rule": "No single federal crypto-exchange regulator — oversight is split, with a general CFPB complaint route for consumer financial products/services",
+    "cfpb_route": "Submit a complaint at consumerfinance.gov/complaint; the CFPB states \"most companies respond within 15 days,\" and will forward the complaint to a different agency if it determines another regulator is better placed to help. (This covers many consumer financial products/services; it was not independently confirmed in this pass that the CFPB treats all crypto exchanges as within that definition — check at submission time.)",
+    "kyc_aml_note": "Exchange know-your-customer/anti-money-laundering obligations are primarily a FinCEN (Treasury) and state money-transmitter licensing matter; fincen.gov is not in this task's allowed-domain list, so the specific KYC/AML obligations were not independently verified against an official source in this pass.",
+    "arbitration_clauses_note": "Not independently verified against an official source in this pass — left unconfirmed rather than stated from memory.",
+    "source_url": "https://www.consumerfinance.gov/complaint/",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "FCA registered crypto firms, Financial Ombudsman jurisdiction over crypto (usually limited: verify)"
+    "rule": "Crypto activity remains largely unregulated in the UK as a matter of financial services regulation, which limits both FCA and Financial Ombudsman protections (only AML/marketing rules for crypto firms are currently regulated)",
+    "regulatory_status": "The FCA's own current consumer guidance (updated 29/01/2026) states plainly: \"crypto is largely unregulated in the UK, so it is highly unlikely you will be covered by the Financial Services Compensation Scheme\" and \"as crypto activity is not regulated yet in the UK, there is no safety net if things go wrong.\" The marketing of crypto is regulated (firms must show prominent risk warnings and can't offer joining/referral bonuses) — use the FCA Firm Checker to see if a firm is on the FCA's register.",
+    "fos_jurisdiction_implication": "Because the Financial Ombudsman Service's jurisdiction generally follows the FCA's regulated activities perimeter, and crypto trading/custody itself is not yet a regulated activity in the UK, FOS protection for a frozen/locked crypto exchange account is likely similarly limited — this inference is based on the confirmed 'largely unregulated, no safety net' statement above, since no FCA or FOS page specifically naming Ombudsman jurisdiction over crypto accounts was found in this pass.",
+    "source_url": "https://www.fca.org.uk/investsmart/crypto-basics",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "EU": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "MiCA complaint-handling duties (verify dates in force)"
+    "rule": "Markets in Crypto-Assets Regulation (EU) 2023/1114 (MiCA)",
+    "in_force_dates": "\"This Regulation shall apply from 30 December 2024\", confirmed directly on the operative text of the regulation (Article 149). Titles III and IV (on asset-referenced tokens/e-money tokens, i.e. stablecoins) applied earlier, from 30 June 2024, 'by way of derogation'. As of today, MiCA is fully in force across all titles.",
+    "complaint_handling_duty": "MiCA requires issuers of asset-referenced tokens to \"put in place a clear procedure for handling complaints received from holders\" (recital 49, given effect by the operative Article 31, 'Complaints-handling procedures'); crypto-asset service providers (including exchanges) are subject to equivalent complaints-handling obligations under the Regulation's Title V provisions, which took effect on the same 30 December 2024 general application date.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1114",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
