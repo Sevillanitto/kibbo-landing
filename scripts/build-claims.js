@@ -12,11 +12,8 @@
 // markers for consistency with the rest of the build-*.js scripts, even
 // though here the whole file is regenerated each run, not just that block.
 //
-// LAUNCH FLAG: every generated page carries a one-line comment
-// (CLAIMS_LAUNCH_FLAG) right above <meta name="robots" content="noindex,
-// follow">. Delete that comment (and the meta tag under it) across every
-// /claims/* page, and add the nav/footer links, to go live — same pattern
-// used for the Resources directory launch.
+// Launched (indexable, in the Tools nav) — see git history for the
+// pre-launch noindex/launch-flag state.
 //
 // Does NOT touch data/claims/*.json — read-only. Normalizes the schema
 // differences between the pilot file (title/last_verified/can_you_claim/
@@ -346,6 +343,7 @@ function navAndHero(heroLabel, heroTitle, heroSubtitle, extraHeroHtml) {
           <a href="/analyze" class="kibbo-panel-item"><span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span class="kibbo-panel-text"><span class="kibbo-panel-title">Analyzers</span><span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span></span></a>
           <a href="/kits" class="kibbo-panel-item"><span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><span class="kibbo-panel-text"><span class="kibbo-panel-title">Kits</span><span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span></span></a>
           <a href="/developer-tools" class="kibbo-panel-item"><span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><span class="kibbo-panel-text"><span class="kibbo-panel-title">Developer Tools</span><span class="kibbo-panel-desc">Source code for our browser extensions and tools.</span></span></a>
+          <a href="/claims/" class="kibbo-panel-item"><span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="kibbo-panel-text"><span class="kibbo-panel-title">Claims</span><span class="kibbo-panel-desc">Know your rights and how to claim, by situation.</span></span></a>
           <a href="/calculators" class="kibbo-panel-row"><span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span><span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span></a>
           <div class="kibbo-panel-banner"><div><div class="kibbo-panel-banner-title">Not sure where to start?</div><div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div></div><a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard &rarr;</a></div>
         </div>
@@ -394,6 +392,7 @@ function navAndHero(heroLabel, heroTitle, heroSubtitle, extraHeroHtml) {
       <a href="/analyze">Analyzers</a>
       <a href="/kits">Kits</a>
       <a href="/developer-tools">Developer Tools</a>
+      <a href="/claims/">Claims</a>
       <a href="/calculators">Calculators</a>
       <a href="/wizard">Start the Wizard &rarr;</a>
     </details>
@@ -495,8 +494,6 @@ function headBlock({ title, description, canonical }) {
 <link rel="canonical" href="${esc(canonical)}">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>${esc(title)}</title>
-<!-- CLAIMS_LAUNCH_FLAG: remove this line (and this comment) across every /claims/* page, plus add nav/footer links, to go live -->
-<meta name="robots" content="noindex, follow">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
@@ -574,7 +571,6 @@ ${chips}
     </div>
     <p class="claims-empty" id="claimsEmpty" hidden>No claims match your search.</p>
 ${blocksHtml}
-    <p class="cr-add-line">Missing a claim? <a href="/resources/submit/">Tell us &rarr;</a></p>
     <script>
     (function () {
       var search = document.getElementById('claimsSearch');
