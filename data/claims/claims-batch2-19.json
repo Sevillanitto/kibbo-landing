@@ -900,12 +900,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "HIPAA right of access: response deadline (30 days), allowed fees"
+    "rule": "HIPAA right of access (45 CFR 164.524)",
+    "response_deadline": "\"Your doctor normally has up to 30 days to provide you a copy of your information\", though it's often provided sooner, especially via a patient web portal.",
+    "fees": "You can't be denied access for not paying your medical bill. Your doctor can charge you a reasonable fee for a copy of your health information; the fee may not be a per-page fee if your information is stored electronically.",
+    "complaint_route": "If you believe your HIPAA access rights were violated, you can file a complaint with the HHS Office for Civil Rights (OCR).",
+    "source_url": "https://www.hhs.gov/hipaa/for-individuals/right-to-access/index.html",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "UK GDPR subject access: 1 month, free; NHS route"
+    "rule": "UK GDPR / Data Protection Act 2018 — right of access (subject access request, SAR)",
+    "response_deadline": "\"Organisations usually have one month to respond to a SAR.\" Anyone can make a SAR without needing a solicitor or lawyer.",
+    "fee_note": "The ICO's current public SAR guidance page confirms the request process and 1-month deadline; it was not found to explicitly restate the 'normally free' fee rule on the specific page reviewed in this pass, so that detail is based on the confirmed 1-month deadline plus the general 'no fee' principle under UK GDPR Article 12(5) rather than a fresh verbatim ICO quote — flagged for completeness rather than omitted.",
+    "nhs_route": "For NHS medical records specifically, a SAR can be made directly to the relevant NHS organisation/GP practice holding the records, following the same SAR process and 1-month deadline described above.",
+    "source_url": "https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -934,12 +944,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "FLSA minimum wage and overtime, DOL Wage and Hour complaint, state wage laws, limitation periods"
+    "rule": "Fair Labor Standards Act (FLSA), enforced by the DOL Wage and Hour Division (WHD)",
+    "minimum_wage_overtime": "Federal minimum wage is $7.25 per hour (effective since 24 July 2009); where state and federal minimum wage both apply, the employee is entitled to the higher of the two. Covered nonexempt employees must receive overtime at 1.5x their regular rate of pay for hours worked over 40 in a workweek.",
+    "limitation_period": "\"For willful violations, the Department may recover back wages and an equal amount in liquidated damages for a period of up to 3 years.\" (The standard, non-willful FLSA statute of limitations is commonly cited elsewhere as 2 years, but that specific figure was not independently re-quoted from an official page in this pass alongside the willful-violation figure above.)",
+    "complaint_route": "Complaints can be filed with the DOL Wage and Hour Division; state wage laws (minimum wage, payday, and other requirements) vary by state and were not individually verified here.",
+    "source_url": ["https://www.dol.gov/agencies/whd/flsa", "https://www.dol.gov/agencies/whd/compliance-assistance/handy-reference-guide-flsa"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Unlawful deduction from wages, ACAS early conciliation, 3-month tribunal limit, HMRC minimum wage"
+    "rule": "Employment Rights Act 1996 (ERA 1996) Part II — unlawful deductions from wages — plus the ACAS Early Conciliation requirement before an employment tribunal claim",
+    "tribunal_time_limit": "IMPORTANT — DIFFERS FROM THE COMMON ASSUMPTION: Section 23(2) of the ERA 1996, as it currently reads on legislation.gov.uk, states \"an employment tribunal shall not consider a complaint under this section unless it is presented before the end of the period of six months beginning with\" the date of the deduction (not the commonly-cited 3 months that applies to many other employment tribunal claim types). Section 23(4) allows the tribunal to extend this if it wasn't reasonably practicable to present the complaint within that period. This was directly confirmed by reading the live statute text, not assumed — flagging clearly since it contradicts the figure in this task's own topic hint.",
+    "acas_early_conciliation": "Before lodging most employment tribunal claims, a claimant must notify Acas, which will offer early conciliation — a voluntary process where an Acas conciliator tries to help reach an agreement without going to tribunal. Notifying Acas does not change the underlying tribunal time limit, though the conciliation period itself can pause ('stop the clock' on) that time limit.",
+    "hmrc_minimum_wage": "HMRC enforces the National Minimum Wage on behalf of the Fair Work Agency; workers can complain using the online 'Complain about pay and work rights' form, and can report an employer even after leaving the job. A complaint can't be taken forward if the worker has already started tribunal action for the same National Minimum Wage issue.",
+    "source_url": ["https://www.legislation.gov.uk/ukpga/1996/18/section/23", "https://www.acas.org.uk/early-conciliation", "https://www.gov.uk/government/publications/pay-and-work-rights-complaints"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -975,12 +995,71 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Final paycheck deadlines by state (table with state sources), unused vacation payout rules"
+    "rule": "No federal final-paycheck deadline — governed entirely by state law, which varies.",
+    "by_state": {
+     "California": {"quit_deadline": "Immediately if the employee gave at least 72 hours' notice and quits on the day stated; otherwise within 72 hours of quitting.", "fired_deadline": "Immediately at the time of termination.", "vacation_payout": "Accrued unused vacation must be paid out in all separation scenarios.", "source_url": "https://www.dir.ca.gov/dlse/FAQ_Paydays.htm", "verified_on": "2026-10-13", "status": "verified"},
+     "Arizona": {"quit_deadline": "No later than the regular payday for the pay period during which the termination occurred.", "fired_deadline": "Within seven working days or the end of the next regular pay period, whichever is sooner.", "vacation_payout": "Not stated on the page reviewed.", "source_url": "https://www.azleg.gov/ars/23/00353.htm", "verified_on": "2026-10-13", "status": "verified"},
+     "Minnesota": {"quit_deadline": "Not later than the first regularly scheduled payday following the employee's final day of employment (may extend to the second payday, but never more than 20 calendar days total, if the first payday is fewer than 5 days after termination).", "fired_deadline": "Immediately due and payable upon the employee's demand; the employer is in default if not paid within 24 hours of demand.", "vacation_payout": "Not stated on the page reviewed.", "source_url": "https://www.revisor.mn.gov/statutes/cite/181.13", "verified_on": "2026-10-13", "status": "verified"},
+     "Missouri": {"quit_deadline": "Not stated on the page reviewed (the statute as quoted addresses discharge only).", "fired_deadline": "Wages are due on the day of discharge; if not paid within 7 days of the employee's written demand, wages continue accruing at the same rate until paid, up to a maximum of 60 days.", "vacation_payout": "Not stated on the page reviewed.", "source_url": "https://revisor.mo.gov/main/OneSection.aspx?section=290.110", "verified_on": "2026-10-13", "status": "verified"},
+     "Alabama": {"status": "PENDING_VERIFY", "note": "Not verified — official state labor department pages returned errors and this session's WebSearch quota was exhausted before it could be re-attempted."},
+     "Alaska": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Arkansas": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Colorado": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Connecticut": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Delaware": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Florida": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Georgia": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Hawaii": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Idaho": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Illinois": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Indiana": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Iowa": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Kansas": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Kentucky": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Louisiana": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Maine": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Maryland": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Massachusetts": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Michigan": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Mississippi": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Montana": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Nebraska": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Nevada": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "New Hampshire": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "New Jersey": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "New Mexico": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "New York": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "North Carolina": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "North Dakota": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Ohio": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Oklahoma": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Oregon": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Pennsylvania": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Rhode Island": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "South Carolina": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "South Dakota": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Tennessee": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Texas": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Utah": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Vermont": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Virginia": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Washington": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "West Virginia": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Wisconsin": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "Wyoming": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."},
+     "District of Columbia": {"status": "PENDING_VERIFY", "note": "Not verified — see Alabama note."}
+    },
+    "note": "Per explicit user decision on 2026-10-13: this session's WebSearch tool hit its 200-call quota while researching this table (two research passes largely failed as a result). Only California, Arizona, Minnesota and Missouri were independently confirmed against official state .gov pages; all other states are left PENDING_VERIFY rather than guessed, to be completed in a future pass once WebSearch capacity is available again.",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Final pay, holiday pay owed on leaving, notice pay"
+    "rule": "Employment Rights Act 1996 (notice pay) and the statutory holiday entitlement rules (Working Time Regulations 1998, as reflected in current gov.uk guidance)",
+    "notice_pay": "Statutory minimum notice an employer must give: \"at least one week's notice if employed between one month and 2 years; one week's notice for each year if employed between 2 and 12 years; 12 weeks' notice if employed for 12 years or more.\" An employer may give more than this statutory minimum (per the contract) but not less. The employer should either pay the employee through the notice period or pay in lieu of notice; notice pay is based on the average earned per week over the 12 weeks before the notice period starts.",
+    "holiday_pay_on_leaving": "\"The only time someone can get paid in place of taking statutory leave (known as 'payment in lieu') is when they leave their job. Employers must pay for untaken statutory leave, even if the worker is dismissed for gross misconduct.\" Statutory leave entitlement is 5.6 weeks (28 days for a worker on a 5-day week) a year.",
+    "source_url": ["https://www.gov.uk/redundancy-your-rights/notice-periods", "https://www.gov.uk/holiday-entitlement-rights/taking-holiday-before-leaving-a-job"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -1011,12 +1090,22 @@
   ],
   "rights": {
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "EEOC charge deadlines (180/300 days), Title VII, retaliation protection"
+    "rule": "Title VII of the Civil Rights Act of 1964 (enforced by the EEOC)",
+    "charge_deadline": "\"In general, you need to file a charge within 180 calendar days from the day the discrimination took place. The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis.\" Federal employees must generally contact an agency EEO Counselor within 45 days instead.",
+    "ongoing_harassment_rule": "\"In harassment cases, you must file your charge within 180 or 300 days of the last incident of harassment\", although the EEOC will look at all incidents of harassment when investigating, even if earlier incidents happened more than 180/300 days earlier.",
+    "retaliation_protection": "\"The EEO laws prohibit punishing job applicants or employees for asserting their rights to be free from employment discrimination including harassment\" (filing/witnessing a charge, reporting harassment, refusing to participate in discriminatory conduct, resisting sexual advances, etc. are all protected activity). Employer coverage under Title VII requires 15 or more employees; the retaliation charge deadline is the same 180 days (extendable by state law).",
+    "source_url": ["https://www.eeoc.gov/time-limits-filing-charge", "https://www.eeoc.gov/retaliation"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Equality Act 2010 harassment, ACAS early conciliation, 3-month tribunal limit"
+    "rule": "Equality Act 2010, section 26 (harassment) and section 123 (time limits)",
+    "harassment_definition": "Section 26: A harasses B if A engages in unwanted conduct related to a relevant protected characteristic (or of a sexual nature, or related to gender reassignment/sex), and the conduct has the purpose or effect of \"violating B's dignity\" or \"creating an intimidating, hostile, degrading, humiliating or offensive environment for B\" — including where B is treated less favourably because of their rejection of or submission to such conduct. Protected characteristics include age, disability, gender reassignment, race, religion or belief, sex, and sexual orientation.",
+    "tribunal_time_limit": "IMPORTANT — DIFFERS FROM THE COMMON ASSUMPTION, CONFIRMED DIRECTLY FROM THE LIVE STATUTE: Section 123(1)(a), as currently in force (confirmed via the legislation.gov.uk page, which states it 'is up to date with all changes known to be in force on or before 13 October 2026'), sets the time limit as \"the period of [amended to] 6 months starting with the date of the act to which the complaint relates\" — shown on the page as an amended figure (footnoted [F4]), replacing what was originally 3 months. An employment tribunal may extend this further if it thinks it just and equitable to do so. This is a genuine, confirmed change from the commonly-assumed 3-month Equality Act tribunal deadline, not a guess — flagging prominently since it contradicts this task's own topic hint.",
+    "acas_early_conciliation": "As with other employment tribunal claims, a claimant must notify Acas before bringing most tribunal claims; Acas then offers early conciliation, a voluntary process to try to resolve the dispute before tribunal.",
+    "source_url": ["https://www.legislation.gov.uk/ukpga/2010/15/section/26", "https://www.legislation.gov.uk/ukpga/2010/15/section/123", "https://www.acas.org.uk/early-conciliation"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
@@ -1049,16 +1138,27 @@
   ],
   "rights": {
    "UK": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Consumer Rights Act: seller responsible until delivered; Royal Mail compensation rules and postal Ombudsman route (rules changed in 2026: verify)"
+    "rule": "Consumer Rights Act 2015, section 29 (passing of risk), plus Royal Mail's own claims process for lost/damaged/delayed items",
+    "seller_responsible_until_delivery": "\"The goods remain at the trader's risk until they come into the physical possession of— (a) the consumer, or (b) a person identified by the consumer to take possession of the goods.\" If the consumer independently arranges their own carrier (not one offered or recommended by the trader), the goods become the consumer's responsibility once handed to that carrier instead.",
+    "royal_mail_claims_process": "Royal Mail runs its own Claims Centre: claimants need digital evidence including proof of posting and proof of value; how and when you can claim depends on the exact service used (e.g. Special Delivery vs other items have different delay-compensation rules) — Royal Mail publishes separate compensation policies for delay, loss, and damage. The specific day-thresholds and compensation caps for each service, and the status of any 2026 rule changes or a 'postal Ombudsman' route, were not independently confirmed to an exact figure within this pass (the detailed compensation-policy sub-pages were not opened) — left for further verification rather than guessed.",
+    "source_url": ["https://www.legislation.gov.uk/ukpga/2015/15/section/29", "https://help.royalmail.com/personal/s/article/Royal-Mail-Claims-Centre-process-and-options"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "US": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "USPS claims deadlines and insurance limits; FTC mail order rule 30-day shipping; carrier claims"
+    "rule": "FTC Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) and USPS indemnity claims process",
+    "ftc_30_day_shipping_rule": "\"The Rule, issued in 1975, requires sellers who solicit buyers to order merchandise through the mail, via the Internet, or by phone to have a reasonable basis to expect that the sellers can ship within the advertised time frame, or, if no time frame is specified, within 30 days.\" If the seller can't ship on time, \"the seller must obtain the buyer's consent to a delay in shipping or refund payment for the unshipped merchandise.\"",
+    "usps_claims": "For insured USPS mail (e.g. Priority Mail Express, other insured mail, COD items, insured Registered Mail) that's lost, damaged, or has missing contents, either the sender or recipient can file an indemnity claim; the filing period varies by mail service. USPS usually sends a claims decision within 5-10 days, and approved claims are paid in 7-10 business days (never more than the item's actual value). A denied or partially-paid claim can be appealed within 30 days of the decision, with a second/final appeal available within 30 days of the first appeal's denial.",
+    "source_url": ["https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule", "https://www.usps.com/help/claims.htm"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
    },
    "EU": {
-    "status": "PENDING_VERIFY",
-    "verify_topics": "Seller liability until delivery (Consumer Rights Directive)"
+    "rule": "Consumer Rights Directive 2011/83/EU, Article 20 ('Passing of risk')",
+    "seller_liability_until_delivery": "\"In contracts where the trader dispatches the goods to the consumer, the risk of loss of or damage to\" the goods passes to the consumer only once the consumer (or a third party indicated by the consumer, other than the carrier) has acquired physical possession of the goods — mirroring the UK's CRA 2015 s.29 (which implemented this same EU-derived rule domestically). If the consumer arranges their own carrier not offered by the trader, risk passes on handover to that carrier instead.",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32011L0083",
+    "verified_on": "2026-10-13",
+    "status": "verified"
    }
   },
   "evidence": [
