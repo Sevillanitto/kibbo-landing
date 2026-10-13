@@ -15,8 +15,9 @@
       "compensation": {"under_1500km": "£220", "1500_3500km": "£350", "over_3500km": "£260 (3-4h late) / £520 (4h+ late)"},
       "threshold": "Arrive 3+ hours late",
       "escalation": "Complain to airline; if unresolved after final response or 8 weeks, go to the airline's ADR provider, or CAA PACT if the airline has none.",
-      "time_limit": "NOT STATED BY CAA: verify limitation period before publishing",
-      "source": "https://www.caa.co.uk/passengers/resolving-travel-problems/delays-and-cancellations/delays/"
+      "time_limit": "The CAA does not publish a UK261-specific claim deadline. The general civil claim time limit applies instead: 6 years from the date of the flight in England and Wales (Limitation Act 1980, the standard limit for breach-of-contract claims), and 5 years in Scotland (Prescription and Limitation (Scotland) Act 1973, the standard prescriptive period for contractual obligations).",
+      "source_url": ["https://www.caa.co.uk/air-passengers/travel-problems-and-rights/flight-delays-and-cancellations/delays/", "https://www.legislation.gov.uk/ukpga/1980/58/section/5", "https://www.legislation.gov.uk/ukpga/1973/52/section/6"],
+      "verified_on": "2026-10-13"
     },
     "EU": {
       "rule": "EU261",
@@ -32,8 +33,9 @@
       "refund": "Full refund (incl. taxes/fees) if the airline cancels or significantly changes the flight and you decline the alternative. Significant change: >3h domestic, >6h international.",
       "baggage": "Checked-bag fee refund if bag not delivered within 12h (domestic) / 15-30h (international).",
       "timeline": "Card payments: within 7 business days. Other methods: within 20 calendar days.",
-      "no_compensation_note": "Rule covers refunds only, not compensation. DOT has a separate proposal on compensation: check status before publishing.",
-      "source": "https://www.transportation.gov/briefing-room/biden-harris-administration-announces-final-rule-requiring-automatic-refunds-airline"
+      "no_compensation_note": "DOT does not require airlines to pay cash compensation for domestic flight delays or cancellations, unlike the UK/EU rules — this rule covers refunds only. Some airlines voluntarily commit to compensation or amenities (meals, hotels, rebooking) for disruptions within their control; check the DOT's Airline Customer Service Dashboard for what a specific airline has committed to. DOT states it will hold airlines accountable to those commitments.",
+      "source_url": ["https://www.transportation.gov/individuals/aviation-consumer-protection/refunds", "https://www.transportation.gov/airconsumer/airline-customer-service-dashboard"],
+      "verified_on": "2026-10-13"
     }
   },
   "evidence": ["Booking confirmation", "Boarding pass", "Screenshot of actual vs scheduled arrival time", "Airline messages explaining the cause", "Receipts for meals/hotel/transport"],
