@@ -1,0 +1,840 @@
+[
+ {
+  "slug": "lost-luggage",
+  "block": "Travel",
+  "countries": [
+   "UK",
+   "EU",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "rule": "Montreal Convention baggage liability, as applied by UK carriers (CAA guidance)",
+    "complaint_deadlines": "Contact the airline in writing within seven days for lost or stolen items, or damaged baggage; within 21 days for delayed bags, counted from receiving the delayed bag.",
+    "liability_limit": "No fixed statutory UK figure is quoted by the CAA beyond the Convention limit; the CAA states the maximum will be \"around £1000\", though it would be rare to receive this much — actual payout depends on proven value of contents.",
+    "source_url": "https://www.caa.co.uk/air-passengers/about-your-trip/baggage/lost-delayed-or-damaged-baggage/",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "EU": {
+    "rule": "Montreal Convention (Regulation (EC) No 2027/97 as amended by Regulation (EC) No 889/2002, giving the Convention force in EU law)",
+    "complaint_deadlines": "Written complaint to the carrier within 7 days of receipt for damaged baggage, and within 21 days of the date the baggage was placed at the passenger's disposal for delayed baggage.",
+    "liability_limit": "Montreal Convention Article 22(2) liability for destruction, loss, damage or delay of baggage is currently 1,519 Special Drawing Rights (SDR) per passenger, the figure most recently adjusted by ICAO for inflation (confirmed via the current US DOT baggage-liability page, which tracks the same treaty limit); a passenger can secure a higher limit by making a special declaration of value at check-in and paying a supplementary fee.",
+    "source_url": "https://www.transportation.gov/lost-delayed-or-damaged-baggage",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "US": {
+    "rule": "DOT domestic baggage liability regulation (14 CFR 254) and the Montreal Convention for international flights",
+    "domestic_liability_limit": "\"The maximum liability amount allowed by the regulation is $4,700 per passenger\" for lost, damaged or delayed bags on domestic flights; airlines may pay more but are not required to.",
+    "international_liability_limit": "For most international flights, the Montreal Convention applies: \"The maximum baggage liability for flights covered by the Montreal Convention is currently 1,519 Special Drawing Rights (approximately $2,175.00 US) per passenger.\"",
+    "fee_refund_rule": "A bag fee must be refunded if the bag is declared lost, or is \"significantly delayed\" — not delivered within 12 hours of a domestic flight's arrival (15 hours for international flights of 12 hours or less; 30 hours for longer international flights) — provided a mishandled baggage report was filed.",
+    "source_url": "https://www.transportation.gov/lost-delayed-or-damaged-baggage",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   }
+  },
+  "evidence": [
+   "Baggage tag and boarding pass",
+   "Property Irregularity Report (PIR) filed at the airport",
+   "Photos of damage",
+   "Inventory of contents with values",
+   "Receipts for emergency purchases"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/eu-baggage-claim-montreal",
+    "/generate/flight-disruption-compensation-reimbursement"
+   ],
+   "templates": [
+    "/templates/lost-luggage-inventory-template",
+    "/templates/flight-disruption-expense-tracker"
+   ],
+   "checklists": [
+    "/checklists/baggage-claim-checklist"
+   ],
+   "kits": [
+    "/kits/lost-damaged-luggage"
+   ]
+  }
+ },
+ {
+  "slug": "rental-deposit-not-returned",
+  "block": "Home & Rentals",
+  "countries": [
+   "UK",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "rule": "Tenancy Deposit Protection (Housing Act 2004 Part 6 Chapter 4, as amended) — England and Wales assured shorthold tenancies starting after 6 April 2007",
+    "protection_deadline": "The landlord (or letting agent) must put the deposit in a government-backed tenancy deposit protection (TDP) scheme within 30 days of receiving it.",
+    "return_deadline": "The deposit must be returned to the tenant within 10 days of landlord and tenant agreeing how much they'll get back.",
+    "penalty_for_not_protecting": "Under Housing Act 2004 s.214 (as amended), if the landlord failed to protect the deposit or give the required prescribed information, a court must order the landlord to pay the tenant a sum \"not less than the amount of the deposit and not more than three times the amount of the deposit\", within 14 days of the court order.",
+    "dispute_route": "If the deposit is protected in an 'insured' scheme and there's a dispute, the landlord/agent must give the deposit to the TDP scheme, which holds it until the dispute is settled via the scheme's free alternative dispute resolution service.",
+    "source_url": ["https://www.gov.uk/deposit-protection-schemes-and-landlords", "https://www.legislation.gov.uk/ukpga/2004/34/section/214"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "State deposit return deadlines and penalties (give a table by state with each state statute source), small claims route"
+   }
+  },
+  "evidence": [
+   "Tenancy agreement",
+   "Proof of deposit payment and protection certificate",
+   "Move-in and move-out condition photos",
+   "Inventory report",
+   "Messages with landlord"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/landlord-deposit-demand-letter"
+   ],
+   "templates": [
+    "/templates/security-deposit-dispute-tracker",
+    "/templates/move-in-move-out-condition-report",
+    "/templates/moving-out-documentation-pack"
+   ],
+   "checklists": [
+    "/checklists/moving-out-deposit",
+    "/checklists/deposit-dispute-evidence"
+   ],
+   "calculators": [
+    "/housing-rentals/calculators/security-deposit-return-calculator"
+   ],
+   "kits": [
+    "/kits/unreturned-rental-deposit"
+   ]
+  }
+ },
+ {
+  "slug": "illegal-eviction",
+  "block": "Home & Rentals",
+  "countries": [
+   "UK",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "rule": "Protection from Eviction Act 1977, section 1",
+    "what_is_unlawful": "It is a criminal offence to unlawfully deprive a residential occupier of occupation of the premises (or any part), or to attempt to, unless the person believed (with reasonable cause) that the occupier had ceased to reside there. It is also an offence for a landlord or their agent, with intent to cause the occupier to leave or stop exercising a right, to do acts likely to interfere with their peace or comfort, or to persistently withdraw/withhold services reasonably required for occupying the premises (e.g. cutting off utilities).","penalties":"On summary conviction: a fine and/or up to 6 months' imprisonment. On conviction on indictment: an unlimited fine and/or up to 2 years' imprisonment.",
+    "who_to_contact": "\"Contact the police if physical violence or threats are involved or if someone is trying to remove you or your belongings from the property without either a court order or court appointed bailiff.\" For non-emergencies: \"Talk to your local council if you think you're being harassed or threatened with illegal eviction.\" Also: a legal adviser, Citizens Advice, or Shelter's housing advice helpline.",
+    "remedies": "A tenant may be able to \"be let back into your home\", \"claim compensation\", or \"apply for a rent repayment order\"; local councils can take legal action if there's enough evidence of harassment or illegal eviction.",
+    "source_url": ["https://www.legislation.gov.uk/ukpga/1977/43/section/1", "https://www.gov.uk/government/publications/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction/my-landlord-wants-me-out-protection-against-harassment-and-illegal-eviction"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "US": {
+    "rule": "No single federal statute bans self-help eviction for private tenancies generally — eviction procedure is governed by state/local landlord-tenant law, which in nearly all states requires a court order before a tenant can be removed or locked out. A specific federal rule exists for HUD-assisted housing.",
+    "hud_assisted_housing_rule": "For HUD-assisted housing, HUD prohibits lease clauses that would let an owner/PHA evict a tenant or seize/sell belongings without legal proceedings, or turn off utilities to force a tenant out; \"an owner must not evict any tenant except by judicial action pursuant to state and local laws.\"",
+    "general_private_tenancies": "Self-help eviction (lockouts, utility shutoffs, removing belongings without a court order) is illegal in the large majority of states under their own landlord-tenant statutes, but the specific penalty and procedure vary by state — check the tenant's specific state statute.",
+    "source_url": "https://www.hud.gov/sites/dfiles/PIH/documents/PHOG_LeaseRequirements.pdf",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   }
+  },
+  "evidence": [
+   "Tenancy agreement",
+   "Dated record of lockout or utility cut-off",
+   "Photos/video",
+   "Witness details",
+   "Messages and notices from landlord"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/illegal-eviction-warning-letter"
+   ],
+   "templates": [
+    "/templates/eviction-response-workbook"
+   ],
+   "checklists": [
+    "/checklists/illegal-lockout-emergency"
+   ],
+   "kits": [
+    "/kits/illegal-eviction-unresolved-repairs"
+   ]
+  }
+ },
+ {
+  "slug": "landlord-wont-repair",
+  "block": "Home & Rentals",
+  "countries": [
+   "UK",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "rule": "Landlord and Tenant Act 1985 s.11, Homes (Fitness for Human Habitation) Act 2018, and (for social housing) Awaab's Law",
+    "s11_duty": "Section 11 implies a covenant that the landlord will keep in repair the structure and exterior of the dwelling (including drains, gutters, external pipes), and keep in repair and proper working order the installations for water, gas, electricity, sanitation, and space/water heating — subject to exceptions (e.g. tenant's own tenant-like-use damage, destruction by fire/flood/tempest).",
+    "hfhha_2018": "The Homes (Fitness for Human Habitation) Act 2018 requires rented homes in England to be 'fit for human habitation' (safe, healthy, free from serious hazards e.g. damp/mould, structural problems, inadequate heating, carbon monoxide, electrical/fire hazards). If not, the tenant can take the landlord to court, which can order repairs and/or compensation. Applies immediately to tenancies signed on or after 20 March 2019; tenancies signed before that date were covered from 20 March 2020 (or sooner if a new tenancy/rolling contract started).",
+    "awaabs_law_status": "In force for the SOCIAL rented sector only, from 27 October 2025: social landlords must fix emergency health/safety hazards within 24 hours of reporting, investigate significant damp/mould within 10 working days and make the property safe within 5 working days, and report inspection findings to the tenant within 3 working days. From 30 November 2026 this is due to expand to further hazards (excess cold/heat, falls, structural collapse, fire/explosion, electrical hazards, domestic hygiene). Does not currently apply to private rented tenancies.",
+    "council_route": "Tenants of private landlords can report serious hazards to the council's environmental health team, which can assess the property under the Housing Health and Safety Rating System (HHSRS) and require the landlord to make repairs.",
+    "source_url": ["https://www.legislation.gov.uk/ukpga/1985/70/section/11", "https://www.gov.uk/government/publications/homes-fitness-for-human-habitation-act-2018/guide-for-tenants-homes-fitness-for-human-habitation-act-2018", "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "US": {
+    "rule": "No single federal implied warranty of habitability for private rentals — this is a state common-law/statutory doctrine that varies by state; HUD only sets specific repair/habitability rules for HUD-assisted housing.",
+    "general_principle": "Most states recognize an implied warranty of habitability requiring landlords to maintain rental housing in a livable condition, and many states allow tenants a 'repair and deduct' remedy (paying for the repair and deducting the cost from rent, usually within statutory dollar/frequency limits) or rent withholding/escrow — but the existence, procedure, and limits of these remedies vary by state statute, so the tenant should check their specific state's landlord-tenant law.",
+    "hud_assisted_housing_only": "For HUD-assisted housing specifically, HUD sets its own resident rights to timely repairs and a quality maintenance program under the applicable HUD occupancy handbook/lease requirements.",
+    "note": "No general-purpose federal .gov source was found stating a single nationwide habitability/repair-and-deduct rule; this topic is state-specific and was not expanded into a 50-state table (not requested for this claim).",
+    "source_url": "https://www.hud.gov/sites/documents/doc_12162.pdf",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   }
+  },
+  "evidence": [
+   "Dated written repair requests",
+   "Photos/video of the problem",
+   "Landlord replies",
+   "Log of impact (health, damage)",
+   "Inspection reports"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/repair-request-formal-notice"
+   ],
+   "templates": [
+    "/templates/repair-request-habitability-log"
+   ],
+   "checklists": [
+    "/checklists/habitability-issue",
+    "/checklists/repair-and-deduct-eligibility"
+   ],
+   "kits": [
+    "/kits/illegal-eviction-unresolved-repairs"
+   ]
+  }
+ },
+ {
+  "slug": "rent-increase",
+  "block": "Home & Rentals",
+  "countries": [
+   "UK",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "rule": "Housing Act 1988 s.13 ('section 13 process'), as applied to assured periodic tenancies under the regime in force since the Renters' Rights Act 2025 reforms commenced on 1 May 2026",
+    "when_and_how": "A landlord can only increase the rent once a year, and cannot increase it in the first year of the tenancy. The landlord must give at least 2 months' notice using form 4A ('Landlord's notice proposing a new rent'), delivered in person, by post, or by email if the tenancy agreement allows it.",
+    "tribunal_challenge": "If the tenant thinks the proposed increase is higher than the 'open market rent' (what the landlord could expect letting the property afresh on the open market), they can ask the First-tier Tribunal to review it.",
+    "transitional_rule": "Rent review clauses in tenancy agreements can no longer be used for rent increases taking effect after 1 May 2026, even if agreed before that date. If notice was given using the old 'form 4' before 1 May 2026, its notice period/increase still applies even if the new rent starts after that date, and the tenant can still challenge it at the Tribunal. After any increase (via form 4 or a rent review clause), the next increase cannot take effect until at least a year after the last one did.",
+    "source_url": "https://www.gov.uk/assured-periodic-tenancies-tenants/rent-increases",
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   },
+   "US": {
+    "rule": "No federal law on rent increase notice periods or rent control — governed entirely by state/local law, which varies widely. Most states have no rent control and simply require the same notice as for ending a periodic tenancy (commonly 30 days, longer in some states/cities).",
+    "state_examples_verified": "California (Tenant Protection Act of 2019 / AB 1482): for most covered rental units, rent increases are capped at 5% plus the regional CPI change, or 10%, whichever is lower, over any 12-month period, with no more than 2 increases in a 12-month period. Oregon (SB 608 as amended by SB 611): statewide rent increases on most tenancies are capped at 7% plus CPI or 10%, whichever is lower, published annually by the state; landlords must also give 90 days' notice of a rent increase (HB 3113).",
+    "note": "This claim's verify_topics did not request a full 50-state table; only the two statewide rent-control examples above (CA, OR) were independently verified against state .gov sources. Other states' specific notice periods/rent-control status were not individually verified in this pass.",
+    "source_url": ["https://oag.ca.gov/rentcaps", "https://www.oregon.gov/ohcs/compliance-monitoring/Documents/rent-increase-policy-april-2025.pdf"],
+    "verified_on": "2026-10-13",
+    "status": "verified"
+   }
+  },
+  "evidence": [
+   "Tenancy agreement",
+   "The increase notice with date served",
+   "Rent payment history",
+   "Comparable local rents"
+  ],
+  "tools": {
+   "templates": [
+    "/templates/rent-increase-notice-tracker"
+   ],
+   "checklists": [
+    "/checklists/rental-contract-red-flags"
+   ],
+   "calculators": [
+    "/housing-rentals/calculators/rent-increase-calculator"
+   ]
+  }
+ },
+ {
+  "slug": "refund-defective-product",
+  "block": "Shopping",
+  "countries": [
+   "UK",
+   "US",
+   "EU"
+  ],
+  "rights": {
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Consumer Rights Act 2015: 30-day short-term right to reject, 6-month presumption, repair or replace, time limits"
+   },
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "No general federal return right; FTC rules on refunds, state rules, warranty (Magnuson-Moss)"
+   },
+   "EU": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Legal guarantee of 2 years and 14-day withdrawal right (europa.eu)"
+   }
+  },
+  "evidence": [
+   "Order confirmation and receipt",
+   "Photos/video of the fault",
+   "Seller messages",
+   "Proof of return"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/refund-warranty-claim",
+    "/generate/marketplace-complaint",
+    "/generate/eu-legal-guarantee-demand",
+    "/generate/eu-withdrawal-right-letter",
+    "/generate/state-ag-complaint"
+   ],
+   "templates": [
+    "/templates/return-refund-evidence-pack",
+    "/templates/ecommerce-refund-cancellation-tracker"
+   ],
+   "checklists": [
+    "/checklists/return-policy-checker"
+   ],
+   "calculators": [
+    "/shopping-ecommerce/calculators/total-purchase-cost-calculator"
+   ]
+  }
+ },
+ {
+  "slug": "cancel-subscription",
+  "block": "Subscriptions",
+  "countries": [
+   "US",
+   "UK",
+   "EU"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "FTC Click-to-Cancel rule status (it was vacated by a court in 2025: confirm current status), ROSCA, state auto-renewal laws"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "DMCC Act subscription rules and commencement date, cooling-off, reminder notices"
+   },
+   "EU": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Consumer Rights Directive cancellation, renewal notices"
+   }
+  },
+  "evidence": [
+   "Sign-up confirmation and terms",
+   "Proof of cancellation attempts (screenshots, emails)",
+   "Payment statements",
+   "Chat/phone call records"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/subscription-service-cancellation",
+    "/generate/eu-subscription-cancellation-demand"
+   ],
+   "templates": [
+    "/templates/cancellation-letter-pack",
+    "/templates/subscription-tracker"
+   ],
+   "checklists": [
+    "/checklists/subscription-cancellation-checklist",
+    "/checklists/free-trial-safety-checklist"
+   ],
+   "calculators": [
+    "/subscriptions-services/calculators/cancellation-cost-calculator"
+   ],
+   "kits": [
+    "/kits/subscription-gym-cancellation"
+   ]
+  }
+ },
+ {
+  "slug": "charged-after-cancelling",
+  "block": "Subscriptions",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Fair Credit Billing Act dispute window; ROSCA; state laws"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Card chargeback / Section 75 route; FCA rules on continuous payment authorities (CPA cancellation right)"
+   }
+  },
+  "evidence": [
+   "Cancellation confirmation",
+   "Statement showing charge after cancellation",
+   "Messages with the company"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/subscription-service-billing-dispute",
+    "/generate/chargeback-letter"
+   ],
+   "templates": [
+    "/templates/service-cancellation-refund-evidence-pack"
+   ],
+   "checklists": [
+    "/checklists/post-cancellation-charge-checklist"
+   ],
+   "kits": [
+    "/kits/wrongful-charge-after-cancellation"
+   ]
+  }
+ },
+ {
+  "slug": "insurance-claim-denied",
+  "block": "Insurance",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "State insurance department complaint route, internal appeal and bad-faith rules, ERISA for employer plans, deadlines by state"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "FCA ICOBS claims handling rules, 8 weeks to final response, Financial Ombudsman 6-month deadline"
+   }
+  },
+  "evidence": [
+   "Policy documents",
+   "Denial letter with reasons",
+   "Claim file and correspondence",
+   "Photos, invoices, expert reports"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/insurance-denial-coverage-dispute-generator",
+    "/generate/insurance-claim-followup-escalation-generator"
+   ],
+   "templates": [
+    "/templates/insurance-denial-dispute-evidence-pack"
+   ],
+   "checklists": [
+    "/checklists/insurance-claim-denial-review-checklist"
+   ],
+   "kits": [
+    "/kits/denied-delayed-insurance-claim"
+   ]
+  }
+ },
+ {
+  "slug": "medical-bill-dispute",
+  "block": "Health",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "No Surprises Act (surprise billing, good-faith estimate, dispute process), itemised bill rights, nonprofit hospital financial assistance"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "NHS complaint route, private provider complaint and ISCAS / Ombudsman"
+   }
+  },
+  "evidence": [
+   "Itemised bill",
+   "Explanation of Benefits (EOB)",
+   "Insurance policy",
+   "Records of calls with billing"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/healthcare-billing-dispute-refund-letter",
+    "/generate/healthcare-insurance-appeal-letter"
+   ],
+   "templates": [
+    "/templates/medical-billing-dispute-tracker"
+   ],
+   "checklists": [
+    "/checklists/medical-bill-invoice-review"
+   ],
+   "kits": [
+    "/kits/medical-billing-dispute-insurance-appeal"
+   ],
+   "real_cases": [
+    "/real-cases/appendectomy-55000-bill-breakdown-us",
+    "/real-cases/childbirth-er-coding-bill-us"
+   ]
+  }
+ },
+ {
+  "slug": "medical-records-request",
+  "block": "Health",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "HIPAA right of access: response deadline (30 days), allowed fees"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "UK GDPR subject access: 1 month, free; NHS route"
+   }
+  },
+  "evidence": [
+   "ID",
+   "Provider details and dates of treatment",
+   "Written request with date sent"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/medical-records-request-letter"
+   ],
+   "templates": [
+    "/templates/medical-records-request-access-tracker"
+   ],
+   "checklists": [
+    "/checklists/health-insurance-claim"
+   ]
+  }
+ },
+ {
+  "slug": "unpaid-wages",
+  "block": "Work",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "FLSA minimum wage and overtime, DOL Wage and Hour complaint, state wage laws, limitation periods"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Unlawful deduction from wages, ACAS early conciliation, 3-month tribunal limit, HMRC minimum wage"
+   }
+  },
+  "evidence": [
+   "Contract or offer letter",
+   "Payslips",
+   "Timesheets",
+   "Bank statements",
+   "Messages about pay"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/dol-wage-complaint",
+    "/generate/unpaid-wage-compensation-demand",
+    "/generate/wrongful-wage-deduction-letter"
+   ],
+   "templates": [
+    "/templates/employment-communication-log"
+   ],
+   "checklists": [
+    "/checklists/gig-worker-earnings-checklist"
+   ],
+   "kits": [
+    "/kits/unpaid-wages-wrongful-deduction"
+   ]
+  }
+ },
+ {
+  "slug": "final-paycheck",
+  "block": "Work",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Final paycheck deadlines by state (table with state sources), unused vacation payout rules"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Final pay, holiday pay owed on leaving, notice pay"
+   }
+  },
+  "evidence": [
+   "Resignation or termination letter",
+   "Last payslip",
+   "Timesheets",
+   "Holiday balance"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/unpaid-wage-compensation-demand"
+   ],
+   "calculators": [
+    "/employment/calculators/final-pay-calculator",
+    "/employment/calculators/notice-period-calculator"
+   ],
+   "kits": [
+    "/kits/unpaid-wages-wrongful-deduction"
+   ]
+  }
+ },
+ {
+  "slug": "workplace-harassment",
+  "block": "Work",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "EEOC charge deadlines (180/300 days), Title VII, retaliation protection"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Equality Act 2010 harassment, ACAS early conciliation, 3-month tribunal limit"
+   }
+  },
+  "evidence": [
+   "Dated incident log",
+   "Witnesses",
+   "Emails/messages",
+   "Complaints made and replies",
+   "Medical or HR records if any"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/workplace-harassment-complaint",
+    "/generate/constructive-dismissal-complaint"
+   ],
+   "templates": [
+    "/templates/employment-communication-log"
+   ],
+   "kits": [
+    "/kits/workplace-harassment"
+   ]
+  }
+ },
+ {
+  "slug": "lost-parcel",
+  "block": "Parcels",
+  "countries": [
+   "UK",
+   "US",
+   "EU"
+  ],
+  "rights": {
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Consumer Rights Act: seller responsible until delivered; Royal Mail compensation rules and postal Ombudsman route (rules changed in 2026: verify)"
+   },
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "USPS claims deadlines and insurance limits; FTC mail order rule 30-day shipping; carrier claims"
+   },
+   "EU": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Seller liability until delivery (Consumer Rights Directive)"
+   }
+  },
+  "evidence": [
+   "Order confirmation",
+   "Tracking history",
+   "Proof of value",
+   "Seller and courier messages",
+   "Photos if damaged"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/lost-parcel-demand",
+    "/generate/courier-complaint-generator",
+    "/generate/vendor-compensation-demand-letter"
+   ],
+   "templates": [
+    "/templates/lost-parcel-claim-pack",
+    "/templates/delivery-evidence-log"
+   ],
+   "checklists": [
+    "/checklists/lost-parcel-verification-checklist",
+    "/checklists/postal-ombudsman-escalation-checklist",
+    "/checklists/usps-claims-checklist"
+   ],
+   "calculators": [
+    "/delivery-parcels/calculators/lost-parcel-claim-calculator"
+   ],
+   "kits": [
+    "/kits/lost-stolen-package"
+   ]
+  }
+ },
+ {
+  "slug": "unexpected-customs-charges",
+  "block": "Parcels",
+  "countries": [
+   "UK",
+   "US",
+   "EU"
+  ],
+  "rights": {
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Post-Brexit import VAT and duty rules, £135 threshold, courier handling fees, how to dispute"
+   },
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "De minimis rule status for low-value imports (changed in 2025: verify current status)"
+   },
+   "EU": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "EU €150 duty threshold and VAT import scheme (IOSS), 2026 changes: verify"
+   }
+  },
+  "evidence": [
+   "Order invoice with country of origin",
+   "Customs charge notice",
+   "Courier fee breakdown",
+   "Seller's checkout terms (DDP/DAP)"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/customs-fee-dispute-generator"
+   ],
+   "templates": [
+    "/templates/customs-duty-import-fee-dispute-worksheet"
+   ],
+   "checklists": [
+    "/checklists/unexpected-customs-charges-checklist",
+    "/checklists/import-customs-warning-checklist"
+   ],
+   "calculators": [
+    "/shopping-ecommerce/calculators/total-purchase-cost-calculator"
+   ],
+   "kits": [
+    "/kits/unexpected-customs-charges"
+   ]
+  }
+ },
+ {
+  "slug": "used-car-hidden-fault",
+  "block": "Vehicles",
+  "countries": [
+   "UK",
+   "US"
+  ],
+  "rights": {
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Consumer Rights Act for dealer sales: 30-day right to reject, 6-month presumption, satisfactory quality; private sales: 'as described' only"
+   },
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "FTC Used Car Rule, implied warranty, state lemon laws for used cars (varies)"
+   }
+  },
+  "evidence": [
+   "Advert/listing",
+   "Sales contract and invoice",
+   "Inspection or MOT history",
+   "Independent mechanic report",
+   "Messages with seller"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/vehicle-purchase-warranty-complaint-generator"
+   ],
+   "templates": [
+    "/templates/car-dealer-dispute-evidence-pack",
+    "/templates/used-car-purchase-inspection-pack"
+   ],
+   "checklists": [
+    "/checklists/car-warranty-claim-checklist",
+    "/checklists/vehicle-history-verification-checklist"
+   ],
+   "kits": [
+    "/kits/used-car-hidden-fault"
+   ]
+  }
+ },
+ {
+  "slug": "crypto-scam",
+  "block": "Crypto & Scams",
+  "countries": [
+   "US",
+   "UK"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Where to report (FTC, FBI IC3, CFTC, SEC), what recovery is realistic, card/bank reversal options"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Report to Action Fraud / Police Scotland, FCA warning list, bank APP fraud reimbursement scope for crypto transfers (usually excluded: verify)"
+   }
+  },
+  "evidence": [
+   "Wallet addresses and transaction hashes",
+   "Screenshots of conversations and sites",
+   "Payment records",
+   "Dates and amounts"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/crypto-complaint-generator"
+   ],
+   "checklists": [
+    "/checklists/crypto-scam-red-flags-checklist"
+   ],
+   "kits": [
+    "/kits/crypto-scam-recovery"
+   ]
+  }
+ },
+ {
+  "slug": "frozen-crypto-account",
+  "block": "Crypto & Scams",
+  "countries": [
+   "US",
+   "UK",
+   "EU"
+  ],
+  "rights": {
+   "US": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "Exchange obligations (KYC/AML), CFPB/state regulator complaint routes, arbitration clauses"
+   },
+   "UK": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "FCA registered crypto firms, Financial Ombudsman jurisdiction over crypto (usually limited: verify)"
+   },
+   "EU": {
+    "status": "PENDING_VERIFY",
+    "verify_topics": "MiCA complaint-handling duties (verify dates in force)"
+   }
+  },
+  "evidence": [
+   "Account notice and reason given",
+   "KYC documents submitted",
+   "Support ticket history",
+   "Transaction history and source of funds"
+  ],
+  "tools": {
+   "generators": [
+    "/generate/exchange-account-freeze-response",
+    "/generate/source-of-funds-package-generator"
+   ],
+   "templates": [
+    "/templates/source-of-funds-explanation-letter"
+   ],
+   "checklists": [
+    "/checklists/frozen-account-response-checklist",
+    "/checklists/kyc-verification-checklist"
+   ],
+   "kits": [
+    "/kits/frozen-locked-exchange-account"
+   ]
+  }
+ }
+]
