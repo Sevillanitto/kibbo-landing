@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-image-preview:large">
+<title>The CFPB Complaint Vault: Open Data and Research on 18 Million US Consumer Complaints | Kibbo</title>
+<meta name="description" content="An open research project on the CFPB complaint database: dataset with DOI, methodology, the main investigation, real cases and teaching materials.">
+<link rel="canonical" href="https://www.getkibbo.com/investigations/cfpb-complaint-vault">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kibbo">
+<meta property="og:title" content="The CFPB Complaint Vault: Open Data and Research on 18 Million US Consumer Complaints">
+<meta property="og:description" content="An open research project on the CFPB complaint database: dataset with DOI, methodology, the main investigation, real cases and teaching materials.">
+<meta property="og:url" content="https://www.getkibbo.com/investigations/cfpb-complaint-vault">
+<meta property="og:image" content="https://www.getkibbo.com/investigations-images/TheCFPBComplaintVault-hero.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The CFPB Complaint Vault: Open Data and Research on 18 Million US Consumer Complaints">
+<meta name="twitter:description" content="An open research project on the CFPB complaint database: dataset with DOI, methodology, the main investigation, real cases and teaching materials.">
+<meta name="twitter:image" content="https://www.getkibbo.com/investigations-images/TheCFPBComplaintVault-hero.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+<script src="/cookie-consent.js" defer></script>
+<script src="/newsletter-signup.js" defer></script>
+<script src="/kibbo-navbar.js" defer></script>
+
+
+<!-- JSON-LD CollectionPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "The CFPB Complaint Vault",
+  "description": "An open research project on the CFPB complaint database: dataset with DOI, methodology, the main investigation, real cases and teaching materials.",
+  "url": "https://www.getkibbo.com/investigations/cfpb-complaint-vault",
+  "dateModified": "2026-10-14",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibbo Research",
+    "url": "https://www.getkibbo.com/research"
+  },
+  "hasPart": [
+    {
+      "@type": "Article",
+      "name": "The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database",
+      "url": "https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints"
+    },
+    {
+      "@type": "Dataset",
+      "name": "The CFPB Complaint Vault Dataset (Version 1.0)",
+      "identifier": "https://doi.org/10.5281/zenodo.23188842",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "url": "https://doi.org/10.5281/zenodo.23188842"
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.getkibbo.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Investigations",
+        "item": "https://www.getkibbo.com/investigations"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "The CFPB Complaint Vault",
+        "item": "https://www.getkibbo.com/investigations/cfpb-complaint-vault"
+      }
+    ]
+  }
+}
+</script>
+
+<link rel="stylesheet" href="/styles.css">
+<style>
+  :root {
+    --bg: #F7F5F0;
+    --bg-dark: #141210;
+    --accent-green: #3D6B4F;
+    --accent-amber: #C8922A;
+    --accent-terra: #B85C3A;
+    --font-serif: 'Syne', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --text-primary: #1A1815;
+    --text-secondary: #56504A;
+    --border-soft: #E4DFD5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--bg); color: var(--text-primary); line-height: 1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .hero-image { width: 100%; aspect-ratio: 1600 / 900; object-fit: cover; display: block; }
+  .hero-clear { padding-top: 64px; background: var(--bg); }
+  .breadcrumb-inv { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 0 0 24px; color: var(--accent-green); }
+  .breadcrumb-inv a { color: var(--accent-green); text-decoration: none; }
+  .breadcrumb-inv a:hover { color: var(--text-primary); }
+  .dataset-block p.dataset-more { margin: 14px 0 0; font-size: 14.5px; line-height: 1.9; }
+  .dataset-block p.dataset-more a { color: var(--accent-green); font-weight: 600; text-decoration: none; }
+
+
+
+  .art-header { padding: 56px 0 28px; }
+  .art-category { display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 18px; }
+  .art-header h1 { font-family: var(--font-serif); font-size: 38px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+  .art-dek { font-size: 19px; color: var(--text-secondary); max-width: 660px; }
+  .art-meta { display: flex; gap: 18px; margin-top: 22px; font-size: 13px; color: var(--text-secondary); flex-wrap: wrap; }
+
+
+  .art-body h2 { font-family: var(--font-serif); font-size: 27px; font-weight: 700; margin: 52px 0 18px; }
+  .art-body h3 { font-family: var(--font-sans); font-size: 18px; font-weight: 700; margin: 30px 0 10px; }
+  .art-body p { margin-bottom: 17px; font-size: 17px; }
+  .art-body ul, .art-body ol { margin: 0 0 17px 22px; }
+  .art-body li { margin-bottom: 8px; font-size: 17px; }
+
+  .lede { font-size: 20px; color: var(--text-primary); font-weight: 500; margin-bottom: 20px; }
+
+  table.data-table { width: 100%; border-collapse: collapse; margin: 24px 0 30px; font-size: 15px; }
+  table.data-table th { text-align: left; padding: 10px 12px; font-weight: 700; border-bottom: 2px solid var(--text-primary); }
+  table.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  table.data-table tr:last-child td { border-bottom: 1px solid var(--text-primary); }
+
+  .dw-embed { margin: 30px 0 36px; }
+  .dw-caption { font-size: 14px; color: var(--text-secondary); margin-top: 8px; font-style: italic; }
+
+  figure.doc-shot { margin: 30px 0 36px; }
+  figure.doc-shot img { width: 100%; height: auto; border: 1px solid var(--border-soft); display: block; }
+  figure.doc-shot figcaption { font-size: 14px; color: var(--text-secondary); margin-top: 10px; }
+  figure.doc-shot figcaption a { color: var(--accent-green); }
+
+  blockquote.pull-quote { border-left: 3px solid var(--text-primary); padding-left: 22px; margin: 28px 0; font-size: 20px; line-height: 1.5; font-family: var(--font-serif); font-weight: 600; color: var(--text-primary); }
+  blockquote.pull-quote cite { display: block; margin-top: 10px; font-family: var(--font-sans); font-size: 14px; font-weight: 500; font-style: normal; color: var(--text-secondary); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--border-soft); margin: 48px 0; }
+
+  .dataset-block { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0; margin: 20px 0 40px; }
+  .dataset-block .label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+  .dataset-block h3 { margin: 0 0 10px; }
+  .dataset-block p { font-size: 15.5px; color: var(--text-secondary); margin-bottom: 14px; }
+  .dataset-block a.download-link { font-weight: 700; color: var(--accent-green); text-decoration: underline; }
+
+  .related-list { list-style: none; margin: 0; }
+  .related-list li { border-bottom: 1px solid var(--border-soft); padding: 14px 0; }
+  .related-list a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 16px; }
+  .related-list a:hover { color: var(--accent-green); }
+
+  .sources-list { list-style: none; margin: 0; }
+  .sources-list li { margin-bottom: 10px; font-size: 14.5px; }
+  .sources-list a { color: var(--accent-green); }
+
+
+  @media (max-width: 640px) {
+    .art-header h1 { font-size: 28px; }
+    .lede { font-size: 18px; }
+    table.data-table { font-size: 13px; }
+    blockquote.pull-quote { font-size: 17px; padding-left: 16px; }
+  }
+
+  /* Healthcare-cost investigation components */
+  .country-card { border-top: 1px solid var(--text-primary); padding: 22px 0; margin-bottom: 4px; }
+  .country-card h3 { font-family: var(--font-serif); font-size: 21px; margin: 0 0 12px; }
+  .country-card p { font-size: 15.5px; margin-bottom: 10px; }
+  .country-card .label { font-weight: 700; }
+  ul.case-summary-list { list-style: none; margin: 0; }
+  ul.case-summary-list li { border-bottom: 1px solid var(--border-soft); padding: 18px 0; }
+  ul.case-summary-list .tags { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent-terra); margin-bottom: 6px; }
+  ul.case-summary-list a.case-title { color: var(--text-primary); text-decoration: none; font-weight: 700; font-size: 17px; display: block; margin-bottom: 6px; }
+  ul.case-summary-list a.case-title:hover { color: var(--accent-green); }
+  ul.case-summary-list p { font-size: 15px; color: var(--text-secondary); margin: 0; }
+
+  /* Anchor targets clear the floating nav */
+  .art-body h2[id] { scroll-margin-top: 96px; }
+  /* Wide data tables scroll inside their own box on phones instead of widening the page */
+  @media (max-width: 640px) { table.data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav kibbo-navbar">
+  <div class="kibbo-navbar-inner">
+    <a href="/" class="kibbo-logo">
+      <span class="kibbo-logo-text">Kibbo</span>
+    </a>
+
+    <div class="kibbo-nav-links">
+      <button type="button" class="kibbo-nav-item" data-dropdown="tools" aria-expanded="false">
+        Tools
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="guides" aria-expanded="false">
+        Guides
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="learn" aria-expanded="false">
+        Learn
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button type="button" class="kibbo-nav-item" data-dropdown="resources" aria-expanded="false">
+        Resources
+        <svg class="kibbo-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <!-- Tools dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-tools" data-panel="tools">
+        <div class="kibbo-panel-grid">
+          <a href="/generate" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Generators</span>
+              <span class="kibbo-panel-desc">Build a complaint or dispute letter, free to use.</span>
+            </span>
+          </a>
+          <a href="/templates" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Templates</span>
+              <span class="kibbo-panel-desc">Downloadable documents, ready to send.</span>
+            </span>
+          </a>
+          <a href="/checklists" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="m3.5 17 1.75 1.75L9 15"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Checklists</span>
+              <span class="kibbo-panel-desc">Step-by-step verification before you act.</span>
+            </span>
+          </a>
+          <a href="/analyze" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Analyzers</span>
+              <span class="kibbo-panel-desc">AI-powered review of contracts and notices.</span>
+            </span>
+          </a>
+          <a href="/kits" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kits</span>
+              <span class="kibbo-panel-desc">Multi-step tool bundles, in the right order.</span>
+            </span>
+          </a>
+          <a href="/developer-tools" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Developer Tools</span>
+              <span class="kibbo-panel-desc">Source code for our browser extensions and tools.</span>
+            </span>
+          </a>
+          <a href="/claims/" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Claims</span>
+              <span class="kibbo-panel-desc">Know your rights and how to claim, by situation.</span>
+            </span>
+          </a>
+          <a href="/calculators" class="kibbo-panel-row">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="8.01" y2="18"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg></span>
+            <span class="kibbo-panel-row-text"><strong>Calculators</strong> Refunds, interest, and fee totals.</span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">Not sure where to start?</div>
+              <div class="kibbo-panel-banner-sub">Try the Wizard and we'll point you to the right tool.</div>
+            </div>
+            <a href="/wizard" class="kibbo-panel-banner-btn">Start the Wizard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-guides" data-panel="guides">
+        <div class="kibbo-panel-grid">
+          <a href="/blog" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Blog</span>
+              <span class="kibbo-panel-desc">All articles, guides, and case breakdowns.</span>
+            </span>
+          </a>
+          <a href="/investigations" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Investigations</span>
+              <span class="kibbo-panel-desc">Original data and reporting on consumer issues.</span>
+            </span>
+          </a>
+          <div class="kibbo-panel-banner">
+            <div>
+              <div class="kibbo-panel-banner-title">New this month</div>
+              <div class="kibbo-panel-banner-sub">Read our latest investigation on airline performance.</div>
+            </div>
+            <a href="/investigations/us-airline-ranking-2026-h1" class="kibbo-panel-banner-btn">Read it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-learn" data-panel="learn">
+        <div class="kibbo-panel-grid">
+          <a href="/questions" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Questions</span>
+              <span class="kibbo-panel-desc">Quick, direct answers to common legal questions.</span>
+            </span>
+          </a>
+          <a href="/real-cases" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Cases</span>
+              <span class="kibbo-panel-desc">Real examples of how disputes were resolved.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="kibbo-dropdown kibbo-dropdown-resources" data-panel="resources">
+        <div class="kibbo-panel-grid">
+          <a href="/directory" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Directory</span>
+              <span class="kibbo-panel-desc">Verified contacts for regulators and agencies.</span>
+            </span>
+          </a>
+          <a href="/resources/" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Community Resources</span>
+              <span class="kibbo-panel-desc">Free consumer resources, tools and guides from the community.</span>
+            </span>
+          </a>
+          <a href="/consumer-rights-by-country" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Rights by Country</span>
+              <span class="kibbo-panel-desc">Compare your rights across the US, UK, EU, and Australia.</span>
+            </span>
+          </a>
+          <a href="/datasets" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Consumer Data Library</span>
+              <span class="kibbo-panel-desc">Datasets behind Kibbo's own investigations.</span>
+            </span>
+          </a>
+          <a href="/research" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M8 13h8"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kibbo Research</span>
+              <span class="kibbo-panel-desc">Original investigations and datasets, built to be cited.</span>
+            </span>
+          </a>
+          <a href="/education" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Kibbo Education</span>
+              <span class="kibbo-panel-desc">Free classroom exercises built on our own data.</span>
+            </span>
+          </a>
+          <a href="/library/" class="kibbo-panel-item">
+            <span class="kibbo-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="kibbo-panel-text">
+              <span class="kibbo-panel-title">Education Library</span>
+              <span class="kibbo-panel-desc">Free external resources for teachers and students.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/free-to-try" class="kibbo-cta">Start for free →</a>
+
+    <button type="button" class="kibbo-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (placeholder treatment — needs a dedicated mobile design pass) -->
+  <div class="kibbo-mobile-menu">
+    <details>
+      <summary>Tools</summary>
+      <a href="/generate">Generators</a>
+      <a href="/templates">Templates</a>
+      <a href="/checklists">Checklists</a>
+      <a href="/analyze">Analyzers</a>
+      <a href="/kits">Kits</a>
+      <a href="/developer-tools">Developer Tools</a>
+      <a href="/claims/">Claims</a>
+      <a href="/calculators">Calculators</a>
+      <a href="/wizard">Start the Wizard →</a>
+    </details>
+    <details>
+      <summary>Guides</summary>
+      <a href="/blog">Blog</a>
+      <a href="/investigations">Investigations</a>
+    </details>
+    <details>
+      <summary>Learn</summary>
+      <a href="/questions">Questions</a>
+      <a href="/real-cases">Cases</a>
+    </details>
+    <details>
+      <summary>Resources</summary>
+      <a href="/directory">Directory</a>
+      <a href="/resources/">Community Resources</a>
+      <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+      <a href="/datasets">Consumer Data Library</a>
+      <a href="/research">Kibbo Research</a>
+      <a href="/education">Kibbo Education</a>
+      <a href="/library/">Education Library</a>
+    </details>
+    <a href="/free-to-try" class="kibbo-cta kibbo-mobile-cta">Start for free →</a>
+  </div>
+</nav>
+
+<div class="hero-clear">
+  <nav class="breadcrumb-inv" aria-label="Breadcrumb"><a href="/investigations">← Investigations</a></nav>
+  <p style="margin:0;"><a href="/research" style="font-size:13px;font-weight:600;color:var(--accent-green);text-decoration:none;">Part of Kibbo Research →</a></p>
+  <!-- HERO IMAGE — 1600x900px -->
+  <img class="hero-image" src="/investigations-images/TheCFPBComplaintVault-hero.png" alt="A wall of identical consumer complaint narratives, representing the CFPB Complaint Vault research project" width="1600" height="900">
+</div>
+
+<div class="wrap">
+
+  <header class="art-header">
+    <span class="art-category">Kibbo Research · Financial &amp; Banking</span>
+    <h1>The CFPB Complaint Vault</h1>
+    <p class="art-dek">An open research project on the US Consumer Financial Protection Bureau's complaint database: the data, the method, and everything we have published from it.</p>
+    <div class="art-meta">
+      <span>Kibbo Research</span>
+      <span>·</span>
+      <span>October 2026</span>
+    </div>
+  </header>
+
+  <div class="art-body">
+
+    <h2>What This Is</h2>
+
+    <p>The Consumer Financial Protection Bureau (CFPB) has collected consumer complaints about banks, lenders, credit bureaus and debt collectors since December 2011. The public database holds more than 18 million of them. In 2026 we downloaded it, together with the archive of complaint narratives published through the CFPB's FOIA Electronic Reading Room (complaints received up to 14 August 2026), and measured what is in it.</p>
+
+    <p>The Vault is the home of that work. Everything is open: the dataset has a DOI, every analytical decision is logged with its date and reasoning, and every figure on the site traces back to a table you can download.</p>
+
+    <p>A complaint in this database is a consumer's allegation. It is not a finding that a company broke the law, and company responses are self-reported and not verified by the CFPB.</p>
+
+    <hr class="section-rule">
+
+    <h2>Start Here</h2>
+
+    <div class="dataset-block">
+      <div class="label">Main investigation</div>
+      <h3>The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database</h3>
+      <p>The main investigation. How complaints doubled in 2025, how credit reporting went from 1 in 5 complaints to 9 in 10, how many narratives are shared templates, and what happens to your chances when you use one.</p>
+      <a class="download-link" href="/investigations/cfpb-copy-paste-complaints">Read the investigation →</a>
+    </div>
+
+    <h2>The Numbers in Brief</h2>
+
+    <ul>
+      <li>18,167,713 complaints in the main database (1 December 2011 to 3 October 2026).</li>
+      <li>3,851,415 complaints with a published narrative (earliest: 19 March 2015; narrative archive ends 14 August 2026).</li>
+      <li>Credit reporting rose from 20.4% of complaints in 2015 to 91.1% in 2026.</li>
+      <li>57.6% of all narratives (2015 to 2026) match at least one other narrative. Of all narratives: 42.4% original, 36.1% shared template, 21.4% the same person filing again.</li>
+      <li>All figures on template detection are lower bounds: the matching threshold is deliberately conservative.</li>
+    </ul>
+
+    <hr class="section-rule">
+
+    <h2>The Data</h2>
+
+    <div class="dataset-block">
+      <div class="label">Kibbo original dataset</div>
+      <h3>The CFPB Complaint Vault Dataset (Version 1.0)</h3>
+      <p>Complaint-level file, 12 summary tables, data dictionary, README, scripts and checksums. Narrative text and filer keys are not included. License: CC BY 4.0.</p>
+      <a class="download-link" href="https://doi.org/10.5281/zenodo.23188842" target="_blank" rel="noopener">Zenodo record (DOI) →</a>
+      <p class="dataset-more"><a href="/datasets#cfpb-complaint-vault-dataset">Kibbo's extracts, data dictionary and README →</a></p>
+    </div>
+
+    <hr class="section-rule">
+
+    <h2>How We Did It</h2>
+
+    <ol>
+      <li>Two sources, joined by complaint ID (99.9% match on a 5,000-ID random sample).</li>
+      <li>Products harmonised into 11 families; credit reporting treated separately because it is 88.4% of 2025 complaints.</li>
+      <li>Template detection at three levels: exact duplicates, normalised duplicates, and fuzzy matches (MinHash with word 5-shingles, 128 permutations, Jaccard similarity of 0.8 or higher). Fuzzy groups are built within each calendar year.</li>
+      <li>Shared template versus same person: a text group counts as a shared template only if it spans at least two distinct locations. Otherwise it is classified as the same filer repeating.</li>
+      <li>Company comparisons use only complaints that are not known templates, within the same product family. Bank comparisons are stated per 100,000 deposit accounts of $250,000 or less, because three reasonable denominators gave three different rankings.</li>
+    </ol>
+
+    <p><a href="/investigations-data/cfpb-complaint-vault-research-log.md">Read the full research log, with every decision and what we rejected →</a><br>
+    <a href="/investigations/cfpb-copy-paste-complaints#methodology">Methodology section of the main investigation →</a></p>
+
+    <hr class="section-rule">
+
+    <h2>What We Publish From This Data</h2>
+
+    <h3>Investigation</h3>
+    <ul class="related-list">
+      <li><a href="/investigations/cfpb-copy-paste-complaints">The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database</a></li>
+    </ul>
+
+    <h3>Real cases</h3>
+    <p>The stories behind the numbers — six individual complaints, and three about shared templates.</p>
+
+    <p style="font-size:14px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--accent-terra);margin-bottom:6px;">Individual complaints</p>
+    <ul class="related-list">
+      <li><a href="/real-cases/zelle-account-closed-cfpb-complaint-2025">A Zelle User Says the Bank Blamed Them Repeatedly, Then Closed Their Account Without Warning</a></li>
+      <li><a href="/real-cases/us-bank-duplicate-check-deposits-cfpb">A Customer Says U.S. Bank Cleared a Stolen Check Twice, Then Refunded Only One</a></li>
+      <li><a href="/real-cases/ford-credit-servicemember-interest-rate-cfpb">A Servicemember Says Ford Credit Refused to Apply a State Interest-Rate Law to Their Loan</a></li>
+      <li><a href="/real-cases/encore-capital-debt-not-yours-cfpb">A Consumer Says a Collector Keeps Calling About a Card They Closed in 2018</a></li>
+      <li><a href="/real-cases/citizens-savings-account-bonus-cfpb">A Customer Says Citizens Bank Denied a $300 Savings Bonus on Terms It Never Disclosed</a></li>
+      <li><a href="/real-cases/bank-of-america-fraud-reimbursement-reversed-cfpb">A Customer Says Bank of America Approved a $3,400 Fraud Refund, Then Reversed Its Decision</a></li>
+    </ul>
+
+    <p style="font-size:14px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--accent-terra);margin-bottom:6px;">Shared templates</p>
+    <ul class="related-list">
+      <li><a href="/real-cases/cfpb-template-unfilled-credit-bureau-placeholder">The Complaint That Still Said "[ Credit Bureau Name ]"</a></li>
+      <li><a href="/real-cases/cfpb-shared-template-identity-theft-33-complaints">The Same Identity-Theft Message, Filed 33 Times From 21 Places Against Three Credit Bureaus</a></li>
+      <li><a href="/real-cases/cfpb-same-text-three-credit-bureaus-one-filer">One Letter, Three Credit Bureaus: The Complaint Addressed to Equifax and Filed Against All Three</a></li>
+    </ul>
+
+    <h3>Teaching materials</h3>
+    <ul class="related-list">
+      <li><a href="/education/exercises/cfpb-copy-paste-complaints">Classroom exercise</a></li>
+      <li><a href="/investigations-data/cfpb-copy-paste-complaint-teacher-edition.pdf">Teacher edition (PDF)</a></li>
+      <li><a href="/investigations-data/cfpb-copy-paste-complaint-student-sheet.pdf">Student sheet (PDF)</a></li>
+    </ul>
+
+    <h3>Tools to use in your own complaint</h3>
+    <ul class="related-list">
+      <li><a href="/generate/bank-complaint-letter">Bank Complaint Letter Generator</a></li>
+      <li><a href="/generate/fcra-credit-dispute">Credit Report Dispute Letter Generator (FCRA)</a></li>
+      <li><a href="/generate/debt-collection-dispute-letter">Debt Collection Dispute Letter Generator</a></li>
+      <li><a href="/checklists/credit-report-error">Credit Report Error Checklist</a></li>
+      <li><a href="/checklists/debt-collection-response">Debt Collection Response Checklist</a></li>
+      <li><a href="/checklists/unauthorized-transaction-banking-fraud">Unauthorized Transaction &amp; Banking Fraud Checklist</a></li>
+    </ul>
+    <!-- Later additions go here: the practical guide to writing a CFPB complaint, data notes, further investigations. Add each to this list when published. -->
+
+    <hr class="section-rule">
+
+    <h2>Code and Reproducibility</h2>
+
+    <p>The analysis scripts (Python and DuckDB) are distributed inside the Zenodo archive (scripts.zip), with a requirements file and SHA-256 checksums. To reproduce a result, download the archive from the DOI and follow the README; the scripts read the CFPB files from a local folder.</p>
+
+    <hr class="section-rule">
+
+    <h2>How to Cite</h2>
+
+    <p><strong>Dataset:</strong> Kibbo Research (2026). <em>The CFPB Complaint Vault Dataset</em> (Version 1.0) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23188842" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.23188842</a></p>
+    <p><strong>Investigation:</strong> Kibbo Research (2026). <em>The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database.</em> getkibbo.com. <a href="https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints">https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints</a></p>
+
+    <hr class="section-rule">
+
+    <h2>Limits and Corrections</h2>
+
+    <ul>
+      <li>A complaint is an allegation, not a violation. Company responses are self-reported and not verified by the CFPB.</li>
+      <li>The CFPB stopped publishing new narratives after 14 August 2026; our narrative analysis ends there.</li>
+      <li>CFPB does not publish filer identity. Our shared-template classification infers it from location and carries a small margin of error, documented in the research log.</li>
+      <li>Findings about template outcomes are correlations, not causal effects.</li>
+      <li>Companies named in our work can request a correction or add a response: <a href="mailto:hello@getkibbo.com">hello@getkibbo.com</a>. Corrections are logged on this page with their date.</li>
+    </ul>
+
+    <p><strong>Corrections log:</strong> No corrections to date.</p>
+
+  </div>
+
+</div>
+
+<div id="engagement-footer"></div>
+<script src="/blog/engagement-footer.js"></script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2 class="footer-cta-heading">Ready to protect yourself?</h2>
+      <a href="/free-to-try" class="footer-cta-btn">Start for free →</a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Kibbo</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/generate">Generators</a>
+          <a href="/templates">Templates</a>
+          <a href="/checklists">Checklists</a>
+          <a href="/analyze">Analyzers</a>
+          <a href="/kits">Kits</a>
+          <a href="/calculators">Calculators</a>
+          <a href="/developer-tools">Developer Tools</a>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <a href="/blog">Blog</a>
+          <a href="/investigations">Investigations</a>
+          <a href="/questions">Questions</a>
+          <a href="/directory">Directory</a>
+          <a href="/real-cases">Real Cases</a>
+          <a href="/resources/">Community Resources</a>
+          <a href="/datasets">Consumer Data Library</a>
+          <a href="/research">Kibbo Research</a>
+          <a href="/education">Kibbo Education</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/consumer-rights-by-country">Consumer Rights by Country</a>
+          <a href="/corrections-log">Corrections Log</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kibbo. This site provides general information, not legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

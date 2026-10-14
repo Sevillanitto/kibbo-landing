@@ -15778,6 +15778,19 @@
     ]
   },
   {
+    "title": "The CFPB Complaint Vault",
+    "type": "investigation",
+    "block": "financial-banking",
+    "url": "/investigations/cfpb-complaint-vault",
+    "description": "An open research project on the CFPB complaint database: dataset with DOI, methodology, the main investigation, real cases and teaching materials.",
+    "keywords": [
+      "cfpb complaint vault",
+      "cfpb complaint database research hub",
+      "cfpb dataset doi",
+      "cfpb complaint vault dataset"
+    ]
+  },
+  {
     "title": "The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database",
     "type": "investigation",
     "block": "financial-banking",
