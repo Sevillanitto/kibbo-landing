@@ -146,7 +146,7 @@ Every analytical decision is recorded here with its date, what was decided, why,
 - `in progress / untimely` = "In progress" (629,394) + "Untimely response" (34,371), kept separate in the tables (untimely is excluded from nothing; only "In progress" is excluded from the "closed" denominator)
 - other labels, listed separately and never counted as relief: "Closed" (17,611, generic/undetailed), "Closed with relief" (5,304, relief type unspecified — legacy), 21 null responses.
 
-**Scope:** years 2015–2026 (2026 partial, through 2026-10-02 — the real max `Date received`, same as Steps 8-10). 11 harmonised product families, Credit reporting kept separate throughout.
+**Scope:** years 2015–2026 (2026 partial, through 2026-10-03 — the real max `Date received` database-wide; Steps 8-9's "2026-10-02" is correct only for the Debt collection family specifically, not the full database). 11 harmonised product families, Credit reporting kept separate throughout.
 
 **Result — overall monetary relief rate (closed complaints, excluding "In progress"):** fell from 6.224% (2015) to 0.480% (2025); 2026 partial is 0.497%. Excluding credit reporting: 7.682% (2015) → 3.985% (2025); 2026 partial 5.010%. Full per-family, per-year table: `analysis/note-compensation/2_3_family_year_relief_rates.csv`.
 
@@ -173,7 +173,7 @@ Script: `scripts/step11_monetary_relief.py`. Outputs: `analysis/note-compensatio
 
 **Exact `Tags` value counts (full database):** null 17,352,275 (95.51%); "Servicemember" 518,141; "Older American" 237,925; "Older American, Servicemember" 59,372 ("both" group below). All four values appear in both the first year (2011) and the last year (2026) of the database — none was introduced or retired.
 
-**Scope:** years 2015–2026 (2026 partial, through 2026-10-02, flagged separately). Credit reporting kept separate as its own family throughout, as in Steps 6, 8–11.
+**Scope:** years 2015–2026 (2026 partial, through 2026-10-03 — the real max `Date received` database-wide, flagged separately). Credit reporting kept separate as its own family throughout, as in Steps 6, 8–11.
 
 **Result highlights**
 - Tagged groups' **share of all complaints has fallen sharply** as the database grew — e.g. "Older American" went from 8.64% of all complaints (2015) to 0.54% (2025); "Servicemember" from 5.47% to 1.90%. Excluding credit reporting, the falls are much smaller (Older American 8.62%→3.12%; Servicemember 5.75%→6.21%, i.e. roughly flat/slightly up) — this is a mix effect: untagged complaints drove almost all of credit reporting's explosive growth.
