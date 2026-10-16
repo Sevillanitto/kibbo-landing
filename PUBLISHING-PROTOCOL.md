@@ -264,6 +264,16 @@ content is a separate, explicitly-scoped decision — see chat history
 
 ---
 
+## New INVESTIGATION (main pieces, hubs, and data notes)
+
+Only standalone investigations get a card on investigations.html. Data
+notes and secondary pieces of a research project are listed ONLY on
+their project hub page (e.g. cfpb-complaint-vault), never as image
+cards on investigations.html or research.html. They still get
+sitemap.xml and search-index.json entries.
+
+---
+
 ## Cross-cutting rules — apply to every content type above
 
 - Never link to a resource, tool, or page that doesn't actually exist
