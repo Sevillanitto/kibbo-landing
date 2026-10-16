@@ -82,6 +82,44 @@ Every analytical decision is recorded here with its date, what was decided, why,
   - Lesson recorded: three reasonable denominators gave three different rankings. The published figure must state its denominator.
 - Package v1.0 built: complaint-level file (CSV.gz + Parquet by year), 12 tables, data dictionary, README, scripts, requirements, SHA-256 checksums. Narrative text and filer keys excluded.
 
+## Step 8 — Debt collection issue breakdown (2026-10-14)
+
+**Question (asked by Carlos):** how much of the debt collection complaint surge is "debt I don't owe"? Counts only — no conclusions drawn, no article text written.
+
+**Scope and method**
+- Family: `product_family = 'Debt collection'` (`package/tables/product-taxonomy-crosswalk.csv`). Window: complaints received 2023-08-25 onwards only, for a consistent issue/sub-product taxonomy — same cutoff already used for `company-comparisons-2023-08-25-onwards.csv`, kept for consistency rather than picking a new one.
+- Periods: `2023-08-25_to_2023-12-31` (partial), `2024`, `2025`, `2026_partial_to_2026-10-02` (see data note below), plus a Jan-Sep-only comparison across 2024/2025/2026 for a fair like-for-like.
+- Source: `package/complaints-parquet/year=*/data_0.parquet` directly (hive-partitioned) — this file already carries `product_family` (Step 6) and `template_category` (Step 7's coalesce of Step 5b's `category_strict`, with `no_narrative` where there's no narrative), so no re-join of the raw CSV was needed.
+- **"Debt not owed" group defined as:** Issue = `Attempts to collect debt not owed` (its 4 real sub-issue values — `Debt is not yours`, `Debt was result of identity theft`, `Debt was paid`, `Debt was already discharged in bankruptcy and is no longer owed` — cover exactly the "wrong person / already paid / identity theft" framing of the question).
+- Script: `scripts/step8_debt_not_owed_breakdown.py`. Outputs: `analysis/note-debt/*.csv` (13 files, all small).
+
+**Data note:** the question assumed 2026 data runs "through 2026-10-03" (Step 1's nominal download-date framing). The actual max `Date received` in the parquet is 2026-10-02 — used that as the real 2026-partial cutoff throughout.
+
+**Method note (company concentration):** the "share of the 2023→2025 increase" figure compares the partial 2023-08-25..12-31 period against the FULL year 2025 (different period lengths, ~4 months vs 12). Top 5 companies are ranked by their 2025 complaint count, not by growth rate.
+
+**Denominator (relief rates):** section 5 excludes `In progress` and null `Company response to consumer` values from the denominator, consistent with the main article's own methodology. 3 debt-collection complaints in this window have a null response (excluded from section 5 only, included everywhere else).
+
+**Sanity check:** my full-year family totals (every year 2013–2026) matched `package/tables/complaints-by-year-product-family.csv` exactly — including the 2026 partial-year total (239,536), which independently confirms the 2026-10-02 cutoff is correct and matches what's already published. No reconciliation problems found.
+
+## Step 9 — "Took or threatened to take negative or legal action" rise (2026-10-15)
+
+**Question (asked by Carlos):** what is behind the rise of this Issue within Debt collection (10,750 in 2024 → 48,578 in 2025 → 55,304 in 2026 partial)? Counts only — no conclusions drawn, no article text written.
+
+**Scope and method**
+- Same filters as Step 8: `product_family = 'Debt collection'`, complaints received 2023-08-25 onwards, 2026 treated as partial through 2026-10-02 (confirmed in Step 8 as the real max `Date received`, one day before the task's assumed 2026-10-03).
+- Reporting periods here are 2024, 2025, 2026-partial only — the three periods matching the reference counts given in the question (the 2023 partial stub from Step 8 is not reported separately in this step).
+- Source: `package/complaints-parquet/year=*/data_0.parquet` directly, same as Step 8.
+- Script: `scripts/step9_negative_legal_action_rise.py`. Outputs: `analysis/note-debt/9_*.csv` (14 files).
+
+**Method notes**
+- Item 1 / item 7's top-5 companies are ranked by their **2025** complaint count for this issue (same convention as Step 8), not by growth rate.
+- Item 5's "jump months" = the 5 months with the largest absolute month-over-month increase in the raw monthly series (2024-01 to 2026-09); for each, the 5 companies with the largest own month-over-month increase that month are listed. This is a mechanical definition, not a judgement about what counts as a genuine step-change — left to the reader.
+- Item 7 deliberately covers **2022-2026 and ALL product families** (not restricted to the 2023-08-25+ Debt collection window like the rest of this step) so that a cross-family shift would actually be visible in the data rather than filtered out before it could appear.
+
+**Sanity check:** all 3 periods' totals for this issue matched Step 8's `2_issues_by_year.csv` exactly (10,750 / 48,578 / 55,304). No reconciliation problems found.
+
+**Data observation (factual, not a conclusion):** for the top 5 companies checked in item 7, every other product_family they appear under (mainly Credit reporting, plus small counts in several others) also grew year over year across 2022-2026 — none of their other families' counts fell as their Debt collection volume rose.
+
 ## Corrections to our own working notes
 
 - In an internal working summary, the largest template cluster was described as spanning "4,952 locations". The package table shows 2,588 distinct locations (cluster Y2024-1, 34,309 narratives). The figure of ~4,800–4,950 referred to distinct filer keys (date + ZIP), a different measure. Published figure: 2,588 locations.
