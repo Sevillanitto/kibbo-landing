@@ -120,6 +120,20 @@ Every analytical decision is recorded here with its date, what was decided, why,
 
 **Data observation (factual, not a conclusion):** for the top 5 companies checked in item 7, every other product_family they appear under (mainly Credit reporting, plus small counts in several others) also grew year over year across 2022-2026 — none of their other families' counts fell as their Debt collection volume rose.
 
+## Step 10 — Complaints per 100,000 residents by state (2026-10-16)
+
+**Goal (asked by Carlos):** complaints per 100,000 residents by US state, for a data note with a state map. Counts only — no conclusions drawn, no article text written.
+
+**Scope and method**
+- Reused Step 6's published tables wherever possible, per the task's instruction, rather than recomputing from raw data: `complaints-per-100k-all-by-state-year.csv`, `complaints-per-100k-excl-credit-reporting-by-state-year.csv`, and `complaints-per-100k-by-state-year-product-family.csv` (filtered to `product_family = 'Credit reporting'` for the credit-reporting-only figures). Only items 3 (non-state geography) and 4 (template share by state) have no existing table and were derived fresh from `package/complaints-parquet/year=*/data_0.parquet`.
+- **Scope decision: 50 states + DC only (51 codes) for every ranked table.** Step 6's own tables carry a 52nd row, Puerto Rico — it has its own Census population estimate (found in the same NST file as the 50 states/DC, SUMLEV 40) but is excluded from the ranking and counted under item 3 ("territories") instead, matching the task's explicit "50 states + DC" scope. Confirmed this is also how the Census Bureau's own "United States" national total works: summing the 50-states+DC SUMLEV-40 rows equals the US total row exactly (to the resident) — Puerto Rico is not part of it.
+- **Population vintage: both 2023 and 2025 use the SAME Census series — Vintage 2025** (`raw/census/NST-EST2025-ALLDATA.csv`, columns `POPESTIMATE2023` and `POPESTIMATE2025`). Vintage 2019 (`nst-est2019-alldata.csv`) only covers 2012–2019 and is not used for either year here, despite the task's phrasing suggesting a possible 2019/2025 vintage split for 2023 — spot-checked (California 2023 population matches the Vintage 2025 file's `POPESTIMATE2023` exactly).
+- **Credit reporting treatment:** reported three ways per state — all complaints, excluding Credit reporting, and Credit reporting only — with a cross-check that "all minus excl" equals the credit-reporting-only figure (passed for every state, both years).
+- **Non-state geography (item 3), 2025:** missing/null state 8,375; territories (PR/GU/VI/AS/MP) 26,473 (PR 24,464, VI 1,683, AS 175, GU 128, MP 23); military addresses (AA/AE/AP) 1,202 (AE 793, AP 347, AA 62); other/unknown codes 177 (`UNITED STATES MINOR OUTLYING ISLANDS` 170, `PW` i.e. Palau 7). None of these are included in any state ranking.
+- Script: `scripts/step10_state_rates.py`. Outputs: `analysis/note-state/*.csv` (8 files).
+
+**Sanity checks:** 51-state complaints (5,406,735) + non-state geography (36,227) = 5,442,962, which matches the official 2025 total in `complaints-by-year.csv` exactly. Population sum of the 50 states + DC matches the Census Vintage 2025 "United States" total exactly (341,784,857, 0.000000% difference). No reconciliation problems found.
+
 ## Corrections to our own working notes
 
 - In an internal working summary, the largest template cluster was described as spanning "4,952 locations". The package table shows 2,588 distinct locations (cluster Y2024-1, 34,309 narratives). The figure of ~4,800–4,950 referred to distinct filer keys (date + ZIP), a different measure. Published figure: 2,588 locations.
