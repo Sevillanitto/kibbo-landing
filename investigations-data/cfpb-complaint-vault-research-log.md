@@ -165,6 +165,30 @@ Every analytical decision is recorded here with its date, what was decided, why,
 
 Script: `scripts/step11_monetary_relief.py`. Outputs: `analysis/note-compensation/*.csv` (13 files).
 
+## Step 12 — "Older American" and "Servicemember" tags (2026-10-16)
+
+**Question (asked by Carlos):** what do complaints tagged "Older American" and "Servicemember" look like, and how have they changed 2015 to 2025? Counts only — no conclusions. No company names anywhere.
+
+**Tag definition (documented, not assumed):** `package/data-dictionary.csv` (written during Step 7 from the CFPB's own field description) says: "CFPB flags for complaints from older Americans (62+) and/or servicemembers and veterans, based on what the consumer reported. Empty for most complaints. Original CFPB field." This confirms the flag is based on consumer self-report. It does **not** document the exact mechanism (form checkbox vs. inferred from free text), so that detail is not assumed — no other documentation was found or consulted.
+
+**Exact `Tags` value counts (full database):** null 17,352,275 (95.51%); "Servicemember" 518,141; "Older American" 237,925; "Older American, Servicemember" 59,372 ("both" group below). All four values appear in both the first year (2011) and the last year (2026) of the database — none was introduced or retired.
+
+**Scope:** years 2015–2026 (2026 partial, through 2026-10-02, flagged separately). Credit reporting kept separate as its own family throughout, as in Steps 6, 8–11.
+
+**Result highlights**
+- Tagged groups' **share of all complaints has fallen sharply** as the database grew — e.g. "Older American" went from 8.64% of all complaints (2015) to 0.54% (2025); "Servicemember" from 5.47% to 1.90%. Excluding credit reporting, the falls are much smaller (Older American 8.62%→3.12%; Servicemember 5.75%→6.21%, i.e. roughly flat/slightly up) — this is a mix effect: untagged complaints drove almost all of credit reporting's explosive growth.
+- **By family (2022 vs 2025):** every tagged group is heavily *under*-represented in Credit reporting relative to untagged (e.g. "both" group: 27.2%–31.5% of its own complaints are Credit reporting, vs. 77.8%–89.3% for untagged — a 50+ point gap) and correspondingly *over*-represented in Mortgage, Credit & prepaid cards, Bank accounts and Debt collection (each roughly 2–18 percentage points higher share than untagged, depending on family/group/year). Full table: `3_family_by_tag_group_2022_vs_2025.csv`.
+- **Monetary relief rate, overall:** tagged groups consistently higher than untagged in every year 2015–2025, most starkly "Older American" vs "none" in 2025 (7.47% vs 0.40% — about 18x). This gap narrows a lot but does not disappear **within the same product family**: e.g. Credit & prepaid cards 2025, older_american 21.87% vs none 11.91%; Debt collection 2022, older_american 2.62% vs none 0.60% (over 4x). Servicemember's rate is sometimes *below* untagged within-family (e.g. Bank accounts 2025: servicemember 8.53% vs none 10.55%). Full tables: `4_relief_rate_by_tag_group_by_year.csv`, `4_relief_rate_top5_families_by_tag_group_2022_2025.csv`.
+- **Shared-template share, 2025:** none 11.59%, servicemember 4.47%, older_american 0.76%, both 0.38% — tagged complaints are far less likely to be shared-template text than untagged, most strikingly for "Older American".
+- **Timely response share, 2025:** all four groups are high and close together — none 99.58%, servicemember 98.49%, both 98.40%, older_american 98.24%.
+- **Geography, 2025 (tagged complaints only, both sub-groups combined):** top by count — TX, FL, CA, GA, NC; top by rate per 100,000 (Census Vintage 2025) — GA (110.84), DC (84.48), DE (70.95), NV (69.77), FL (68.35). Military addresses (2025): AE/AP/AA combined is overwhelmingly "servicemember" (16+257+175=448) vs tiny counts for "older_american" (1+2+1=4) and "both" (0+7+1=8) — see `7_military_address_counts_by_tag_group_2025.csv`.
+
+**Sanity check:** summed tag-group counts (all 4 groups) match the official per-year totals exactly for every year 2015–2026, including 2025 = 5,442,962. No reconciliation problems found.
+
+**Rejected/not done:** no company-level breakdown, per the task. Did not separately tabulate the per-tag-group state breakdown (item 7 combines both tagged sub-groups into "any tag" for the state ranking, as the task's phrasing — "tagged complaints only" — reads as one combined set); noted in the script as available on request from the same underlying query.
+
+Script: `scripts/step12_tags.py`. Outputs: `analysis/note-tags/*.csv` (12 files).
+
 ## Corrections to our own working notes
 
 - In an internal working summary, the largest template cluster was described as spanning "4,952 locations". The package table shows 2,588 distinct locations (cluster Y2024-1, 34,309 narratives). The figure of ~4,800–4,950 referred to distinct filer keys (date + ZIP), a different measure. Published figure: 2,588 locations.
