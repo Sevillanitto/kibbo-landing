@@ -134,6 +134,37 @@ Every analytical decision is recorded here with its date, what was decided, why,
 
 **Sanity checks:** 51-state complaints (5,406,735) + non-state geography (36,227) = 5,442,962, which matches the official 2025 total in `complaints-by-year.csv` exactly. Population sum of the 50 states + DC matches the Census Vintage 2025 "United States" total exactly (341,784,857, 0.000000% difference). No reconciliation problems found.
 
+## Step 11 — Has monetary relief fallen, and is it mix or within-family? (2026-10-16)
+
+**Question (asked by Carlos):** has monetary relief fallen, by product family and by year, and is the overall drop explained by product mix (credit reporting growth) or by changes within products? Counts only — no conclusions beyond the arithmetic the task explicitly asked for (the decomposition is arithmetic, not an explanation of WHY rates changed). No company names used anywhere.
+
+**Definitions (from the full-database value counts of "Company response to consumer")**
+- `monetary` = "Closed with monetary relief" (220,659 total, all years)
+- `non-monetary` = "Closed with non-monetary relief" (6,092,379)
+- `explanation-only` = "Closed with explanation" (11,150,107)
+- `closed without relief` = "Closed without relief" (17,867) — **finding: every one of these 17,867 rows is from 2011 or 2012** (1,827 + 16,040); the label does not appear at all 2013 onward, so it is 0 in every 2015–2026 row of the per-family tables below (verified, not a bug).
+- `in progress / untimely` = "In progress" (629,394) + "Untimely response" (34,371), kept separate in the tables (untimely is excluded from nothing; only "In progress" is excluded from the "closed" denominator)
+- other labels, listed separately and never counted as relief: "Closed" (17,611, generic/undetailed), "Closed with relief" (5,304, relief type unspecified — legacy), 21 null responses.
+
+**Scope:** years 2015–2026 (2026 partial, through 2026-10-02 — the real max `Date received`, same as Steps 8-10). 11 harmonised product families, Credit reporting kept separate throughout.
+
+**Result — overall monetary relief rate (closed complaints, excluding "In progress"):** fell from 6.224% (2015) to 0.480% (2025); 2026 partial is 0.497%. Excluding credit reporting: 7.682% (2015) → 3.985% (2025); 2026 partial 5.010%. Full per-family, per-year table: `analysis/note-compensation/2_3_family_year_relief_rates.csv`.
+
+**Mix/within-family decomposition** (shares fixed at the base year for "within"; for the identity to hold EXACTLY as required, "mix shift" uses end-year rates — the standard complementary pairing for a two-term additive index decomposition; verified numerically, not assumed):
+- 2022 vs 2025: overall rate 2.106% → 0.480% (change −1.6259pp). Within-family −0.8064pp (49.6% of the change); mix shift −0.8194pp (50.4%). Sum matches the total change exactly.
+- 2024 vs 2025: overall rate 0.868% → 0.480% (change −0.3884pp). Within-family −0.2000pp (51.5%); mix shift −0.1884pp (48.5%). Sum matches exactly.
+- **Both comparisons split roughly evenly between the two effects** — the decline is not "mostly" one or the other.
+
+**Templates do not drive the within-family decline:** restricted to `template_category = 'original'` only, the top 5 non-credit-reporting families (by total complaints: Debt collection, Credit & prepaid cards, Bank accounts, Mortgage, Money transfers & virtual currency) show the same declining pattern as the "all complaints" cut, e.g. Debt collection originals-only 0.924% (2022) → 0.356% (2025) vs. 0.690% → 0.158% for all complaints — same direction and similar magnitude. Caveat recorded: the originals-only denominator excludes `no_narrative` complaints too (it is not "all complaints that aren't known templates"), so it is a much smaller base than the "all" cut — flagged to avoid misreading it as apples-to-apples.
+
+**Recency bias check:** "In progress" share by year rises sharply in the most recent periods — 0.000% (2022) to 0.005% (2025) to 11.469% (2026 partial, as expected for very recent complaints not yet resolved). Restricting 2025 to complaints received before 1 July 2025 (more time to resolve by the 3 October 2026 snapshot) raises the monetary rate only slightly, from 0.480% (full year) to 0.506% — recency bias does not explain the 2025 figure.
+
+**Sanity checks:** every year's total complaint count (2015–2026) matches `package/tables/complaints-by-year.csv` exactly, including 2025 = 5,442,962 and 2026 partial = 5,485,332. No reconciliation problems found.
+
+**Rejected/not done:** no company-level breakdown anywhere in this step, per the task. Did not test an alternative (end-weighted) decomposition pairing — only the one pairing that satisfies the task's exact-sum requirement was computed.
+
+Script: `scripts/step11_monetary_relief.py`. Outputs: `analysis/note-compensation/*.csv` (13 files).
+
 ## Corrections to our own working notes
 
 - In an internal working summary, the largest template cluster was described as spanning "4,952 locations". The package table shows 2,588 distinct locations (cluster Y2024-1, 34,309 narratives). The figure of ~4,800–4,950 referred to distinct filer keys (date + ZIP), a different measure. Published figure: 2,588 locations.
