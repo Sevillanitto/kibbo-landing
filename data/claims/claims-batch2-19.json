@@ -1168,7 +1168,8 @@
    "generators": [
     "/generate/lost-parcel-demand",
     "/generate/courier-complaint-generator",
-    "/generate/vendor-compensation-demand-letter"
+    "/generate/vendor-compensation-demand-letter",
+    "/generate/delivery-claim-generator"
    ],
    "templates": [
     "/templates/lost-parcel-claim-pack",

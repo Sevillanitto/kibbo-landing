@@ -4433,6 +4433,20 @@
     ]
   },
   {
+    "title": "Delivery Claim Generator",
+    "type": "generator",
+    "block": "delivery-parcels",
+    "url": "/generate/delivery-claim-generator",
+    "description": "Pick your scenario and country to generate a full set of delivery claim letters — seller, carrier, card dispute, and escalation — plus a deadline tracker and evidence checklist. Static, runs in your browser, nothing stored or sent. Free.",
+    "keywords": [
+      "delivery claim generator",
+      "parcel marked delivered not received letter",
+      "carrier claim letter generator",
+      "section 75 chargeback parcel dispute letter",
+      "delivery deadline tracker evidence checklist"
+    ]
+  },
+  {
     "title": "Customs Fee Dispute Generator",
     "type": "generator",
     "block": "delivery-parcels",
