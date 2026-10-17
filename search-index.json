@@ -4447,6 +4447,20 @@
     ]
   },
   {
+    "title": "Parcel Help",
+    "type": "tool",
+    "block": "delivery-parcels",
+    "url": "/parcel-help",
+    "description": "Answer three quick questions — country, what happened, how you paid — and see who's responsible, the deadlines that apply, and the exact order of steps to take, each backed by an official source. Free, runs in your browser.",
+    "keywords": [
+      "parcel help triage",
+      "my parcel never arrived what do I do",
+      "who is responsible for lost parcel",
+      "delivery problem decision tool",
+      "parcel claim steps in order"
+    ]
+  },
+  {
     "title": "Customs Fee Dispute Generator",
     "type": "generator",
     "block": "delivery-parcels",

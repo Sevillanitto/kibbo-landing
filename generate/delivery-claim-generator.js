@@ -79,9 +79,53 @@
       SCENARIOS = results[0];
       CARRIERS = results[1];
       populateSelects();
+      applyDeepLinkParams();
     }).catch(function () {
       showError('Could not load the delivery-rights data. Please reload the page.');
     });
+  }
+
+  // ------------------------------------------------------------------
+  // Deep-link query params: ?country=&scenario=&payment=&carrier=
+  // Preselects whatever is valid and auto-generates when scenario and
+  // country are both present and valid. Any missing/invalid param is
+  // ignored safely — this never throws and never changes behaviour for
+  // a plain visit with no query string.
+  // ------------------------------------------------------------------
+  function applyDeepLinkParams() {
+    var params;
+    try {
+      params = new URLSearchParams(window.location.search);
+    } catch (e) {
+      return;
+    }
+    var country = params.get('country');
+    var scenarioId = params.get('scenario');
+    var payment = params.get('payment');
+    var carrier = params.get('carrier');
+
+    var validCountry = !!(country && SCENARIOS.countries.indexOf(country) !== -1);
+    var validScenario = !!(scenarioId && getScenario(scenarioId));
+    var validPayment = !!(payment && ['card', 'paypal', 'other'].indexOf(payment) !== -1);
+
+    if (validCountry) countrySelect.value = country;
+    if (validScenario) scenarioSelect.value = scenarioId;
+    if (validPayment) document.getElementById('dcg-paid').value = payment;
+
+    if (carrier) {
+      if (getCarrier(carrier)) {
+        carrierSelect.value = carrier;
+        carrierOtherWrap.style.display = 'none';
+      } else if (carrier.trim()) {
+        carrierSelect.value = 'Other';
+        carrierOtherWrap.style.display = 'block';
+        carrierOtherInput.value = carrier.trim();
+      }
+    }
+
+    if (validCountry && validScenario) {
+      runGenerate({ allowMissingCarrier: true });
+    }
   }
 
   function populateSelects() {
@@ -614,42 +658,49 @@
   // ------------------------------------------------------------------
   // Main generate action
   // ------------------------------------------------------------------
+  // Reads the current form state and renders all 6 sections. Used by both
+  // the "Generate my letters" button (opts omitted — identical to the
+  // original behaviour) and the deep-link auto-generate path (opts.
+  // allowMissingCarrier lets a shared link render results even when the
+  // carrier wasn't part of the link).
+  function runGenerate(opts) {
+    opts = opts || {};
+    clearError();
+    var country = countrySelect.value;
+    var scenarioId = scenarioSelect.value;
+    var carrierName = carrierSelect.value;
+    if (!country || !scenarioId || (!opts.allowMissingCarrier && !carrierName)) {
+      showError('Please select your country, what happened, and the carrier.');
+      return;
+    }
+    var carrierDisplay = carrierName === 'Other' ? (carrierOtherInput.value.trim() || 'the carrier') : (carrierName || 'the carrier');
+
+    var inputs = {
+      country: country,
+      scenarioId: scenarioId,
+      carrierName: carrierName,
+      carrierDisplay: carrierDisplay,
+      paidBy: document.getElementById('dcg-paid').value,
+      seller: document.getElementById('dcg-seller').value.trim(),
+      purchaseDate: document.getElementById('dcg-purchase-date').value || null,
+      deliveryDate: document.getElementById('dcg-delivery-date').value || null,
+      order: document.getElementById('dcg-order').value.trim(),
+      tracking: document.getElementById('dcg-tracking').value.trim(),
+      item: document.getElementById('dcg-item').value.trim(),
+      amount: document.getElementById('dcg-amount').value.trim(),
+      facts: document.getElementById('dcg-facts').value.trim(),
+    };
+
+    var sections = generateSections(inputs);
+
+    result.innerHTML = '';
+    result.style.display = 'block';
+    sections.forEach(function (s) { result.appendChild(renderSection(s)); });
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   if (IS_BROWSER) {
-    genBtn.addEventListener('click', function () {
-      clearError();
-      var country = countrySelect.value;
-      var scenarioId = scenarioSelect.value;
-      var carrierName = carrierSelect.value;
-      if (!country || !scenarioId || !carrierName) {
-        showError('Please select your country, what happened, and the carrier.');
-        return;
-      }
-      var carrierDisplay = carrierName === 'Other' ? (carrierOtherInput.value.trim() || 'the carrier') : carrierName;
-
-      var inputs = {
-        country: country,
-        scenarioId: scenarioId,
-        carrierName: carrierName,
-        carrierDisplay: carrierDisplay,
-        paidBy: document.getElementById('dcg-paid').value,
-        seller: document.getElementById('dcg-seller').value.trim(),
-        purchaseDate: document.getElementById('dcg-purchase-date').value || null,
-        deliveryDate: document.getElementById('dcg-delivery-date').value || null,
-        order: document.getElementById('dcg-order').value.trim(),
-        tracking: document.getElementById('dcg-tracking').value.trim(),
-        item: document.getElementById('dcg-item').value.trim(),
-        amount: document.getElementById('dcg-amount').value.trim(),
-        facts: document.getElementById('dcg-facts').value.trim(),
-      };
-
-      var sections = generateSections(inputs);
-
-      result.innerHTML = '';
-      result.style.display = 'block';
-      sections.forEach(function (s) { result.appendChild(renderSection(s)); });
-      result.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
+    genBtn.addEventListener('click', function () { runGenerate(); });
     loadData();
   }
 

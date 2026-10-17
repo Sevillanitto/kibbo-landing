@@ -1166,6 +1166,7 @@
   ],
   "tools": {
    "generators": [
+    "/parcel-help",
     "/generate/lost-parcel-demand",
     "/generate/courier-complaint-generator",
     "/generate/vendor-compensation-demand-letter",
