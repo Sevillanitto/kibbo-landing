@@ -146,7 +146,7 @@ Every analytical decision is recorded here with its date, what was decided, why,
 - `in progress / untimely` = "In progress" (629,394) + "Untimely response" (34,371), kept separate in the tables (untimely is excluded from nothing; only "In progress" is excluded from the "closed" denominator)
 - other labels, listed separately and never counted as relief: "Closed" (17,611, generic/undetailed), "Closed with relief" (5,304, relief type unspecified — legacy), 21 null responses.
 
-**Scope:** years 2015–2026 (2026 partial, through 2026-10-03 — the real max `Date received` database-wide; Steps 8-9's "2026-10-02" is correct only for the Debt collection family specifically, not the full database). 11 harmonised product families, Credit reporting kept separate throughout.
+**Scope:** years 2015–2026 (2026 partial, through 2026-10-03 — the real max `Date received` database-wide; Steps 8-9's "2026-10-02" is correct only for the Debt collection family specifically, not the full database — see Step 13's correction below). 11 harmonised product families, Credit reporting kept separate throughout.
 
 **Result — overall monetary relief rate (closed complaints, excluding "In progress"):** fell from 6.224% (2015) to 0.480% (2025); 2026 partial is 0.497%. Excluding credit reporting: 7.682% (2015) → 3.985% (2025); 2026 partial 5.010%. Full per-family, per-year table: `analysis/note-compensation/2_3_family_year_relief_rates.csv`.
 
@@ -188,6 +188,26 @@ Script: `scripts/step11_monetary_relief.py`. Outputs: `analysis/note-compensatio
 **Rejected/not done:** no company-level breakdown, per the task. Did not separately tabulate the per-tag-group state breakdown (item 7 combines both tagged sub-groups into "any tag" for the state ranking, as the task's phrasing — "tagged complaints only" — reads as one combined set); noted in the script as available on request from the same underlying query.
 
 Script: `scripts/step12_tags.py`. Outputs: `analysis/note-tags/*.csv` (12 files).
+
+## Step 13 — What stopped being published after 14 August 2026 (2026-10-16)
+
+**Question (asked by Carlos):** what exactly stopped being published after 14 August 2026, and what can no longer be analysed because of it? Descriptive only — no speculation about why. No company names.
+
+**Sources confirmed by reading file headers directly (not assumed):** the main database (`raw/ccdb/complaints.csv`) has 15 columns, none of them narrative text. The narrative archive's most recent file has the same 15 plus `Consumer complaint narrative`. **"Consumer consent provided?" exists in NEITHER source** — the column itself is absent, not merely empty, from both our main-database and archive copies. The main database carries no narrative text at all in our copy; the FOIA archive is the only narrative source we have.
+
+**Result highlights**
+- **Narratives (item 1-2):** monthly narrative share fell from ~30-34% (2024) to ~25-27% (most of 2025) to single digits by 2026, reaching 0.000% in September and October 2026. The **last date with any published narrative is 2026-08-11** — three days before the 14 August 2026 date in the CFPB's own announcement. All complaints received 15 August–2 October 2026 (1,004,609 total, across all 10 families, Credit reporting 938,600 of them) have **zero** narratives. Cannot compare to a main-database narrative cutoff — that column doesn't exist there to compare.
+- **MAJOR UNRELATED FINDING (item 3):** `"Company public response"` is the only original CFPB column whose null share jumped more than 10pp. It was stable (~37-43%) through July 2026, then: **Aug 2026 61.9% → Sep 2026 86.8% → Oct 2026 99.5% null** (+62.1pp from July to October). This is a **separate field from narratives**, with a more gradual (not instant) collapse, and by October is essentially entirely empty. No other original column moved by more than 1pp over the same window (checked: Product, Issue, Sub-product, Sub-issue, Company, Company response to consumer, State, ZIP code, Tags, Submitted via, Date sent to company, Timely response? all flat).
+- **Counterfactual (item 4, labelled estimate):** holding each product family's Jan–Jul 2026 narrative share constant, complaints received 15 Aug–2 Oct 2026 would have been expected to carry **approximately 21,331 narratives**; the actual count is 0. One stated assumption, not a causal claim.
+- **Narrative universe by year (item 5):** full counts and shares 2015–14 Aug 2026 in `5_narrative_universe_by_year.csv` (narrative share peaked at 47.5% in 2017, fell to 22.5% for 2025, 2.7% for the 2026 partial year through the cutoff). **Dependency list**: template/shared-template shares, the real cases, and the "originals only" relief-rate cut (in the main investigation, the debt-collection note, the monetary-relief investigation, and the older-Americans/servicemember investigation) all depend on narratives and are frozen at this cutoff. Counts, product mix, relief rates (all-complaints cut), state rates, and the tag-group findings do **not** depend on narratives at all and continue to be computable from current data.
+
+**CORRECTION TO STEPS 8–12 (found while sanity-checking this step):** Steps 8 through 12 all stated "2026-10-02" as "the real max Date received" for the 2026-partial cutoff. That was true for the **Debt collection** family specifically (checked and re-confirmed: zero Debt collection rows on 2026-10-03), but the **full database's actual max date is 2026-10-03** (1,407 Credit reporting + 1 Vehicle & consumer loans + 1 Mortgage complaint on that date, 1,409 total). This does not materially change any published percentage (1,409 of 5.48M), but the stated 2026-partial cutoff *date* in Steps 8–12's notes, and in the published pages built from them, is one day short of the truth for the database as a whole. Flagged here rather than silently corrected (this step is read-only, per the task).
+
+**Sanity checks:** monthly sums for 2024 and 2025 (fully inside this step's Jan-2024-to-Oct-2026 window) match the official per-year totals exactly. 2026 is short by exactly 1,409 against the official total — fully explained by the correction above (this step's window stops at 2 October 2026, as the task specified; the official total includes 3 October).
+
+**Rejected/not done:** no speculation about *why* narratives or "Company public response" stopped, per the task. No company-level data anywhere.
+
+Script: `scripts/step13_august_2026.py`. Outputs: `analysis/note-august-2026/*.csv` (10 files).
 
 ## Corrections to our own working notes
 
