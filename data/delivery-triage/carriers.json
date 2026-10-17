@@ -27,7 +27,17 @@
         "https://www.cedr-assist.com/consumer/postrs/overview/"
       ],
       "source_access_note": "royalmail.com's own compensation-policy pages returned a 403 (bot-blocked) on direct automated fetch; the figures above are drawn from a web search whose results quote text directly from those same official URLs, not from a third-party aggregator.",
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://help.royalmail.com/personal/s/ (personal customer support portal; business claims via https://help.royalmail.com/business/s/article/Business-Account-Claims-Centre)",
+        "claims_email": null,
+        "postal_address": null,
+        "source": [
+          "https://help.royalmail.com/personal/s/"
+        ],
+        "source_access_note": "royalmail.com's own contact-us page returned 403 (bot-blocked); help.royalmail.com's support portal is JavaScript-rendered and returned only a loading-error shell to automated fetch, so no email/postal address could be confirmed this session. Left null rather than guessed.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "Evri",
@@ -47,7 +57,18 @@
         "https://www.evri.com/guides/parcel-cover",
         "https://www.evri.com/terms-and-conditions"
       ],
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://www.evri.com/contact-us (chat/phone; claims are normally raised via whoever booked the parcel's Evri account)",
+        "claims_email": null,
+        "claims_email_note": "No general claims email found. Evri does publish an escalation email for its 'Tell us straight' senior-management escalation route: noreply.priority@evri.com (subject line 'Tell us straight') — not a dedicated claims inbox.",
+        "postal_address": "Capitol House, 1 Capitol Close, Morley, Leeds, LS27 0WH (registered office, confirmed on evri.com's own contact page)",
+        "source": [
+          "https://www.evri.com/contact-us",
+          "https://www.evri.com/help/contact-us"
+        ],
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "DPD",
@@ -70,7 +91,17 @@
       "sources": [
         "https://www.dpd.co.uk/content/terms-and-conditions.jsp"
       ],
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://www.dpd.co.uk/content/terms-and-conditions.jsp states only that the customer must notify 'the Company' within 14 days — it does not itself give a submission address, email, or form URL. We could not locate a separate, working DPD UK contact/claims page this session.",
+        "claims_email": null,
+        "postal_address": null,
+        "source": [
+          "https://www.dpd.co.uk/content/terms-and-conditions.jsp"
+        ],
+        "source_access_note": "DPD's own T&Cs confirm no email/postal address is published there; separate contact-page URL guesses (dpd.co.uk/contact, /content/contact_us.jsp) returned 404. Left null rather than guessed.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "Yodel",
@@ -91,7 +122,18 @@
         "https://www.yodeldirect.co.uk/content/about-terms (redirects to) https://www.inpostdirect.co.uk/"
       ],
       "source_access_note": "The Yodel Direct terms URL now permanently redirects to inpostdirect.co.uk; we confirmed the £50 standard-cover figure on the redirected page itself, but could not independently re-confirm the 14-day/28-day claim-window figures on an official page after this rebrand — flagged as lower-confidence in 'unverified'.",
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://inpost.co.uk/contact (Yodel's UK consumer-facing brand has moved entirely to InPost — yodel.co.uk's own homepage states 'Yodel by InPost has moved to InPost'; claims/contact now run through inpost.co.uk)",
+        "claims_email": null,
+        "postal_address": "InPost Delivery Network Limited, Moray House, 23-35 Great Titchfield Street, London, W1W 7PA, United Kingdom (registered address, confirmed on yodel.co.uk's own homepage)",
+        "phone": "0330 335 0950 (Mon-Fri 7am-10pm, Sat-Sun 8am-8pm — confirmed on inpost.co.uk/contact)",
+        "source": [
+          "https://www.yodel.co.uk/",
+          "https://inpost.co.uk/contact"
+        ],
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "UPS",
@@ -112,7 +154,17 @@
         "https://www.ups.com/us/en/support/file-a-claim"
       ],
       "source_access_note": "ups.com returned an access-denied response on direct automated fetch; figures are drawn from a web search citing that same official URL.",
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://www.ups.com/us/en/support/file-a-claim",
+        "claims_email": null,
+        "postal_address": null,
+        "source": [
+          "https://www.ups.com/us/en/support/file-a-claim"
+        ],
+        "source_access_note": "ups.com blocked automated fetch (access denied) on both the claims page and the general contact-us page this session; could not confirm whether an email/postal address is published. Left null rather than guessed.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "FedEx",
@@ -133,7 +185,18 @@
       "sources": [
         "https://www.fedex.com/en-us/customer-support/claims.html"
       ],
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://www.fedex.com/en-us/customer-support/claims.html",
+        "claims_email": null,
+        "postal_address": null,
+        "phone": "1.800.463.3339 (1.800.GoFedEx)",
+        "source": [
+          "https://www.fedex.com/en-us/customer-support.html"
+        ],
+        "source_access_note": "Confirmed directly: FedEx's own customer-support page publishes only a phone number for general contact, no email or postal address.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "DHL",
@@ -155,7 +218,17 @@
         "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf"
       ],
       "source_access_note": "The official DHL Express Claims Guide PDF could not be parsed by our automated fetch (returned as unreadable binary/compressed streams); the figures above are drawn from a web search whose results describe that same official document, not from an independently-read copy of the PDF text. The exact $/kg conversion is lower-confidence — flagged in 'unverified'.",
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf (DHL Express Claims Guide — submission method, not a web form URL, could not be extracted; the PDF could not be parsed by our automated fetch)",
+        "claims_email": null,
+        "postal_address": null,
+        "source": [
+          "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf"
+        ],
+        "source_access_note": "dhl.com's own contact-us pages returned a connection error (ECONNRESET) to automated fetch on every URL tried this session; could not confirm an email/postal address. Left null rather than guessed.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "USPS",
@@ -175,7 +248,19 @@
       "sources": [
         "https://www.usps.com/help/claims.htm"
       ],
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "https://www.usps.com/help/claims.htm (claims filed online); general contact form at https://emailus.usps.com/s/",
+        "claims_email": null,
+        "claims_email_note": "No general claims email found. USPS does publish sfsdelivery.confirmation@usps.gov, but that is specifically for Postal Store order/delivery-confirmation issues, not general lost/damaged-package claims.",
+        "postal_address": null,
+        "phone": "1-800-275-8777 (1-800-ASK-USPS), Mon-Fri 8am-8:30pm ET, Sat 8am-6pm ET",
+        "source": [
+          "https://www.usps.com/help/contact-us.htm"
+        ],
+        "source_access_note": "Confirmed directly: USPS's own contact page publishes phone numbers and a web contact form, but no general claims email or postal mailing address for claims specifically.",
+        "verified_on": "2026-10-18"
+      }
     },
     {
       "name": "Amazon Logistics",
@@ -195,7 +280,17 @@
         "https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV"
       ],
       "source_access_note": "amazon.com's own help page returned a 503 (temporarily unavailable) on direct automated fetch; figures are drawn from a web search whose results quote/paraphrase that same official page.",
-      "verified_on": "2026-10-18"
+      "verified_on": "2026-10-18",
+      "contact_routes": {
+        "claim_form_url": "Via 'Your Orders' > the relevant order > 'File/View Claim' (A-to-z Guarantee, third-party-seller orders only) — see https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
+        "claims_email": null,
+        "postal_address": null,
+        "source": [
+          "https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV"
+        ],
+        "source_access_note": "amazon.com's own help pages returned 503 (service unavailable) to automated fetch on every URL tried this session; could not confirm whether a general claims email/postal address is published (Amazon is widely understood not to publish one for consumer claims, but we could not verify this directly at the source this session, so it is left null rather than asserted).",
+        "verified_on": "2026-10-18"
+      }
     }
   ],
   "unverified": [
@@ -213,6 +308,134 @@
       "carrier": "DHL",
       "field": "compensation_limits.international_air_default",
       "reason": "The official DHL Express Claims Guide PDF could not be parsed directly; the ~22 SDR/kg (~$23/kg) figure is drawn from a web search describing that document, not independently read from the PDF text itself. Kept with this caveat rather than nulled, since the underlying Montreal Convention SDR/kg mechanism itself is independently well-established."
+    },
+    {
+      "carrier": "Royal Mail",
+      "field": "contact_routes.claims_email, contact_routes.postal_address",
+      "reason": "royalmail.com's own contact-us page returned 403 (bot-blocked); help.royalmail.com's support portal is JavaScript-rendered and returned only a loading-error shell to automated fetch, so no email/postal address could be confirmed this session. Left null rather than guessed."
+    },
+    {
+      "carrier": "DPD",
+      "field": "contact_routes.claims_email, contact_routes.postal_address",
+      "reason": "DPD's own T&Cs confirm no email/postal address is published there; separate contact-page URL guesses (dpd.co.uk/contact, /content/contact_us.jsp) returned 404. Left null rather than guessed."
+    },
+    {
+      "carrier": "UPS",
+      "field": "contact_routes.claims_email, contact_routes.postal_address",
+      "reason": "ups.com blocked automated fetch (access denied) on both the claims page and the general contact-us page this session; could not confirm whether an email/postal address is published. Left null rather than guessed."
+    },
+    {
+      "carrier": "DHL",
+      "field": "contact_routes.claims_email, contact_routes.postal_address",
+      "reason": "dhl.com's own contact-us pages returned a connection error (ECONNRESET) to automated fetch on every URL tried this session; could not confirm an email/postal address. Left null rather than guessed."
+    },
+    {
+      "carrier": "Amazon Logistics",
+      "field": "contact_routes.claims_email, contact_routes.postal_address",
+      "reason": "amazon.com's own help pages returned 503 (service unavailable) to automated fetch on every URL tried this session; could not confirm whether a general claims email/postal address is published (Amazon is widely understood not to publish one for consumer claims, but we could not verify this directly at the source this session, so it is left null rather than asserted)."
+    },
+    {
+      "country": "EU",
+      "field": "ombudsman_regulator (FIN-NET)",
+      "reason": "Could not locate FIN-NET's current official URL this session (three URL guesses on ec.europa.eu/finance.ec.europa.eu/commission.europa.eu all 404'd, and the web-search tool budget was exhausted). Used ECC-Net instead, which is verified but is a general cross-border consumer network, not the financial-dispute-specific network the EU actually operates."
+    },
+    {
+      "country": "AU",
+      "field": "ombudsman_regulator.postal_address, ombudsman_regulator.phone",
+      "reason": "afca.org.au blocked all automated fetch attempts (403) this session; could not confirm exact postal address/phone."
+    },
+    {
+      "country": "EU",
+      "field": "card_dispute_route (absence of a Section-75-style statutory right)",
+      "reason": "This is an absence, not a documented official statement — flagged for your awareness rather than treated as fully 'verified' in the same sense as a positive legal citation."
     }
-  ]
+  ],
+  "country_dispute_routes": {
+    "UK": {
+      "card_dispute_route": {
+        "name": "Section 75 Consumer Credit Act 1974 (credit card, £100-£30,000 single item) or chargeback (any card, under the card scheme's own rules)",
+        "basis": "Consumer Credit Act 1974, s.75: the credit card issuer is jointly and severally liable with the supplier for breach of contract/misrepresentation, for a single item priced over £100 and not more than £30,000. For debit cards, or credit card purchases outside that range, the only route is a chargeback under Visa/Mastercard/Amex's own scheme rules (not a statutory right).",
+        "sources": [
+          "https://www.legislation.gov.uk/ukpga/1974/39/section/75"
+        ],
+        "verified_on": "2026-10-18"
+      },
+      "ombudsman_regulator": {
+        "name": "Financial Ombudsman Service (FOS)",
+        "scope_note": "Resolves disputes about how a FINANCIAL BUSINESS (e.g. the card issuer) handled a Section 75/chargeback claim — not a complaint about the retailer or carrier directly.",
+        "complaint_url": "https://www.financial-ombudsman.org.uk/contact-us",
+        "postal_address": "Exchange Tower, London, E14 9SR",
+        "phone": "0800 023 4567 (Mon-Fri 8am-5pm)",
+        "sources": [
+          "https://www.financial-ombudsman.org.uk/contact-us"
+        ],
+        "verified_on": "2026-10-18"
+      }
+    },
+    "US": {
+      "card_dispute_route": {
+        "name": "Fair Credit Billing Act (FCBA) billing-error dispute",
+        "basis": "Must dispute in writing within 60 days of the statement date that first contained the charge; the card issuer must acknowledge within 30 days and resolve within 2 billing cycles (max 90 days).",
+        "sources": [
+          "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products"
+        ],
+        "verified_on": "2026-10-18"
+      },
+      "ombudsman_regulator": {
+        "name": "Consumer Financial Protection Bureau (CFPB)",
+        "scope_note": "Takes complaints about how a bank/card issuer handled a billing dispute; does not itself resolve disputes with the retailer or carrier.",
+        "complaint_url": "https://www.consumerfinance.gov/complaint/",
+        "postal_address": "For complaints: PO Box 27170, Washington, DC 20038. For other correspondence: 445 12th Street, SW, Washington, DC 20024.",
+        "phone": "(855) 411-2372 / TTY (855) 729-2372, 9am-6pm ET Mon-Fri",
+        "sources": [
+          "https://www.consumerfinance.gov/complaint/",
+          "https://www.consumerfinance.gov/about-us/contact-us/"
+        ],
+        "verified_on": "2026-10-18"
+      }
+    },
+    "EU": {
+      "card_dispute_route": {
+        "name": "Chargeback under the card scheme's own rules (no single EU-wide statutory right equivalent to UK Section 75 was found)",
+        "basis": "The Consumer Rights Directive and PSD2 do not create a Section-75-style joint-liability right for non-delivery; a card chargeback for goods not received is available only under Visa/Mastercard/etc.'s own scheme rules, which are not EU legislation.",
+        "sources": [
+          "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle"
+        ],
+        "verified_on": "2026-10-18",
+        "confidence_note": "We could not find a single official EU source confirming this absence as a positive statement (it is an absence of a right, not a documented one) — flagged in 'unverified'."
+      },
+      "ombudsman_regulator": {
+        "name": "European Consumer Centres Network (ECC-Net)",
+        "scope_note": "Free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries); not a financial-dispute-specific ombudsman. We could not verify the EU's financial-dispute-specific network (FIN-NET) URL this session — see 'unverified'. Each EU member state additionally has its own national financial ombudsman, not centrally listed here.",
+        "complaint_url": "https://www.eccnet.eu/",
+        "postal_address": null,
+        "sources": [
+          "https://www.eccnet.eu/european-consumer-centres-network"
+        ],
+        "verified_on": "2026-10-18"
+      }
+    },
+    "AU": {
+      "card_dispute_route": {
+        "name": "Chargeback under the card scheme's own rules",
+        "basis": "If you did not receive goods/services paid for, your bank/credit union must pursue a chargeback on your behalf if a chargeback right exists under the relevant card scheme's rules; no separate Australian statute creates the right itself.",
+        "sources": [
+          "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+        ],
+        "verified_on": "2026-10-18"
+      },
+      "ombudsman_regulator": {
+        "name": "Australian Financial Complaints Authority (AFCA)",
+        "scope_note": "Resolves disputes about how a BANK handled a chargeback request; does not itself resolve disputes with the retailer or carrier.",
+        "complaint_url": "https://www.afca.org.au/make-a-complaint",
+        "postal_address": null,
+        "phone": null,
+        "sources": [
+          "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+        ],
+        "source_access_note": "afca.org.au blocked automated fetch (403) on every page tried this session (homepage, contact-us, make-a-complaint, and the previously-cited factsheet download); the complaint URL itself is confirmed as AFCA's real domain from earlier research in this project, but the exact postal address and phone number could not be independently re-confirmed this session. Left null rather than guessed.",
+        "verified_on": "2026-10-18"
+      }
+    }
+  }
 }
