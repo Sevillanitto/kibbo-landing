@@ -1,0 +1,862 @@
+{
+  "generated": "2026-10-18",
+  "note": "Verified-fact table for the Delivery Problems triage tool. Official sources only (legislation, regulators, ombudsmen, government pages, carriers' own terms); existing Kibbo blog articles were used only as leads and re-verified at the primary source. Any fact that could not be verified is null and listed in 'unverified'. Wording is neutral throughout — no accusations of theft or forged signatures.",
+  "countries": [
+    "UK",
+    "US",
+    "EU",
+    "AU"
+  ],
+  "scenarios": [
+    {
+      "id": "marked_delivered_not_received",
+      "label": "Marked delivered but not received",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.29: goods remain at the trader's risk until they come into the physical possession of the consumer or a person the consumer nominates. A carrier's own 'delivered' tracking status is not itself proof of the consumer's physical possession. Exception (s.29(3)-(4)): if the CONSUMER chose a carrier the trader did not offer as an option, risk passes to the consumer on handoff to that carrier.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "A carrier tracking scan marked 'delivered' is not, by itself, evidence of the consumer's physical possession under s.29 — the trader remains at risk until actual possession."
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "No single federal rule allocates 'risk of loss' for consumer purchases. Two separate, narrower federal rules apply instead: (1) the FTC's Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) requires the SELLER to have a reasonable basis to ship within the time promised (or 30 days if none was promised) and to refund or get the buyer's consent to a delay if it cannot — this is about the seller's shipping obligation, not about who bears risk once goods are properly shipped. (2) Risk of loss once goods are shipped is governed by state-adopted UCC Article 2 §2-509: under the common default 'shipment contract', risk passes to the BUYER when goods are duly delivered to the carrier, UNLESS the contract required delivery to a specific destination (a 'destination contract'), in which case risk stays with the seller until tender at that destination. Which applies depends on the seller's own shipping terms, which we could not verify as standardised across all US retailers.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU (Consumer Rights Directive), Article 20: the risk of loss of or damage to goods passes to the consumer only when the consumer (or a third party they named, other than the carrier) has acquired physical possession. Exception: risk passes on handoff to the carrier if the CONSUMER themselves commissioned that carrier and the trader did not offer that choice.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's own consumer guidance (Buying online) states that if a business cannot supply a product you've paid for on time or at all, the business must provide a remedy. The Australian Consumer Law's consumer guarantees (ss51-59, Sch 2 Competition and Consumer Act 2010) underpin this, but we could not locate a single ACL provision stated as explicitly as UK CRA s.29/EU CRD Art.20 allocating 'risk of loss in transit' — the ACCC's practical guidance is the clearest official statement found.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "never_arrived",
+      "label": "Never arrived / lost in transit",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.29: goods remain at the trader's risk until they come into the physical possession of the consumer or a person the consumer nominates. A carrier's own 'delivered' tracking status is not itself proof of the consumer's physical possession. Exception (s.29(3)-(4)): if the CONSUMER chose a carrier the trader did not offer as an option, risk passes to the consumer on handoff to that carrier.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "No single federal rule allocates 'risk of loss' for consumer purchases. Two separate, narrower federal rules apply instead: (1) the FTC's Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) requires the SELLER to have a reasonable basis to ship within the time promised (or 30 days if none was promised) and to refund or get the buyer's consent to a delay if it cannot — this is about the seller's shipping obligation, not about who bears risk once goods are properly shipped. (2) Risk of loss once goods are shipped is governed by state-adopted UCC Article 2 §2-509: under the common default 'shipment contract', risk passes to the BUYER when goods are duly delivered to the carrier, UNLESS the contract required delivery to a specific destination (a 'destination contract'), in which case risk stays with the seller until tender at that destination. Which applies depends on the seller's own shipping terms, which we could not verify as standardised across all US retailers.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU (Consumer Rights Directive), Article 20: the risk of loss of or damage to goods passes to the consumer only when the consumer (or a third party they named, other than the carrier) has acquired physical possession. Exception: risk passes on handoff to the carrier if the CONSUMER themselves commissioned that carrier and the trader did not offer that choice.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's own consumer guidance (Buying online) states that if a business cannot supply a product you've paid for on time or at all, the business must provide a remedy. The Australian Consumer Law's consumer guarantees (ss51-59, Sch 2 Competition and Consumer Act 2010) underpin this, but we could not locate a single ACL provision stated as explicitly as UK CRA s.29/EU CRD Art.20 allocating 'risk of loss in transit' — the ACCC's practical guidance is the clearest official statement found.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "damaged",
+      "label": "Damaged",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.29 covers damage as well as loss in transit (goods are 'at the trader's risk' until physical possession) — a damaged arrival is treated the same as a non-arrival for risk purposes. The goods must also meet the 'satisfactory quality' guarantee (CRA 2015, s.9) at the point the consumer actually examines them.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "Complex and NOT fully resolved by one rule: if risk of loss already passed to the buyer under UCC §2-509 (shipment contract), damage caused purely by carrier mishandling after proper shipment may fall outside the seller's risk. Separately, UCC §2-314's implied warranty of merchantability (goods fit for ordinary use) can still make the SELLER liable if the damage shows the goods were not merchantable when shipped (e.g. inadequate packaging) — this is a fact-specific question we could not reduce to a single rule.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU Article 20 explicitly covers 'loss of or damage to the goods', using the same risk-passing rule as non-delivery.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "Australian Consumer Law consumer guarantees include that goods must be of acceptable quality (s54) — a damaged-on-arrival item breaches this guarantee regardless of carrier fault, and the business/seller remains responsible to the consumer.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "wrong_address_or_unsafe_place",
+      "label": "Delivered to wrong address or left in an unsafe place",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.29: goods remain at the trader's risk until they come into the physical possession of the consumer or a person the consumer nominates. A carrier's own 'delivered' tracking status is not itself proof of the consumer's physical possession. Exception (s.29(3)-(4)): if the CONSUMER chose a carrier the trader did not offer as an option, risk passes to the consumer on handoff to that carrier.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "A parcel left somewhere the consumer did not authorise (and did not identify as the intended recipient under s.29(2)(b)) has not reached 'physical possession' — risk stays with the trader."
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "No single federal rule allocates 'risk of loss' for consumer purchases. Two separate, narrower federal rules apply instead: (1) the FTC's Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) requires the SELLER to have a reasonable basis to ship within the time promised (or 30 days if none was promised) and to refund or get the buyer's consent to a delay if it cannot — this is about the seller's shipping obligation, not about who bears risk once goods are properly shipped. (2) Risk of loss once goods are shipped is governed by state-adopted UCC Article 2 §2-509: under the common default 'shipment contract', risk passes to the BUYER when goods are duly delivered to the carrier, UNLESS the contract required delivery to a specific destination (a 'destination contract'), in which case risk stays with the seller until tender at that destination. Which applies depends on the seller's own shipping terms, which we could not verify as standardised across all US retailers.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU (Consumer Rights Directive), Article 20: the risk of loss of or damage to goods passes to the consumer only when the consumer (or a third party they named, other than the carrier) has acquired physical possession. Exception: risk passes on handoff to the carrier if the CONSUMER themselves commissioned that carrier and the trader did not offer that choice.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's own consumer guidance (Buying online) states that if a business cannot supply a product you've paid for on time or at all, the business must provide a remedy. The Australian Consumer Law's consumer guarantees (ss51-59, Sch 2 Competition and Consumer Act 2010) underpin this, but we could not locate a single ACL provision stated as explicitly as UK CRA s.29/EU CRD Art.20 allocating 'risk of loss in transit' — the ACCC's practical guidance is the clearest official statement found.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "signature_not_yours",
+      "label": "Signature not yours",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.29: goods remain at the trader's risk until they come into the physical possession of the consumer or a person the consumer nominates. A carrier's own 'delivered' tracking status is not itself proof of the consumer's physical possession. Exception (s.29(3)-(4)): if the CONSUMER chose a carrier the trader did not offer as an option, risk passes to the consumer on handoff to that carrier.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "We found no distinct legal provision for a disputed/incorrect signature specifically — it is treated as a factual dispute about whether the consumer (or someone they nominated) actually took possession, governed by the same s.29 rule as scenario 1. Wording here is neutral: we describe this as 'the recorded signature does not match the consumer's own records', never as an accusation of forgery."
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "No single federal rule allocates 'risk of loss' for consumer purchases. Two separate, narrower federal rules apply instead: (1) the FTC's Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) requires the SELLER to have a reasonable basis to ship within the time promised (or 30 days if none was promised) and to refund or get the buyer's consent to a delay if it cannot — this is about the seller's shipping obligation, not about who bears risk once goods are properly shipped. (2) Risk of loss once goods are shipped is governed by state-adopted UCC Article 2 §2-509: under the common default 'shipment contract', risk passes to the BUYER when goods are duly delivered to the carrier, UNLESS the contract required delivery to a specific destination (a 'destination contract'), in which case risk stays with the seller until tender at that destination. Which applies depends on the seller's own shipping terms, which we could not verify as standardised across all US retailers.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "No distinct US rule found; treated as the same 'goods not in possession' question as scenario 1/2."
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU (Consumer Rights Directive), Article 20: the risk of loss of or damage to goods passes to the consumer only when the consumer (or a third party they named, other than the carrier) has acquired physical possession. Exception: risk passes on handoff to the carrier if the CONSUMER themselves commissioned that carrier and the trader did not offer that choice.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "No distinct EU rule found; treated as the same Article 20 possession question."
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's own consumer guidance (Buying online) states that if a business cannot supply a product you've paid for on time or at all, the business must provide a remedy. The Australian Consumer Law's consumer guarantees (ss51-59, Sch 2 Competition and Consumer Act 2010) underpin this, but we could not locate a single ACL provision stated as explicitly as UK CRA s.29/EU CRD Art.20 allocating 'risk of loss in transit' — the ACCC's practical guidance is the clearest official statement found.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18",
+          "notes": "No distinct AU rule found; treated as the same possession question."
+        }
+      }
+    },
+    {
+      "id": "missing_items",
+      "label": "Missing items",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015: an incomplete delivery means part of the goods never reached physical possession under s.29 (treat the missing part as non-delivery of that item), and the delivered goods must also match the quantity/description contracted for (s.11, 'goods to match description').",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "No single federal rule allocates 'risk of loss' for consumer purchases. Two separate, narrower federal rules apply instead: (1) the FTC's Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435) requires the SELLER to have a reasonable basis to ship within the time promised (or 30 days if none was promised) and to refund or get the buyer's consent to a delay if it cannot — this is about the seller's shipping obligation, not about who bears risk once goods are properly shipped. (2) Risk of loss once goods are shipped is governed by state-adopted UCC Article 2 §2-509: under the common default 'shipment contract', risk passes to the BUYER when goods are duly delivered to the carrier, UNLESS the contract required delivery to a specific destination (a 'destination contract'), in which case risk stays with the seller until tender at that destination. Which applies depends on the seller's own shipping terms, which we could not verify as standardised across all US retailers.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU (Consumer Rights Directive), Article 20: the risk of loss of or damage to goods passes to the consumer only when the consumer (or a third party they named, other than the carrier) has acquired physical possession. Exception: risk passes on handoff to the carrier if the CONSUMER themselves commissioned that carrier and the trader did not offer that choice.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's own consumer guidance (Buying online) states that if a business cannot supply a product you've paid for on time or at all, the business must provide a remedy. The Australian Consumer Law's consumer guarantees (ss51-59, Sch 2 Competition and Consumer Act 2010) underpin this, but we could not locate a single ACL provision stated as explicitly as UK CRA s.29/EU CRD Art.20 allocating 'risk of loss in transit' — the ACCC's practical guidance is the clearest official statement found.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "arrived_late",
+      "label": "Arrived late",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Consumer Rights Act 2015, s.28: unless otherwise agreed, the trader must deliver without undue delay and within 30 days of the contract. If time was essential, or the trader misses a further reasonable period the consumer sets after a first missed deadline, the consumer may treat the contract as at an end and get a full refund without undue delay.",
+          "deadlines": [
+            "30 days from the contract date (default, if no delivery date was agreed)."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card chargeback / Section 75 claim if a refund is refused",
+            "Trading Standards / Citizens Advice"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/28"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": "seller",
+          "legal_basis": "FTC Mail, Internet, or Telephone Order Merchandise Rule (16 CFR Part 435): the seller must have a reasonable basis to ship within the time it advertised, or within 30 days if no time was stated; if it cannot, it must notify the buyer and either get consent to the delay or treat the order as cancelled and refund it. The 30-day clock starts when the seller receives a properly completed order.",
+          "deadlines": [
+            "30 days from order receipt (default, if no shipping time was advertised)."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute (FCBA, 60 days)",
+            "FTC ReportFraud.ftc.gov"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Directive 2011/83/EU, Article 18: unless otherwise agreed, the trader must deliver without undue delay and no later than 30 days from the contract. If the trader misses the agreed/30-day deadline, the consumer must first call on the trader to deliver within an additional, appropriate period; if that is also missed, the consumer may terminate the contract and is entitled to a refund without undue delay.",
+          "deadlines": [
+            "30 days from contract conclusion (default)."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer body / small claims",
+            "ECC-Net for cross-border disputes"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "Australian Consumer Law, s62: where no delivery time is fixed by the contract, the supplier guarantees supply within a reasonable time; ACCC's own guidance confirms that for significant delay the consumer may be entitled to cancel and get a refund.",
+          "deadlines": [
+            "No fixed number of days in the statute itself — 'reasonable time', assessed case by case; no official ACCC figure found."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback",
+            "AFCA (bank's handling only)",
+            "State/Territory consumer affairs"
+          ],
+          "sources": [
+            "https://classic.austlii.edu.au/au/legis/cth/consol_act/caca2010265/sch2.html",
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "customs_import_charges",
+      "label": "Customs / import charges",
+      "by_country": {
+        "UK": {
+          "liable_party": "consumer",
+          "legal_basis": "The recipient (consumer) is legally responsible for paying import VAT/customs duty on goods sent from abroad — this is not a seller-vs-carrier liability question but a tax obligation to HMRC, collected via the carrier. The dispute that CAN be raised is whether the amount charged was calculated correctly. Thresholds (current, per gov.uk): gifts under £39 are VAT-exempt; non-excise goods valued at or below £135 generally face no customs duty in Great Britain (duty applies above that, varying by goods type/origin).",
+          "deadlines": [
+            "Repayment claim for an overpaid/incorrectly-calculated charge: 3 years from the overpayment.",
+            "Repayment claim where the import itself was rejected: 1 year."
+          ],
+          "escalation_path": [
+            "Carrier that collected the charge (contact them with the customs declaration/invoice)",
+            "Form BOR286 (Border Force) — if Royal Mail or Parcelforce delivered the item",
+            "Form C285 — if a different courier/freight company delivered the item"
+          ],
+          "sources": [
+            "https://www.gov.uk/goods-sent-from-abroad",
+            "https://www.gov.uk/goods-sent-from-abroad/tax-and-duty",
+            "https://www.gov.uk/guidance/how-to-claim-a-repayment-of-import-duty-and-vat-if-youve-overpaid"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": "consumer",
+          "legal_basis": "U.S. Customs and Border Protection (CBP) collects duty from the importer of record, which for a personal parcel is normally the recipient consumer. As of the suspension of the Section 321 'de minimis' exemption (effective for non-postal modes 2026-06-24 and for international mail 2026-07-24, per Federal Register), shipments that were previously duty-free under $800 now owe applicable duties, taxes and fees — there is no current de minimis exemption.",
+          "deadlines": [
+            "Formal CBP protest (19 CFR 174.12): 180 days from the date of the liquidation/decision being challenged. This is the formal commercial-importer process; for an individual consumer's small personal parcel, the practical first step is contacting the carrier/postal operator that collected the charge, not filing a CBP Form 19 protest directly."
+          ],
+          "escalation_path": [
+            "Carrier/postal operator that collected the charge",
+            "Formal CBP protest (CBP Form 19) for larger/commercial-style disputes"
+          ],
+          "sources": [
+            "https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other",
+            "https://www.cbp.gov/sites/default/files/2025-08/factsheet_suspension_of_duty-free_de_minimis_treatment.pdf",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": null,
+          "legal_basis": "Varies by how the SELLER registered for VAT. If the seller uses the Import One-Stop Shop (IOSS) for consignments valued at or below EUR 150, the seller charges import VAT at the point of sale, and the consumer should not be charged again at the border — a double charge should be refunded by the seller/platform. From 1 July 2026 to 1 July 2028, a temporary flat customs duty of EUR 3 per item (per tariff category) applies to low-value imports under Council Regulation (EU) 2026/382, replacing the abolished EUR 150 duty-free threshold.",
+          "deadlines": [
+            "Not found — varies by Member State's own customs administration."
+          ],
+          "escalation_path": [
+            "Seller/platform (if IOSS was used and the consumer was double-charged)",
+            "National customs authority that collected the charge",
+            "ECC-Net for cross-border disputes"
+          ],
+          "sources": [
+            "https://vat-one-stop-shop.ec.europa.eu/index_en",
+            "https://www.consilium.europa.eu/en/press/press-releases/2025/12/12/customs-council-agrees-to-levy-customs-duty-on-small-parcels-as-of-1-july-2026/",
+            "https://taxation-customs.ec.europa.eu/news/guidance-and-legal-text-temporary-flat-fee-low-value-imports-which-will-apply-until-1-july-2028-2026-06-08_en"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": null,
+          "legal_basis": "For goods valued at or below A$1,000, GST is generally collected by the overseas supplier/marketplace/redeliverer at the point of SALE, not at the border — if also charged GST at the border, the consumer must seek that refund from the SUPPLIER, not the ATO or Australian Border Force (which does not refund border GST in this case). For goods valued above A$1,000, GST and duty are payable at the border to the Australian Border Force.",
+          "deadlines": [
+            "Not found specifically for this refund route."
+          ],
+          "escalation_path": [
+            "Supplier/marketplace (for a refund of GST wrongly charged twice, on goods ≤A$1,000)",
+            "Australian Border Force (for goods >A$1,000 charged at the border)"
+          ],
+          "sources": [
+            "https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/rules-for-specific-transactions/international-transactions/australian-consumers-importing-goods-and-services",
+            "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/cost-of-importing-goods/gst-and-other-taxes/gst-on-low-value-goods"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    },
+    {
+      "id": "lost_return_shipment",
+      "label": "Lost return shipment",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "The Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013, reg.34(3)(b): if the consumer is withdrawing/cancelling, the trader must reimburse within 14 days of EITHER receiving the goods back OR (if earlier) the consumer supplying evidence of having sent them back. This means proof of posting a return triggers the refund deadline even if the parcel is later lost — but the regulations are silent on who formally bears 'risk of loss' for a lost return parcel itself (reg.35 addresses only who pays return POSTAGE, not loss risk).",
+          "deadlines": [
+            "Refund due within 14 days of proof of posting the return (whichever is earlier of that or the trader actually receiving it back)."
+          ],
+          "escalation_path": [
+            "Seller, citing proof of posting under reg.34(3)(b)",
+            "Card chargeback / Section 75",
+            "Trading Standards / Citizens Advice"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/uksi/2013/3134/regulation/34",
+            "https://www.legislation.gov.uk/uksi/2013/3134/regulation/35"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": null,
+          "deadlines": null,
+          "escalation_path": null,
+          "sources": [],
+          "verified_on": null
+        },
+        "EU": {
+          "liable_party": null,
+          "legal_basis": "Directive 2011/83/EU, Article 14 sets the 14-day return window and who pays return POSTAGE, but does not regulate who bears the risk of loss/damage during return transit — the Directive leaves this to each Member State's own national law, which is not harmonised across the EU.",
+          "deadlines": [],
+          "escalation_path": [],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": null,
+          "legal_basis": null,
+          "deadlines": null,
+          "escalation_path": null,
+          "sources": [],
+          "verified_on": null
+        }
+      }
+    },
+    {
+      "id": "seller_says_claim_from_carrier",
+      "label": "Seller says \"claim from the carrier\"",
+      "by_country": {
+        "UK": {
+          "liable_party": "seller",
+          "legal_basis": "Under CRA 2015 s.29, this response is generally NOT correct: the trader stays liable to the consumer until the consumer has physical possession, regardless of which carrier it used — UNLESS the narrow exception applies (the consumer chose a carrier the trader did not offer, s.29(3)). In the ordinary case (trader picked the courier), s.29(5) also confirms telling the consumer to claim from the carrier does not remove the trader's own liability to the consumer; the consumer can still choose to pursue the carrier separately where the carrier has its own liability, but is not required to.",
+          "deadlines": [
+            "No statutory deadline to notify the seller of non-delivery itself.",
+            "Section 75 Consumer Credit Act 1974 card claim: available for purchases of £100-£30,000 on the single item; practical limitation period is 6 years from breach (general contract limitation), but card issuers/schemes may apply shorter internal chargeback windows not set by statute."
+          ],
+          "escalation_path": [
+            "Seller (the retailer who chose the carrier) — in writing, citing CRA 2015 s.29",
+            "Card chargeback or Section 75 claim with the card issuer (if paid by card)",
+            "Financial Ombudsman Service — only if the dispute becomes about the card issuer's own handling of the claim, not about the retailer directly",
+            "POSTRS (Postal Redress Service, run by CEDR) — Royal Mail only; no equivalent ADR scheme confirmed for Evri, DPD, Yodel, UPS, FedEx, DHL, or Amazon Logistics",
+            "Citizens Advice / Trading Standards — general, non-binding consumer advice for sellers/carriers outside POSTRS's scope"
+          ],
+          "sources": [
+            "https://www.legislation.gov.uk/ukpga/2015/15/section/29",
+            "https://www.legislation.gov.uk/ukpga/1974/39/section/75",
+            "https://www.cedr-assist.com/consumer/postrs/overview/"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "US": {
+          "liable_party": null,
+          "legal_basis": "Whether the seller can validly point to the carrier depends on which risk-of-loss rule applies to that specific sale (see scenario 1/2) — in a 'shipment contract' (the common default under UCC §2-509(1)(a)), risk may genuinely already sit with the buyer once the seller handed goods to the carrier, which is a materially different, more seller-favourable position than in the UK/EU/AU. We could not verify how to tell which type of contract applies to any specific purchase without seeing that seller's own shipping terms.",
+          "deadlines": [
+            "Fair Credit Billing Act (FCBA) card-dispute deadline: must dispute in writing within 60 days of the statement date that first contained the charge."
+          ],
+          "escalation_path": [
+            "Seller",
+            "Card issuer billing dispute under the Fair Credit Billing Act (60 days from the relevant statement)",
+            "Consumer Financial Protection Bureau (CFPB) complaint — if the card issuer mishandles the FCBA dispute",
+            "FTC (ReportFraud.ftc.gov) — for the seller's own conduct; the FTC does not resolve individual disputes but uses reports for enforcement"
+          ],
+          "sources": [
+            "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+            "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products",
+            "https://www.ecfr.gov/current/title-19/chapter-I/part-174/subpart-B/section-174.12"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "EU": {
+          "liable_party": "seller",
+          "legal_basis": "Same reasoning as the UK: under CRD Art.20 the trader remains at risk until the consumer's physical possession, regardless of carrier choice, unless the consumer themselves commissioned a carrier the trader did not offer.",
+          "deadlines": [
+            "The Directive sets no specific deadline for raising a non-delivery complaint with the seller; general limitation periods are set by each Member State's own national law, not harmonised by the Directive."
+          ],
+          "escalation_path": [
+            "Seller",
+            "National consumer protection body / small claims procedure in the consumer's or seller's country",
+            "European Consumer Centres Network (ECC-Net) — free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries) only"
+          ],
+          "sources": [
+            "https://eur-lex.europa.eu/eli/dir/2011/83/oj/gle",
+            "https://www.eccnet.eu/european-consumer-centres-network"
+          ],
+          "verified_on": "2026-10-18"
+        },
+        "AU": {
+          "liable_party": "seller",
+          "legal_basis": "ACCC's guidance is that the business must provide the remedy for non-delivery; we found no ACL provision creating a formal exception letting the business redirect the consumer to the carrier instead.",
+          "deadlines": [
+            "No statutory deadline found for notifying the seller."
+          ],
+          "escalation_path": [
+            "Seller/business",
+            "Card chargeback — bank/credit union must pursue it on your behalf if a chargeback right exists under the card scheme's own rules",
+            "Australian Financial Complaints Authority (AFCA) — only if the dispute becomes about how the BANK handled the chargeback request, not about the retailer directly",
+            "State/Territory consumer affairs or fair trading office"
+          ],
+          "sources": [
+            "https://www.accc.gov.au/consumers/buying-products-and-services/buying-online",
+            "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          ],
+          "verified_on": "2026-10-18"
+        }
+      }
+    }
+  ],
+  "unverified": [
+    {
+      "scenario": "marked_delivered_not_received",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "never_arrived",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "damaged",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "wrong_address_or_unsafe_place",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "signature_not_yours",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "missing_items",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "customs_import_charges",
+      "country": "EU",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "customs_import_charges",
+      "country": "AU",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "lost_return_shipment",
+      "country": "US",
+      "field": "liable_party/legal_basis/deadlines/escalation_path",
+      "reason": "No official primary source found allocating this specifically; left fully null rather than inferred from an unrelated rule."
+    },
+    {
+      "scenario": "lost_return_shipment",
+      "country": "EU",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "lost_return_shipment",
+      "country": "EU",
+      "field": "deadlines",
+      "reason": "Could not verify from an official source; left null."
+    },
+    {
+      "scenario": "lost_return_shipment",
+      "country": "AU",
+      "field": "liable_party/legal_basis/deadlines/escalation_path",
+      "reason": "No official primary source found allocating this specifically; left fully null rather than inferred from an unrelated rule."
+    },
+    {
+      "scenario": "seller_says_claim_from_carrier",
+      "country": "US",
+      "field": "liable_party",
+      "reason": "Could not verify from an official source; left null."
+    }
+  ]
+}

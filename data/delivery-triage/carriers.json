@@ -1,0 +1,218 @@
+{
+  "generated": "2026-10-18",
+  "note": "Official claim process, claim windows, compensation limits and escalation route for the carriers covered by the Delivery Problems triage, from each carrier's own terms/claims pages where directly accessible. Several large carrier sites block automated fetching; in those cases the figures are drawn from a web search whose results quote/paraphrase the same official URL (cited), and this is flagged per-carrier in 'source_access_note'. Null = could not verify; listed in 'unverified'.",
+  "carriers": [
+    {
+      "name": "Royal Mail",
+      "country": "UK",
+      "consumer_can_claim_directly": true,
+      "note_on_direct_claims": "Royal Mail allows the sender to claim; for a retail purchase the SENDER is normally the retailer, not the consumer receiving it — the consumer's direct claim right applies mainly when the consumer themselves was the sender (e.g. a return they posted).",
+      "claim_process": "Online inland claim via Royal Mail's Claims Centre, or by post using the inland claims form; requires proof of posting and proof of value.",
+      "claim_windows": {
+        "loss": "Within 80 calendar days of posting (30 days for Tracked 24/Tracked 48).",
+        "damage_or_part_loss": "Within 80 calendar days of posting (30 days for Tracked 24/Tracked 48)."
+      },
+      "compensation_limits": {
+        "1st_class": "Up to £20 for contents, plus postage refund",
+        "2nd_class": "Up to £20 for contents, plus postage refund",
+        "signed_for": "Up to £20 for contents",
+        "tracked_24_48": "Up to £75 for contents",
+        "special_delivery_guaranteed_by_1pm": "Up to £750 included; up to £2,500 with purchased extra compensation",
+        "special_delivery_guaranteed_by_9am": "Up to £50 included; up to £2,500 with purchased extra compensation"
+      },
+      "escalation_route": "POSTRS (Postal Redress Service, run by CEDR, Ofcom-approved) — free, after Royal Mail issues a final response or after a reasonable wait with no resolution (6-8 week typical timeline once a complaint is accepted).",
+      "sources": [
+        "https://www.royalmail.com/retail-compensation-policy-loss",
+        "https://www.royalmail.com/retail-compensation-policy-damage",
+        "https://www.cedr-assist.com/consumer/postrs/overview/"
+      ],
+      "source_access_note": "royalmail.com's own compensation-policy pages returned a 403 (bot-blocked) on direct automated fetch; the figures above are drawn from a web search whose results quote text directly from those same official URLs, not from a third-party aggregator.",
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "Evri",
+      "country": "UK",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "Evri's claims process is for its own customer (normally the retailer who booked the delivery), not the end recipient. Confirmed: Evri is NOT a POSTRS member (POSTRS covers Royal Mail only) — no ADR/ombudsman scheme found for Evri.",
+      "claim_process": "Via the Evri account of whoever booked the parcel; Evri's own terms direct complainants to its 'Contact Us' page, with no published ADR scheme.",
+      "claim_windows": {
+        "loss_or_damage_or_late": "Recommended within 28 days for UK services, 45 days for international services (mandatory for business customers; described as a recommendation, not an explicit hard deadline, for consumers in the T&Cs we read)."
+      },
+      "compensation_limits": {
+        "default_cover": "£20 (included free)",
+        "enhanced_cover": "Up to £999 (purchased at time of booking, by the sender only)"
+      },
+      "escalation_route": "No ADR/ombudsman scheme found. For a consumer, the realistic escalation is via the RETAILER who chose Evri (see scenarios.json), since Evri's own complaints route has no binding independent scheme confirmed.",
+      "sources": [
+        "https://www.evri.com/guides/parcel-cover",
+        "https://www.evri.com/terms-and-conditions"
+      ],
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "DPD",
+      "country": "UK",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "DPD's terms and conditions govern the relationship with whoever booked the parcel (normally the retailer), not the end recipient.",
+      "claim_process": "Notify DPD in writing; DPD's own T&Cs (Condition 11 'Liability for loss and damage', Condition 12 'Extended Cover', Condition 13 'Claims for compensation').",
+      "claim_windows": {
+        "notify": "Within 14 days of dispatch.",
+        "provide_evidence": "Within 28 days of DPD's request.",
+        "final_deadline": "One year from the dispatch date."
+      },
+      "compensation_limits": {
+        "expresspak_parcel_freight_parcel_shop_parcel": "£100 per item (or actual value if lower)",
+        "homecall_parcel": "£25 per Homecall parcel",
+        "pallet": "£1.50 per kg, max £1,500 per consignment",
+        "extended_cover": "Up to £5,000 per consignment or £15/kg (whichever is lower), minimum £100 per shipment — purchasable by the sender only"
+      },
+      "escalation_route": "No ADR/ombudsman scheme found for DPD specifically (not a POSTRS member). Escalation realistically runs via the retailer who chose DPD.",
+      "sources": [
+        "https://www.dpd.co.uk/content/terms-and-conditions.jsp"
+      ],
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "Yodel",
+      "country": "UK",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "Yodel's claims process is for whoever booked the parcel (normally the retailer). Note: Yodel's consumer-facing sending brand, Yodel Direct, has moved to inpostdirect.co.uk (confirmed via a permanent redirect from yodeldirect.co.uk), reflecting Yodel's commercial link with InPost.",
+      "claim_process": "Via the account of whoever booked the parcel (log in, 'Create claim').",
+      "claim_windows": {
+        "damage_or_part_loss": "Within 14 days of delivery (as reported by a web search citing Yodel's own guidance; we could not independently confirm this exact figure on an official Yodel page after the Yodel Direct rebrand).",
+        "never_arrived": "28 days from collection (same caveat as above)."
+      },
+      "compensation_limits": {
+        "standard_cover": "£50",
+        "additional_cover": "Up to £1,000 (purchasable)"
+      },
+      "escalation_route": "No ADR/ombudsman scheme found for Yodel.",
+      "sources": [
+        "https://www.yodeldirect.co.uk/content/about-terms (redirects to) https://www.inpostdirect.co.uk/"
+      ],
+      "source_access_note": "The Yodel Direct terms URL now permanently redirects to inpostdirect.co.uk; we confirmed the £50 standard-cover figure on the redirected page itself, but could not independently re-confirm the 14-day/28-day claim-window figures on an official page after this rebrand — flagged as lower-confidence in 'unverified'.",
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "UPS",
+      "country": "US",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "UPS's claims process is designed for its own shipping customer (normally the retailer), not the end recipient of a retail parcel.",
+      "claim_process": "Online via a UPS.com account.",
+      "claim_windows": {
+        "damaged": "Within 60 days of scheduled delivery.",
+        "lost": "Up to 9 months from the shipment date."
+      },
+      "compensation_limits": {
+        "default": "$100 automatic, no extra fee",
+        "declared_value": "Up to $50,000 per package, for an additional fee"
+      },
+      "escalation_route": "No ombudsman; dispute is with UPS directly or, for the consumer, via the retailer who chose UPS.",
+      "sources": [
+        "https://www.ups.com/us/en/support/file-a-claim"
+      ],
+      "source_access_note": "ups.com returned an access-denied response on direct automated fetch; figures are drawn from a web search citing that same official URL.",
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "FedEx",
+      "country": "US",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "FedEx's claims process is designed for its own shipping customer (normally the retailer).",
+      "claim_process": "Online via the FedEx Customer Support claims portal.",
+      "claim_windows": {
+        "damaged_or_missing_contents_domestic": "Within 60 calendar days of the shipment date.",
+        "damaged_or_missing_contents_international": "Within 21 calendar days of the shipment date.",
+        "undelivered_or_lost": "Within 9 months of the shipment date."
+      },
+      "compensation_limits": {
+        "default_domestic_express": "$100 declared-value liability included at no extra cost",
+        "declared_value": "Up to $50,000 per package for most commodities, for an additional fee"
+      },
+      "escalation_route": "No ombudsman; dispute is with FedEx directly or via the retailer who chose FedEx.",
+      "sources": [
+        "https://www.fedex.com/en-us/customer-support/claims.html"
+      ],
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "DHL",
+      "country": "International (UK/EU/US routes checked)",
+      "consumer_can_claim_directly": false,
+      "note_on_direct_claims": "DHL's claims process is designed for its own shipping customer (normally the retailer).",
+      "claim_process": "Written claim submission to DHL (DHL Express Claims Guide); figures vary materially by service (Express vs eCommerce) and mode (air/road/sea).",
+      "claim_windows": {
+        "dhl_express_general": "Within 30 days of DHL accepting the shipment.",
+        "dhl_ecommerce": "Within 90 days of the original ship date.",
+        "lost_domestic_wait_before_filing": "21 days.",
+        "lost_international_wait_before_filing": "45 days."
+      },
+      "compensation_limits": {
+        "international_air_default": "Capped per kilogram under the Montreal Convention (approx. 22 Special Drawing Rights/kg, roughly $23 USD/kg at the exchange rate checked) rather than by declared value, unless the shipper purchased Shipment Insurance covering full declared value."
+      },
+      "escalation_route": "No ombudsman; dispute is with DHL directly or via the retailer who chose DHL.",
+      "sources": [
+        "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf"
+      ],
+      "source_access_note": "The official DHL Express Claims Guide PDF could not be parsed by our automated fetch (returned as unreadable binary/compressed streams); the figures above are drawn from a web search whose results describe that same official document, not from an independently-read copy of the PDF text. The exact $/kg conversion is lower-confidence — flagged in 'unverified'.",
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "USPS",
+      "country": "US",
+      "consumer_can_claim_directly": true,
+      "note_on_direct_claims": "USPS's claims process can be filed by either the sender or (for some cases) the recipient with the mailer's permission, depending on the specific USPS guidance — we treated this as more directly accessible to a consumer than the private couriers above, but did not fully verify every edge case.",
+      "claim_process": "Online at usps.com within the applicable window, with proof of value and tracking information.",
+      "claim_windows": {
+        "priority_mail_and_other_insured": "File no earlier than 15 days, no later than 60 days, from the mailing date.",
+        "priority_mail_express": "File no earlier than 7 days from the mailing date.",
+        "damaged_or_missing_contents": "May file immediately; must file no later than 60 days after the mailing date."
+      },
+      "compensation_limits": {
+        "default": null
+      },
+      "escalation_route": "No ombudsman; USPS has its own internal appeals process for a denied claim (not independently verified here).",
+      "sources": [
+        "https://www.usps.com/help/claims.htm"
+      ],
+      "verified_on": "2026-10-18"
+    },
+    {
+      "name": "Amazon Logistics",
+      "country": "US (also operates in UK/EU/AU)",
+      "consumer_can_claim_directly": true,
+      "note_on_direct_claims": "There is no separate 'claim against Amazon Logistics' process for consumers the way there is for UPS/FedEx — Amazon Logistics is Amazon's own delivery arm. A buyer's claim is made against Amazon/the seller via Amazon's own A-to-z Guarantee (for third-party-seller orders) or Amazon's standard customer service (for orders sold and fulfilled by Amazon itself, which is NOT covered by the A-to-z Guarantee).",
+      "claim_process": "Via 'Your Orders' > the relevant order > 'File/View Claim', for third-party-seller purchases only. For a third-party-seller order, you must first contact the seller and allow 2 business days for a response before Amazon will consider an A-to-z Guarantee claim.",
+      "claim_windows": {
+        "a_to_z_guarantee_eligibility": "The order's last possible (estimated) delivery date must be 90 days or less before the claim.",
+        "never_received": "Can file once 3 days have passed since the latest estimated delivery date, or once tracking shows a delivery confirmation you dispute, whichever is sooner."
+      },
+      "compensation_limits": {
+        "a_to_z_guarantee": "Up to $2,500 (as reported by a web search citing Amazon's own help page)."
+      },
+      "escalation_route": "No external ombudsman found; Amazon's own A-to-z Guarantee decision is the final internal step we could verify.",
+      "sources": [
+        "https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV"
+      ],
+      "source_access_note": "amazon.com's own help page returned a 503 (temporarily unavailable) on direct automated fetch; figures are drawn from a web search whose results quote/paraphrase that same official page.",
+      "verified_on": "2026-10-18"
+    }
+  ],
+  "unverified": [
+    {
+      "carrier": "USPS",
+      "field": "compensation_limits.default",
+      "reason": "Not stated as a fixed figure on the official page we could access."
+    },
+    {
+      "carrier": "Yodel",
+      "field": "claim_windows.damage_or_part_loss, claim_windows.never_arrived",
+      "reason": "Figures (14 days / 28 days) could not be independently re-confirmed on an official page after Yodel Direct's redirect to inpostdirect.co.uk; kept (not nulled) because they are drawn from a web search citing Yodel's own prior guidance, but flagged here as lower-confidence rather than presented as fully primary-source-verified."
+    },
+    {
+      "carrier": "DHL",
+      "field": "compensation_limits.international_air_default",
+      "reason": "The official DHL Express Claims Guide PDF could not be parsed directly; the ~22 SDR/kg (~$23/kg) figure is drawn from a web search describing that document, not independently read from the PDF text itself. Kept with this caveat rather than nulled, since the underlying Montreal Convention SDR/kg mechanism itself is independently well-established."
+    }
+  ]
+}
