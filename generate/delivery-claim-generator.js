@@ -27,14 +27,16 @@
 
   var SCENARIOS_URL = '/data/delivery-triage/scenarios.json';
   var CARRIERS_URL = '/data/delivery-triage/carriers.json';
+  var MARKETPLACES_URL = '/data/delivery-triage/marketplaces.json';
 
-  var countrySelect, scenarioSelect, carrierSelect, carrierOtherWrap, carrierOtherInput, genBtn, errorBox, result;
+  var countrySelect, scenarioSelect, carrierSelect, carrierOtherWrap, carrierOtherInput, marketplaceSelect, genBtn, errorBox, result;
   if (IS_BROWSER) {
     countrySelect = document.getElementById('dcg-country');
     scenarioSelect = document.getElementById('dcg-scenario');
     carrierSelect = document.getElementById('dcg-carrier');
     carrierOtherWrap = document.getElementById('dcg-carrier-other-wrap');
     carrierOtherInput = document.getElementById('dcg-carrier-other');
+    marketplaceSelect = document.getElementById('dcg-marketplace');
     genBtn = document.getElementById('dcgBtn');
     errorBox = document.getElementById('dcgError');
     result = document.getElementById('dcgResult');
@@ -42,13 +44,15 @@
 
   var SCENARIOS = null; // { countries: [...], scenarios: [...] }
   var CARRIERS = null;  // { carriers: [...], country_dispute_routes: {...} }
+  var MARKETPLACES = null; // { platforms: [...], review_by }
 
-  // Lets a Node test inject the two JSON files directly, bypassing
+  // Lets a Node test inject the three JSON files directly, bypassing
   // fetch(). No effect on browser behaviour (the browser always uses
   // loadData() -> fetch() instead).
-  function setData(scenariosData, carriersData) {
+  function setData(scenariosData, carriersData, marketplacesData) {
     SCENARIOS = scenariosData;
     CARRIERS = carriersData;
+    MARKETPLACES = marketplacesData || null;
   }
 
   // Neutral, non-accusatory one-line description per scenario id. Used
@@ -75,9 +79,11 @@
     return Promise.all([
       fetch(SCENARIOS_URL).then(function (r) { return r.json(); }),
       fetch(CARRIERS_URL).then(function (r) { return r.json(); }),
+      fetch(MARKETPLACES_URL).then(function (r) { return r.json(); }),
     ]).then(function (results) {
       SCENARIOS = results[0];
       CARRIERS = results[1];
+      MARKETPLACES = results[2];
       populateSelects();
       applyDeepLinkParams();
     }).catch(function () {
@@ -103,14 +109,17 @@
     var scenarioId = params.get('scenario');
     var payment = params.get('payment');
     var carrier = params.get('carrier');
+    var marketplace = params.get('marketplace');
 
     var validCountry = !!(country && SCENARIOS.countries.indexOf(country) !== -1);
     var validScenario = !!(scenarioId && getScenario(scenarioId));
     var validPayment = !!(payment && ['card', 'paypal', 'other'].indexOf(payment) !== -1);
+    var validMarketplace = !!(marketplace && getMarketplaceNames().indexOf(marketplace) !== -1);
 
     if (validCountry) countrySelect.value = country;
     if (validScenario) scenarioSelect.value = scenarioId;
     if (validPayment) document.getElementById('dcg-paid').value = payment;
+    if (validMarketplace) marketplaceSelect.value = marketplace;
 
     if (carrier) {
       if (getCarrier(carrier)) {
@@ -151,6 +160,17 @@
     otherOpt.value = 'Other';
     otherOpt.textContent = 'Other / not listed';
     carrierSelect.appendChild(otherOpt);
+
+    getMarketplaceNames().forEach(function (name) {
+      var opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      marketplaceSelect.appendChild(opt);
+    });
+    var otherMarketOpt = document.createElement('option');
+    otherMarketOpt.value = 'Other';
+    otherMarketOpt.textContent = 'Other / not sure';
+    marketplaceSelect.appendChild(otherMarketOpt);
   }
 
   if (IS_BROWSER) {
@@ -174,6 +194,85 @@
   }
   function getCountryRoutes(country) {
     return CARRIERS.country_dispute_routes[country] || null;
+  }
+
+  // ------------------------------------------------------------------
+  // Marketplace layer (phase 5b-2) — reads ONLY data/delivery-triage/
+  // marketplaces.json. Duplicated in parcel-help.js rather than shared,
+  // matching this site's existing convention of each standalone tool
+  // owning its own copy of small data-access helpers.
+  // ------------------------------------------------------------------
+  function getMarketplaceNames() {
+    return MARKETPLACES ? (MARKETPLACES.platforms || []).map(function (p) { return p.name; }) : [];
+  }
+  function getMarketplace(name) {
+    return MARKETPLACES ? (MARKETPLACES.platforms || []).find(function (p) { return p.name === name; }) : null;
+  }
+  function getMarketplaceCell(name, country) {
+    var m = getMarketplace(name);
+    return (m && m.by_country && m.by_country[country]) || null;
+  }
+  function isEmptyField(v) {
+    return v === null || v === undefined || v === '' || (Array.isArray(v) && v.length === 0);
+  }
+  function isCellAllNull(cell) {
+    return isEmptyField(cell.buyer_protection_name) &&
+      isEmptyField(cell.buyer_protection_covers) &&
+      isEmptyField(cell.buyer_protection_excludes) &&
+      isEmptyField(cell.claim_window) &&
+      isEmptyField(cell.evidence_required) &&
+      isEmptyField(cell.escalation_internal) &&
+      isEmptyField(cell.escalation_external);
+  }
+  function fieldOrNeutral(value, platformName, cell) {
+    if (!isEmptyField(value)) return value;
+    var link = (cell.sources && cell.sources.length) ? cell.sources[0] : null;
+    return 'Not stated in our data — check ' + platformName + '\'s official page directly' + (link ? (': ' + link) : '') + '.';
+  }
+  function isPastReviewBy(reviewByStr, nowDate) {
+    if (!reviewByStr) return false;
+    var now = nowDate || new Date();
+    var due = new Date(reviewByStr + 'T00:00:00');
+    return !isNaN(due.getTime()) && now > due;
+  }
+
+  // Pure function: given a marketplace name (or '' / 'Other' / falsy for
+  // "none") and a country, returns the block used to build the "Message
+  // to the platform" section, or null if no marketplace was chosen.
+  function buildMarketplaceBlock(marketplaceName, country) {
+    if (!marketplaceName || marketplaceName === 'Other') return null;
+    if (!MARKETPLACES) {
+      return { platformName: marketplaceName, country: country, allNull: true, sources: [], verifiedOn: null, reviewBy: null, stale: false,
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' loaded — check ' + marketplaceName + '\'s official page directly.' };
+    }
+    var cell = getMarketplaceCell(marketplaceName, country);
+    var globalReviewBy = MARKETPLACES.review_by || null;
+    if (!cell) {
+      return { platformName: marketplaceName, country: country, allNull: true, sources: [], verifiedOn: null, reviewBy: globalReviewBy, stale: isPastReviewBy(globalReviewBy),
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' in ' + country + ' — check ' + marketplaceName + '\'s official page directly.' };
+    }
+    var reviewBy = cell.review_by || globalReviewBy;
+    if (isCellAllNull(cell)) {
+      var link = (cell.sources && cell.sources.length) ? cell.sources[0] : null;
+      return { platformName: marketplaceName, country: country, allNull: true, sources: cell.sources || [], verifiedOn: cell.verified_on || null, reviewBy: reviewBy, stale: isPastReviewBy(reviewBy),
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' in ' + country + ' yet — check ' + marketplaceName + '\'s official page directly' + (link ? (': ' + link) : '') + '.' };
+    }
+    return {
+      platformName: marketplaceName,
+      country: country,
+      allNull: false,
+      name: fieldOrNeutral(cell.buyer_protection_name, marketplaceName, cell),
+      covers: fieldOrNeutral(cell.buyer_protection_covers, marketplaceName, cell),
+      excludes: fieldOrNeutral(cell.buyer_protection_excludes, marketplaceName, cell),
+      claimWindow: fieldOrNeutral(cell.claim_window, marketplaceName, cell),
+      evidenceRequired: fieldOrNeutral(cell.evidence_required, marketplaceName, cell),
+      escalationInternal: fieldOrNeutral(cell.escalation_internal, marketplaceName, cell),
+      escalationExternal: fieldOrNeutral(cell.escalation_external, marketplaceName, cell),
+      sources: cell.sources || [],
+      verifiedOn: cell.verified_on || null,
+      reviewBy: reviewBy,
+      stale: isPastReviewBy(reviewBy),
+    };
   }
 
   function fmtDate(d) {
@@ -274,7 +373,9 @@
     }
     lines.push('I ask that you resolve this — by refund, replacement, or re-delivery as appropriate — within 14 days of this letter.');
     lines.push('');
-    lines.push('If I do not hear from you within that time, I will pursue a card dispute with my payment provider and, where one applies, an escalation to the relevant ombudsman or regulator.');
+    lines.push(inputs.marketplaceName
+      ? ('If I do not hear from you within that time, I will open a case with ' + inputs.marketplaceName + ' within its claim window, and if still unresolved, pursue a card dispute with my payment provider and, where one applies, an escalation to the relevant ombudsman or regulator.')
+      : 'If I do not hear from you within that time, I will pursue a card dispute with my payment provider and, where one applies, an escalation to the relevant ombudsman or regulator.');
     lines.push('');
     lines.push('Please treat this as a formal notice.');
     lines.push('');
@@ -568,6 +669,75 @@
   }
 
   // ------------------------------------------------------------------
+  // Message to the platform / case description (phase 5b-2) — only
+  // built when a marketplace was chosen. Uses ONLY marketplaces.json;
+  // no invented facts. No marketplace in our data has a verified contact
+  // email, so this always renders Copy/Print only (mailSubject stays
+  // empty, which is what makes renderSection skip the mail button).
+  // ------------------------------------------------------------------
+  function buildMarketplaceCaseMessage(inputs) {
+    var phrase = SCENARIO_PHRASES[inputs.scenarioId] || 'there is a problem with my delivery';
+    var block = buildMarketplaceBlock(inputs.marketplaceName, inputs.country);
+    var lines = [];
+    lines.push(todayLong());
+    lines.push('');
+    lines.push('Case / message to: ' + inputs.marketplaceName);
+    lines.push('Re: Order ' + orFallback(inputs.order, '[order number]') + ' — ' + orFallback(inputs.item, '[item]'));
+    lines.push('');
+
+    if (!block || block.allNull) {
+      lines.push('I am opening a case about my order ' + orFallback(inputs.order, '[order number]') +
+        (inputs.seller ? (' from ' + inputs.seller) : '') + '. The issue: ' + phrase + '.');
+      lines.push('');
+      lines.push((block && block.neutralMessage) || ('We do not have verified case-process details for ' + inputs.marketplaceName + ' in our data — check ' + inputs.marketplaceName + '\'s official page directly for how to open a case.'));
+    } else {
+      lines.push('I am opening a case about my order ' + orFallback(inputs.order, '[order number]') +
+        (inputs.purchaseDate ? (', placed on ' + fmtDate(inputs.purchaseDate)) : '') +
+        (inputs.seller ? (' from ' + inputs.seller) : '') +
+        (inputs.amount ? (' (amount paid: ' + inputs.amount + ')') : '') + '.');
+      lines.push('');
+      lines.push('The issue: ' + phrase + '.');
+      lines.push('');
+      lines.push('Your protection program: ' + joinIfArrayGen(block.name));
+      lines.push('Covered situations: ' + joinIfArrayGen(block.covers));
+      lines.push('Claim window / how to open this case: ' + joinIfArrayGen(block.claimWindow));
+      lines.push('Evidence I can provide, per your own process: ' + joinIfArrayGen(block.evidenceRequired));
+      if (inputs.tracking) {
+        lines.push('Tracking number: ' + inputs.tracking);
+      }
+      if (inputs.facts) {
+        lines.push('');
+        lines.push('Additional facts: ' + inputs.facts);
+      }
+      lines.push('');
+      lines.push('I ask that this case be resolved according to your own stated process: ' + joinIfArrayGen(block.escalationInternal));
+    }
+
+    lines.push('');
+    lines.push('---');
+    if (block && block.sources && block.sources.length) {
+      lines.push('Sources: ' + block.sources.join(', '));
+    }
+    if (block && block.verifiedOn) {
+      lines.push('Facts verified: ' + block.verifiedOn);
+    }
+    if (block && block.stale) {
+      lines.push('Note: this policy was last verified on ' + block.verifiedOn + '; platforms change their rules, so check the official page before relying on it.');
+    }
+    lines.push('This is general information, not legal advice.');
+
+    return {
+      title: 'Message to the platform / case description',
+      text: lines.join('\n'),
+      mailSubject: '',
+      mailTo: null,
+    };
+  }
+  function joinIfArrayGen(v) {
+    return Array.isArray(v) ? v.join('; ') : v;
+  }
+
+  // ------------------------------------------------------------------
   // Rendering
   // ------------------------------------------------------------------
   function el(tag, cls, text) {
@@ -640,12 +810,13 @@
     errorBox.textContent = '';
   }
 
-  // Pure function: given the form inputs, returns the array of 6 output
-  // sections ({title, text, mailSubject, mailTo}). Exported for tests —
-  // this is exactly what the "Generate" button uses.
+  // Pure function: given the form inputs, returns the array of output
+  // sections ({title, text, mailSubject, mailTo}) — 6 normally, or 7 when
+  // a marketplace was chosen. Exported for tests — this is exactly what
+  // the "Generate" button uses.
   function generateSections(inputs) {
     var cell = getCell(inputs.scenarioId, inputs.country);
-    return [
+    var sections = [
       buildSellerLetter(inputs, cell),
       buildCarrierLetter(inputs),
       buildCardDisputeLetter(inputs),
@@ -653,6 +824,10 @@
       buildDeadlineTracker(inputs, cell),
       buildEvidenceChecklist(inputs),
     ];
+    if (inputs.marketplaceName && inputs.marketplaceName !== 'Other') {
+      sections.push(buildMarketplaceCaseMessage(inputs));
+    }
+    return sections;
   }
 
   // ------------------------------------------------------------------
@@ -674,12 +849,14 @@
       return;
     }
     var carrierDisplay = carrierName === 'Other' ? (carrierOtherInput.value.trim() || 'the carrier') : (carrierName || 'the carrier');
+    var marketplaceName = marketplaceSelect.value === 'Other' ? '' : marketplaceSelect.value;
 
     var inputs = {
       country: country,
       scenarioId: scenarioId,
       carrierName: carrierName,
       carrierDisplay: carrierDisplay,
+      marketplaceName: marketplaceName,
       paidBy: document.getElementById('dcg-paid').value,
       seller: document.getElementById('dcg-seller').value.trim(),
       purchaseDate: document.getElementById('dcg-purchase-date').value || null,
@@ -717,6 +894,10 @@
       buildEscalationLetter: buildEscalationLetter,
       buildDeadlineTracker: buildDeadlineTracker,
       buildEvidenceChecklist: buildEvidenceChecklist,
+      buildMarketplaceCaseMessage: buildMarketplaceCaseMessage,
+      buildMarketplaceBlock: buildMarketplaceBlock,
+      getMarketplaceNames: getMarketplaceNames,
+      isPastReviewBy: isPastReviewBy,
       extractDays: extractDays,
       SCENARIO_PHRASES: SCENARIO_PHRASES,
     };

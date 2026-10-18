@@ -18,13 +18,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const scenariosData = JSON.parse(readFileSync(path.join(__dirname, 'data/delivery-triage/scenarios.json'), 'utf8'));
 const carriersData = JSON.parse(readFileSync(path.join(__dirname, 'data/delivery-triage/carriers.json'), 'utf8'));
+const marketplacesData = JSON.parse(readFileSync(path.join(__dirname, 'data/delivery-triage/marketplaces.json'), 'utf8'));
 
-ph.setData(scenariosData, carriersData);
+ph.setData(scenariosData, carriersData, marketplacesData);
 
 const COUNTRIES = scenariosData.countries;
 const SCENARIO_IDS = scenariosData.scenarios.map((s) => s.id);
 const PAID_BY = ['card', 'paypal', 'other'];
 const CARRIER_NAMES = carriersData.carriers.map((c) => c.name).concat(['', 'Other']);
+const MARKETPLACE_NAMES = marketplacesData.platforms.map((p) => p.name);
 
 function assertClean(text, context) {
   assert.ok(!/undefined/i.test(text), `${context}: contains "undefined"\n${text}`);
@@ -50,6 +52,30 @@ function flattenResultText(result) {
   lines.push(result.generatorUrl);
   (result.secondaryLinks || []).forEach((l) => lines.push(l.label + ': ' + l.url));
   (result.sources || []).forEach((s) => lines.push(s.label + ': ' + s.url + (s.verifiedOn ? ' (' + s.verifiedOn + ')' : '')));
+  if (result.marketplaceBlock) lines.push(flattenMarketplaceBlock(result.marketplaceBlock));
+  return lines.join('\n');
+}
+
+// Mirrors exactly what renderMarketplaceBlock() puts on screen.
+function flattenMarketplaceBlock(block) {
+  const lines = [];
+  const j = (v) => (Array.isArray(v) ? v.join('; ') : v);
+  if (block.allNull) {
+    lines.push(block.neutralMessage);
+  } else {
+    lines.push('Protection: ' + j(block.name));
+    lines.push('Covers: ' + j(block.covers));
+    lines.push('Does not cover: ' + j(block.excludes));
+    lines.push('Claim window / how to open a case: ' + j(block.claimWindow));
+    lines.push('Evidence they ask for: ' + j(block.evidenceRequired));
+    lines.push('Escalation inside the platform: ' + j(block.escalationInternal));
+    lines.push('External escalation: ' + j(block.escalationExternal));
+    if (block.returnsPolicyBasics) lines.push('Returns policy: ' + j(block.returnsPolicyBasics));
+  }
+  if (block.sources && block.sources.length) {
+    lines.push('Sources: ' + block.sources.join(' ') + (block.verifiedOn ? ' (' + block.verifiedOn + ')' : ''));
+  }
+  if (block.stale) lines.push('This policy was last verified on ' + (block.verifiedOn || 'an earlier date') + '.');
   return lines.join('\n');
 }
 
@@ -138,4 +164,80 @@ test('every PLAIN_LABELS entry covers a real scenario id, with no leftover theft
     assert.ok(ph.PLAIN_LABELS[id], `missing plain label for ${id}`);
     assert.ok(!/theft|forg|stol/i.test(ph.PLAIN_LABELS[id]), `${id}: plain label is not neutral`);
   });
+});
+
+// ------------------------------------------------------------------
+// Phase 5b-2: marketplace layer (marketplaces.json only, no new facts)
+// ------------------------------------------------------------------
+
+test('no marketplace selected: result has no marketplaceBlock, unchanged behaviour', () => {
+  const result = ph.buildResult({ country: 'UK', scenarioId: 'never_arrived', paidBy: 'card', carrierName: 'Royal Mail' });
+  assert.equal(result.marketplaceBlock, null);
+});
+
+test('marketplace x country x scenario: full cross product renders cleanly with a valid generator link', () => {
+  let count = 0;
+  for (const marketplaceName of MARKETPLACE_NAMES) {
+    for (const country of COUNTRIES) {
+      for (const scenarioId of SCENARIO_IDS) {
+        const inputs = { country, scenarioId, paidBy: 'card', carrierName: 'Royal Mail', marketplaceName };
+        const result = ph.buildResult(inputs);
+        assert.ok(result.marketplaceBlock, `${marketplaceName}/${country}/${scenarioId}: expected a marketplaceBlock`);
+        assertClean(flattenResultText(result), `${marketplaceName}/${country}/${scenarioId}`);
+        assert.ok(result.generatorUrl.includes('marketplace=' + encodeURIComponent(marketplaceName)), `${marketplaceName}/${country}: generator link missing marketplace param`);
+        assert.ok(result.steps.some((s) => s.includes(marketplaceName)), `${marketplaceName}/${country}: steps should mention the platform case before the card dispute`);
+        count++;
+      }
+    }
+  }
+  console.log(`  (checked ${count} marketplace combinations)`);
+  assert.equal(count, MARKETPLACE_NAMES.length * COUNTRIES.length * SCENARIO_IDS.length);
+});
+
+test('Temu renders only the neutral "check the official page" message, for every country marketplaces.json has a cell for', () => {
+  for (const country of ['UK', 'US']) {
+    const block = ph.buildMarketplaceBlock('Temu', country);
+    assert.ok(block.allNull, `Temu/${country}: expected allNull`);
+    assert.ok(/check Temu.*official page/i.test(block.neutralMessage));
+    assertClean(block.neutralMessage, `Temu/${country} neutral message`);
+  }
+});
+
+test('marketplace selected but marketplaces.json has no cell for that country (e.g. EU/AU) falls back to a neutral message, never invented', () => {
+  for (const marketplaceName of MARKETPLACE_NAMES) {
+    for (const country of ['EU', 'AU']) {
+      const block = ph.buildMarketplaceBlock(marketplaceName, country);
+      assert.ok(block.allNull, `${marketplaceName}/${country}: expected allNull fallback`);
+      assertClean(block.neutralMessage, `${marketplaceName}/${country} neutral message`);
+    }
+  }
+});
+
+test('every source link in a marketplace block is one of the real strings in marketplaces.json for that cell', () => {
+  for (const platform of marketplacesData.platforms) {
+    for (const country of Object.keys(platform.by_country)) {
+      const block = ph.buildMarketplaceBlock(platform.name, country);
+      const cell = platform.by_country[country];
+      (block.sources || []).forEach((url) => {
+        assert.ok((cell.sources || []).includes(url), `${platform.name}/${country}: block source "${url}" is not in the data's own sources array`);
+      });
+    }
+  }
+});
+
+test('Etsy UK/US differences (14-day cooling-off for UK, DDP/customs refund for US) appear only where marketplaces.json states them', () => {
+  const uk = ph.buildMarketplaceBlock('Etsy', 'UK');
+  const us = ph.buildMarketplaceBlock('Etsy', 'US');
+  assert.ok(/14-day/i.test(uk.returnsPolicyBasics), 'Etsy UK should mention the 14-day cooling-off right');
+  assert.ok(/does not apply to us buyers/i.test(us.returnsPolicyBasics), 'Etsy US should explicitly state the 14-day right does not apply there');
+  assertClean(flattenMarketplaceBlock(uk), 'Etsy UK marketplace block');
+  assertClean(flattenMarketplaceBlock(us), 'Etsy US marketplace block');
+});
+
+test('"Other" or empty marketplace selection produces no marketplace block, and the generator link has no marketplace param', () => {
+  assert.equal(ph.buildMarketplaceBlock('', 'UK'), null);
+  assert.equal(ph.buildMarketplaceBlock('Other', 'UK'), null);
+  const result = ph.buildResult({ country: 'UK', scenarioId: 'never_arrived', paidBy: 'card', carrierName: 'Royal Mail', marketplaceName: '' });
+  assert.equal(result.marketplaceBlock, null);
+  assert.ok(!result.generatorUrl.includes('marketplace='));
 });

@@ -17,13 +17,16 @@
 
   var SCENARIOS_URL = '/data/delivery-triage/scenarios.json';
   var CARRIERS_URL = '/data/delivery-triage/carriers.json';
+  var MARKETPLACES_URL = '/data/delivery-triage/marketplaces.json';
 
   var SCENARIOS = null;
   var CARRIERS = null;
+  var MARKETPLACES = null;
 
-  function setData(scenariosData, carriersData) {
+  function setData(scenariosData, carriersData, marketplacesData) {
     SCENARIOS = scenariosData;
     CARRIERS = carriersData;
+    MARKETPLACES = marketplacesData || null;
   }
 
   var COUNTRY_LABELS = { UK: 'United Kingdom', US: 'United States', EU: 'European Union', AU: 'Australia' };
@@ -171,23 +174,115 @@
     list.push({ label: label, url: url, verifiedOn: verifiedOn || null });
   }
 
-  function buildGeneratorUrl(inputs) {
+  // ------------------------------------------------------------------
+  // Marketplace layer (phase 5b-2) — reads ONLY data/delivery-triage/
+  // marketplaces.json. Duplicated in generate/delivery-claim-generator.js
+  // rather than shared, matching this site's existing convention of each
+  // standalone tool owning its own copy of small data-access helpers.
+  // ------------------------------------------------------------------
+  function getMarketplaceNames() {
+    return MARKETPLACES ? (MARKETPLACES.platforms || []).map(function (p) { return p.name; }) : [];
+  }
+  function getMarketplace(name) {
+    return MARKETPLACES ? (MARKETPLACES.platforms || []).find(function (p) { return p.name === name; }) : null;
+  }
+  function getMarketplaceCell(name, country) {
+    var m = getMarketplace(name);
+    return (m && m.by_country && m.by_country[country]) || null;
+  }
+  // A value counts as "empty" the same way whether it's a string or array
+  // — this is what triggers the neutral "check the official page" fallback.
+  function isEmptyField(v) {
+    return v === null || v === undefined || v === '' || (Array.isArray(v) && v.length === 0);
+  }
+  function isCellAllNull(cell) {
+    return isEmptyField(cell.buyer_protection_name) &&
+      isEmptyField(cell.buyer_protection_covers) &&
+      isEmptyField(cell.buyer_protection_excludes) &&
+      isEmptyField(cell.claim_window) &&
+      isEmptyField(cell.evidence_required) &&
+      isEmptyField(cell.escalation_internal) &&
+      isEmptyField(cell.escalation_external);
+  }
+  // Returns the real value unchanged, or a neutral fallback that links to
+  // the cell's own first source (never an invented URL) when the field is
+  // null/empty in the data.
+  function fieldOrNeutral(value, platformName, cell) {
+    if (!isEmptyField(value)) return value;
+    var link = (cell.sources && cell.sources.length) ? cell.sources[0] : null;
+    return 'Not stated in our data — check ' + platformName + '\'s official page directly' + (link ? (': ' + link) : '') + '.';
+  }
+  function isPastReviewBy(reviewByStr, nowDate) {
+    if (!reviewByStr) return false;
+    var now = nowDate || new Date();
+    var due = new Date(reviewByStr + 'T00:00:00');
+    return !isNaN(due.getTime()) && now > due;
+  }
+
+  // Pure function: given a marketplace name (or '' / 'Other' / falsy for
+  // "none") and a country, returns the block the result renders, or null
+  // if no marketplace was chosen. Never invents a fact — every non-null
+  // field comes straight from marketplaces.json; every null field becomes
+  // a neutral message pointing at the cell's own source, if one exists.
+  function buildMarketplaceBlock(marketplaceName, country) {
+    if (!marketplaceName || marketplaceName === 'Other') return null;
+    if (!MARKETPLACES) {
+      return { platformName: marketplaceName, country: country, allNull: true, sources: [], verifiedOn: null, reviewBy: null, stale: false,
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' loaded — check ' + marketplaceName + '\'s official page directly.' };
+    }
+    var cell = getMarketplaceCell(marketplaceName, country);
+    var globalReviewBy = MARKETPLACES.review_by || null;
+    if (!cell) {
+      return { platformName: marketplaceName, country: country, allNull: true, sources: [], verifiedOn: null, reviewBy: globalReviewBy, stale: isPastReviewBy(globalReviewBy),
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' in ' + country + ' — check ' + marketplaceName + '\'s official page directly.' };
+    }
+    var reviewBy = cell.review_by || globalReviewBy;
+    if (isCellAllNull(cell)) {
+      var link = (cell.sources && cell.sources.length) ? cell.sources[0] : null;
+      return { platformName: marketplaceName, country: country, allNull: true, sources: cell.sources || [], verifiedOn: cell.verified_on || null, reviewBy: reviewBy, stale: isPastReviewBy(reviewBy),
+        neutralMessage: 'We do not have verified marketplace-protection details for ' + marketplaceName + ' in ' + country + ' yet — check ' + marketplaceName + '\'s official page directly' + (link ? (': ' + link) : '') + '.' };
+    }
+    return {
+      platformName: marketplaceName,
+      country: country,
+      allNull: false,
+      name: fieldOrNeutral(cell.buyer_protection_name, marketplaceName, cell),
+      covers: fieldOrNeutral(cell.buyer_protection_covers, marketplaceName, cell),
+      excludes: fieldOrNeutral(cell.buyer_protection_excludes, marketplaceName, cell),
+      claimWindow: fieldOrNeutral(cell.claim_window, marketplaceName, cell),
+      evidenceRequired: fieldOrNeutral(cell.evidence_required, marketplaceName, cell),
+      escalationInternal: fieldOrNeutral(cell.escalation_internal, marketplaceName, cell),
+      escalationExternal: fieldOrNeutral(cell.escalation_external, marketplaceName, cell),
+      // Bonus field (not in the core list) shown only when the data has
+      // it — this is where country-specific differences like Etsy's
+      // UK-only 14-day cooling-off right, or its US-only DDP/customs
+      // refund protection, actually live. No neutral fallback: if it's
+      // null we simply omit the line rather than clutter the result.
+      returnsPolicyBasics: isEmptyField(cell.returns_policy_basics) ? null : cell.returns_policy_basics,
+      sources: cell.sources || [],
+      verifiedOn: cell.verified_on || null,
+      reviewBy: reviewBy,
+      stale: isPastReviewBy(reviewBy),
+    };
+  }
+
+  function paramString(inputs) {
     var params = [];
     if (inputs.country) params.push('country=' + encodeURIComponent(inputs.country));
     if (inputs.scenarioId) params.push('scenario=' + encodeURIComponent(inputs.scenarioId));
     if (inputs.paidBy) params.push('payment=' + encodeURIComponent(inputs.paidBy));
     if (inputs.carrierName) params.push('carrier=' + encodeURIComponent(inputs.carrierName));
-    return '/generate/delivery-claim-generator' + (params.length ? '?' + params.join('&') : '');
+    if (inputs.marketplaceName) params.push('marketplace=' + encodeURIComponent(inputs.marketplaceName));
+    return params.length ? '?' + params.join('&') : '';
+  }
+
+  function buildGeneratorUrl(inputs) {
+    return '/generate/delivery-claim-generator' + paramString(inputs);
   }
 
   function buildShareUrl(inputs) {
     if (!IS_BROWSER) return '';
-    var params = [];
-    if (inputs.country) params.push('country=' + encodeURIComponent(inputs.country));
-    if (inputs.scenarioId) params.push('scenario=' + encodeURIComponent(inputs.scenarioId));
-    if (inputs.paidBy) params.push('payment=' + encodeURIComponent(inputs.paidBy));
-    if (inputs.carrierName) params.push('carrier=' + encodeURIComponent(inputs.carrierName));
-    return window.location.origin + window.location.pathname + (params.length ? '?' + params.join('&') : '');
+    return window.location.origin + window.location.pathname + paramString(inputs);
   }
 
   // Pure function: given { country, scenarioId, paidBy, carrierName },
@@ -225,6 +320,15 @@
         : 'POSTRS (the Postal Redress Service) only covers Royal Mail — it does not cover other couriers. If you used a different carrier, use the escalation route that applies to that carrier (or the card-dispute route below) instead.';
     }
 
+    // When a marketplace is chosen, the platform's own case system is the
+    // step between the seller and a card dispute — open it within its
+    // claim window, before escalating further. 'Other'/empty means "no
+    // marketplace chosen" (same rule buildMarketplaceBlock applies).
+    var hasMarketplace = !!(inputs.marketplaceName && inputs.marketplaceName !== 'Other');
+    var steps = hasMarketplace
+      ? ['Contact the seller first', 'If unresolved, open a case with ' + inputs.marketplaceName + ' within its claim window', 'If still unresolved, open a card/payment dispute', 'Where one genuinely applies, escalate to the ombudsman or regulator']
+      : ['Contact the seller first', 'If unresolved, contact the carrier', 'If still unresolved, open a card/payment dispute', 'Where one genuinely applies, escalate to the ombudsman or regulator'];
+
     return {
       scenarioLabel: scenario ? scenario.label : inputs.scenarioId,
       country: inputs.country,
@@ -232,11 +336,12 @@
       liableParty: liableParty,
       legalBasis: legalBasis,
       deadlines: deadlines,
-      steps: ['Contact the seller first', 'If unresolved, contact the carrier', 'If still unresolved, open a card/payment dispute', 'Where one genuinely applies, escalate to the ombudsman or regulator'],
+      steps: steps,
       ukPostrsNote: ukPostrsNote,
       sources: sources,
       generatorUrl: buildGeneratorUrl(inputs),
       secondaryLinks: resourceLinksFor(inputs.scenarioId, inputs.country),
+      marketplaceBlock: buildMarketplaceBlock(inputs.marketplaceName, inputs.country),
     };
   }
 
@@ -249,6 +354,9 @@
       buildResult: buildResult,
       buildGeneratorUrl: buildGeneratorUrl,
       resourceLinksFor: resourceLinksFor,
+      buildMarketplaceBlock: buildMarketplaceBlock,
+      getMarketplaceNames: getMarketplaceNames,
+      isPastReviewBy: isPastReviewBy,
       RESOURCE_MAP: RESOURCE_MAP,
       PLAIN_LABELS: PLAIN_LABELS,
     };
@@ -265,6 +373,7 @@
   var carrierSelect = document.getElementById('ph-carrier');
   var carrierOtherWrap = document.getElementById('ph-carrier-other-wrap');
   var carrierOtherInput = document.getElementById('ph-carrier-other');
+  var marketplaceSelect = document.getElementById('ph-marketplace');
   var goBtn = document.getElementById('phGoBtn');
   var errorBox = document.getElementById('phError');
   var formSection = document.getElementById('phForm');
@@ -302,6 +411,17 @@
     otherOpt.value = 'Other';
     otherOpt.textContent = 'Other / not listed';
     carrierSelect.appendChild(otherOpt);
+
+    getMarketplaceNames().forEach(function (name) {
+      var opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      marketplaceSelect.appendChild(opt);
+    });
+    var otherMarketOpt = document.createElement('option');
+    otherMarketOpt.value = 'Other';
+    otherMarketOpt.textContent = 'Other / not sure';
+    marketplaceSelect.appendChild(otherMarketOpt);
   }
 
   carrierSelect.addEventListener('change', function () {
@@ -313,6 +433,58 @@
     if (cls) n.className = cls;
     if (text != null) n.textContent = text;
     return n;
+  }
+
+  function joinIfArray(v) {
+    return Array.isArray(v) ? v.join('; ') : v;
+  }
+
+  function renderMarketplaceBlock(block) {
+    var wrap = el('div');
+    wrap.style.marginTop = '24px';
+    wrap.appendChild(el('h2', 'supp-ingredients-heading', 'Marketplace protection — ' + block.platformName));
+
+    var box = el('div', 'gen-letter');
+    var visible = el('div', 'gen-visible');
+    var lines = [];
+
+    if (block.allNull) {
+      lines.push(block.neutralMessage);
+    } else {
+      lines.push('Protection: ' + joinIfArray(block.name));
+      lines.push('');
+      lines.push('Covers: ' + joinIfArray(block.covers));
+      lines.push('');
+      lines.push('Does not cover: ' + joinIfArray(block.excludes));
+      lines.push('');
+      lines.push('Claim window / how to open a case: ' + joinIfArray(block.claimWindow));
+      lines.push('');
+      lines.push('Evidence they ask for: ' + joinIfArray(block.evidenceRequired));
+      lines.push('');
+      lines.push('Escalation inside the platform: ' + joinIfArray(block.escalationInternal));
+      lines.push('');
+      lines.push('External escalation: ' + joinIfArray(block.escalationExternal));
+      if (block.returnsPolicyBasics) {
+        lines.push('');
+        lines.push('Returns policy: ' + joinIfArray(block.returnsPolicyBasics));
+      }
+    }
+
+    if (block.sources && block.sources.length) {
+      lines.push('');
+      lines.push('Source' + (block.sources.length > 1 ? 's' : '') + ': ' + block.sources.join(' · ') + (block.verifiedOn ? ' (verified ' + block.verifiedOn + ')' : ''));
+    }
+    if (block.stale) {
+      lines.push('');
+      lines.push('This policy was last verified on ' + (block.verifiedOn || 'an earlier date') + '; platforms change their rules, so check the official page above before relying on it.');
+    }
+    lines.push('');
+    lines.push('This is general information, not legal advice.');
+
+    visible.textContent = lines.join('\n');
+    box.appendChild(visible);
+    wrap.appendChild(box);
+    return wrap;
   }
 
   function renderResult(result, inputs) {
@@ -356,6 +528,10 @@
     writeBtn.style.textAlign = 'center';
     ctaWrap.appendChild(writeBtn);
     resultSection.appendChild(ctaWrap);
+
+    if (result.marketplaceBlock) {
+      resultSection.appendChild(renderMarketplaceBlock(result.marketplaceBlock));
+    }
 
     if (result.secondaryLinks && result.secondaryLinks.length) {
       var secWrap = el('div', 'supp-cross');
@@ -413,11 +589,13 @@
 
   function readInputs() {
     var carrierName = carrierSelect.value;
+    var marketplaceName = marketplaceSelect.value;
     return {
       country: countrySelect.value,
       scenarioId: scenarioSelect.value,
       paidBy: paidSelect.value,
       carrierName: carrierName === 'Other' ? (carrierOtherInput.value.trim() || '') : carrierName,
+      marketplaceName: marketplaceName === 'Other' ? '' : marketplaceName,
     };
   }
 
@@ -444,14 +622,17 @@
     var scenarioId = params.get('scenario');
     var payment = params.get('payment');
     var carrier = params.get('carrier');
+    var marketplace = params.get('marketplace');
 
     var validCountry = !!(country && SCENARIOS.countries.indexOf(country) !== -1);
     var validScenario = !!(scenarioId && getScenario(scenarioId));
     var validPayment = !!(payment && ['card', 'paypal', 'other'].indexOf(payment) !== -1);
+    var validMarketplace = !!(marketplace && getMarketplaceNames().indexOf(marketplace) !== -1);
 
     if (validCountry) countrySelect.value = country;
     if (validScenario) scenarioSelect.value = scenarioId;
     if (validPayment) paidSelect.value = payment;
+    if (validMarketplace) marketplaceSelect.value = marketplace;
 
     if (carrier) {
       if (getCarrier(carrier)) {
@@ -472,9 +653,11 @@
     return Promise.all([
       fetch(SCENARIOS_URL).then(function (r) { return r.json(); }),
       fetch(CARRIERS_URL).then(function (r) { return r.json(); }),
+      fetch(MARKETPLACES_URL).then(function (r) { return r.json(); }),
     ]).then(function (results) {
       SCENARIOS = results[0];
       CARRIERS = results[1];
+      MARKETPLACES = results[2];
       populateSelects();
       applyDeepLinkParams();
     }).catch(function () {

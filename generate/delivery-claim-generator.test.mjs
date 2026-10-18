@@ -18,13 +18,15 @@ const ROOT = path.resolve(__dirname, '..');
 
 const scenariosData = JSON.parse(readFileSync(path.join(ROOT, 'data/delivery-triage/scenarios.json'), 'utf8'));
 const carriersData = JSON.parse(readFileSync(path.join(ROOT, 'data/delivery-triage/carriers.json'), 'utf8'));
+const marketplacesData = JSON.parse(readFileSync(path.join(ROOT, 'data/delivery-triage/marketplaces.json'), 'utf8'));
 
-dcg.setData(scenariosData, carriersData);
+dcg.setData(scenariosData, carriersData, marketplacesData);
 
 const COUNTRIES = scenariosData.countries;
 const SCENARIO_IDS = scenariosData.scenarios.map(s => s.id);
 const CARRIER_NAMES = carriersData.carriers.map(c => c.name).concat(['Other']);
 const PAID_BY = ['card', 'paypal', 'other'];
+const MARKETPLACE_NAMES = marketplacesData.platforms.map(p => p.name);
 
 // A "bad text" check: no literal "undefined" or standalone "null" should
 // ever appear in generated text. (We deliberately allow the word "null"
@@ -35,12 +37,13 @@ function assertClean(text, context) {
   assert.ok(!/\bnull\b/.test(text), `${context}: contains literal "null"\n${text}`);
 }
 
-function sampleInputs(scenarioId, country, carrierName, paidBy, filled) {
+function sampleInputs(scenarioId, country, carrierName, paidBy, filled, marketplaceName) {
   return {
     country,
     scenarioId,
     carrierName,
     carrierDisplay: carrierName === 'Other' ? 'Local Courier Ltd' : carrierName,
+    marketplaceName: marketplaceName || '',
     paidBy,
     seller: filled ? 'Acme Store' : '',
     purchaseDate: filled ? '2026-09-01' : null,
@@ -150,4 +153,78 @@ test('every SCENARIO_PHRASES entry is neutral wording (no "theft"/"forged"/"stol
   Object.entries(dcg.SCENARIO_PHRASES).forEach(([id, phrase]) => {
     assert.ok(!/theft|forg|stol/i.test(phrase), `${id}: phrase is not neutral: "${phrase}"`);
   });
+});
+
+// ------------------------------------------------------------------
+// Phase 5b-2: marketplace layer (marketplaces.json only, no new facts)
+// ------------------------------------------------------------------
+
+test('no marketplace selected: still exactly 6 sections, unchanged behaviour', () => {
+  const inputs = sampleInputs('never_arrived', 'UK', 'Royal Mail', 'card', true);
+  const sections = dcg.generateSections(inputs);
+  assert.equal(sections.length, 6);
+});
+
+test('marketplace x country x scenario: full cross product renders 7 clean sections, no undefined/null', () => {
+  let count = 0;
+  for (const marketplaceName of MARKETPLACE_NAMES) {
+    for (const country of COUNTRIES) {
+      for (const scenarioId of SCENARIO_IDS) {
+        const inputs = sampleInputs(scenarioId, country, 'Royal Mail', 'card', true, marketplaceName);
+        const sections = dcg.generateSections(inputs);
+        assert.equal(sections.length, 7, `${marketplaceName}/${country}/${scenarioId}: expected 7 sections`);
+        const last = sections[6];
+        assert.equal(last.title, 'Message to the platform / case description');
+        sections.forEach((s) => assertClean(s.text, `${marketplaceName}/${country}/${scenarioId}/${s.title}`));
+        count++;
+      }
+    }
+  }
+  console.log(`  (checked ${count} marketplace combinations)`);
+  assert.equal(count, MARKETPLACE_NAMES.length * COUNTRIES.length * SCENARIO_IDS.length);
+});
+
+test('Temu renders only the neutral "check the official page" message, for every country marketplaces.json has a cell for', () => {
+  for (const country of ['UK', 'US']) {
+    const block = dcg.buildMarketplaceBlock('Temu', country);
+    assert.ok(block.allNull, `Temu/${country}: expected allNull (every field unverified in the data)`);
+    assert.ok(/check Temu.*official page/i.test(block.neutralMessage));
+    assertClean(block.neutralMessage, `Temu/${country} neutral message`);
+  }
+});
+
+test('marketplace selected but marketplaces.json has no cell for that country (e.g. EU/AU) falls back to a neutral message, never invented', () => {
+  for (const marketplaceName of MARKETPLACE_NAMES) {
+    for (const country of ['EU', 'AU']) {
+      const block = dcg.buildMarketplaceBlock(marketplaceName, country);
+      assert.ok(block.allNull, `${marketplaceName}/${country}: expected allNull fallback`);
+      assertClean(block.neutralMessage, `${marketplaceName}/${country} neutral message`);
+    }
+  }
+});
+
+test('every source link in a marketplace block is one of the real strings in marketplaces.json for that cell', () => {
+  for (const platform of marketplacesData.platforms) {
+    for (const country of Object.keys(platform.by_country)) {
+      const block = dcg.buildMarketplaceBlock(platform.name, country);
+      const cell = platform.by_country[country];
+      (block.sources || []).forEach((url) => {
+        assert.ok((cell.sources || []).includes(url), `${platform.name}/${country}: block source "${url}" is not in the data's own sources array`);
+      });
+    }
+  }
+});
+
+test('"Other" or empty marketplace selection produces no marketplace block and no 7th section', () => {
+  assert.equal(dcg.buildMarketplaceBlock('', 'UK'), null);
+  assert.equal(dcg.buildMarketplaceBlock('Other', 'UK'), null);
+  assert.equal(dcg.buildMarketplaceBlock(null, 'UK'), null);
+  const inputs = sampleInputs('never_arrived', 'UK', 'Royal Mail', 'card', true, 'Other');
+  assert.equal(dcg.generateSections(inputs).length, 6);
+});
+
+test('isPastReviewBy is a pure date comparison with no invented dates', () => {
+  assert.equal(dcg.isPastReviewBy('2027-01-16', new Date('2026-10-18T00:00:00')), false);
+  assert.equal(dcg.isPastReviewBy('2027-01-16', new Date('2027-02-01T00:00:00')), true);
+  assert.equal(dcg.isPastReviewBy(null, new Date('2027-02-01T00:00:00')), false);
 });
