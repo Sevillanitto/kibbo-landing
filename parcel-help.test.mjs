@@ -241,3 +241,27 @@ test('"Other" or empty marketplace selection produces no marketplace block, and 
   assert.equal(result.marketplaceBlock, null);
   assert.ok(!result.generatorUrl.includes('marketplace='));
 });
+
+// ------------------------------------------------------------------
+// Phase 5: "Read the <Carrier> claim guide" link (carriers.json only)
+// ------------------------------------------------------------------
+
+test('a known carrier adds a "Read the <Carrier> claim guide" link pointing at a real /parcel-claims/ page', () => {
+  for (const carrier of carriersData.carriers) {
+    const result = ph.buildResult({ country: 'UK', scenarioId: 'never_arrived', paidBy: 'card', carrierName: carrier.name });
+    const slug = carrier.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const expectedUrl = '/parcel-claims/' + slug;
+    const match = result.secondaryLinks.find((l) => l.url === expectedUrl);
+    assert.ok(match, `${carrier.name}: expected a secondary link to ${expectedUrl}`);
+    assert.equal(match.label, 'Read the ' + carrier.name + ' claim guide');
+    const file = path.join(__dirname, 'parcel-claims', slug, 'index.html');
+    assert.ok(existsSync(file), `${expectedUrl} does not resolve to a generated file — run scripts/build-carrier-pages.js first`);
+  }
+});
+
+test('no carrier, "Other", or an unrecognized carrier name adds no claim-guide link', () => {
+  const none = ph.buildResult({ country: 'UK', scenarioId: 'never_arrived', paidBy: 'card', carrierName: '' });
+  assert.ok(!none.secondaryLinks.some((l) => l.url.startsWith('/parcel-claims/')));
+  const other = ph.buildResult({ country: 'UK', scenarioId: 'never_arrived', paidBy: 'card', carrierName: 'Other' });
+  assert.ok(!other.secondaryLinks.some((l) => l.url.startsWith('/parcel-claims/')));
+});

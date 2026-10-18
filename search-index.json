@@ -17954,5 +17954,125 @@
       "frozen or locked crypto account",
       "crypto & scams"
     ]
+  },
+  {
+    "title": "Carrier Claim Guides",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims",
+    "description": "How to claim from Royal Mail, Evri, DPD, Yodel, UPS, FedEx, DHL, USPS and Amazon Logistics — deadlines, compensation limits and escalation routes, sourced and dated.",
+    "keywords": [
+      "carrier claim guide",
+      "how to claim lost parcel",
+      "courier compensation limit"
+    ]
+  },
+  {
+    "title": "How to Claim from Royal Mail",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/royal-mail",
+    "description": "How to claim from Royal Mail: official claim window, compensation limits and how to start a claim, sourced from Royal Mail's own terms.",
+    "keywords": [
+      "royal mail claim",
+      "royal mail compensation",
+      "royal mail lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from Evri",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/evri",
+    "description": "How to claim from Evri: official claim window, compensation limits and how to start a claim, sourced from Evri's own terms.",
+    "keywords": [
+      "evri claim",
+      "evri compensation",
+      "evri lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from DPD",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/dpd",
+    "description": "How to claim from DPD: official claim window, compensation limits and how to start a claim, sourced from DPD's own terms.",
+    "keywords": [
+      "dpd claim",
+      "dpd compensation",
+      "dpd lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from Yodel",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/yodel",
+    "description": "How to claim from Yodel: official claim window, compensation limits and how to start a claim, sourced from Yodel's own terms.",
+    "keywords": [
+      "yodel claim",
+      "yodel compensation",
+      "yodel lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from UPS",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/ups",
+    "description": "How to claim from UPS: official claim window, compensation limits and how to start a claim, sourced from UPS's own terms.",
+    "keywords": [
+      "ups claim",
+      "ups compensation",
+      "ups lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from FedEx",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/fedex",
+    "description": "How to claim from FedEx: official claim window, compensation limits and how to start a claim, sourced from FedEx's own terms.",
+    "keywords": [
+      "fedex claim",
+      "fedex compensation",
+      "fedex lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from DHL",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/dhl",
+    "description": "How to claim from DHL: official claim window, compensation limits and how to start a claim, sourced from DHL's own terms.",
+    "keywords": [
+      "dhl claim",
+      "dhl compensation",
+      "dhl lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from USPS",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/usps",
+    "description": "How to claim from USPS: official claim window, compensation limits and how to start a claim, sourced from USPS's own terms.",
+    "keywords": [
+      "usps claim",
+      "usps compensation",
+      "usps lost parcel"
+    ]
+  },
+  {
+    "title": "How to Claim from Amazon Logistics",
+    "type": "claim",
+    "block": "delivery-parcels",
+    "url": "/parcel-claims/amazon-logistics",
+    "description": "How to claim from Amazon Logistics: official claim window, compensation limits and how to start a claim, sourced from Amazon Logistics's own terms.",
+    "keywords": [
+      "amazon logistics claim",
+      "amazon logistics compensation",
+      "amazon logistics lost parcel"
+    ]
   }
 ]

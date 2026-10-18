@@ -5110,4 +5110,46 @@
     <lastmod>2026-10-17</lastmod>
   </url>
 <!-- CLAIMS:END -->
+<!-- CARRIERS:START -->
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/royal-mail</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/evri</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/dpd</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/yodel</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/ups</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/fedex</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/dhl</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/usps</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.getkibbo.com/parcel-claims/amazon-logistics</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+<!-- CARRIERS:END -->
 </urlset>

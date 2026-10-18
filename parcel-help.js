@@ -329,6 +329,14 @@
       ? ['Contact the seller first', 'If unresolved, open a case with ' + inputs.marketplaceName + ' within its claim window', 'If still unresolved, open a card/payment dispute', 'Where one genuinely applies, escalate to the ombudsman or regulator']
       : ['Contact the seller first', 'If unresolved, contact the carrier', 'If still unresolved, open a card/payment dispute', 'Where one genuinely applies, escalate to the ombudsman or regulator'];
 
+    // phase 5: when a known carrier is chosen, surface its /parcel-claims/
+    // guide alongside the usual scenario resources.
+    var secondaryLinks = resourceLinksFor(inputs.scenarioId, inputs.country);
+    if (carrier) {
+      var carrierSlug = carrier.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      secondaryLinks = secondaryLinks.concat([{ label: 'Read the ' + carrier.name + ' claim guide', url: '/parcel-claims/' + carrierSlug }]);
+    }
+
     return {
       scenarioLabel: scenario ? scenario.label : inputs.scenarioId,
       country: inputs.country,
@@ -340,7 +348,7 @@
       ukPostrsNote: ukPostrsNote,
       sources: sources,
       generatorUrl: buildGeneratorUrl(inputs),
-      secondaryLinks: resourceLinksFor(inputs.scenarioId, inputs.country),
+      secondaryLinks: secondaryLinks,
       marketplaceBlock: buildMarketplaceBlock(inputs.marketplaceName, inputs.country),
     };
   }
