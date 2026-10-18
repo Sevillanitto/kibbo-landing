@@ -276,6 +276,12 @@ margin-bottom: 20px;
 .ext-banner { width: 100%; }
 .ext-banner-link { display: block; max-width: 1200px; margin: 0 auto; }
 .ext-banner-link img { display: block; width: 100%; height: auto; }
+/* Parcel Help promo banner (index.html only) */
+.ph-banner { background: var(--bg); padding: 0 0 clamp(40px, 6vh, 64px); }
+.ph-banner-link { display: block; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; transition: var(--transition); }
+.ph-banner-link picture, .ph-banner-link img { display: block; width: 100%; height: auto; }
+.ph-banner-link:hover { border-color: var(--accent-green); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(61, 107, 79, 0.15); }
+.ph-banner-link:focus-visible { outline: 3px solid var(--accent-green); outline-offset: 3px; }
 /* "What's your problem?" search widget (index.html only) */
 .problem-search { padding: clamp(64px, 8vh, 96px) 0; background: var(--bg); }
 .ps-inner { max-width: 900px; text-align: center; }
