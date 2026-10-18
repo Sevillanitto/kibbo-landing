@@ -1,0 +1,247 @@
+{
+  "generated": "2026-10-18",
+  "note": "Marketplace dispute-policy data for Vinted, eBay, Etsy and Temu in the UK and US, for the Delivery Problems triage tools. Every non-null fact is sourced directly from that platform's own official help/terms/policy pages (never third-party blogs or forums) and was verified on the date in that cell's verified_on field. Where a fact could not be verified or a page could not be accessed as the UK/US-specific version, the field is null and the gap is listed in the top-level 'unverified' array with the blocked URL, for the founder to fill in manually. Neutral wording only — no accusations against buyers or sellers.",
+  "countries": ["UK", "US"],
+  "platforms": [
+    {
+      "name": "eBay",
+      "by_country": {
+        "UK": {
+          "operates": true,
+          "buyer_protection_name": "eBay Money Back Guarantee",
+          "buyer_protection_covers": [
+            "item doesn't arrive (item not received)",
+            "item is faulty or damaged",
+            "item doesn't match the listing (wrong item)",
+            "seller doesn't honor their own stated return policy",
+            "strong indicators the item is counterfeit"
+          ],
+          "buyer_protection_excludes": "Motor vehicles, recreational vehicles, motorbikes, boats, aircraft, industrial/construction machinery, real estate, websites, businesses for sale, classified ads, services, digitally delivered content, travel tickets/vouchers, and NFTs are excluded from the Money Back Guarantee. Also excluded: items where any part of the payment was completed outside eBay checkout, and items collected in person by a third party.",
+          "claim_window": "Item not received: 30 calendar days from the estimated delivery date to report the problem. Item doesn't match the listing: 30 calendar days from the delivery date to request a return. After the buyer reports a problem, the seller has 3 business days to respond before the buyer can escalate (\"Ask eBay to step in\").",
+          "evidence_required": [
+            "tracking number",
+            "delivery status showing 'delivered'",
+            "date of delivery",
+            "recipient's address matching the Order details page",
+            "signature confirmation (required for items £450 or more)",
+            "photos of how the item arrived (for returns)",
+            "return tracking (for returns)"
+          ],
+          "seller_side": "eBay's User Agreement states the Money Back Guarantee 'helps buyers and sellers communicate and resolve issues' and that sellers must not fail to deliver items sold unless they have a valid reason set out in an eBay policy. The dedicated seller-protections help page — which would state the exact proof-of-postage/tracking threshold for seller protection — could not be accessed (see unverified).",
+          "returns_policy_basics": "Buyers can request a return within 30 calendar days of delivery if the item doesn't match the listing; sellers must honor the return policy stated on their own listings under the Money Back Guarantee.",
+          "escalation_internal": "\"Ask eBay to step in\" (via the Resolution Center) once the seller's 3-business-day response window has lapsed.",
+          "escalation_external": "eBay's User Agreement mentions only generic 'alternative dispute resolution procedures, such as mediation or arbitration,' with no named ADR scheme, ombudsman, or ODR platform for UK buyers.",
+          "sources": [
+            "https://www.ebay.co.uk/help/buying/returns-refunds/ebay-money-back-guarantee?id=4210",
+            "https://www.ebay.co.uk/help/policies/member-behaviour-policies/user-agreement?id=4259"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "partially_verified"
+        },
+        "US": {
+          "operates": true,
+          "buyer_protection_name": "eBay Money Back Guarantee",
+          "buyer_protection_covers": [
+            "item didn't arrive at the buyer's address",
+            "item arrives broken, damaged, or faulty",
+            "wrong item sent / item doesn't match the listing",
+            "items inspected through Authenticity Guarantee",
+            "seller fails to honor their own stated return policy"
+          ],
+          "buyer_protection_excludes": "Real estate, digital content, NFTs, classified ads, services, travel tickets, motor vehicles, and industrial equipment are excluded. Also excluded: items paid for where any part of the payment was completed outside of eBay.",
+          "claim_window": "Item not received: 30 calendar days after the estimated or actual delivery/collection date has passed. Item doesn't match the listing: 30 calendar days after the estimated or actual delivery date, or within the seller's own return window, whichever is longer.",
+          "evidence_required": [
+            "tracking number from an integrated carrier showing delivery status of 'delivered' or 'attempted delivery'",
+            "zip code matching the Order details page",
+            "signature confirmation (required for orders $750 or more)"
+          ],
+          "seller_side": "Same gap as the UK — the dedicated seller-protections page would not resolve. Only the general User Agreement statement on sellers' delivery obligations, and that sellers bear return shipping cost when an eBay-generated return label is used, could be confirmed.",
+          "returns_policy_basics": "Buyers can request a return within the claim window above if the item doesn't match the listing; sellers must honor the return policy stated on their own listings.",
+          "escalation_internal": "Reporting via 'Report an item that hasn't arrived' or 'Start a return request' through eBay's Resolution Center; same structural flow as the UK's 'Ask eBay to step in.' The exact US seller response window (UK's equivalent is 3 business days) was not confirmed in the fetched text — see unverified.",
+          "escalation_external": "No eBay-specific external dispute body is named on eBay's official US pages beyond the generic ADR language also found in the UK User Agreement.",
+          "sources": [
+            "https://www.ebay.com/help/buying/returns-refunds/ebay-money-back-guarantee?id=4210",
+            "https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "partially_verified"
+        }
+      },
+      "uk_us_difference_note": "Structurally near-identical: same program name, same 30-calendar-day claim window, same escalation flow, same 'paid outside eBay' exclusion. The one confirmed numeric difference is the signature-confirmation value threshold (£450+ UK vs $750+ US) — likely the same underlying policy expressed in local currency rather than a substantive difference. No country-specific ADR/ombudsman scheme is named by eBay in either market."
+    },
+    {
+      "name": "Etsy",
+      "by_country": {
+        "UK": {
+          "operates": true,
+          "buyer_protection_name": "Etsy Purchase Protection program",
+          "buyer_protection_covers": [
+            "item never arrives",
+            "item arrives late",
+            "item arrives damaged",
+            "item doesn't match the listing description (different color, model, version, or size; different design or material; missing parts; wrong quantity received)",
+            "item advertised as authentic but is not (counterfeit)",
+            "item's condition was misrepresented (e.g. described as new but used)"
+          ],
+          "buyer_protection_excludes": "Items altered, used, worn, washed, or discarded after receipt; items returned without a return agreement with the seller; items that were accurately described but simply didn't meet the buyer's expectations; shipping-cost disputes or customs/import-charge disputes (except the US DDP carve-out — see seller_side on the US cell); items bought in person; transactions not processed through Etsy Payments (completed off-site or through standalone PayPal); and disputes already covered by local return/warranty laws applicable to the seller or product.",
+          "claim_window": "The buyer must first contact the seller via 'Help with Order' and give the seller 48 hours to resolve the issue. If unresolved, the buyer can open a case through Etsy's case system for items that never arrive, arrive late, arrive damaged, or don't match the listing. Refunds Etsy issues must be completed within 180 days of the order; after that the marketplace can no longer issue the refund through the platform.",
+          "evidence_required": [
+            "tracking documentation, where available",
+            "for 'not as described' claims, Etsy may ask the buyer for documentation showing the item significantly differs from the listing"
+          ],
+          "seller_side": "Sellers must ship within their own stated processing time to the address the buyer gave at purchase. Late arrivals caused by events outside the seller's reasonable control (carrier strikes, natural disasters, war, civil unrest, government shipping actions including customs/tariff changes), as determined by Etsy at its sole discretion, do not qualify for Purchase Protection against the seller. Sellers must give 48 hours to resolve a buyer-reported issue directly before Etsy's case system becomes available; if a case is found against the seller (and isn't covered by seller protection), the seller must refund the order including original and return shipping.",
+          "returns_policy_basics": "Each seller sets their own shop return policy, stated in their Shop Policies; not all sellers accept returns. Separately, buyers residing in the EU or the UK have a statutory 14-day 'cooling-off'/right-of-withdrawal period to return an item with or without a reason, regardless of the seller's own stated return policy (this right doesn't apply to custom/personalized items or perishable goods, and doesn't apply in the US).",
+          "escalation_internal": "Etsy's case system: contact the seller first via 'Help with Order' (48-hour wait), then open a case if unresolved. Etsy decides at its sole discretion whether a transaction qualifies under the Purchase Protection program; this doesn't affect the buyer's separate legal rights against the seller.",
+          "escalation_external": null,
+          "sources": [
+            "https://www.etsy.com/legal/buyers/",
+            "https://www.etsy.com/legal/sellers/"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "verified"
+        },
+        "US": {
+          "operates": true,
+          "buyer_protection_name": "Etsy Purchase Protection program",
+          "buyer_protection_covers": [
+            "item never arrives",
+            "item arrives late",
+            "item arrives damaged",
+            "item doesn't match the listing description (different color, model, version, or size; different design or material; missing parts; wrong quantity received)",
+            "item advertised as authentic but is not (counterfeit)",
+            "item's condition was misrepresented (e.g. described as new but used)"
+          ],
+          "buyer_protection_excludes": "Same exclusions as the UK: items altered/used/worn/washed/discarded after receipt; items returned without a return agreement; items accurately described but not meeting expectations; shipping-cost disputes (except the DDP carve-out below); items bought in person; transactions not processed through Etsy Payments; disputes covered by local return/warranty laws.",
+          "claim_window": "Same as the UK: seller gets 48 hours to resolve after being contacted via 'Help with Order'; buyer can then open a case; refunds must be completed within 180 days of the order.",
+          "evidence_required": [
+            "tracking documentation, where available",
+            "for 'not as described' claims, Etsy may ask the buyer for documentation showing the item significantly differs from the listing"
+          ],
+          "seller_side": "Same general shipping-time obligation and force-majeure carve-out as the UK. US-specific: for orders shipped to the United States, sellers must use a Delivery Duty Paid (DDP) shipping service. If a US buyer is charged customs duties, import fees, or other charges at delivery because the seller didn't use a DDP service, the buyer can claim a refund of those charges from Etsy; if the buyer refuses delivery as a result, they can claim a full refund including shipping and customs charges.",
+          "returns_policy_basics": "Each seller sets their own shop return policy. The EU/UK 14-day statutory withdrawal right does not apply to US buyers; no equivalent US federal right was found on Etsy's official pages.",
+          "escalation_internal": "Same case system as the UK.",
+          "escalation_external": null,
+          "sources": [
+            "https://www.etsy.com/legal/buyers/",
+            "https://www.etsy.com/legal/sellers/"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "verified"
+        }
+      },
+      "uk_us_difference_note": "Etsy runs a single global Buyer/Seller Policy document with two explicit, officially-sourced country carve-outs: UK buyers get a statutory 14-day cooling-off/right-of-withdrawal period that US buyers do not get; US-bound orders specifically require sellers to use DDP shipping, and US buyers specifically get a refund right for customs charges caused by a seller's non-DDP shipment, which isn't stated for UK buyers. No external ADR/ombudsman/regulator is named by Etsy for either country."
+    },
+    {
+      "name": "Vinted",
+      "by_country": {
+        "UK": {
+          "operates": true,
+          "buyer_protection_name": null,
+          "buyer_protection_covers": [
+            "item doesn't arrive",
+            "item arrives damaged",
+            "item is not as described (SNAD), including SNAD counterfeit items"
+          ],
+          "buyer_protection_excludes": "A refund is refused if: the item is determined not to be SNAD after review; the buyer already confirmed the item was fine on receipt; the buyer didn't report the issue within the Refund Request Period; the buyer didn't provide requested proof within the given timeline; the buyer used, washed, or altered the item before returning it; or the buyer is under investigation for suspected abuse/misuse of the refund policy.",
+          "claim_window": "'Refund Request Period': 2 calendar days from Vinted's notice that the item has been delivered, or that it seems lost, to report an issue via the 'I have an issue' button in the order's private-message screen. This suspends the transaction and keeps the payment in Escrow.",
+          "evidence_required": null,
+          "seller_side": "If the buyer used Vinted's own Prepaid Shipping and the item was packaged properly, and the parcel is lost or damaged in transit, the seller receives 'lost or damaged compensation' from Vinted (amount depends on which carrier was used), while the buyer is separately refunded. If a seller ships by any method other than Prepaid Shipping, the seller — not Vinted — is responsible for lost or damaged parcels and must claim compensation directly from the carrier.",
+          "returns_policy_basics": "Unless otherwise agreed with the seller, the buyer pays return shipping costs, except that return shipping is free to the buyer if the parcel was lost or damaged in transit.",
+          "escalation_internal": "A buyer or seller can raise a dispute with Vinted directly via its dispute form. For a SNAD case, if buyer and seller can't resolve it (or the seller doesn't act within 14 days of the issue being reported), Vinted Customer Support makes the final decision. Decisions taken against a user (e.g. account restrictions) can be appealed through Vinted's own appeals system.",
+          "escalation_external": null,
+          "sources": [
+            "https://www.vinted.co.uk/terms_and_conditions",
+            "https://www.vinted.co.uk/safety"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "verified"
+        },
+        "US": {
+          "operates": true,
+          "operates_source_note": "Vinted's own newsroom confirmed a US launch: 'Vinted has landed in New York' (dated 2026-01-22). Vinted's US presence is confirmed from this official first-party source, not from a third-party report.",
+          "buyer_protection_name": null,
+          "buyer_protection_covers": [
+            "item doesn't arrive",
+            "item arrives damaged",
+            "item is not as described"
+          ],
+          "buyer_protection_excludes": null,
+          "claim_window": "'You have 2 days to submit a claim' — identical wording found on vinted.com/safety as on the UK site. The deeper Refund Request Period mechanics (Escrow, seller response windows) were only confirmed from the UK Terms and Conditions document and not independently verified against a US-specific Terms document — Vinted's US entity may use separate terms.",
+          "evidence_required": null,
+          "seller_side": null,
+          "returns_policy_basics": null,
+          "escalation_internal": null,
+          "escalation_external": null,
+          "sources": [
+            "https://company.vinted.com/newsroom/vinted-launches-us-nyc-2",
+            "https://www.vinted.com/safety"
+          ],
+          "verified_on": "2026-10-18",
+          "review_by": "2027-01-16",
+          "status": "partially_verified"
+        }
+      },
+      "uk_us_difference_note": "The buyer-facing refund/claim-window text found is identical between vinted.co.uk and vinted.com ('2 days to submit a claim'; the same three covered scenarios). Vinted's US launch announcement specifically emphasizes sellers pay no selling fees in the US ('keep every dollar they make'), a claim not found anywhere in the UK content retrieved — this may indicate the UK does charge a seller fee where the US (at least at launch) does not, but a UK seller-fee rate could not be independently confirmed to settle this as a true divergence rather than launch-promotion framing. Flagged for the founder to confirm directly."
+    },
+    {
+      "name": "Temu",
+      "by_country": {
+        "UK": {
+          "operates": true,
+          "buyer_protection_name": null,
+          "buyer_protection_covers": null,
+          "buyer_protection_excludes": null,
+          "claim_window": null,
+          "evidence_required": null,
+          "seller_side": null,
+          "returns_policy_basics": null,
+          "escalation_internal": null,
+          "escalation_external": null,
+          "sources": [],
+          "verified_on": null,
+          "review_by": null,
+          "status": "unverified"
+        },
+        "US": {
+          "operates": true,
+          "buyer_protection_name": null,
+          "buyer_protection_covers": null,
+          "buyer_protection_excludes": null,
+          "claim_window": null,
+          "evidence_required": null,
+          "seller_side": null,
+          "returns_policy_basics": null,
+          "escalation_internal": null,
+          "escalation_external": null,
+          "sources": [],
+          "verified_on": null,
+          "review_by": null,
+          "status": "unverified"
+        }
+      },
+      "uk_us_difference_note": "Could not be assessed — no UK- or US-specific Temu policy text could be confirmed this session (see note below).",
+      "geo_blocking_note": "Temu serves content based on the fetching session's detected network location rather than the URL path: every temu.com URL tried, including '/uk/' prefixed paths, returned Spain/EEA-localized pages (e.g. 'Temu Spain' branding), and WebFetch (as opposed to real browser rendering) got back empty content for every URL including the bare homepage. The Spain-localized 'Temu Purchase Protection' and 'Return & Refund Policy' pages were fully readable via browser rendering and describe: a program (unbranded in the readable text) covering items that can't be delivered, arrive damaged, or don't match the listing; a 90-day voluntary return window (45-60 days for certain electronics or large appliances); one free return per order; and an EEA-only 14-day statutory withdrawal right under EU/EEA consumer law. None of this is recorded as UK or US fact in this file because it could not be confirmed as the UK- or US-specific version of Temu's policy — the EEA statutory right in particular would not apply to the UK (not in the EEA post-Brexit) or the US (no federal equivalent), so carrying it over would have been inventing a fact, not verifying one."
+    }
+  ],
+  "unverified": [
+    { "platform": "eBay", "country": "UK", "field": "seller_side (proof-of-postage / tracking threshold for seller protection)", "reason": "Dedicated seller-protections help page could not be accessed; every guessed URL (id=4651/4650/4653 variants) returned eBay's generic 404 error page.", "blocked_url": "https://www.ebay.co.uk/help/selling/getting-paid/seller-protections?id=4651" },
+    { "platform": "eBay", "country": "US", "field": "seller_side (proof-of-postage / tracking threshold for seller protection)", "reason": "Same as UK — dedicated seller-protections page inaccessible.", "blocked_url": "https://www.ebay.com/help/selling/getting-paid/seller-protections?id=4651" },
+    { "platform": "eBay", "country": "US", "field": "escalation_internal (exact seller response window before buyer can escalate)", "reason": "The fetched excerpt of the US Money Back Guarantee page did not state this day-count explicitly; only the UK figure (3 business days) was confirmed.", "blocked_url": null },
+    { "platform": "Vinted", "country": "UK", "field": "buyer_protection_name", "reason": "Read Vinted's full Terms and Conditions and Safety page; found no distinct branded program name (Vinted calls it simply its 'refund policy').", "blocked_url": null },
+    { "platform": "Vinted", "country": "UK", "field": "evidence_required", "reason": "Vinted's Terms describe an investigative process (Customer Support may request information/evidence from buyer and seller) rather than a fixed, itemized evidence checklist like eBay's or Etsy's.", "blocked_url": null },
+    { "platform": "Vinted", "country": "UK", "field": "escalation_external", "reason": "No ADR scheme, ombudsman, or regulator is named in the Terms and Conditions sections read.", "blocked_url": null },
+    { "platform": "Vinted", "country": "US", "field": "buyer_protection_name", "reason": "Same as UK — not found on vinted.com/safety either.", "blocked_url": null },
+    { "platform": "Vinted", "country": "US", "field": "buyer_protection_excludes, evidence_required, seller_side, returns_policy_basics, escalation_internal, escalation_external", "reason": "Only vinted.com/safety (a short marketing page) and the official US-launch newsroom post were accessible as confirmed US-specific sources; the detailed mechanics confirmed for the UK came from vinted.co.uk's full Terms and Conditions, which may not be the same document governing US users (Vinted's US entity may use separate terms). Fetching vinted.com's own full Terms and Conditions was not attempted this session due to time constraints — recommended as the next step.", "blocked_url": "https://www.vinted.com/terms_and_conditions" },
+    { "platform": "Temu", "country": "UK", "field": "all fields", "reason": "WebFetch returned empty content for every Temu URL tried, including the bare homepage (site-wide, not a single bad URL). Real browser rendering worked, but the session's detected network location caused every URL — including '/uk/'-prefixed ones — to serve Spain/EEA-localized content instead of UK-specific content, so nothing could be confirmed as the UK version of Temu's policy.", "blocked_url": "https://www.temu.com/uk/temu-purchase-protection.html" },
+    { "platform": "Temu", "country": "UK", "field": "all fields (alternate attempt)", "reason": "Same geo-serving issue.", "blocked_url": "https://www.temu.com/temu-purchase-protection.html" },
+    { "platform": "Temu", "country": "US", "field": "all fields", "reason": "Same geo-serving issue as UK — no URL tried returned US-specific content; WebFetch got empty content and browser rendering got Spain/EEA content regardless of path.", "blocked_url": "https://www.temu.com/return-and-refund-policy.html" },
+    { "platform": "Temu", "country": "US", "field": "all fields (alternate attempt)", "reason": "Same geo-serving issue; this was also the one URL where WebFetch confirmed a full site-wide block (empty content even on the bare homepage), independent of the browser-rendering geo issue.", "blocked_url": "https://www.temu.com/" },
+    { "platform": "Etsy", "country": "UK", "field": "WebFetch access (resolved via browser rendering instead)", "reason": "Every etsy.com/help.etsy.com URL returned HTTP 403 Forbidden to the WebFetch tool specifically; the same official pages were fully readable via real browser rendering, which is how this file's Etsy data was actually sourced.", "blocked_url": "https://help.etsy.com/hc/en-us/articles/115015651107" }
+  ],
+  "review_by": "2027-01-16"
+}
