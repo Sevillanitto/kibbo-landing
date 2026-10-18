@@ -29,13 +29,14 @@
       "source_access_note": "royalmail.com's own compensation-policy pages returned a 403 (bot-blocked) on direct automated fetch; the figures above are drawn from a web search whose results quote text directly from those same official URLs, not from a third-party aggregator.",
       "verified_on": "2026-10-18",
       "contact_routes": {
-        "claim_form_url": "https://help.royalmail.com/personal/s/ (personal customer support portal; business claims via https://help.royalmail.com/business/s/article/Business-Account-Claims-Centre)",
+        "claim_form_url": "https://help.royalmail.com/personal/s/article/Royal-Mail-Claims-Centre-process-and-options (claims router — routes to the specific online claim form based on service used; business claims via https://help.royalmail.com/business/s/article/Business-Account-Claims-Centre)",
         "claims_email": null,
         "postal_address": null,
         "source": [
-          "https://help.royalmail.com/personal/s/"
+          "https://help.royalmail.com/personal/s/",
+          "https://help.royalmail.com/personal/s/article/Royal-Mail-Claims-Centre-process-and-options"
         ],
-        "source_access_note": "royalmail.com's own contact-us page returned 403 (bot-blocked); help.royalmail.com's support portal is JavaScript-rendered and returned only a loading-error shell to automated fetch, so no email/postal address could be confirmed this session. Left null rather than guessed.",
+        "source_access_note": "Phase 5a: successfully read the Claims Centre article directly via browser rendering (the earlier 403/JS-loading-shell block was specific to the WebFetch tool, not the page itself). The article confirms the entire claims process is online-form-driven (claim forms, an evidence-upload form, a cancel-claim form) with NO claims email or postal address published anywhere on it or on royalmail.com's own contact-us page (which redirects to this same help portal). This is now a confirmed absence, not an access failure.",
         "verified_on": "2026-10-18"
       }
     },
@@ -95,11 +96,12 @@
       "contact_routes": {
         "claim_form_url": "https://www.dpd.co.uk/content/terms-and-conditions.jsp states only that the customer must notify 'the Company' within 14 days — it does not itself give a submission address, email, or form URL. We could not locate a separate, working DPD UK contact/claims page this session.",
         "claims_email": null,
-        "postal_address": null,
+        "postal_address": "DPDgroup UK Ltd, Roebuck Lane, Smethwick, B66 1BY, United Kingdom (registered office, confirmed in the footer of dpd.co.uk's own homepage; this is DPD's only officially published postal address — not a separate claims-department address, since DPD does not publish one)",
         "source": [
-          "https://www.dpd.co.uk/content/terms-and-conditions.jsp"
+          "https://www.dpd.co.uk/content/terms-and-conditions.jsp",
+          "https://www.dpd.co.uk/"
         ],
-        "source_access_note": "DPD's own T&Cs confirm no email/postal address is published there; separate contact-page URL guesses (dpd.co.uk/contact, /content/contact_us.jsp) returned 404. Left null rather than guessed.",
+        "source_access_note": "Phase 5a: the registered-office address was found directly in dpd.co.uk's own homepage footer via browser rendering. A dedicated claims email, contact form, or claims-specific postal address still could not be found — several guessed contact-page URLs (dpd.co.uk/contact, /content/contact_us.jsp, /content/claims.jsp, /content/help_delivery_options.jsp) all returned 404.",
         "verified_on": "2026-10-18"
       }
     },
@@ -143,7 +145,7 @@
       "claim_process": "Online via a UPS.com account.",
       "claim_windows": {
         "damaged": "Within 60 days of scheduled delivery.",
-        "lost": "Up to 9 months from the shipment date."
+        "lost": "Within 60 days of the scheduled delivery date (corrected phase 5a — see note below)."
       },
       "compensation_limits": {
         "default": "$100 automatic, no extra fee",
@@ -153,16 +155,17 @@
       "sources": [
         "https://www.ups.com/us/en/support/file-a-claim"
       ],
-      "source_access_note": "ups.com returned an access-denied response on direct automated fetch; figures are drawn from a web search citing that same official URL.",
+      "source_access_note": "Phase 5a: successfully read ups.com's own File a Claim page directly via browser rendering (the earlier access-denied block was specific to the WebFetch tool). The page states, unambiguously: 'Start a claim within 60 days of the scheduled delivery for packages that have been lost or damaged, or if a collect on delivery (C.O.D.) payment wasn't received.' This CORRECTS the previous claim_windows.lost value of 'up to 9 months from the shipment date' (which was drawn from a web search and is not supported by UPS's own current page) to 60 days, matching 'damaged'.",
       "verified_on": "2026-10-18",
       "contact_routes": {
         "claim_form_url": "https://www.ups.com/us/en/support/file-a-claim",
         "claims_email": null,
         "postal_address": null,
         "source": [
-          "https://www.ups.com/us/en/support/file-a-claim"
+          "https://www.ups.com/us/en/support/file-a-claim",
+          "https://www.ups.com/us/en/support/contact-us"
         ],
-        "source_access_note": "ups.com blocked automated fetch (access denied) on both the claims page and the general contact-us page this session; could not confirm whether an email/postal address is published. Left null rather than guessed.",
+        "source_access_note": "Phase 5a: both the claims page and the general Help and Support Center page were successfully read via browser rendering (the earlier access-denied block was WebFetch-specific). Neither page publishes a claims email or postal mailing address — UPS routes all claim filing through its online/guest claim form instead. This is now a confirmed absence, not an access failure.",
         "verified_on": "2026-10-18"
       }
     },
@@ -217,16 +220,17 @@
       "sources": [
         "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf"
       ],
-      "source_access_note": "The official DHL Express Claims Guide PDF could not be parsed by our automated fetch (returned as unreadable binary/compressed streams); the figures above are drawn from a web search whose results describe that same official document, not from an independently-read copy of the PDF text. The exact $/kg conversion is lower-confidence — flagged in 'unverified'.",
+      "source_access_note": "The official DHL Express Claims Guide PDF could not be parsed by our automated fetch (returned as unreadable binary/compressed streams); the figures above are drawn from a web search whose results describe that same official document, not from an independently-read copy of the PDF text. The exact $/kg conversion is lower-confidence — flagged in 'unverified'. Phase 5a: also tried DHL's UK and US website Terms of Use pages directly via browser rendering — both are generic WEBSITE-use terms (not carriage terms) and both explicitly state that DHL's actual Terms and Conditions of carriage vary by country and are only available by contacting the nearest DHL service centre, not from a single public web page. No better source was found this session.",
       "verified_on": "2026-10-18",
       "contact_routes": {
         "claim_form_url": "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf (DHL Express Claims Guide — submission method, not a web form URL, could not be extracted; the PDF could not be parsed by our automated fetch)",
         "claims_email": null,
         "postal_address": null,
         "source": [
-          "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf"
+          "https://mydhl.express.dhl/content/dam/downloads/gb/en/claims/dhl_express_claims_guide.pdf",
+          "https://www.dhl.com/gb-en/home/footer/legal-notice.html"
         ],
-        "source_access_note": "dhl.com's own contact-us pages returned a connection error (ECONNRESET) to automated fetch on every URL tried this session; could not confirm an email/postal address. Left null rather than guessed.",
+        "source_access_note": "Phase 5a: dhl.com's UK customer-service, contact-us, and legal-notice pages were all successfully read via browser rendering this session (the earlier ECONNRESET block was WebFetch-specific). None publish a UK/US claims email or postal address. The only postal address DHL publishes anywhere on dhl.com is its corporate registered office — DHL AG, Charles-de-Gaulle-Straße 20, 53113 Bonn, Germany (Legal Notice page) — which we deliberately did NOT use here, since it is a German corporate-registration address, not a claims destination for a UK or US consumer, and using it would likely mislead rather than help.",
         "verified_on": "2026-10-18"
       }
     },
@@ -242,12 +246,14 @@
         "damaged_or_missing_contents": "May file immediately; must file no later than 60 days after the mailing date."
       },
       "compensation_limits": {
-        "default": null
+        "default": "$100 of insurance included with most Priority Mail shipments that have a USPS Tracking barcode (restrictions apply). For shipments valued over $100, additional insurance may be purchased, which then replaces the included coverage. Other insured mail classes (Priority Mail Express, Registered Mail, etc.) have their own separate included-coverage amounts, not a single blanket default."
       },
       "escalation_route": "No ombudsman; USPS has its own internal appeals process for a denied claim (not independently verified here).",
       "sources": [
-        "https://www.usps.com/help/claims.htm"
+        "https://www.usps.com/help/claims.htm",
+        "https://www.usps.com/ship/priority-mail.htm"
       ],
+      "source_access_note": "Phase 5a: filled compensation_limits.default by reading usps.com's own Priority Mail service page directly via browser rendering, which states the $100 included-insurance figure explicitly (footnote 5/6 on that page).",
       "verified_on": "2026-10-18",
       "contact_routes": {
         "claim_form_url": "https://www.usps.com/help/claims.htm (claims filed online); general contact form at https://emailus.usps.com/s/",
@@ -273,13 +279,13 @@
         "never_received": "Can file once 3 days have passed since the latest estimated delivery date, or once tracking shows a delivery confirmation you dispute, whichever is sooner."
       },
       "compensation_limits": {
-        "a_to_z_guarantee": "Up to $2,500 (as reported by a web search citing Amazon's own help page)."
+        "a_to_z_guarantee": "No fixed dollar cap is stated on Amazon's own current A-to-z Guarantee page (corrected phase 5a — the previous 'Up to $2,500' figure is not supported there; see note below). For a damaged/defective/significantly-not-as-described item, the refund table states the buyer is reimbursed the product price, the original shipping cost, and the return shipping cost in full. For a return for any other reason, only the product price is refunded (restocking fees may be deducted), with no shipping refund — except for Clothing, Shoes, Jewelry, and Watches, which also get shipping refunded when returned under the free fashion-returns policy."
       },
       "escalation_route": "No external ombudsman found; Amazon's own A-to-z Guarantee decision is the final internal step we could verify.",
       "sources": [
         "https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV"
       ],
-      "source_access_note": "amazon.com's own help page returned a 503 (temporarily unavailable) on direct automated fetch; figures are drawn from a web search whose results quote/paraphrase that same official page.",
+      "source_access_note": "Phase 5a: successfully read Amazon's own A-to-z Guarantee help page directly via browser rendering (the earlier 503 block was WebFetch-specific). The full page text (9,100+ characters) contains no '$2,500' or '2500' figure anywhere — the previous value was a web-search-derived figure that this direct read could not confirm, so it has been corrected to describe the refund-amount table the page actually states (see compensation_limits.a_to_z_guarantee). Old value: 'Up to $2,500'. New value: no fixed cap; full product+shipping refund for qualifying reasons, product-only for others.",
       "verified_on": "2026-10-18",
       "contact_routes": {
         "claim_form_url": "Via 'Your Orders' > the relevant order > 'File/View Claim' (A-to-z Guarantee, third-party-seller orders only) — see https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
@@ -288,66 +294,51 @@
         "source": [
           "https://www.amazon.com/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV"
         ],
-        "source_access_note": "amazon.com's own help pages returned 503 (service unavailable) to automated fetch on every URL tried this session; could not confirm whether a general claims email/postal address is published (Amazon is widely understood not to publish one for consumer claims, but we could not verify this directly at the source this session, so it is left null rather than asserted).",
+        "source_access_note": "Phase 5a: successfully read amazon.com's own A-to-z Guarantee help page directly via browser rendering (the earlier 503 block was WebFetch-specific). The page confirms the claim is filed via 'Your Orders' and does not publish any general claims email or postal address — this is now a confirmed absence rather than an access failure.",
         "verified_on": "2026-10-18"
       }
     }
   ],
   "unverified": [
     {
-      "carrier": "USPS",
-      "field": "compensation_limits.default",
-      "reason": "Not stated as a fixed figure on the official page we could access."
-    },
-    {
       "carrier": "Yodel",
       "field": "claim_windows.damage_or_part_loss, claim_windows.never_arrived",
-      "reason": "Figures (14 days / 28 days) could not be independently re-confirmed on an official page after Yodel Direct's redirect to inpostdirect.co.uk; kept (not nulled) because they are drawn from a web search citing Yodel's own prior guidance, but flagged here as lower-confidence rather than presented as fully primary-source-verified."
+      "reason": "Figures (14 days / 28 days) still could not be independently re-confirmed on an official page after Yodel Direct's redirect to inpostdirect.co.uk/inpost.co.uk. Phase 5a: found and read InPost UK Limited's own 'Service Terms' (inpost.co.uk/terms-of-service, last updated May 2025) via browser rendering, which gives compensation figures (£50 standard / up to £500 purchasable) for InPost's own direct-to-consumer locker Send/Collect/Return service — but this appears to be a DIFFERENT product line from the retailer-booked home-delivery service our Yodel entry describes (whoever booked the parcel logs in and 'Create[s] a claim'), so it was NOT used to overwrite the existing claim-window or compensation figures here. Kept as lower-confidence rather than nulled, per the same reasoning as before."
     },
     {
       "carrier": "DHL",
       "field": "compensation_limits.international_air_default",
-      "reason": "The official DHL Express Claims Guide PDF could not be parsed directly; the ~22 SDR/kg (~$23/kg) figure is drawn from a web search describing that document, not independently read from the PDF text itself. Kept with this caveat rather than nulled, since the underlying Montreal Convention SDR/kg mechanism itself is independently well-established."
+      "reason": "The official DHL Express Claims Guide PDF could not be parsed directly; the ~22 SDR/kg (~$23/kg) figure is drawn from a web search describing that document, not independently read from the PDF text itself. Phase 5a: also tried DHL's UK and US 'Terms of Use' pages directly via browser rendering — both are generic website-use terms, not carriage terms, and both state DHL's actual carriage T&Cs vary by country and are available only by contacting a local DHL service centre. No single public page with the SDR/kg figure was found. Kept with this caveat rather than nulled, since the underlying Montreal Convention SDR/kg mechanism itself is independently well-established."
     },
     {
       "carrier": "Royal Mail",
       "field": "contact_routes.claims_email, contact_routes.postal_address",
-      "reason": "royalmail.com's own contact-us page returned 403 (bot-blocked); help.royalmail.com's support portal is JavaScript-rendered and returned only a loading-error shell to automated fetch, so no email/postal address could be confirmed this session. Left null rather than guessed."
+      "reason": "Phase 5a: successfully read royalmail.com's contact-us redirect and the Claims Centre article directly via browser rendering (the earlier block was WebFetch-specific). This is now a CONFIRMED ABSENCE, not an access failure: Royal Mail's entire claims process (claim forms, evidence upload, claim cancellation) is online-form-only, with no claims email or postal address published on any official page we could find."
     },
     {
       "carrier": "DPD",
-      "field": "contact_routes.claims_email, contact_routes.postal_address",
-      "reason": "DPD's own T&Cs confirm no email/postal address is published there; separate contact-page URL guesses (dpd.co.uk/contact, /content/contact_us.jsp) returned 404. Left null rather than guessed."
+      "field": "contact_routes.claims_email",
+      "reason": "Phase 5a: confirmed DPD's registered office postal address directly (see contact_routes.postal_address), but still found no claims email — DPD's T&Cs only say to notify 'the Company' in writing within 14 days, with no email address given anywhere, and dpd.co.uk has no working dedicated contact/claims page (every guessed URL 404'd)."
     },
     {
       "carrier": "UPS",
       "field": "contact_routes.claims_email, contact_routes.postal_address",
-      "reason": "ups.com blocked automated fetch (access denied) on both the claims page and the general contact-us page this session; could not confirm whether an email/postal address is published. Left null rather than guessed."
+      "reason": "Phase 5a: successfully read ups.com's File a Claim and Help and Support Center pages directly via browser rendering (the earlier access-denied block was WebFetch-specific). This is now a CONFIRMED ABSENCE, not an access failure: UPS routes all claims through its online/guest claim form and does not publish a claims email or postal address."
     },
     {
       "carrier": "DHL",
       "field": "contact_routes.claims_email, contact_routes.postal_address",
-      "reason": "dhl.com's own contact-us pages returned a connection error (ECONNRESET) to automated fetch on every URL tried this session; could not confirm an email/postal address. Left null rather than guessed."
+      "reason": "Phase 5a: successfully read dhl.com's UK customer-service, contact-us, and legal-notice pages directly via browser rendering (the earlier ECONNRESET block was WebFetch-specific). No UK/US claims email or postal address is published; the only postal address found anywhere on dhl.com is DHL AG's German corporate registration address (Bonn), which was deliberately not used here as it is not a claims destination for a UK/US consumer."
     },
     {
       "carrier": "Amazon Logistics",
       "field": "contact_routes.claims_email, contact_routes.postal_address",
-      "reason": "amazon.com's own help pages returned 503 (service unavailable) to automated fetch on every URL tried this session; could not confirm whether a general claims email/postal address is published (Amazon is widely understood not to publish one for consumer claims, but we could not verify this directly at the source this session, so it is left null rather than asserted)."
-    },
-    {
-      "country": "EU",
-      "field": "ombudsman_regulator (FIN-NET)",
-      "reason": "Could not locate FIN-NET's current official URL this session (three URL guesses on ec.europa.eu/finance.ec.europa.eu/commission.europa.eu all 404'd, and the web-search tool budget was exhausted). Used ECC-Net instead, which is verified but is a general cross-border consumer network, not the financial-dispute-specific network the EU actually operates."
-    },
-    {
-      "country": "AU",
-      "field": "ombudsman_regulator.postal_address, ombudsman_regulator.phone",
-      "reason": "afca.org.au blocked all automated fetch attempts (403) this session; could not confirm exact postal address/phone."
+      "reason": "Phase 5a: successfully read amazon.com's A-to-z Guarantee help page directly via browser rendering (the earlier 503 block was WebFetch-specific). This is now a CONFIRMED ABSENCE, not an access failure: claims are filed via 'Your Orders' only, with no general claims email or postal address published."
     },
     {
       "country": "EU",
       "field": "card_dispute_route (absence of a Section-75-style statutory right)",
-      "reason": "This is an absence, not a documented official statement — flagged for your awareness rather than treated as fully 'verified' in the same sense as a positive legal citation."
+      "reason": "This is an absence, not a documented official statement — flagged for your awareness rather than treated as fully 'verified' in the same sense as a positive legal citation. (Not in phase 5a's scope; carried over unchanged.)"
     }
   ],
   "country_dispute_routes": {
@@ -405,13 +396,14 @@
         "confidence_note": "We could not find a single official EU source confirming this absence as a positive statement (it is an absence of a right, not a documented one) — flagged in 'unverified'."
       },
       "ombudsman_regulator": {
-        "name": "European Consumer Centres Network (ECC-Net)",
-        "scope_note": "Free help for CROSS-BORDER disputes (consumer and trader in different EU/EEA countries); not a financial-dispute-specific ombudsman. We could not verify the EU's financial-dispute-specific network (FIN-NET) URL this session — see 'unverified'. Each EU member state additionally has its own national financial ombudsman, not centrally listed here.",
-        "complaint_url": "https://www.eccnet.eu/",
+        "name": "FIN-NET (Financial Dispute Resolution Network, European Commission)",
+        "scope_note": "FIN-NET is the EU's actual financial-dispute-specific network — it helps resolve CROSS-BORDER disputes between a consumer and a financial-service provider (e.g. a card issuer) in different EEA countries (EU + Iceland, Liechtenstein, Norway), by routing the complaint to the relevant national financial ombudsman, which is itself a FIN-NET member. It does not resolve disputes with the retailer or carrier directly. Corrected phase 5a — see note below. For a general (non-financial) cross-border consumer dispute, the European Consumer Centres Network (ECC-Net, https://www.eccnet.eu/) is the separate, more general network previously listed here.",
+        "complaint_url": "https://finance.ec.europa.eu/consumer-finance-and-payments/retail-financial-services/financial-dispute-resolution-network-fin-net_en",
         "postal_address": null,
         "sources": [
-          "https://www.eccnet.eu/european-consumer-centres-network"
+          "https://finance.ec.europa.eu/consumer-finance-and-payments/retail-financial-services/financial-dispute-resolution-network-fin-net_en"
         ],
+        "source_access_note": "Phase 5a: found and read the European Commission's own official FIN-NET page directly via browser rendering. This REPLACES the previous ombudsman_regulator.complaint_url (ECC-Net, https://www.eccnet.eu/), which was used as a fallback because FIN-NET's URL could not be located in the prior session. FIN-NET has no single central postal address of its own (it is a network of member states' own ombudsman bodies, not one office), so postal_address remains null — that is a correct absence, not a gap.",
         "verified_on": "2026-10-18"
       }
     },
@@ -428,12 +420,14 @@
         "name": "Australian Financial Complaints Authority (AFCA)",
         "scope_note": "Resolves disputes about how a BANK handled a chargeback request; does not itself resolve disputes with the retailer or carrier.",
         "complaint_url": "https://www.afca.org.au/make-a-complaint",
-        "postal_address": null,
-        "phone": null,
+        "postal_address": "Australian Financial Complaints Authority Limited, GPO Box 3, Melbourne, VIC 3001, Australia",
+        "phone": "1800 931 678 (free call within Australia, 8:00am-6:00pm AEST/AEDT weekdays)",
         "sources": [
-          "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks"
+          "https://www.afca.org.au/about-afca/publications/factsheet-chargebacks",
+          "https://www.afca.org.au/about-afca/contact-us",
+          "https://www.afca.org.au/make-a-complaint"
         ],
-        "source_access_note": "afca.org.au blocked automated fetch (403) on every page tried this session (homepage, contact-us, make-a-complaint, and the previously-cited factsheet download); the complaint URL itself is confirmed as AFCA's real domain from earlier research in this project, but the exact postal address and phone number could not be independently re-confirmed this session. Left null rather than guessed.",
+        "source_access_note": "Phase 5a: afca.org.au's contact-us and make-a-complaint pages were both successfully read directly via browser rendering this session (the earlier 403 block was WebFetch-specific). Filled postal_address and phone directly from the contact-us page; the make-a-complaint page independently re-confirmed the complaint_url is correct.",
         "verified_on": "2026-10-18"
       }
     }
