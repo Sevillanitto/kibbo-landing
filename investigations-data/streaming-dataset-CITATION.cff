@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "The Kibbo Streaming Pricing Dataset, 2011–2026"
+version: 1.0.0
+date-released: "2026-10-20"
+abstract: >-
+  An original dataset tracking every publicly confirmed price change
+  (launch, increase, decrease, or tier restructure) for 10 major US
+  streaming platforms, from each platform's launch through September
+  2026. 97 rows, 10 platforms, US pricing only. Built for the Kibbo
+  Research investigation "The Streaming Price Machine."
+authors:
+  - name: "Kibbo Research"
+    website: "https://www.getkibbo.com"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23600758"
+    description: "Zenodo record for this dataset"
+keywords:
+  - streaming services
+  - subscription pricing
+  - consumer protection
+  - price tracking
+  - United States
+license: "CC-BY-4.0"
+url: "https://www.getkibbo.com/investigations/streaming-price-machine"
+repository-code: "https://www.getkibbo.com/investigations-data/kibbo-streaming-pricing-dataset-2011-2026.csv"

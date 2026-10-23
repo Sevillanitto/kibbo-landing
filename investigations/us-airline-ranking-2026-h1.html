@@ -23,6 +23,14 @@
 <meta name="twitter:description" content="We combined four official DOT metrics — on-time rate, cancellations, mishandled baggage, and involuntary bumping — to rank all 9 major US airlines for the first half of 2026.">
 <meta name="twitter:image" content="https://www.getkibbo.com/investigations-images/us-airline-ranking-2026-h1-hero.png">
 
+<meta name="citation_title" content="Which US Airline Performed Worst in 2026? We Ranked All 9 on DOT's Own Data">
+<meta name="citation_author" content="Kibbo Research">
+<meta name="citation_publication_date" content="2026/09/01">
+<meta name="citation_publisher" content="Kibbo">
+<meta name="citation_language" content="en">
+<meta name="citation_abstract_html_url" content="https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1">
+<link rel="cite-as" href="https://doi.org/10.5281/zenodo.23600861">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -49,7 +57,7 @@
     "name": "Kibbo"
   },
   "datePublished": "2026-09-01",
-  "dateModified": "2026-09-15",
+  "dateModified": "2026-10-23",
   "image": "https://www.getkibbo.com/investigations-images/us-airline-ranking-2026-h1-hero.png",
   "mainEntityOfPage": "https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1",
   "breadcrumb": {
@@ -75,6 +83,50 @@
       }
     ]
   }
+}
+</script>
+
+<!-- JSON-LD Dataset schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "US Airline Reliability Dataset — 2026 H1",
+  "description": "On-time performance, cancellation rates, mishandled baggage, and involuntary denied boarding data for the 9 major US airlines, January–June 2026, extracted from the US Department of Transportation's Air Travel Consumer Report.",
+  "url": "https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1",
+  "identifier": "https://doi.org/10.5281/zenodo.23600861",
+  "sameAs": "https://doi.org/10.5281/zenodo.23600861",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Kibbo Research",
+    "url": "https://www.getkibbo.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibbo Research",
+    "url": "https://www.getkibbo.com"
+  },
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-23",
+  "version": "1.0",
+  "keywords": ["airlines", "air travel", "consumer protection", "on-time performance", "United States", "Department of Transportation"],
+  "isAccessibleForFree": true,
+  "temporalCoverage": "2026-01-01/2026-06-30",
+  "spatialCoverage": "United States",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://www.getkibbo.com/investigations-data/us-airline-ranking-2026-h1.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://doi.org/10.5281/zenodo.23600861"
+    }
+  ],
+  "citation": "https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1"
 }
 </script>
 
@@ -144,6 +196,19 @@
   .breadcrumb-inv { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 0 0 24px; color: var(--accent-green); }
   .breadcrumb-inv a { color: var(--accent-green); text-decoration: none; }
   .breadcrumb-inv a:hover { color: var(--text-primary); }
+
+  /* "How to cite" box — reuses .embed-code / .embed-copy-btn from /styles.css */
+  .cite-box { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0; margin: 20px 0 0; }
+  .cite-box h3 { margin: 0 0 16px; }
+  .cite-item { margin-bottom: 24px; }
+  .cite-item:last-child { margin-bottom: 0; }
+  .cite-item-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+  .cite-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .cite-tab { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--text-secondary); background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; cursor: pointer; transition: var(--transition); }
+  .cite-tab:hover { border-color: var(--text-primary); color: var(--text-primary); }
+  .cite-tab.is-active { background: var(--text-primary); color: var(--text-inverse); border-color: var(--text-primary); }
+  .cite-pane { margin: 0 0 10px; }
+  @media (max-width: 640px) { .cite-tab { padding: 6px 10px; font-size: 12.5px; } }
 </style>
 </head>
 <body>
@@ -608,8 +673,95 @@
       <li><a href="https://www.transportation.gov/individuals/aviation-consumer-protection/air-travel-consumer-reports" target="_blank" rel="noopener">DOT Office of Aviation Consumer Protection — full report archive</a></li>
       <li><a href="https://www.bts.gov/" target="_blank" rel="noopener">Bureau of Transportation Statistics</a></li>
     </ul>
-    <p style="margin-top: 14px; font-size: 14.5px;"><a href="/datasets" style="color: var(--accent-green); font-weight: 600; text-decoration: none;">See all datasets in Kibbo's Consumer Data Library →</a><br>
+    <p style="margin-top: 14px; font-size: 14.5px;"><a href="https://doi.org/10.5281/zenodo.23600861" target="_blank" rel="noopener" style="color: var(--accent-green); font-weight: 600; text-decoration: none;">Full record on Zenodo (DOI) →</a><br>
+    <a href="/datasets" style="color: var(--accent-green); font-weight: 600; text-decoration: none;">See all datasets in Kibbo's Consumer Data Library →</a><br>
     <a href="/education/exercises/us-airline-ranking" style="color: var(--accent-green); font-weight: 600; text-decoration: none;">Use this in the classroom →</a></p>
+  </section>
+
+  <section class="q-section">
+    <div class="cite-box">
+      <h3>How to cite</h3>
+      <div class="cite-item">
+        <p class="cite-item-label">Cite the dataset</p>
+        <div class="cite-tabs" role="tablist">
+          <button type="button" class="cite-tab is-active" data-format="apa">APA</button>
+          <button type="button" class="cite-tab" data-format="mla">MLA</button>
+          <button type="button" class="cite-tab" data-format="bibtex">BibTeX</button>
+          <button type="button" class="cite-tab" data-format="ris">RIS</button>
+        </div>
+        <pre class="embed-code cite-pane" data-format="apa">Kibbo Research. (2026). US Airline Reliability Dataset — 2026 H1 (Version 1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23600861</pre>
+        <pre class="embed-code cite-pane" data-format="mla" hidden>Kibbo Research. US Airline Reliability Dataset — 2026 H1. Version 1.0, Zenodo, 2026, doi.org/10.5281/zenodo.23600861.</pre>
+        <pre class="embed-code cite-pane" data-format="bibtex" hidden>@dataset{kibbo2026airline,
+  author    = {Kibbo Research},
+  title     = {US Airline Reliability Dataset -- 2026 H1},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {1.0},
+  doi       = {10.5281/zenodo.23600861},
+  url       = {https://doi.org/10.5281/zenodo.23600861}
+}</pre>
+        <pre class="embed-code cite-pane" data-format="ris" hidden>TY  - DATA
+AU  - Kibbo Research
+TI  - US Airline Reliability Dataset - 2026 H1
+PY  - 2026
+PB  - Zenodo
+DO  - 10.5281/zenodo.23600861
+UR  - https://doi.org/10.5281/zenodo.23600861
+ER  - </pre>
+        <button type="button" class="embed-copy-btn cite-copy-btn">Copy</button>
+      </div>
+      <div class="cite-item">
+        <p class="cite-item-label">Cite the article</p>
+        <div class="cite-tabs" role="tablist">
+          <button type="button" class="cite-tab is-active" data-format="apa">APA</button>
+          <button type="button" class="cite-tab" data-format="mla">MLA</button>
+          <button type="button" class="cite-tab" data-format="bibtex">BibTeX</button>
+          <button type="button" class="cite-tab" data-format="ris">RIS</button>
+        </div>
+        <pre class="embed-code cite-pane" data-format="apa">Kibbo Editorial Team. (2026, September 1). Which US airline performed worst in 2026? We ranked all 9 on DOT's own data. Kibbo. https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1</pre>
+        <pre class="embed-code cite-pane" data-format="mla" hidden>Kibbo Editorial Team. "Which US Airline Performed Worst in 2026? We Ranked All 9 on DOT's Own Data." Kibbo, 1 Sept. 2026, www.getkibbo.com/investigations/us-airline-ranking-2026-h1.</pre>
+        <pre class="embed-code cite-pane" data-format="bibtex" hidden>@misc{kibbo2026airlinearticle,
+  author    = {{Kibbo Editorial Team}},
+  title     = {Which US Airline Performed Worst in 2026? We Ranked All 9 on DOT's Own Data},
+  year      = {2026},
+  publisher = {Kibbo},
+  url       = {https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1},
+  note      = {Published September 1, 2026}
+}</pre>
+        <pre class="embed-code cite-pane" data-format="ris" hidden>TY  - ELEC
+AU  - Kibbo Editorial Team
+TI  - Which US Airline Performed Worst in 2026? We Ranked All 9 on DOT's Own Data
+PY  - 2026
+PB  - Kibbo
+UR  - https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1
+ER  - </pre>
+        <button type="button" class="embed-copy-btn cite-copy-btn">Copy</button>
+      </div>
+    </div>
+    <script>
+    (function () {
+      document.querySelectorAll('.cite-box .cite-item').forEach(function (item) {
+        var tabs = item.querySelectorAll('.cite-tab');
+        var panes = item.querySelectorAll('.cite-pane');
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            tabs.forEach(function (t) { t.classList.remove('is-active'); });
+            panes.forEach(function (p) { p.hidden = true; });
+            tab.classList.add('is-active');
+            item.querySelector('.cite-pane[data-format="' + tab.dataset.format + '"]').hidden = false;
+          });
+        });
+        var copyBtn = item.querySelector('.cite-copy-btn');
+        copyBtn.addEventListener('click', function () {
+          var visible = item.querySelector('.cite-pane:not([hidden])');
+          var text = visible.textContent;
+          var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 2000); };
+          if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+          else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+        });
+      });
+    })();
+    </script>
   </section>
 
   <div class="cta-block">

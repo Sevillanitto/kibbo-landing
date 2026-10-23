@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "US Airline Reliability Dataset — 2026 H1"
+version: 1.0.0
+date-released: "2026-10-20"
+abstract: >-
+  An extract from the US Department of Transportation's Air Travel
+  Consumer Report (August 2026 edition) for the 9 major US airlines,
+  January-June 2026: on-time performance, cancellation rates,
+  mishandled baggage, and involuntary denied boarding, plus a
+  year-over-year comparison and Spirit Airlines' monthly breakdown
+  before it ceased operations. Built for the Kibbo Research
+  investigation ranking which airline performed worst in 2026 H1.
+authors:
+  - name: "Kibbo Research"
+    website: "https://www.getkibbo.com"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23600861"
+    description: "Zenodo record for this dataset"
+keywords:
+  - airlines
+  - air travel
+  - consumer protection
+  - on-time performance
+  - United States
+  - Department of Transportation
+license: "CC-BY-4.0"
+url: "https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1"
+repository-code: "https://www.getkibbo.com/investigations-data/us-airline-ranking-2026-h1.csv"

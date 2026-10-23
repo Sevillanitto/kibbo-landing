@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Kibbo Healthcare Cost Dataset (2026) — Reduced Deposit"
+version: 1.0.0
+date-released: "2026-10-20"
+abstract: >-
+  A reduced-scope, openly redistributable subset of Kibbo's 58-row
+  comparison of the real cost of getting sick in the United States,
+  United Kingdom, Germany, and Spain. Rows sourced from government
+  data, statutory rates, and Kibbo's own facts are kept in full;
+  rows sourced from publishers whose own terms do not permit open
+  redistribution (KFF, The King's Fund, BMJ, MyCareCost, iFHP/HCCI,
+  Merritt Hawkins) are kept with their citation and source URL but
+  their value withheld. See README.md for the full breakdown.
+authors:
+  - name: "Kibbo Research"
+    website: "https://www.getkibbo.com"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23600573"
+    description: "Zenodo record for this reduced deposit"
+keywords:
+  - healthcare costs
+  - international comparison
+  - consumer protection
+  - United States
+  - United Kingdom
+  - Germany
+  - Spain
+license: "CC-BY-4.0"
+url: "https://www.getkibbo.com/investigations/healthcare-cost-comparison"
+repository-code: "https://www.getkibbo.com/investigations-data/kibbo-healthcare-cost-dataset-2026.csv"

@@ -23,6 +23,14 @@
 <meta name="twitter:description" content="Kibbo Research analysed 18.2 million CFPB complaints and 3.85 million consumer narratives. Half of 2025's narratives were shared templates — and templates rarely get consumers their money back. With an open dataset.">
 <meta name="twitter:image" content="https://www.getkibbo.com/investigations-images/TheCFPBComplaintVault-hero.png">
 
+<meta name="citation_title" content="The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database">
+<meta name="citation_author" content="Kibbo Research">
+<meta name="citation_publication_date" content="2026/10/06">
+<meta name="citation_publisher" content="Kibbo">
+<meta name="citation_language" content="en">
+<meta name="citation_abstract_html_url" content="https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints">
+<link rel="cite-as" href="https://doi.org/10.5281/zenodo.23188842">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -55,7 +63,7 @@
     }
   },
   "datePublished": "2026-10-06",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-10-23",
   "image": "https://www.getkibbo.com/investigations-images/TheCFPBComplaintVault-hero.png",
   "mainEntityOfPage": "https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints",
   "about": "Financial & Banking",
@@ -83,6 +91,45 @@
       }
     ]
   }
+}
+</script>
+
+<!-- JSON-LD Dataset schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The CFPB Complaint Vault Dataset",
+  "description": "A harmonised, enriched version of all 18,167,713 complaints in the U.S. Consumer Financial Protection Bureau (CFPB) Consumer Complaint Database (December 2011 to October 2026), with original measures of copy-paste (\"template\") complaint narratives, a product taxonomy comparable across the CFPB's classification changes, company business types, and state population rates.",
+  "url": "https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints",
+  "identifier": "https://doi.org/10.5281/zenodo.23188842",
+  "sameAs": "https://doi.org/10.5281/zenodo.23188842",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Kibbo Research",
+    "url": "https://www.getkibbo.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibbo Research",
+    "url": "https://www.getkibbo.com"
+  },
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-14",
+  "version": "1.0",
+  "keywords": ["consumer complaints", "CFPB", "financial services", "template detection", "United States"],
+  "isAccessibleForFree": true,
+  "temporalCoverage": "2011-12-01/2026-10-03",
+  "spatialCoverage": "United States",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://doi.org/10.5281/zenodo.23188842"
+    }
+  ],
+  "citation": "https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints"
 }
 </script>
 
@@ -212,6 +259,19 @@
   /* Anchor targets clear the floating nav */
   .art-body h2[id] { scroll-margin-top: 96px; }
   @media (max-width: 560px) { .hc-totals.is-pair { grid-template-columns: 1fr; gap: 18px; } .hc-layer { flex-basis: 100%; } }
+
+  /* "How to cite" box — reuses .embed-code / .embed-copy-btn from /styles.css */
+  .cite-box { border-top: 1px solid var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: 28px 0; margin: 0 0 40px; }
+  .cite-box h3 { margin: 0 0 16px; }
+  .cite-item { margin-bottom: 24px; }
+  .cite-item:last-child { margin-bottom: 0; }
+  .cite-item-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+  .cite-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .cite-tab { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--text-secondary); background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; cursor: pointer; transition: var(--transition); }
+  .cite-tab:hover { border-color: var(--text-primary); color: var(--text-primary); }
+  .cite-tab.is-active { background: var(--text-primary); color: var(--text-inverse); border-color: var(--text-primary); }
+  .cite-pane { margin: 0 0 10px; }
+  @media (max-width: 640px) { .cite-tab { padding: 6px 10px; font-size: 12.5px; } }
 </style>
 </head>
 <body>
@@ -813,6 +873,90 @@
       <a href="/datasets">See all datasets in Kibbo's Consumer Data Library →</a><br>
       <a href="/research">Kibbo Research →</a></p>
     </div>
+
+    <div class="cite-box">
+      <h3>How to cite</h3>
+      <div class="cite-item">
+        <p class="cite-item-label">Cite the dataset</p>
+        <div class="cite-tabs" role="tablist">
+          <button type="button" class="cite-tab is-active" data-format="apa">APA</button>
+          <button type="button" class="cite-tab" data-format="mla">MLA</button>
+          <button type="button" class="cite-tab" data-format="bibtex">BibTeX</button>
+          <button type="button" class="cite-tab" data-format="ris">RIS</button>
+        </div>
+        <pre class="embed-code cite-pane" data-format="apa">Kibbo Research. (2026). The CFPB Complaint Vault Dataset (Version 1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23188842</pre>
+        <pre class="embed-code cite-pane" data-format="mla" hidden>Kibbo Research. The CFPB Complaint Vault Dataset. Version 1.0, Zenodo, 2026, doi.org/10.5281/zenodo.23188842.</pre>
+        <pre class="embed-code cite-pane" data-format="bibtex" hidden>@dataset{kibbo2026cfpbvault,
+  author    = {Kibbo Research},
+  title     = {The CFPB Complaint Vault Dataset},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {1.0},
+  doi       = {10.5281/zenodo.23188842},
+  url       = {https://doi.org/10.5281/zenodo.23188842}
+}</pre>
+        <pre class="embed-code cite-pane" data-format="ris" hidden>TY  - DATA
+AU  - Kibbo Research
+TI  - The CFPB Complaint Vault Dataset
+PY  - 2026
+PB  - Zenodo
+DO  - 10.5281/zenodo.23188842
+UR  - https://doi.org/10.5281/zenodo.23188842
+ER  - </pre>
+        <button type="button" class="embed-copy-btn cite-copy-btn">Copy</button>
+      </div>
+      <div class="cite-item">
+        <p class="cite-item-label">Cite the article</p>
+        <div class="cite-tabs" role="tablist">
+          <button type="button" class="cite-tab is-active" data-format="apa">APA</button>
+          <button type="button" class="cite-tab" data-format="mla">MLA</button>
+          <button type="button" class="cite-tab" data-format="bibtex">BibTeX</button>
+          <button type="button" class="cite-tab" data-format="ris">RIS</button>
+        </div>
+        <pre class="embed-code cite-pane" data-format="apa">Kibbo Research. (2026, October 6). The copy-paste complaint: How templates took over America's financial complaint database. Kibbo. https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints</pre>
+        <pre class="embed-code cite-pane" data-format="mla" hidden>Kibbo Research. "The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database." Kibbo, 6 Oct. 2026, www.getkibbo.com/investigations/cfpb-copy-paste-complaints.</pre>
+        <pre class="embed-code cite-pane" data-format="bibtex" hidden>@misc{kibbo2026cfpbarticle,
+  author    = {Kibbo Research},
+  title     = {The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database},
+  year      = {2026},
+  publisher = {Kibbo},
+  url       = {https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints},
+  note      = {Published October 6, 2026}
+}</pre>
+        <pre class="embed-code cite-pane" data-format="ris" hidden>TY  - ELEC
+AU  - Kibbo Research
+TI  - The Copy-Paste Complaint: How Templates Took Over America's Financial Complaint Database
+PY  - 2026
+PB  - Kibbo
+UR  - https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints
+ER  - </pre>
+        <button type="button" class="embed-copy-btn cite-copy-btn">Copy</button>
+      </div>
+    </div>
+    <script>
+    (function () {
+      document.querySelectorAll('.cite-box .cite-item').forEach(function (item) {
+        var tabs = item.querySelectorAll('.cite-tab');
+        var panes = item.querySelectorAll('.cite-pane');
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            tabs.forEach(function (t) { t.classList.remove('is-active'); });
+            panes.forEach(function (p) { p.hidden = true; });
+            tab.classList.add('is-active');
+            item.querySelector('.cite-pane[data-format="' + tab.dataset.format + '"]').hidden = false;
+          });
+        });
+        var copyBtn = item.querySelector('.cite-copy-btn');
+        copyBtn.addEventListener('click', function () {
+          var visible = item.querySelector('.cite-pane:not([hidden])');
+          var text = visible.textContent;
+          var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 2000); };
+          if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+          else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+        });
+      });
+    })();
+    </script>
 
     <h2 id="sources">Sources</h2>
     <ul class="sources-list">

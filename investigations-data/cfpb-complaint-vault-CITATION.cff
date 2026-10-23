@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "The CFPB Complaint Vault Dataset"
+version: "1.0"
+date-released: "2026-10-06"
+abstract: >-
+  A harmonised, enriched version of all 18,167,713 complaints in the
+  U.S. Consumer Financial Protection Bureau (CFPB) Consumer Complaint
+  Database (December 2011 to October 2026), with original measures of
+  copy-paste ("template") complaint narratives, a product taxonomy
+  comparable across the CFPB's classification changes, company
+  business types, and state population rates. Built for the Kibbo
+  Research investigation "The Copy-Paste Complaint."
+authors:
+  - name: "Kibbo Research"
+    website: "https://www.getkibbo.com"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23188842"
+    description: "Zenodo record for this dataset"
+keywords:
+  - consumer complaints
+  - CFPB
+  - financial services
+  - template detection
+  - United States
+license: "CC-BY-4.0"
+url: "https://www.getkibbo.com/investigations/cfpb-copy-paste-complaints"
+repository-code: "https://doi.org/10.5281/zenodo.23188842"
