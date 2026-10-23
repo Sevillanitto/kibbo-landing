@@ -351,7 +351,7 @@
   <div class="dataset-block-inner">
     <div style="flex:1 1 100%;">
       <div class="label">Dataset</div>
-      <p style="margin:0 0 10px; font-size:15.5px; color:var(--text-secondary);">Kibbo Healthcare Cost Dataset (2026) — 58 rows, 4 countries (United States, United Kingdom, Germany, Spain), 4 treatments</p>
+      <p style="margin:0 0 10px; font-size:15.5px; color:var(--text-secondary);">Kibbo Healthcare Cost Dataset (2026), reduced edition — 58 rows, 4 countries (United States, United Kingdom, Germany, Spain), 4 treatments</p>
       <a class="download-link" href="/investigations-data/kibbo-healthcare-cost-dataset-2026.csv" download>Download the CSV →</a>
       <a class="download-link" href="/investigations-data/healthcare-dataset-README.md" download>Download the README →</a>
       <a class="download-link" href="/investigations/healthcare-cost-comparison">Read the investigation →</a>
@@ -382,7 +382,7 @@
 
     <section class="edu-ex-section" id="before-you-start">
       <h2>Before you start</h2>
-      <p>The dataset splits cost into layers: <strong>Layer A</strong> is what you pay every year whether you get sick or not (premiums, contributions, taxes); <strong>Layer B</strong> is what a specific treatment costs when you get it; <strong>Layer C</strong> is optional private insurance, shown separately. Read the README first — this dataset deliberately leaves some cells empty, and that is part of what you are going to analyse.</p>
+      <p>The dataset splits cost into layers: <strong>Layer A</strong> is what you pay every year whether you get sick or not (premiums, contributions, taxes); <strong>Layer B</strong> is what a specific treatment costs when you get it; <strong>Layer C</strong> is optional private insurance, shown separately. Read the README first. This is the <strong>reduced edition</strong> of the dataset: every row is still in the file, but the value of 32 rows is withheld because the source's own terms do not allow Kibbo to republish it, and the <code>value_status</code> column says what happened to each row. The empty cells are part of what you are going to analyse.</p>
     </section>
 
     <section class="edu-ex-section" id="exercises">
@@ -390,35 +390,35 @@
 
       <div class="edu-ex-item">
         <p class="edu-ex-num">1. Reading the data <span>(basic)</span></p>
-        <p class="edu-ex-body">Using the "Private insurance claims price" rows, which country is cheapest and which is most expensive for a hip replacement? How many times more expensive is the most expensive than the cheapest?</p>
+        <p class="edu-ex-body">Use the Layer A rows for Germany and Spain.<br>a) Add Germany's general contribution rate and the average additional contribution. What is the total rate?<br>b) The notes say both parts of the German rate are split equally between employer and employee. What percentage of salary does the German employee pay? (Ignore contribution ceilings.)<br>c) What percentage does the Spanish worker pay, according to the dataset?</p>
       </div>
       <div class="edu-ex-item">
-        <p class="edu-ex-num">2. A surprise in the data <span>(basic)</span></p>
-        <p class="edu-ex-body">Look at the private insurance claims price for a knee MRI. Which country is more expensive than the United States, and by what percentage?</p>
+        <p class="edu-ex-num">2. Reading the status column <span>(basic)</span></p>
+        <p class="edu-ex-body">Use the value_status column (filter or pivot table). How many rows are there in each group: "kept", "data gap", "not applicable", and withheld (every other status)? How many cells in the value column are empty?</p>
       </div>
       <div class="edu-ex-item">
-        <p class="edu-ex-num">3. Billed price vs. cash price <span>(intermediate)</span></p>
-        <p class="edu-ex-body">For the three US treatments that have both a "Listed/billed charge" and a "Cash/self-pay price", calculate how much lower the cash price is than the billed charge, as a percentage. Which treatment has the biggest gap?</p>
-      </div>
-      <div class="edu-ex-item">
-        <p class="edu-ex-num">4. What an American worker pays before insurance kicks in <span>(intermediate)</span></p>
-        <p class="edu-ex-body">Using the US Layer A rows:<br>a) What share of the total annual premium does the worker pay?<br>b) Add the worker's annual premium share and the average annual deductible. What does this simple total represent, and what does it leave out?</p>
-      </div>
-      <div class="edu-ex-item">
-        <p class="edu-ex-num">5. Comparing the wrong things <span>(advanced)</span></p>
+        <p class="edu-ex-num">3. Comparing the wrong things <span>(advanced)</span></p>
         <p class="edu-ex-body">Spain's total contribution rate is 28.3%. Germany's statutory health insurance contribution is 14.6% plus an average 2.9% additional contribution. A student concludes: "Spanish workers pay almost twice as much for healthcare as German workers." Use the notes column to explain why this conclusion is wrong.</p>
       </div>
       <div class="edu-ex-item">
-        <p class="edu-ex-num">6. Wait times that can't be compared <span>(advanced)</span></p>
-        <p class="edu-ex-body">The dataset shows 24.1 days for the US, 36 days for Germany, about 83 days for the UK and 121 days for Spain for an elective hip replacement.<br>a) Why is it wrong to conclude that the US is fastest and Spain slowest from these four numbers?<br>b) Which rows CAN be compared with each other, and what do they show?</p>
+        <p class="edu-ex-num">4. Wait times that can't be compared <span>(advanced)</span></p>
+        <p class="edu-ex-body">The wait-time rows show: Germany 36 days (time to a specialist appointment), the United Kingdom 11.9 weeks, about 83 days (time to treatment), Spain 121 days (time to surgery) and Spain 102 days (time to first specialist consultation). The US wait-time row exists, but its value is withheld.<br>a) Why is it wrong to conclude from these numbers that Germany has the shortest wait and Spain the longest?<br>b) Which rows can be compared with each other, and what do they show?<br>c) A student adds Spain's 102 days and 121 days and says a patient waits 223 days from first consultation to surgery. What is wrong with this?</p>
       </div>
       <div class="edu-ex-item">
-        <p class="edu-ex-num">7. Missing data as a finding <span>(advanced)</span></p>
-        <p class="edu-ex-body">Count the rows where the value is empty. Which countries and which layer are they in? Why does the dataset leave them empty instead of using an estimate, and what does the gap itself tell you about how transparent each health system is?</p>
+        <p class="edu-ex-num">5. Two numbers for one question <span>(intermediate)</span></p>
+        <p class="edu-ex-body">The notes on the German wait-time row say that the same official answer also gives 42 days (up from 33 in 2019) for the patients who waited at least one day, and that the dataset uses 36 days instead.<br>a) What does each figure (36 and 42) measure? Why is 42 higher?<br>b) A journalist writes: "Waiting times in Germany rose from 33 days in 2019 to 36 days in 2024." What is wrong with this sentence?</p>
+      </div>
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">6. Two kinds of empty cell <span>(advanced)</span></p>
+        <p class="edu-ex-body">Compare the 11 "data gap" rows with the withheld rows.<br>a) What is the difference between the two kinds of empty cell? Which countries and which layer have the data gaps?<br>b) Why does the dataset leave data gaps empty instead of using an estimate?<br>c) What can a reader still do with a withheld row, and what can't they do?<br>d) What does the pattern of empty cells say about the transparency of health-cost information? Give at least two different ways in which information can be "not available".</p>
+      </div>
+      <div class="edu-ex-item">
+        <p class="edu-ex-num">7. Following a figure to its source <span>(intermediate)</span></p>
+        <p class="edu-ex-body">Take the US Layer A row "Worker's annual premium share (employer-sponsored single coverage)". Its value is empty in this edition.<br>a) Open the link in the source_url column. In the report, find the average annual worker contribution for single coverage and the average annual deductible for single coverage. Note the page or section where you found each.<br>b) Add the two figures. What does the total represent, and what does it leave out?<br>c) Write a one-line citation for each figure (author, title, year, link).</p>
       </div>
       <div class="edu-ex-item">
         <p class="edu-ex-num">8. Currency and time <span>(advanced)</span></p>
-        <p class="edu-ex-body">The UK hip replacement row shows £6,061 and is labelled "historical reference only". Give two reasons why you shouldn't compare it directly with the US prices in the dataset.</p>
+        <p class="edu-ex-body">The UK hip replacement row shows £6,061 and is labelled "historical reference only". Give two reasons why you shouldn't compare it directly with US hospital prices such as those in the sources linked from the US Layer B rows.</p>
       </div>
     </section>
 
@@ -437,13 +437,13 @@
         <summary><span class="section-label">Click to reveal the answer key</span></summary>
         <div class="dir-acc-body">
           <ol class="edu-ex-answers">
-            <li>Cheapest: <strong>Spain, $6,780</strong>. Most expensive: <strong>United States, $29,006</strong>. 29,006 / 6,780 = <strong>4.28 times</strong>.</li>
-            <li><strong>Germany: $613 vs. $566 in the US, +8.3%.</strong> Spain is the cheapest at $113.</li>
-            <li>Appendectomy: (10,972 − 6,848) / 10,972 = <strong>37.6%</strong> lower. Hip replacement: <strong>38.7%</strong> lower. Knee MRI: (3,653 − 1,595) / 3,653 = <strong>56.3%</strong> lower — the biggest gap.</li>
-            <li>a) 1,440 / 9,325 = <strong>15.4%</strong> (the employer pays the rest). b) $1,440 + $1,886 = <strong>$3,326</strong>: roughly what a worker with typical single coverage pays in a year before most insurance cost-sharing applies. It leaves out coinsurance (typically 20% for a hospital admission), copays and anything above the deductible — which can go up to the legal out-of-pocket maximum of $9,200 in 2025.</li>
+            <li>a) 14.6% + 2.9% = <strong>17.5%</strong>. b) 17.5% ÷ 2 = <strong>8.75%</strong> (7.3% + 1.45%). c) <strong>4.7%</strong>. Do not stop here: the two numbers are not directly comparable, which is the point of Exercise 3.</li>
+            <li><strong>Kept: 11. Data gap: 11. Not applicable: 4. Withheld: 32</strong> (iFHP/HCCI 16, MyCareCost 7, KFF 5, BMJ / The King's Fund 3, Merritt Hawkins 1). Total: 58. Empty value cells: <strong>43</strong> = 11 data gaps + 32 withheld. The 4 "not applicable" rows are not empty: their value is 0 (emergency cases, no wait).</li>
             <li>Spain's 28.3% is <strong>not health-specific</strong>: it also covers sick leave, maternity/paternity and other benefits. Most of it (23.6 points) is paid by the employer; the worker's share is 4.7%. Germany's rate is health insurance only and is split equally between employer and employee. The two numbers measure different things.</li>
-            <li>a) They measure different points in the care pathway. The US and Germany figures are time to a <strong>specialist appointment</strong>; the UK and Spain figures are time to <strong>actual treatment</strong>. The UK figure is also a median across all specialties, not hip-specific. b) Comparable time-to-appointment figures: <strong>US 24.1 days, Germany 36 days, Spain 102 days</strong> (Spain's "Time to first specialist consultation" row). The UK doesn't have an equivalent appointment-wait row.</li>
-            <li><strong>11 empty values</strong>, all in <strong>Layer B</strong>: 3 for the UK (appendectomy, knee MRI, vaginal delivery), 4 for Germany and 4 for Spain. The public systems' internal per-treatment cost could not be verified from a primary source, and estimating would mean presenting a guess as data. The gap is itself a finding: it is much easier to find out what a US hospital bills for a treatment than what the UK, German or Spanish public systems actually spend on it.</li>
+            <li>a) They measure different points in the care pathway. Germany's figure is time to a <strong>specialist appointment</strong>; the UK figure and Spain's 121 days are time to <strong>treatment</strong>. The UK figure is also a median across all specialties, not hip-specific. b) Germany (36 days) and Spain (102 days) both measure time to a specialist appointment: Spain's is about 2.8 times Germany's (the years differ, 2024 and the second half of 2025, so treat it as approximate). The UK (about 83 days) and Spain (121 days) both measure time to treatment, with the median/average caveat above. c) The two figures come from different measurements and are not consecutive stages for the same patients. Nothing in the dataset says they describe the same people, so adding them does not give one patient's journey.</li>
+            <li>a) 36 days is the 2024 average for all GKV-insured patients, including those seen the same day. 42 days only counts patients who waited at least one day. Leaving out the zero-day waits necessarily raises the average. b) The 33 days in 2019 belongs to the "waited at least one day" group, so it can only be compared with 42 days: 33 to 42 is a rise of about 27%, not the 9% suggested by 33 to 36. The dataset has no 2019 figure for all patients.</li>
+            <li>a) A data gap is a figure that was not found in any source: the public-system internal cost per treatment. It affects the UK (3 rows: appendectomy, knee MRI, vaginal delivery), Germany (4) and Spain (4), all in Layer B. A withheld value exists, but its publisher's terms do not allow Kibbo to republish it. b) An estimate would present a guess as data. The gap is itself a finding. c) They can follow the source and source_url columns to the publisher's own page and read the figure there, under the publisher's terms. They cannot rebuild any comparison that depends on that value from this file alone. d) Strong answers separate at least two things: whether the information exists in published, comparable form (the public-system costs per treatment), and whether it can be freely reused (the withheld figures). Information can be missing, restricted by licence or terms, or gated behind membership.</li>
+            <li>a) The figures are in the report the link points to (the 2025 employer health benefits survey); check each student's numbers and page references against it. The values are deliberately not printed here: they stay with their publisher. b) It is roughly what a worker with single coverage pays in a year through the premium contribution and the deductible, before most insurance cost-sharing applies. It leaves out coinsurance (the percentage paid after the deductible), copays, costs above the deductible up to the plan's out-of-pocket maximum, and the share of the premium paid by the employer. c) Accept any consistent format that names the organisation, the report title and year, and the link.</li>
             <li>Strong answers mention any two of: it is in <strong>pounds, not dollars</strong>; it is from <strong>2017/18</strong>, so it doesn't reflect inflation since then; it is a <strong>public-system internal cost</strong>, a different kind of figure from a price billed to a patient or insurer.</li>
           </ol>
         </div>
