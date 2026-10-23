@@ -107,7 +107,9 @@ figures.
 
 ## Citation
 
-If you use this dataset, please credit "Kibbo (getkibbo.com)" and link
-back to the investigation it was built for.
+Free to use under CC BY 4.0. If you use this dataset, please credit
+"Kibbo (getkibbo.com)" and link back to the investigation it was built
+for. Full record, with data dictionary and checksums:
+https://doi.org/10.5281/zenodo.23600861
 
 Last updated: October 2026.

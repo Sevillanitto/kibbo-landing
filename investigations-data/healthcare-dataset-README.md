@@ -3,6 +3,10 @@
 **File:** `kibbo-healthcare-cost-dataset-2026.csv`
 **58 rows · 4 countries · 4 tracer treatments · 3 cost layers + wait times**
 
+## License and scope — read this before reusing the data
+
+Kibbo's own compilation, structure, and every value sourced from government data, statutory rates, or Kibbo's own facts are **CC BY 4.0** — free to reuse with attribution. Figures from third-party publishers whose own terms don't permit open redistribution (KFF, The King's Fund, BMJ, MyCareCost, iFHP/HCCI, Merritt Hawkins) **remain under those publishers' own terms** and are not redistributed in this file: the row stays, with its citation and a `source_url` column pointing to the original, but the `value` cell is left blank and `value_status` explains why. This is the reduced, openly-redistributable version of the dataset; the full record of what was withheld and why is published alongside it at **https://doi.org/10.5281/zenodo.23600573**.
+
 ## What this is
 
 An original dataset built by Kibbo comparing the real cost of getting sick
@@ -95,7 +99,12 @@ affected row.
 
 ## Citation
 
-If you use this dataset, please credit "Kibbo (getkibbo.com)" and link
-back to the investigation it was built for.
+Kibbo's own compilation is CC BY 4.0 — if you use it, please credit
+"Kibbo (getkibbo.com)" and link back to the investigation it was built
+for. Third-party figures withheld from this file remain under their
+original publishers' terms; find them at each row's `source_url`.
+Full record: https://doi.org/10.5281/zenodo.23600573
 
-Last updated: October 2026.
+Last updated: October 2026 (reduced to the openly-redistributable
+version, with the German wait-time figure corrected to 36 days — see
+corrections-log.html — on 2026-10-23).

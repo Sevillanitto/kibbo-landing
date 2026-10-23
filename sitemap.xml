@@ -994,7 +994,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/datasets</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/directory</loc>
@@ -1058,7 +1058,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/education/exercises/healthcare-costs</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/library</loc>
@@ -1450,7 +1450,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations/us-airline-ranking-2026-h1</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations/cfpb-complaint-vault</loc>
@@ -1498,7 +1498,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations/streaming-price-machine</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations-data/kibbo-streaming-pricing-dataset-2011-2026.csv</loc>
@@ -2142,7 +2142,7 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/corrections-log</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/directory/financial-banking</loc>
@@ -4882,11 +4882,11 @@
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations/healthcare-cost-comparison</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations-data/kibbo-healthcare-cost-dataset-2026.csv</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/investigations-data/cfpb-copy-paste-complaint-student-sheet.pdf</loc>
@@ -5113,43 +5113,43 @@
 <!-- CARRIERS:START -->
   <url>
     <loc>https://www.getkibbo.com/parcel-claims</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/royal-mail</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/evri</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/dpd</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/yodel</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/ups</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/fedex</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/dhl</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/usps</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://www.getkibbo.com/parcel-claims/amazon-logistics</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
 <!-- CARRIERS:END -->
 </urlset>
